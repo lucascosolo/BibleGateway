@@ -1,0 +1,1888 @@
+/* ============================================================================
+   The reading surface.
+
+   Two independent axes are at work here, and keeping them separate is what lets
+   ONE renderer serve a 320px bottom sheet and a 900px reading column at the same
+   time:
+
+     - `data-density` is SEMANTIC INTENT — how much apparatus belongs in this
+       context. Set by the component.
+     - `@container` queries are PHYSICAL FIT — how much room this instance has.
+       Set by the browser, independent of viewport.
+
+   Never express one in terms of the other.
+   ============================================================================ */
+
+.passage {
+  container-type: inline-size;
+  container-name: passage;
+  font-family: var(--font-serif);
+  font-size: var(--text-scripture-body);
+  line-height: var(--leading-scripture);
+  color: var(--color-ink);
+  /* Old-style figures sit better in running prose; verse numbers override this. */
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-wrap: pretty;
+}
+
+.passage--reader,
+.passage--panel {
+  max-width: var(--measure-scripture);
+}
+
+.passage--empty {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink-faint);
+  font-style: italic;
+}
+
+/* --- Verses ------------------------------------------------------------- */
+
+.verse {
+  margin: 0;
+  scroll-margin-top: var(--space-16);
+}
+
+/* Block densities give each verse its own line; inline densities run them together. */
+.passage--reader .verse,
+.passage--panel .verse {
+  padding-block: 0.15em;
+}
+
+.passage--tooltip .verse,
+.passage--preview .verse {
+  display: inline;
+}
+
+.verse__number {
+  font-family: var(--font-sans);
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: var(--text-scripture-verse-num);
+  font-weight: 600;
+  color: var(--color-ink-faint);
+  margin-inline-end: 0.4em;
+  vertical-align: 0.35em;
+  user-select: none;
+  /* Not a tap target at this size — the whole verse is. */
+  pointer-events: none;
+}
+
+/* At comfortable widths the numbers move OUT of the text into a hanging gutter, so
+   the left edge of the prose stays clean and the measure is uninterrupted. */
+@container passage (min-width: 34rem) {
+  .passage--reader .verse {
+    position: relative;
+    padding-inline-start: var(--space-8);
+  }
+  .passage--reader .verse__number {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0.55em;
+    width: var(--space-6);
+    text-align: end;
+    margin-inline-end: 0;
+    vertical-align: baseline;
+  }
+}
+
+/* Poetry and wider reading get a touch more air between verses. */
+@container passage (min-width: 48rem) {
+  .passage--reader .verse {
+    padding-block: 0.25em;
+  }
+}
+
+/* --- Reference-density heat --------------------------------------------- */
+
+/* A quiet marker in the margin rather than a background wash: this is ambient
+   information, and scripture is not a heatmap. Opacity carries the intensity. */
+.verse--heat::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(var(--space-8) * -0.28);
+  top: 0.75em;
+  bottom: 0.35em;
+  width: 2px;
+  border-radius: var(--radius-full);
+  background: var(--color-heat-high);
+  opacity: 0.15;
+}
+.verse--heat[data-heat="3"]::before { opacity: 0.3; }
+.verse--heat[data-heat="4"]::before { opacity: 0.5; }
+.verse--heat[data-heat="5"]::before { opacity: 0.75; }
+
+/* The marker only makes sense once the hanging gutter exists. */
+@container passage (max-width: 33.999rem) {
+  .verse--heat::before { display: none; }
+}
+
+/* --- Decorations --------------------------------------------------------
+   Flat, non-nested spans emitted by the segment splitter. Because a segment can
+   carry several kinds at once, each rule sets ONE property so they compose
+   instead of overwriting each other. */
+
+.deco-highlight {
+  background-color: var(--color-highlight-amber);
+  border-radius: 0.15em;
+  /* Keeps a highlight from looking like a solid block across a line break. */
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.deco-highlight[data-color="rose"] { background-color: var(--color-highlight-rose); }
+.deco-highlight[data-color="moss"] { background-color: var(--color-highlight-moss); }
+.deco-highlight[data-color="sky"]  { background-color: var(--color-highlight-sky); }
+
+/* Optimistic writes render immediately but read as provisional until confirmed. */
+.deco-highlight[data-pending="true"] {
+  opacity: 0.55;
+}
+
+.deco-note {
+  border-bottom: 2px solid var(--color-brand);
+  padding-bottom: 0.05em;
+}
+
+.deco-variant {
+  border-bottom: 1px dotted var(--color-rubric);
+  cursor: help;
+}
+
+.deco-search-hit {
+  background-color: var(--color-brand-soft);
+  border-radius: 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.deco-source {
+  /* Source-criticism assignment tints the text, never the background — a wash
+     under a whole pericope would fight every other layer. */
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: color-mix(in oklch, var(--color-ink-faint) 60%, transparent);
+  text-underline-offset: 0.32em;
+  text-decoration-thickness: 1px;
+}
+
+/* --- Selah mode ----------------------------------------------------------
+   "Pause and reflect." Strip the apparatus and widen the breathing room. */
+
+.passage[data-selah="true"] {
+  --leading-scripture: 1.95;
+}
+.passage[data-selah="true"] .verse--heat::before {
+  display: none;
+}
+
+/* --- Reader page chrome -------------------------------------------------- */
+
+/* One column on phone and tablet; a real second column for the apparatus once there is
+   room for it without squeezing the measure. The reading column keeps its 68ch cap either
+   way — the sidebar takes the surplus, it does not take from the text. */
+.reader-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* 80rem, not 64rem: the sidebar may only appear when the reading column can still hold its
+   full 68ch measure beside it (~640px of text + ~350px of panel + gutters). Splitting at
+   1024px squeezed the passage to about 35ch, which is a worse reader than having no panel. */
+@media (min-width: 80rem) {
+  .reader-layout {
+    /* The reading column is sized to its measure and the pair is centred, rather than the
+       text track taking `1fr` and the article being pushed to its end. With `1fr` the track
+       grew to 1000px at 1536 and stranded the 720px article in ~600px of dead space, which
+       reads as a broken layout however defensible each individual rule was. */
+    grid-template-columns:
+      minmax(0, calc(var(--measure-scripture) + var(--space-20)))
+      minmax(18rem, 22rem);
+    justify-content: center;
+    gap: var(--space-10);
+    padding-inline: var(--space-6);
+    max-width: 90rem;
+    margin-inline: auto;
+  }
+  .reader-layout .reader {
+    margin-inline: 0;
+  }
+  .reader-aside {
+    position: sticky;
+    top: var(--space-6);
+    max-height: calc(100dvh - var(--space-12));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Below the two-column split the aside holds only a `position: fixed` launcher, which is out
+   of flow — so it contributes no height and its reading gutter and 4rem tail would be four
+   rems of dead space after the copyright notice. The padding belongs to the docked column
+   only, and is applied with it in the ≥80rem block above. */
+.reader-aside {
+  min-width: 0;
+}
+
+@media (min-width: 80rem) {
+  .reader-aside {
+    padding-inline: var(--space-5);
+    padding-block-end: var(--space-16);
+  }
+}
+
+/* --- Apparatus launcher --------------------------------------------------
+   The entry point to the cross-references below 1280px. Pinned rather than placed in the
+   header: the complaint it answers is not only "hard to find on arrival" but "unreachable
+   once you are reading", and a control in the masthead scrolls away with the masthead.
+
+   z-index sits under both the selection toolbar (45) and the tab bar (40) on purpose. It has
+   nothing to say while a selection is live, and it must never be the thing covering
+   navigation. */
+.apparatus-launcher {
+  position: fixed;
+  z-index: 30;
+  inset-inline-end: var(--space-4);
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-full);
+  background: var(--color-accent);
+  color: var(--color-ink-on-accent);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Below 768px `<AppShell>` puts a tab bar across the bottom; above it, top tabs. So the
+   launcher's clearance is conditional on the shell, not on the launcher. */
+@media (max-width: 47.99rem) {
+  .apparatus-launcher {
+    bottom: calc(
+      var(--shell-tabbar-height) + var(--space-3) + env(safe-area-inset-bottom, 0px)
+    );
+  }
+}
+
+.apparatus-launcher:hover {
+  background: var(--color-accent-strong);
+  border-color: var(--color-accent-strong);
+}
+
+.apparatus-launcher:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+/* Was 22.5rem (360px), which meant a 390px phone — the single most common width there is —
+   still got the full "Cross-references" pill: an opaque, permanent lozenge about 190px wide
+   sitting over the reading measure, which at 390px has no gutter to sit in. A reviewer found
+   it covering two lines of John 3:8. At 30rem the same control is a 44px circle, so it
+   occludes roughly a fifth as much text while remaining a full touch target, and the
+   accessible name survives because the label is clipped rather than removed.
+
+   The other half of the fix is `.reader`'s tail padding below the two-column split: shrinking
+   the button stops it covering a *line*, but only reserved space stops it covering the END of
+   a passage, which is where the copyright notice lives. */
+@media (max-width: 30rem) {
+  .apparatus-launcher__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .apparatus-launcher {
+    padding-inline: var(--space-3);
+  }
+}
+
+.reader {
+  padding-inline: var(--space-5);
+  padding-block: var(--space-6) var(--space-16);
+  margin-inline: auto;
+  /* `width: 100%` is load-bearing, not redundant with `max-width`.
+     `.passage` sets `container-type: inline-size`, which size-contains it in the inline
+     axis — a size-contained box contributes NOTHING to its ancestors' intrinsic width. Any
+     shrink-to-fit trigger on this element (the `auto` margins here, `justify-self: end` in
+     the two-column layout) therefore sized the article from the header and pager alone,
+     collapsing a 720px reading column to 397px. Declaring the width explicitly keeps the
+     layout from ever depending on an intrinsic size the container query has removed. */
+  width: 100%;
+  max-width: calc(var(--measure-scripture) + var(--space-20));
+}
+
+/* Clearance for the fixed apparatus launcher, below the width at which the cross-references
+   become a docked column and the launcher stops existing.
+
+   Without it the last thing on the page sits underneath a `position: fixed` button, and the
+   last thing on the page is the copyright notice — the one piece of text a public-domain
+   corpus is least free to obscure. A reviewer found exactly that on `/read/Ps.23` at 390×844.
+   Fixed elements are out of flow, so nothing about the launcher can reserve this space; the
+   scroll container has to give it up deliberately.
+
+   The value is the launcher's own touch target plus its bottom offset plus a line of air. The
+   `@media (max-width: 47.99rem)` rule further up adds the tab-bar height to that offset, so
+   this repeats the arithmetic rather than sharing it. */
+@media (max-width: 79.99rem) {
+  .reader {
+    padding-block-end: calc(var(--space-16) + var(--touch-target) + var(--space-4));
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .reader {
+    padding-block-end: calc(
+      var(--space-16) + var(--touch-target) + var(--shell-tabbar-height) + var(--space-3)
+    );
+  }
+}
+
+.reader__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-block-end: var(--space-6);
+  padding-block-end: var(--space-4);
+  border-bottom: var(--border-hairline);
+}
+
+.reader__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.reader__header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.reader__compare-link {
+  color: var(--color-brand-strong);
+  font: 600 var(--text-xs)/1 var(--font-sans);
+  text-decoration: none;
+}
+
+.reader__compare-link:hover { text-decoration: underline; }
+
+/* --- Translation switcher --------------------------------------------------
+   `<details>`/`<summary>` disclosure shared by the reader and derash — see
+   `components/reader/TranslationSwitcher.tsx` for why this replaced the old
+   `.reader__translations` / `.derash__translations` code-pill rows (that block used to live
+   here and in search.css:88-118; both are gone now that every list of translations, current
+   or future, goes through this one control). Not `@container`-scoped: the summary and panel
+   both size from their own content and the viewport, not from an ancestor whose inline size
+   varies between call sites. */
+.translation-switcher {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.translation-switcher__summary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-sunken);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  cursor: pointer;
+  list-style: none;
+  max-width: 100%;
+  transition: background-color 120ms ease;
+}
+/* Chrome/Safari draw a default disclosure triangle from the UA stylesheet; the switcher
+   supplies its own chevron so it can be styled with tokens instead of `::marker`. */
+.translation-switcher__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  /* Sits above the code/name pair at every width, so the control reads as a labelled field
+     rather than as a stray pill. */
+  display: block;
+  margin-bottom: 2px;
+}
+
+.translation-switcher__summary::-webkit-details-marker {
+  display: none;
+}
+.translation-switcher__summary::marker {
+  content: "";
+}
+.translation-switcher__summary:hover {
+  background: var(--color-surface-hover);
+}
+.translation-switcher__summary:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.translation-switcher__active {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.translation-switcher__active-code {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-brand-strong);
+  flex-shrink: 0;
+}
+.translation-switcher__active-name {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.translation-switcher__chevron {
+  flex-shrink: 0;
+  width: 0.6em;
+  height: 0.6em;
+  border-inline-end: 2px solid var(--color-ink-faint);
+  border-block-end: 2px solid var(--color-ink-faint);
+  transform: rotate(45deg);
+  transition: transform 120ms ease;
+}
+.translation-switcher[open] > .translation-switcher__summary .translation-switcher__chevron {
+  transform: rotate(-135deg);
+}
+
+.translation-switcher__panel {
+  position: absolute;
+  z-index: 20;
+  inset-block-start: calc(100% + var(--space-2));
+  inset-inline-start: 0;
+  /* Wide enough for two-column names, narrow enough not to run off the viewport at 320px —
+     the panel's own scroll (below) is what keeps a 7+ translation list from growing past the
+     screen rather than any attempt to fit them all on one row. */
+  width: max(20rem, min(32rem, 90vw));
+  max-width: calc(100vw - 2 * var(--space-5));
+  max-height: min(24rem, 70vh);
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 2px;
+  padding: var(--space-2);
+  background: var(--color-bg-raised);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: var(--border-hairline);
+}
+
+/* On a phone the panel stops floating and expands in flow.
+ *
+ * Absolute positioning anchors it to the summary's left edge, and the summary is not at the
+ * left edge of the page — it sits after the passage title in the header. At 390px that put the
+ * panel's origin at x=202 with a 320px minimum width, so its right edge landed at 522px in a
+ * 390px viewport and every name was cut mid-word: "Berean Standard Bibl", "Young's Literal
+ * Translat". `max-width` could not save it, because a max-width is measured from the element's
+ * own start edge and knows nothing about how far along the line that edge already is.
+ *
+ * Pinning it to the viewport with `position: fixed` would work, but it detaches on scroll and
+ * needs a stacking context that a sticky ancestor could take away. Expanding in flow needs
+ * neither: it cannot clip at any width, it scrolls with the page, and an inline disclosure is
+ * the ordinary pattern on a phone anyway. `width: 100%` on the container is load-bearing — the
+ * container is `fit-content`, so without it the in-flow panel would be sized to the summary. */
+@media (max-width: 30rem) {
+  .translation-switcher {
+    width: 100%;
+  }
+  .translation-switcher__panel {
+    position: static;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    margin-block-start: var(--space-2);
+    box-shadow: none;
+  }
+}
+
+.translation-switcher__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  border: none;
+  background: none;
+  color: var(--color-ink-muted);
+  font-family: var(--font-sans);
+  text-decoration: none;
+  text-align: start;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.translation-switcher__option:hover {
+  color: var(--color-ink);
+  background: var(--color-surface-hover);
+}
+.translation-switcher__option[aria-current="page"] {
+  color: var(--color-brand-strong);
+  background: var(--color-bg-sunken);
+}
+.translation-switcher__option:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+.translation-switcher__option-code {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+.translation-switcher__option-name {
+  font-size: var(--text-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Below 400px the summary's own name can crowd the reader's title (both live in a
+   `flex-wrap` header). Drop the full name from the closed control there; the code alone is
+   still an answer once the reader has looked at the page once, and the full name is one tap
+   away inside the panel. The accessible name is unaffected — this only hides visual text. */
+@media (max-width: 25rem) {
+  .translation-switcher__active-name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .translation-switcher__chevron { transition: none; }
+  .translation-switcher__option { transition: none; }
+}
+
+.reader__pager {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-block-start: var(--space-12);
+  padding-block-start: var(--space-5);
+  border-top: var(--border-hairline);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+}
+.reader__pager a {
+  color: var(--color-brand-strong);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--space-2) 0;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+}
+.reader__pager a:hover { text-decoration: underline; }
+.reader__pager a:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Shown when a reference prints nothing in this translation and the surrounding verses are
+   standing in for it. Neutral, not alarmed — per the house rule, a disclosure dressed in the
+   alert palette reads as a malfunction. It is set apart from the scripture face for the same
+   reason `.omission` is: editorial voice must never be mistakable for text. */
+.reader__context-note {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-3) var(--space-4);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-sunken);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+  text-wrap: pretty;
+}
+
+/* Several translation licenses require the notice to travel with the text rather
+   than living in a global footer the reader never reaches. */
+.reader__copyright {
+  margin-block-start: var(--space-10);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-faint);
+  text-wrap: pretty;
+}
+.reader__copyright p { margin: 0; }
+
+/* Quiet by default and unmistakably a control on hover/focus. It sits in the faintest text on
+   the page, so it is given the ink colour the surrounding notice does not have — otherwise it
+   reads as one more line of small print and nobody presses it. Full touch height even here:
+   this is the footer of a long page and the thumb has travelled a long way to reach it. */
+.cite__trigger {
+  margin-block-start: var(--space-2);
+  min-height: var(--touch-target);
+  padding-inline: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-color: var(--color-border);
+}
+.cite__trigger:hover,
+.cite__trigger:focus-visible {
+  color: var(--color-brand);
+  text-decoration-color: currentColor;
+}
+
+/* --- Selection toolbar ---------------------------------------------------
+   Floats near the selection on comfortable widths; docks to the bottom of the
+   viewport below the `base` breakpoint (ARCHITECTURE §4.7) so it stays thumb-
+   reachable instead of following a selection under a fingertip. */
+
+.selection-toolbar {
+  position: fixed;
+  /* Above the bottom tab bar's z-40, not equal to it. At equal z-index the winner is DOM
+     order, and the tab bar is rendered after <main> in <AppShell> — so a toolbar that
+     wrapped to two rows was painted *under* the navigation. */
+  z-index: var(--z-toolbar, 45);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background: var(--color-bg-raised);
+  border: var(--border-hairline);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-sans);
+  /* Set inline by `<SelectionToolbar>`: `-100%` when the toolbar hangs above the selection,
+     `0px` when it sits below because there was no room. It lives in a custom property rather
+     than in the inline `transform` so the entry animation below cannot overwrite it — a
+     running animation's transform beats an inline style, which made the toolbar flip the
+     wrong way for 120ms and then snap into place. */
+  transform: translateY(var(--toolbar-flip, 0px));
+  animation: selection-toolbar-in 120ms ease-out;
+}
+
+/* Opacity only. This keyframe used to animate `transform` too, which is what made it
+   incompatible with the positioning above; the 4px rise it contributed is not worth a
+   whole second transform channel to keep. */
+@keyframes selection-toolbar-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .selection-toolbar { animation: none; }
+}
+
+.selection-toolbar__colors {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.selection-toolbar__color {
+  width: 2.75rem; /* 44px touch target, §4.7 */
+  height: 2.75rem;
+  border-radius: var(--radius-full);
+  border: var(--border-hairline);
+  cursor: pointer;
+  padding: 0;
+}
+.selection-toolbar__color[data-color="amber"] { background: var(--color-highlight-amber); }
+.selection-toolbar__color[data-color="rose"]  { background: var(--color-highlight-rose); }
+.selection-toolbar__color[data-color="moss"]  { background: var(--color-highlight-moss); }
+.selection-toolbar__color[data-color="sky"]   { background: var(--color-highlight-sky); }
+.selection-toolbar__color:hover,
+.selection-toolbar__color:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.selection-toolbar__action,
+.selection-toolbar__dismiss {
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+}
+.selection-toolbar__action:hover,
+.selection-toolbar__dismiss:hover {
+  background: var(--color-surface-hover);
+}
+.selection-toolbar__action:focus-visible,
+.selection-toolbar__dismiss:focus-visible,
+.selection-toolbar__color:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+.selection-toolbar__dismiss {
+  font-size: var(--text-lg);
+  line-height: 1;
+  color: var(--color-ink-faint);
+}
+
+.selection-toolbar__error {
+  flex-basis: 100%;
+  margin: 0;
+  padding-block-start: var(--space-1);
+  color: var(--color-danger, #b91c1c);
+  font-size: var(--text-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.selection-toolbar__error button {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+/* Thumb-reachable: pinned across the bottom of the viewport rather than tracking the
+   selection rectangle, which on a phone is usually under the user's own finger.
+
+   The offset clears the bottom tab bar rather than the viewport edge. `COMPACT_WIDTH` in
+   SelectionToolbar.tsx is 640px and <AppShell> shows the tab bar below 768px, so *every*
+   pinned toolbar is a pinned toolbar over a tab bar — there is no width at which
+   `bottom: 16px` was correct. The bar's own box is `--shell-tabbar-height` PLUS its
+   safe-area bottom padding, so both terms have to be cleared here, not just one. */
+.selection-toolbar--pinned {
+  top: auto !important;
+  left: var(--space-3) !important;
+  right: var(--space-3);
+  bottom: calc(
+    var(--shell-tabbar-height) + var(--space-3) + env(safe-area-inset-bottom, 0px)
+  );
+  width: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   Omitted verses — textual apparatus rendered in place
+   ==========================================================================
+   Deliberately set apart from the scripture face. This is editorial voice, not
+   scripture, and a reader must never have to work out which is which: sans, smaller,
+   muted, and marked with a rule down the leading edge. The rubric colour is reserved
+   for the one thing worth noticing on the page, which in a passage with an omission is
+   exactly this. */
+.omission {
+  margin-block: var(--space-3);
+  padding-inline-start: var(--space-3);
+  border-inline-start: 2px solid var(--color-rubric-soft);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-muted);
+}
+
+.omission__line {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.omission__number {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: var(--text-scripture-verse-num);
+  font-weight: 600;
+  color: var(--color-rubric);
+}
+
+.omission__label {
+  font-style: italic;
+}
+
+.omission__detail {
+  margin: var(--space-1) 0 0;
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+.omission__detail p {
+  margin: 0 0 var(--space-2);
+}
+
+.omission__history {
+  margin-block: var(--space-2);
+  padding-block: var(--space-1);
+  border-block: 1px solid var(--color-border);
+}
+
+.omission__history summary {
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.omission__history p {
+  margin-top: var(--space-2);
+}
+
+.omission__dating-note {
+  font-style: italic;
+}
+
+.omission__detail a {
+  color: var(--color-brand);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Wide enough for a gutter: align the omission's verse number with the hanging verse
+   numbers of the surrounding text so the apparatus sits in the same column, not adrift. */
+/* Wide enough for a gutter: put the omission's verse number in the same hanging column
+   the surrounding verses use (--space-6 wide inside a --space-8 indent, see above), so the
+   apparatus lines up with the text instead of sitting adrift beside it. */
+@container passage (min-width: 34rem) {
+  .passage--reader .omission {
+    border-inline-start: none;
+    padding-inline-start: var(--space-8);
+  }
+
+  .passage--reader .omission__line {
+    position: relative;
+  }
+
+  .passage--reader .omission__number {
+    position: absolute;
+    inset-inline-start: calc(-1 * var(--space-8));
+    width: var(--space-6);
+    text-align: end;
+  }
+
+  .passage--reader .omission__detail {
+    border-inline-start: 2px solid var(--color-rubric-soft);
+    padding-inline-start: var(--space-3);
+    margin-inline-start: calc(-1 * var(--space-3));
+  }
+}
+
+/* --- /read index: browse the canon ---------------------------------------- */
+
+.reader-index {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+  padding-block: var(--space-8) var(--space-16);
+}
+
+.reader-index__header {
+  margin-block-end: var(--space-8);
+}
+
+.reader-index__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-2);
+}
+
+.reader-index__lede {
+  margin: 0;
+  max-width: 46ch;
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  line-height: var(--leading-normal);
+}
+
+/* At 320px every horizontal pixel is measure. The default reading gutter costs ~4 characters
+   a line there, which matters more than the breathing room does — a 30ch column is already at
+   the bottom of what is comfortable, and the alternative (shrinking the type) is worse. */
+@media (max-width: 26.5rem) {
+  .reader {
+    padding-inline: var(--space-3);
+  }
+}
+
+/* --- Chapter headings in a multi-chapter passage -------------------------
+   Verse numbers restart at every chapter. Without a mark between them the
+   sequence reads "...30, 31, 1, 2..." and looks like a rendering fault, which
+   is half of why a whole book was unreadable quite apart from its size. */
+
+.passage__chapter {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin: var(--space-8) 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-border);
+  scroll-margin-top: var(--space-16);
+}
+
+/* The first heading in a passage sits under the page title already; it does not
+   need the same separation from what precedes it. */
+.passage__chapter:first-child {
+  margin-top: 0;
+}
+
+/* --- Imprecise marks -----------------------------------------------------
+   An annotation whose character offsets were taken in a different translation
+   cannot be placed exactly here, so it is widened to the whole verse
+   (ARCHITECTURE §3.3). Drawn identically to an exact mark it would claim a
+   precision the data does not have, so it gets its own treatment: no solid
+   fill, a dashed rule instead. Dashes read as provisional in every other
+   editorial convention too. */
+
+.deco-approximate[data-approximate="true"] {
+  background-color: transparent;
+  border-bottom: 1px dashed var(--color-border-strong);
+  text-underline-offset: 0.3em;
+}
+
+/* The colour survives as a hairline so a rose mark is still distinguishable
+   from a moss one — only the certainty is withdrawn, not the identity. */
+.deco-approximate[data-color="amber"] { border-bottom-color: var(--color-highlight-amber); }
+.deco-approximate[data-color="rose"]  { border-bottom-color: var(--color-highlight-rose); }
+.deco-approximate[data-color="moss"]  { border-bottom-color: var(--color-highlight-moss); }
+.deco-approximate[data-color="sky"]   { border-bottom-color: var(--color-highlight-sky); }
+
+/* --- Verse marks ---------------------------------------------------------
+   The clickable anchors that follow a verse: one per note, one per imprecise
+   mark. Superscript, in the manner of a critical apparatus siglum, so they read
+   as editorial rather than as part of scripture. */
+
+.verse__marks {
+  white-space: nowrap;
+}
+
+.verse__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5em;
+  min-height: 1.5em;
+  /* Anchor for the coarse-pointer hit area below. Harmless on its own — `relative` on an
+     inline-flex box changes no geometry. */
+  position: relative;
+  margin-inline-start: 0.15em;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 1;
+  color: var(--color-brand);
+  cursor: pointer;
+  vertical-align: 0.4em;
+}
+
+.verse__mark[data-approximate="true"] {
+  color: var(--color-ink-faint);
+}
+
+.verse__mark:hover {
+  background: var(--color-surface-hover);
+}
+
+.verse__mark:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* An optimistic write has no server id yet, so there is nothing to open. */
+.verse__mark:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* A verse mark is an apparatus siglum sitting INSIDE a line of scripture. It cannot be grown
+   to 44px the way a button in a toolbar can: `min-width: var(--touch-target)` on an inline box
+   inserts 44px of white space into the middle of the reading measure, and the whole point of
+   the mark is that it is small enough to read past.
+
+   So the visual mark keeps its 1.5em box and gains an out-of-flow hit area. An absolutely
+   positioned pseudo-element contributes nothing to layout, so not one glyph moves.
+
+   Two deliberate choices in the geometry:
+   - It grows to the INLINE-END and vertically, never to the inline-start. Growing left would
+     put an invisible 20px shield over the last characters of the verse, and dragging across
+     those characters is how a highlight gets made — the app's primary gesture. Anchoring the
+     hit area's leading edge to the mark's own leading edge keeps the scripture selectable.
+   - Vertical growth is symmetric and spills ~6px into the line above and below. That is
+     inside the 1.75 leading and is the cheapest 44px available here.
+
+   Coarse pointers only. On a mouse the 1.5em mark is already an easy target, and an invisible
+   44px box would swallow clicks meant for the text beside it for no benefit. */
+@media (pointer: coarse) {
+  .verse__mark::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 0;
+    translate: 0 -50%;
+    inline-size: var(--touch-target);
+    block-size: var(--touch-target);
+  }
+
+  /* Two marks on one verse sit 0.15em apart, so their hit areas overlap and the later one in
+     document order wins the overlap. Widening the gap gives the first mark an uncontested
+     region wide enough to hit — without it the note anchor became unhittable the moment a
+     verse also carried an approximate mark. */
+  .verse__mark + .verse__mark {
+    margin-inline-start: 0.55em;
+  }
+}
+
+/* Selah strips every editorial voice, and a note anchor is one. */
+.passage[data-selah="true"] .verse__marks {
+  display: none;
+}
+
+/* --- Note dialog ---------------------------------------------------------
+   Composing and editing a note. Replaces `window.prompt`, which offered one
+   unwrapped line, blocked the browser process, and had no counterpart for
+   reading back what was written. */
+
+.note-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: var(--space-4);
+  background: var(--color-overlay);
+}
+
+/* Centred once there is room; a bottom sheet on a phone, where the keyboard
+   takes the lower half of the viewport and a centred dialog lands behind it. */
+@media (min-width: 40rem) {
+  .note-dialog {
+    align-items: center;
+  }
+}
+
+.note-dialog__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: min(38rem, 100%);
+  max-height: 85dvh;
+  overflow-y: auto;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-raised);
+  box-shadow: 0 12px 40px oklch(20% 0.02 60 / 0.22);
+}
+
+.note-dialog__title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.note-dialog__quote {
+  margin: 0;
+  padding-inline-start: var(--space-3);
+  border-inline-start: 2px solid var(--color-rubric);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--color-ink-muted);
+}
+
+.note-dialog__notice {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: 1px dashed var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-sunken);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+}
+
+.note-dialog__notice p {
+  margin: 0;
+}
+
+.note-dialog__label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.note-dialog__body {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  /* A note is scholarly prose about scripture; it is set in the same face. */
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  resize: vertical;
+}
+
+.note-dialog__body:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.note-dialog__error {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-danger);
+}
+
+.note-dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.note-dialog__spacer {
+  flex: 1;
+}
+
+.note-dialog__confirm {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.note-dialog__action {
+  min-height: var(--touch-target);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.note-dialog__action:hover {
+  background: var(--color-surface-hover);
+}
+
+.note-dialog__action:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.note-dialog__action--primary {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-ink-on-accent);
+}
+
+.note-dialog__action--primary:hover {
+  background: var(--color-accent-strong);
+}
+
+.note-dialog__action--danger {
+  color: var(--color-danger);
+}
+
+.note-dialog__action:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* --- Chapter index -------------------------------------------------------
+   What a book-sized reference opens as. See components/reader/ChapterIndex. */
+
+/* A chapter chooser is a dense index, not prose: it wants the page's width, capped only so the
+   grid does not stretch to absurd line lengths on a 1920px display. */
+.reader-index-shell {
+  width: 100%;
+}
+
+.chapter-index {
+  padding: var(--space-6) var(--space-4) var(--space-16);
+  /* `width: 100%` is load-bearing alongside `max-width` — a shrink-to-fit trigger such as
+     `margin-inline: auto` otherwise lets an auto-fill grid resolve against its own indefinite
+     width and collapse. This is the same trap that once cut the reading column to 397px. */
+  width: 100%;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.chapter-index__header {
+  margin-bottom: var(--space-6);
+}
+
+.chapter-index__title {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Neutral, not alarmed: this states the size of what was asked for. Dressed in
+   the alert palette a disclosure reads as a malfunction. */
+.chapter-index__lede {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+/* The fast way through a 150-button wall. Sized as a real control rather than a decoration:
+   it is the primary way into a book-sized index, not an afterthought beside one. */
+.chapter-index__filter {
+  margin-block-start: var(--space-4);
+  max-width: 22rem;
+}
+
+.chapter-index__filter-label {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-block-end: var(--space-1);
+}
+
+.chapter-index__filter-input {
+  width: 100%;
+  min-height: var(--touch-target);
+  padding-inline: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: var(--text-base);
+}
+
+.chapter-index__filter-input:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Reserves its own line whether or not it has anything to say, so typing does not shove the
+   grid up and down under the user's finger. */
+.chapter-index__filter-status {
+  min-height: 1.5em;
+  margin: var(--space-1) 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+}
+
+.chapter-index__empty {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.chapter-index__book + .chapter-index__book {
+  margin-top: var(--space-6);
+}
+
+.chapter-index__book-title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+}
+
+.chapter-index__grid {
+  display: grid;
+  /* Sized to the touch target, so the grid reflows by itself from 4 columns on a
+     320px phone to 16 on a desktop without a single breakpoint. */
+  grid-template-columns: repeat(auto-fill, minmax(var(--touch-target), 1fr));
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chapter-index__chapter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--touch-target);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums lining-nums;
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  text-decoration: none;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.chapter-index__chapter:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-hover);
+}
+
+.chapter-index__chapter:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* --- Interlinear (original-language layer) -------------------------------------------
+ *
+ * A stacked cell per word: the word as printed, its lemma, its part of speech. Rendered as a
+ * flex-wrapped <ol> rather than a table, because a verse's word count varies from 2 to 60 and a
+ * table forces one row to the width of the longest verse in the passage.
+ */
+
+.interlinear {
+  margin: 0.35rem 0 1.1rem;
+  padding: 0.6rem 0.75rem;
+  border-inline-start: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-sunken);
+}
+
+.interlinear__note {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+.interlinear__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interlinear__word {
+  margin: 0;
+  padding: 0;
+}
+
+.interlinear__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  /* Reads as one aligned column per word regardless of the row's direction. */
+  align-items: center;
+  min-height: var(--touch-target);
+  padding: 0.3rem 0.4rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 120ms ease;
+}
+
+.interlinear__link:hover {
+  background: var(--color-surface-hover);
+}
+
+.interlinear__link:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.interlinear__surface {
+  font-size: 1.25rem;
+  line-height: 1.7; /* Room for cantillation marks above and vowel points below. */
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
+/* Pointed Hebrew needs a face that positions nikud and te'amim correctly; most system defaults
+ * do not. `--font-hebrew` prefers the faces a scholar may already have installed and falls back
+ * to a self-hosted Noto Serif Hebrew, so the marks land correctly for everyone else too —
+ * defined once in `globals.css`, never re-spelled here. */
+.interlinear[data-language="hbo"] .interlinear__surface,
+.interlinear[data-language="arc"] .interlinear__surface {
+  font-family: var(--font-hebrew), serif;
+  font-size: 1.4rem;
+}
+
+.interlinear[data-language="grc"] .interlinear__surface {
+  font-family: var(--font-serif);
+}
+
+.interlinear__lemma {
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+}
+
+.interlinear__gloss {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+  /* Direction is set on the row for the Hebrew, but the gloss is English and must not be
+     reversed with it. */
+  direction: ltr;
+}
+
+.interlinear__morph {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  color: var(--color-ink-faint);
+  white-space: nowrap;
+}
+
+/* Selah strips every layer, this one included — the rule is in the renderer, but the layer is
+ * also visually suppressed here so a stale render never leaves apparatus on a Selah page. */
+.passage[data-selah="true"] .interlinear {
+  display: none;
+}
+
+/* One note for the whole passage when the interlinear layer is on: the CC BY 4.0 attribution
+   the lexicon requires, and the warning that a one-word gloss is an index tag rather than a
+   translation. Rendered by <PassageRenderer>, so it cannot drift away from the layer it
+   describes. */
+.passage__interlinear-note {
+  margin: var(--space-6) 0 0;
+  padding-block-start: var(--space-3);
+  border-block-start: var(--border-hairline);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-ink-faint);
+}
+
+.passage__interlinear-note a {
+  color: inherit;
+}
+
+/* --- Parallel translation comparison ----------------------------------- */
+
+.parallel {
+  max-width: 78rem;
+  margin: 0 auto;
+  padding: var(--space-10) clamp(var(--space-4), 4vw, var(--space-12)) var(--space-16);
+  color: var(--color-ink);
+}
+.parallel__header { display: flex; align-items: start; justify-content: space-between; gap: var(--space-8); margin-block-end: var(--space-6); }
+.parallel__eyebrow { margin: 0 0 var(--space-2); color: var(--color-brand-strong); font: 700 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; }
+.parallel__title { margin: 0; font: 700 var(--text-2xl)/1.1 var(--font-serif); }
+.parallel__lede { max-width: 42rem; margin: var(--space-3) 0 0; color: var(--color-ink-muted); font: var(--text-sm)/1.6 var(--font-sans); }
+.parallel__back, .parallel-index a { color: var(--color-brand-strong); font: 600 var(--text-sm)/1.4 var(--font-sans); text-decoration: none; }
+.parallel__back:hover, .parallel-index a:hover { text-decoration: underline; }
+.parallel__legend { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin-block-end: var(--space-3); }
+.parallel__edition, .parallel__cell-label { display: flex; align-items: baseline; gap: var(--space-2); color: var(--color-ink-muted); font: var(--text-xs)/1.3 var(--font-sans); }
+.parallel__code { color: var(--color-brand-strong); font-weight: 800; letter-spacing: 0.08em; }
+.parallel__rows { border-block: 1px solid var(--color-border); }
+.parallel__row { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-4); padding-block: var(--space-5); border-block-end: 1px solid var(--color-border); }
+.parallel__row:last-child { border-block-end: 0; }
+.parallel__reference { margin: 0; color: var(--color-ink-faint); font: 600 var(--text-xs)/1.4 var(--font-sans); text-align: end; }
+.parallel__cell { min-width: 0; }
+.parallel__cell-label { margin-block-end: var(--space-2); }
+.parallel__cell .passage { max-width: none; font-size: var(--text-md); line-height: 1.6; }
+.parallel__cell .verse { padding-block: 0; }
+.parallel__cell .verse__number { position: static; width: auto; margin-inline-end: 0.3em; }
+.parallel-index { max-width: 42rem; margin: 0 auto; padding: var(--space-12) var(--space-5); color: var(--color-ink); }
+.parallel-index h1 { margin: 0; font: 700 var(--text-xl)/1.2 var(--font-serif); }
+.parallel-index p { color: var(--color-ink-muted); font: var(--text-sm)/1.6 var(--font-sans); }
+.parallel-index nav { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.parallel-index nav a { padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+@media (max-width: 47.999rem) {
+  .parallel { padding-block-start: var(--space-7); }
+  .parallel__header { display: block; }
+  .parallel__back { display: inline-block; margin-block-start: var(--space-4); }
+  .parallel__row { grid-template-columns: 2rem minmax(0, 1fr); gap: var(--space-3); }
+  .parallel__cell + .parallel__cell { grid-column: 2; padding-block-start: var(--space-3); border-block-start: 1px dashed var(--color-border); }
+  .parallel__legend { display: none; }
+}
+
+/* --- Notes index -------------------------------------------------------- */
+
+.notes-index {
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: var(--space-10) clamp(var(--space-4), 4vw, var(--space-12)) var(--space-8);
+  color: var(--color-ink);
+}
+.notes-index__header { display: flex; align-items: end; justify-content: space-between; gap: var(--space-6); margin-block-end: var(--space-8); }
+.notes-index__eyebrow { margin: 0 0 var(--space-2); color: var(--color-brand-strong); font: 700 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.12em; text-transform: uppercase; }
+.notes-index h1 { margin: 0; font: 700 var(--text-2xl)/1.1 var(--font-serif); }
+.notes-index__header p:not(.notes-index__eyebrow) { max-width: 34rem; margin: var(--space-3) 0 0; color: var(--color-ink-muted); font: var(--text-sm)/1.6 var(--font-sans); }
+.notes-index__export { min-height: var(--touch-target); padding-inline: var(--space-4); border: 0; border-radius: var(--radius-full); background: var(--color-brand); color: var(--color-ink-on-accent); font: 700 var(--text-xs)/1 var(--font-sans); cursor: pointer; }
+.notes-index__export:disabled { opacity: 0.5; cursor: not-allowed; }
+.notes-index__list { display: grid; gap: var(--space-3); margin: 0; padding: 0; list-style: none; }
+.notes-index__item { padding: var(--space-4) var(--space-5); border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-raised); }
+.notes-index__meta { display: flex; gap: var(--space-3); color: var(--color-ink-faint); font: 700 var(--text-xs)/1 var(--font-sans); letter-spacing: 0.08em; text-transform: uppercase; }
+.notes-index__reference { display: inline-block; margin-block: var(--space-2); color: var(--color-brand-strong); font: 700 var(--text-md)/1.3 var(--font-serif); text-decoration: none; }
+.notes-index__reference:hover { text-decoration: underline; }
+.notes-index__item blockquote { margin: var(--space-2) 0; padding-inline-start: var(--space-4); border-inline-start: 2px solid var(--color-brand); color: var(--color-ink-muted); font: italic var(--text-sm)/1.5 var(--font-serif); }
+.notes-index__item p { margin: var(--space-2) 0 0; color: var(--color-ink); font: var(--text-sm)/1.5 var(--font-sans); }
+.notes-index__tags { color: var(--color-ink-faint) !important; font-family: var(--font-mono) !important; }
+.notes-index__empty { padding: var(--space-8); border: 1px dashed var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-sunken); }
+.notes-index__empty h2 { margin: 0; font: 700 var(--text-lg)/1.2 var(--font-serif); }
+.notes-index__empty p { color: var(--color-ink-muted); font: var(--text-sm)/1.6 var(--font-sans); }
+.notes-index__empty a, .notes-index__footnote a { color: var(--color-brand-strong); text-decoration: underline; text-underline-offset: .15em; }
+.notes-index__footnote { max-width: 58rem; margin: 0 auto; padding: 0 clamp(var(--space-4), 4vw, var(--space-12)) var(--space-12); color: var(--color-ink-faint); font: var(--text-xs)/1.6 var(--font-sans); }
+@media (max-width: 47.999rem) {
+  .notes-index__header { display: block; }
+  .notes-index__export { margin-block-start: var(--space-5); }
+}
+
+/* --- Go-to-reference command palette ---------------------------------- */
+
+.command-palette { position: fixed; inset: 0; z-index: 100; display: grid; place-items: start center; padding: min(18vh, 9rem) var(--space-4); }
+.command-palette__scrim { position: absolute; inset: 0; border: 0; background: var(--color-overlay); cursor: default; }
+.command-palette__dialog { position: relative; width: min(42rem, 100%); overflow: hidden; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-bg-raised); box-shadow: var(--shadow-lg); }
+.command-palette__heading { display: flex; align-items: center; justify-content: space-between; padding: var(--space-4) var(--space-5); border-block-end: 1px solid var(--color-border); }
+.command-palette__heading h2 { margin: 0; color: var(--color-ink); font: 700 var(--text-md)/1.2 var(--font-serif); }
+.command-palette kbd { padding: 0.2rem 0.4rem; border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-ink-faint); font: var(--text-xs)/1 var(--font-mono); }
+.command-palette form { padding: var(--space-5); }
+.command-palette input { width: 100%; min-height: 3rem; padding: 0 var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); outline: none; background: var(--color-bg); color: var(--color-ink); font: var(--text-md)/1 var(--font-sans); }
+.command-palette input:focus-visible { border-color: var(--color-brand); box-shadow: 0 0 0 3px var(--color-focus-ring); }
+.command-palette p { margin: var(--space-3) 0 0; color: var(--color-ink-faint); font: var(--text-xs)/1.5 var(--font-sans); }
+
+/* --- Qere readings (the scribes' marginal readings) -----------------------------------------
+ *
+ * Same family as `.interlinear` just above: sunken block, muted sans apparatus voice, a rule
+ * down the leading edge. Kept visually distinct from it anyway — a reading pair is not a word
+ * list — with its own ketiv/qere columns rather than the interlinear's flat row. */
+
+.qere-readings {
+  margin: 0.35rem 0 1.1rem;
+  padding: 0.6rem 0.75rem;
+  border-inline-start: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-sunken);
+}
+
+.qere-readings__intro {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-ink-faint);
+}
+
+.qere-readings__term {
+  margin-inline-end: 0.3em;
+}
+
+.qere-readings__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qere-readings__item {
+  padding-block-start: var(--space-2);
+  border-block-start: var(--border-hairline);
+}
+
+.qere-readings__item:first-child {
+  padding-block-start: 0;
+  border-block-start: none;
+}
+
+.qere-readings__position {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+/* Column on narrow surfaces so neither side is ever forced to shrink below its own reading
+   width — a fixed two-column grid here is exactly what would force horizontal scroll at
+   320px. Only promoted to a row once the passage itself has room for one, matching the
+   `.interlinear` breakpoints below. */
+.qere-readings__pair {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@container passage (min-width: 30rem) {
+  .qere-readings__pair {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .qere-readings__side--ketiv {
+    flex: 0 0 auto;
+  }
+
+  .qere-readings__side--qere {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.qere-readings__side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.qere-readings__tag {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+
+.qere-readings__words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.qere-readings__reading {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.qere-readings__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.4rem;
+  min-height: var(--touch-target);
+  padding: 0.2rem 0.3rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 120ms ease;
+}
+
+.qere-readings__link:hover {
+  background: var(--color-surface-hover);
+}
+
+.qere-readings__link:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 1px;
+}
+
+.qere-readings__word {
+  font-size: 1.15rem;
+  line-height: 1.7; /* Room for cantillation marks above and vowel points below. */
+  color: var(--color-ink);
+}
+
+.qere-readings[data-language="hbo"] .qere-readings__word,
+.qere-readings[data-language="arc"] .qere-readings__word {
+  font-family: var(--font-hebrew), serif;
+  font-size: 1.3rem;
+}
+
+/* A distinct class rather than `.qere-readings__word` plus a modifier: the language rule above
+   targets `.qere-readings__word` by descendant selector and outranks a same-element modifier
+   class on specificity alone, so sharing the base class would leave this stuck in Hebrew even
+   though it is never Hebrew — it is the sentence disclosing that no written form exists. */
+.qere-readings__word--missing {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-ink-faint);
+}
+
+.qere-readings__lemma {
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+}
+
+.qere-readings__gloss {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+  direction: ltr;
+}
+
+.qere-readings__morph {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  color: var(--color-ink-faint);
+  white-space: nowrap;
+}
+
+/* Selah strips every layer, this one included — the rule is in the renderer, but the layer is
+   also visually suppressed here so a stale render never leaves apparatus on a Selah page. */
+.passage[data-selah="true"] .qere-readings {
+  display: none;
+}
+
+/* --- Out-of-scope passage -----------------------------------------------------------------
+   One banner for a book the current translation does not contain (see OutOfScopeNotice.tsx).
+   Deliberately NOT dressed in the rubric palette that `.omission` uses: rubric red means
+   "the manuscripts disagree here", and a translation of the Hebrew Bible having no New
+   Testament is not a textual problem at all. Reusing the alert colour would say the opposite
+   of what the copy says, which is the same category error the per-verse rows made. */
+.out-of-scope {
+  margin-block: var(--space-6);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  font-family: var(--font-sans);
+}
+
+.out-of-scope__heading {
+  margin: 0;
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-ink);
+}
+
+.out-of-scope__note {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+}
+
+.out-of-scope__offer {
+  margin-block-start: var(--space-5);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.out-of-scope__offer p {
+  margin: 0 0 var(--space-3);
+}
+
+.out-of-scope__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* A real 44px target: these are the only way off this page other than the switcher, and the
+   page is reached most often from a phone tap on the translation picker. */
+.out-of-scope__list a {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+.out-of-scope__list a:hover {
+  background: var(--color-surface-hover);
+}
+
+.out-of-scope__list a span {
+  color: var(--color-ink-muted);
+  font-size: var(--text-xs);
+}
+/* Edition-level Greek evidence: a quiet citation block below the original-language layer. */
+.greek-edition-variants {
+  margin: 1.25rem auto 0;
+  max-width: 62ch;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  color: var(--color-ink-muted);
+  font-family: var(--jot-font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+.greek-edition-variants summary { cursor: pointer; color: var(--color-ink); font-size: var(--text-base); font-weight: 650; }
+.greek-edition-variants summary small { color: var(--color-ink-muted); font-size: var(--text-sm); font-weight: 400; }
+.greek-edition-variants__body { margin-top: .65rem; }
+.greek-edition-variants__intro, .greek-edition-variants__source { margin: .35rem 0 .75rem; }
+.greek-edition-variants__list { margin: 0; padding-left: 1.25rem; }
+.greek-edition-variants__list li { margin: .45rem 0; }
+.greek-edition-variants__ref { color: var(--color-ink); font-weight: 650; }
+.greek-edition-variants__note { color: var(--color-ink-muted); }
+.greek-edition-variants a { color: var(--color-brand-strong); text-decoration: underline; text-underline-offset: .15em; }
+
+.greek-manuscript-apparatus {
+  margin: 1rem auto 0;
+  max-width: 62ch;
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  color: var(--color-ink-muted);
+  font-family: var(--jot-font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+.greek-manuscript-apparatus summary { cursor: pointer; color: var(--color-ink); font-size: var(--text-base); font-weight: 650; }
+.greek-manuscript-apparatus summary small { color: var(--color-ink-muted); font-size: var(--text-sm); font-weight: 400; }
+.greek-manuscript-apparatus__body { margin-top: .65rem; }
+.greek-manuscript-apparatus__intro, .greek-manuscript-apparatus__source { margin: .35rem 0 .75rem; }
+.greek-manuscript-apparatus__list { margin: 0; padding-left: 1.25rem; }
+.greek-manuscript-apparatus__list > li { margin: .55rem 0; }
+.greek-manuscript-apparatus__list ul { margin: .2rem 0 0; padding-left: 1.25rem; }
+.greek-manuscript-apparatus__witnesses { color: var(--color-ink); }
+.greek-manuscript-apparatus a { color: var(--color-brand-strong); text-decoration: underline; text-underline-offset: .15em; }

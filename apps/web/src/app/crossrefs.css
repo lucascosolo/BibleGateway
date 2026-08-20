@@ -1,0 +1,634 @@
+/* ============================================================================
+   Cross-reference features: <CrossRefPanel>, <HeatBadge>, and the /deep-dive
+   graph + list.
+
+   Same discipline as reader.css: tokens only, mobile-first, no viewport-only
+   assumptions baked into a component that can appear at 320px (a bottom
+   sheet) or docked in a 22rem sidebar at the same time.
+   ============================================================================ */
+
+/* --- Cross-reference panel ----------------------------------------------- */
+
+.xref-panel {
+  container-type: inline-size;
+  container-name: xref-panel;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+.xref-panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.xref-panel__title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  margin: 0;
+}
+
+.xref-panel__count {
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+.xref-panel__source {
+  margin: calc(var(--space-4) * -0.5) 0 0;
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+.xref-panel__source a {
+  color: var(--color-brand-strong);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.xref-panel__tabs {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: var(--border-hairline);
+}
+
+.xref-panel__tab {
+  min-height: var(--touch-target);
+  padding-inline: var(--space-3);
+  font-size: var(--text-sm);
+  font-family: inherit;
+  color: var(--color-ink-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.xref-panel__tab:hover {
+  color: var(--color-ink);
+}
+
+.xref-panel__tab--active {
+  color: var(--color-brand-strong);
+  border-bottom-color: var(--color-brand);
+  font-weight: 600;
+}
+
+.xref-panel__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.xref-panel__filter {
+  min-height: var(--touch-target);
+  padding-inline: var(--space-3);
+  font-size: var(--text-xs);
+  font-family: inherit;
+  color: var(--color-ink-muted);
+  background: var(--color-bg-sunken);
+  border: var(--border-hairline);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+}
+
+.xref-panel__filter--active {
+  background: var(--color-brand-soft);
+  border-color: var(--color-brand);
+  color: var(--color-brand-strong);
+  font-weight: 600;
+}
+
+.xref-panel__error {
+  color: var(--color-rubric-strong);
+  font-size: var(--text-sm);
+}
+
+.xref-panel__loading,
+.xref-panel__empty {
+  color: var(--color-ink-faint);
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
+.xref-panel__truncation {
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+}
+
+.xref-panel__load-more {
+  min-height: var(--touch-target);
+  align-self: flex-start;
+  padding-inline: var(--space-3);
+  border: var(--border-hairline);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-raised);
+  color: var(--color-brand-strong);
+  font: inherit;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.xref-panel__load-more:hover,
+.xref-panel__load-more:focus-visible {
+  border-color: var(--color-brand);
+  background: var(--color-surface-hover);
+}
+
+.xref-panel__groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.xref-group__book {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0 0 var(--space-2);
+}
+
+.xref-group__book-count {
+  font-weight: 400;
+  color: var(--color-ink-faint);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.xref-group__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.xref-row__link {
+  display: block;
+  padding: var(--space-3);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  text-decoration: none;
+  color: inherit;
+  min-height: var(--touch-target);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.xref-row__link:hover,
+.xref-row__link:focus-visible {
+  border-color: var(--color-brand);
+  background: var(--color-surface-hover);
+}
+
+.xref-row__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.xref-row__reference {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-brand-strong);
+}
+
+.xref-row__preview {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+}
+
+.xref-row__no-preview {
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-ink-faint);
+  margin: 0;
+}
+
+.xref-tier {
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  padding: 0.1em 0.5em;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  cursor: help;
+}
+
+/* An ordinal vote-count scale, not an alert scale — "Strong" is a rank, not a warning, so it
+   never uses the rubric/red palette. All three tiers share the brand hue at increasing
+   intensity, the same device a legend or a bar chart would use for "more of the same thing". */
+.xref-tier--strong {
+  background: var(--color-brand-strong);
+  color: var(--color-ink-on-accent);
+}
+
+.xref-tier--moderate {
+  background: var(--color-brand-soft);
+  color: var(--color-brand-strong);
+}
+
+.xref-tier--light {
+  background: var(--color-bg-sunken);
+  color: var(--color-ink-faint);
+}
+
+/* Wider panel instances (docked sidebar) get two-column preview text instead of stacked. */
+@container xref-panel (min-width: 26rem) {
+  .xref-row__meta {
+    flex-wrap: nowrap;
+  }
+}
+
+/* --- Deep dive: graph + list ---------------------------------------------- */
+
+.deep-dive-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-4);
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+/* A standalone back link is a navigation control, not a word in a sentence, so the WCAG
+   inline-target exemption does not cover it and it gets the full 44px. `inline-flex` +
+   `min-height` rather than vertical padding: padding here would push the title below it down
+   by the same amount and change the page's rhythm to fix a hit area. */
+.deep-dive-page__back {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: var(--text-sm);
+  color: var(--color-brand-strong);
+  text-decoration: none;
+}
+
+.deep-dive-page__back:hover {
+  text-decoration: underline;
+}
+
+.deep-dive-page__back:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* The panel inside the bottom sheet: the sheet's own <h2> already names it, so the panel's
+   duplicate title is dropped here rather than in the component — it must keep rendering that
+   heading when the same panel is docked in the desktop sidebar with no sheet around it. The
+   count beside it is not a duplicate and stays. */
+.xref-panel--sheet .xref-panel__title {
+  display: none;
+}
+
+.deep-dive-page__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  margin: var(--space-2) 0 0;
+}
+
+.deep-dive-page__subtitle {
+  color: var(--color-ink-muted);
+  font-size: var(--text-sm);
+  margin: var(--space-1) 0 0;
+}
+
+.deep-dive {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.deep-dive__error {
+  color: var(--color-rubric-strong);
+}
+
+.deep-dive__loading {
+  color: var(--color-ink-faint);
+  font-style: italic;
+}
+
+/* Informational, not an error. This note says the tool is being honest about a limit it
+   applied on purpose — dressed in the rubric/alert palette it read as "something went
+   wrong", which is the opposite of the trust it is meant to build. Neutral surface, with a
+   single accent rule to mark it as the tool's own voice. */
+.deep-dive__cap-notice {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  background: var(--color-bg-sunken);
+  border: var(--border-hairline);
+  border-inline-start: 3px solid var(--color-brand);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.deep-dive__cap-notice code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.deep-dive__graph-unavailable {
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  background: var(--color-bg-sunken);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-style: italic;
+}
+
+.deep-dive-graph {
+  position: relative;
+  width: 100%;
+  height: min(70vh, 40rem);
+  min-height: 22rem;
+  border: var(--border-hairline);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-sunken);
+  overflow: hidden;
+}
+
+.deep-dive-graph__canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.deep-dive-graph__canvas:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Visually hidden but always in the accessible tree — the graph cursor's aria-live
+   announcement. Canvas has no `aria-activedescendant` equivalent, so this region is how a
+   screen reader learns where the keyboard cursor is without seeing the ring drawn on canvas. */
+.deep-dive-graph__live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* --- Graph data table (accessible equivalent) ----------------------------- */
+
+.deep-dive-graph__data {
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+}
+
+.deep-dive-graph__data summary {
+  display: flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+
+.deep-dive-graph__data summary:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.deep-dive-graph__data[open] summary {
+  border-bottom: var(--border-hairline);
+}
+
+.deep-dive-graph__table-wrap {
+  overflow-x: auto;
+  padding: var(--space-3) var(--space-4);
+}
+
+.deep-dive-graph__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.deep-dive-graph__table caption {
+  text-align: left;
+  color: var(--color-ink-faint);
+  font-size: var(--text-xs);
+  margin-bottom: var(--space-2);
+}
+
+.deep-dive-graph__table th,
+.deep-dive-graph__table td {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: var(--border-hairline);
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.deep-dive-graph__table td:last-child {
+  white-space: normal;
+}
+
+.deep-dive-graph__table thead th {
+  color: var(--color-ink-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.deep-dive-graph__table-button {
+  min-height: var(--touch-target);
+  padding-inline: var(--space-2);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-brand-strong);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.deep-dive-graph__table-button:hover,
+.deep-dive-graph__table-button:focus-visible {
+  color: var(--color-brand);
+}
+
+.deep-dive-graph__hint {
+  position: absolute;
+  left: var(--space-3);
+  bottom: var(--space-3);
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  background: var(--color-bg-raised);
+  border: var(--border-hairline);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+}
+
+.deep-dive-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.deep-dive-list__empty {
+  color: var(--color-ink-faint);
+  font-style: italic;
+}
+
+.deep-dive-list__depth-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-ink-muted);
+  margin: 0 0 var(--space-2);
+}
+
+.deep-dive-list__depth-count {
+  font-weight: 400;
+  color: var(--color-ink-faint);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.deep-dive-list__rows {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .deep-dive-list__rows {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .deep-dive-list__rows {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.deep-dive-row__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-height: var(--touch-target);
+  padding: var(--space-3);
+  border: var(--border-hairline);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  text-decoration: none;
+  color: inherit;
+}
+
+.deep-dive-row__link:hover,
+.deep-dive-row__link:focus-visible {
+  border-color: var(--color-brand);
+  background: var(--color-surface-hover);
+}
+
+.deep-dive-row__reference {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-brand-strong);
+}
+
+.deep-dive-row__meta {
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+}
+
+/* --- Graph legend -------------------------------------------------------- */
+
+/* Sits inside the canvas frame rather than below it: the marks it explains are on screen
+   at the same moment, and a legend a reader has to scroll to find is a legend they do not
+   read. Pointer-transparent so it never steals a click meant for a node. */
+.deep-dive-graph__legend {
+  position: absolute;
+  inset-block-end: var(--space-3);
+  inset-inline-start: var(--space-3);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: color-mix(in oklab, var(--color-bg-raised) 88%, transparent);
+  border: var(--border-hairline);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  pointer-events: none;
+}
+
+.deep-dive-graph__legend-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.deep-dive-graph__legend dt {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.deep-dive-graph__legend dd {
+  margin: 0;
+  color: var(--color-ink-faint);
+}
+
+.deep-dive-graph__key {
+  flex: none;
+  align-self: center;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: var(--radius-full);
+}
+
+.deep-dive-graph__key--seed {
+  background: var(--color-rubric);
+}
+
+.deep-dive-graph__key--node {
+  background: var(--color-brand);
+  opacity: 0.6;
+}
+
+.deep-dive-graph__key--edge {
+  height: 2px;
+  border-radius: 0;
+  background: var(--color-border-strong);
+}

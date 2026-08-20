@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-15
 
-**Status:** User-approved direction; written specification awaiting review
+**Status:** Approved
 
 **Scope:** An ongoing curated daily-study sequence, optional reading plans, cited literary
 structures, original-language distinctions, narrative observations, and opt-in reminders.
@@ -105,7 +105,7 @@ imply anything about the acrostic's interpretation.
   identity.
 - The primary navigation label is **Study**. If a scholarly twin is displayed, `Seder` and its
   gloss come from the shared lexicon.
-- A calendar event or notification opens `/study`, which resolves the reader's local date to the
+- A calendar event or notification opens `/study/today`, which resolves the reader's local date to the
   scheduled discovery and then redirects to its stable slug.
 
 ### 3.2 Session rhythm
@@ -277,8 +277,8 @@ CREATE TABLE study_related_readings (
 The date is selected from the browser's IANA timezone and sent explicitly. Server timezone must
 never decide which discovery is “today.” On the first visit, a tiny client bootstrap reads
 `Intl.DateTimeFormat().resolvedOptions().timeZone`, posts it to a route handler, and receives a
-same-site `jot_tz` cookie; `/study` then redirects once to the correct stable discovery slug. Later
-Server Component renders, home-page cards, calendar opens, and notification opens read that cookie
+same-site `jot_tz` cookie; `/study/today` then redirects once to the correct stable discovery slug.
+Later Server Component renders, home-page cards, calendar opens, and notification opens read that cookie
 and can include the day's scripture in the server response. Until the bootstrap completes, the
 home card says **Find today's reading** rather than guessing from the VPS clock. A rejected or
 invalid timezone falls back to UTC only after disclosing that choice in Study settings.
@@ -443,7 +443,7 @@ still labels this evidence **viewed**, never **read** or **understood**.
 
 Reminder settings let the reader select a local time and download a recurring `.ics` event. The
 event uses a floating local time so it remains at the chosen wall-clock time when the reader
-travels, includes an `RRULE:FREQ=DAILY`, and links to `/study`. Calendar setup requires no account,
+travels, includes an `RRULE:FREQ=DAILY`, and links to `/study/today`. Calendar setup requires no account,
 push subscription, or email address.
 
 The interface describes calendar reminders accurately: Jot cannot suppress a calendar alert
@@ -489,7 +489,7 @@ A server-side reminder worker runs once per minute under a systemd timer on the 
 3. Suppresses delivery when `study_progress.completed_at` covers that local date's discovery.
 4. Sends either generic lock-screen copy (“Today's reading is ready”) or the discovery title,
    according to the reader's privacy preference.
-5. Opens `/study` from the notification action.
+5. Opens `/study/today` from the notification action.
 6. Disables subscriptions whose push service reports permanent expiration.
 7. Never logs endpoints, encryption keys, or payload secrets.
 
@@ -617,12 +617,12 @@ the VPS.
   `Verse` imports, or `/api/passage` fetches.
 - Component tests for stage navigation, progressive disclosure, competing literary proposals,
   plain labels, and unsupported/denied notification states.
-- `.ics` parser assertions for a daily recurrence, selected local time, stable `/study` URL, and
+- `.ics` parser assertions for a daily recurrence, selected local time, stable `/study/today` URL, and
   escaped text.
 - Push-worker tests for timezone selection, completion suppression, duplicate prevention, generic
   versus title preview, transient failure, and expired subscription cleanup.
 - Service-worker tests proving a notification click focuses an existing Jot window or opens
-  `/study` and that every received push produces a visible notification.
+  `/study/today` and that every received push produces a visible notification.
 - Full `npm run build`, `npm run lint`, and `npm run test` gates through
   `scripts/sync-and-build.sh`.
 

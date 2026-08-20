@@ -1,0 +1,577 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Jot design tokens
+   ==========================================================================
+   Palette concept: "manuscript" — ink on parchment, not clinical white-on-
+   black. Backgrounds are genuinely low-chroma warm neutrals so the reading
+   surface holds up over an hour. Two brand accents are drawn from real
+   manuscript practice: a deep oxidised-bronze/verdigris for the wordmark
+   body and structural chrome, and a rubric red (the colour scribes used to
+   pick out initials and section headings — "rubrication") for the tittle
+   and for anything that means "this is the one thing to notice."
+   All colour is expressed in oklch so lightness/chroma stay perceptually
+   even between light and dark, and dark mode is a pure token swap — no
+   component ever branches on theme.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- surfaces: warm, low-chroma parchment, layered by lightness ---- */
+  --color-bg: oklch(97.5% 0.012 78);          /* page: parchment */
+  --color-bg-raised: oklch(99% 0.007 80);     /* cards, popovers */
+  --color-bg-sunken: oklch(94.5% 0.016 75);   /* wells, code, inset panels */
+  --color-surface: oklch(96% 0.014 76);       /* panels, sheets, nav */
+  --color-surface-hover: oklch(93% 0.018 74);
+  --color-overlay: oklch(20% 0.02 60 / 0.4);  /* scrim behind sheets/modals */
+
+  /* ---- ink: warm near-black, never pure #000 ---- */
+  --color-ink: oklch(24% 0.02 55);            /* body text */
+  --color-ink-muted: oklch(42% 0.021 55);     /* secondary text */
+  /* Captions, placeholders and the bottom-tab labels — all of which are SMALL text, so the
+     4.5:1 AA threshold applies, not the 3:1 large-text one. At the previous 58% this measured
+     4.00:1 on --color-bg and 3.50:1 on --color-surface-hover: a fail on every surface in the
+     set. Recomputed at 50% (oklch -> sRGB -> WCAG 2.1 relative luminance), against every
+     surface this token is ever set on:
+         bg 5.61:1 · bg-raised 5.86:1 · bg-sunken 5.13:1 · surface 5.36:1 · surface-hover 4.90:1
+     The binding number is surface-hover, the lightest light surface. Do not raise the
+     lightness of this token above 52% (surface-hover falls to 4.50:1, i.e. exactly at the
+     threshold with no margin) and do not darken any surface without recomputing.
+     --color-ink-muted at 42% is 7.92:1 / 6.92:1 over the same range and needs no change. */
+  --color-ink-faint: oklch(50% 0.018 55);     /* placeholders, captions — 4.90:1 worst case */
+  --color-ink-on-accent: oklch(98% 0.006 80);
+
+  /* ---- borders ---- */
+  --color-border: oklch(85% 0.017 70);
+  --color-border-strong: oklch(74% 0.022 65);
+
+  /* ---- brand: verdigris (structural) + rubric red (signal) ---- */
+  --color-brand: oklch(46% 0.075 185);          /* oxidised bronze-green */
+  --color-brand-strong: oklch(32% 0.078 185);  /* action text pair: >4.5:1 with ink-on-accent */
+  --color-brand-soft: oklch(91% 0.03 185);
+  --color-rubric: oklch(52% 0.19 32);           /* rubric red */
+  --color-rubric-strong: oklch(44% 0.19 30);
+  --color-rubric-soft: oklch(92% 0.05 30);
+
+  /* ---- semantic ---- */
+  --color-accent: var(--color-brand);
+  --color-accent-strong: var(--color-brand-strong);
+  /* Focus is NOT rubric.
+     Rubric red means "the text has a problem" everywhere else in this product — an omitted
+     verse, a variant, a warning rule. A focus ring drawn in it turned every keyboard-focused
+     control into what looked like an error: opening the Reading layers panel autofocused its
+     close button and greeted the reader with a red rectangle around the exit, and at phone
+     width the tour's first heading, "A Bible for reading closely.", was boxed in alarm red.
+     A reviewer read both as errors, which is exactly right.
+     Brand verdigris instead: it is the colour this product already uses for "this is the live,
+     interactive thing", it is a hue nothing else on the page competes with, and it carries no
+     warning. 3px rather than 2px so the swap from a high-chroma red loses no findability. */
+  --color-focus-ring: oklch(38% 0.078 185);     /* brand-strong — findable, and not a warning */
+  --color-danger: oklch(52% 0.19 25);
+  --color-success: oklch(52% 0.1 155);
+
+  /* ---- layer/decoration colours (highlights, heat, source-crit) ---- */
+  --color-highlight-amber: oklch(85% 0.11 80 / 0.55);
+  --color-highlight-rose: oklch(85% 0.08 15 / 0.55);
+  --color-highlight-moss: oklch(85% 0.07 140 / 0.55);
+  --color-highlight-sky: oklch(85% 0.06 230 / 0.5);
+  --color-heat-low: oklch(90% 0.03 60);
+  --color-heat-high: oklch(55% 0.16 35);
+
+  /* ---- spacing scale: 4px base ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  /* ---- radius ---- */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius-full: 999px;
+
+  /* ---- shadow: soft, warm-tinted, never pure black ----
+     --shadow-color carries the FULL oklch triple `L C H`, including the percent sign, because
+     the templates below interpolate it as the whole colour. It used to hold `55 0.03 60` while
+     each template also supplied its own lightness, producing `oklch(30% 55 0.03 60 / 0.08)` —
+     four components where oklch takes three. CSS discards an invalid declaration silently, so
+     every shadow token in the app resolved to nothing and `box-shadow` fell back to `none`.
+     Nothing errored and nothing looked obviously broken; the app simply had no elevation
+     anywhere, and dialogs read as painted onto the page behind them.
+     If you edit these, check a real surface in the browser — an invalid colour here fails open.
+     `apps/web/src/app/globals.test.ts` now parses this file and fails on a malformed oklch(). */
+  --shadow-color: 55% 0.03 60;
+  /* Opacity is per-theme, not per-token: the same geometry needs a much heavier shadow on a
+     dark surface to read as elevation at all, since a dark shadow on dark ground has far less
+     contrast to spend than a warm grey one on parchment. */
+  --shadow-alpha-soft: 0.08;
+  --shadow-alpha-mid: 0.1;
+  --shadow-alpha-deep: 0.16;
+  --shadow-sm: 0 1px 2px oklch(var(--shadow-color) / var(--shadow-alpha-soft));
+  --shadow-md: 0 4px 12px oklch(var(--shadow-color) / var(--shadow-alpha-mid)),
+    0 1px 3px oklch(var(--shadow-color) / var(--shadow-alpha-soft));
+  --shadow-lg: 0 12px 32px oklch(var(--shadow-color) / var(--shadow-alpha-deep)),
+    0 2px 6px oklch(var(--shadow-color) / var(--shadow-alpha-soft));
+  --shadow-focus: 0 0 0 3px var(--color-focus-ring);
+
+  /* ---- borders as tokens ---- */
+  --border-hairline: 1px solid var(--color-border);
+  --border-strong: 1px solid var(--color-border-strong);
+
+  /* ---- type scale: fluid, tuned 320px -> 1920px ---- */
+  --text-xs: clamp(0.72rem, 0.69rem + 0.15vw, 0.78rem);
+  --text-sm: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --text-base: clamp(0.98rem, 0.94rem + 0.2vw, 1.06rem);
+  --text-md: clamp(1.1rem, 1.04rem + 0.28vw, 1.22rem);
+  --text-lg: clamp(1.28rem, 1.18rem + 0.45vw, 1.5rem);
+  --text-xl: clamp(1.6rem, 1.4rem + 0.85vw, 2.05rem);
+  --text-2xl: clamp(2.05rem, 1.7rem + 1.5vw, 2.9rem);
+  --text-3xl: clamp(2.6rem, 2.05rem + 2.4vw, 3.9rem);
+
+  /* scripture reading scale — slightly larger baseline, generous leading */
+  --text-scripture-body: clamp(1.05rem, 1rem + 0.25vw, 1.2rem);
+  --text-scripture-verse-num: clamp(0.62rem, 0.6rem + 0.08vw, 0.68rem);
+  --leading-tight: 1.2;
+  --leading-snug: 1.4;
+  --leading-normal: 1.6;
+  --leading-scripture: 1.75;
+
+  --measure-scripture: 68ch; /* line-length cap for long-form reading */
+
+  /* The `--jot-font-*` indirection is load-bearing. Tailwind's `@theme inline` block below
+     needs to re-export these under Tailwind's own token names, and `--font-sans: var(--font-sans)`
+     is a self-reference: per CSS spec that is a cycle, making the property invalid at
+     computed-value time. Sourcing from a differently-named variable keeps the two layers
+     independent instead of relying on which `:root` block the bundler happens to emit last. */
+  --jot-font-serif: var(--font-literata), "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --jot-font-sans: var(--font-archivo), "Segoe UI", system-ui, sans-serif;
+  --jot-font-mono: var(--font-jetbrains-mono), "SFMono-Regular", Consolas, monospace;
+
+  /* Pointed Hebrew. SBL Hebrew stays FIRST because it is the field's reference face for
+     cantillation and a reader who has installed it has done so deliberately; the self-hosted
+     Noto sits behind it so that everybody else gets correct mark positioning rather than a
+     guess. See the `notoSerifHebrew` note in `layout.tsx`.
+
+     Deliberately ends WITHOUT a generic family: every entry after a generic is unreachable, and
+     some of these surfaces also carry Greek, which none of these faces cover. Each use site
+     appends its own last resort — `var(--font-hebrew), var(--font-serif)` where Greek can
+     appear, `var(--font-hebrew), serif` where it cannot. */
+  --jot-font-hebrew: "SBL Hebrew", "Taamey Frank CLM", var(--font-noto-hebrew), "Ezra SIL",
+    "David CLM";
+
+  --font-serif: var(--jot-font-serif);
+  --font-sans: var(--jot-font-sans);
+  --font-mono: var(--jot-font-mono);
+  --font-hebrew: var(--jot-font-hebrew);
+
+  /* Same indirection for the colours Tailwind re-exports. Declared once: custom properties
+     resolve against the *winning* declaration, so these follow the dark-mode overrides below
+     without having to be repeated in every theme block. */
+  --color-bg-source: var(--color-bg);
+  --color-bg-raised-source: var(--color-bg-raised);
+  --color-bg-sunken-source: var(--color-bg-sunken);
+  --color-surface-source: var(--color-surface);
+  --color-ink-source: var(--color-ink);
+  --color-ink-muted-source: var(--color-ink-muted);
+  --color-brand-source: var(--color-brand);
+  --color-rubric-source: var(--color-rubric);
+
+  --shell-tabbar-height: 3.75rem;
+  --shell-toptabs-height: 3.25rem;
+  /* Wide enough for the longest workspace label to sit inside the rail. At 4.75rem the label
+     was wider than its own link and bled off the left edge of the page — the kind of defect
+     that only shows up once a label is renamed, so the rail is sized from the text, not the
+     icon. */
+  --shell-rail-width: 5.75rem;
+  --shell-sidebar-width: 22rem;
+  --touch-target: 2.75rem; /* 44px */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: oklch(19% 0.014 55);
+    --color-bg-raised: oklch(23% 0.015 55);
+    --color-bg-sunken: oklch(15.5% 0.013 55);
+    --color-surface: oklch(22% 0.015 55);
+    --color-surface-hover: oklch(27% 0.017 55);
+    --color-overlay: oklch(10% 0.01 55 / 0.55);
+
+    --color-ink: oklch(92% 0.012 75);
+    --color-ink-muted: oklch(76% 0.016 70);
+    /* Same small-text argument as the light block above. At 58% this measured 3.94:1 on
+       --color-bg-raised and 3.52:1 on --color-surface-hover — a fail. Recomputed at 68%:
+           bg 6.40:1 · bg-raised 5.86:1 · bg-sunken 6.77:1 · surface 6.01:1 · surface-hover 5.23:1
+       Binding number is surface-hover, the lightest dark surface. Keep this ≥ 62%
+       (surface-hover 4.14:1 there — still failing, so 62% is the floor, not a safe value).
+       --color-ink-muted at 76% is 8.60:1 / 7.03:1 and needs no change.
+       This block and the [data-theme="dark"] block below MUST stay identical. */
+    --color-ink-faint: oklch(68% 0.017 65);
+    /* DARK: near-black, not near-white. This token names the ink that sits ON an accent
+       surface, and the accent tokens invert direction between themes — "strong" means darker
+       on parchment and LIGHTER on a dark ground. Keeping it near-white in both themes gave
+       white on oklch(80%) mint: 1.70:1 measured, against a 4.5:1 requirement. That was the
+       cross-reference vote-weight badge, but the same pair also carried the home page's search
+       button, the roadmap button and the active theme pill — three more failures nobody had
+       looked at. Against brand it is now 7.62:1 and against brand-strong 10.09:1.
+       Recompute (oklch -> sRGB -> WCAG relative luminance) before touching either side;
+       `globals.test.ts` fails the build if these pairs drop below 4.5:1. */
+    --color-ink-on-accent: oklch(20% 0.02 60);
+
+    --color-border: oklch(33% 0.02 60);
+    --color-border-strong: oklch(42% 0.024 60);
+
+    --color-brand: oklch(72% 0.09 182);
+    --color-brand-strong: oklch(80% 0.09 182);
+    --color-brand-soft: oklch(30% 0.05 182);
+    --color-rubric: oklch(70% 0.17 30);
+    --color-rubric-strong: oklch(78% 0.17 28);
+    --color-rubric-soft: oklch(32% 0.09 28);
+
+    --color-accent: var(--color-brand);
+    --color-accent-strong: var(--color-brand-strong);
+    --color-focus-ring: oklch(80% 0.09 182);   /* brand-strong (dark) — see the light note */
+
+    --color-highlight-amber: oklch(45% 0.09 80 / 0.55);
+    --color-highlight-rose: oklch(45% 0.07 15 / 0.55);
+    --color-highlight-moss: oklch(45% 0.06 140 / 0.55);
+    --color-highlight-sky: oklch(45% 0.06 230 / 0.5);
+    --color-heat-low: oklch(30% 0.03 60);
+    --color-heat-high: oklch(68% 0.16 35);
+
+    /* Full `L C H` triple — see the note on --shadow-color in the light block. */
+    --shadow-color: 8% 0.01 60;
+    --shadow-alpha-soft: 0.3;
+    --shadow-alpha-mid: 0.4;
+    --shadow-alpha-deep: 0.55;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: oklch(19% 0.014 55);
+  --color-bg-raised: oklch(23% 0.015 55);
+  --color-bg-sunken: oklch(15.5% 0.013 55);
+  --color-surface: oklch(22% 0.015 55);
+  --color-surface-hover: oklch(27% 0.017 55);
+  --color-overlay: oklch(10% 0.01 55 / 0.55);
+
+  --color-ink: oklch(92% 0.012 75);
+  --color-ink-muted: oklch(76% 0.016 70);
+  /* Kept in lockstep with the prefers-color-scheme block above — see the ratios recorded
+     there. 68%: worst case 5.23:1 on --color-surface-hover. */
+  --color-ink-faint: oklch(68% 0.017 65);
+  --color-ink-on-accent: oklch(20% 0.02 60);   /* see the note in the media-query block */
+
+  --color-border: oklch(33% 0.02 60);
+  --color-border-strong: oklch(42% 0.024 60);
+
+  --color-brand: oklch(72% 0.09 182);
+  --color-brand-strong: oklch(80% 0.09 182);
+  --color-brand-soft: oklch(30% 0.05 182);
+  --color-rubric: oklch(70% 0.17 30);
+  --color-rubric-strong: oklch(78% 0.17 28);
+  --color-rubric-soft: oklch(32% 0.09 28);
+
+  --color-accent: var(--color-brand);
+  --color-accent-strong: var(--color-brand-strong);
+  --color-focus-ring: oklch(80% 0.09 182);     /* brand-strong (dark) — see the light note */
+
+  --color-highlight-amber: oklch(45% 0.09 80 / 0.55);
+  --color-highlight-rose: oklch(45% 0.07 15 / 0.55);
+  --color-highlight-moss: oklch(45% 0.06 140 / 0.55);
+  --color-highlight-sky: oklch(45% 0.06 230 / 0.5);
+  --color-heat-low: oklch(30% 0.03 60);
+  --color-heat-high: oklch(68% 0.16 35);
+
+  /* Full `L C H` triple — see the note on --shadow-color in the light block. */
+  --shadow-color: 8% 0.01 60;
+  --shadow-alpha-soft: 0.3;
+  --shadow-alpha-mid: 0.4;
+  --shadow-alpha-deep: 0.55;
+}
+
+/* Re-export the design tokens under Tailwind's namespace so utility classes (`font-serif`,
+   `bg-bg`, `text-ink`, …) resolve to the same values the hand-written CSS uses. `inline` is
+   required: without it Tailwind snapshots the value once, and the light/dark token swap below
+   would stop reaching the utilities. Sources are the `--jot-*` variables — never these names
+   themselves, which would be a cycle. */
+@theme inline {
+  --color-bg: var(--color-bg-source);
+  --color-bg-raised: var(--color-bg-raised-source);
+  --color-bg-sunken: var(--color-bg-sunken-source);
+  --color-surface: var(--color-surface-source);
+  --color-ink: var(--color-ink-source);
+  --color-ink-muted: var(--color-ink-muted-source);
+  --color-brand: var(--color-brand-source);
+  --color-rubric: var(--color-rubric-source);
+  --font-sans: var(--jot-font-sans);
+  --font-serif: var(--jot-font-serif);
+  --font-mono: var(--jot-font-mono);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tailwind cannot infer an arbitrary custom property that is not registered in @theme. Keep
+   accent foreground semantic and explicit so every light/dark action pair actually receives the
+   theme-specific ink token rather than inheriting body ink (which made dark text sit on the dark
+   light-theme action background). */
+.text-on-accent {
+  color: var(--color-ink-on-accent);
+}
+
+::selection {
+  background: var(--color-rubric-soft);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Scripture reading surface */
+.prose-scripture {
+  font-family: var(--font-serif);
+  font-size: var(--text-scripture-body);
+  line-height: var(--leading-scripture);
+  max-width: var(--measure-scripture);
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  letter-spacing: 0.001em;
+}
+
+.container-passage {
+  container-type: inline-size;
+  container-name: passage;
+}
+
+/* Utility: visually persistent on touch, screen-reader-only on hover-capable
+   pointers. Used by GlossLabel so the gloss is always in the accessible
+   tree, and visibly shown as a subtitle only where there is no hover. */
+.gloss-subtitle {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  line-height: var(--leading-snug);
+  margin-top: 0.1em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gloss-subtitle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+/* Dense nav contexts (top tabs, bottom tab bar) have no room for a second line of prose even
+   on a coarse pointer — five of these stacked is what blew out the top bar at 768px. `compact`
+   callers clip the subtitle unconditionally and rely on the same term staying reachable via
+   the tooltip-on-focus path GlossLabel already has (tapping a touch target focuses it, which
+   Radix Tooltip treats the same as hover) — so the gloss is still one tap away, never baked
+   into the layout. */
+.gloss-subtitle--compact {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* ==========================================================================
+   Print
+   ==========================================================================
+   A passage printed from this site should look like a passage, not like a
+   screenshot of a website. Before this block there were no `@media print`
+   rules at all, so printing Psalm 23 produced the nav rail, the Selah /
+   Reading layers / Guide buttons, the theme switcher, and then all forty
+   cross-reference cards reflowed underneath the text.
+
+   Scholars print. A seminar handout, a marked-up passage for a supervision,
+   a page carried into a room with no laptop — these are ordinary uses, and
+   a tool that cannot produce a clean sheet of paper is missing something
+   basic rather than something advanced.
+
+   What survives: the passage, its verse numbers, the reference, and the
+   copyright line. That last one is not optional — several licences in this
+   corpus require the notice to travel with the text, and paper is exactly
+   the case where it can no longer be looked up.
+   ========================================================================== */
+@media print {
+  /* Navigation, panels and every floating control. `[data-chrome]` is set
+     explicitly on the shell's rail, tabs, bar and context asides rather than
+     matched by class, because those are Tailwind utility strings and a print
+     rule keyed to `.fixed.inset-x-0` would break the first time one of them
+     was restyled — silently, and only on paper, where nobody looks. */
+  [data-chrome],
+  [role="dialog"],
+  .selection-toolbar,
+  .reader-aside,
+  .cite__trigger,
+  .reader__pager,
+  .translation-switcher__panel {
+    display: none !important;
+  }
+
+  /* Paper is white and ink is black however the reader has themed the screen.
+     Printing the parchment background wastes toner on every sheet, and dark
+     theme would print a black page. */
+  :root,
+  :root[data-theme="dark"] {
+    --color-bg: #fff;
+    --color-bg-raised: #fff;
+    --color-bg-sunken: #fff;
+    --color-surface: #fff;
+    --color-ink: #000;
+    --color-ink-muted: #222;
+    --color-ink-faint: #444;
+  }
+
+  html,
+  body {
+    background: #fff;
+  }
+
+  /* The reading column is sized for a screen's measure; a printed page has its
+     own margins and does not need a second set. */
+  .reader,
+  .reader-layout,
+  .passage {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .reader-layout {
+    display: block;
+  }
+
+  /* A verse split across a page break is the one thing that makes a printed
+     passage hard to read aloud from. */
+  .verse {
+    break-inside: avoid;
+  }
+
+  /* Headings should not be orphaned at the foot of a page. */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  /* Underlining every link is screen convention; on paper it is noise, since
+     none of them can be followed. The reference text itself stays. */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  /* The licence notice is the reason this block does not simply hide
+     everything outside `.passage`. Keep it, and keep it legible. */
+  .reader__copyright {
+    margin-block-start: var(--space-8);
+    border-block-start: 1px solid #999;
+    padding-block-start: var(--space-2);
+    color: #333;
+  }
+}
+
+/* --- Scroll affordance ---------------------------------------------------
+   A box that scrolls and does not look like it is a box whose content simply
+   stops. The reading-settings panel at 1180×694 was found clipped mid-row
+   with nothing on screen suggesting there was more below — it scrolled, but
+   only if you guessed.
+
+   This is the `background-attachment: local` technique, and the reason to use
+   it over a permanently-drawn fade is that it is *conditional without
+   JavaScript*: the two cover gradients are painted in the element's own
+   scrolling coordinate space, so they sit over the shadows exactly when the
+   box is scrolled to that edge and slide away when it is not. A panel whose
+   content fits shows nothing at all; one scrolled to the bottom shows a
+   shadow at the top only. No resize observer, no scroll listener, and nothing
+   to desynchronise.
+
+   `--scroll-shadow-bg` must match the surface the element is painted on, or
+   the cover gradients will not cover. It defaults to the raised surface
+   because that is what every dialog here uses. */
+.scroll-shadows {
+  --scroll-shadow-bg: var(--color-bg-raised);
+  background:
+    linear-gradient(var(--scroll-shadow-bg) 30%, transparent) top / 100% 1.5rem local no-repeat,
+    linear-gradient(transparent, var(--scroll-shadow-bg) 70%) bottom / 100% 1.5rem local no-repeat,
+    radial-gradient(farthest-side at 50% 0, var(--color-overlay), transparent) top / 100% 0.5rem
+      scroll no-repeat,
+    radial-gradient(farthest-side at 50% 100%, var(--color-overlay), transparent) bottom / 100%
+      0.5rem scroll no-repeat;
+  background-color: var(--scroll-shadow-bg);
+}
+/* Read-only API documentation: quiet research tooling, not another dashboard. */
+.api-docs { max-width: 54rem; margin: 0 auto; padding: 3rem 1.25rem 6rem; color: var(--color-ink); font-family: var(--jot-font-sans); }
+.api-docs__header { max-width: 42rem; margin-bottom: 2.5rem; }
+.api-docs__back { color: var(--color-brand-strong); text-decoration: none; }
+.api-docs__eyebrow { margin: 2.5rem 0 .5rem; color: var(--color-ink-muted); font-size: var(--text-sm); text-transform: uppercase; letter-spacing: .08em; }
+.api-docs h1 { margin: 0; font-family: var(--jot-font-serif); font-size: clamp(2rem, 6vw, 3.25rem); }
+.api-docs h2 { margin: 2rem 0 .75rem; font-size: var(--text-lg); }
+.api-docs p { color: var(--color-ink-muted); line-height: 1.65; }
+.api-docs code { overflow-wrap: anywhere; font-family: var(--jot-font-mono); font-size: .9em; }
+.api-docs__endpoints { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+.api-docs__endpoints li { display: grid; grid-template-columns: auto 1fr; gap: .25rem .65rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: .9rem 1rem; background: var(--color-surface); }
+.api-docs__endpoints li > code { color: var(--color-brand-strong); font-weight: 700; }
+.api-docs__endpoints a { min-width: 0; color: var(--color-ink); }
+.api-docs__endpoints p { grid-column: 2; margin: 0; font-size: var(--text-sm); }
