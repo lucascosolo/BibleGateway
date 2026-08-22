@@ -140,6 +140,15 @@ export function NotesIcon({ className }: IconProps) {
   );
 }
 
+export function HomeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M4 11.5 12 4l8 7.5" />
+      <path d="M6 10v9.5a1 1 0 0 0 1 1h3.5v-6h3v6H17a1 1 0 0 0 1-1V10" />
+    </svg>
+  );
+}
+
 export const WORKSPACE_ICONS: Record<string, (props: IconProps) => React.JSX.Element> = {
   book: BookIcon,
   root: RootIcon,
@@ -149,4 +158,5 @@ export const WORKSPACE_ICONS: Record<string, (props: IconProps) => React.JSX.Ele
   search: SearchIcon,
   roadmap: RoadmapIcon,
   notes: NotesIcon,
+  home: HomeIcon,
 };

@@ -24,8 +24,15 @@ export async function GET(request: NextRequest) {
   // the app where navigating silently changes which text you are reading — the whole reason
   // translation is a query param rather than a path segment.
   const t = params.get("t");
+  // Behind Cloudflare Tunnel, `request.url` reports the internal `http://localhost:...` origin,
+  // not the public host — building the redirect URL from it would send users to localhost.
+  // These forwarded headers carry the origin the request actually arrived on.
+  const proto = request.headers.get("x-forwarded-proto") ?? "https";
+  const host =
+    request.headers.get("x-forwarded-host") ?? request.headers.get("host") ?? "bible.lucascosolo.com";
+  const baseUrl = `${proto}://${host}`;
   const withTranslation = (path: string) => {
-    const url = new URL(path, request.url);
+    const url = new URL(path, baseUrl);
     if (t) url.searchParams.set("t", t);
     return NextResponse.redirect(url);
   };

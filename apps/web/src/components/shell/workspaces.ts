@@ -39,6 +39,15 @@ export const WORKSPACES: Workspace[] = [
   { key: "notes", href: "/notes", plainLabel: "Notes", icon: "notes" },
 ];
 
+/**
+ * Not a member of `WORKSPACES`: its href is `/`, and `AppShell`'s `useActiveWorkspace` matches
+ * by `pathname.startsWith(ws.href)` — every route starts with `/`, so mixed into the shared list
+ * it would shadow every other workspace's own match. `NavRail` and `TopTabs` also already carry
+ * their own link home on the wordmark, so this is BottomTabBar's alone: rendered there as a
+ * raised, brand-colored button in the middle slot rather than a plain tab.
+ */
+export const HOME_WORKSPACE: Workspace = { key: "home", href: "/", plainLabel: "Home", icon: "home" };
+
 /** The workspaces named above but not yet built — surfaced on `/roadmap`, not in primary nav. */
 export const PLANNED_WORKSPACES: Workspace[] = [
   {
