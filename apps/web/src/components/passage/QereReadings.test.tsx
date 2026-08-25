@@ -97,13 +97,18 @@ describe("QereReadings", () => {
     expect(screen.getByText("הַיְצֵ֣א")).not.toBeNull();
     // The anchor is disclosed in words, not as a bare index.
     expect(screen.getByText(/14th word of the Hebrew/)).not.toBeNull();
-    // The link resolves to the reading's own Strong's number.
+    // The concordance link resolves to the reading's own Strong's number. It lives inside a
+    // closed `<details>` — the word details are collapsed by default — so `hidden: true` is
+    // required for `getByRole` to see it at all; Testing Library treats closed-`<details>`
+    // content as inaccessible otherwise.
     // Plain DOM assertions throughout: this repo installs @testing-library/react but not
     // jest-dom, so `toBeInTheDocument` / `toHaveAttribute` are not registered matchers and fail
     // as "Invalid Chai property" rather than as a failed expectation.
-    expect(screen.getByRole("link", { name: /הַיְצֵ֣א/ }).getAttribute("href")).toBe(
-      `/lashon/${encodeURIComponent("H3318")}`,
-    );
+    expect(
+      screen
+        .getByRole("link", { name: "Every other place this word occurs →", hidden: true })
+        .getAttribute("href"),
+    ).toBe(`/lashon/${encodeURIComponent("H3318")}`);
   });
 
   it("groups two readings under one written word rather than printing two ketiv rows (Gen 30:11)", () => {

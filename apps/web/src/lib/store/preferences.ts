@@ -16,6 +16,8 @@ export interface LayerToggles {
   sourceCrit: boolean;
   /** Hebrew/Greek words beneath the translation, with lemma and parsed morphology. */
   interlinear: boolean;
+  /** Curated "windows into the text" — small notes on wordplay, custom, or connection. */
+  insights: boolean;
 }
 
 export type ThemePreference = "light" | "dark" | "system";
@@ -48,6 +50,10 @@ const defaultLayers: LayerToggles = {
   // defaulting it on would bury the translation under apparatus for everyone who did not ask
   // for it. It is the layer a researcher turns on deliberately.
   interlinear: false,
+  // ON by default — the opposite reasoning from `interlinear`. This is one or two plain
+  // sentences, not apparatus, and the whole point is that a first-time reader sees it without
+  // having to know it exists. See PREFERENCES_VERSION.
+  insights: true,
 };
 
 /**
@@ -58,7 +64,7 @@ const defaultLayers: LayerToggles = {
  * apparatus they have always had, with no action of their own. The migration below moves
  * exactly that cohort onto the new default and leaves every other preference alone.
  */
-const PREFERENCES_VERSION = 2;
+const PREFERENCES_VERSION = 3;
 
 interface PreferencesState {
   layers: LayerToggles;
@@ -177,6 +183,7 @@ export function useEffectiveLayers(): LayerToggles {
     variants: false,
     sourceCrit: false,
     interlinear: false,
+    insights: false,
   };
 }
 

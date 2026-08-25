@@ -27,6 +27,11 @@ import { GlossLabel } from "@/components/GlossLabel";
  * has one, and otherwise the interlinear word at the same position — passed in as `words` so
  * this component never queries the corpus itself (invariant #2 again: a component that did
  * would be the second renderer it exists to prevent).
+ *
+ * Presentation, not data: the plain-English headline and the written-vs-said layout below are
+ * what changed here. The morphology, lemma and concordance link a researcher wants are still
+ * exactly one click away, behind `<details>` per reading — collapsed by default, so a reader who
+ * has never heard of Qere/Kethiv sees two Hebrew words and a plain sentence, not a grid.
  */
 
 export interface QereReadingsProps {
@@ -95,11 +100,9 @@ export function QereReadings({ variants, words, className }: QereReadingsProps) 
   return (
     <div className={clsx("qere-readings", className)} data-language={language}>
       <p className="qere-readings__intro">
-        <GlossLabel id="qereKethiv" as="strong" className="qere-readings__term" /> The scribes who
-        copied this Hebrew found a word they believed should be said differently from the way it
-        stands written. Rather than change the text, they left the written form alone and noted
-        the spoken one beside it — the oldest reader&rsquo;s notes in the Bible, and both are
-        shown here.
+        Here the Hebrew is written one way but was traditionally read aloud another way.{" "}
+        <GlossLabel id="qereKethiv" className="qere-readings__term" /> is the scribes&rsquo; own
+        name for this — the oldest reader&rsquo;s notes in the Bible.
       </p>
 
       <ul className="qere-readings__list">
@@ -109,11 +112,11 @@ export function QereReadings({ variants, words, className }: QereReadingsProps) 
             <li key={group.position} className="qere-readings__item">
               <p className="qere-readings__position">
                 {group.position > 0
-                  ? `At the ${ordinal(group.position)} word of the Hebrew:`
-                  : "Before the first word of the Hebrew:"}
+                  ? `At the ${ordinal(group.position)} word of the Hebrew`
+                  : "Before the first word of the Hebrew"}
               </p>
 
-              <div className="qere-readings__pair">
+              <div className="qere-readings__flow">
                 <div className="qere-readings__side qere-readings__side--ketiv">
                   <span className="qere-readings__tag">Written</span>
                   {ketiv ? (
@@ -122,41 +125,59 @@ export function QereReadings({ variants, words, className }: QereReadingsProps) 
                     </span>
                   ) : (
                     <span className="qere-readings__word--missing">
-                      the source gives no written form beside it
+                      no written form is recorded beside it
                     </span>
                   )}
                 </div>
 
+                <span className="qere-readings__arrow" aria-hidden="true">
+                  →
+                </span>
+
                 <div className="qere-readings__side qere-readings__side--qere">
-                  <span className="qere-readings__tag">Read</span>
+                  <span className="qere-readings__tag">Say instead</span>
                   <ul className="qere-readings__words">
                     {group.readings.map((v) => {
                       const parsed = parseMorphology(v.morph, v.language);
                       const concordanceKey = v.strongs ?? v.lemma;
                       return (
                         <li key={v.variantId} className="qere-readings__reading">
-                          <Link
-                            href={`/lashon/${encodeURIComponent(concordanceKey)}`}
-                            className="qere-readings__link"
-                            title={[v.headword ?? v.lemma, v.xlit || null, v.gloss || null, parsed.label]
-                              .filter(Boolean)
-                              .join(" · ")}
+                          <span
+                            className="qere-readings__word"
+                            lang={v.language}
+                            dir={RTL_LANGUAGES.has(v.language) ? "rtl" : "ltr"}
                           >
-                            <span
-                              className="qere-readings__word"
-                              lang={v.language}
-                              dir={RTL_LANGUAGES.has(v.language) ? "rtl" : "ltr"}
+                            {v.surface}
+                          </span>
+                          {v.gloss && (
+                            <span className="qere-readings__plain">&ldquo;{v.gloss}&rdquo;</span>
+                          )}
+
+                          <details className="qere-readings__details">
+                            <summary>Word details</summary>
+                            <dl className="qere-readings__detail-list">
+                              <div>
+                                <dt>Lemma</dt>
+                                <dd lang={v.language}>{v.headword ?? v.lemma}</dd>
+                              </div>
+                              {v.xlit && (
+                                <div>
+                                  <dt>Transliteration</dt>
+                                  <dd>{v.xlit}</dd>
+                                </div>
+                              )}
+                              <div>
+                                <dt>Morphology</dt>
+                                <dd>{parsed.label}</dd>
+                              </div>
+                            </dl>
+                            <Link
+                              href={`/lashon/${encodeURIComponent(concordanceKey)}`}
+                              className="qere-readings__link"
                             >
-                              {v.surface}
-                            </span>
-                            <span className="qere-readings__lemma" lang={v.language}>
-                              {v.headword ?? v.lemma}
-                            </span>
-                            {v.gloss && <span className="qere-readings__gloss">{v.gloss}</span>}
-                            <span className="qere-readings__morph">
-                              {parsed.segments.at(-1)?.parts[0] ?? ""}
-                            </span>
-                          </Link>
+                              Every other place this word occurs →
+                            </Link>
+                          </details>
                         </li>
                       );
                     })}

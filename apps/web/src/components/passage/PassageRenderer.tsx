@@ -18,6 +18,8 @@ import {
   type VerseRange,
 } from "@/lib/refs/verse-id";
 import { usePreferencesStore } from "@/lib/store/preferences";
+import type { InsightNote } from "@/lib/insights/notes";
+import { InsightNotes } from "./InsightNotes";
 import { Interlinear } from "./Interlinear";
 import { OmittedVerse, type OmittedVerseNote } from "./OmittedVerse";
 import { QereReadings } from "./QereReadings";
@@ -55,6 +57,8 @@ export interface PassageLayers {
   variants: boolean;
   sourceCrit: boolean;
   interlinear: boolean;
+  /** Curated "windows into the text" — see `lib/insights/notes.ts` and `InsightNotes.tsx`. */
+  insights: boolean;
 }
 
 /** Which layers each density is even allowed to show, before user preferences apply. */
@@ -62,10 +66,12 @@ const DENSITY_LAYER_CEILING: Record<PassageDensity, (keyof PassageLayers)[]> = {
   // A tooltip is a glance. Apparatus in it is noise, and there is no room to act on it.
   tooltip: ["highlights"],
   preview: ["highlights", "verseNumbers"],
-  panel: ["highlights", "verseNumbers", "notes", "crossRefs", "heat"],
-  // `interlinear` is reader-only. It is a stacked cell per word, so at panel width it wraps
-  // into an unreadable column and at preview or tooltip width it would dwarf the verse it is
-  // supposed to be annotating.
+  // `insights` sits with `notes`/`crossRefs`/`heat` rather than with `variants`/`interlinear`:
+  // one or two sentences fit a panel's width where a Hebrew apparatus grid does not.
+  panel: ["highlights", "verseNumbers", "notes", "crossRefs", "heat", "insights"],
+  // `interlinear` and `variants` are reader-only. `interlinear` is a stacked cell per word, so
+  // at panel width it wraps into an unreadable column and at preview or tooltip width it would
+  // dwarf the verse it is supposed to be annotating; `variants` carries the same density.
   reader: [
     "highlights",
     "verseNumbers",
@@ -75,6 +81,7 @@ const DENSITY_LAYER_CEILING: Record<PassageDensity, (keyof PassageLayers)[]> = {
     "variants",
     "sourceCrit",
     "interlinear",
+    "insights",
   ],
 };
 
@@ -211,6 +218,14 @@ export interface PassageRendererProps {
    * renderer invariant #2 exists to prevent. Absent simply means the layer renders nothing.
    */
   variants?: ReadonlyMap<VerseId, readonly OriginalVariant[]>;
+  /**
+   * Curated "windows into the text" (`lib/insights/notes.ts`), keyed by canonical verse id.
+   *
+   * Supplied by the server page, exactly like `variants` and `interlinear` — this is bundled
+   * editorial data rather than a `bible.db` query, but the renderer treats it identically:
+   * absent simply means the layer renders nothing.
+   */
+  insightNotes?: ReadonlyMap<VerseId, readonly InsightNote[]>;
   /** Edition-level Greek differences, supplied by the server page and rendered in this surface. */
   greekEditionVariants?: readonly GreekEditionVariant[];
   greekManuscriptReadings?: readonly GreekManuscriptReading[];
@@ -230,6 +245,7 @@ export function PassageRenderer({
   searchHighlights,
   interlinear,
   variants,
+  insightNotes,
   greekEditionVariants,
   greekManuscriptReadings,
   className,
@@ -250,6 +266,7 @@ export function PassageRenderer({
       variants: layerPrefs.variants,
       sourceCrit: layerPrefs.sourceCrit,
       interlinear: layerPrefs.interlinear,
+      insights: layerPrefs.insights,
       ...layerOverrides,
     };
     // Selah mode ("pause and reflect") strips everything for uninterrupted reading.
@@ -263,6 +280,7 @@ export function PassageRenderer({
         variants: false,
         sourceCrit: false,
         interlinear: false,
+        insights: false,
       };
     }
     // A density can only *reduce* what the user asked for, never add to it.
@@ -328,6 +346,9 @@ export function PassageRenderer({
               onNavigate={onNavigate}
               searchHighlights={searchHighlights?.get(item.verse.verseId)}
             />
+            {layers.insights && (
+              <InsightNotes notes={insightNotes?.get(item.verse.verseId) ?? []} />
+            )}
             {layers.interlinear && (
               <Interlinear words={interlinear?.get(item.verse.verseId) ?? []} />
             )}

@@ -33,6 +33,7 @@ import {
   type OriginalVariant,
   type OriginalWord,
 } from "@/lib/db/originals";
+import { getInsightNotes, type InsightNote } from "@/lib/insights/notes";
 import {
   InvalidReferenceError,
   bookOf,
@@ -338,6 +339,15 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     else variants.set(variant.verseId, [variant]);
   }
 
+  // Curated "windows into the text" (lib/insights/notes.ts), grouped the same way and for the
+  // same reason as `variants` above: a server render composing client-toggled layer data.
+  const insightNotes = new Map<VerseId, InsightNote[]>();
+  for (const note of getInsightNotes(renderRange)) {
+    const existing = insightNotes.get(note.verseId);
+    if (existing) existing.push(note);
+    else insightNotes.set(note.verseId, [note]);
+  }
+
   return (
     <div className="reader-layout">
       <article className="reader">
@@ -390,6 +400,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         bookLabels={book ? { [bookId]: book.name } : undefined}
         interlinear={interlinear}
         variants={variants}
+        insightNotes={insightNotes}
         greekEditionVariants={getGreekEditionVariants(renderRange)}
         greekManuscriptReadings={getGreekManuscriptReadings(renderRange)}
       />

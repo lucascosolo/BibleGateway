@@ -66,6 +66,11 @@ export function layerRows(plainLabels: boolean): LayerRowSpec[] {
     // misused. A technical term used decoratively costs more credibility than it buys.
     { key: "notes", label: "Notes", description: "Notes you've attached to a verse." },
     {
+      key: "insights",
+      label: "Insights",
+      description: "Small windows into the original text — a wordplay, a custom, a connection you might not have seen.",
+    },
+    {
       key: "crossRefs",
       label: "Cross-references",
       description: "The panel of linked passages beside the text.",
