@@ -62,6 +62,16 @@ const NOTES: readonly InsightNote[] = [
     text: "“Glory” (kavod) literally means weight — substance, not shine. Calling the earth “full of his glory” says the earth is full of the sheer weight of who God is, not full of a glow.",
     source: "BDB, kavod",
   },
+  {
+    id: "gen2-21-tsela",
+    verseId: toVerseId(1, 2, 21),
+    text: "The Hebrew word tsela means “side” — like the side of a mountain or a building. Calling it a “rib” is a tradition, not a translation. God didn’t take a tiny bone; He split the human in half, and from that side made another whole person. The poetry of the passage (bone of my bones, flesh of my flesh) makes far more sense when you see it that way.",
+  },
+  {
+    id: "matt1-1-christos",
+    verseId: toVerseId(40, 1, 1),
+    text: "“Christ” is not Jesus’s surname. It comes from the Greek Christos, which translates the Hebrew mashiach — “the Anointed One.” Calling him Jesus Christ is like saying “Jesus the Messiah.” It’s a title, not a family name.",
+  },
 ];
 
 /** Notes whose verse falls within `range`, in document order. Mirrors the shape of every other
