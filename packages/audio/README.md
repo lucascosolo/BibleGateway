@@ -1,0 +1,33 @@
+# packages/audio — the audiobook and spoken-word pipeline
+
+Offline, like `packages/ingest`. Produces `data/audio.db` and `data/audio/<edition>/*.m4a`,
+which the app feature-detects: no `audio.db`, no player. Never runs in prod.
+
+Runs on the heavy-build PC (needs a GPU or a lot of patience: ~260 hours of speech go through a
+wav2vec2 forced aligner). Design record and licence audit: `docs/plans/2026-09-04-audio.md`.
+
+```
+sources.json      every recording, its licence, file layout and coverage — the only place a source is named
+kjv-files.json    LibriVox's 127 multi-chapter files and the chapter ranges in their titles
+fragments.py      bible.db -> the text each file should contain (canonical verse ids, Hebrew word ids)
+align.py          MMS_FA forced alignment, windowed over long files, resumable
+build.py          cut/encode chapters, write audio.db
+run.sh            the whole thing, in order
+```
+
+```
+CACHE=~/.cache/jot-audio            # raw downloads, venv, working files
+./run.sh fragments                  # seconds
+./run.sh align WEB-williams         # hours; resumable, re-run to continue
+./run.sh build                      # minutes; writes ../../data/audio.db and data/audio/
+```
+
+Environment (one-off): `uv venv --python 3.12 $CACHE/venv`, then torch 2.7.1 + torchaudio
+2.7.1 from the `cu118` index (the GTX 980 Ti is sm_52; CUDA 12.8+ builds dropped Maxwell),
+plus `uroman` and `numpy`. `ffmpeg` on PATH.
+
+Output tables (`audio.db`): `audio_editions`, `audio_chapters(file, duration_ms)`,
+`audio_verses(verse_id, start_ms, end_ms, score)`, `audio_words(word_id, verse_id, start_ms,
+end_ms)`. Times are relative to the chapter file. `audio_words` exists only for the Hebrew
+edition — the per-word speaker button plays a slice of the chapter recording, so the reader
+hears a human saying that word in that verse.

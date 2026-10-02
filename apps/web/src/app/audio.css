@@ -1,0 +1,243 @@
+/* --- Audio: the player bar, the Listen button, the playing verse, the word speaker -------
+ *
+ * The bar is chrome (`data-chrome`), fixed to the bottom edge above the phone tab bar and
+ * below the selection toolbar in stacking order: a reader can still mark a phrase while
+ * listening, and the toolbar that appears for it must not be covered by the transport.
+ * z-index 38 sits under the apparatus launcher (39 in reader.css), the tab bar (40) and the
+ * selection toolbar (45).
+ */
+
+.audio-bar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: env(safe-area-inset-bottom, 0px);
+  z-index: 38;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: calc(var(--touch-target) + var(--space-3));
+  padding: var(--space-2) var(--space-4);
+  border-top: var(--border-hairline);
+  background: var(--color-bg-raised);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-sans);
+}
+
+/* Below 768px `<AppShell>` puts a tab bar across the bottom; sit on top of it. */
+@media (max-width: 47.99rem) {
+  .audio-bar {
+    bottom: calc(var(--shell-tabbar-height) + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+/* The desktop shell has a nav rail on the left; the bar should not run under it. */
+@media (min-width: 80rem) {
+  .audio-bar {
+    inset-inline-start: var(--shell-rail-width, 0px);
+  }
+}
+
+/* Keep the end of the reading column clear of the bar while it is up. The reader's own
+   bottom padding already accounts for the launcher and the tab bar; this adds the bar. */
+html[data-audio-bar] .reader {
+  padding-block-end: calc(var(--space-16) + var(--touch-target) * 2 + var(--space-8));
+}
+
+.audio-bar__transport,
+.audio-bar__options {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.audio-bar__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: var(--touch-target);
+  block-size: var(--touch-target);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.audio-bar__button:hover:not(:disabled) { background: var(--color-surface-hover); }
+.audio-bar__button:disabled { color: var(--color-ink-faint); cursor: default; }
+.audio-bar__button:focus-visible,
+.audio-bar__chip:focus-visible,
+.reader__listen:focus-visible,
+.interlinear__speak:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.audio-bar__button--primary {
+  background: var(--color-brand);
+  color: var(--color-ink-on-accent);
+}
+.audio-bar__button--primary:hover:not(:disabled) { background: var(--color-brand-strong); }
+.audio-bar__button--primary:disabled { background: var(--color-border); }
+
+.audio-bar__icon {
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+}
+
+.audio-bar__icon--spin {
+  animation: audio-spin 0.9s linear infinite;
+}
+
+@keyframes audio-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .audio-bar__icon--spin { animation-duration: 2s; }
+}
+
+.audio-bar__now {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: var(--leading-snug);
+}
+
+.audio-bar__ref {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-bar__reader,
+.audio-bar__error {
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.audio-bar__error { color: var(--color-rubric-strong); white-space: normal; }
+
+.audio-bar__choice {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-sunken);
+}
+
+.audio-bar__chip {
+  min-height: 2rem;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-ink-muted);
+  font: 600 var(--text-xs)/1 var(--font-sans);
+  cursor: pointer;
+}
+
+.audio-bar__chip:hover { color: var(--color-ink); }
+.audio-bar__chip--on {
+  background: var(--color-bg-raised);
+  color: var(--color-brand-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Narrow phones: the reader name and the speed control are the first things to go. */
+@media (max-width: 24rem) {
+  .audio-bar__reader { display: none; }
+}
+
+/* --- The Listen button in the reader header ------------------------------------------- */
+
+.reader__listen {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-brand-strong);
+  font: 600 var(--text-xs)/1 var(--font-sans);
+  cursor: pointer;
+}
+.reader__listen:hover { text-decoration: underline; }
+.reader__listen--none {
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+.reader__listen-icon {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.reader__audio-credit {
+  margin-block-start: var(--space-2);
+}
+
+/* --- The verse being read ---------------------------------------------------------------
+ * A wash rather than a border, distinct from every highlight colour and from the heat
+ * marker, and it must never be the ONLY signal: the bar names the verse in text. */
+.verse--playing {
+  background: var(--color-brand-soft);
+  box-decoration-break: clone;
+  border-radius: var(--radius-sm);
+  transition: background-color 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verse--playing { transition: none; }
+}
+
+/* --- The word speaker in the interlinear ------------------------------------------------ */
+
+.interlinear__word {
+  position: relative;
+}
+
+.interlinear__speak {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-ink-faint);
+  cursor: pointer;
+  opacity: 0.55;
+}
+
+.interlinear__word:hover .interlinear__speak,
+.interlinear__speak:focus-visible {
+  opacity: 1;
+  color: var(--color-brand-strong);
+}
+
+/* A touch screen has no hover: the button is always fully visible there. */
+@media (hover: none) {
+  .interlinear__speak { opacity: 1; }
+}
+
+.interlinear__speak-icon {
+  inline-size: 0.95rem;
+  block-size: 0.95rem;
+}
+
+/* Room for the button so it does not sit over the word's last letter. */
+.interlinear__word:has(.interlinear__speak) .interlinear__link {
+  padding-inline-end: 1.4rem;
+}

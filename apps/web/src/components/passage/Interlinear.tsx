@@ -4,7 +4,10 @@ import Link from "next/link";
 import clsx from "clsx";
 
 import type { OriginalWord } from "@/lib/db/originals";
+import type { WordClip } from "@/lib/db/audio";
 import { parseMorphology } from "@/lib/morphology";
+import { useAudioStore } from "@/lib/store/audio";
+import { SpeakerIcon } from "@/components/audio/icons";
 
 /**
  * The original-language words under one verse.
@@ -32,12 +35,19 @@ export interface InterlinearProps {
    * BHS needs to see that this canonical verse is Hebrew 51:2-3.
    */
   showSourceRefs?: boolean;
+  /**
+   * Where a human reader says each word, keyed by `word_id` — from the audio artifact, via the
+   * server page. A word with a clip gets a speaker button; a word without one gets nothing,
+   * which today is every Greek word (no openly licensed Greek reading exists) and the third of
+   * the Hebrew Bible the Be'eri recording does not cover. Absent means no buttons at all.
+   */
+  wordClips?: ReadonlyMap<number, WordClip>;
   className?: string;
 }
 
 const RTL_LANGUAGES = new Set(["hbo", "arc"]);
 
-export function Interlinear({ words, showSourceRefs = true, className }: InterlinearProps) {
+export function Interlinear({ words, showSourceRefs = true, wordClips, className }: InterlinearProps) {
   if (words.length === 0) return null;
 
   const rtl = RTL_LANGUAGES.has(words[0].language);
@@ -60,8 +70,10 @@ export function Interlinear({ words, showSourceRefs = true, className }: Interli
           const parsed = parseMorphology(word.morph, word.language);
           // Strong's number where the source carries one (Hebrew), lemma otherwise (Greek).
           const concordanceKey = word.strongs ?? word.lemma;
+          const clip = wordClips?.get(word.wordId);
           return (
             <li key={word.wordId} className="interlinear__word">
+              {clip && <SpeakWordButton clip={clip} surface={word.surface.replace(/\//g, "")} />}
               <Link
                 href={`/lashon/${encodeURIComponent(concordanceKey)}`}
                 className="interlinear__link"
@@ -108,5 +120,25 @@ export function Interlinear({ words, showSourceRefs = true, className }: Interli
         })}
       </ol>
     </div>
+  );
+}
+
+/**
+ * Plays the slice of the chapter recording in which the reader says this word — in its verse,
+ * in context, not a dictionary form. A sibling of the word's link rather than a child: a
+ * button inside an anchor is invalid markup and a keyboard user could reach neither cleanly.
+ */
+function SpeakWordButton({ clip, surface }: { clip: WordClip; surface: string }) {
+  const send = useAudioStore((s) => s.send);
+  return (
+    <button
+      type="button"
+      className="interlinear__speak"
+      onClick={() => send({ kind: "clip", url: clip.url, startMs: clip.startMs, endMs: clip.endMs })}
+      aria-label={`Hear ${surface}`}
+      title="Hear this word"
+    >
+      <SpeakerIcon className="interlinear__speak-icon" />
+    </button>
   );
 }

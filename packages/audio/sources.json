@@ -1,0 +1,70 @@
+{
+  "_comment": "Every recording here was licence-checked on 2026-09-04 (docs/plans/2026-09-04-audio.md). Only public-domain or CC BY / BY-SA sources belong in this file: no NC, no ND.",
+  "editions": [
+    {
+      "code": "WEB-williams",
+      "translation": "WEB",
+      "language": "eng",
+      "reader": "David Williams",
+      "name": "World English Bible, read by David Williams",
+      "source_url": "https://www.audiotreasure.com/webindex.htm",
+      "license": "Public domain",
+      "attribution": "Recorded by David Williams (2000–2001), released into the public domain without restriction. Distributed by AudioTreasure.com.",
+      "layout": "chapter-files",
+      "raw_dir": "web",
+      "file_pattern": "(?P<book>\\d{2})_[A-Za-z0-9]+_(?P<chapter>\\d{2,3})\\.mp3$"
+    },
+    {
+      "code": "BSB-souer",
+      "translation": "BSB",
+      "language": "eng",
+      "reader": "Bob Souer",
+      "name": "Berean Standard Bible, read by Bob Souer",
+      "source_url": "https://openbible.com/audio/souer/",
+      "license": "Public domain",
+      "attribution": "Narrated by Bob Souer; text and narration dedicated to the public domain on 30 April 2023 by the Berean Bible Translation Committee, Bible Hub, Discovery Bible and OpenBible.com.",
+      "layout": "chapter-files",
+      "raw_dir": "bsb",
+      "file_pattern": "BSB_(?P<book>\\d{2})_[A-Za-z0-9]+_(?P<chapter>\\d{3})\\.mp3$"
+    },
+    {
+      "code": "KJV-librivox",
+      "translation": "KJV",
+      "language": "eng",
+      "reader": "Michael Armenta",
+      "name": "King James Version, read by Michael Armenta (LibriVox)",
+      "source_url": "https://archive.org/details/bible_kjv_complete_2001_librivox",
+      "license": "Public domain (CC0 public domain mark)",
+      "attribution": "LibriVox recording of the King James Version (1769 Oxford edition), read by Michael Armenta. LibriVox recordings are in the public domain.",
+      "layout": "multi-chapter-files",
+      "raw_dir": "kjv",
+      "file_map": "kjv-files.json"
+    },
+    {
+      "code": "WLC-beeri",
+      "translation": null,
+      "language": "hbo",
+      "reader": "Rabbi Dan Be'eri",
+      "name": "Hebrew Bible, read by Rabbi Dan Be'eri",
+      "source_url": "https://archive.org/details/TanakhAudioRecordingByRabbiDanBeeri-BookByBook",
+      "license": "CC BY-SA 3.0",
+      "attribution": "Read by Rabbi Dan Be'eri in Sephardi pronunciation; cantillated books follow the Aleppo tradition as taught by Rabbi Mordecai Attiya. Creative Commons Attribution-ShareAlike 3.0.",
+      "pronunciation_note": "Sephardi (modern Israeli-adjacent) pronunciation, not the reconstructed Tiberian of the Masoretes.",
+      "layout": "book-files",
+      "raw_dir": "heb",
+      "file_pattern": "^(?P<book>\\d{2})_[a-z0-9-]+\\.mp3$",
+      "coverage": {
+        "_comment": "From the archive item's description. Books absent here have no recording; 'exclude' lists chapters (or verse ranges) the recording skips.",
+        "books": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 17, 18, 19, 20, 21, 22, 23, 25, 27, 31, 32, 34, 35, 36, 37, 38, 39],
+        "exclude": {
+          "15": { "chapters": [8, 9, 10] },
+          "19": { "chapters": "50-112" },
+          "23": { "chapters": "38-66" },
+          "34": { "verses": ["1:1-1:9"] },
+          "39": { "chapters": [3] }
+        },
+        "cantillated": [15, 19, 22, 34, 35, 36, 38, 39]
+      }
+    }
+  ]
+}
