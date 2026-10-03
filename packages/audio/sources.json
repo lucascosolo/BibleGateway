@@ -12,7 +12,7 @@
       "attribution": "Recorded by David Williams (2000–2001), released into the public domain without restriction. Distributed by AudioTreasure.com.",
       "layout": "chapter-files",
       "raw_dir": "web",
-      "file_pattern": "(?P<book>\\d{2})_[A-Za-z0-9]+_(?P<chapter>\\d{2,3})\\.mp3$"
+      "file_pattern": "^(?P<book>\\d{2})_[A-Za-z0-9_]*?_?(?P<chapter>\\d{1,3})?\\.mp3$"
     },
     {
       "code": "BSB-souer",
@@ -49,6 +49,8 @@
       "source_url": "https://archive.org/details/TanakhAudioRecordingByRabbiDanBeeri-BookByBook",
       "license": "CC BY-SA 3.0",
       "attribution": "Read by Rabbi Dan Be'eri in Sephardi pronunciation; cantillated books follow the Aleppo tradition as taught by Rabbi Mordecai Attiya. Creative Commons Attribution-ShareAlike 3.0.",
+      "min_score": 0.2,
+      "_min_score_comment": "Aligner confidence is not comparable across languages: the romanization the Hebrew goes through costs it ~0.4 on a scale where English scores ~0.9, while its verse boundaries land in silence just as cleanly (checked 2026-09-04).",
       "pronunciation_note": "Sephardi (modern Israeli-adjacent) pronunciation, not the reconstructed Tiberian of the Masoretes.",
       "layout": "book-files",
       "raw_dir": "heb",
@@ -61,7 +63,7 @@
           "19": { "chapters": "50-112" },
           "23": { "chapters": "38-66" },
           "34": { "verses": ["1:1-1:9"] },
-          "39": { "chapters": [3] }
+          "39": { "chapters": [3, 4], "_comment": "The recording omits Hebrew Malachi 3, which spans canonical Malachi 3 and 4 (Mal.3.19 = Mal.4.1 in versification_map)." }
         },
         "cantillated": [15, 19, 22, 34, 35, 36, 38, 39]
       }

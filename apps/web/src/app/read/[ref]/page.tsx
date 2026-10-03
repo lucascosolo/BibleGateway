@@ -1,3 +1,8 @@
+import { StructuredData } from "@/app/_components/StructuredData";
+import { hasEditionContent } from "@/lib/db/discovery";
+import { pageMetadata, canonicalReferenceSlug } from "@/lib/seo";
+import { ReferenceLinks } from "@/app/_components/ReferenceLinks";
+import { CrossRefLayer } from "@/components/crossrefs/CrossRefLayer";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -41,12 +46,15 @@ import {
   chapterSpan,
   formatRange,
   parseReference,
-  toUrlSlug,
   toVerseId,
   type VerseId,
   verseOf,
 } from "@/lib/refs";
 import { ReaderInteractions } from "./ReaderInteractions";
+import { ListenButton } from "@/components/audio/ListenButton";
+import { ReaderAudio } from "@/components/audio/ReaderAudio";
+import { availableChoices } from "@/lib/audio/select";
+import { getPassageAudio, getWordClips } from "@/lib/db/audio";
 
 /**
  * The reader.
@@ -72,15 +80,31 @@ interface ReaderPageProps {
   searchParams: Promise<{ t?: string }>;
 }
 
-export async function generateMetadata({ params }: ReaderPageProps) {
+export async function generateMetadata({ params, searchParams }: ReaderPageProps) {
   const { ref } = await params;
+  const { t } = await searchParams;
   const books = getBookIndex();
+  const translation = getTranslationByCode(t ?? "WEB");
+  if (!translation) notFound();
+  let range;
   try {
-    const range = parseReference(decodeURIComponent(ref), books);
-    return { title: `${formatRange(range, books)} · Jot` };
+    range = parseReference(decodeURIComponent(ref), books);
   } catch {
-    return { title: "Jot" };
+    notFound();
   }
+  if (getExistingVerseIds(range).length === 0) notFound();
+  const label = formatRange(range, books);
+  const available = hasEditionContent(range.start, range.end, translation.translationId);
+  return {
+    ...pageMetadata(
+      `${label} ${translation.code} — Bible text & cross-references · Jot`,
+      available
+        ? `Study ${label} in the ${translation.name} (${translation.code}): Bible cross-references, Hebrew and Greek word study, translation comparison and textual notes.`
+        : `${label} is not available in ${translation.name}. Find editions that include this passage on Jot.`,
+      `/read/${canonicalReferenceSlug(range, books)}?t=${translation.code}`,
+    ),
+    ...(!available ? { robots: { index: false, follow: true } } : {}),
+  };
 }
 
 export default async function ReaderPage({ params, searchParams }: ReaderPageProps) {
@@ -92,7 +116,8 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
 
   // Translation is a query param, not part of the path, so switching it preserves position:
   // the verse address in the path is translation-independent by construction.
-  const translation = getTranslationByCode(t ?? "WEB") ?? translations[0];
+  const translation = getTranslationByCode(t ?? "WEB");
+  if (!translation) notFound();
 
   let range;
   try {
@@ -101,6 +126,8 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     if (error instanceof InvalidReferenceError) notFound();
     throw error;
   }
+
+  if (getExistingVerseIds(range).length === 0) notFound();
 
   // A book-sized reference is a container, not a passage. Decided before any text is fetched,
   // so `/read/Ps` never loads 2,461 verses in order to discover it should not have rendered
@@ -162,7 +189,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             <TranslationSwitcher
               translations={translations}
               active={translation}
-              hrefFor={(code) => `/read/${toUrlSlug(range, books)}?t=${code}`}
+              hrefFor={(code) => `/read/${canonicalReferenceSlug(range, books)}?t=${code}`}
               linkProps={{ replace: true, scroll: false }}
             />
           </header>
@@ -173,7 +200,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             translationName={translation.name}
             scopeNote={translation.scopeNote}
             printedBy={getTranslationsPrintingBook(bookId, translation.translationId)}
-            passageSlug={toUrlSlug(range, books)}
+            passageSlug={canonicalReferenceSlug(range, books)}
           />
 
           {/* The licence line still travels with the page: a licensor audits for it, and the
@@ -229,7 +256,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             <TranslationSwitcher
               translations={translations}
               active={translation}
-              hrefFor={(code) => `/read/${toUrlSlug(range, books)}?t=${code}`}
+              hrefFor={(code) => `/read/${canonicalReferenceSlug(range, books)}?t=${code}`}
               linkProps={{ replace: true, scroll: false }}
             />
           </header>
@@ -246,7 +273,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             // absence with something that is not the explanation.
             scopeNote=""
             printedBy={getTranslationsPrintingVerse(range.start, translation.translationId)}
-            passageSlug={toUrlSlug(range, books)}
+            passageSlug={canonicalReferenceSlug(range, books)}
           />
 
           <footer className="reader__copyright">
@@ -348,19 +375,44 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     else insightNotes.set(note.verseId, [note]);
   }
 
+  // The recordings that cover what is on screen (docs/plans/2026-09-04-audio.md). Null when
+  // the deployment has no audio artifact at all, in which case nothing below mentions audio.
+  // Loaded here, on the server, for the same reason as the interlinear: the corpus and the
+  // audio artifact are server-only, and the player component in the shell receives data, never
+  // queries it.
+  const passageAudio = getPassageAudio(renderRange);
+  const audioChoices = availableChoices(passageAudio, translation.code);
+  const wordClips = passageAudio ? getWordClips(renderRange) : undefined;
+  const renderedVerseIds = verses.map((v) => v.verseId);
+
   return (
     <div className="reader-layout">
       <article className="reader">
+      <StructuredData data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: `${formatRange(range, books)} · ${translation.name}`,
+        url: `https://bible.lucascosolo.com/read/${canonicalReferenceSlug(range, books)}?t=${translation.code}`,
+        inLanguage: translation.language,
+        description: `Bible text and cross-references for ${formatRange(range, books)} in ${translation.name}.`,
+        isPartOf: { "@type": "WebSite", name: "Jot", url: "https://bible.lucascosolo.com/" },
+        breadcrumb: { "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Bible", item: "https://bible.lucascosolo.com/read" },
+          { "@type": "ListItem", position: 2, name: book?.name ?? "Book", item: `https://bible.lucascosolo.com/read/${book?.osisId}?t=${translation.code}` },
+          { "@type": "ListItem", position: 3, name: formatRange(range, books), item: `https://bible.lucascosolo.com/read/${canonicalReferenceSlug(range, books)}?t=${translation.code}` },
+        ] },
+      }} />
       <header className="reader__header">
         <h1 className="reader__title">{formatRange(range, books)}</h1>
 
         <div className="reader__header-actions">
+          {passageAudio && <ListenButton choices={audioChoices} translationCode={translation.code} />}
           <Link className="reader__compare-link" href="/notes">
             Notes
           </Link>
           <Link
             className="reader__compare-link"
-            href={`/parallel/${toUrlSlug(range, books)}?a=${translation.code}&b=${translation.code === "BSB" ? "WEB" : "BSB"}`}
+            href={`/parallel/${canonicalReferenceSlug(range, books)}?a=${translation.code}&b=${translation.code === "BSB" ? "WEB" : "BSB"}`}
           >
             Compare
           </Link>
@@ -368,7 +420,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             translations={translations}
             active={translation}
             // Same path, different query — the reader keeps its exact place.
-            hrefFor={(code) => `/read/${toUrlSlug(range, books)}?t=${code}`}
+            hrefFor={(code) => `/read/${canonicalReferenceSlug(range, books)}?t=${code}`}
             linkProps={{ replace: true, scroll: false }}
           />
         </div>
@@ -394,11 +446,12 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         density="reader"
         translationId={translation.translationId}
         omissions={omissions}
-        passageSlug={toUrlSlug(renderRange, books)}
+        passageSlug={canonicalReferenceSlug(renderRange, books)}
         // Only the book this range is in: a range spanning more than one book has already
         // resolved to the chapter index above.
         bookLabels={book ? { [bookId]: book.name } : undefined}
         interlinear={interlinear}
+        wordClips={wordClips}
         variants={variants}
         insightNotes={insightNotes}
         greekEditionVariants={getGreekEditionVariants(renderRange)}
@@ -414,7 +467,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         range={renderRange}
         existingVerseIds={getExistingVerseIds(renderRange)}
         translationId={translation.translationId}
-        slug={toUrlSlug(renderRange, books)}
+        slug={canonicalReferenceSlug(renderRange, books)}
         label={formatRange(renderRange, books)}
         translationCode={translation.code}
         translations={translations.map(({ translationId, code, name }) => ({
@@ -432,6 +485,39 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         prevHref={prevChapter ? `/read/${prevChapter}?t=${translation.code}` : null}
         nextHref={nextChapter ? `/read/${nextChapter}?t=${translation.code}` : null}
       />
+
+      {/* Publishes this page to the player in the shell: which chapters are on screen, which
+          recordings exist for them, and where the next chapter is — so a chapter that ends
+          turns the page by itself. Same `nextHref` as the pager and the shortcuts, so all
+          three agree about where "next" is. */}
+      {passageAudio && (
+        <ReaderAudio
+          passage={{
+            slug: canonicalReferenceSlug(renderRange, books),
+            label: formatRange(renderRange, books),
+            bookName: book?.name ?? formatRange(range, books),
+            translationCode: translation.code,
+            renderedVerseIds,
+            nextHref: nextChapter ? `/read/${nextChapter}?t=${translation.code}` : null,
+            audio: passageAudio,
+          }}
+        />
+      )}
+
+      <CrossRefLayer>
+        <ReferenceLinks range={range} translationCode={translation.code} />
+      </CrossRefLayer>
+      <details className="concordance__more">
+        <summary>Verse permalinks in {formatRange(range, books)}</summary>
+        <nav aria-label="Verse permalinks">
+          {canonicalVerses.map((verseId) => {
+            const verseRange = { start: verseId, end: verseId };
+            return <Link key={verseId} prefetch={false} href={`/read/${canonicalReferenceSlug(verseRange, books)}?t=${translation.code}`}>
+              {formatRange(verseRange, books)}{" "}
+            </Link>;
+          })}
+        </nav>
+      </details>
 
       <nav className="reader__pager" aria-label="Chapter navigation">
         {prevChapter ? (
@@ -454,11 +540,26 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         <p>
           <strong>{translation.name}</strong> ({translation.code}). {translation.copyrightNotice}
         </p>
+        {/* The recordings' own credit lines, beside the text's. Two of the four are conditions
+            of use (CC BY-SA for the Hebrew reading), and the others name a narrator who gave
+            their work away; either way the credit travels with the page it plays on. */}
+        {passageAudio &&
+          passageAudio.editions
+            .filter((e) => passageAudio.chapters.some((c) => c.byEdition[e.code]))
+            .map((e) => (
+              <p key={e.code} className="reader__audio-credit">
+                <strong>Audio:</strong> {e.name}. {e.attribution}{" "}
+                <a href={e.sourceUrl} target="_blank" rel="noreferrer noopener">
+                  Source
+                </a>
+                {e.pronunciationNote ? ` ${e.pronunciationNote}` : ""}
+              </p>
+            ))}
         {/* Beside the licence line on purpose: this is where a reader ends up once they have
             decided to quote something, and it is the one place on the page that already names
             the translation and its terms. */}
         <CiteButton
-          path={`/read/${toUrlSlug(range, books)}?t=${translation.code}`}
+          path={`/read/${canonicalReferenceSlug(range, books)}?t=${translation.code}`}
           subject={{
             reference: formatRange(range, books),
             translationCode: translation.code,
@@ -474,7 +575,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
           lives in the client wrapper because both are localStorage-backed preferences and this
           page is a server component. */}
       <CrossRefAside
-        reference={toUrlSlug(range, books)}
+        reference={canonicalReferenceSlug(range, books)}
         translationCode={translation.code}
         translationId={translation.translationId}
       />

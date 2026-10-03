@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { BookBrowser } from "@/components/home/BookBrowser";
 import { getBookBrowseIndex } from "@/lib/db/corpus";
 
@@ -12,10 +13,7 @@ import { getBookBrowseIndex } from "@/lib/db/corpus";
  * So it is the canon itself, browsable. Continue-reading lives on the home page, where it can
  * read client-side state; this page is the deliberate "open something specific" surface.
  */
-export const metadata = {
-  title: "Read · Jot",
-  description: "Open any passage in the biblical canon.",
-};
+export const metadata = pageMetadata('Read the Bible by book, chapter and verse · Jot', 'Browse Bible books, chapters and verses with translation comparison, cross-references and original-language study tools.', '/read');
 
 export default function ReadIndexPage() {
   const books = getBookBrowseIndex();

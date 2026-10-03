@@ -22,6 +22,7 @@ import json
 import sqlite3
 import subprocess
 import sys
+import tempfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -105,9 +106,11 @@ def main() -> None:
     db_path = out / "audio.db"
     sources = json.loads((HERE / "sources.json").read_text())
 
-    if db_path.exists():
-        db_path.unlink()
-    db = sqlite3.connect(db_path)
+    out.mkdir(parents=True, exist_ok=True)
+    temporary = tempfile.NamedTemporaryFile(prefix="audio-", suffix=".db", dir=out, delete=False)
+    temporary.close()
+    staged_db = Path(temporary.name)
+    db = sqlite3.connect(staged_db)
     db.executescript(SCHEMA)
 
     digest = hashlib.sha256()
@@ -120,6 +123,7 @@ def main() -> None:
         if not chapters:
             print(f"{edition['code']}: no alignment output, skipped", file=sys.stderr)
             continue
+        digest.update(json.dumps(edition, sort_keys=True, separators=(",", ":")).encode())
         min_score = edition.get("min_score", DEFAULT_MIN_SCORE)
         cur = db.execute(
             """INSERT INTO audio_editions (code, translation_code, language, name, reader, license, attribution, source_url, pronunciation_note)
@@ -176,13 +180,17 @@ def main() -> None:
                             "INSERT OR REPLACE INTO audio_words VALUES (?,?,?,?,?)",
                             (edition_id, w["word_id"], v["verse_id"], int((w["start"] - offset) * 1000), int((w["end"] - offset) * 1000)),
                         )
-                digest.update(f"{rel}:{ch['chapter_start']}:{ch['chapter_end']}".encode())
+                digest.update(json.dumps(ch, sort_keys=True, separators=(",", ":")).encode())
+                with (audio_dir / rel).open("rb") as recording:
+                    digest.update(hashlib.file_digest(recording, "sha256").digest())
         print(f"{edition['code']}: {kept} chapters kept, {dropped} dropped", file=sys.stderr)
 
     db.execute("INSERT INTO audio_meta VALUES ('build_id', ?)", (digest.hexdigest()[:16],))
     db.commit()
     db.execute("VACUUM")
     db.close()
+    staged_db.chmod(0o644)
+    staged_db.replace(db_path)
     print(f"wrote {db_path}", file=sys.stderr)
 
 

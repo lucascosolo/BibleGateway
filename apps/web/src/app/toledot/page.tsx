@@ -1,6 +1,7 @@
 import { RoadmapPage } from "@/components/shell/RoadmapPage";
 
-export const metadata = { title: "Toledot (not yet built) · Jot" };
+export const metadata = {
+  robots: { index: false, follow: true }, title: "Toledot (not yet built) · Jot" };
 
 export default function ToledotPage() {
   return (

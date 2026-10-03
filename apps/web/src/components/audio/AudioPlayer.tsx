@@ -61,8 +61,12 @@ function chaptersWithAudio(passage: ReaderPassage, choice: "translation" | "orig
 export function AudioPlayer() {
   const router = useRouter();
   const mainRef = useRef<HTMLAudioElement>(null);
+  const mainGenerationRef = useRef(0);
+  const mainReadyRef = useRef<(() => void) | null>(null);
   const clipRef = useRef<HTMLAudioElement>(null);
   const clipEndRef = useRef<number | null>(null);
+  const clipReadyRef = useRef<(() => void) | null>(null);
+  const clipGenerationRef = useRef(0);
   const resumeAfterClipRef = useRef(false);
 
   const passage = useAudioStore((s) => s.passage);
@@ -81,11 +85,41 @@ export function AudioPlayer() {
   const send = useAudioStore((s) => s.send);
   const set = useAudioStore((s) => s._set);
 
+  const pauseMain = useCallback(() => {
+    mainGenerationRef.current += 1;
+    if (mainReadyRef.current) mainRef.current?.removeEventListener("loadedmetadata", mainReadyRef.current);
+    mainReadyRef.current = null;
+    mainRef.current?.pause();
+  }, []);
+
+  const playMain = useCallback(() => {
+    const el = mainRef.current;
+    if (!el) return;
+    const generation = ++mainGenerationRef.current;
+    set({ status: "loading" });
+    el.play().catch((err: unknown) => {
+      if (generation !== mainGenerationRef.current) return;
+      set({ status: "paused", error: err instanceof Error ? err.message : "Playback was blocked." });
+    });
+  }, [set]);
+
+  const finishClip = useCallback((resume: boolean) => {
+    clipGenerationRef.current += 1;
+    clipEndRef.current = null;
+    if (clipReadyRef.current) clipRef.current?.removeEventListener("loadedmetadata", clipReadyRef.current);
+    clipReadyRef.current = null;
+    clipRef.current?.pause();
+    const shouldResume = resume && resumeAfterClipRef.current;
+    resumeAfterClipRef.current = false;
+    if (shouldResume) playMain();
+  }, [playMain]);
+
   /** Put the element on `chapter` at `verseId` and (optionally) play. */
   const cue = useCallback(
     (chapter: ChapterAudio, verseId: VerseId | null, play: boolean) => {
       const el = mainRef.current;
       if (!el) return;
+      pauseMain();
       const ms = verseId !== null ? startOf(chapter.verses, verseId) : null;
       const seconds = Math.max(0, ((ms ?? 0) - SEEK_LEAD_MS) / 1000);
       const sameFile = el.src.endsWith(chapter.url) || el.currentSrc.endsWith(chapter.url);
@@ -96,21 +130,22 @@ export function AudioPlayer() {
       el.playbackRate = rate;
       // Seeking before metadata is loaded is dropped by some browsers; wait for it when needed.
       const seek = () => {
+        mainReadyRef.current = null;
         el.currentTime = seconds;
       };
       if (el.readyState >= 1) seek();
-      else el.addEventListener("loadedmetadata", seek, { once: true });
+      else {
+        mainReadyRef.current = seek;
+        el.addEventListener("loadedmetadata", seek, { once: true });
+      }
       set({ current: chapter, currentVerseId: verseId ?? verseAt(chapter.verses, ms ?? 0), error: null });
       if (play) {
-        set({ status: "loading" });
-        el.play().catch((err: unknown) => {
-          set({ status: "paused", error: err instanceof Error ? err.message : "Playback was blocked." });
-        });
+        playMain();
       } else {
         set({ status: "paused" });
       }
     },
-    [rate, set],
+    [rate, set, pauseMain, playMain],
   );
 
   /** Start from the best verse for the current page, or resume. */
@@ -122,22 +157,22 @@ export function AudioPlayer() {
       // that file is still one of the chapters on screen.
       const currentOnScreen =
         current !== null &&
-        passage.audio?.chapters.some((c) => c.bookId === current.bookId && c.chapter === current.chapter);
+        chaptersWithAudio(passage, choice).some((c) => c.url === current.url);
       if (opts.resume && requested === null && status === "paused" && currentOnScreen && selectedVerseId() === null) {
-        set({ status: "loading" });
-        el.play().catch(() => set({ status: "paused" }));
+        playMain();
         return;
       }
       const chapters = chaptersWithAudio(passage, choice);
       if (chapters.length === 0) {
-        set({ error: "No recording for this page.", status: "idle" });
+        pauseMain();
+        set({ error: "No recording for this page.", status: "idle", current: null, currentVerseId: null });
         return;
       }
       const wanted = requested ?? selectedVerseId();
-      // The chapter holding the wanted verse, else the first rendered verse any chapter places.
+      // An explicit selection must have its own timing; only unselected playback may fall back.
       let chapter = wanted !== null ? chapterFor(passage, choice, wanted) : null;
-      let verse: VerseId | null = chapter ? startVerse(chapter.verses, wanted, passage.renderedVerseIds) : null;
-      if (!chapter || verse === null) {
+      let verse: VerseId | null = chapter && wanted !== null && startOf(chapter.verses, wanted) !== null ? wanted : null;
+      if (wanted === null) {
         for (const c of chapters) {
           const v = startVerse(c.verses, null, passage.renderedVerseIds);
           if (v !== null) {
@@ -147,13 +182,14 @@ export function AudioPlayer() {
           }
         }
       }
-      if (!chapter) {
-        set({ error: "No recording for this page.", status: "idle" });
+      if (!chapter || verse === null) {
+        pauseMain();
+        set({ error: "No recording for this page.", status: "idle", current: null, currentVerseId: null });
         return;
       }
       cue(chapter, verse, true);
     },
-    [passage, choice, current, status, cue, set],
+    [passage, choice, current, status, cue, set, pauseMain, playMain],
   );
 
   // React to one-shot commands from the bar, the Listen button, keyboard, media keys.
@@ -162,15 +198,16 @@ export function AudioPlayer() {
     const el = mainRef.current;
     set({ command: null });
     if (!el) return;
+    if (command.kind !== "clip") finishClip(false);
     switch (command.kind) {
       case "play":
         start(command.verseId, { resume: true });
         break;
       case "pause":
-        el.pause();
+        pauseMain();
         break;
       case "toggle":
-        if (status === "playing" || status === "loading") el.pause();
+        if (status === "playing" || status === "loading") pauseMain();
         else start(null, { resume: true });
         break;
       case "seek":
@@ -185,8 +222,12 @@ export function AudioPlayer() {
       case "clip": {
         const clip = clipRef.current;
         if (!clip) break;
-        resumeAfterClipRef.current = status === "playing";
-        if (status === "playing") el.pause();
+        const generation = ++clipGenerationRef.current;
+        if (clipReadyRef.current) clip.removeEventListener("loadedmetadata", clipReadyRef.current);
+        clipReadyRef.current = null;
+        resumeAfterClipRef.current = resumeAfterClipRef.current || status === "playing" || status === "loading";
+        pauseMain();
+        clip.pause();
         clipEndRef.current = command.endMs / 1000;
         const sameFile = clip.src.endsWith(command.url) || clip.currentSrc.endsWith(command.url);
         if (!sameFile) {
@@ -194,11 +235,17 @@ export function AudioPlayer() {
           clip.load();
         }
         const go = () => {
+          clipReadyRef.current = null;
           clip.currentTime = Math.max(0, (command.startMs - 60) / 1000);
-          clip.play().catch(() => undefined);
+          clip.play().catch(() => {
+            if (generation === clipGenerationRef.current) finishClip(true);
+          });
         };
         if (clip.readyState >= 1) go();
-        else clip.addEventListener("loadedmetadata", go, { once: true });
+        else {
+          clipReadyRef.current = go;
+          clip.addEventListener("loadedmetadata", go, { once: true });
+        }
         break;
       }
     }
@@ -211,10 +258,11 @@ export function AudioPlayer() {
   useEffect(() => {
     const el = mainRef.current;
     if (!el) return;
+    finishClip(false);
     if (!passage) {
       // Left the reader entirely. Playing on into a page with no text to follow is noise.
-      el.pause();
-      set({ open: false, status: "idle", current: null, currentVerseId: null });
+      pauseMain();
+      set({ open: false, status: "idle", current: null, currentVerseId: null, autoplayPending: false });
       return;
     }
     if (autoplayPending) {
@@ -223,11 +271,9 @@ export function AudioPlayer() {
       return;
     }
     if (current) {
-      const stillHere = passage.audio?.chapters.some(
-        (c) => c.bookId === current.bookId && c.chapter === current.chapter && c.byEdition[current.editionCode],
-      );
+      const stillHere = chaptersWithAudio(passage, choice).some((c) => c.url === current.url);
       if (!stillHere) {
-        el.pause();
+        pauseMain();
         set({ status: "idle", current: null, currentVerseId: null });
       }
     }
@@ -245,9 +291,10 @@ export function AudioPlayer() {
       choice,
     )?.editionCode) return;
     const chapter = chapterFor(passage, choice, currentVerseId);
-    if (chapter) cue(chapter, startVerse(chapter.verses, currentVerseId, passage.renderedVerseIds), status === "playing" || status === "loading");
+    const verse = chapter ? startVerse(chapter.verses, currentVerseId, passage.renderedVerseIds) : null;
+    if (chapter && verse !== null) cue(chapter, verse, status === "playing" || status === "loading");
     else {
-      mainRef.current?.pause();
+      pauseMain();
       set({ status: "idle", current: null, error: "No recording of this chapter in that voice." });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -315,18 +362,19 @@ export function AudioPlayer() {
     if (!clip) return;
     const onTime = () => {
       const end = clipEndRef.current;
-      if (end !== null && clip.currentTime >= end) {
-        clip.pause();
-        clipEndRef.current = null;
-        if (resumeAfterClipRef.current) {
-          resumeAfterClipRef.current = false;
-          mainRef.current?.play().catch(() => undefined);
-        }
-      }
+      if (end !== null && clip.currentTime >= end) finishClip(true);
     };
+    const onFinish = () => finishClip(true);
     clip.addEventListener("timeupdate", onTime);
-    return () => clip.removeEventListener("timeupdate", onTime);
-  }, []);
+    clip.addEventListener("ended", onFinish);
+    clip.addEventListener("error", onFinish);
+    return () => {
+      clip.removeEventListener("timeupdate", onTime);
+      clip.removeEventListener("ended", onFinish);
+      clip.removeEventListener("error", onFinish);
+      finishClip(false);
+    };
+  }, [finishClip]);
 
   // Lock screen and headphone buttons, where the browser offers them.
   useEffect(() => {
@@ -421,7 +469,7 @@ export function AudioPlayer() {
             ) : !hasTranslation && !hasOriginal ? (
               <span className="audio-bar__error">
                 No recording of this page{hasAnyEdition(passage) ? ` in ${passage.translationCode}` : ""}.
-                {hasAnyEdition(passage) ? " Switch to WEB, BSB or KJV to listen." : ""}
+                {availableTranslations(passage) ? ` Available recordings: ${availableTranslations(passage)}.` : ""}
               </span>
             ) : (
               <span className="audio-bar__ref">{passage.label}</span>
@@ -463,8 +511,9 @@ export function AudioPlayer() {
               type="button"
               className="audio-bar__button"
               onClick={() => {
-                mainRef.current?.pause();
-                set({ open: false, status: "idle" });
+                finishClip(false);
+                pauseMain();
+                set({ open: false, status: "idle", autoplayPending: false });
               }}
               aria-label="Close the player"
               title="Close"
@@ -480,4 +529,11 @@ export function AudioPlayer() {
 
 function hasAnyEdition(passage: ReaderPassage): boolean {
   return (passage.audio?.chapters ?? []).some((c) => Object.keys(c.byEdition).length > 0);
+}
+
+function availableTranslations(passage: ReaderPassage): string {
+  return (passage.audio?.editions ?? [])
+    .filter((e) => e.translationCode && passage.audio?.chapters.some((c) => c.byEdition[e.code]))
+    .map((e) => e.translationCode)
+    .join(", ");
 }

@@ -1,11 +1,5 @@
-import { describe, expect, it, vi } from "vitest";
-
-// The route module imports the server-only audio accessor; stub it so the pure helper can be
-// tested without a database or the `server-only` guard.
-vi.mock("server-only", () => ({}));
-vi.mock("@/lib/db/audio", () => ({ AUDIO_FILES_DIR: "/nonexistent", getAudioBuildId: () => "test" }));
-
-const { parseRange } = await import("./route");
+import { describe, expect, it } from "vitest";
+import { parseRange } from "@/lib/audio/http";
 
 describe("parseRange", () => {
   it("returns null with no header or a malformed one", () => {

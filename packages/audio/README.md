@@ -13,6 +13,7 @@ fragments.py      bible.db -> the text each file should contain (canonical verse
 align.py          MMS_FA forced alignment, windowed over long files, resumable
 build.py          cut/encode chapters, write audio.db
 run.sh            the whole thing, in order
+resume.sh         sequential resumable alignment, one GPU worker at a time
 ```
 
 ```
@@ -22,8 +23,8 @@ CACHE=~/.cache/jot-audio            # raw downloads, venv, working files
 ./run.sh build                      # minutes; writes ../../data/audio.db and data/audio/
 ```
 
-Environment (one-off): `uv venv --python 3.12 $CACHE/venv`, then torch 2.7.1 + torchaudio
-2.7.1 from the `cu118` index (the GTX 980 Ti is sm_52; CUDA 12.8+ builds dropped Maxwell),
+Environment (one-off): `uv venv --python 3.12 $CACHE/venv`, then torch 2.4.1 + torchaudio
+2.4.1 from the `cu118` index (the GTX 980 Ti is sm_52; CUDA 12.8+ builds dropped Maxwell),
 plus `uroman` and `numpy`. `ffmpeg` on PATH.
 
 Output tables (`audio.db`): `audio_editions`, `audio_chapters(file, duration_ms)`,
@@ -31,3 +32,9 @@ Output tables (`audio.db`): `audio_editions`, `audio_chapters(file, duration_ms)
 end_ms)`. Times are relative to the chapter file. `audio_words` exists only for the Hebrew
 edition — the per-word speaker button plays a slice of the chapter recording, so the reader
 hears a human saying that word in that verse.
+
+For a release, build into a fresh staging directory with `build.py --out <staging>` and
+validate the complete result before replacing a deployed artifact. The database is replaced
+atomically, but encoding rewrites chapter files in place: an interrupted rebuild of an existing
+output directory does not roll back those files. `--skip-encode` is only for resuming the same
+unchanged input snapshot, not for changed source audio or chapter boundaries.

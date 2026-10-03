@@ -63,16 +63,16 @@ def english_chapter(db: sqlite3.Connection, translation_id: int, book_id: int, c
 def hebrew_chapter(db: sqlite3.Connection, book_id: int, chapter: int, skip: set[int]) -> list[dict]:
     lo = book_id * 1_000_000 + chapter * 1_000
     rows = db.execute(
-        """SELECT verse_id, word_id, surface FROM original_words
+        """SELECT verse_id, word_id, surface, strongs FROM original_words
            WHERE language IN ('hbo', 'arc') AND verse_id BETWEEN ? AND ?
            ORDER BY verse_id, word_id""",
         (lo, lo + 999),
     ).fetchall()
     verses: dict[int, list[dict]] = {}
-    for vid, wid, surface in rows:
+    for vid, wid, surface, strongs in rows:
         if vid in skip:
             continue
-        verses.setdefault(vid, []).append({"word_id": wid, "text": surface})
+        verses.setdefault(vid, []).append({"word_id": wid, "text": surface, "strongs": strongs})
     return [{"verse_id": vid, "words": words} for vid, words in verses.items()]
 
 
@@ -85,9 +85,11 @@ def book_names(db: sqlite3.Connection) -> dict[str, int]:
     out = {}
     for book_id, name in db.execute("SELECT book_id, name FROM books"):
         out[name.lower()] = book_id
-    out["song of solomon"] = out.get("song of songs", out.get("song of solomon"))
-    out["revelation"] = out.get("revelation", out.get("revelation of john"))
-    return {k: v for k, v in out.items() if v is not None}
+    aliases = {"song of solomon": "song of songs", "phillipians": "philippians", "revelations": "revelation"}
+    for alias, name in aliases.items():
+        if name in out:
+            out[alias] = out[name]
+    return out
 
 
 def units_chapter_files(edition: dict, raw: Path) -> list[dict]:
@@ -97,9 +99,11 @@ def units_chapter_files(edition: dict, raw: Path) -> list[dict]:
         m = pat.search(path.name)
         if not m:
             continue
+        # A one-chapter book's file carries no chapter number (`57_Philemon.mp3`).
+        chapter = int(m["chapter"]) if m["chapter"] else 1
         units.append({
             "file": str(path),
-            "chapters": [{"book_id": int(m["book"]), "chapter": int(m["chapter"])}],
+            "chapters": [{"book_id": int(m["book"]), "chapter": chapter}],
         })
     return units
 
@@ -109,6 +113,7 @@ def units_multi_chapter_files(edition: dict, raw: Path, names: dict[str, int]) -
     # "001 - Genesis Ch. 1 - 14", "052 - Psalms 1 - 32", "126 - Revelation Ch.1 - 17", "124 - 3 John Ch. 1"
     title_re = re.compile(r"^\d+\s*-\s*(?P<book>.+?)\s+(?:Ch\.?\s*)?(?P<a>\d+)(?:\s*-\s*(?P<b>\d+))?\s*$")
     units = []
+    seen: set[tuple[int, int]] = set()
     for name, title, _length in entries:
         m = title_re.match(title)
         if not m:
@@ -118,10 +123,11 @@ def units_multi_chapter_files(edition: dict, raw: Path, names: dict[str, int]) -
             raise SystemExit(f"unknown book in LibriVox title: {title!r}")
         a = int(m["a"])
         b = int(m["b"] or a)
-        units.append({
-            "file": str(raw / edition["raw_dir"] / name),
-            "chapters": [{"book_id": book_id, "chapter": c} for c in range(a, b + 1)],
-        })
+        # Two titles claim Deuteronomy 25 and Acts 10; the first file keeps them and a bad
+        # alignment score on either would show the guess was wrong.
+        chapters = [{"book_id": book_id, "chapter": c} for c in range(a, b + 1) if (book_id, c) not in seen]
+        seen.update((book_id, c) for c in range(a, b + 1))
+        units.append({"file": str(raw / edition["raw_dir"] / name), "chapters": chapters})
     return units
 
 

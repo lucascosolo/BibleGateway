@@ -5,7 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 import type { VerseId, VerseRange } from "@/lib/refs/verse-id";
-import { BOOK_FACTOR, CHAPTER_FACTOR, bookOf, chapterOf } from "@/lib/refs/verse-id";
+import { BOOK_FACTOR, CHAPTER_FACTOR } from "@/lib/refs/verse-id";
 
 /**
  * Read-only handle on the audio artifact: `data/audio.db` plus `data/audio/<edition>/*.m4a`.
@@ -168,32 +168,26 @@ export function getChapterAudio(
   };
 }
 
-/**
- * Every chapter the range touches, for every edition. The reader renders at most three
- * chapters, so this is at most a handful of indexed lookups; the range's own endpoints are
- * enough to enumerate chapters because a chapter is entirely inside one book.
- */
+/** Recorded chapters intersecting the range, across real chapter and book boundaries. */
 export function getPassageAudio(range: VerseRange): PassageAudio | null {
   if (!hasAudio()) return null;
   const editions = getAudioEditions();
-  const chapters: PassageAudio["chapters"] = [];
-  const startBook = bookOf(range.start) as number;
-  const endBook = bookOf(range.end) as number;
-  for (let bookId = startBook; bookId <= endBook; bookId++) {
-    const from = bookId === startBook ? chapterOf(range.start) : 1;
-    const to = bookId === endBook ? chapterOf(range.end) : 999;
-    for (let chapter = from; chapter <= to; chapter++) {
-      const byEdition: Record<string, ChapterAudio> = {};
-      for (const edition of editions) {
-        const audio = getChapterAudio(edition.code, bookId, chapter);
-        if (audio) byEdition[edition.code] = audio;
-      }
-      // A chapter no edition recorded is still listed, so the player can say "no audio here"
-      // for exactly this chapter rather than for the page.
-      chapters.push({ bookId, chapter, byEdition });
-      if (chapters.length > 8) return { editions, chapters }; // never enumerate a whole book
+  const recorded = prepared(
+    `SELECT DISTINCT book_id AS bookId, chapter FROM audio_chapters
+     WHERE book_id * 1000000 + chapter * 1000 BETWEEN ? AND ?
+     ORDER BY book_id, chapter`,
+  )!.all(
+    Math.floor(range.start / CHAPTER_FACTOR) * CHAPTER_FACTOR,
+    Math.floor(range.end / CHAPTER_FACTOR) * CHAPTER_FACTOR,
+  ) as { bookId: number; chapter: number }[];
+  const chapters = recorded.map(({ bookId, chapter }) => {
+    const byEdition: Record<string, ChapterAudio> = {};
+    for (const edition of editions) {
+      const audio = getChapterAudio(edition.code, bookId, chapter);
+      if (audio) byEdition[edition.code] = audio;
     }
-  }
+    return { bookId, chapter, byEdition };
+  });
   return { editions, chapters };
 }
 

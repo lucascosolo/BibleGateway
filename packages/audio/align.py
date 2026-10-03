@@ -61,7 +61,21 @@ def normalize_english(text: str) -> str:
     return re.sub(r"[^a-z' ]+", " ", text)
 
 
-def normalize_hebrew_word(surface: str) -> str:
+# What a reader SAYS for the Tetragrammaton. Nobody reads יהוה as written: the convention, and
+# this reader's practice, is "Adonai", or "Elohim" where the pointing marks it so (H3069, the
+# form that follows an actual "Adonai"). Six thousand eight hundred tokens; left as `yehvah`
+# they would each be a small misalignment in the middle of a verse.
+QERE_PERPETUUM = {"H3068": "adonay", "H3069": "elohim"}
+
+
+def normalize_hebrew_word(surface: str, strongs: str | None = None) -> str:
+    if strongs:
+        key = strongs.rstrip("abcdefg")
+        spoken = QERE_PERPETUUM.get(key)
+        if spoken:
+            # Keep any prefix (וַ/יהוה = "va-adonai"): romanize the part before the divine name.
+            prefix = surface.split("/")[:-1]
+            return normalize_hebrew_word("".join(prefix)) + spoken if prefix else spoken
     # `/` is the ingest's morpheme separator (b/7225 -> בְּ/רֵאשִׁ֖ית), never a sound.
     word = surface.replace("/", "")
     word = HEBREW_CANTILLATION.sub("", word)
@@ -137,7 +151,7 @@ def chapter_words(chapter: dict, language: str, aligner: Aligner) -> tuple[list[
                     owners.append((vi, None))
         else:
             for word in verse["words"]:
-                w = aligner.clean(normalize_hebrew_word(word["text"]))
+                w = aligner.clean(normalize_hebrew_word(word["text"], word.get("strongs")))
                 if w:
                     words.append(w)
                     owners.append((vi, word["word_id"]))
