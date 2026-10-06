@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
 import { getLexiconEntry } from "@/lib/lexicon";
@@ -17,9 +18,7 @@ import { getOriginalTexts, suggestLemmas } from "@/lib/db/originals";
  * translation switcher are five parameters that change independently; this is one.
  */
 
-export const metadata = {
-  title: "Lashon · Jot",
-};
+export const metadata = pageMetadata('Hebrew, Aramaic & Greek concordance (Lashon) · Jot', 'Look up biblical Hebrew, Aramaic and Greek words, Strong’s numbers, morphology and occurrences with attributed dictionary entries.', '/lashon');
 
 /**
  * Worked examples, shown when nothing has been searched yet.

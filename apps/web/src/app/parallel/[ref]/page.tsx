@@ -1,3 +1,4 @@
+import { pageMetadata, canonicalReferenceSlug } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -10,24 +11,33 @@ import {
   getTranslationByCode,
   getTranslations,
 } from "@/lib/db/corpus";
-import { InvalidReferenceError, formatRange, parseReference, toUrlSlug } from "@/lib/refs";
+import { InvalidReferenceError, formatRange, parseReference } from "@/lib/refs";
 
 interface ParallelPageProps {
   params: Promise<{ ref: string }>;
   searchParams: Promise<{ a?: string; b?: string }>;
 }
 
-export async function generateMetadata({ params }: ParallelPageProps) {
+export async function generateMetadata({ params, searchParams }: ParallelPageProps) {
+  const books = getBookIndex();
+  const query = await searchParams;
+  const left = readTranslation(query.a, "WEB");
+  const right = readTranslation(query.b, left.code === "BSB" ? "WEB" : "BSB");
+  let range;
   try {
-    const range = parseReference(decodeURIComponent((await params).ref), getBookIndex());
-    return { title: `${formatRange(range, getBookIndex())} comparison · Jot` };
-  } catch {
-    return { title: "Compare translations · Jot" };
-  }
+    range = parseReference(decodeURIComponent((await params).ref), books);
+  } catch { notFound(); }
+  if (getExistingVerseIds(range).length === 0) notFound();
+  const label = formatRange(range, books);
+  return pageMetadata(`${label}: ${left.code} and ${right.code} Bible comparison · Jot`,
+    `Compare ${label} in ${left.name} and ${right.name}, aligned by canonical verse with notes for omitted verses.`,
+    `/parallel/${canonicalReferenceSlug(range, books)}?a=${left.code}&b=${right.code}`);
 }
 
 function readTranslation(code: string | undefined, fallback: string) {
-  return getTranslationByCode(code ?? fallback) ?? getTranslationByCode(fallback) ?? getTranslations()[0];
+  const translation = getTranslationByCode(code ?? fallback);
+  if (!translation) notFound();
+  return translation;
 }
 
 export default async function ParallelPage({ params, searchParams }: ParallelPageProps) {
@@ -57,7 +67,7 @@ export default async function ParallelPage({ params, searchParams }: ParallelPag
         <p>The comparison needs two editions. Pick another edition below.</p>
         <nav aria-label="Translations">
           {translations.filter((t) => t.translationId !== left.translationId).map((t) => (
-            <Link key={t.code} href={`/parallel/${toUrlSlug(range, books)}?a=${left.code}&b=${t.code}`}>
+            <Link key={t.code} href={`/parallel/${canonicalReferenceSlug(range, books)}?a=${left.code}&b=${t.code}`}>
               {t.code} · {t.name}
             </Link>
           ))}
@@ -77,7 +87,7 @@ export default async function ParallelPage({ params, searchParams }: ParallelPag
   return (
     <ParallelView
       reference={formatRange(range, books)}
-      readerSlug={toUrlSlug(range, books)}
+      readerSlug={canonicalReferenceSlug(range, books)}
       translations={[makeTranslation(selected[0]), makeTranslation(selected[1])]}
       verseIds={verseIds}
     />

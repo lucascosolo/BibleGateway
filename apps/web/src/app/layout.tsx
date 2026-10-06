@@ -5,6 +5,7 @@ import "./reader.css";
 import "./crossrefs.css";
 import "./search.css";
 import "./lashon.css";
+import "./audio.css";
 import { ThemeScript } from "@/components/ThemeScript";
 import { Providers } from "@/components/Providers";
 import { AppShell } from "@/components/shell/AppShell";
@@ -68,7 +69,9 @@ const jetbrainsMono = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bible.lucascosolo.com"),
   title: "Jot — scholarly Bible study",
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 } },
   // Says what a reader gets, in words they already have. The previous description — "academic
   // apparatus fused with a fast, personal, deeply interactive reading surface" — described the
   // architecture to someone who had already read it.

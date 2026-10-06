@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
 
 import { getBookIndex, getTranslations } from "@/lib/db/corpus";
@@ -12,9 +13,7 @@ import { DerashSearch } from "./DerashSearch";
  * page's state (linkable, back/forward-able) and every keystroke-to-URL-to-refetch loop is
  * inherently a client concern.
  */
-export const metadata = {
-  title: "Derash · Jot",
-};
+export const metadata = pageMetadata('Bible text search (Derash) · Jot', 'Search Bible translations by word or phrase and explore matching verses and their distribution across books.', '/derash');
 
 export default async function DerashPage() {
   const books = getBookIndex().all;

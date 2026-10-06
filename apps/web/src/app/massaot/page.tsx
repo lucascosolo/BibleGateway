@@ -1,6 +1,7 @@
 import { RoadmapPage } from "@/components/shell/RoadmapPage";
 
-export const metadata = { title: "Massa'ot (not yet built) · Jot" };
+export const metadata = {
+  robots: { index: false, follow: true }, title: "Massa'ot (not yet built) · Jot" };
 
 export default function MassaotPage() {
   return (

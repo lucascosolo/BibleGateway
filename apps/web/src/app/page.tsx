@@ -1,3 +1,6 @@
+import { StructuredData } from "@/app/_components/StructuredData";
+import { pageMetadata } from "@/lib/seo";
+export const metadata = pageMetadata('Bible study, cross-references & Hebrew and Greek tools · Jot', 'Read and compare Bible translations, follow cross-references across the Bible, study Hebrew and Greek words, and consult sourced textual notes.', '/');
 import { Wordmark } from "@/components/Wordmark";
 import { JumpSearch } from "@/components/home/JumpSearch";
 import { ContinueReading } from "@/components/home/ContinueReading";
@@ -50,6 +53,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col gap-12 px-6 py-10 pb-16 lg:py-16">
+      <StructuredData data={{ "@context": "https://schema.org", "@type": "WebSite", name: "Jot", url: "https://bible.lucascosolo.com/", description: "Bible reading, cross-references, translation comparison and original-language research." }} />
       {/* Masthead — compact, not a hero. The wordmark and verse are well-liked and stay, but
           they no longer eat the fold: everything below is one scroll away, not a click away. */}
       <header className="flex flex-col items-center gap-3 text-center">
@@ -121,6 +125,10 @@ export default function Home() {
           verseCount={verseCount}
           crossReferenceCount={crossReferenceCount}
         />
+        <p className="mt-4 font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+          Cross-references follow shared verse addresses, so you can use them alongside other
+          editions, including the NIV. Jot does not provide NIV text.
+        </p>
       </section>
 
       <p className="text-center font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">

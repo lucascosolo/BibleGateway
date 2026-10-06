@@ -1,9 +1,11 @@
+import { pageMetadata, canonicalReferenceSlug } from "@/lib/seo";
+import { ReferenceLinks } from "@/app/_components/ReferenceLinks";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { DeepDiveView } from "@/components/crossrefs/DeepDiveView";
-import { getBookIndex, getTranslationByCode, getTranslations } from "@/lib/db/corpus";
-import { InvalidReferenceError, formatRange, parseReference, toUrlSlug } from "@/lib/refs";
+import { getBookIndex, getExistingVerseIds, getTranslationByCode } from "@/lib/db/corpus";
+import { InvalidReferenceError, formatRange, parseReference } from "@/lib/refs";
 
 /**
  * /deep-dive/[ref] — the reference-network deep dive (ARCHITECTURE.md §4.2, §4.7.1).
@@ -33,14 +35,18 @@ interface DeepDivePageProps {
   }>;
 }
 
-export async function generateMetadata({ params }: DeepDivePageProps) {
+export async function generateMetadata({ params, searchParams }: DeepDivePageProps) {
   const { ref } = await params;
   const books = getBookIndex();
+  const translation = getTranslationByCode((await searchParams).t ?? "WEB");
+  if (!translation) notFound();
   try {
     const range = parseReference(decodeURIComponent(ref), books);
-    return { title: `Deep dive · ${formatRange(range, books)} · Jot` };
+    if (getExistingVerseIds(range).length === 0) notFound();
+    const label = formatRange(range, books);
+    return pageMetadata(`${label} Bible cross-reference network · Jot`, `Explore references from and to ${label}, with ranked related Bible passages and ${translation.name} reader links.`, `/deep-dive/${canonicalReferenceSlug(range, books)}?t=${translation.code}`);
   } catch {
-    return { title: "Deep dive · Jot" };
+    notFound();
   }
 }
 
@@ -49,8 +55,8 @@ export default async function DeepDivePage({ params, searchParams }: DeepDivePag
   const { t, depth, maxNodes, maxDegree, minVotes } = await searchParams;
 
   const books = getBookIndex();
-  const translations = getTranslations();
-  const translation = getTranslationByCode(t ?? "WEB") ?? translations[0];
+  const translation = getTranslationByCode(t ?? "WEB");
+  if (!translation) notFound();
 
   let range;
   try {
@@ -60,7 +66,8 @@ export default async function DeepDivePage({ params, searchParams }: DeepDivePag
     throw error;
   }
 
-  const slug = toUrlSlug(range, books);
+  if (getExistingVerseIds(range).length === 0) notFound();
+  const slug = canonicalReferenceSlug(range, books);
 
   return (
     <article className="deep-dive-page">
@@ -74,6 +81,8 @@ export default async function DeepDivePage({ params, searchParams }: DeepDivePag
           network. Exact limits and what they exclude are disclosed below.
         </p>
       </header>
+
+      <ReferenceLinks range={range} translationCode={translation.code} />
 
       <DeepDiveView
         reference={slug}

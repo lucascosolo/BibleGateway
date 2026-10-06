@@ -1,9 +1,7 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Read-only API · Jot",
-  description: "Documented read-only endpoints for the Jot Bible study corpus.",
-};
+export const metadata = pageMetadata('Bible research API: text, cross-references & original languages · Jot', 'Public read-only Bible API with translation text, verse references, Hebrew and Greek words, manuscript evidence, source provenance and corpus exports.', '/api');
 
 const endpoints = [
   {

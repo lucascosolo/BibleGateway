@@ -2,7 +2,16 @@ const BASE = "https://bible.lucascosolo.com";
 
 const body = `# Jot API instructions for language models
 
-Jot is a public, read-only Bible research API for retrieval by search engines, agents, and language models. Do not scrape HTML when an API endpoint below provides the data.
+Jot is a public, read-only Bible research API for retrieval by search engines, agents, and language models. Public HTML pages are crawlable; the structured endpoints below provide more convenient data retrieval.
+
+## Discovery and translation identity
+
+- Sitemap index: ${BASE}/sitemap.xml. It lists real verse, chapter, book and concordance pages, including partial edition coverage.
+- Cite a reader URL such as ${BASE}/read/John.4.11?t=WEB. The translation query is part of the citation; do not drop it or relabel its text.
+- For a question about references across the Bible, retrieve the passage and its inbound/outbound cross-references, then inspect each linked passage in context. A cross-reference is editorial evidence, not a statement that two verses mean the same thing.
+- Discover currently available editions at ${BASE}/api/translations. NIV is not currently included. Never label another edition as NIV or imply Jot can supply a translation absent from that endpoint.
+- Coverage may be partial: consult the returned scope and actual verse rows. Missing translation text, recorded omissions, and absent original-language evidence are distinct cases.
+- Search-engine indexing and AI retrieval depend on the crawler; this document is a discovery aid, not an indexing protocol or a guarantee of inclusion.
 
 ## Retrieval workflow
 

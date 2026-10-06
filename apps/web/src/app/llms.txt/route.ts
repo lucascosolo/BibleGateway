@@ -2,7 +2,7 @@ const BASE = "https://bible.lucascosolo.com";
 
 const body = `# Jot Bible Research API
 
-> Jot is a public, read-only Bible research corpus. Use these endpoints instead of scraping the interactive reader.
+> Jot is a public, read-only Bible research corpus. Use the public HTML reader for citations and browsing, or these structured endpoints for data retrieval.
 
 ## Start here
 
@@ -11,6 +11,15 @@ const body = `# Jot Bible Research API
 - Full LLM instructions: ${BASE}/llms-full.txt
 - Corpus manifest: ${BASE}/api/corpus
 - API base URL: ${BASE}
+
+## Discovery and translation identity
+
+- Sitemap index: ${BASE}/sitemap.xml. It lists real verse, chapter, book and concordance pages, including partial edition coverage.
+- Cite a reader URL such as ${BASE}/read/John.4.11?t=WEB. The translation query is part of the citation; do not drop it or relabel its text.
+- For a question about references across the Bible, retrieve the passage and its inbound/outbound cross-references, then inspect each linked passage in context. A cross-reference is editorial evidence, not a statement that two verses mean the same thing.
+- Discover currently available editions at ${BASE}/api/translations. NIV is not currently included. Never label another edition as NIV or imply Jot can supply a translation absent from that endpoint.
+- Coverage may be partial: consult the returned scope and actual verse rows. Missing translation text, recorded omissions, and absent original-language evidence are distinct cases.
+- Search-engine indexing and AI retrieval depend on the crawler; this document is a discovery aid, not an indexing protocol or a guarantee of inclusion.
 
 ## Rules
 

@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { Fragment, useMemo } from "react";
 
 import type { VerseText } from "@/lib/db/corpus";
+import type { WordClip } from "@/lib/db/audio";
 import type {
   GreekEditionVariant,
   GreekManuscriptReading,
@@ -210,6 +211,12 @@ export interface PassageRendererProps {
    */
   interlinear?: ReadonlyMap<VerseId, readonly OriginalWord[]>;
   /**
+   * Where a human reader says each original-language word, keyed by `word_id`, for the
+   * interlinear's speaker buttons. Supplied by the server page from the audio artifact, exactly
+   * like `interlinear` itself; absent means no buttons.
+   */
+  wordClips?: ReadonlyMap<number, WordClip>;
+  /**
    * The scribes' marginal readings (qere), keyed by canonical verse id, for the reading shown
    * under the `variants` layer.
    *
@@ -244,6 +251,7 @@ export function PassageRenderer({
   bookLabels,
   searchHighlights,
   interlinear,
+  wordClips,
   variants,
   insightNotes,
   greekEditionVariants,
@@ -350,7 +358,7 @@ export function PassageRenderer({
               <InsightNotes notes={insightNotes?.get(item.verse.verseId) ?? []} />
             )}
             {layers.interlinear && (
-              <Interlinear words={interlinear?.get(item.verse.verseId) ?? []} />
+              <Interlinear words={interlinear?.get(item.verse.verseId) ?? []} wordClips={wordClips} />
             )}
             {layers.variants && (
               <QereReadings

@@ -1,5 +1,11 @@
-ritten in batches.** One call holding every finding can exceed the model's output limit, and a Write cut off there is refused whole. So the first Write holds the opening paragraph, Coverage, the first twenty findings and What was verified, and each further twenty go in with Edit, inserted above the `## What was verified` heading.
+import { getTranslations } from "@/lib/db/corpus";
+import { SITE_URL, escapeXml, xmlResponse } from "@/lib/seo";
 
-**Every finding cites a real `file:line`.** A finding pointing at the wrong line costs the reader more than a missed finding, because they lose trust in the rest of the report while chasing it.
+export const dynamic = "force-dynamic";
 
-**A 
+export function GET() {
+  const files = ["pages", "concordance", "references", "comparisons", ...getTranslations().map((edition) => edition.code)];
+  return xmlResponse(`<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${files.map((file) =>
+    `<sitemap><loc>${escapeXml(`${SITE_URL}/sitemaps/${file}.xml`)}</loc></sitemap>`
+  ).join("")}</sitemapindex>`);
+}

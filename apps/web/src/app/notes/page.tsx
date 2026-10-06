@@ -7,6 +7,7 @@ import { getAllAnnotations } from "@/lib/db/userdata";
 import { formatRange, toUrlSlug } from "@/lib/refs";
 
 export const metadata = {
+  robots: { index: false, follow: true },
   title: "Notes & highlights · Jot",
   description: "Review and export your Jot research notes and highlights.",
 };

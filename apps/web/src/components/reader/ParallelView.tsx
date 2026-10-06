@@ -52,7 +52,7 @@ export function ParallelView({ reference, readerSlug, translations, verseIds }: 
             screen, each verse stays together and the editions stack in reading order.
           </p>
         </div>
-        <Link className="parallel__back" href={`/read/${readerSlug}`}>
+        <Link className="parallel__back" href={`/read/${readerSlug}?t=${left.code}`}>
           Back to reader
         </Link>
       </header>

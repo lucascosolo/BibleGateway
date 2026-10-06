@@ -1,6 +1,7 @@
 import { RoadmapPage } from "@/components/shell/RoadmapPage";
 
-export const metadata = { title: "Geniza (not yet built) · Jot" };
+export const metadata = {
+  robots: { index: false, follow: true }, title: "Geniza (not yet built) · Jot" };
 
 export default function GenizaPage() {
   return (

@@ -8,6 +8,8 @@ import { NavRail } from "./NavRail";
 import { WORKSPACES, type Workspace } from "./workspaces";
 import { GuidedTour } from "@/components/onboarding/GuidedTour";
 import { CommandPalette } from "./CommandPalette";
+import { AudioPlayer } from "@/components/audio/AudioPlayer";
+import { SiteFooter } from "./SiteFooter";
 
 interface AppShellProps {
   children: React.ReactNode;
@@ -44,8 +46,13 @@ export function AppShell({ children, active: explicitActive, sidebar }: AppShell
           about lifetime. */}
       <GuidedTour />
       <CommandPalette />
+      {/* Same reasoning as the tour: mounted once, outside the breakpoint branch, because the
+          `<audio>` element inside it must survive both a width change and a client navigation
+          from one chapter to the next. */}
+      <AudioPlayer />
       <Shell breakpoint={breakpoint} active={active} sidebar={sidebar}>
         {children}
+        <SiteFooter />
       </Shell>
     </>
   );

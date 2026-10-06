@@ -1,3 +1,4 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -60,13 +61,26 @@ interface ConcordancePageProps {
   searchParams: Promise<{ t?: string; p?: string }>;
 }
 
-export async function generateMetadata({ params }: ConcordancePageProps) {
-  const { key } = await params;
-  const decoded = decodeURIComponent(key);
+export async function generateMetadata({ params, searchParams }: ConcordancePageProps) {
+  const decoded = decodeURIComponent((await params).key);
+  const query = await searchParams;
+  const translation = getTranslationByCode(query.t ?? "WEB");
+  if (!translation) notFound();
+  const resolution = resolveConcordanceKey(decoded);
+  if (resolution.kind === "family") {
+    return pageMetadata(`Strong’s ${resolution.base}: biblical word entries · Jot`,
+      `Explore the distinct biblical words indexed under Strong’s ${resolution.base}, with their concordance entries and Bible occurrences.`,
+      `/lashon/${encodeURIComponent(resolution.base)}`);
+  }
   const summary = getConcordanceSummary(decoded);
-  if (!summary) return { title: "Lashon · Jot" };
+  if (!summary) notFound();
   const word = summary.lexicon?.headword ?? summary.greekLexicon?.headword ?? summary.lemma;
-  return { title: `${word}${summary.strongs ? ` (${summary.strongs})` : ""} · Lashon · Jot` };
+  const key = summary.key;
+  const pageCount = Math.max(1, Math.ceil(summary.total / PAGE_SIZE));
+  const page = Math.min(Math.max(1, Number.parseInt(query.p ?? "1", 10) || 1), pageCount);
+  return pageMetadata(`${word}${summary.strongs ? ` (${summary.strongs})` : ""} — Bible concordance${page > 1 ? `, page ${page}` : ""} · Jot`,
+    `Study ${word}: biblical word forms, attributed dictionary entries and ${summary.total} occurrences, with ${translation.name} verse context.`,
+    `/lashon/${encodeURIComponent(key)}?t=${translation.code}${page > 1 ? `&p=${page}` : ""}`);
 }
 
 export default async function ConcordancePage({ params, searchParams }: ConcordancePageProps) {
@@ -87,7 +101,8 @@ export default async function ConcordancePage({ params, searchParams }: Concorda
 
   const books = getBookIndex();
   const translations = getTranslations();
-  const translation = getTranslationByCode(t ?? "WEB") ?? translations[0];
+  const translation = getTranslationByCode(t ?? "WEB");
+  if (!translation) notFound();
 
   const pageCount = Math.max(1, Math.ceil(summary.total / PAGE_SIZE));
   // Clamped rather than trusted: `?p=99999` on a word with two occurrences is a URL anyone can
@@ -297,7 +312,22 @@ function LexiconPanel({ entry }: { entry: LexiconEntry }) {
       {entry.meaning && <p className="concordance__def">{entry.meaning}</p>}
       {entry.usage && (
         <p className="concordance__usage">
-          <strong>Rendered in the King James Version as:</strong> {entry.usage}
+          {/* Strong's "usage" field lists the KJV renderings — except for the handful of
+              words that have none, where it carries an editorial note in square brackets
+              instead ("[as such unrepresented in English]" for H853, the direct-object marker
+              אֵת). Printed under the same label, that note reads as if the KJV rendered the word
+              as "[as such unrepresented in English]", which is exactly the kind of thing a
+              reader stops trusting the page over. Say what it means. */}
+          {isEditorialNote(entry.usage) ? (
+            <>
+              <strong>In the King James Version:</strong> this word has no English equivalent
+              and is not represented by a word of its own. Strong&rsquo;s note: {entry.usage}
+            </>
+          ) : (
+            <>
+              <strong>Rendered in the King James Version as:</strong> {entry.usage}
+            </>
+          )}
         </p>
       )}
       {entry.etymology && (
@@ -579,4 +609,13 @@ function Occurrence({
       )}
     </li>
   );
+}
+
+/**
+ * Strong's "usage" is a list of renderings, except when it is a bracketed editorial note
+ * (`[as such unrepresented in English]`, `[idiom]`) — see the concordance section above.
+ */
+function isEditorialNote(usage: string): boolean {
+  const trimmed = usage.trim();
+  return trimmed.startsWith("[") && trimmed.endsWith("]") && !trimmed.includes(",");
 }

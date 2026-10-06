@@ -1,6 +1,32 @@
-export const meta={name:"scan",description:"Claude Security scan pipeline: inventory, threat-model, research and sweep over a codebase, or a review of one change; then a three-lens adversarial panel and a code-computed tally",
-whenToUse:"Run by the Security Lead from the scan job. args carry scanRoot, runDir, mode, effort (low|medium|high), scope, range. If invoked with no args (a user typed the bare slash command), do not call Workflow: tell the user to run /claude-security to open the Claude Security menu, which collects the scan settings.",phases:[{title:"Inventory",
-detail:"codebase scans only: partition the repository into components; every top-level directory scanned or explicitly skipped"},{title:"Threat model",detail:"codebase scans only: one modeler per component"},{title:"Research",detail:"one researcher per component x category cell; for a change, reviewers of the diff"},{title:"Sweep",
-detail:"codebase scans only: gap-fill over what the matrix did not cover"},{title:"Panel",detail:"three-lens adversarial verification, one voter per lens"}]};const e="workflows/scan.js",t="Run save_result.py on this workflow's output file and the run directory, then do exactly what it prints; do not write the report until it says to.";let n=args,o=!1;if("string"==typeof n)try{n=JSON.parse(n)
-}catch{n={},o=!0}const r=o||null==n||"object"!=typeof n||0===Object.keys(n).length;if(n=n||{},r)return log("scan.js was started with no scan settings (a bare invocation) -- nothing to scan; directing the user to the /claude-security menu"),{started:!1,reason:"no-args",
-next:"This scan workflow was started without the settings it needs (the scan job supplies scanRoot, runDir, mode and effort). Nothing failed and there is no result or transcript to inspect. Tell the user
+import { getTranslationByCode } from "@/lib/db/corpus";
+import { getCanonicalDiscoveryRows, getConcordanceDiscoveryKeys, getEditionDiscoveryRows } from "@/lib/db/discovery";
+import { SITE_URL, escapeXml, xmlResponse } from "@/lib/seo";
+
+export const dynamic = "force-dynamic";
+
+export async function GET(_request: Request, { params }: { params: Promise<{ file: string }> }) {
+  const { file } = await params;
+  if (!file.endsWith(".xml")) return new Response("Not found", { status: 404 });
+  const key = file.slice(0, -4);
+  let paths: string[];
+  if (key === "pages") {
+    paths = ["/", "/read", "/derash", "/lashon", "/roadmap", "/api"];
+  } else if (key === "concordance") {
+    paths = getConcordanceDiscoveryKeys().map((key) => `/lashon/${encodeURIComponent(key)}?t=WEB`);
+  } else if (key === "references" || key === "comparisons") {
+    const rows = getCanonicalDiscoveryRows();
+    const references = new Set(rows.flatMap((row) => [`${row.book}.${row.chapter}`, row.reference]));
+    paths = [...references].map((reference) => key === "references"
+      ? `/deep-dive/${reference}?t=WEB`
+      : `/parallel/${reference}?a=WEB&b=BSB`);
+  } else {
+    const translation = getTranslationByCode(key);
+    if (!translation || translation.code !== key) return new Response("Not found", { status: 404 });
+    const rows = getEditionDiscoveryRows(translation.translationId);
+    const references = new Set(rows.flatMap((row) => [row.book, `${row.book}.${row.chapter}`, row.reference]));
+    paths = [...references].map((reference) => `/read/${reference}?t=${translation.code}`);
+  }
+  return xmlResponse(`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${paths.map((path) =>
+    `<url><loc>${escapeXml(`${SITE_URL}${path}`)}</loc></url>`
+  ).join("")}</urlset>`);
+}
