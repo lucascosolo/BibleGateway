@@ -1,4 +1,5 @@
-import { pageMetadata, canonicalReferenceSlug } from "@/lib/seo";
+import { canonicalReferenceSlug } from "@/lib/seo";
+import { passageSnapshot, quoteLine, shareMetadata } from "@/app/og/data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -29,9 +30,18 @@ export async function generateMetadata({ params, searchParams }: ParallelPagePro
   } catch { notFound(); }
   if (getExistingVerseIds(range).length === 0) notFound();
   const label = formatRange(range, books);
-  return pageMetadata(`${label}: ${left.code} and ${right.code} Bible comparison · Jot`,
+  const slug = canonicalReferenceSlug(range, books);
+  const snapshot = passageSnapshot(slug, left.code, 2);
+  return shareMetadata(`${label}: ${left.code} and ${right.code} Bible comparison · Jot`,
     `Compare ${label} in ${left.name} and ${right.name}, aligned by canonical verse with notes for omitted verses.`,
-    `/parallel/${canonicalReferenceSlug(range, books)}?a=${left.code}&b=${right.code}`);
+    `/parallel/${slug}?a=${left.code}&b=${right.code}`,
+    {
+      card: { kind: "parallel", ref: slug, a: left.code, b: right.code },
+      shareTitle: `${label}: ${left.code} and ${right.code} side by side`,
+      shareDescription: snapshot
+        ? `“${quoteLine(snapshot, 140)}” (${left.code}) — compared with the ${right.name}, verse by verse.`
+        : undefined,
+    });
 }
 
 function readTranslation(code: string | undefined, fallback: string) {

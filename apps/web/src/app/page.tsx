@@ -1,6 +1,6 @@
 import { StructuredData } from "@/app/_components/StructuredData";
-import { pageMetadata } from "@/lib/seo";
-export const metadata = pageMetadata('Bible study, cross-references & Hebrew and Greek tools · Jot', 'Read and compare Bible translations, follow cross-references across the Bible, study Hebrew and Greek words, and consult sourced textual notes.', '/');
+import { shareMetadata } from "@/app/og/data";
+export const metadata = shareMetadata('Bible study, cross-references & Hebrew and Greek tools · Jot', 'Read and compare Bible translations, follow cross-references across the Bible, study Hebrew and Greek words, and consult sourced textual notes.', '/', { card: { kind: "page", page: "home" }, shareTitle: "Jot — read the Bible closely" });
 import { Wordmark } from "@/components/Wordmark";
 import { JumpSearch } from "@/components/home/JumpSearch";
 import { ContinueReading } from "@/components/home/ContinueReading";

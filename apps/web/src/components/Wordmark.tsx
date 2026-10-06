@@ -2,6 +2,23 @@ import clsx from "clsx";
 
 export type WordmarkSize = "sm" | "md" | "lg" | "xl";
 
+/**
+ * The mark's geometry, shared with the share-card renderer (`app/og`), which cannot use CSS
+ * custom properties and so draws it with resolved colours. One source, so the two cannot drift.
+ */
+export const WORDMARK_GEOMETRY = {
+  viewBox: "0 0 118 66",
+  width: 118,
+  height: 66,
+  strokeWidth: 8,
+  /** j stem + descending hook (dotless by construction), then the t stem with foot and its crossbar. */
+  paths: ["M20 20 V48 Q20 60 8 60 Q3 60 1 57", "M96 8 V50 Q96 60 106 58", "M82 21 H110"],
+  /** The o. */
+  bowl: { cx: 54, cy: 38, r: 16 },
+  /** The tittle (Matt 5:18). See the note on its placement below. */
+  tittle: { cx: 20, cy: 9, r: 5 },
+} as const;
+
 const SIZE_MAP: Record<WordmarkSize, string> = {
   sm: "1.25rem",
   md: "1.75rem",
@@ -47,24 +64,23 @@ export function Wordmark({
       <svg
         role="img"
         aria-label="Jot"
-        viewBox="0 0 118 66"
+        viewBox={WORDMARK_GEOMETRY.viewBox}
         style={{ height: "var(--wordmark-size)", width: "auto" }}
         focusable="false"
       >
         <g
           fill="none"
           stroke="var(--color-brand)"
-          strokeWidth="8"
+          strokeWidth={WORDMARK_GEOMETRY.strokeWidth}
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {/* j — stem + descending hook, dotless by construction */}
-          <path d="M20 20 V48 Q20 60 8 60 Q3 60 1 57" />
+          {/* j — stem + descending hook, dotless by construction; t — stem with foot + crossbar */}
+          {WORDMARK_GEOMETRY.paths.map((d) => (
+            <path key={d} d={d} />
+          ))}
           {/* o */}
-          <circle cx="54" cy="38" r="16" />
-          {/* t — stem with foot + crossbar */}
-          <path d="M96 8 V50 Q96 60 106 58" />
-          <path d="M82 21 H110" />
+          <circle {...WORDMARK_GEOMETRY.bowl} />
         </g>
         {/* The tittle: a distinct element, in the second brand colour.
             It used to sit at cy=7 r=5.5, which put its top edge at y=1.5 — two and a half units
@@ -73,7 +89,7 @@ export function Wordmark({
             a stray mark, which is what a reviewer called it. Now the dot's top aligns with the
             ascender line exactly (cy 9 − r 5 = 4) and it clears the stem below by 2 units, about
             a quarter of the stroke weight — the gap a drawn `j` actually has. */}
-        <circle cx="20" cy="9" r="5" fill="var(--color-rubric)" />
+        <circle {...WORDMARK_GEOMETRY.tittle} fill="var(--color-rubric)" />
       </svg>
       {withTagline ? (
         <span

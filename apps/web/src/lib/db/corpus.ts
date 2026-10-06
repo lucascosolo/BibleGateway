@@ -94,6 +94,32 @@ export function getPassage(range: VerseRange, translationId: number): VerseText[
 }
 
 /**
+ * The first few verses of a range, for share cards and link previews.
+ *
+ * Bounded on purpose: `/read/Ps` is a valid shareable address, and a preview needs its opening
+ * lines, not 2,461 verses. Walks real `verse_texts` rows, so the sparse id space and a
+ * translation's omissions are respected for free.
+ */
+export function getPassageOpening(
+  range: VerseRange,
+  translationId: number,
+  limit: number
+): { verseId: VerseId; chapter: number; verse: number; text: string }[] {
+  return prepared(
+    `SELECT vt.verse_id AS verseId, v.chapter, v.verse, vt.text
+     FROM verse_texts vt
+     JOIN verses v ON v.verse_id = vt.verse_id
+     WHERE vt.translation_id = ? AND vt.verse_id BETWEEN ? AND ?
+     ORDER BY vt.verse_id LIMIT ?`
+  ).all(translationId, range.start, range.end, limit) as {
+    verseId: VerseId;
+    chapter: number;
+    verse: number;
+    text: string;
+  }[];
+}
+
+/**
  * The same range in several translations at once, grouped by verse.
  *
  * Used by the parallel/compare views. One query rather than N, so switching translations

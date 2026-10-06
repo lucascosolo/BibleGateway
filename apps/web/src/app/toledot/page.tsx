@@ -1,7 +1,10 @@
+import { shareMetadata } from "@/app/og/data";
 import { RoadmapPage } from "@/components/shell/RoadmapPage";
 
 export const metadata = {
-  robots: { index: false, follow: true }, title: "Toledot (not yet built) · Jot" };
+  ...shareMetadata("Toledot (not yet built) · Jot", "When each book of the Bible was written, and when its events happened. Planned, not yet built.", "/toledot", { card: { kind: "page", page: "toledot" } }),
+  robots: { index: false, follow: true },
+};
 
 export default function ToledotPage() {
   return (

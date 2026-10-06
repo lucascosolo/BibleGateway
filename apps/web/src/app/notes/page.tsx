@@ -1,15 +1,20 @@
 import Link from "next/link";
 
+import { shareMetadata } from "@/app/og/data";
+
 import { NotesIndex } from "@/components/notes/NotesIndex";
 import { getExistingUserId } from "@/lib/annotations/auth";
 import { getTranslations, getBookIndex } from "@/lib/db/corpus";
 import { getAllAnnotations } from "@/lib/db/userdata";
 import { formatRange, toUrlSlug } from "@/lib/refs";
 
+// The card never shows anyone's notes: a shared /notes link opens the RECIPIENT's notes, so the
+// preview describes the page, not the sender's content.
 export const metadata = {
+  ...shareMetadata("Notes & highlights · Jot", "Review and export your Jot research notes and highlights.", "/notes", {
+    card: { kind: "page", page: "notes" },
+  }),
   robots: { index: false, follow: true },
-  title: "Notes & highlights · Jot",
-  description: "Review and export your Jot research notes and highlights.",
 };
 
 export default async function NotesPage() {

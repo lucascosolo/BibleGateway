@@ -1,4 +1,4 @@
-import { pageMetadata } from "@/lib/seo";
+import { shareMetadata, wordSnapshot } from "@/app/og/data";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -68,9 +68,10 @@ export async function generateMetadata({ params, searchParams }: ConcordancePage
   if (!translation) notFound();
   const resolution = resolveConcordanceKey(decoded);
   if (resolution.kind === "family") {
-    return pageMetadata(`Strong’s ${resolution.base}: biblical word entries · Jot`,
+    return shareMetadata(`Strong’s ${resolution.base}: biblical word entries · Jot`,
       `Explore the distinct biblical words indexed under Strong’s ${resolution.base}, with their concordance entries and Bible occurrences.`,
-      `/lashon/${encodeURIComponent(resolution.base)}`);
+      `/lashon/${encodeURIComponent(resolution.base)}`,
+      { card: { kind: "word", key: resolution.base } });
   }
   const summary = getConcordanceSummary(decoded);
   if (!summary) notFound();
@@ -78,9 +79,16 @@ export async function generateMetadata({ params, searchParams }: ConcordancePage
   const key = summary.key;
   const pageCount = Math.max(1, Math.ceil(summary.total / PAGE_SIZE));
   const page = Math.min(Math.max(1, Number.parseInt(query.p ?? "1", 10) || 1), pageCount);
-  return pageMetadata(`${word}${summary.strongs ? ` (${summary.strongs})` : ""} — Bible concordance${page > 1 ? `, page ${page}` : ""} · Jot`,
+  const snapshot = wordSnapshot(key);
+  const spoken = [snapshot?.xlit, snapshot?.gloss ? `“${snapshot.gloss}”` : null].filter(Boolean).join(", ");
+  return shareMetadata(`${word}${summary.strongs ? ` (${summary.strongs})` : ""} — Bible concordance${page > 1 ? `, page ${page}` : ""} · Jot`,
     `Study ${word}: biblical word forms, attributed dictionary entries and ${summary.total} occurrences, with ${translation.name} verse context.`,
-    `/lashon/${encodeURIComponent(key)}?t=${translation.code}${page > 1 ? `&p=${page}` : ""}`);
+    `/lashon/${encodeURIComponent(key)}?t=${translation.code}${page > 1 ? `&p=${page}` : ""}`,
+    {
+      card: { kind: "word", key },
+      shareTitle: `${word}${spoken ? ` (${spoken})` : ""}${summary.strongs ? ` · ${summary.strongs}` : ""}`,
+      shareDescription: `Every one of its ${summary.total.toLocaleString("en-US")} occurrences in the Bible, with its forms, dictionary entry and ${translation.name} verse context.`,
+    });
 }
 
 export default async function ConcordancePage({ params, searchParams }: ConcordancePageProps) {

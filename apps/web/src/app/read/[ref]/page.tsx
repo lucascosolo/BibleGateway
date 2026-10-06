@@ -1,6 +1,7 @@
 import { StructuredData } from "@/app/_components/StructuredData";
 import { hasEditionContent } from "@/lib/db/discovery";
-import { pageMetadata, canonicalReferenceSlug } from "@/lib/seo";
+import { canonicalReferenceSlug } from "@/lib/seo";
+import { passageSnapshot, quoteLine, shareMetadata } from "@/app/og/data";
 import { ReferenceLinks } from "@/app/_components/ReferenceLinks";
 import { CrossRefLayer } from "@/components/crossrefs/CrossRefLayer";
 import Link from "next/link";
@@ -95,13 +96,25 @@ export async function generateMetadata({ params, searchParams }: ReaderPageProps
   if (getExistingVerseIds(range).length === 0) notFound();
   const label = formatRange(range, books);
   const available = hasEditionContent(range.start, range.end, translation.translationId);
+  const slug = canonicalReferenceSlug(range, books);
+  // The verse IS the preview: a shared John 3:16 should unfurl saying John 3:16, in the
+  // translation the sender was reading.
+  const snapshot = available ? passageSnapshot(slug, translation.code) : null;
   return {
-    ...pageMetadata(
+    ...shareMetadata(
       `${label} ${translation.code} — Bible text & cross-references · Jot`,
       available
         ? `Study ${label} in the ${translation.name} (${translation.code}): Bible cross-references, Hebrew and Greek word study, translation comparison and textual notes.`
         : `${label} is not available in ${translation.name}. Find editions that include this passage on Jot.`,
-      `/read/${canonicalReferenceSlug(range, books)}?t=${translation.code}`,
+      `/read/${slug}?t=${translation.code}`,
+      {
+        card: available ? { kind: "passage", ref: slug, t: translation.code } : { kind: "page", page: "read" },
+        shareTitle: `${label} (${translation.code})`,
+        shareDescription: snapshot
+          ? `“${quoteLine(snapshot, 180)}” — ${label}, ${translation.name}`
+          : undefined,
+        imageAlt: snapshot ? `${label} in the ${translation.name}: “${quoteLine(snapshot, 240)}”` : undefined,
+      },
     ),
     ...(!available ? { robots: { index: false, follow: true } } : {}),
   };

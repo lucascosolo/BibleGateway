@@ -1,7 +1,7 @@
-import { pageMetadata } from "@/lib/seo";
+import { shareMetadata } from "@/app/og/data";
 import Link from "next/link";
 
-export const metadata = pageMetadata('Bible research API: text, cross-references & original languages · Jot', 'Public read-only Bible API with translation text, verse references, Hebrew and Greek words, manuscript evidence, source provenance and corpus exports.', '/api');
+export const metadata = shareMetadata('Bible research API: text, cross-references & original languages · Jot', 'Public read-only Bible API with translation text, verse references, Hebrew and Greek words, manuscript evidence, source provenance and corpus exports.', '/api', { card: { kind: "page", page: "api" } });
 
 const endpoints = [
   {

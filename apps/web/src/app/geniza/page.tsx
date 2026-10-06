@@ -1,7 +1,10 @@
+import { shareMetadata } from "@/app/og/data";
 import { RoadmapPage } from "@/components/shell/RoadmapPage";
 
 export const metadata = {
-  robots: { index: false, follow: true }, title: "Geniza (not yet built) · Jot" };
+  ...shareMetadata("Geniza (not yet built) · Jot", "How the text reached us: the manuscripts it survived in. Planned, not yet built.", "/geniza", { card: { kind: "page", page: "geniza" } }),
+  robots: { index: false, follow: true },
+};
 
 export default function GenizaPage() {
   return (

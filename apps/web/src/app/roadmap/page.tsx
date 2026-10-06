@@ -1,11 +1,11 @@
-import { pageMetadata } from "@/lib/seo";
+import { shareMetadata } from "@/app/og/data";
 import Link from "next/link";
 import { GlossLabel } from "@/components/GlossLabel";
 import { PLANNED_WORKSPACES } from "@/components/shell/workspaces";
 import { plannedSrText } from "@/components/shell/PlannedMarker";
 import type { LexiconId } from "@/lib/lexicon";
 
-export const metadata = pageMetadata('Jot roadmap and research coverage', 'See what Jot currently provides for Bible study and which research tools and datasets are still planned.', '/roadmap');
+export const metadata = shareMetadata('Jot roadmap and research coverage', 'See what Jot currently provides for Bible study and which research tools and datasets are still planned.', '/roadmap', { card: { kind: "page", page: "roadmap" } });
 
 /**
  * `/roadmap` — the honest home for what is scheduled but not built.

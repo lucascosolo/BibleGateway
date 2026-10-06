@@ -1,4 +1,5 @@
-import { pageMetadata, canonicalReferenceSlug } from "@/lib/seo";
+import { canonicalReferenceSlug } from "@/lib/seo";
+import { crossReferenceCount, shareMetadata } from "@/app/og/data";
 import { ReferenceLinks } from "@/app/_components/ReferenceLinks";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -44,7 +45,18 @@ export async function generateMetadata({ params, searchParams }: DeepDivePagePro
     const range = parseReference(decodeURIComponent(ref), books);
     if (getExistingVerseIds(range).length === 0) notFound();
     const label = formatRange(range, books);
-    return pageMetadata(`${label} Bible cross-reference network · Jot`, `Explore references from and to ${label}, with ranked related Bible passages and ${translation.name} reader links.`, `/deep-dive/${canonicalReferenceSlug(range, books)}?t=${translation.code}`);
+    const slug = canonicalReferenceSlug(range, books);
+    const count = crossReferenceCount(range);
+    return shareMetadata(
+      `${label} Bible cross-reference network · Jot`,
+      `Explore references from and to ${label}, with ranked related Bible passages and ${translation.name} reader links.`,
+      `/deep-dive/${slug}?t=${translation.code}`,
+      {
+        card: { kind: "network", ref: slug, t: translation.code },
+        shareTitle: `${label}: cross-reference network`,
+        shareDescription: `${count.toLocaleString("en-US")} passages linked to and from ${label}, ranked and mapped, with ${translation.name} text.`,
+      },
+    );
   } catch {
     notFound();
   }

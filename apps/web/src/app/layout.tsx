@@ -9,6 +9,8 @@ import "./audio.css";
 import { ThemeScript } from "@/components/ThemeScript";
 import { Providers } from "@/components/Providers";
 import { AppShell } from "@/components/shell/AppShell";
+import { shareMetadata } from "@/app/og/data";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 /**
  * Fonts are SELF-HOSTED, deliberately — do not "simplify" these back to `next/font/google`.
@@ -68,8 +70,21 @@ const jetbrainsMono = localFont({
   src: [{ path: "./fonts/jetbrains-mono-normal.woff2", weight: "400 500", style: "normal" }],
 });
 
+// Defaults for any route without its own share card — the 404 included. Deliberately NOT built
+// with `shareMetadata`, which also sets a canonical address: inherited by an unrelated page, a
+// canonical of `/` would tell crawlers that page is a duplicate of the home page.
+const siteCard = shareMetadata(
+  "Jot — scholarly Bible study",
+  "Read the Bible closely: compare translations, follow cross-references, and look up the Hebrew and Greek behind any word.",
+  "/",
+  { card: { kind: "page", page: "home" }, shareTitle: "Jot — read the Bible closely" },
+);
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bible.lucascosolo.com"),
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  openGraph: { ...siteCard.openGraph, url: undefined },
+  twitter: siteCard.twitter,
   title: "Jot — scholarly Bible study",
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 } },
   // Says what a reader gets, in words they already have. The previous description — "academic
@@ -80,6 +95,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
+  // The browser chrome and the accent stripe some unfurlers (Discord) draw beside a card take
+  // this. `--color-bg` in each theme, converted from oklch — see the note in `app/og/route.tsx`.
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fbf6ee" },
+    { media: "(prefers-color-scheme: dark)", color: "#19120e" },
+  ],
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
