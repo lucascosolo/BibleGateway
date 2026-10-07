@@ -101,8 +101,10 @@ parallel scratch copies validated by the builder and merged the same afternoon. 
   (a reading of Wood 2005's "mid-19th century"); David anointed and David takes Jerusalem (the
   editor's derivation from Young's conjectural reign dates); Pentecost and the 34–40 CE conversion
   interval (derived from other cited figures); the Cyrus "no single decree" bounds.
-- **Thiele is still cited only through Young** (Solomon's accession, Qarqar, the temple
-  foundation). Young's JETS page locators in batch B were mapped from PDF page order, not checked
+- **Thiele is cited directly only for the Preface to the Third Edition (pp. 23–24: 853 for
+  Qarqar, 723 for Samaria, 701 for Sennacherib), from page images the user supplied on
+  2026-10-07; the body of the book is still cited through Young** (Solomon's accession, the temple
+  foundation, Jerusalem 586). Young's JETS page locators in batch B were mapped from PDF page order, not checked
   against printed headers.
 - **No named holder** for: the 30 CE crucifixion, Ezekiel's 593 call, Babylon 539, the temple's
   516 and 450–400 datings, Ezra 398, Nehemiah 445/444, Alexander, Antiochus, Pompey.

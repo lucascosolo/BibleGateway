@@ -19,9 +19,10 @@ label = "723 BCE (first half)"
 tradition = "chronological"
 earliest = -723
 latest = -723
-held_by = "Rodger C. Young"
-summary = "Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n."
-citations = [{ source = "young-2004-samaria", locator = "p. 583" }, { source = "young-2005", locator = "Table 1, p. 245" }]
+held_by = "Edwin R. Thiele; Rodger C. Young"
+summary = """
+Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n. Thiele held the same year first: he writes of "my date of 853 for the battle of Qarqar and 723 for Samaria's fall", noting that "the accepted date for the fall of Samaria was 722, a year later than my date"."""
+citations = [{ source = "thiele-1983", locator = "Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07)" }, { source = "young-2004-samaria", locator = "p. 583" }, { source = "young-2005", locator = "Table 1, p. 245" }]
 
 [[attestations]]
 artifact = "sargon-ii-inscriptions"

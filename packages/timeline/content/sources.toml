@@ -44,8 +44,9 @@ id = "thiele-1983"
 kind = "book"
 author = "Edwin R. Thiele"
 title = "The Mysterious Numbers of the Hebrew Kings (new revised edition)"
-publisher = "Zondervan"
+publisher = "Zondervan, Grand Rapids"
 year = 1983
+url = "https://archive.org/details/mysteriousnumber0000thie"
 
 [[source]]
 id = "young-2004"
