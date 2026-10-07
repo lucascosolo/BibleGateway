@@ -18,10 +18,23 @@ label = "33 CE"
 tradition = "chronological"
 earliest = 33
 latest = 33
-held_by = "Colin Humphreys"
+held_by = "Colin J. Humphreys and W. G. Waddington (by inference from their crucifixion date)"
 summary = """
-The scholar Colin Humphreys argues that the crucifixion fell on 3 April 33 CE. If so, the Pentecost of Acts 2 came later that same year. The year is worked out from the crucifixion date. No source gives it directly."""
-citations = [{ source = "wikipedia-date-of-crucifixion" }]
+Humphreys and Waddington argue that the crucifixion fell on Friday 3 April 33 CE, which was 14 Nisan. Pentecost is the fiftieth day counted from the day after the Passover Sabbath (Leviticus 23:15-16), so on their date the Pentecost of Acts 2 fell about seven weeks later, in late May 33. The year is an inference from the crucifixion date; no source dates Pentecost on its own."""
+citations = [
+  { source = "humphreys-waddington-1992", locator = "p. 331 and Table 2 on p. 337 for the crucifixion date; the Pentecost inference is the editor's" },
+  { source = "wikipedia-date-of-crucifixion" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Acts 2:1 sets the event on "the day of Pentecost", the fiftieth day of the count that begins at Passover. Whatever year the crucifixion took place, that year's Pentecost followed about seven weeks later."""
+  citations = [{ source = "humphreys-waddington-1992", locator = "p. 337" }]
+  verses = [
+    { ref = "Acts.2.1", link = "dates", note = "When the day of Pentecost had come" },
+    { ref = "Lev.23.15-Lev.23.16", link = "background", note = "Fifty days counted from the day after the Sabbath" },
+  ]
 
 [[positions]]
 id = "30"
@@ -29,6 +42,11 @@ label = "30 CE"
 tradition = "chronological"
 earliest = 30
 latest = 30
+held_by = "John P. Meier; Rainer Riesner (by inference from their crucifixion date)"
 summary = """
-If the crucifixion fell on 7 April 30 CE, the Pentecost of Acts 2 came later in 30 CE. The year is worked out from the crucifixion date."""
-citations = [{ source = "wikipedia-date-of-crucifixion" }]
+Meier concludes that the crucifixion took place on Friday 7 April 30 CE, calling 30 "the more likely date", and Riesner holds the same. On that date the Pentecost of Acts 2 fell about seven weeks later, in late May 30. The year is an inference from the crucifixion date; no source dates Pentecost on its own."""
+citations = [
+  { source = "meier-1991", locator = "pp. 399–400, 405 for the crucifixion date; the Pentecost inference is the editor's" },
+  { source = "wikipedia-crucifixion-of-jesus", locator = "Chronology section, quoting Riesner" },
+  { source = "wikipedia-date-of-crucifixion" },
+]
