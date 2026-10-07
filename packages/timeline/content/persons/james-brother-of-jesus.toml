@@ -1,0 +1,30 @@
+id = "james-brother-of-jesus"
+name = "James, brother of Jesus"
+also_known_as = ["James the Just"]
+role = "head of the Jerusalem church (died c. 62 CE)"
+summary = """
+James is listed first among Jesus' brothers in Mark 6:3. Brown says there is no evidence he followed Jesus during the public ministry, and Mark 3 shows the family doubting him. Paul lists an appearance of the risen Jesus to James in 1 Corinthians 15:7, and from then on he is a prominent figure. In Galatians Paul calls him "the brother of the Lord" and names him first among the pillars at Jerusalem. Acts gives him the presiding role and the final speech at the Jerusalem meeting.
+
+The two accounts of that meeting differ. In Acts James proposes a ruling that Gentiles keep some purity rules, while Paul in Galatians reports only that the pillars gave him the right hand of fellowship. Brown adds that in Galatians 2 the men who made Peter withdraw at Antioch came "from James".
+
+Josephus says that James, "the brother of Jesus who was called the Messiah", was stoned in the early 60s after the high priest Ananus convened a Sanhedrin while the Roman prefect was absent. Brown dates the death to about 62. Whether James wrote the New Testament letter that bears his name is a separate question. Brown thinks most scholars see it as the work of a later admirer."""
+status = "draft"
+verses = [
+  { ref = "Gal.1.19", link = "describes", note = "Paul meets 'James the brother of the Lord'" },
+  { ref = "Gal.2.9", link = "describes", note = "named first among the pillars" },
+  { ref = "Acts.15.13-Acts.15.21", link = "describes", note = "James's ruling at the Jerusalem meeting, in Acts only" },
+  { ref = "Mark.6.3", link = "describes", note = "first of Jesus' four named brothers" },
+  { ref = "1Cor.15.7", link = "describes", note = "the risen Jesus appears to James" },
+]
+citations = [
+  { source = "brown-1997", locator = "ch. 34, The Background" },
+  { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },
+]
+events = ["jerusalem-council", "james-composition"]
+
+[[attestations]]
+artifact = "josephus-antiquities-20-200"
+relation = "corroborates"
+note = """
+Josephus narrates the stoning of James, "the brother of Jesus who was called the Messiah", under the high priest Ananus. It is an outside source, written within a generation or so of the event."""
+citations = [{ source = "brown-1997", locator = "ch. 34, The Background" }]

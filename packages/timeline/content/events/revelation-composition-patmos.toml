@@ -52,3 +52,21 @@ note = """
 Irenaeus writes that the Apocalypse "was seen no very long time since, but almost in our day, \
 towards the end of Domitian's reign". This sentence does not mention the author's exile on Patmos."""
 citations = [{ source = "newadvent-irenaeus-ah-5", locator = "5.30.3" }]
+
+[[positions]]
+id = "brown-92-96"
+label = "Probably between 92 and 96 CE, by a prophet named John"
+tradition = "critical"
+earliest = 92
+latest = 96
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "Probably between AD 92 and 96 at the end of the Emperor Domitian's reign." He says the author was a Jewish Christian prophet named John, neither the son of Zebedee nor the writer of the Gospel or Epistles."""
+citations = [{ source = "brown-1997", locator = "ch. 37, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: for a long time the scholarly majority has held Revelation was written under Domitian, who "ruled after the destruction of the Jerusalem Temple" and "could be considered Nero come back again"."""
+  citations = [{ source = "brown-1997", locator = "ch. 37, Date and Life-Situation: Persecution under Domitian?" }]
+  verses = [{ ref = "Rev.13.3", link = "dates", note = "The wounded head that is healed, read as Nero returned." }]

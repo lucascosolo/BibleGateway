@@ -1,0 +1,26 @@
+id = "mark-ending"
+kind = "textual"
+title = "Did Mark originally end at 16:8?"
+status = "draft"
+summary = """
+Mark's Gospel ends in some manuscripts with the women afraid and silent at the empty tomb (16:8). Others add the Longer Ending of 16:9-20, which describes appearances of the risen Jesus and an ascension, and two alternative endings exist. Brown says copyists apparently added the endings to soften the abrupt close."""
+verses = [{ ref = "Mark.16.8-Mark.16.9", link = "describes" }]
+citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Information; ch. 3, Issues and Problems for Reflection" }]
+
+[[views]]
+label = "Three endings added by copyists"
+text = """
+Brown writes that the manuscripts of Mark witness to three different endings added by copyists, presumably to correct the abruptness of 16:8. The best attested, called the Marcan Appendix or the Longer Ending, is printed in many Bibles. It records three appearances of the risen Jesus and an ascension."""
+citations = [{ source = "brown-1997", locator = "ch. 7, section on the ending of Mark; ch. 3, Issues and Problems for Reflection" }]
+
+[[views]]
+label = "Not original, but read as part of the Gospel"
+text = """
+Brown describes the Appendix as of later origin, yet notes that ordinary readers today read it in sequence after 16:1-8. In that reading the women's silence is followed by belief, which changes the effect of the Gospel's close. He asks what follows if Mark originally ended without an appearance of the risen Jesus."""
+citations = [{ source = "brown-1997", locator = "ch. 7, section on the ending of Mark; ch. 3, Issues and Problems for Reflection" }]
+
+[[views]]
+label = "Canonical status is a separate question"
+text = """
+Brown notes that the Council of Trent designated the Longer Ending as Scripture, though it is missing from many witnesses, because Catholic canonicity rests on long liturgical use. Catholics remain free to accept scholars' judgment that the passage was not part of the original Gospel."""
+citations = [{ source = "brown-1997", locator = "ch. 3, section on canonicity and textual criticism" }]

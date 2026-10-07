@@ -62,3 +62,23 @@ citations = [
   { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
   { source = "wikipedia-census-of-quirinius" },
 ]
+
+[[positions]]
+id = "brown-ca-6-bce"
+label = "ca. 6 BCE (Brown, Table 1)"
+tradition = "chronological"
+earliest = -6
+latest = -6
+held_by = "Raymond E. Brown (Table 1)"
+summary = """
+Brown's Table 1, "Chronology of People and Events Pertinent to the New Testament", lists "Jesus born ca. 6 BC", in the reign of Herod the Great (37-4 BC)."""
+citations = [{ source = "brown-1997", locator = "Table 1 (Chronology of People and Events)" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Brown's table sets Herod the Great's reign at 37-4 BC and the birth ca. 6 BC, inside it, as Matthew 2 requires."""
+  citations = [{ source = "brown-1997", locator = "Table 1 (Chronology of People and Events)" }]
+  verses = [
+    { ref = "Matt.2.1", link = "dates" },
+  ]

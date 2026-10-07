@@ -1,0 +1,33 @@
+id = "hebrews-composition"
+title = "Composition of Hebrews"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Heb"]
+summary = """
+This asks who wrote the letter to the Hebrews and when. The letter does not name its author, and the older church view that Paul wrote it is now abandoned by critical scholars. Its date is debated between the 60s, before the Temple fell, and the 80s, after it; the writer never mentions the Temple's destruction either way."""
+verses = [
+  { ref = "Heb.13.24", link = "describes", note = "Greetings from those from Italy." },
+  { ref = "Heb.13.23", link = "describes", note = "Timothy has been released." },
+  { ref = "Heb.8.13", link = "dates", note = "The first covenant is obsolete, which Brown reads as a replacement theme of the 80s." },
+  { ref = "Heb.12.4", link = "background", note = "Readers have not yet resisted to the point of shedding blood." },
+]
+
+[[positions]]
+id = "brown-60s-or-80s"
+label = "The 60s, or more likely the 80s"
+tradition = "critical"
+earliest = 60
+latest = 89
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "60s or more likely 80s." Of authorship he writes: "Author not identified; later church attribution to Paul now abandoned." The upper bound is the editor's reading of "80s"."""
+citations = [{ source = "brown-1997", locator = "ch. 32, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: "A supporting factor for a writing date in the 80s is the strong emphasis on the replacement of the Jewish feasts, sacrifices, priesthood, and earthly place of worship"."""
+  citations = [{ source = "brown-1997", locator = "ch. 32, From and to whom, where, and when" }]
+  verses = [{ ref = "Heb.8.7-Heb.8.13", link = "dates", note = "The old covenant is being replaced by the new." }]

@@ -111,3 +111,21 @@ Ehrman reports Barth on style: "Paul himself is the man who could best afford to
   text = """
 Ehrman answers on the lack of setting: "But this scarcely speaks against Pauline authorship""""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 238" }]
+
+[[positions]]
+id = "brown-pseudonymous-90s"
+label = "Brown: pseudonymous, in the 90s (about 80 percent of critical scholarship)"
+tradition = "critical"
+earliest = 90
+latest = 99
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "If by Paul, in the 60s. If pseudonymous (about 80 percent of critical scholarship), in the 90s." He judges it probably by a disciple of Paul who drew on Colossians and some undisputed letters."""
+citations = [{ source = "brown-1997", locator = "ch. 28, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on Ephesians' use of the other letters: "Most scholars would interpret the reuse of Pauline letters in Eph as a more secondary procedure" than Paul refining his own ideas. He dates it to the 90s partly by an echo of Eph 5:25 in Ignatius, ca. 110."""
+  citations = [{ source = "brown-1997", locator = "ch. 28, Ephesians and Colossians, by whom" }]
+  verses = [{ ref = "Eph.5.25", link = "background", note = "Echoed in Ignatius to Polycarp, the control Brown names for a 90s date." }]

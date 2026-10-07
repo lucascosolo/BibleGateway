@@ -1,0 +1,32 @@
+id = "philemon-composition"
+title = "Composition of Philemon"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Phlm"]
+summary = """
+Paul wrote this short letter from prison to Philemon, with Apphia, Archippus and the church in Philemon's house, urging him to receive back the slave Onesimus. Its authorship is not seriously disputed. Where Paul was held, and so when, is open: Raymond Brown gives about 55 from Ephesus, and 61-63 from Rome or 58-60 from Caesarea as alternatives."""
+verses = [
+  { ref = "Phlm.1.1", link = "describes", note = "Paul and Timothy write to Philemon and the church in his house." },
+  { ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul, now a prisoner, appeals on behalf of Onesimus." },
+  { ref = "Phlm.1.22", link = "background", note = "Paul asks Philemon to prepare a guest room, hoping to visit." },
+]
+
+[[positions]]
+id = "brown-ephesus-55"
+label = "Brown: ca. 55 from Ephesus (or 58-63 from Caesarea or Rome)"
+tradition = "critical"
+earliest = 55
+latest = 63
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "ca. 55 if from Ephesus; 58–60 if from Caesarea (unlikely); 61–63 if from Rome." On authenticity, unity and integrity: "Not seriously disputed." Years 55-63 span his three options, with 55 as his lead date."""
+citations = [{ source = "brown-1997", locator = "ch. 21, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown notes that several of the factors favouring Ephesus for Philippians are met here too: "if Ephesus was the more probable candidate there, it might be considered that here as well.""""
+  citations = [{ source = "brown-1997", locator = "ch. 21, Place of writing" }]
+  verses = [{ ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul in prison." }]

@@ -123,3 +123,21 @@ Ehrman on the Timothy hypothesis, a variant of the traditional view: "even if, t
   text = """
 Ehrman on the earthquake: "Moreover, recent scholars such as Standhartinger have given good reason for doubting that the town was ever destroyed by earthquake.""""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 251" }]
+
+[[positions]]
+id = "brown-pseudonymous-80s"
+label = "Brown: pseudonymous, in the 80s, from Ephesus (about 60 percent of critical scholarship)"
+tradition = "critical"
+earliest = 80
+latest = 89
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "If by Paul (or by Timothy while Paul was still alive or had just died), 61–63 (or slightly later) from Rome, or 54–56 from Ephesus. If pseudonymous (about 60 percent of critical scholarship), in the 80s from Ephesus.""""
+citations = [{ source = "brown-1997", locator = "ch. 27, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: "The developed christology, ecclesiology, and eschatology of Col has become the principal argument against Paul as the writer." He notes Paul never calls Christ the head of the church as his body, a major theme here."""
+  citations = [{ source = "brown-1997", locator = "ch. 27, Did Paul Write Colossians?" }]
+  verses = [{ ref = "Col.1.18", link = "background", note = "Christ as head of the body, the church." }]

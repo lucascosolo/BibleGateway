@@ -27,3 +27,43 @@ relation = "corroborates"
 note = """
 Claudius calls Gallio "my friend and proconsul". This confirms that Gallio governed Achaia, and roughly when. The stone was found at Delphi and is published as Fouilles de Delphes III 4:286 and SIG II 801d. It cites Claudius's 26th acclamation (Wikipedia, Gallio inscription)."""
 citations = [{ source = "wikipedia-gallio-inscription" }, { source = "wikipedia-gallio" }]
+
+[[positions]]
+id = "brown-traditional-51-52"
+label = "51-52 CE (Brown, Traditional Chronology)"
+tradition = "chronological"
+earliest = 51
+latest = 52
+held_by = "Raymond E. Brown (Traditional Chronology)"
+summary = """
+Brown's Table 6 dates the second missionary journey 50-52, with the stay at Corinth 51-52. He notes Acts says Paul spent a year and a half at Corinth."""
+citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Acts 18:12 has Paul brought before Gallio as proconsul of Achaia at Corinth. Brown's Traditional dating of the Corinth stay to 51-52 is the chronology he follows throughout the book."""
+  citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+  verses = [
+    { ref = "Acts.18.12", link = "dates" },
+  ]
+
+[[positions]]
+id = "brown-revisionist-41-50"
+label = "41-50 CE for first arrival at Corinth (Revisionist, per Brown)"
+tradition = "critical"
+earliest = 41
+latest = 50
+held_by = "Revisionist chronology (Knox, Lüdemann, Jewett, Murphy-O'Connor, Donfried, as summarized by Brown)"
+summary = """
+Brown lists Paul's first arrival at Corinth as Knox ca. 41, Buck/Taylor 41, Lüdemann 41, Donfried ca. 43, Murphy-O'Connor 49, Jewett 50. Donfried "associates the Gallio confrontation with Paul's later visit to Corinth." Brown himself follows the Traditional column "because it seems more reasonable to me"."""
+citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The scholars Brown lists differ on whether the Corinth visit came before or after the Jerusalem conference. Donfried reads the Gallio scene as belonging to a later visit than the first arrival."""
+  citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+  verses = [
+    { ref = "Acts.18.12", link = "dates" },
+  ]

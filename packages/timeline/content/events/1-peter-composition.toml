@@ -68,3 +68,21 @@ citations = [{ source = "ehrman-2013", locator = "PDF pp. 320" }]
   text = """
   Ehrman reports that Nero's persecution is "traditionally" thought to have led to Peter's martyrdom, which sets Peter's life as the time. He argues the later persecution "for the name" does not fit it."""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 320" }]
+
+[[positions]]
+id = "brown-70-90"
+label = "More likely 70 to 90 CE, by a disciple of Peter at Rome"
+tradition = "critical"
+earliest = 70
+latest = 90
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "If written by Peter, 60–63; more likely 70–90." He thinks it possibly by Peter using a secretary, but more likely by a disciple carrying on Peter's heritage at Rome."""
+citations = [{ source = "brown-1997", locator = "ch. 33, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on "Babylon" as a name for Rome: it "makes better sense after 70, when the Romans had destroyed the second Temple"."""
+  citations = [{ source = "brown-1997", locator = "ch. 33, From and to whom, where, and when" }]
+  verses = [{ ref = "1Pet.5.13", link = "dates", note = "Babylon as a name for Rome." }]

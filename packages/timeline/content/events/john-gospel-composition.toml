@@ -1,0 +1,32 @@
+id = "john-gospel-composition"
+title = "Composition of the Gospel of John"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["John"]
+summary = """
+This asks who wrote the Gospel of John and when. Church tradition from the second century names John, son of Zebedee. Many critical scholars instead see a writer in the tradition of the Beloved Disciple, possibly with a later editor, and date it anywhere from the 80s to about 110. Both authorship and date are open."""
+verses = [
+  { ref = "John.21.24", link = "describes", note = "The disciple who testifies to these things and wrote them." },
+  { ref = "John.21.15-John.21.17", link = "background", note = "Peter is given the task of feeding the sheep, read as a later pastoral development." },
+  { ref = "John.1.1", link = "describes", note = "The opening of the Gospel." },
+]
+
+[[positions]]
+id = "brown-80-110"
+label = "80 to 110 CE, with a possible later editor"
+tradition = "critical"
+earliest = 80
+latest = 110
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "80–110." If the Gospel was edited by another hand, he places the body in the 90s and the editor's additions ca. 100–110. The author is one who regards himself in the tradition of the Beloved Disciple."""
+citations = [{ source = "brown-1997", locator = "ch. 11, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown places the writing of III John and the redactor's addition of chapter 21 later than the Gospel proper: "The phase during which III John was written and the redactor added chap. 21 (AD 100–110?)"."""
+  citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
+  verses = [{ ref = "John.21.15-John.21.17", link = "dates", note = "Pastoral structure added in the redactor's phase." }]

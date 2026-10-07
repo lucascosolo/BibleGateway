@@ -1,0 +1,20 @@
+id = "philippians-unity"
+kind = "textual"
+title = "Is Philippians one letter or two or three letters combined?"
+status = "draft"
+summary = """
+Philippians shifts between thanks, travel plans, warnings and exhortation, and the "Finally" of 3:1 sounds like a closing that does not come. Many scholars think an editor combined two or three letters. Brown reports scholarship as about evenly divided and notes that a respectable case can be made for unity."""
+verses = [{ ref = "Phil.3.1-Phil.3.2", link = "describes" }]
+citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Information (Unity)" }]
+
+[[views]]
+label = "Two or three letters combined"
+text = """
+Brown points to 3:1b ("To write the same things to you is no trouble to me"), the "Finally" in 3:1a with two chapters still to come, and the odd order of Epaphroditus being sent back (2:25-30) before his gifts arrive (4:18). If 3:1b-4:3 came from another letter, 3:1a and 4:4 would fit together well. The common point of the theories is that chapter 3 is wholly or partly a separate letter."""
+citations = [{ source = "brown-1997", locator = "ch. 20, section on the unity of Philippians" }]
+
+[[views]]
+label = "One letter written in stream of consciousness"
+text = """
+Brown notes that the letter has no two or three sets of opening and closing formulas, and that the logic of the supposed rearranging is unclear. Rare Pauline words and shared ideas run through the proposed letters. He suggests Paul, in prison, may have written as thoughts came to him."""
+citations = [{ source = "brown-1997", locator = "ch. 20, section on the unity of Philippians" }]

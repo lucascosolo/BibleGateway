@@ -1,0 +1,26 @@
+id = "john-7-53-8-11"
+kind = "textual"
+title = "Does the story of the woman caught in adultery belong in John?"
+status = "draft"
+summary = """
+The story in John 7:53-8:11 is missing from the best Greek manuscripts, and some copies place it elsewhere, for example after Luke 21:38. Brown thinks it was inserted long after the Gospel was finished, but may preserve an old story of Jesus' mercy."""
+verses = [{ ref = "John.7.53-John.8.11", link = "describes" }]
+citations = [{ source = "brown-1997", locator = "ch. 11, Summary of Basic Information (Integrity) and Issues and Problems for Reflection (1)" }]
+
+[[views]]
+label = "An insertion missing from the best manuscripts"
+text = """
+Brown says the passage is "missing from the best Greek mss." and almost certainly out of context in John, despite a possible link to 8:15 and 8:46a. It was probably inserted into John long after the original Gospel was completed. Some manuscripts put it after Luke 21:38 as a continuation of the cunning questions put to Jesus."""
+citations = [{ source = "brown-1997", locator = "ch. 11, Issues and Problems for Reflection (1); ch. 3, Issues and Problems for Reflection" }]
+
+[[views]]
+label = "An old story that travelled on its own"
+text = """
+Brown suggests an old story about Jesus' mercy toward sinners, known to Papias, that circulated apart from the four Gospels. It may have been kept out until the church became less reluctant to forgive adultery. He asks whether scribes found it a problem because it ran against early practice of refusing public forgiveness to adulterers."""
+citations = [{ source = "brown-1997", locator = "ch. 11, Issues and Problems for Reflection (1); ch. 3, Issues and Problems for Reflection" }]
+
+[[views]]
+label = "Canonical status is a separate question"
+text = """
+For many Christians, including Roman Catholics, the story is canonical, inspired Scripture. Brown notes Trent designated it as Scripture on the basis of long liturgical use, while Catholics may still accept scholars' judgment that it was not part of the original Gospel."""
+citations = [{ source = "brown-1997", locator = "ch. 3, section on canonicity and textual criticism; ch. 11, Issues and Problems for Reflection (1)" }]

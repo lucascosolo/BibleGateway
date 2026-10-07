@@ -1,0 +1,32 @@
+id = "1-corinthians-composition"
+title = "Composition of 1 Corinthians"
+axis = "composition"
+category = "composition"
+confidence = "firm"
+status = "draft"
+books = ["1Cor"]
+summary = """
+Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church at Corinth that he had founded, answering a letter and reports from there. It was written late in 56 or very early in 57, since Paul says he will stay at Ephesus until Pentecost. Its authorship is not seriously disputed. A revisionist chronology would put it in 54-55."""
+verses = [
+  { ref = "1Cor.1.1", link = "describes", note = "Paul and Sosthenes write to the church of God at Corinth." },
+  { ref = "1Cor.5.9", link = "background", note = "An earlier, lost letter to the Corinthians." },
+  { ref = "1Cor.16.8", link = "dates", note = "I will stay in Ephesus until Pentecost, placing the writing in Ephesus before that feast." },
+]
+
+[[positions]]
+id = "brown-ephesus-56-57"
+label = "Brown: late 56 or very early 57 from Ephesus"
+tradition = "critical"
+earliest = 56
+latest = 57
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "Late 56 or very early 57 from Ephesus (or 54/55 in the Revisionist Chronology)." On authenticity: "Not seriously disputed." He adds that unity is favoured by an increasing majority, though some see two or more letters interwoven."""
+citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown reads the closing as fixing the setting: "Paul wants to stay at Ephesus at least till Pentecost (May/June AD 57?)" because an opportunity for evangelizing has opened, then plans to come to Corinth via Macedonia."""
+  citations = [{ source = "brown-1997", locator = "ch. 22, General Analysis of the Message" }]
+  verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying at Ephesus until Pentecost." }]

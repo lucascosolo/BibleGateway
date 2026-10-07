@@ -78,3 +78,21 @@ citations = [{ source = "ehrman-2013", locator = "PDF pp. 210, 220, 279" }]
   text = """
   Ehrman objects to the early dating: "But how would Paul change his eschatological views so suddenly and decisively?""""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 220" }]
+
+[[positions]]
+id = "brown-pseudonymous-late-first-century"
+label = "Brown: probably pseudonymous, late 1st century (about even odds)"
+tradition = "critical"
+earliest = 80
+latest = 100
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "If by Paul, probably ca. AD 51/52, shortly after I Thess. If pseudonymous, probably late 1st century, when increased apocalyptic fervor was manifest." He calls scholars "almost evenly divided" on authorship. Year bounds 80-100 are the editor's reading of "late 1st century"."""
+citations = [{ source = "brown-1997", locator = "ch. 26, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on the copying between the two letters: "Why would Paul copy himself in this almost mechanical way?" He thinks it more likely the mark of another writer assuming Paul's mantle, since II Thess 3:8 repeats I Thess 2:9 almost verbatim."""
+  citations = [{ source = "brown-1997", locator = "ch. 26, Did Paul Write II Thessalonians?" }]
+  verses = [{ ref = "2Thess.3.8", link = "describes", note = "Repeats 1 Thessalonians 2:9 on labor and toil night and day." }]

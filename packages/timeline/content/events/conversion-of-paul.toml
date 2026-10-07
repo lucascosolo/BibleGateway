@@ -46,3 +46,45 @@ latest = 36
 summary = """
 Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page. Riesner, Jewett and Luedemann were not found on the pages read."""
 citations = [{ source = "wikipedia-chronology-of-jesus", locator = "section Conversion of Paul" }]
+
+[[positions]]
+id = "brown-traditional-36"
+label = "ca. 36 CE (Brown, Traditional Chronology)"
+tradition = "chronological"
+earliest = 36
+latest = 36
+held_by = "Raymond E. Brown (Traditional Chronology)"
+summary = """
+Brown: "many would date Paul's conversion ca. 36, and his escape from Damascus and going to Jerusalem ca. 39." His Table 6 gives 36 (escape and Jerusalem visit 39)."""
+citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Gal 1:17-18 implies about three years between the conversion and the Jerusalem visit. 2 Cor 11:32-33 has Aretas trying to seize Paul at Damascus, and Brown notes Caligula (37-41) gave Aretas control of the city. Hence the visit ca. 39 and the conversion ca. 36."""
+  citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+  verses = [
+    { ref = "Gal.1.17-Gal.1.18", link = "dates" },
+    { ref = "2Cor.11.32-2Cor.11.33", link = "dates" },
+  ]
+
+[[positions]]
+id = "brown-revisionist-30-34"
+label = "30-34 CE (Revisionist chronology, per Brown)"
+tradition = "critical"
+earliest = 30
+latest = 34
+held_by = "Revisionist chronology (Knox, Lüdemann, Jewett, Murphy-O'Connor, Donfried, as summarized by Brown)"
+summary = """
+Brown's Table 6 gives the Revisionist conversion as 30/34. Individual dates: Buck/Taylor 32, Knox 34 or 37, Lüdemann 30 (33), Jewett Oct. 34, Murphy-O'Connor ca. 33, Donfried 33. Brown himself follows the Traditional column "because it seems more reasonable to me"."""
+citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Brown says these dates depend on the crucifixion date (Lüdemann 27 or 30, Jewett 33 or 30, Donfried 30) and on how far Acts is trusted. The Revisionist column puts the Jerusalem visit at 33/37."""
+  citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+  verses = [
+    { ref = "Gal.1.17-Gal.1.18", link = "dates" },
+    { ref = "2Cor.11.32-2Cor.11.33", link = "dates" },
+  ]

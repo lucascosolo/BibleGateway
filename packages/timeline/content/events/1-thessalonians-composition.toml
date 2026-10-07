@@ -1,0 +1,32 @@
+id = "1-thessalonians-composition"
+title = "Composition of 1 Thessalonians"
+axis = "composition"
+category = "composition"
+confidence = "firm"
+status = "draft"
+books = ["1Thess"]
+summary = """
+Paul wrote 1 Thessalonians from Corinth to the new Christian community at Thessalonica, a few months after he first preached there. It is the oldest preserved Christian document. Its authorship is not seriously doubted, and Raymond Brown dates it to 50 or 51 on the traditional chronology of Paul's career. A revisionist chronology that puts Paul's work before the Jerusalem meeting would move it to 41-43."""
+verses = [
+  { ref = "1Thess.1.1", link = "describes", note = "Paul, Silvanus and Timothy write to the church of the Thessalonians." },
+  { ref = "1Thess.3.6", link = "dates", note = "Timothy has just returned with good news about the Thessalonians, the point from which Paul writes." },
+  { ref = "1Thess.2.9", link = "background", note = "Paul recalls his labor and toil night and day while preaching there." },
+]
+
+[[positions]]
+id = "brown-corinth-50-51"
+label = "Brown: written from Corinth in 50 or 51"
+tradition = "critical"
+earliest = 50
+latest = 51
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "The oldest preserved Christian document: 50 or 51 in the Traditional Chronology, during Paul's (Second Missionary) journey, undertaken after the meeting in Jerusalem (or 41–43 in the Revisionist Chronology,* before the Jerusalem meeting)." On authenticity: "Not seriously doubted today.""""
+citations = [{ source = "brown-1997", locator = "ch. 18, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown places the writing at Corinth, soon after Paul's preaching at Thessalonica: Paul "was genuinely relieved when Timothy returned to him (at Corinth) with the good news that the Thessalonian Christians had not been unsettled by affliction.""""
+  citations = [{ source = "brown-1997", locator = "ch. 18, General Analysis of the Message" }]
+  verses = [{ ref = "1Thess.3.6", link = "dates", note = "Timothy's return with good news." }]

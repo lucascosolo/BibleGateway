@@ -88,3 +88,21 @@ Ehrman rejects the obscurity objection: "The objection has more rhetorical than 
   text = """
 Ehrman on Jude's family: "Nothing suggests that their progenitor, Jude, was any different.""""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 394" }]
+
+[[positions]]
+id = "brown-90-100"
+label = "Perhaps 90 to 100 CE, authorship very difficult to decide"
+tradition = "critical"
+earliest = 90
+latest = 100
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "Virtually impossible to tell. A few scholars place it in the 50s; many in 90–100." On authenticity he says: "Very difficult to decide." Dating, he says, may slightly favor pseudonymity."""
+citations = [{ source = "brown-1997", locator = "ch. 35, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: if Jude himself wrote it, he was one of the youngest brothers and "could have been alive as late as AD 90–100, which may be the most plausible date for the letter"."""
+  citations = [{ source = "brown-1997", locator = "ch. 35, By and to whom, where, and when" }]
+  verses = [{ ref = "Jude.1.17", link = "dates", note = "The apostles are spoken of as a past generation." }]

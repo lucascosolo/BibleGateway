@@ -1,0 +1,32 @@
+id = "philippians-composition"
+title = "Composition of Philippians"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Phil"]
+summary = """
+Paul wrote Philippians to the church at Philippi, the Roman colony where he had founded his first church in Europe, while he was in prison. Its authorship is not seriously disputed, but scholars disagree on where he was held. Raymond Brown favours Ephesus around 56, and treats Rome (61-63) and Caesarea (58-60) as the alternatives. Whether it is one letter or several joined is also unsettled."""
+verses = [
+  { ref = "Phil.1.1", link = "describes", note = "Paul and Timothy write to the Christians at Philippi." },
+  { ref = "Phil.1.13", link = "describes", note = "Paul's chains have become known throughout the praetorium, the clue to where he was imprisoned." },
+  { ref = "Phil.2.19", link = "background", note = "Paul hopes to send Timothy to them soon." },
+]
+
+[[positions]]
+id = "brown-ephesus-56"
+label = "Brown: ca. 56 from Ephesus (or 58-63 from Caesarea or Rome)"
+tradition = "critical"
+earliest = 56
+latest = 63
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "Ca. 56 if from Ephesus. (Or 61–63 from Rome, or 58–60 from Caesarea.)" On authenticity: "Not seriously disputed." Years 56-63 span his three options, with 56 as his lead date; on unity, scholarship is "about evenly divided"."""
+citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on the place of imprisonment: "imprisonment at Ephesus is a distinct possibility", given Paul's talk of "wild beasts" at Ephesus and many earlier imprisonments, and since Timothy was with Paul there."""
+  citations = [{ source = "brown-1997", locator = "ch. 20, Place of writing" }]
+  verses = [{ ref = "Phil.1.13", link = "describes", note = "The imprisonment in question." }]

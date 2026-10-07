@@ -1,0 +1,32 @@
+id = "romans-composition"
+title = "Composition of Romans"
+axis = "composition"
+category = "composition"
+confidence = "firm"
+status = "draft"
+books = ["Rom"]
+summary = """
+Paul wrote Romans from Corinth, in the winter of 57/58, to Christians in Rome, a church he had never visited but where he had friends. He was about to carry the collection to Jerusalem and hoped to go on to Spain by way of Rome. Its authorship is not seriously disputed. A revisionist chronology would put it in 55-56."""
+verses = [
+  { ref = "Rom.1.1", link = "describes", note = "Paul names himself as the sender." },
+  { ref = "Rom.15.25-Rom.15.26", link = "dates", note = "Paul is about to go to Jerusalem with the collection from Macedonia and Achaia." },
+  { ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae, near Corinth, commended to the Romans." },
+]
+
+[[positions]]
+id = "brown-corinth-57-58"
+label = "Brown: winter 57/58 from Corinth"
+tradition = "critical"
+earliest = 57
+latest = 58
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "In the winter of 57/58 from Corinth (55/56 in the Revisionist Chronology)." On authenticity: "Not seriously disputed." He notes a larger minority holds that chapter 16 was added later."""
+citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on the place of writing: Phoebe, "a woman deacon of the church at Cenchreae a few miles from where Paul is writing", is going to Rome and perhaps carrying the letter."""
+  citations = [{ source = "brown-1997", locator = "ch. 24, General Analysis of the Message" }]
+  verses = [{ ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae." }]

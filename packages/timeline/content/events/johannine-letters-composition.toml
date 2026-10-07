@@ -1,0 +1,36 @@
+id = "johannine-letters-composition"
+title = "Composition of 1, 2 and 3 John"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["1John", "2John", "3John"]
+summary = """
+This asks who wrote the three letters of John and when. None of them names its author in the usual way, and critical scholars place all three around the year 100, after the Gospel of John, as the Johannine community split. Whether one person wrote all three, and whether the Gospel's author wrote any, are not settled."""
+verses = [
+  { ref = "1John.2.18-1John.2.19", link = "describes", note = "Former members have left the community and are called antichrists." },
+  { ref = "2John.1.1", link = "describes", note = "The writer calls himself the presbyter." },
+  { ref = "3John.1.9-3John.1.10", link = "background", note = "Diotrephes, who resists the presbyter's authority." },
+]
+
+[[positions]]
+id = "brown-around-100"
+label = "About 100 CE, after the Gospel, during a schism"
+tradition = "critical"
+earliest = 95
+latest = 110
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line for 1 John: "Most likely after the Gospel according to John; thus ca. AD 100." Of 1 John's author he says "probably not" the Gospel's writer. 2 John is about the same time, and 3 John shortly after AD 100. The bounds are the editor's."""
+citations = [
+  { source = "brown-1997", locator = "ch. 12, Summary of Basic Information" },
+  { source = "brown-1997", locator = "ch. 13, Summary of Basic Information" },
+  { source = "brown-1997", locator = "ch. 14, Summary of Basic Information" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: "The phase during which the Johannine Epistles, I and II John, were written (ca. AD 100). The community split in two", and many seceded, in the view of the author of 1 John 2:18–19."""
+  citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
+  verses = [{ ref = "1John.2.18-1John.2.19", link = "dates", note = "The secession." }]

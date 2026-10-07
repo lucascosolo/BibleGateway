@@ -1,0 +1,26 @@
+id = "ephesians-in-ephesus"
+kind = "textual"
+title = "Was Ephesians originally addressed to Christians in Ephesus?"
+status = "draft"
+summary = """
+The words "in Ephesus" in Ephesians 1:1 are missing from important manuscripts. The letter also lacks the personal greetings and memories Paul would be expected to include for a church where he had spent about three years. Brown concludes that the phrase was probably added."""
+verses = [{ ref = "Eph.1.1", link = "describes" }]
+citations = [{ source = "brown-1997", locator = "ch. 28, Summary of Basic Information (Integrity); ch. 28, To Whom? and Background of the Ideas" }]
+
+[[views]]
+label = "What the manuscripts and the letter show"
+text = """
+Brown says the address "who are in Ephesus" is lacking in important manuscripts. The letter also omits the personal circumstances and greetings found in most Pauline letters, apart from Paul's chains and Tychicus (6:20-21). Its writer speaks as if the readers had only heard of him (1:15; 3:2), and it seems to address an entirely Gentile community."""
+citations = [{ source = "brown-1997", locator = "ch. 28, section on to whom the letter is addressed" }]
+
+[[views]]
+label = "A circular letter with a blank for the place"
+text = """
+An older explanation is that Ephesians was a circular letter with a blank left for each city. The manuscripts with "in Ephesus" would then preserve the copy read there, and Marcion's would be the copy read at Laodicea. Brown finds the evidence for such letters, and especially for a blank space, insufficient."""
+citations = [{ source = "brown-1997", locator = "ch. 28, section on to whom the letter is addressed" }]
+
+[[views]]
+label = "Added later by a scribe"
+text = """
+Brown holds that "In Ephesus" was probably added in 1:1. If it was missing from the original, a scribe who knew the letter was connected with that city may have supplied it in a copy. Without it, the letter gives little indication of who its first readers were."""
+citations = [{ source = "brown-1997", locator = "ch. 28, Summary of Basic Information (Integrity) and section on who wrote Ephesians" }]

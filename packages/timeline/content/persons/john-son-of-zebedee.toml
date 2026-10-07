@@ -1,0 +1,19 @@
+id = "john-son-of-zebedee"
+name = "John, son of Zebedee"
+role = "one of the Twelve; traditional author of the Gospel of John"
+summary = """
+John appears in Mark as a fisherman called with his brother James, and again when the two brothers ask for places beside Jesus in his glory. Paul names a John among the pillars of the Jerusalem church in Galatians 2:9. No New Testament book says what became of him.
+
+The tradition that he wrote the Fourth Gospel comes from Irenaeus around 180 CE. Irenaeus says John lived at Ephesus until the reign of Trajan. Brown notes that late second-century guesses about figures a century earlier were often simplified. He says most scholars doubt an eyewitness of the ministry wrote the Gospel.
+
+Brown himself thinks the unnamed Beloved Disciple was a minor figure in Jesus' ministry, probably the founder of the Johannine community, and that a later evangelist and redactor from that community wrote the Gospel. On his view the Beloved Disciple was not one of the Twelve, so he was not John. Brown still finds an Ephesus-area origin traditional and plausible, though some scholars prefer Syria."""
+status = "draft"
+verses = [
+  { ref = "Mark.1.19-Mark.1.20", link = "describes", note = "called with his brother James" },
+  { ref = "Mark.10.35-Mark.10.40", link = "describes", note = "the request for places beside Jesus" },
+  { ref = "John.21.20-John.21.24", link = "describes", note = "the Beloved Disciple 'has written these things'; the passage does not name him" },
+  { ref = "Gal.2.9", link = "describes", note = "a John among the pillars" },
+]
+citations = [
+  { source = "brown-1997", locator = "ch. 11, section Authorship and the Beloved Disciple" },
+]

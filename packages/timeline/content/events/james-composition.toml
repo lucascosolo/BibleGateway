@@ -122,3 +122,21 @@ Ehrman on literacy: "The first, as already mentioned, is that James of Nazareth 
   text = """
 Eusebius on James, quoted by Ehrman: "Admittedly its authenticity is doubted""""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 117" }]
+
+[[positions]]
+id = "brown-70-110"
+label = "After James's death, most likely the 80s or 90s"
+tradition = "critical"
+earliest = 70
+latest = 110
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "If pseudonymous, after the death of James ca. 62, in the range 70–110; most likely in the 80s or 90s." Most think a disciple wrote it, admiring James as the authority loyal to Judaism."""
+citations = [{ source = "brown-1997", locator = "ch. 34, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: the offices of teacher (3:1) and presbyters with a "quasiliturgical" role (5:14–15) "also suggests a late 1st-century date"."""
+  citations = [{ source = "brown-1997", locator = "ch. 34, By and to whom, where, and when" }]
+  verses = [{ ref = "Jas.5.14", link = "dates", note = "Presbyters with a liturgical role." }]

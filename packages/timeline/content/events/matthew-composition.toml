@@ -1,0 +1,32 @@
+id = "matthew-composition"
+title = "Composition of the Gospel of Matthew"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Matt"]
+summary = """
+This asks who wrote the Gospel of Matthew and when. It was written after Mark, which it draws on, and most critical scholars date it to the 80s or 90s, after the destruction of the Temple in 70 CE. The church tradition that the tax-collector Matthew wrote it is not accepted by most critical scholars, and the exact date is not settled."""
+verses = [
+  { ref = "Matt.22.7", link = "dates", note = "The king burns the murderers' city, which may reflect the destruction of Jerusalem." },
+  { ref = "Matt.23.36", link = "dates", note = "'All these things will come upon this generation', seen as fulfilled in 70 CE." },
+  { ref = "Matt.1.1", link = "describes", note = "The opening of the Gospel." },
+]
+
+[[positions]]
+id = "brown-80-90"
+label = "80 to 90 CE, give or take a decade"
+tradition = "critical"
+earliest = 70
+latest = 100
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "80–90, give or take a decade." He says the author was a Greek-speaker, probably a Jewish Christian, who was not an eyewitness of Jesus' ministry and drew on Mark and Q. The bounds of 70 and 100 are the editor's, from "give or take a decade"."""
+citations = [{ source = "brown-1997", locator = "ch. 8, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: "Probably the best argument for a post-70 date is the dependence of Matt on Mark, a Gospel commonly dated to the 68–73 period." He adds that the king burning the city in 22:7 may reflect the destruction of Jerusalem in AD 70."""
+  citations = [{ source = "brown-1997", locator = "ch. 8, Date of Writing" }]
+  verses = [{ ref = "Matt.22.7", link = "dates", note = "The king burns the city." }]

@@ -1,0 +1,35 @@
+id = "luke-acts-composition"
+title = "Composition of Luke and Acts"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Luke", "Acts"]
+summary = """
+This asks who wrote the Gospel of Luke and the Acts of the Apostles and when. The two books are one work in two parts, and the Gospel draws on Mark. Critical scholars usually date the work to the 80s or 90s; church tradition names Luke, a companion of Paul, as the author. Whether the author really travelled with Paul is not settled."""
+verses = [
+  { ref = "Luke.1.1-Luke.1.4", link = "describes", note = "The author says many have already written accounts and that he follows them." },
+  { ref = "Acts.1.1", link = "describes", note = "Acts looks back to the first book." },
+  { ref = "Luke.19.41-Luke.19.44", link = "background", note = "Jesus predicts the destruction of Jerusalem." },
+]
+
+[[positions]]
+id = "brown-85"
+label = "About 85 CE, give or take five to ten years"
+tradition = "critical"
+earliest = 75
+latest = 95
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "85, give or take five to ten years." For Acts he gives the same date and author. He holds that a date no later than 100 is indicated. The bounds are the editor's reading of the line."""
+citations = [
+  { source = "brown-1997", locator = "ch. 9, Summary of Basic Information" },
+  { source = "brown-1997", locator = "ch. 10, Summary of Basic Information" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: "if Mark is to be dated in the period 68–73, a date earlier than 80 for Luke is unlikely", since Luke used Mark."""
+  citations = [{ source = "brown-1997", locator = "ch. 9, Date of Writing" }]
+  verses = [{ ref = "Luke.1.1-Luke.1.4", link = "dates", note = "The author builds on earlier written accounts." }]

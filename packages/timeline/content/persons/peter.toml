@@ -1,0 +1,42 @@
+id = "peter"
+name = "Peter"
+also_known_as = ["Simon", "Cephas"]
+role = "first of the Twelve and leader of the early Jerusalem church"
+summary = """
+His name was Simon, and he was called Cephas (Aramaic) or Peter (Greek), both meaning "rock". Brown notes that the Gospels list him first among the Twelve, and that all of them record his denial of Jesus. Acts shows him leading the Jerusalem followers of Jesus and opening the mission to new groups. Paul's letters back this up: Paul visited Cephas in Jerusalem, treats his apostleship as a standard to measure himself against, and says a Corinthian group claimed him as patron.
+
+The sources disagree on the Jerusalem meeting and its aftermath. Acts and Galatians both place Peter at the meeting c. 49 CE. In Galatians 2 Paul says that at Antioch Peter withdrew from eating with Gentiles and that Paul opposed him publicly. Acts has no such scene.
+
+Peter's death is not narrated in any New Testament book. John 21 hints at a death by stretching out his hands, which Brown reads as martyrdom. Brown dates the martyrdom at Rome between 64 and 68 under Nero, and he cites 1 Clement 5. The Matthew 16 passage that calls him the rock of the church and gives him the keys is a later Gospel tradition, written after 70 according to Brown. First Peter names "Babylon" as its place of writing, and Brown reads that as Rome."""
+status = "draft"
+verses = [
+  { ref = "Matt.16.17-Matt.16.19", link = "describes", note = "Peter as the rock; Matthew only" },
+  { ref = "Gal.2.11-Gal.2.14", link = "describes", note = "Paul's account of the Antioch dispute" },
+  { ref = "Gal.1.18", link = "describes", note = "Paul's first visit with Cephas" },
+  { ref = "John.21.18-John.21.19", link = "alludes", note = "read as a hint of his martyrdom" },
+  { ref = "1Pet.5.13", link = "alludes", note = "'Babylon' read as Rome" },
+]
+citations = [
+  { source = "brown-1997", locator = "ch. 33, The Background" },
+]
+events = [
+  "pentecost",
+  "jerusalem-council",
+  "deaths-of-peter-and-paul",
+  "1-peter-composition",
+  "2-peter-composition",
+]
+
+[[attestations]]
+artifact = "one-clement-5"
+relation = "partially-corroborates"
+note = """
+Written from Rome, it names Peter and Paul as righteous pillars who were persecuted to death. It gives no place or date for his death."""
+citations = [{ source = "brown-1997", locator = "ch. 33, The Background" }]
+
+[[attestations]]
+artifact = "eusebius-he-2-25"
+relation = "partially-corroborates"
+note = """
+Eusebius records the tradition that Peter and Paul both died at Rome under Nero. It is a late summary of earlier tradition."""
+citations = [{ source = "brown-1997", locator = "ch. 33, The Background" }]

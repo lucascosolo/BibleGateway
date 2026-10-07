@@ -39,3 +39,45 @@ latest = 61
 summary = """
 The earliest suggested start for Festus's term is about 55 to 56 CE. The latest is 61 CE."""
 citations = [{ source = "wikipedia-porcius-festus" }]
+
+[[positions]]
+id = "brown-traditional-57-58"
+label = "57-58 CE (Brown, Traditional Chronology)"
+tradition = "chronological"
+earliest = 57
+latest = 58
+held_by = "Raymond E. Brown (Traditional Chronology)"
+summary = """
+Brown's Table 6 has Paul arrested in Jerusalem in 57/58 and "imprisoned two years in Caesarea", then a prisoner in Rome for two years, 61-63. Since his Romans chapter has Paul writing from Corinth "in the winter of 57/58" before going up to Jerusalem, the arrest falls in 58 on his reckoning."""
+citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Acts 24:27 says two years passed under Felix before Festus succeeded him. Acts 28:30 gives Paul two full years in Rome. Brown's table runs these as two years in Caesarea and then 61-63 in Rome."""
+  citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+  verses = [
+    { ref = "Acts.24.27", link = "dates" },
+    { ref = "Acts.28.30", link = "dates" },
+  ]
+
+[[positions]]
+id = "brown-revisionist-52-57"
+label = "52-57 CE (Revisionist chronology, per Brown)"
+tradition = "critical"
+earliest = 52
+latest = 57
+held_by = "Revisionist chronology (Knox, Lüdemann, Jewett, Murphy-O'Connor, Donfried, as summarized by Brown)"
+summary = """
+Brown lists the arrest in Jerusalem as Lüdemann 52 (55), Buck/Taylor 53, Knox 53/54, Donfried 56/57, Jewett 57. His Table 6 gives 52-55 or 56-58. Brown himself follows the Traditional column "because it seems more reasonable to me"."""
+citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Brown's Observations give each scholar's arrest date, and the spread reflects different dates for the crucifixion and for Paul's long stay at Ephesus."""
+  citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+  verses = [
+    { ref = "Acts.24.27", link = "dates" },
+    { ref = "Acts.28.30", link = "dates" },
+  ]

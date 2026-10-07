@@ -1,0 +1,17 @@
+id = "jude-brother-of-jesus"
+name = "Jude, brother of Jesus"
+also_known_as = ["Judas"]
+role = "relative of Jesus and traditional author of the letter of Jude"
+summary = """
+Mark 6:3 names Judas as the third of Jesus' brothers. The letter of Jude opens with "Jude, the servant of Jesus Christ and the brother of James". Brown calls the most common and plausible reading that this is the same Jude, so the author would be the brother of James and of Jesus. Other readings are possible: a member of the Twelve named Jude, a prophet Judas Barsabbas from Acts, or a "brother" only in the sense of fellow-worker.
+
+Almost nothing is known about him personally. Later writers say the family of Jesus was prominent in Palestine, and Hegesippus, quoted by Eusebius, says Jude's grandsons led churches there until the time of Trajan. Brown says it is very difficult to decide whether Jude himself wrote the letter or a later disciple used his name. He dates the letter anywhere from the 50s to 90-100 CE, with many scholars favoring the later range."""
+status = "draft"
+verses = [
+  { ref = "Jude.1.1", link = "describes", note = "the author names himself and his brother James" },
+  { ref = "Mark.6.3", link = "describes", note = "Judas among Jesus' four named brothers" },
+]
+citations = [
+  { source = "brown-1997", locator = "ch. 35, The Background" },
+]
+events = ["jude-composition"]

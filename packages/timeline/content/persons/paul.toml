@@ -1,0 +1,55 @@
+id = "paul"
+name = "Paul"
+also_known_as = ["Saul of Tarsus"]
+role = "apostle to the Gentiles (active c. 36–64 CE)"
+summary = """
+Paul's own letters are the best evidence. Ehrman counts seven that are almost certainly his, and he treats Acts as a source to use "cautiously". In the letters Paul says he was a Pharisee of the tribe of Benjamin, a violent persecutor of the church, and that a revelation of Christ turned him into the apostle to the Gentiles. He never names his birthplace.
+
+Acts adds Tarsus, Roman citizenship, training under Gamaliel in Jerusalem, three accounts of the Damascus road, and a series of missionary journeys. Brown thinks the author of Acts knew many real facts but compressed events and shaped Paul to fit his own theology. Ehrman finds large disparities where Acts and the letters cover the same events. One example is Paul's first visit to Jerusalem after his conversion, which Galatians places three years later and Acts places at once. Brown dates the conversion c. 36 from the Aretas episode in 2 Corinthians. Both chronologies Brown sets out are scholarly reconstructions with wide spreads, and he follows the traditional one.
+
+No letter and no part of Acts narrates Paul's death. A tradition says he was executed at Rome under Nero, and Brown puts this between 64 and 67. The earliest witness, 1 Clement, written c. 95, says only that Paul reached "the limits of the West" and bore witness before the rulers. Eusebius, writing in the fourth century, repeats the Roman martyrdom tradition. The later Acts of Paul adds legendary detail. Whether Paul reached Spain, and whether he travelled again after the two years of house arrest that Acts ends with, is unknown."""
+status = "draft"
+lived = { earliest = 5, latest = 67 }
+verses = [
+  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "the Damascus road, as told in Acts" },
+  { ref = "Gal.1.13-Gal.1.17", link = "describes", note = "Paul's own account of persecuting and being called" },
+  { ref = "Phil.3.5-Phil.3.6", link = "describes", note = "Paul on his Jewish background" },
+  { ref = "2Cor.11.32-2Cor.11.33", link = "dates", note = "the escape from Damascus under King Aretas" },
+  { ref = "Acts.22.3", link = "describes", note = "Tarsus and Gamaliel, in Acts only" },
+]
+citations = [
+  { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },
+  { source = "ehrman-paul-2000", locator = "p. 96 approx." },
+  { source = "ehrman-paul-2000", locator = "p. 173 approx." },
+]
+events = [
+  "conversion-of-paul",
+  "jerusalem-council",
+  "paul-before-gallio",
+  "paul-arrest-felix-festus",
+  "deaths-of-peter-and-paul",
+]
+
+[[attestations]]
+artifact = "gallio-inscription"
+relation = "consistent"
+note = """
+The inscription dates Gallio's time as proconsul of Achaia to about 51–52 CE. Acts 18 has Paul brought before him at Corinth. That fixes a date in Paul's career, but the inscription does not mention Paul."""
+citations = [{ source = "brown-1997", locator = "ch. 16, section The Life of Paul" }]
+
+[[attestations]]
+artifact = "one-clement-5"
+relation = "partially-corroborates"
+note = """
+Written at Rome about thirty years after Paul's death. It says he suffered much, reached the western limit and bore witness before the rulers. It gives no place or date for his death."""
+citations = [
+  { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },
+  { source = "ehrman-paul-2000", locator = "p. 173 approx." },
+]
+
+[[attestations]]
+artifact = "eusebius-he-2-25"
+relation = "partially-corroborates"
+note = """
+Eusebius repeats the tradition that Paul was martyred at Rome under Nero. It is a late source for an event no earlier narrative describes."""
+citations = [{ source = "brown-1997", locator = "ch. 16, section The Life of Paul" }]

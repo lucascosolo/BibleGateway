@@ -1,0 +1,29 @@
+id = "romans-16-and-the-doxology"
+kind = "textual"
+title = "Do Romans 16 and the closing doxology belong to Paul's letter?"
+status = "draft"
+summary = """
+Some scholars have argued that chapter 16, with its long list of greetings, was added later or was a separate note to Ephesus. The doxology in 16:25-27 is missing from many manuscripts. Brown defends chapter 16 as part of Romans and treats the doxology as a probable liturgical addition."""
+verses = [
+  { ref = "Rom.16.25-Rom.16.27", link = "describes" },
+  { ref = "Rom.16.1", link = "describes" },
+]
+citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information (Unity, Integrity); ch. 24, section on the unity of Romans and chap. 16" }]
+
+[[views]]
+label = "Chapter 16 as a separate letter to Ephesus"
+text = """
+A theory that gained favor in the 19th century, especially in Germany, takes chapter 16 as a once-separate letter of recommendation for Phoebe, who was going to Ephesus from Cenchreae. A larger minority of scholars hold that chapter 16 was added later. Brown notes that Papyrus 46 (about AD 200) offers evidence for a 15-chapter form of Romans."""
+citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information (Unity) and section on the unity of Romans and chap. 16" }]
+
+[[views]]
+label = "Chapter 16 belongs to Romans"
+text = """
+Brown follows Gamble's study, which he says exposed the weakness of any theory that would detach chapter 16. The textual evidence for it is "overwhelmingly strong", ending at chapter 15 would be unlike any genuine Pauline letter, and 16:21-23 is typically Pauline. Many names fit Rome, and Paul, who had never been there, had reason to name friends who could recommend him."""
+citations = [{ source = "brown-1997", locator = "ch. 24, section on the unity of Romans and chap. 16" }]
+
+[[views]]
+label = "The doxology as a later addition"
+text = """
+The praise of God in 16:25-27 is missing from many manuscripts. Brown says it "may well be an early copyist's or editor's liturgical addition" for reading in church. Some copyists also moved the blessing of 16:20b to follow 16:23, which created a spurious verse 16:24."""
+citations = [{ source = "brown-1997", locator = "ch. 24, section on the unity of Romans and chap. 16" }]

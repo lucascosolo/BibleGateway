@@ -101,3 +101,21 @@ Ehrman reports the argument from verisimilitude: "Some scholars still find it di
   text = """
 Ehrman answers the coauthorship defence: "when it comes to the Deutero-Pauline letters, Johnson wants to argue that the key to their interpretation is a phenomenon for which he cannot—or at least does not—cite a single parallel or analogy from antiquity: joint composition of letters". He asks why that should be preferred to an explanation "for which there are abundant parallels and analogies scattered throughout all of antiquity, the use of literary forgery"."""
   citations = [{ source = "ehrman-2013", locator = "PDF pp. 282" }]
+
+[[positions]]
+id = "brown-pseudonymous-end-first-century"
+label = "Brown: pseudonymous, toward the end of the 1st century (80 to 90 percent of critical scholarship)"
+tradition = "critical"
+earliest = 80
+latest = 100
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line for Titus and 1 Timothy: "If by Paul, ca. AD 65. If pseudonymous (80 to 90 percent of critical scholarship), toward the end of the 1st century, or (less probably) early 2d century." For 2 Timothy he allows the late 60s if written first."""
+citations = [{ source = "brown-1997", locator = "ch. 29, Summary of Basic Information about Titus" }, { source = "brown-1997", locator = "ch. 30, Summary of Basic Information" }, { source = "brown-1997", locator = "ch. 31, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on church order: the two-part structure of presbyter/bishops and deacons in Titus and 1 Timothy "is not far from that of Didache 15:1" (ca. AD 100?) and 1 Clement (ca. AD 96), so he places the Pastorals between 80 and 100."""
+  citations = [{ source = "brown-1997", locator = "ch. 29, Who Wrote Titus and I Timothy?" }]
+  verses = [{ ref = "Titus.1.5", link = "background", note = "Presbyters appointed in every town." }, { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Overseers and deacons." }]

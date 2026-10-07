@@ -1104,6 +1104,38 @@ publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
 
 [[source]]
+id = "ehrman-brief-intro-2017"
+kind = "book"
+author = "Bart D. Ehrman"
+title = "A Brief Introduction to the New Testament, 4th edition (read from an OCR text at ~/.cache/jot/sources/ehrman-misc/brief-intro-nt.txt; page numbers recovered from the OCR and marked approx.)"
+publisher = "Oxford University Press"
+year = 2017
+
+[[source]]
+id = "ehrman-paul-2000"
+kind = "book"
+author = "Bart D. Ehrman"
+title = "Paul: The Apostle. The Man and His Mission (chapters 18–24 of The New Testament: A Historical Introduction, 2nd edition; read from an OCR text at ~/.cache/jot/sources/ehrman-misc/paul.txt; page numbers recovered from the OCR and marked approx.)"
+publisher = "Oxford University Press"
+year = 2000
+
+[[source]]
+id = "carson-moo-2005"
+kind = "book"
+author = "D. A. Carson and Douglas J. Moo"
+title = "An Introduction to the New Testament, 2nd edition (page numbers follow this printing, read from a PDF at ~/.cache/jot/sources/carson-moo-2005/; printed page = PDF page − 1)"
+publisher = "Zondervan, Grand Rapids"
+year = 2005
+
+[[source]]
+id = "brown-1997"
+kind = "book"
+author = "Raymond E. Brown"
+title = "An Introduction to the New Testament. Anchor Bible Reference Library (read from a reflowed PDF without the print pagination, at ~/.cache/jot/sources/brown-1997/; locators therefore name the chapter and section, e.g. 'ch. 7, Summary of Basic Information', or Table 6)"
+publisher = "Doubleday, New York"
+year = 1997
+
+[[source]]
 id = "thiele-1984"
 kind = "article"
 author = "Edwin R. Thiele"

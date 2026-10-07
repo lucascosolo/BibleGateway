@@ -1,0 +1,29 @@
+id = "2-corinthians-6-14-7-1"
+kind = "textual"
+title = "Is 2 Corinthians one letter, and is 6:14-7:1 by Paul?"
+status = "draft"
+summary = """
+Most scholars think 2 Corinthians combines several letters, two to five by Brown's count. One passage, 6:14-7:1, reads like a self-contained unit and some think it is a non-Pauline insertion. The manuscripts give no sign of the seams, so the case rests on the contents."""
+verses = [
+  { ref = "2Cor.6.14-2Cor.7.1", link = "describes" },
+  { ref = "2Cor.10.1", link = "describes" },
+]
+citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information (Unity, Integrity)" }]
+
+[[views]]
+label = "Several letters combined"
+text = """
+Brown says most scholars think "several (two to five) letters have been combined". The tone turns sharply from the optimistic chapters 1-9 to the pessimistic 10-13, and a majority argue for independent origins of at least those two parts. Chapters 8 and 9 also seem to duplicate each other on the collection."""
+citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information (Unity) and section on unity" }]
+
+[[views]]
+label = "Five letters (Bornkamm)"
+text = """
+Bornkamm found five letters: 10:1-13:10 as the tearful letter, 2:14-7:14 without 6:14-7:1 as the main section, 1:1-2:13 plus 6:14-7:1 as a letter of reconciliation, and chapters 8 and 9 as two collection letters. Brown reports this and other theories, and asks why an editor would have arranged them in the present order."""
+citations = [{ source = "brown-1997", locator = "ch. 23, section on unity" }]
+
+[[views]]
+label = "6:14-7:1 as an insertion"
+text = """
+Some think 6:14-7:1 is a non-Pauline interpolation. Brown says it has "the air of a self-contained unit". In the present letter it still works as a sign that all is not healed at Corinth and prepares for chapters 10-13."""
+citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information (Integrity) and section on unity" }]

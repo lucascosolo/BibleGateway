@@ -1,0 +1,50 @@
+id = "mark-composition"
+title = "Composition of the Gospel of Mark"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Mark"]
+summary = """
+This asks who wrote the Gospel of Mark and when. Most scholars place it around the time of the First Jewish Revolt against Rome, either just before or just after the Temple fell in 70 CE, and treat it as the earliest Gospel. Whether it shows knowledge of the Temple's destruction, and whether its author was the Mark of church tradition, are not settled."""
+verses = [
+  { ref = "Mark.13.2", link = "dates", note = "Jesus foretells that not one stone of the Temple will be left on another." },
+  { ref = "Mark.13.14", link = "background", note = "The 'abomination of desolation', read against the revolt of 66-70 CE." },
+  { ref = "Mark.1.1", link = "describes", note = "The opening of the Gospel." },
+]
+
+[[positions]]
+id = "brown-68-73"
+label = "Between 60 and 75 CE, most likely 68 to 73"
+tradition = "critical"
+earliest = 60
+latest = 75
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "60–75, most likely between 68 and 73." He says there is wide scholarly agreement on the late 60s or just after 70, and that the author was a Greek-speaker who was not an eyewitness of Jesus' ministry."""
+citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown: because Matthew and Luke each used Mark, "a date beyond 75 seems unlikely", and the developed Greek Jesus tradition in Mark implies that several decades have passed since Jesus; "there is wide scholarly agreement that Mark was written in the late 60s or just after 70"."""
+  citations = [{ source = "brown-1997", locator = "ch. 7, Date of Writing" }]
+  verses = [{ ref = "Mark.13.2", link = "dates", note = "The Temple prediction, read against the Temple's fall in 70 CE." }]
+
+[[positions]]
+id = "brown-papias-mid-late-60s"
+label = "Just before or after Peter's death, in the mid- or late 60s"
+tradition = "traditional"
+earliest = 64
+latest = 69
+held_by = "The Papias tradition, as reported by Raymond E. Brown"
+summary = """
+Brown's traditional attribution line: "Mark, the follower and “interpreter” of Peter". Of those who credit the Papias tradition he writes that "the usual understanding is that Mark wrote just before or after Peter’s death and thus in the mid- or late 60s". Both year bounds are the editor's reading of "mid- or late 60s"."""
+citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Information; Date of Writing" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown reports that, for this dating, the Gospel's failure "to show any knowledge of the details of the First Jewish Revolt against Rome in AD 66–70 and to mention the fall of Jerusalem" is taken as internal support."""
+  citations = [{ source = "brown-1997", locator = "ch. 7, Date of Writing" }]
+  verses = [{ ref = "Mark.13.2", link = "dates", note = "A prediction with no report of fulfilment." }]

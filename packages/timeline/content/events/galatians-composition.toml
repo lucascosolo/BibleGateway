@@ -1,0 +1,32 @@
+id = "galatians-composition"
+title = "Composition of Galatians"
+axis = "composition"
+category = "composition"
+confidence = "firm"
+status = "draft"
+books = ["Gal"]
+summary = """
+Paul wrote Galatians in anger to churches in Galatia that had been won over to a different gospel. Raymond Brown thinks it more likely written from Ephesus in 54-55 than from Macedonia in 57, with the letter going to churches near Ancyra in north-central Asia Minor. Its authenticity, unity and integrity are not seriously disputed."""
+verses = [
+  { ref = "Gal.1.1", link = "describes", note = "Paul names himself as the sender." },
+  { ref = "Gal.1.6", link = "describes", note = "Paul is astonished that the Galatians so quickly turned to another gospel." },
+  { ref = "Gal.1.18-Gal.2.1", link = "dates", note = "The three and fourteen years that anchor Paul's career and so the date of the letter." },
+]
+
+[[positions]]
+id = "brown-ephesus-54-55"
+label = "Brown: from Ephesus in 54-55, more likely than 57"
+tradition = "critical"
+earliest = 54
+latest = 55
+held_by = "Raymond E. Brown"
+summary = """
+Brown's DATE line: "54–55 from Ephesus is more likely than 57 from Macedonia (Traditional Chronology; see Table 6 in Chapter 16 above for Revisionist Chronology)." On authenticity, unity and integrity: "Not seriously disputed.""""
+citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Information" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Brown on the North Galatian theory: Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56). Word could have reached him that teachers had come and “quickly” (Gal 1:6) won over the Galatians to “another gospel”", prompting the angry writing of Gal in 54 or 55."""
+  citations = [{ source = "brown-1997", locator = "ch. 19, Dating" }]
+  verses = [{ ref = "Gal.1.6", link = "describes", note = "Quickly won over to another gospel." }]

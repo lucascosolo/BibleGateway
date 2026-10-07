@@ -1,0 +1,33 @@
+id = "western-text-of-acts"
+kind = "textual"
+title = "Which Greek text of Acts is the original, the shorter or the longer Western one?"
+status = "draft"
+summary = """
+The Western family of Greek manuscripts gives Acts a text about one-tenth longer than the Egyptian (Alexandrian) text, with extra phrases, clauses and whole verses. Brown calls this the most acute textual problem of any New Testament book. Most commentaries are based on the shorter text."""
+verses = [
+  { ref = "Acts.13.27", link = "describes" },
+  { ref = "Acts.15.29", link = "describes" },
+  { ref = "Acts.18.27", link = "describes" },
+  { ref = "Acts.19.1", link = "describes" },
+  { ref = "Acts.19.9", link = "describes" },
+  { ref = "Acts.28.31", link = "describes" },
+]
+citations = [{ source = "brown-1997", locator = "ch. 10, Summary of Basic Information (Integrity) and Issues and Problems for Reflection (1)" }]
+
+[[views]]
+label = "What the manuscripts show"
+text = """
+Western Greek manuscripts have a significant number of passages, many with extra information, that other manuscripts lack. Brown lists 13:27, 15:29, 18:27, 19:1 and 28:31 among the places. He says that from the manuscript and church-father evidence alone one cannot decide which text is older."""
+citations = [{ source = "brown-1997", locator = "ch. 10, Summary of Basic Information (Integrity) and Issues and Problems for Reflection (1)" }]
+
+[[views]]
+label = "The longer text is a paraphrase by copyists"
+text = """
+The majority view treats the shorter Eastern text as more original. On this view the Western text is "paraphrastic", adding religiously enriching glosses, clarifications and intensified views. Most commentaries are therefore based on the shorter text."""
+citations = [{ source = "brown-1997", locator = "ch. 10, Issues and Problems for Reflection (1)" }]
+
+[[views]]
+label = "Two editions of Acts"
+text = """
+Dissenters point out that the extra Western material matches the style of the rest of Acts, is often neutral, and sometimes seems to show accurate added knowledge (Brown cites 12:10, 19:9, 20:15 and 28:16). Most of them propose two editions of Acts rather than copyists' tinkering. Brown lists versions: Luke made both, a second scribe glossed Luke's notes, the Western is the original, or an original now lost can be reconstructed from the Western text."""
+citations = [{ source = "brown-1997", locator = "ch. 10, Issues and Problems for Reflection (1)" }]
