@@ -49,7 +49,12 @@ CONFIDENCE = {"firm", "contested", "speculative"}
 STATUSES = {"draft", "reviewed"}
 STANCES = {"for", "against"}
 RELATIONS = {"corroborates", "partially-corroborates", "consistent", "silent", "in-tension"}
-ARTIFACT_KINDS = {"inscription", "chronicle", "relief", "papyrus", "ostracon", "manuscript", "seal", "coin", "site"}
+ARTIFACT_KINDS = {"inscription", "chronicle", "relief", "papyrus", "ostracon", "manuscript", "seal", "coin", "site", "literary-text"}
+
+# The existence grade of a person: the strongest of their attestations, in this order.
+# `in-tension` is deliberately absent — a source can contradict a detail about someone it
+# corroborates (Belshazzar's parentage), so tension is flagged separately, never graded.
+EVIDENCE_ORDER = ["corroborates", "partially-corroborates", "consistent", "silent"]
 ISSUE_KINDS = {"chronology", "textual", "historical", "internal"}
 LINK_TYPES = {"describes", "alludes", "background", "dates"}
 
@@ -198,6 +203,7 @@ class Content:
     artifacts: dict[str, dict[str, Any]] = field(default_factory=dict)
     events: dict[str, dict[str, Any]] = field(default_factory=dict)
     issues: dict[str, dict[str, Any]] = field(default_factory=dict)
+    persons: dict[str, dict[str, Any]] = field(default_factory=dict)
     cited: set[str] = field(default_factory=set)
 
 
@@ -329,7 +335,7 @@ def entity_files(report: Report, directory: Path) -> list[tuple[Path, dict[str, 
 
 def load_artifacts(report: Report, directory: Path, content: Content, corpus: Corpus) -> None:
     spec: Spec = {
-        "id": (str, True), "name": (str, True), "kind": (str, True), "made": (dict, False),
+        "id": (str, True), "name": (str, True), "kind": (str, True), "status": (str, True), "made": (dict, False),
         "language": (str, True), "summary": (str, True), "citations": (list, True),
         "discovered": (dict, False), "held_by": (dict, False), "verses": (list, False),
     }
@@ -339,6 +345,11 @@ def load_artifacts(report: Report, directory: Path, content: Content, corpus: Co
         if artifact is None or not check_id(report, where, artifact["id"]):
             continue
         check_enum(report, where, "kind", artifact["kind"], ARTIFACT_KINDS)
+        check_enum(report, where, "status", artifact["status"], STATUSES)
+        if artifact["kind"] == "literary-text":
+            for key in ("held_by", "discovered"):
+                if key in artifact:
+                    report.error(where, f"a literary-text artifact is a work, not an object: it has no '{key}'")
         made = None
         if "made" in artifact:
             made = check_table(report, f"{where} made", artifact["made"], {"earliest": (int, True), "latest": (int, True)})
@@ -460,7 +471,7 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
 def load_issues(report: Report, directory: Path, content: Content, corpus: Corpus) -> None:
     spec: Spec = {
         "id": (str, True), "kind": (str, True), "title": (str, True), "summary": (str, True),
-        "status": (str, True), "events": (list, False), "verses": (list, False),
+        "status": (str, True), "events": (list, False), "persons": (list, False), "verses": (list, False),
         "citations": (list, True), "views": (list, True),
     }
     view_spec: Spec = {"label": (str, True), "text": (str, True), "citations": (list, True)}
@@ -482,10 +493,64 @@ def load_issues(report: Report, directory: Path, content: Content, corpus: Corpu
         content.issues[issue["id"]] = {
             **issue,
             "events": list(issue.get("events", [])),
+            "persons": list(issue.get("persons", [])),
             "views": views,
             "citations": citations(report, where, issue["citations"], content),
             "verses": verses(report, where, issue.get("verses"), corpus),
         }
+
+
+def load_persons(report: Report, directory: Path, content: Content, corpus: Corpus) -> None:
+    spec: Spec = {
+        "id": (str, True), "name": (str, True), "role": (str, True), "summary": (str, True),
+        "status": (str, True), "citations": (list, True), "also_known_as": (list, False),
+        "lived": (dict, False), "verses": (list, False), "events": (list, False),
+        "attestations": (list, False),
+    }
+    attestation_spec: Spec = {"artifact": (str, True), "relation": (str, True), "note": (str, True), "citations": (list, True)}
+    for path, raw in entity_files(report, directory / "persons"):
+        where = str(path)
+        person = check_table(report, where, raw, spec)
+        if person is None or not check_id(report, where, person["id"]):
+            continue
+        check_enum(report, where, "status", person["status"], STATUSES)
+        aliases = person.get("also_known_as", [])
+        if not all(isinstance(alias, str) and alias for alias in aliases):
+            report.error(where, "'also_known_as' must be an array of non-empty strings")
+        lived = None
+        if "lived" in person:
+            lived = check_table(report, f"{where} lived", person["lived"], {"earliest": (int, True), "latest": (int, True)})
+            if lived:
+                check_years(report, where, lived["earliest"], lived["latest"], "lived")
+        attestations: list[dict[str, Any]] = []
+        seen: set[str] = set()
+        for index, raw_attestation in enumerate(person.get("attestations", [])):
+            here = f"{where} attestation {index + 1}"
+            attestation = check_table(report, here, raw_attestation, attestation_spec)
+            if attestation is None:
+                continue
+            check_enum(report, here, "relation", attestation["relation"], RELATIONS)
+            if attestation["artifact"] in seen:
+                report.error(here, f"artifact '{attestation['artifact']}' is attested twice for this person")
+                continue
+            seen.add(attestation["artifact"])
+            attestations.append({**attestation, "citations": citations(report, here, attestation["citations"], content)})
+        content.persons[person["id"]] = {
+            **person,
+            "also_known_as": list(aliases),
+            "lived": lived,
+            "events": list(person.get("events", [])),
+            "attestations": attestations,
+            "citations": citations(report, where, person["citations"], content),
+            "verses": verses(report, where, person.get("verses"), corpus),
+        }
+
+
+def evidence_grade(attestations: list[dict[str, Any]]) -> tuple[str, bool]:
+    """(grade, has_tension) for a person, derived from their attestations — never authored."""
+    relations = {a["relation"] for a in attestations}
+    grade = next((relation for relation in EVIDENCE_ORDER if relation in relations), "none")
+    return grade, "in-tension" in relations
 
 
 def all_citations(content: Content):
@@ -505,6 +570,13 @@ def all_citations(content: Content):
                 for c in argument["citations"]:
                     yield where, c
         for attestation in event["attestations"]:
+            for c in attestation["citations"]:
+                yield where, c
+    for person in content.persons.values():
+        where = f"persons/{person['id']}.toml"
+        for c in person["citations"]:
+            yield where, c
+        for attestation in person["attestations"]:
             for c in attestation["citations"]:
                 yield where, c
     for issue in content.issues.values():
@@ -532,6 +604,17 @@ def cross_check(report: Report, content: Content) -> None:
         for event_id in issue["events"]:
             if event_id not in content.events:
                 report.error(f"issues/{issue['id']}.toml", f"names unknown event '{event_id}'")
+        for person_id in issue["persons"]:
+            if person_id not in content.persons:
+                report.error(f"issues/{issue['id']}.toml", f"names unknown person '{person_id}'")
+    for person in content.persons.values():
+        where = f"persons/{person['id']}.toml"
+        for attestation in person["attestations"]:
+            if attestation["artifact"] not in content.artifacts:
+                report.error(where, f"attestation names unknown artifact '{attestation['artifact']}'")
+        for event_id in person["events"]:
+            if event_id not in content.events:
+                report.error(where, f"names unknown event '{event_id}'")
 
 
 # --- Fingerprint -----------------------------------------------------------------------------
@@ -560,6 +643,8 @@ def fingerprint(content: Content) -> str:
         feed("event", content.events[event_id])
     for issue_id in sorted(content.issues):
         feed("issue", content.issues[issue_id])
+    for person_id in sorted(content.persons):
+        feed("person", content.persons[person_id])
     return digest.hexdigest()[:16]
 
 
@@ -592,9 +677,12 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
         cite("era", era["id"], era["citations"])
     for a in content.artifacts.values():
         db.execute(
-            "INSERT INTO artifacts VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (a["id"], a["name"], a["kind"], (a["made"] or {}).get("earliest"), (a["made"] or {}).get("latest"), a["language"], a["summary"],
-             a["discovered"].get("year"), a["discovered"].get("place"), a["held_by"].get("institution"), a["held_by"].get("accession")),
+            """INSERT INTO artifacts (artifact_id, name, kind, status, made_earliest, made_latest, language, summary,
+                                      discovered_year, discovered_place, institution, accession)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (a["id"], a["name"], a["kind"], a["status"], (a["made"] or {}).get("earliest"), (a["made"] or {}).get("latest"),
+             a["language"], a["summary"], a["discovered"].get("year"), a["discovered"].get("place"),
+             a["held_by"].get("institution"), a["held_by"].get("accession")),
         )
         cite("artifact", a["id"], a["citations"])
         link("artifact", a["id"], a["verses"])
@@ -647,6 +735,29 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
             )
             cite("issue_view", view_id, view["citations"])
         db.executemany("INSERT INTO issue_events VALUES (?, ?)", [(i["id"], event_id) for event_id in i["events"]])
+    # Persons after issues' own rows but before issue_persons, which references them.
+    for person in content.persons.values():
+        grade, tension = evidence_grade(person["attestations"])
+        lived = person["lived"] or {}
+        db.execute(
+            """INSERT INTO persons (person_id, name, also_known_as, role, summary, status,
+                                    lived_earliest, lived_latest, evidence, has_tension)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (person["id"], person["name"], json.dumps(person["also_known_as"], ensure_ascii=False) if person["also_known_as"] else None,
+             person["role"], person["summary"], person["status"], lived.get("earliest"), lived.get("latest"), grade, int(tension)),
+        )
+        cite("person", person["id"], person["citations"])
+        link("person", person["id"], person["verses"])
+        db.executemany("INSERT INTO person_events VALUES (?, ?)", [(person["id"], event_id) for event_id in person["events"]])
+        for attestation in person["attestations"]:
+            attestation_id = f"{person['id']}@{attestation['artifact']}"
+            db.execute(
+                "INSERT INTO person_attestations VALUES (?, ?, ?, ?, ?)",
+                (attestation_id, person["id"], attestation["artifact"], attestation["relation"], attestation["note"]),
+            )
+            cite("person_attestation", attestation_id, attestation["citations"])
+    for i in content.issues.values():
+        db.executemany("INSERT INTO issue_persons VALUES (?, ?)", [(i["id"], person_id) for person_id in i["persons"]])
 
     db.executemany(
         "INSERT INTO meta VALUES (?, ?)",
@@ -689,6 +800,7 @@ def build(content_dir: Path, corpus_path: Path, out: Path) -> Report:
     load_artifacts(report, content_dir, content, corpus)
     load_events(report, content_dir, content, corpus)
     load_issues(report, content_dir, content, corpus)
+    load_persons(report, content_dir, content, corpus)
     cross_check(report, content)
     if report.errors:
         return report

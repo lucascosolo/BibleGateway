@@ -150,3 +150,223 @@ kind = "web"
 author = "Wikipedia"
 title = "Sennacherib's campaign in the Levant"
 url = "https://en.wikipedia.org/wiki/Sennacherib%27s_campaign_in_the_Levant"
+
+# --- People (Revision 2). Checked 2026-10-06; where only a reference work or a review could be
+# reached, the entry says so in its title or the citing note, and the reviewer should prefer
+# replacing it with the primary publication.
+
+[[source]]
+id = "biran-naveh-1993"
+kind = "article"
+author = "Avraham Biran and Joseph Naveh"
+title = "An Aramaic Stele Fragment from Tel Dan"
+container = "Israel Exploration Journal 43 (2–3), pp. 81–98"
+year = 1993
+
+[[source]]
+id = "biran-naveh-1995"
+kind = "article"
+author = "Avraham Biran and Joseph Naveh"
+title = "The Tel Dan Inscription: A New Fragment"
+container = "Israel Exploration Journal 45 (1), pp. 1–18"
+year = 1995
+
+[[source]]
+id = "wikipedia-tel-dan-stele"
+kind = "web"
+author = "Wikipedia"
+title = "Tel Dan stele"
+url = "https://en.wikipedia.org/wiki/Tel_Dan_stele"
+
+[[source]]
+id = "cojs-kurkh-monolith"
+kind = "web"
+author = "Center for Online Judaic Studies"
+title = "The Kurkh Monolith of Shalmaneser III"
+url = "https://cojs.org/?p=6525"
+
+[[source]]
+id = "wikipedia-kurkh-monoliths"
+kind = "web"
+author = "Wikipedia"
+title = "Kurkh Monoliths"
+url = "https://en.wikipedia.org/wiki/Kurkh_Monoliths"
+
+[[source]]
+id = "bas-hezekiah-bulla"
+kind = "web"
+author = "Biblical Archaeology Society"
+title = "King Hezekiah in the Bible: Royal Seal of Hezekiah Comes to Light"
+url = "https://www.biblicalarchaeology.org/daily/news/king-hezekiah-in-the-bible-royal-seal-of-hezekiah-comes-to-light/"
+
+[[source]]
+id = "weidner-1939"
+kind = "chapter"
+author = "Ernst F. Weidner"
+title = "Jojachin, König von Juda, in babylonischen Keilschrifttexten"
+container = "Mélanges syriens offerts à M. René Dussaud, pp. 923–935"
+publisher = "Geuthner, Paris"
+year = 1939
+
+[[source]]
+id = "smb-vat-16378"
+kind = "museum"
+author = "Staatliche Museen zu Berlin, Vorderasiatisches Museum"
+title = "VAT 16378 (collection record)"
+url = "https://search.smb.museum/en/object/obj-1743721"
+
+[[source]]
+id = "wikipedia-jehoiachin-tablets"
+kind = "web"
+author = "Wikipedia"
+title = "Jehoiachin's Rations Tablets"
+url = "https://en.wikipedia.org/wiki/Jehoiachin%27s_Rations_Tablets"
+
+[[source]]
+id = "wikipedia-cylinders-of-nabonidus"
+kind = "web"
+author = "Wikipedia"
+title = "Cylinders of Nabonidus"
+url = "https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus"
+
+[[source]]
+id = "ae-1963-104"
+kind = "edition"
+title = "L'Année épigraphique 1963, no. 104 (the Pilate inscription)"
+year = 1963
+
+[[source]]
+id = "wikipedia-pilate-stone"
+kind = "web"
+author = "Wikipedia"
+title = "Pilate stone"
+url = "https://en.wikipedia.org/wiki/Pilate_stone"
+
+[[source]]
+id = "wikipedia-pontius-pilate"
+kind = "web"
+author = "Wikipedia"
+title = "Pontius Pilate"
+url = "https://en.wikipedia.org/wiki/Pontius_Pilate"
+
+[[source]]
+id = "wikipedia-caiaphas-ossuary"
+kind = "web"
+author = "Wikipedia"
+title = "Caiaphas ossuary"
+url = "https://en.wikipedia.org/wiki/Caiaphas_ossuary"
+
+[[source]]
+id = "wikipedia-caiaphas"
+kind = "web"
+author = "Wikipedia"
+title = "Caiaphas"
+url = "https://en.wikipedia.org/wiki/Caiaphas"
+
+[[source]]
+id = "tacitus-annals-15-latin"
+kind = "edition"
+author = "Tacitus"
+title = "Annales, book 15 (Latin text, The Latin Library)"
+url = "https://www.thelatinlibrary.com/tacitus/tac.ann15.shtml"
+
+[[source]]
+id = "perseus-josephus-ant-18"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, book 18 (Perseus Digital Library)"
+url = "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0146:book=18:section=63"
+
+[[source]]
+id = "wikipedia-josephus-on-jesus"
+kind = "web"
+author = "Wikipedia"
+title = "Josephus on Jesus"
+url = "https://en.wikipedia.org/wiki/Josephus_on_Jesus"
+
+[[source]]
+id = "meier-1991"
+kind = "book"
+author = "John P. Meier"
+title = "A Marginal Jew: Rethinking the Historical Jesus, Volume 1"
+publisher = "Doubleday"
+year = 1991
+
+[[source]]
+id = "ehrman-2012"
+kind = "book"
+author = "Bart D. Ehrman"
+title = "Did Jesus Exist? The Historical Argument for Jesus of Nazareth"
+publisher = "HarperOne"
+year = 2012
+isbn = "0-06-220460-2"
+
+[[source]]
+id = "wikipedia-moses"
+kind = "web"
+author = "Wikipedia"
+title = "Moses"
+url = "https://en.wikipedia.org/wiki/Moses"
+
+[[source]]
+id = "dever-2003"
+kind = "book"
+author = "William G. Dever"
+title = "Who Were the Early Israelites and Where Did They Come From?"
+publisher = "Eerdmans"
+year = 2003
+
+[[source]]
+id = "coogan-2003-review"
+kind = "article"
+author = "Michael D. Coogan"
+title = "Emerging Confederation (review of Dever, Who Were the Early Israelites)"
+container = "America, 9 June 2003"
+year = 2003
+url = "https://www.americamagazine.org/books/2003/06/09/emerging-confederation/"
+
+[[source]]
+id = "griffiths-1953"
+kind = "article"
+author = "J. Gwyn Griffiths"
+title = "The Egyptian Derivation of the Name Moses"
+container = "Journal of Near Eastern Studies 12, p. 223"
+year = 1953
+
+[[source]]
+id = "cline-2009"
+kind = "web"
+author = "Eric H. Cline"
+title = "Untitled here: History News Network article 120094, 16 November 2009 (title to be confirmed by the reviewer)"
+url = "https://www.historynewsnetwork.org/article/120094"
+
+[[source]]
+id = "finkelstein-silberman-2006"
+kind = "book"
+author = "Israel Finkelstein and Neil Asher Silberman"
+title = "David and Solomon: In Search of the Bible's Sacred Kings and the Roots of the Western Tradition"
+publisher = "Free Press"
+year = 2006
+
+[[source]]
+id = "klein-2006-review"
+kind = "article"
+author = "Julia M. Klein"
+title = "Review of Finkelstein and Silberman, David and Solomon"
+container = "Archaeology (January 2006 issue, per the archive URL)"
+year = 2006
+url = "https://archive.archaeology.org/0601/reviews/kings.html"
+
+[[source]]
+id = "wikipedia-solomon"
+kind = "web"
+author = "Wikipedia"
+title = "Solomon"
+url = "https://en.wikipedia.org/wiki/Solomon"
+
+[[source]]
+id = "bm-taylor-prism"
+kind = "museum"
+author = "British Museum"
+title = "Taylor Prism (collection record, registration 1855,1003.1)"
+url = "https://www.britishmuseum.org/collection/object/W_1855-1003-1"

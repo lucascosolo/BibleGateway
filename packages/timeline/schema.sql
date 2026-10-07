@@ -89,7 +89,10 @@ CREATE TABLE arguments (
 CREATE TABLE artifacts (
   artifact_id      TEXT PRIMARY KEY,
   name             TEXT NOT NULL,
-  kind             TEXT NOT NULL CHECK (kind IN ('inscription','chronicle','relief','papyrus','ostracon','manuscript','seal','coin','site')),
+  -- 'literary-text' is a work outside the Bible (a passage of Josephus or Tacitus): `made` is
+  -- its date of composition, and it has no findspot or holding institution.
+  kind             TEXT NOT NULL CHECK (kind IN ('inscription','chronicle','relief','papyrus','ostracon','manuscript','seal','coin','site','literary-text')),
+  status           TEXT NOT NULL CHECK (status IN ('draft','reviewed')),
   -- When the object itself was made, when that is established. NULL rather than a guess: a
   -- chronicle copy can record 605-594 BCE while its own date of writing is unknown.
   made_earliest    INTEGER CHECK (made_earliest <> 0),
@@ -131,6 +134,46 @@ CREATE TABLE issue_views (
   UNIQUE (issue_id, ordinal)
 );
 
+-- People named in the Bible, and the evidence outside it for their existence.
+CREATE TABLE persons (
+  person_id     TEXT PRIMARY KEY,
+  name          TEXT NOT NULL,
+  also_known_as TEXT,                       -- JSON array of strings, or NULL
+  role          TEXT NOT NULL,
+  summary       TEXT NOT NULL,
+  status        TEXT NOT NULL CHECK (status IN ('draft','reviewed')),
+  lived_earliest INTEGER CHECK (lived_earliest <> 0),
+  lived_latest   INTEGER CHECK (lived_latest <> 0),
+  -- DERIVED from person_attestations, never authored: the strongest relation, in-tension
+  -- excluded; 'none' when there are no attestations at all.
+  evidence      TEXT NOT NULL CHECK (evidence IN ('corroborates','partially-corroborates','consistent','silent','none')),
+  has_tension   INTEGER NOT NULL CHECK (has_tension IN (0, 1)),
+  CHECK ((lived_earliest IS NULL) = (lived_latest IS NULL)),
+  CHECK (lived_earliest IS NULL OR lived_earliest <= lived_latest)
+);
+
+CREATE TABLE person_attestations (
+  attestation_id TEXT PRIMARY KEY,          -- '<person id>@<artifact id>'
+  person_id      TEXT NOT NULL REFERENCES persons,
+  artifact_id    TEXT NOT NULL REFERENCES artifacts,
+  relation       TEXT NOT NULL CHECK (relation IN ('corroborates','partially-corroborates','consistent','silent','in-tension')),
+  note           TEXT NOT NULL,
+  UNIQUE (person_id, artifact_id)
+);
+CREATE INDEX person_attestations_artifact_idx ON person_attestations (artifact_id);
+
+CREATE TABLE person_events (
+  person_id TEXT NOT NULL REFERENCES persons,
+  event_id  TEXT NOT NULL REFERENCES events,
+  PRIMARY KEY (person_id, event_id)
+);
+
+CREATE TABLE issue_persons (
+  issue_id  TEXT NOT NULL REFERENCES issues,
+  person_id TEXT NOT NULL REFERENCES persons,
+  PRIMARY KEY (issue_id, person_id)
+);
+
 CREATE TABLE issue_events (
   issue_id TEXT NOT NULL REFERENCES issues,
   event_id TEXT NOT NULL REFERENCES events,
@@ -141,7 +184,7 @@ CREATE TABLE issue_events (
 -- validates every subject exists; SQLite cannot express that as a foreign key.
 CREATE TABLE verse_links (
   link_id        INTEGER PRIMARY KEY,
-  subject_kind   TEXT NOT NULL CHECK (subject_kind IN ('event','argument','artifact','issue')),
+  subject_kind   TEXT NOT NULL CHECK (subject_kind IN ('event','argument','artifact','issue','person')),
   subject_id     TEXT NOT NULL,
   start_verse_id INTEGER NOT NULL,
   end_verse_id   INTEGER NOT NULL,
@@ -154,7 +197,7 @@ CREATE INDEX verse_links_subject_idx ON verse_links (subject_kind, subject_id);
 
 CREATE TABLE citations (
   citation_id  INTEGER PRIMARY KEY,
-  subject_kind TEXT NOT NULL CHECK (subject_kind IN ('era','event','position','argument','artifact','attestation','issue','issue_view')),
+  subject_kind TEXT NOT NULL CHECK (subject_kind IN ('era','event','position','argument','artifact','attestation','issue','issue_view','person','person_attestation')),
   subject_id   TEXT NOT NULL,
   source_id    TEXT NOT NULL REFERENCES sources,
   locator      TEXT,

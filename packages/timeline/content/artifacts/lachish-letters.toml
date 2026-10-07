@@ -1,6 +1,7 @@
 id = "lachish-letters"
 name = "Lachish Letters"
 kind = "ostracon"
+status = "draft"
 made = { earliest = -590, latest = -586 }
 language = "Hebrew (paleo-Hebrew script)"
 summary = """

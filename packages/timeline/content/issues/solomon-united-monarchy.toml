@@ -1,0 +1,40 @@
+id = "solomon-united-monarchy"
+kind = "historical"
+title = "Solomon's kingdom: an empire or a highland chiefdom?"
+status = "draft"
+summary = """
+The Bible describes Solomon ruling a wealthy united kingdom from Jerusalem. No inscription \
+names him, so the debate turns on archaeology — above all on the date of monumental gates and \
+buildings once attributed to him."""
+persons = ["solomon", "david"]
+verses = [{ ref = "1Kgs.9.15", link = "describes", note = "Solomon builds Hazor, Megiddo and Gezer" }]
+citations = [
+  { source = "cline-2009" },
+  { source = "wikipedia-solomon" },
+]
+
+[[views]]
+label = "No inscription names him"
+text = """
+Eric Cline: there is still not a single contemporary or near-contemporary inscription that \
+mentions Solomon."""
+citations = [{ source = "cline-2009" }]
+
+[[views]]
+label = "Solomonic gates"
+text = """
+Yigael Yadin attributed the monumental gates and structures he excavated at Hazor, Megiddo and \
+Gezer to Solomon's building programme, reading them alongside 1 Kings 9:15."""
+citations = [{ source = "wikipedia-solomon" }]
+
+[[views]]
+label = "A modest chiefdom; the gates are later"
+text = """
+Finkelstein and Silberman redate those structures to the Omride kings of the 9th century BCE \
+and see 10th-century Jerusalem as the rough hilltop stronghold of a local dynasty of tribal \
+chiefs, not the capital of an empire."""
+citations = [
+  { source = "finkelstein-silberman-2006" },
+  { source = "klein-2006-review" },
+  { source = "wikipedia-solomon" },
+]

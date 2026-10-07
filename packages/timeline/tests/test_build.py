@@ -61,11 +61,46 @@ citations = [{ source = "src-a", locator = "p. 1" }]
 id = "art-one"
 name = "Artifact One"
 kind = "inscription"
+status = "draft"
 made = { earliest = -701, latest = -690 }
 language = "Akkadian"
 summary = "An inscription."
 citations = [{ source = "src-a", locator = "p. 2" }]
 verses = [{ ref = "Exod.12.40", link = "background" }]
+''',
+        "artifacts/art-two.toml": '''
+id = "art-two"
+name = "Josephus passage"
+kind = "literary-text"
+status = "draft"
+made = { earliest = 93, latest = 94 }
+language = "Greek"
+summary = "A passage of a Greek history."
+citations = [{ source = "src-b", locator = "bk 20" }]
+''',
+        "persons/per-one.toml": '''
+id = "per-one"
+name = "Person One"
+also_known_as = ["Alias A", "Alias B"]
+role = "king of Somewhere"
+summary = "A figure."
+status = "draft"
+lived = { earliest = -740, latest = -700 }
+verses = [{ ref = "Dan.1.1", link = "describes" }]
+events = ["ev-narr"]
+citations = [{ source = "src-a", locator = "p. 11" }]
+
+[[attestations]]
+artifact = "art-one"
+relation = "corroborates"
+note = "Named."
+citations = [{ source = "src-a", locator = "p. 12" }]
+
+[[attestations]]
+artifact = "art-two"
+relation = "silent"
+note = "Not mentioned."
+citations = [{ source = "src-b", locator = "p. 13" }]
 ''',
         "events/ev-narr.toml": '''
 id = "ev-narr"
@@ -141,6 +176,7 @@ title = "An issue"
 summary = "A problem."
 status = "draft"
 events = ["ev-narr"]
+persons = ["per-one"]
 verses = [{ ref = "1Kgs.6.1", link = "dates" }]
 citations = [{ source = "src-a", locator = "p. 7" }]
 
@@ -210,8 +246,8 @@ class HappyPath(BuildCase):
         r = self.build(valid_files())
         self.assertEqual(r.returncode, 0, r.stderr)
         expected = {"sources": 2, "eras": 1, "events": 2, "positions": 4, "arguments": 1,
-                    "artifacts": 1, "attestations": 1, "issues": 1, "issue_views": 1,
-                    "issue_events": 1, "verse_links": 4}
+                    "artifacts": 2, "attestations": 1, "persons": 1, "person_attestations": 2, "person_events": 1, "issue_persons": 1, "issues": 1, "issue_views": 1,
+                    "issue_events": 1, "verse_links": 5}
         for table, n in expected.items():
             self.assertEqual(self.query(f"SELECT COUNT(*) FROM {table}")[0][0], n, table)
         self.assertEqual(os.listdir(self.outdir), ["timeline.db"])
@@ -301,6 +337,99 @@ class HappyPath(BuildCase):
         r = self.build(files)
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertIn("src-unused", r.stderr)
+
+
+def person_toml(pid, relations):
+    arts = ["art-one", "art-two"]
+    out = (f'id = "{pid}"\nname = "{pid}"\nrole = "r"\nsummary = "s"\nstatus = "draft"\n'
+           'citations = [{ source = "src-a" }]\n')
+    for art, rel in zip(arts, relations):
+        out += (f'\n[[attestations]]\nartifact = "{art}"\nrelation = "{rel}"\nnote = "n"\n'
+                'citations = [{ source = "src-a" }]\n')
+    return out
+
+
+class Persons(BuildCase):
+    def test_person_rows_and_json_aliases(self):
+        self.build(valid_files())
+        import json
+        row = self.query("SELECT name, role, status, lived_earliest, lived_latest, also_known_as FROM persons")[0]
+        self.assertEqual(row[:5], ("Person One", "king of Somewhere", "draft", -740, -700))
+        self.assertEqual(json.loads(row[5]), ["Alias A", "Alias B"])
+        self.assertEqual(self.query("SELECT event_id FROM person_events"), [("ev-narr",)])
+        self.assertEqual(self.query("SELECT person_id FROM issue_persons"), [("per-one",)])
+
+    def test_person_attestation_ids_citations_and_verse_links(self):
+        self.build(valid_files())
+        self.assertEqual(self.query("SELECT attestation_id FROM person_attestations ORDER BY 1"),
+                         [("per-one@art-one",), ("per-one@art-two",)])
+        for sid in ("per-one@art-one", "per-one@art-two"):
+            n = self.query(f"SELECT COUNT(*) FROM citations WHERE subject_kind='person_attestation' AND subject_id='{sid}'")[0][0]
+            self.assertEqual(n, 1)
+        self.assertEqual(self.query("SELECT COUNT(*) FROM citations WHERE subject_kind='person' AND subject_id='per-one'")[0][0], 1)
+        self.assertEqual(self.query("SELECT start_verse_id FROM verse_links WHERE subject_kind='person' AND subject_id='per-one'"),
+                         [(27001001,)])
+
+    def test_derived_evidence_grade(self):
+        f = valid_files()
+        cases = {
+            "g-corr": (["corroborates", "silent"], "corroborates", 0),
+            "g-part": (["partially-corroborates", "silent"], "partially-corroborates", 0),
+            "g-cons": (["consistent", "silent"], "consistent", 0),
+            "g-mixed": (["corroborates", "in-tension"], "corroborates", 1),
+            "g-tens": (["in-tension"], "none", 1),
+            "g-silent": (["silent"], "silent", 0),
+            "g-none": ([], "none", 0),
+        }
+        for pid, (rels, _, _) in cases.items():
+            f[f"persons/{pid}.toml"] = person_toml(pid, rels)
+        r = self.build(f)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        got = {p: (e, t) for p, e, t in self.query("SELECT person_id, evidence, has_tension FROM persons")}
+        for pid, (_, grade, tension) in cases.items():
+            self.assertEqual(got[pid], (grade, tension), pid)
+        self.assertEqual(got["per-one"], ("corroborates", 0))
+
+    def test_literary_text_artifact_builds(self):
+        self.assertEqual(self.build(valid_files()).returncode, 0)
+        self.assertEqual(self.query("SELECT kind, status FROM artifacts WHERE artifact_id='art-two'"),
+                         [("literary-text", "draft")])
+
+    def test_literary_text_artifact_rejects_held_by(self):
+        f = valid_files()
+        mutate(f, "artifacts/art-two.toml", 'language = "Greek"',
+               'language = "Greek"\nheld_by = { institution = "X", accession = "1" }')
+        self.assert_fails_naming(f, "art-two.toml")
+
+    def test_artifact_without_status_fails(self):
+        f = valid_files()
+        mutate(f, "artifacts/art-one.toml", 'status = "draft"\n', "")
+        self.assert_fails_naming(f, "art-one.toml")
+
+    def test_person_without_citations_fails(self):
+        f = valid_files()
+        mutate(f, "persons/per-one.toml", 'citations = [{ source = "src-a", locator = "p. 11" }]', "citations = []")
+        self.assert_fails_naming(f, "per-one.toml")
+
+    def test_person_attestation_to_unknown_artifact_fails(self):
+        f = valid_files()
+        mutate(f, "persons/per-one.toml", 'artifact = "art-two"', 'artifact = "art-ghost"')
+        self.assert_fails_naming(f, "per-one.toml", "art-ghost")
+
+    def test_person_events_unknown_event_fails(self):
+        f = valid_files()
+        mutate(f, "persons/per-one.toml", 'events = ["ev-narr"]', 'events = ["ev-ghost"]')
+        self.assert_fails_naming(f, "per-one.toml", "ev-ghost")
+
+    def test_issue_persons_unknown_person_fails(self):
+        f = valid_files()
+        mutate(f, "issues/iss-one.toml", 'persons = ["per-one"]', 'persons = ["per-ghost"]')
+        self.assert_fails_naming(f, "iss-one.toml", "per-ghost")
+
+    def test_lived_year_zero_fails(self):
+        f = valid_files()
+        mutate(f, "persons/per-one.toml", "lived = { earliest = -740", "lived = { earliest = 0")
+        self.assert_fails_naming(f, "per-one.toml")
 
 
 class Gates(BuildCase):

@@ -1,0 +1,29 @@
+id = "hezekiah"
+name = "Hezekiah"
+role = "king of Judah"
+summary = """
+King of Judah during Sennacherib's invasion of 701 BCE. Named in the Assyrian king's own annals \
+and on a royal seal impression from Jerusalem."""
+status = "draft"
+verses = [{ ref = "2Kgs.18.1-2Kgs.20.21", link = "describes" }]
+events = ["sennacherib-campaign-judah"]
+citations = [{ source = "cojs-sennacherib-prisms" }]
+
+[[attestations]]
+artifact = "sennacherib-taylor-prism"
+relation = "corroborates"
+note = """
+Sennacherib names "Hezekiah the Judahite", who had not submitted to his yoke, and says he \
+shut him up in Jerusalem "like a bird in a cage"."""
+citations = [
+  { source = "bm-taylor-prism" },
+  { source = "cojs-sennacherib-prisms" },
+]
+
+[[attestations]]
+artifact = "hezekiah-bulla-ophel"
+relation = "corroborates"
+note = """
+A seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah", \
+matching the parentage given in 2 Kings 18:1."""
+citations = [{ source = "bas-hezekiah-bulla" }]

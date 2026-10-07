@@ -1,0 +1,19 @@
+id = "pilate-stone"
+name = "Pilate Stone"
+kind = "inscription"
+status = "draft"
+made = { earliest = 26, latest = 37 }
+language = "Latin"
+summary = """
+A limestone dedication block from Caesarea Maritima recording a building for Tiberius by \
+"[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e" — Pontius Pilate, prefect of Judaea. Found in 1961 \
+in the theatre area by Maria Teresa Fortuna Canivet, during excavations led by Antonio Frova; a \
+replica stands at Caesarea. Dated by Pilate's governorship (26/27–36/37 CE)."""
+discovered = { year = 1961, place = "Caesarea Maritima (theatre area)" }
+held_by = { institution = "Israel Museum, Jerusalem" }
+citations = [
+  { source = "ae-1963-104" },
+  { source = "wikipedia-pilate-stone" },
+  { source = "wikipedia-pontius-pilate" },
+]
+verses = [{ ref = "Luke.3.1", link = "background", note = "Pilate governor of Judea" }]

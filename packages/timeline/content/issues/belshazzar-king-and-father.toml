@@ -1,0 +1,22 @@
+id = "belshazzar-king-and-father"
+kind = "historical"
+title = "Belshazzar: king, and son of Nebuchadnezzar?"
+status = "draft"
+summary = """
+Daniel 5 calls Belshazzar king, and has him spoken of as Nebuchadnezzar's son (5:2, 5:22). The \
+Babylonian sources name him as the eldest son of Nabonidus, the last king of Babylon; on the \
+cylinder he is the king's son rather than king. Explanations offered for the difference are \
+not yet documented in this entry."""
+persons = ["belshazzar"]
+verses = [
+  { ref = "Dan.5.2", link = "describes", note = "Nebuchadnezzar his father" },
+  { ref = "Dan.5.22", link = "describes", note = "you, his son" },
+]
+citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
+
+[[views]]
+label = "The Babylonian record"
+text = """
+The Nabonidus Cylinder from Ur names Belshazzar as "the eldest son, my offspring" of \
+Nabonidus."""
+citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]

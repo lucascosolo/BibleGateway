@@ -1,0 +1,11 @@
+id = "moses"
+name = "Moses"
+role = "prophet and lawgiver"
+summary = """
+The leader of the Exodus and the giver of the Law at Sinai. No source outside the Bible from \
+his own time names him, and none in Egyptian records; whether a historical figure lies behind \
+the tradition is debated (see the linked issue)."""
+status = "draft"
+verses = [{ ref = "Exod.2.10", link = "describes", note = "named by Pharaoh's daughter" }]
+events = ["exodus"]
+citations = [{ source = "wikipedia-moses" }]

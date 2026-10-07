@@ -1,0 +1,11 @@
+id = "solomon"
+name = "Solomon"
+role = "king of Judah and Israel"
+summary = """
+David's son, builder of the First Temple, remembered as the wealthiest and wisest king of a \
+united Israel. No contemporary or near-contemporary inscription names him. Whether 10th-century \
+Jerusalem was the capital of a substantial kingdom or a modest highland centre is one of the \
+central debates of biblical archaeology (see the linked issue)."""
+status = "draft"
+verses = [{ ref = "1Kgs.1.1-1Kgs.11.43", link = "describes" }]
+citations = [{ source = "cline-2009" }]

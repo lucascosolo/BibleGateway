@@ -1,6 +1,7 @@
 id = "babylonian-chronicle-abc5"
 name = "Babylonian Chronicle ABC 5 (the \"Jerusalem Chronicle\")"
 kind = "chronicle"
+status = "draft"
 language = "Akkadian (cuneiform)"
 summary = """
 A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the \

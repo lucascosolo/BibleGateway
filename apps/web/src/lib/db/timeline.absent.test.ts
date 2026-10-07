@@ -14,6 +14,8 @@ describe("timeline accessors with no timeline.db deployed", () => {
     expect(t.getTimelineBuildId()).toBeNull();
     expect(t.getTimelineWindow({ from: -1000, to: 100 })).toMatchObject({ available: false, events: [], eras: [] });
     expect(t.getEvent("x")).toBeNull();
+    expect(t.getPersons()).toEqual([]);
+    expect(t.getPerson("x")).toBeNull();
     expect(t.getArtifact("x")).toBeNull();
     expect(t.getIssue("x")).toBeNull();
     expect(t.getTimelineForRange({ start: 1_001_001 as never, end: 1_001_002 as never }))

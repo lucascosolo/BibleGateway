@@ -1,0 +1,11 @@
+id = "hezekiah-bulla-ophel"
+name = "Royal bulla of Hezekiah (Ophel)"
+kind = "seal"
+status = "draft"
+language = "Hebrew (paleo-Hebrew script)"
+summary = """
+A clay seal impression found in Eilat Mazar's excavation of the Ophel in Jerusalem, \
+reading "Belonging to Hezekiah [son of] Ahaz, king of Judah". Found in 2009 and \
+deciphered in 2015. Where it is held is not recorded here."""
+discovered = { year = 2009, place = "Ophel, Jerusalem (Eilat Mazar's excavation)" }
+citations = [{ source = "bas-hezekiah-bulla" }]

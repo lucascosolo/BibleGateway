@@ -1,0 +1,27 @@
+id = "caiaphas"
+name = "Caiaphas"
+also_known_as = ["Joseph Caiaphas"]
+role = "high priest in Jerusalem"
+summary = """
+The high priest at the trial of Jesus in the Gospels. Josephus names him as high priest, and a \
+family ossuary found in Jerusalem in 1990 is widely, though not universally, identified as his."""
+status = "draft"
+verses = [
+  { ref = "Matt.26.3", link = "describes" },
+  { ref = "John.18.13", link = "describes" },
+]
+citations = [{ source = "wikipedia-caiaphas" }]
+
+[[attestations]]
+artifact = "josephus-antiquities-18-caiaphas"
+relation = "corroborates"
+note = "Josephus names Joseph called Caiaphas as high priest, appointed by Gratus and removed by Vitellius."
+citations = [{ source = "wikipedia-caiaphas" }]
+
+[[attestations]]
+artifact = "caiaphas-ossuary"
+relation = "partially-corroborates"
+note = """
+Inscribed "Joseph son of Caiaphas". The identification with the high priest is widely accepted \
+but disputed on the spelling, the lack of a title and the plainness of the tomb."""
+citations = [{ source = "wikipedia-caiaphas-ossuary" }]

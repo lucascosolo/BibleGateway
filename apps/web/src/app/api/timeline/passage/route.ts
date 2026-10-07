@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic";
  * GET /api/timeline/passage?ref=2Kgs.18
  *
  * What the timeline knows about a passage: the events it describes or helps date, the issues it
- * raises, and the objects outside the Bible that bear on it. This is the reader's way in — a
+ * raises, the people it names, and the objects and texts outside the Bible that bear on it. This is the reader's way in — a
  * verse that dates the Exodus (1 Kings 6:1) leads to the Exodus even though it describes the
  * temple.
  */
@@ -42,6 +42,11 @@ export async function GET(request: NextRequest) {
       ...artifact,
       made: artifact.made ? { ...artifact.made, display: formatYears(artifact.made.earliest, artifact.made.latest) } : null,
       href: `/api/timeline/artifacts/${artifact.id}`,
+    })),
+    persons: found.persons.map((person) => ({
+      ...person,
+      lived: person.lived ? withDisplay(person.lived) : null,
+      href: `/api/timeline/persons/${person.id}`,
     })),
   });
 }

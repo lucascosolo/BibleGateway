@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 
 import { timelineNotModified } from "@/lib/db/cache";
-import { getEventTitles, getIssue } from "@/lib/db/timeline";
+import { getEventSummaries, getIssue } from "@/lib/db/timeline";
 import { labelVerses } from "@/lib/db/timeline-present";
 
 import { json, problem } from "../../shared";
@@ -26,6 +26,6 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   return json(request, {
     ...issue,
     verses: labelVerses(issue.verses),
-    events: getEventTitles(issue.eventIds).map((event) => ({ ...event, href: `/api/timeline/events/${event.id}` })),
+    events: getEventSummaries(issue.eventIds).map((event) => ({ id: event.id, title: event.title, href: `/api/timeline/events/${event.id}` })),
   });
 }

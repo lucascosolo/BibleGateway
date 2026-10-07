@@ -7,6 +7,7 @@ A question prior to the date. No Egyptian record mentions an Israelite exodus, a
 divide over what the silence and the archaeology mean. Kept separate from the dating positions: \
 a view that the event did not happen as described has no date range to offer."""
 events = ["exodus"]
+persons = ["moses"]
 verses = [{ ref = "Exod.12.40-Exod.12.41", link = "describes" }]
 citations = [
   { source = "finkelstein-silberman-2001" },

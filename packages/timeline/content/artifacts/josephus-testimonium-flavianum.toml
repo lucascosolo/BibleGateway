@@ -1,0 +1,16 @@
+id = "josephus-testimonium-flavianum"
+name = "Josephus, Antiquities 18.63–64 (the Testimonium Flavianum)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+Josephus's paragraph on Jesus: "Now there was about this time Jesus, a wise man…", condemned \
+to the cross by Pilate "at the suggestion of the principal men amongst us". Since the late 20th \
+century the majority view has been that it is partly authentic, with Christian additions (such \
+as "He was [the] Christ") worked into an original notice; John P. Meier's reconstruction of \
+that core is the most widely accepted."""
+citations = [
+  { source = "perseus-josephus-ant-18", locator = "18.63" },
+  { source = "meier-1991", locator = "ch. 3" },
+  { source = "wikipedia-josephus-on-jesus" },
+]

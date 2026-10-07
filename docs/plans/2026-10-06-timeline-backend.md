@@ -55,6 +55,48 @@ design record this refines.
 - A new `timeline.db` is picked up on service restart (the handle is opened once per process,
   as with `audio.db`).
 
+## Revision 2 (2026-10-06): people, texts outside the Bible, review sheets
+
+The user's direction: represent scholarship on the Bible *as a text* — evidence for and against
+the existence of its people and the historicity of its stories, and its chronological
+discrepancies. Events, issues and attestations already carry stories and discrepancies; this
+revision adds people. User decisions: about 10 seed people across monarchy-era kings, contested
+figures and New Testament figures; everything ships `draft` and the user reviews in batches from
+a generated sheet.
+
+- **`persons/<id>.toml`**: `id`, `name`, `role` (e.g. "king of Judah"), `summary`, `status`,
+  `citations` (≥1), optional `also_known_as` (array of strings), optional
+  `lived = { earliest, latest }` (years, same rules), optional `verses` (where the Bible names
+  them), optional `events` (event ids they take part in), and `[[attestations]]` (optional;
+  `artifact`, `relation`, `note`, `citations` ≥1 — the same five relations as events).
+- **Existence is a derived grade, never authored.** `persons.evidence` is the strongest relation
+  among the person's attestations, in the order `corroborates` > `partially-corroborates` >
+  `consistent` > `silent`; `none` when there are no attestations at all. `in-tension` does not
+  count toward the grade (Belshazzar is corroborated as a person even though a source contradicts
+  a detail about him); it sets the derived flag `has_tension`. Meaning of the relations for a
+  person: *corroborates* = names this person; *partially-corroborates* = names them but the
+  reading or the identification is disputed; *consistent* = fits without naming them; *silent* =
+  a relevant source that does not mention them; *in-tension* = contradicts a biblical detail.
+- **Texts outside the Bible are artifacts of kind `literary-text`** (a passage of Josephus or
+  Tacitus); `made` is the date of composition; `held_by` and `discovered` do not apply.
+- **Artifacts gain a required `status`** (`draft` | `reviewed`): their museum numbers and
+  readings are claims a reviewer must check too.
+- **Issues gain optional `persons`** (person ids), e.g. "Was Moses a historical figure?".
+- Ids: person attestations are `"<person id>@<artifact id>"`. `verse_links.subject_kind` gains
+  `person`; `citations.subject_kind` gains `person` and `person_attestation`.
+- Builder gates: unknown person/artifact/event ids in any of these references fail; a
+  `literary-text` artifact with `held_by` or `discovered` fails; everything else as before.
+- **API**: `GET /api/timeline/persons` (all people: id, name, role, evidence, hasTension, status,
+  lived with display), `GET /api/timeline/persons/[id]` (in full: attestations with artifact
+  name/kind and citations, verse links labelled, events, issues), the passage endpoint adds
+  `persons` whose verse links intersect the range, and the artifact endpoint adds the people it
+  attests.
+- **Review sheet**: `packages/timeline/review.py --db <timeline.db> --out <file.md>` writes one
+  Markdown checklist of every `draft` artifact, event, person and issue — each claim with its
+  citations (title, locator, URL) and the source file to edit — so a batch can be checked and
+  flipped to `status = "reviewed"` in the TOML. `--all` includes reviewed entries. Stdlib only,
+  reads the built database, writes only `--out`.
+
 ## Years
 
 Integers. Negative = BCE, positive = CE, **no year zero** (`-1` is 1 BCE, `1` is 1 CE). A zero

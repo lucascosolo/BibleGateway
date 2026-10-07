@@ -33,5 +33,9 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       ...attestation,
       href: `/api/timeline/events/${attestation.eventId}`,
     })),
+    persons: artifact.persons.map((attestation) => ({
+      ...attestation,
+      href: `/api/timeline/persons/${attestation.personId}`,
+    })),
   });
 }

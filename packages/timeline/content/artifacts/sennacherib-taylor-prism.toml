@@ -1,6 +1,7 @@
 id = "sennacherib-taylor-prism"
 name = "Taylor Prism (annals of Sennacherib)"
 kind = "inscription"
+status = "draft"
 made = { earliest = -691, latest = -691 }
 language = "Akkadian (cuneiform)"
 summary = """
@@ -9,8 +10,9 @@ parallel copies survive, the Oriental Institute (Chicago) Prism and the Jerusale
 Museum). The annals say he besieged and took 46 walled cities of Judah, and that he shut \
 Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not \
 claim that Jerusalem was taken."""
-held_by = { institution = "British Museum" }
+held_by = { institution = "British Museum", accession = "BM 91032" }
 citations = [
+  { source = "bm-taylor-prism" },
   { source = "cojs-sennacherib-prisms" },
   { source = "wikipedia-sennacherib-annals" },
 ]

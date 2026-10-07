@@ -53,3 +53,27 @@ the cited work rather than a located passage, and so most need a reviewer's eye:
 - `events/jerusalem-fall.toml`: the one-line summaries of Thiele's and Young's reasoning.
 - `events/daniel-composition.toml`: Baldwin's position is "part or all of chapters 7–12 may go
   back to the sixth century", and the range is the whole of that century, not a narrower claim.
+
+## Review notes for the people batch (Revision 2, 2026-10-06)
+
+Ten people, twelve new artifacts and texts, three new issues, all `draft`. The review sheet for
+this state is `docs/review/timeline-review-2026-10-06.md`; regenerate it after edits with
+`python3 -I packages/timeline/review.py --db data/timeline.db --corpus data/bible.db --out <file>`.
+
+Much of this batch rests on reference works (Wikipedia, Livius, COJS) because museum and
+publisher pages refused automated access. Those citations are the first thing to replace with
+the primary publication. Specifically unconfirmed and left out: the Tel Dan Stele's and the
+Pilate Stone's museum numbers, where the Hezekiah bulla is held, the year of the Tel Dan B
+fragments (1994 or 1995), the Caiaphas passages' section numbers in Josephus, the dates of
+composition of Tacitus and Josephus, every person's life dates, and any explanation of the
+Belshazzar discrepancy (the Verse Account's "entrusted the kingship" was seen only in a snippet).
+Check first:
+
+- `sources.toml`: `cline-2009` has no confirmed title.
+- `artifacts/tacitus-annals-15-44.toml`: the quoted Latin uses the standard `Tiberio`; the
+  Latin Library page cited prints `Tibero`.
+- `persons/jesus-of-nazareth.toml` and `artifacts/josephus-testimonium-flavianum.toml`: the
+  "majority view" wording and Meier's chapter locator.
+- `issues/moses-historicity.toml`: Dever's view is summarised from a review and a reference work,
+  not from his text.
+- `issues/solomon-united-monarchy.toml`: Yadin's attribution is cited only to a reference work.

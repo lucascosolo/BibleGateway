@@ -1,0 +1,10 @@
+id = "josephus-antiquities-18-55"
+name = "Josephus, Antiquities 18.55 and following (Pilate)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+Josephus narrates Pilate's governorship of Judaea, opening with his bringing the army's \
+standards bearing Caesar's image from Caesarea into Jerusalem: "BUT now Pilate, the procurator \
+of Judea, removed the army from Cesarea to Jerusalem…" (Whiston's translation)."""
+citations = [{ source = "perseus-josephus-ant-18", locator = "18.55" }]

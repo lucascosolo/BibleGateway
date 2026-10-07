@@ -34,14 +34,23 @@ beforeAll(async () => {
       ('argument','ev-exodus/early/argument-1','src-a','p. 5',1),('argument','ev-exodus/early/argument-2','src-b',NULL,1),
       ('position','ev-exodus/early','src-a','p. 9',1);
 
-    INSERT INTO artifacts VALUES ('art-stele','Merneptah Stele','inscription',-1208,-1208,'Egyptian','sum',1896,'Thebes','Cairo Museum','CG 34025');
-    INSERT INTO artifacts VALUES ('art-far','Far Thing','seal',-100,-90,'Greek','sum',NULL,NULL,NULL,NULL);
+    INSERT INTO artifacts VALUES ('art-stele','Merneptah Stele','inscription','draft',-1208,-1208,'Egyptian','sum',1896,'Thebes','Cairo Museum','CG 34025');
+    INSERT INTO artifacts VALUES ('art-far','Far Thing','seal','reviewed',-100,-90,'Greek','sum',NULL,NULL,NULL,NULL);
     INSERT INTO attestations VALUES ('ev-exodus@art-stele','art-stele','ev-exodus','consistent','Names Israel.');
     INSERT INTO citations(subject_kind,subject_id,source_id,locator,ordinal) VALUES ('attestation','ev-exodus@art-stele','src-b','p. 1',1);
 
+    INSERT INTO persons VALUES ('per-d','Early One',NULL,'patriarch','sum','draft',-900,-850,'none',0);
+    INSERT INTO persons VALUES ('per-b','Beta','["Bee","Betty"]','king of Judah','Beta sum','draft',-700,-650,'corroborates',1);
+    INSERT INTO persons VALUES ('per-a','Alpha',NULL,'prophet','sum','reviewed',-700,-650,'silent',0);
+    INSERT INTO persons VALUES ('per-c','Gamma',NULL,'apostle','sum','draft',NULL,NULL,'none',0);
+    INSERT INTO person_attestations VALUES ('per-b@art-stele','per-b','art-stele','corroborates','Named.');
+    INSERT INTO person_events VALUES ('per-b','ev-exodus');
+    INSERT INTO citations(subject_kind,subject_id,source_id,locator,ordinal) VALUES
+      ('person','per-b','src-a','p. 3',1),('person_attestation','per-b@art-stele','src-b','p. 4',1);
     INSERT INTO issues VALUES ('iss-480','chronology','The 480 years','sum','draft');
     INSERT INTO issue_views VALUES ('iss-480/view-1','iss-480',1,'Literal','text');
     INSERT INTO issue_events VALUES ('iss-480','ev-exodus');
+    INSERT INTO issue_persons VALUES ('iss-480','per-b');
     INSERT INTO issues VALUES ('iss-other','textual','Other','sum','draft');
     INSERT INTO issue_views VALUES ('iss-other/view-1','iss-other',1,'V','text');
 
@@ -53,6 +62,7 @@ beforeAll(async () => {
       ('issue','iss-other',1001001,1001003,'background',NULL),
       ('artifact','art-stele',2012040,2012040,'background',NULL),
       ('artifact','art-far',27001001,27001001,'background',NULL),
+      ('person','per-b',14001001,14001002,'describes',NULL),
       ('argument','ev-exodus/early/argument-1',9001001,9001002,'alludes',NULL);
   `);
   fixture.db = db;
@@ -149,7 +159,12 @@ describe("getArtifact and getIssue", () => {
   it("returns an artifact with its fields", async () => {
     const { getArtifact } = await import("./timeline");
     const a = getArtifact("art-stele");
-    expect(a).toMatchObject({ id: "art-stele", name: "Merneptah Stele" });
+    expect(a).toMatchObject({ id: "art-stele", name: "Merneptah Stele", status: "draft" });
+    expect(a!.persons).toHaveLength(1);
+    expect(a!.persons[0]).toMatchObject({
+      id: "per-b@art-stele", personId: "per-b", personName: "Beta", relation: "corroborates", note: "Named.",
+    });
+    expect(a!.persons[0].citations[0]).toMatchObject({ title: "Article B", locator: "p. 4" });
   });
   it("returns an issue with its views and linked events", async () => {
     const { getIssue } = await import("./timeline");
@@ -189,5 +204,47 @@ describe("getTimelineForRange", () => {
     const { getTimelineForRange } = await import("./timeline");
     const r = getTimelineForRange({ start: 66_001_001 as never, end: 66_001_010 as never });
     expect(r).toMatchObject({ events: [], issues: [], artifacts: [] });
+  });
+});
+
+describe("persons", () => {
+  it("getPersons lists everyone ordered by lived earliest then name", async () => {
+    const { getPersons } = await import("./timeline");
+    const all = getPersons();
+    expect(all).toHaveLength(4);
+    const dated = all.filter((p) => p.lived !== null).map((p) => p.id);
+    expect(dated).toEqual(["per-d", "per-a", "per-b"]);
+    const b = all.find((p) => p.id === "per-b");
+    expect(b).toEqual({
+      id: "per-b", name: "Beta", role: "king of Judah", evidence: "corroborates", hasTension: true,
+      status: "draft", lived: { earliest: -700, latest: -650 },
+    });
+    expect(all.find((p) => p.id === "per-c")).toMatchObject({ lived: null, hasTension: false, evidence: "none" });
+  });
+
+  it("getPerson returns the full record", async () => {
+    const { getPerson } = await import("./timeline");
+    const p = getPerson("per-b");
+    expect(p).toMatchObject({
+      id: "per-b", name: "Beta", alsoKnownAs: ["Bee", "Betty"], summary: "Beta sum",
+      eventIds: ["ev-exodus"], issueIds: ["iss-480"],
+    });
+    expect(p!.citations[0]).toMatchObject({ title: "Book A", locator: "p. 3" });
+    expect(p!.attestations).toHaveLength(1);
+    expect(p!.attestations[0]).toMatchObject({
+      id: "per-b@art-stele", artifactId: "art-stele", artifactName: "Merneptah Stele",
+      artifactKind: "inscription", relation: "corroborates", note: "Named.",
+    });
+    expect(p!.attestations[0].citations[0]).toMatchObject({ title: "Article B", locator: "p. 4" });
+    expect(p!.verses).toHaveLength(1);
+    expect(getPerson("per-a")!.alsoKnownAs).toEqual([]);
+    expect(getPerson("nope")).toBeNull();
+  });
+
+  it("getTimelineForRange returns persons by their verse links", async () => {
+    const { getTimelineForRange } = await import("./timeline");
+    const r = getTimelineForRange({ start: 14_001_002 as never, end: 14_001_005 as never });
+    expect(r.persons.map((p) => p.id)).toEqual(["per-b"]);
+    expect(getTimelineForRange({ start: 66_001_001 as never, end: 66_001_002 as never }).persons).toEqual([]);
   });
 });

@@ -177,6 +177,7 @@ export interface ArtifactSummary {
 }
 
 export interface ArtifactDetail extends ArtifactSummary {
+  status: ReviewStatus;
   language: string;
   summary: string;
   discovered: { year: number | null; place: string | null } | null;
@@ -184,6 +185,35 @@ export interface ArtifactDetail extends ArtifactSummary {
   citations: Citation[];
   verses: VerseLink[];
   attestations: { id: string; eventId: string; eventTitle: string; relation: Relation; note: string; citations: Citation[] }[];
+  /** The people this object or text attests, and how. */
+  persons: { id: string; personId: string; personName: string; relation: Relation; note: string; citations: Citation[] }[];
+}
+
+/**
+ * How strongly sources outside the Bible attest that a person existed — DERIVED by the builder
+ * from their attestations, never authored. `none` means no outside source bears on them at all.
+ */
+export type EvidenceGrade = "corroborates" | "partially-corroborates" | "consistent" | "silent" | "none";
+
+export interface PersonSummary {
+  id: string;
+  name: string;
+  role: string;
+  evidence: EvidenceGrade;
+  /** A source outside the Bible contradicts a biblical detail about them (not their existence). */
+  hasTension: boolean;
+  status: ReviewStatus;
+  lived: { earliest: number; latest: number } | null;
+}
+
+export interface PersonDetail extends PersonSummary {
+  alsoKnownAs: string[];
+  summary: string;
+  citations: Citation[];
+  attestations: (Omit<EventAttestation, "citations"> & { citations: Citation[] })[];
+  verses: VerseLink[];
+  eventIds: string[];
+  issueIds: string[];
 }
 
 export interface IssueSummary {
@@ -210,7 +240,9 @@ export interface TimelineWindow {
 
 // --- Shared lookups ---------------------------------------------------------------------------
 
-type SubjectKind = "era" | "event" | "position" | "argument" | "artifact" | "attestation" | "issue" | "issue_view";
+type SubjectKind =
+  | "era" | "event" | "position" | "argument" | "artifact" | "attestation" | "issue" | "issue_view"
+  | "person" | "person_attestation";
 
 function citationsFor(kind: SubjectKind, id: string): Citation[] {
   return all<Citation>(
@@ -224,7 +256,7 @@ function citationsFor(kind: SubjectKind, id: string): Citation[] {
   );
 }
 
-function versesFor(kind: "event" | "argument" | "artifact" | "issue", id: string): VerseLink[] {
+function versesFor(kind: "event" | "argument" | "artifact" | "issue" | "person", id: string): VerseLink[] {
   return all<VerseLink>(
     `SELECT start_verse_id AS start, end_verse_id AS "end", link_type AS linkType, note
      FROM verse_links WHERE subject_kind = ? AND subject_id = ?
@@ -280,14 +312,14 @@ export function getTimelineWindow({ from, to, axis }: { from: number; to: number
   return { available: true, eras, events };
 }
 
-/** Id and title only, for listing related events without loading each one in full. */
-export function getEventTitles(ids: readonly string[]): { id: string; title: string }[] {
+/** Summary rows for a list of event ids, without positions or citations, in one query. */
+export function getEventSummaries(ids: readonly string[]): EventSummary[] {
   if (ids.length === 0) return [];
-  return all<{ id: string; title: string }>(
-    `SELECT event_id AS id, title FROM events WHERE event_id IN (${ids.map(() => "?").join(",")})
+  return all<EventSummaryRow>(
+    `SELECT ${EVENT_SUMMARY_COLUMNS} FROM events WHERE event_id IN (${ids.map(() => "?").join(",")})
      ORDER BY earliest_year, event_id`,
     ...ids
-  );
+  ).map(toSummary);
 }
 
 /** Summary rows for a list of issue ids, without their views and citations. */
@@ -344,11 +376,11 @@ export function getEvent(id: string): EventDetail | null {
 
 export function getArtifact(id: string): ArtifactDetail | null {
   const row = get<{
-    id: string; name: string; kind: string; madeEarliest: number | null; madeLatest: number | null; language: string;
+    id: string; name: string; kind: string; status: ReviewStatus; madeEarliest: number | null; madeLatest: number | null; language: string;
     summary: string; discoveredYear: number | null; discoveredPlace: string | null;
     institution: string | null; accession: string | null;
   }>(
-    `SELECT artifact_id AS id, name, kind, made_earliest AS madeEarliest, made_latest AS madeLatest,
+    `SELECT artifact_id AS id, name, kind, status, made_earliest AS madeEarliest, made_latest AS madeLatest,
             language, summary, discovered_year AS discoveredYear, discovered_place AS discoveredPlace,
             institution, accession
      FROM artifacts WHERE artifact_id = ?`,
@@ -361,10 +393,17 @@ export function getArtifact(id: string): ArtifactDetail | null {
      WHERE t.artifact_id = ? ORDER BY e.earliest_year, e.event_id`,
     id
   ).map((attestation) => ({ ...attestation, citations: citationsFor("attestation", attestation.id) }));
+  const persons = all<{ id: string; personId: string; personName: string; relation: Relation; note: string }>(
+    `SELECT t.attestation_id AS id, t.person_id AS personId, p.name AS personName, t.relation, t.note
+     FROM person_attestations t JOIN persons p ON p.person_id = t.person_id
+     WHERE t.artifact_id = ? ORDER BY p.lived_earliest, p.name`,
+    id
+  ).map((attestation) => ({ ...attestation, citations: citationsFor("person_attestation", attestation.id) }));
   return {
     id: row.id,
     name: row.name,
     kind: row.kind,
+    status: row.status,
     made: row.madeEarliest !== null && row.madeLatest !== null ? { earliest: row.madeEarliest, latest: row.madeLatest } : null,
     language: row.language,
     summary: row.summary,
@@ -375,6 +414,7 @@ export function getArtifact(id: string): ArtifactDetail | null {
     citations: citationsFor("artifact", id),
     verses: versesFor("artifact", id),
     attestations,
+    persons,
   };
 }
 
@@ -395,6 +435,57 @@ export function getIssue(id: string): IssueDetail | null {
   return { ...row, citations: citationsFor("issue", id), views, eventIds, verses: versesFor("issue", id) };
 }
 
+const PERSON_SUMMARY_COLUMNS = `person_id AS id, name, role, evidence, has_tension AS hasTension, status,
+  lived_earliest AS livedEarliest, lived_latest AS livedLatest`;
+
+type PersonSummaryRow = Omit<PersonSummary, "lived" | "hasTension"> & {
+  hasTension: number;
+  livedEarliest: number | null;
+  livedLatest: number | null;
+};
+
+function toPersonSummary({ livedEarliest, livedLatest, hasTension, ...row }: PersonSummaryRow): PersonSummary {
+  return {
+    ...row,
+    hasTension: hasTension === 1,
+    lived: livedEarliest !== null && livedLatest !== null ? { earliest: livedEarliest, latest: livedLatest } : null,
+  };
+}
+
+/** Everyone, those with known dates first in date order, then the rest by name. */
+export function getPersons(): PersonSummary[] {
+  return all<PersonSummaryRow>(
+    `SELECT ${PERSON_SUMMARY_COLUMNS} FROM persons
+     ORDER BY lived_earliest IS NULL, lived_earliest, name, person_id`
+  ).map(toPersonSummary);
+}
+
+export function getPerson(id: string): PersonDetail | null {
+  const row = get<PersonSummaryRow & { summary: string; alsoKnownAs: string | null }>(
+    `SELECT ${PERSON_SUMMARY_COLUMNS}, summary, also_known_as AS alsoKnownAs FROM persons WHERE person_id = ?`,
+    id
+  );
+  if (!row) return null;
+  const { summary, alsoKnownAs, ...summaryRow } = row;
+  const attestations = all<Omit<EventAttestation, "citations">>(
+    `SELECT t.attestation_id AS id, t.artifact_id AS artifactId, a.name AS artifactName, a.kind AS artifactKind,
+            t.relation, t.note
+     FROM person_attestations t JOIN artifacts a ON a.artifact_id = t.artifact_id
+     WHERE t.person_id = ? ORDER BY a.made_earliest, a.artifact_id`,
+    id
+  ).map((attestation) => ({ ...attestation, citations: citationsFor("person_attestation", attestation.id) }));
+  return {
+    ...toPersonSummary(summaryRow),
+    alsoKnownAs: alsoKnownAs ? (JSON.parse(alsoKnownAs) as string[]) : [],
+    summary,
+    citations: citationsFor("person", id),
+    attestations,
+    verses: versesFor("person", id),
+    eventIds: all<{ id: string }>(`SELECT event_id AS id FROM person_events WHERE person_id = ? ORDER BY event_id`, id).map((e) => e.id),
+    issueIds: all<{ id: string }>(`SELECT issue_id AS id FROM issue_persons WHERE person_id = ? ORDER BY issue_id`, id).map((i) => i.id),
+  };
+}
+
 /**
  * Everything on the timeline that a passage touches: events, issues and artifacts with a verse
  * link intersecting the range. An event also counts when one of its ARGUMENTS cites a verse in
@@ -406,6 +497,7 @@ export function getTimelineForRange(range: VerseRange): {
   events: EventSummary[];
   issues: IssueSummary[];
   artifacts: ArtifactSummary[];
+  persons: PersonSummary[];
 } {
   const events = all<EventSummaryRow>(
     `SELECT ${EVENT_SUMMARY_COLUMNS} FROM events WHERE event_id IN (
@@ -442,5 +534,13 @@ export function getTimelineForRange(range: VerseRange): {
     ...artifact,
     made: madeEarliest !== null && madeLatest !== null ? { earliest: madeEarliest, latest: madeLatest } : null,
   }));
-  return { events, issues, artifacts };
+  const persons = all<PersonSummaryRow>(
+    `SELECT ${PERSON_SUMMARY_COLUMNS} FROM persons WHERE person_id IN (
+       SELECT subject_id FROM verse_links
+       WHERE subject_kind = 'person' AND start_verse_id <= ? AND end_verse_id >= ?
+     ) ORDER BY lived_earliest IS NULL, lived_earliest, name`,
+    range.end,
+    range.start
+  ).map(toPersonSummary);
+  return { events, issues, artifacts, persons };
 }

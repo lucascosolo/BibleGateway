@@ -1,3 +1,4 @@
 # Build artifacts: bible.db, timeline.db, audio.db and their WAL files (AGENTS.md: data/bible.db is gitignored).
 /data/
 __pycache__/
+/.agent/

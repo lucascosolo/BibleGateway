@@ -1,0 +1,35 @@
+id = "pontius-pilate"
+name = "Pontius Pilate"
+role = "Roman prefect of Judaea (26/27–36/37 CE)"
+summary = """
+The Roman governor who sentenced Jesus to crucifixion. Attested by an inscription bearing his \
+name and title, and by two Roman-era historians."""
+status = "draft"
+verses = [
+  { ref = "Luke.3.1", link = "describes" },
+  { ref = "Mark.15.1-Mark.15.15", link = "describes" },
+]
+citations = [{ source = "wikipedia-pontius-pilate" }]
+
+[[attestations]]
+artifact = "pilate-stone"
+relation = "corroborates"
+note = """
+A building dedication by "[Ponti]us Pilatus, [Praef]ectus Iuda[ea]e" — his name and his title, \
+prefect of Judaea, carved in his own time."""
+citations = [
+  { source = "ae-1963-104" },
+  { source = "wikipedia-pilate-stone" },
+]
+
+[[attestations]]
+artifact = "tacitus-annals-15-44"
+relation = "corroborates"
+note = "Names Pontius Pilate as the procurator under whom Christus was executed."
+citations = [{ source = "tacitus-annals-15-latin", locator = "15.44" }]
+
+[[attestations]]
+artifact = "josephus-antiquities-18-55"
+relation = "corroborates"
+note = "Josephus narrates episodes from Pilate's governorship of Judaea."
+citations = [{ source = "perseus-josephus-ant-18", locator = "18.55" }]
