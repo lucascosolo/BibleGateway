@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `4084ffd3c4f08b16`, draft entries only. Check each claim against its cited source; when an
+Build `c1cc2c2f783ceeae`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -307,7 +307,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 ## Events
 
 - [ ] **Composition of Daniel 7–12** — `events/daniel-composition.toml` (draft)
-  - Axis / confidence: composition / contested; range 600 BCE – 164 BCE
+  - Axis / confidence: composition / contested; range 167 BCE – 164 BCE
   - Summary: This asks when the visions of Daniel were written. The book is set in the 6th century BCE, in the Babylonian and Persian courts. Most critical scholars date the visions to the persecution under the Seleucid king Antiochus IV in the 160s BCE. Conservative scholars hold that part or all of them may go back to the 6th century.
   - Verse (describes): Dan 7:1 – Dan 12:13
   - Position **167–164 BCE (Antiochus IV's persecution)** (167 BCE – 164 BCE, held by John J. Collins): Collins holds that chapters 7-12 were written during the persecution of the Jews under Antiochus IV Epiphanes, before the temple was rededicated. Critical here means the mainstream scholarly view.
@@ -320,7 +320,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
       - Source: *Daniel (Tyndale Old Testament Commentaries)*, Joyce G. Baldwin, 1978
 
 - [ ] **John on Patmos and the composition of Revelation** — `events/revelation-composition-patmos.toml` (draft)
-  - Axis / confidence: composition / contested; range 81 CE – 96 CE
+  - Axis / confidence: composition / contested; range 95 CE
   - Summary: Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Wikipedia reports that the usual date is about 95 CE.
   - Verse (describes): Rev 1:9 – Rev 1:11 (John is on Patmos 'on account of the word of God')
   - Position **End of Domitian's reign** (81 CE – 96 CE, held by Irenaeus of Lyons): Irenaeus (Against Heresies 5.30.3, read directly: "towards the end of Domitian's reign"; Eusebius quotes him similarly) says the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian". The years given here are simply the years of Domitian's reign, 81 to 96.
@@ -366,15 +366,13 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (alludes): Ps 105:9 – Ps 105:15 (The covenant with Abraham, and God's protection of the wandering patriarchs)
   - Verse (alludes): Acts 7:2 – Acts 7:5 (Stephen says the God of glory appeared to Abraham in Mesopotamia. Abraham then moved to Haran, then Canaan)
   - Verse (alludes): Heb 11:8 – Heb 11:10 (By faith Abraham obeyed and set out, not knowing where he was going)
-  - Position **Ussher: 1922 BC** (1922 BCE, held by James Ussher): Ussher counted 2082 years from creation to Abraham's move, from 4004 to 1922 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
-    - Source: *Ussher chronology*, Wikipedia <https://en.wikipedia.org/wiki/Ussher_chronology>
   - Position **A 2nd-millennium BCE patriarchal age** (2000 BCE – 1001 BCE, held by William F. Albright and G. Ernest Wright): Albright and Wright believed the patriarchs were real people, or believable composites of real people, who lived in the 2nd millennium BCE. The range is the whole thousand years, not a narrower claim.
     - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
   - Position **Ussher, Annals: Abraham called from Ur, 1922 BC (AM 2083)** (1922 BCE, held by James Ussher): Ussher puts the call of Abraham out of Ur in 1922 BC. After Terah died at Haran, he places a second call in 1921 BC. Ussher's Annals use the same Bible-based count.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 70-71 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Jacob's family descends into Egypt** — `events/jacob-descent-egypt.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1928 BCE – 1700 BCE
+  - Axis / confidence: narrative / speculative; range 1860 BCE – 1700 BCE
   - Summary: Jacob and his household, seventy people in all, move to Egypt at Joseph's invitation during the famine. They settle in Goshen. The date depends on how the exodus is dated. Whether this happened historically is a separate question (see the patriarchs issue).
   - Verse (describes): Gen 45:9 – Gen 45:28 (Joseph invites his father, and Jacob decides to go)
   - Verse (describes): Gen 46:1 – Gen 46:34 (God reassures Jacob at Beersheba. The list of those who went down. Arrival in Goshen)
@@ -394,7 +392,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 135-138 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Joseph in Egypt** — `events/joseph-in-egypt.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1860 BCE – 1715 BCE
+  - Axis / confidence: narrative / speculative; range 1860 BCE – 1840 BCE
   - Summary: Joseph is sold by his brothers to traders. He rises from slavery and prison to become Pharaoh's vizier, and he saves Egypt and his own family from famine. Many scholars read the story as a late wisdom novella (see the patriarchs issue). The one dating position here sets limits only on when his family arrived.
   - Verse (describes): Gen 37:1 – Gen 37:36 (Sold into Egypt)
   - Verse (describes): Gen 39:1 – Gen 39:23 (Potiphar's house and prison)
@@ -410,92 +408,6 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - Position **Ussher, Annals: Joseph made governor, 1715 BC (age 30)** (1715 BCE, held by James Ussher): Ussher has Joseph, aged 30, explain Pharaoh's dreams and be made governor in 1715 BC. The seven years of famine begin in 1708 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 131-133 <https://archive.org/details/AnnalsOfTheWorld>
-
-- [ ] **The Sinai covenant and the giving of the law** — `events/sinai-covenant.toml` (draft)
-  - Axis / confidence: narrative / contested; range 1491 BCE – 1260 BCE
-  - Summary: Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue).
-  - Verse (describes): Exod 19:1 – Exod 19:25 (arrival at Sinai in the third month; God appears on the mountain)
-  - Verse (describes): Exod 20:1 – Exod 20:21 (the Ten Commandments)
-  - Verse (describes): Exod 21:1 – Exod 23:33 (the Book of the Covenant, a set of laws)
-  - Verse (describes): Exod 24:1 – Exod 24:18 (the covenant is sealed; Moses goes up the mountain)
-  - Verse (describes): Exod 31:18 (the two stone tablets)
-  - Verse (describes): Exod 32:1 – Exod 34:35 (the golden calf, and the tablets made again)
-  - Verse (alludes): Deut 5:1 – Deut 5:22 (Moses recalls the covenant at Horeb, and the Ten Commandments)
-  - Verse (alludes): Neh 9:13 – Neh 9:14 (You came down on Mount Sinai and gave them right rules and the Sabbath)
-  - Verse (alludes): Ps 68:7 – Ps 68:8 (the earth shook at God's presence, and Sinai itself before God)
-  - Verse (alludes): Acts 7:37 – Acts 7:44 (Stephen: Moses received living words at Sinai)
-  - Verse (alludes): Gal 3:17 – Gal 3:19 (the law came 430 years after the promise to Abraham)
-  - Verse (alludes): Heb 12:18 – Heb 12:21 (You have not come to a mountain that can be touched)
-  - Position **With a 15th-century exodus (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): The scholar Bryant G. Wood dates the exodus to about 1446 BC. Exodus 19:1 puts Sinai in the third month after leaving Egypt, so the covenant falls in the same year.
-    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 477 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **With a 13th-century exodus (c. 1260 BCE)** (1260 BCE, held by K. A. Kitchen): The scholar K. A. Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II. Sinai follows within months. Kitchen also argues that the covenant texts match the form of Hittite treaties from about 1400 to 1200 BC.
-    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 478–479 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **Ussher, Annals: Israel at Sinai, 1491 BC** (1491 BCE, held by James Ussher): The chronologist James Ussher dates the exodus to 2513b AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year.
-    - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 192 and preceding exodus entries <https://archive.org/details/AnnalsOfTheWorld>
-
-- [ ] **The fall of Jericho and the conquest of Canaan** — `events/conquest-of-canaan.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1451 BCE – 1210 BCE
-  - Summary: Israel crosses the Jordan under Joshua. Jericho falls, and then Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE. Most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date.
-  - Verse (describes): Josh 3:1 – Josh 4:24 (The crossing of the Jordan)
-  - Verse (describes): Josh 5:13 – Josh 6:27 (The fall of Jericho)
-  - Verse (describes): Josh 7:1 – Josh 8:29 (Achan and the destruction of Ai)
-  - Verse (describes): Josh 9:1 – Josh 10:43 (Gibeon and the southern campaign)
-  - Verse (describes): Josh 11:1 – Josh 11:23 (The northern coalition. Hazor is burned)
-  - Verse (describes): Josh 12:1 – Josh 12:24 (A list of defeated kings)
-  - Verse (alludes): Josh 24:11 – Josh 24:13 (Joshua's farewell: you crossed the Jordan and came to Jericho)
-  - Verse (describes): Judg 1:1 – Judg 1:36 (The same period, seen as an incomplete conquest by the tribes)
-  - Verse (alludes): Neh 9:22 – Neh 9:25 (You gave them kingdoms and peoples; they took fortified cities)
-  - Verse (alludes): Ps 44:1 – Ps 44:3 (Our fathers did not win the land by their own sword)
-  - Verse (alludes): Ps 78:54 – Ps 78:55 (He drove out nations and apportioned their inheritance)
-  - Verse (alludes): Ps 105:43 – Ps 105:45 (He gave them the lands of the nations)
-  - Verse (alludes): Acts 7:45 (Stephen says the tabernacle was brought in with Joshua when they drove out the nations)
-  - Verse (alludes): Heb 11:30 – Heb 11:31 (By faith the walls of Jericho fell. Rahab is also named)
-  - Position **Conquest c. 1406-1400 BCE** (1406 BCE – 1400 BCE, held by Bryant G. Wood): Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400. The Jubilee count (Israel's cycle of 50-year release years) is worked backward to 1406.
-    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 488–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Argument (for): Kitchen's own account of Jericho admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery. He says this suits a destruction around 1400 better than a 13th-century one.
-      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-      - Verse (describes): Josh 6:20
-    - Argument (against): Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE.
-      - Source: *Battle of Jericho*, Wikipedia, sections on Kenyon and radiocarbon testing <https://en.wikipedia.org/wiki/Battle_of_Jericho>
-      - Verse (describes): Josh 6:20
-  - Position **Conquest 1220-1210 BCE** (1220 BCE – 1210 BCE, held by K. A. Kitchen): Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476). So the conquest must come before that.
-    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476, 478 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
-    - Argument (for): Kitchen blames erosion for the lack of 13th-century remains at Jericho. There may have been a Jericho between 1275 and 1220. But above the tiny remains of 1400-1275, all of it has long since gone.
-      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-      - Verse (describes): Josh 6:20
-    - Argument (against): Wood says no evidence has been found at Jericho and Ai for settlement in the late 13th century. He adds that a destruction of Hazor around 1230 BC would leave no city for the Jabin of Judges 4 to rule.
-      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476–477 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-      - Verse (describes): Josh 11:10 – Josh 11:11
-      - Verse (describes): Judg 4:2
-  - Position **Ussher, Annals: fall of Jericho, 1451 BC** (1451 BCE, held by James Ussher): Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
-    - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 312 <https://archive.org/details/AnnalsOfTheWorld>
-
-- [ ] **The Exodus from Egypt** — `events/exodus.toml` (draft)
-  - Axis / confidence: narrative / contested; range 1450 BCE – 1213 BCE
-  - Summary: This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates. One is in the 15th century BCE, read from 1 Kings 6:1. The other is in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan.
-  - Verse (background): Exod 1:11 (The store cities Pithom and Raamses)
-  - Verse (dates): Exod 12:40 – Exod 12:41 (430 years in Egypt)
-  - Position **Early date (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): Wood takes the 480 years of 1 Kings 6:1 as a plain count back from the fourth year of Solomon. That puts the Exodus in the middle of the 15th century BCE. Traditional here means the date that follows the Bible's own numbers.
-    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 475–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Argument (for): 1 Kings 6:1 dates the start of the temple to the 480th year after Israel came out of Egypt. That year is Solomon's fourth. Counting back from a fourth year of about 967/966 BCE gives about 1446 BCE. Young says the fourth year is the spring of 967 or 966, depending on the counting rule.
-      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-      - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, pp. 599, 601 <https://www.rcyoung.org/articles/solomon.pdf>
-      - Verse (dates): 1Kgs 6:1
-    - Argument (against): Exodus 1:11 has the Israelites building a store city called Raamses. That name is linked with the Ramesside pharaohs of the 13th century.
-      - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
-      - Verse (dates): Exod 1:11
-  - Position **Late date (13th century BCE, reign of Ramesses II)** (1279 BCE – 1213 BCE, held by K. A. Kitchen): Kitchen places the Exodus in the 13th century BCE under Ramesses II. Ramesses reigned about 1279-1213 BCE on the dating most Egyptologists follow. Critical here means the date that leans on Egyptian evidence.
-    - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
-    - Source: *Ramesses II (reign dates following von Beckerath 1997)*, Wikipedia <https://en.wikipedia.org/wiki/Ramesses_II>
-    - Argument (for): The store city "Raamses" of Exodus 1:11 fits the building program of the Ramesside kings in the eastern Nile Delta.
-      - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
-      - Verse (dates): Exod 1:11
-    - Argument (against): Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th. A late date has to treat the figure as something other than a plain count.
-      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-      - Verse (dates): 1Kgs 6:1
-  - Attestation — Merneptah Stele *consistent*: The Stele does not mention an exodus. It shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that. This fits either date above.
-    - Source: *The Context of Scripture, Volume 2: Monumental Inscriptions*, William W. Hallo and K. Lawson Younger Jr. (eds.), 2000, pp. 40–41
 
 - [ ] **Ruth** — `events/ruth.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1400 BCE – 1073 BCE
@@ -544,8 +456,56 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Position **Ussher, Annals: Deborah judges, 1285 BC** (1285 BCE, held by James Ussher): Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim is under 1285 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 351 <https://archive.org/details/AnnalsOfTheWorld>
 
+- [ ] **The Exodus from Egypt** — `events/exodus.toml` (draft)
+  - Axis / confidence: narrative / contested; range 1279 BCE – 1213 BCE
+  - Summary: This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates. One is in the 15th century BCE, read from 1 Kings 6:1. The other is in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan.
+  - Verse (background): Exod 1:11 (The store cities Pithom and Raamses)
+  - Verse (dates): Exod 12:40 – Exod 12:41 (430 years in Egypt)
+  - Position **Early date (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): Wood takes the 480 years of 1 Kings 6:1 as a plain count back from the fourth year of Solomon. That puts the Exodus in the middle of the 15th century BCE. Traditional here means the date that follows the Bible's own numbers.
+    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 475–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+    - Argument (for): 1 Kings 6:1 dates the start of the temple to the 480th year after Israel came out of Egypt. That year is Solomon's fourth. Counting back from a fourth year of about 967/966 BCE gives about 1446 BCE. Young says the fourth year is the spring of 967 or 966, depending on the counting rule.
+      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+      - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, pp. 599, 601 <https://www.rcyoung.org/articles/solomon.pdf>
+      - Verse (dates): 1Kgs 6:1
+    - Argument (against): Exodus 1:11 has the Israelites building a store city called Raamses. That name is linked with the Ramesside pharaohs of the 13th century.
+      - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
+      - Verse (dates): Exod 1:11
+  - Position **Late date (13th century BCE, reign of Ramesses II)** (1279 BCE – 1213 BCE, held by K. A. Kitchen): Kitchen places the Exodus in the 13th century BCE under Ramesses II. Ramesses reigned about 1279-1213 BCE on the dating most Egyptologists follow. Critical here means the date that leans on Egyptian evidence.
+    - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
+    - Source: *Ramesses II (reign dates following von Beckerath 1997)*, Wikipedia <https://en.wikipedia.org/wiki/Ramesses_II>
+    - Argument (for): The store city "Raamses" of Exodus 1:11 fits the building program of the Ramesside kings in the eastern Nile Delta.
+      - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
+      - Verse (dates): Exod 1:11
+    - Argument (against): Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th. A late date has to treat the figure as something other than a plain count.
+      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+      - Verse (dates): 1Kgs 6:1
+  - Attestation — Merneptah Stele *consistent*: The Stele does not mention an exodus. It shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that. This fits either date above.
+    - Source: *The Context of Scripture, Volume 2: Monumental Inscriptions*, William W. Hallo and K. Lawson Younger Jr. (eds.), 2000, pp. 40–41
+
+- [ ] **The Sinai covenant and the giving of the law** — `events/sinai-covenant.toml` (draft)
+  - Axis / confidence: narrative / contested; range 1260 BCE
+  - Summary: Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue).
+  - Verse (describes): Exod 19:1 – Exod 19:25 (arrival at Sinai in the third month; God appears on the mountain)
+  - Verse (describes): Exod 20:1 – Exod 20:21 (the Ten Commandments)
+  - Verse (describes): Exod 21:1 – Exod 23:33 (the Book of the Covenant, a set of laws)
+  - Verse (describes): Exod 24:1 – Exod 24:18 (the covenant is sealed; Moses goes up the mountain)
+  - Verse (describes): Exod 31:18 (the two stone tablets)
+  - Verse (describes): Exod 32:1 – Exod 34:35 (the golden calf, and the tablets made again)
+  - Verse (alludes): Deut 5:1 – Deut 5:22 (Moses recalls the covenant at Horeb, and the Ten Commandments)
+  - Verse (alludes): Neh 9:13 – Neh 9:14 (You came down on Mount Sinai and gave them right rules and the Sabbath)
+  - Verse (alludes): Ps 68:7 – Ps 68:8 (the earth shook at God's presence, and Sinai itself before God)
+  - Verse (alludes): Acts 7:37 – Acts 7:44 (Stephen: Moses received living words at Sinai)
+  - Verse (alludes): Gal 3:17 – Gal 3:19 (the law came 430 years after the promise to Abraham)
+  - Verse (alludes): Heb 12:18 – Heb 12:21 (You have not come to a mountain that can be touched)
+  - Position **With a 15th-century exodus (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): The scholar Bryant G. Wood dates the exodus to about 1446 BC. Exodus 19:1 puts Sinai in the third month after leaving Egypt, so the covenant falls in the same year.
+    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 477 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+  - Position **With a 13th-century exodus (c. 1260 BCE)** (1260 BCE, held by K. A. Kitchen): The scholar K. A. Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II. Sinai follows within months. Kitchen also argues that the covenant texts match the form of Hittite treaties from about 1400 to 1200 BC.
+    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 478–479 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+  - Position **Ussher, Annals: Israel at Sinai, 1491 BC** (1491 BCE, held by James Ussher): The chronologist James Ussher dates the exodus to 2513b AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year.
+    - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 192 and preceding exodus entries <https://archive.org/details/AnnalsOfTheWorld>
+
 - [ ] **Gideon** — `events/gideon.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1245 BCE – 1073 BCE
+  - Axis / confidence: narrative / speculative; range 1230 BCE – 1073 BCE
   - Summary: Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal. With 300 men he routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself.
   - Verse (describes): Judg 6:1 – Judg 6:40 (Midianite oppression, the call, the altar of Baal and the fleece)
   - Verse (describes): Judg 7:1 – Judg 7:25 (The 300 men and the night attack)
@@ -561,6 +521,44 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Gideon*, Wikipedia <https://en.wikipedia.org/wiki/Gideon>
   - Position **Ussher, Annals: Gideon called, 1245 BC** (1245 BCE, held by James Ussher): Ussher dates Gideon's call to 1245 BC, after the fourth oppression, by the Midianites. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 356 <https://archive.org/details/AnnalsOfTheWorld>
+
+- [ ] **The fall of Jericho and the conquest of Canaan** — `events/conquest-of-canaan.toml` (draft)
+  - Axis / confidence: narrative / speculative; range 1220 BCE – 1210 BCE
+  - Summary: Israel crosses the Jordan under Joshua. Jericho falls, and then Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE. Most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date.
+  - Verse (describes): Josh 3:1 – Josh 4:24 (The crossing of the Jordan)
+  - Verse (describes): Josh 5:13 – Josh 6:27 (The fall of Jericho)
+  - Verse (describes): Josh 7:1 – Josh 8:29 (Achan and the destruction of Ai)
+  - Verse (describes): Josh 9:1 – Josh 10:43 (Gibeon and the southern campaign)
+  - Verse (describes): Josh 11:1 – Josh 11:23 (The northern coalition. Hazor is burned)
+  - Verse (describes): Josh 12:1 – Josh 12:24 (A list of defeated kings)
+  - Verse (alludes): Josh 24:11 – Josh 24:13 (Joshua's farewell: you crossed the Jordan and came to Jericho)
+  - Verse (describes): Judg 1:1 – Judg 1:36 (The same period, seen as an incomplete conquest by the tribes)
+  - Verse (alludes): Neh 9:22 – Neh 9:25 (You gave them kingdoms and peoples; they took fortified cities)
+  - Verse (alludes): Ps 44:1 – Ps 44:3 (Our fathers did not win the land by their own sword)
+  - Verse (alludes): Ps 78:54 – Ps 78:55 (He drove out nations and apportioned their inheritance)
+  - Verse (alludes): Ps 105:43 – Ps 105:45 (He gave them the lands of the nations)
+  - Verse (alludes): Acts 7:45 (Stephen says the tabernacle was brought in with Joshua when they drove out the nations)
+  - Verse (alludes): Heb 11:30 – Heb 11:31 (By faith the walls of Jericho fell. Rahab is also named)
+  - Position **Conquest c. 1406-1400 BCE** (1406 BCE – 1400 BCE, held by Bryant G. Wood): Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400. The Jubilee count (Israel's cycle of 50-year release years) is worked backward to 1406.
+    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 488–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+    - Argument (for): Kitchen's own account of Jericho admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery. He says this suits a destruction around 1400 better than a 13th-century one.
+      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+      - Verse (describes): Josh 6:20
+    - Argument (against): Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE.
+      - Source: *Battle of Jericho*, Wikipedia, sections on Kenyon and radiocarbon testing <https://en.wikipedia.org/wiki/Battle_of_Jericho>
+      - Verse (describes): Josh 6:20
+  - Position **Conquest 1220-1210 BCE** (1220 BCE – 1210 BCE, held by K. A. Kitchen): Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476). So the conquest must come before that.
+    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476, 478 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+    - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
+    - Argument (for): Kitchen blames erosion for the lack of 13th-century remains at Jericho. There may have been a Jericho between 1275 and 1220. But above the tiny remains of 1400-1275, all of it has long since gone.
+      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+      - Verse (describes): Josh 6:20
+    - Argument (against): Wood says no evidence has been found at Jericho and Ai for settlement in the late 13th century. He adds that a destruction of Hazor around 1230 BC would leave no city for the Jabin of Judges 4 to rule.
+      - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476–477 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+      - Verse (describes): Josh 11:10 – Josh 11:11
+      - Verse (describes): Judg 4:2
+  - Position **Ussher, Annals: fall of Jericho, 1451 BC** (1451 BCE, held by James Ussher): Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
+    - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 312 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Samson** — `events/samson.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1200 BCE – 1001 BCE
@@ -865,7 +863,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Cyrus Cylinder*, Livius.org <https://www.livius.org/sources/content/cyrus-cylinder/>
 
 - [ ] **The Second Temple: foundation and completion** — `events/second-temple-built.toml` (draft)
-  - Axis / confidence: narrative / contested; range 516 BCE – 400 BCE
+  - Axis / confidence: narrative / contested; range 450 BCE – 400 BCE
   - Summary: The exiles return, and in the second year Zerubbabel and Jeshua lay the foundation (Ezra 3). Work then stops. It starts again under the prophets Haggai and Zechariah, in the second year of King Darius. The house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), in spring 516 BCE. Some scholars date the building later.
   - Verse (describes): Ezra 3:8 (the second year after they came; Zerubbabel and Jeshua begin)
   - Verse (describes): Ezra 3:10 (the builders lay the foundation of Yahweh's temple)
@@ -884,21 +882,6 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Second Temple*, Wikipedia <https://en.wikipedia.org/wiki/Second_Temple>
     - Source: *Book of Haggai*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Haggai>
 
-- [ ] **Ezra's mission to Jerusalem** — `events/ezra-mission.toml` (draft)
-  - Axis / confidence: narrative / contested; range 458 BCE – 398 BCE
-  - Summary: Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king". Scholars dispute which Artaxerxes this is. Artaxerxes I gives 458 BCE, the most widely accepted date. Artaxerxes II gives 398 BCE. A third group reads "seventh" as a scribe's mistake.
-  - Verse (describes): Ezra 7:7 (Exiles go up in the seventh year of Artaxerxes)
-  - Verse (describes): Ezra 7:8 (Ezra arrives in the fifth month of the seventh year)
-  - Position **458 BCE (Artaxerxes I, seventh year)** (458 BCE – 457 BCE, held by Edwin M. Yamauchi): Yamauchi, in the Expositor's Bible Commentary (abridged), calls Artaxerxes I the traditional view and says "which we believe is correct". On that view Ezra arrived in 458 (457).
-    - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin, quotation from Yamauchi, Expositor's Bible Commentary (Abridged) <https://www.preceptaustin.org/ezra-7-commentary>
-  - Position **398 BCE (Artaxerxes II, seventh year)** (398 BCE, held by Albin van Hoonacker): On this view Nehemiah comes before Ezra, and Ezra came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). Wikipedia's Albin van Hoonacker article lists two of his works. They are his 1890 "Nehemie et Esdras. Nouvelle hypothese sur la chronologie de l'epoque de la Restauration juive" and his 1892 "Nehemie en l'an 20 d'Artaxerxes I. Esdras en l'an 7 d'Artaxerxes II". These argue for Ezra in year 7 of Artaxerxes II. The 398 conversion is the Ezra article's.
-    - Source: *Albin van Hoonacker*, Wikipedia, list of works, 1890 and 1892 <https://en.wikipedia.org/wiki/Albin_van_Hoonacker>
-    - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
-    - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
-    - Argument (for): Nehemiah and Ezra seem to know nothing of each other, and their missions do not overlap. Reversing the order puts Ezra about fifty years after Nehemiah.
-      - Source: *Artaxerxes I of Persia*, Wikipedia <https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia>
-      - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
-
 - [ ] **Nehemiah rebuilds the wall of Jerusalem** — `events/nehemiah-wall.toml` (draft)
   - Axis / confidence: narrative / contested; range 445 BCE – 444 BCE
   - Summary: In the twentieth year of King Artaxerxes (445 or 444 BCE), Nehemiah, the king's cupbearer, is sent to Jerusalem. The wall is finished in fifty-two days, despite opposition from Sanballat the Horonite. Letters found at Elephantine in Egypt, from 407 BCE, name Sanballat's sons and the high priest Johanan. That ties the Nehemiah story to a world we can check outside the Bible.
@@ -913,6 +896,21 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Attestation — Elephantine petition to rebuild the Yahu temple (407 BCE) *partially-corroborates*: A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall.
     - Source: *Elephantine papyri*, Wikipedia <https://en.wikipedia.org/wiki/Elephantine_papyri>
     - Source: *Sanballat the Horonite*, Wikipedia <https://en.wikipedia.org/wiki/Sanballat_the_Horonite>
+
+- [ ] **Ezra's mission to Jerusalem** — `events/ezra-mission.toml` (draft)
+  - Axis / confidence: narrative / contested; range 398 BCE
+  - Summary: Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king". Scholars dispute which Artaxerxes this is. Artaxerxes I gives 458 BCE, the most widely accepted date. Artaxerxes II gives 398 BCE. A third group reads "seventh" as a scribe's mistake.
+  - Verse (describes): Ezra 7:7 (Exiles go up in the seventh year of Artaxerxes)
+  - Verse (describes): Ezra 7:8 (Ezra arrives in the fifth month of the seventh year)
+  - Position **458 BCE (Artaxerxes I, seventh year)** (458 BCE – 457 BCE, held by Edwin M. Yamauchi): Yamauchi, in the Expositor's Bible Commentary (abridged), calls Artaxerxes I the traditional view and says "which we believe is correct". On that view Ezra arrived in 458 (457).
+    - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin, quotation from Yamauchi, Expositor's Bible Commentary (Abridged) <https://www.preceptaustin.org/ezra-7-commentary>
+  - Position **398 BCE (Artaxerxes II, seventh year)** (398 BCE, held by Albin van Hoonacker): On this view Nehemiah comes before Ezra, and Ezra came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). Wikipedia's Albin van Hoonacker article lists two of his works. They are his 1890 "Nehemie et Esdras. Nouvelle hypothese sur la chronologie de l'epoque de la Restauration juive" and his 1892 "Nehemie en l'an 20 d'Artaxerxes I. Esdras en l'an 7 d'Artaxerxes II". These argue for Ezra in year 7 of Artaxerxes II. The 398 conversion is the Ezra article's.
+    - Source: *Albin van Hoonacker*, Wikipedia, list of works, 1890 and 1892 <https://en.wikipedia.org/wiki/Albin_van_Hoonacker>
+    - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
+    - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
+    - Argument (for): Nehemiah and Ezra seem to know nothing of each other, and their missions do not overlap. Reversing the order puts Ezra about fifty years after Nehemiah.
+      - Source: *Artaxerxes I of Persia*, Wikipedia <https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia>
+      - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
 
 - [ ] **Alexander's conquest of the Levant** — `events/alexander-levant-332.toml` (draft)
   - Axis / confidence: narrative / contested; range 332 BCE
@@ -966,7 +964,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Antiquities of the Jews 15.380 (Lexundria)*, Flavius Josephus, trans. William Whiston <https://lexundria.com/j_aj/15.380/wst>
 
 - [ ] **The birth of Jesus** — `events/birth-of-jesus.toml` (draft)
-  - Axis / confidence: narrative / contested; range 6 BCE – 2 BCE
+  - Axis / confidence: narrative / contested; range 6 BCE – 4 BCE
   - Summary: Matthew sets Jesus's birth in the reign of Herod the king. Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death. Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved.
   - Verse (describes): Matt 1:18 – Matt 2:23 (The birth at Bethlehem in the days of Herod)
   - Verse (dates): Luke 2:1 – Luke 2:2 (A decree of Augustus, while Quirinius is governor of Syria)

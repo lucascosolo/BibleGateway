@@ -19,17 +19,6 @@ verses = [
 ]
 
 [[positions]]
-id = "ussher"
-label = "Ussher: 1922 BC"
-tradition = "traditional"
-earliest = -1922
-latest = -1922
-held_by = "James Ussher"
-summary = """
-Ussher counted 2082 years from creation to Abraham's move, from 4004 to 1922 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
-citations = [{ source = "wikipedia-ussher-chronology" }]
-
-[[positions]]
 id = "second-millennium"
 label = "A 2nd-millennium BCE patriarchal age"
 tradition = "archaeological"
