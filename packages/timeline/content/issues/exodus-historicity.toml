@@ -1,0 +1,30 @@
+id = "exodus-historicity"
+kind = "historical"
+title = "Did the Exodus happen as described?"
+status = "draft"
+summary = """
+A question prior to the date. No Egyptian record mentions an Israelite exodus, and scholars \
+divide over what the silence and the archaeology mean. Kept separate from the dating positions: \
+a view that the event did not happen as described has no date range to offer."""
+events = ["exodus"]
+verses = [{ ref = "Exod.12.40-Exod.12.41", link = "describes" }]
+citations = [
+  { source = "finkelstein-silberman-2001" },
+  { source = "hoffmeier-1997" },
+]
+
+[[views]]
+label = "Not as described"
+text = """
+Finkelstein and Silberman find no compelling archaeological evidence for an exodus as \
+narrated. They see in the story perhaps a distant memory of the expulsion of the Hyksos, \
+shaped into its present form in the late 7th century BCE, in Josiah's time, against Egyptian \
+domination; the early Israelites, on their reading, emerged from within Canaan."""
+citations = [{ source = "finkelstein-silberman-2001" }]
+
+[[views]]
+label = "An authentic tradition"
+text = """
+Hoffmeier examines the Egyptian evidence, including a Semitic presence in the Nile Delta, and \
+argues that it supports the authenticity of the Exodus tradition."""
+citations = [{ source = "hoffmeier-1997" }]

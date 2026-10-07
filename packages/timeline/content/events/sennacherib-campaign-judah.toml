@@ -1,0 +1,47 @@
+id = "sennacherib-campaign-judah"
+title = "Sennacherib's campaign against Judah"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+The Assyrian king Sennacherib's third campaign, in which he took the fortified cities of Judah, \
+besieged Lachish, and confronted Hezekiah at Jerusalem. One of the best-attested events in the \
+Hebrew Bible: the Assyrian annals and the palace reliefs at Nineveh describe it from the \
+Assyrian side."""
+verses = [
+  { ref = "2Kgs.18.13-2Kgs.19.37", link = "describes" },
+  { ref = "Isa.36.1-Isa.37.38", link = "describes" },
+  { ref = "2Chr.32.1-2Chr.32.23", link = "describes" },
+  { ref = "2Kgs.18.13", link = "dates", note = "Hezekiah's fourteenth year" },
+]
+
+[[positions]]
+id = "consensus"
+label = "701 BCE"
+tradition = "consensus"
+earliest = -701
+latest = -701
+summary = """
+The campaign is dated to 701 BCE from the Assyrian records; the date is not seriously disputed."""
+citations = [{ source = "wikipedia-sennacherib-levant" }]
+
+[[attestations]]
+artifact = "sennacherib-taylor-prism"
+relation = "corroborates"
+note = """
+Sennacherib's own account: 46 walled cities of Judah taken and Hezekiah shut up in Jerusalem \
+"like a bird in a cage". It claims tribute but not the city's capture, which agrees with \
+2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken."""
+citations = [
+  { source = "cojs-sennacherib-prisms" },
+  { source = "wikipedia-sennacherib-annals" },
+]
+
+[[attestations]]
+artifact = "lachish-reliefs"
+relation = "corroborates"
+note = """
+Depict the siege and fall of Lachish, where 2 Kings 18:14 and 18:17 place Sennacherib during \
+the campaign."""
+citations = [{ source = "bm-lachish-reliefs" }]

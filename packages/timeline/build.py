@@ -201,10 +201,25 @@ class Content:
     cited: set[str] = field(default_factory=set)
 
 
+def tidy(value: Any) -> Any:
+    """Strip surrounding whitespace from every string, recursively.
+
+    Long prose is written as indented multi-line TOML strings, which keep the indentation of
+    their first line. Normalising here keeps it out of the database and out of the fingerprint,
+    so re-indenting a file is not a content change."""
+    if isinstance(value, str):
+        return value.strip()
+    if isinstance(value, list):
+        return [tidy(item) for item in value]
+    if isinstance(value, dict):
+        return {key: tidy(item) for key, item in value.items()}
+    return value
+
+
 def read_toml(report: Report, path: Path) -> dict[str, Any] | None:
     try:
         with path.open("rb") as handle:
-            return tomllib.load(handle)
+            return tidy(tomllib.load(handle))
     except tomllib.TOMLDecodeError as error:
         report.error(str(path), f"invalid TOML: {error}")
     except OSError as error:

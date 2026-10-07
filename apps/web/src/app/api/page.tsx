@@ -36,6 +36,21 @@ const endpoints = [
   },
   {
     method: "GET",
+    path: "/api/timeline?from=-1500&to=-500&axis=narrative",
+    description: "Dated events as ranges, never points, with confidence and review status; composition dates on a separate axis.",
+  },
+  {
+    method: "GET",
+    path: "/api/timeline/events/exodus",
+    description: "One event's dating positions, cited arguments for each, corroborating inscriptions and objects, and linked issues.",
+  },
+  {
+    method: "GET",
+    path: "/api/timeline/passage?ref=1+Kings+6:1",
+    description: "Timeline events, chronological issues and outside sources that bear on a passage.",
+  },
+  {
+    method: "GET",
     path: "/api/translations",
     description: "Translation codes, licensing, attribution, scope, and copyright notices.",
   },

@@ -1,0 +1,14 @@
+id = "lachish-letters"
+name = "Lachish Letters"
+kind = "ostracon"
+made = { earliest = -590, latest = -586 }
+language = "Hebrew (paleo-Hebrew script)"
+summary = """
+Ink-written potsherds found in the gate area of Lachish, written in the last years before the \
+Babylonian conquest (c. 590 BCE). In Letter 4 an officer writes that "we are watching for the \
+fire signals of Lachish … because we cannot see Azekah" — matching Jeremiah 34:7, where Lachish \
+and Azekah are the last fortified cities of Judah still holding out."""
+discovered = { year = 1935, place = "Tell ed-Duweir (Lachish), excavated by James Leslie Starkey" }
+held_by = { institution = "British Museum (most); Israel Museum (Letter 6 and others)", accession = "ME 125701–125707, 125715a" }
+citations = [{ source = "wikipedia-lachish-letters" }]
+verses = [{ ref = "Jer.34.7", link = "background", note = "Lachish and Azekah remain" }]

@@ -1,0 +1,152 @@
+# The bibliography every citation in this directory points into.
+#
+# A citation names a source by `id`; the builder refuses one that is not listed here. Every
+# entry was checked against a catalogue or publisher record on 2026-10-06 — keep it that way:
+# never add a source from memory, and do not add an ISBN or a page range you have not seen.
+
+[[source]]
+id = "kitchen-2003"
+kind = "book"
+author = "K. A. Kitchen"
+title = "On the Reliability of the Old Testament"
+publisher = "Eerdmans"
+year = 2003
+isbn = "0-8028-4960-1"
+
+[[source]]
+id = "wood-2005"
+kind = "article"
+author = "Bryant G. Wood"
+title = "The Rise and Fall of the 13th-Century Exodus-Conquest Theory"
+container = "Journal of the Evangelical Theological Society 48/3, pp. 475–489"
+year = 2005
+url = "https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf"
+
+[[source]]
+id = "hoffmeier-1997"
+kind = "book"
+author = "James K. Hoffmeier"
+title = "Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition"
+publisher = "Oxford University Press"
+year = 1997
+
+[[source]]
+id = "finkelstein-silberman-2001"
+kind = "book"
+author = "Israel Finkelstein and Neil Asher Silberman"
+title = "The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts"
+publisher = "Free Press"
+year = 2001
+isbn = "0-684-86912-8"
+
+[[source]]
+id = "thiele-1983"
+kind = "book"
+author = "Edwin R. Thiele"
+title = "The Mysterious Numbers of the Hebrew Kings (new revised edition)"
+publisher = "Zondervan"
+year = 1983
+
+[[source]]
+id = "young-2004"
+kind = "article"
+author = "Rodger C. Young"
+title = "When Did Jerusalem Fall?"
+container = "Journal of the Evangelical Theological Society 47/1, pp. 21–38"
+year = 2004
+url = "https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_47_47-1_47-1-pp021-038_JETS.pdf"
+
+[[source]]
+id = "grayson-1975"
+kind = "edition"
+author = "A. Kirk Grayson"
+title = "Assyrian and Babylonian Chronicles"
+publisher = "J. J. Augustin"
+year = 1975
+
+[[source]]
+id = "cos-2"
+kind = "edition"
+author = "William W. Hallo and K. Lawson Younger Jr. (eds.)"
+title = "The Context of Scripture, Volume 2: Monumental Inscriptions"
+publisher = "Brill"
+year = 2000
+isbn = "90-04-10619-7"
+
+[[source]]
+id = "collins-1993"
+kind = "book"
+author = "John J. Collins"
+title = "Daniel (Hermeneia)"
+publisher = "Fortress Press"
+year = 1993
+isbn = "0-8006-6040-4"
+
+[[source]]
+id = "baldwin-1978"
+kind = "book"
+author = "Joyce G. Baldwin"
+title = "Daniel (Tyndale Old Testament Commentaries)"
+publisher = "InterVarsity Press"
+year = 1978
+isbn = "0-87784-961-7"
+
+# Institutional and reference pages. Weaker than the published works above; used for object
+# data (museum numbers, findspots) and translations of inscriptions, never for a scholarly
+# position on their own.
+
+[[source]]
+id = "bm-lachish-reliefs"
+kind = "museum"
+author = "British Museum"
+title = "Lachish reliefs, South-West Palace of Sennacherib, Nineveh (collection record)"
+url = "https://www.britishmuseum.org/collection/object/W_1856-0909-14"
+
+[[source]]
+id = "cojs-sennacherib-prisms"
+kind = "web"
+author = "Center for Online Judaic Studies"
+title = "Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms"
+url = "https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/"
+
+[[source]]
+id = "livius-abc5"
+kind = "web"
+author = "Livius.org"
+title = "ABC 5 (Jerusalem Chronicle)"
+url = "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/"
+
+[[source]]
+id = "wikipedia-merneptah-stele"
+kind = "web"
+author = "Wikipedia"
+title = "Merneptah Stele"
+url = "https://en.wikipedia.org/wiki/Merneptah_Stele"
+
+[[source]]
+id = "wikipedia-sennacherib-annals"
+kind = "web"
+author = "Wikipedia"
+title = "Sennacherib's Annals"
+url = "https://en.wikipedia.org/wiki/Sennacherib%27s_Annals"
+
+[[source]]
+id = "wikipedia-lachish-letters"
+kind = "web"
+author = "Wikipedia"
+title = "Lachish letters"
+url = "https://en.wikipedia.org/wiki/Lachish_letters"
+
+[[source]]
+id = "wikipedia-ramesses-ii"
+kind = "web"
+author = "Wikipedia"
+title = "Ramesses II (reign dates following von Beckerath 1997)"
+url = "https://en.wikipedia.org/wiki/Ramesses_II"
+
+[[source]]
+id = "wikipedia-sennacherib-levant"
+kind = "web"
+author = "Wikipedia"
+title = "Sennacherib's campaign in the Levant"
+url = "https://en.wikipedia.org/wiki/Sennacherib%27s_campaign_in_the_Levant"

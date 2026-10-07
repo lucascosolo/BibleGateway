@@ -1,0 +1,16 @@
+id = "merneptah-stele"
+name = "Merneptah Stele"
+kind = "inscription"
+made = { earliest = -1208, latest = -1208 }
+language = "Egyptian (hieroglyphic)"
+summary = """
+A granite victory stele of Pharaoh Merneptah, dated to his fifth regnal year (c. 1208 BCE). \
+Near its end (line 27) it lists peoples of Canaan he claims to have defeated, including \
+"Israel is laid waste, its seed is no more" — the earliest known mention of Israel outside \
+the Bible. Israel is written with the determinative for a people, not a city-state or land."""
+discovered = { year = 1896, place = "Thebes (Flinders Petrie)" }
+held_by = { institution = "Egyptian Museum, Cairo", accession = "JE 31408" }
+citations = [
+  { source = "cos-2", locator = "pp. 40–41" },
+  { source = "wikipedia-merneptah-stele" },
+]

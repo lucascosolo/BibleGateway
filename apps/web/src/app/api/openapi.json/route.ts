@@ -87,6 +87,50 @@ const openapi = {
         responses: { "200": { description: "A UTF-8 TSV download. X-Total-Count and X-Export-Truncated disclose the complete total and any cap." }, "400": errorResponse, "404": errorResponse },
       },
     },
+    "/api/timeline": {
+      get: {
+        summary: "List timeline events and eras in a window of years",
+        description:
+          "Years are integers: negative = BCE, positive = CE, no year 0. Every event is a range (the envelope of the scholarly positions on its date), never a point, with a confidence and a review status ('draft' until a human has reviewed it). `axis` separates when events happened (narrative) from when texts were written (composition). `available` is false when no timeline is deployed.",
+        parameters: [
+          { name: "from", in: "query", schema: { type: "integer", default: -4000, example: -1500 } },
+          { name: "to", in: "query", schema: { type: "integer", default: 400, example: -500 } },
+          { name: "axis", in: "query", schema: { type: "string", enum: ["narrative", "composition"] } },
+        ],
+        responses: { "200": { description: "Overlapping events and eras, earliest first." }, "400": errorResponse },
+      },
+    },
+    "/api/timeline/events/{id}": {
+      get: {
+        summary: "Read one timeline event: positions, arguments, attestations and issues",
+        description:
+          "Each scholarly position on the date with its range and holders, the cited arguments for and against it, the sources outside the Bible that corroborate it, are consistent with it, are silent, or are in tension with it, and the linked chronological and historical issues.",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string", example: "exodus" } }],
+        responses: { "200": { description: "The event in full, with citations." }, "404": errorResponse },
+      },
+    },
+    "/api/timeline/artifacts/{id}": {
+      get: {
+        summary: "Read an artifact from outside the Bible (inscription, chronicle, relief…)",
+        description: "Where it is held, what it says, and the events it bears on. `made` is null when the object's own date is not established.",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string", example: "babylonian-chronicle-abc5" } }],
+        responses: { "200": { description: "The artifact with its attestations and citations." }, "404": errorResponse },
+      },
+    },
+    "/api/timeline/issues/{id}": {
+      get: {
+        summary: "Read a chronological, textual or historical issue and its scholarly views",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string", example: "exodus-480-years" } }],
+        responses: { "200": { description: "The issue, each view with citations, and the events it concerns." }, "404": errorResponse },
+      },
+    },
+    "/api/timeline/passage": {
+      get: {
+        summary: "Find the timeline events, issues and artifacts that bear on a passage",
+        parameters: [referenceParameter],
+        responses: { "200": { description: "Events the passage describes or helps date, issues it raises, and artifacts linked to it." }, "400": errorResponse },
+      },
+    },
   },
   components: {
     schemas: {

@@ -3,6 +3,7 @@ import "server-only";
 import { createHash } from "node:crypto";
 
 import { getCorpusBuildId } from "./client";
+import { getTimelineBuildId } from "./timeline";
 
 /**
  * Cache policy for corpus reads.
@@ -33,9 +34,22 @@ import { getCorpusBuildId } from "./client";
  * alternatives that add up — the shorter one has to be short enough to reach the other.
  */
 export function corpusCacheHeaders(request: Request): Record<string, string> {
+  return headersFor(request, "corpus", getCorpusBuildId());
+}
+
+/**
+ * The same policy for the timeline API, versioned by BOTH artifacts its answers depend on:
+ * `timeline.db` (the content) and `bible.db` (the verse labels it is rendered with). A tag on
+ * the timeline build alone would let a corpus rebuild leave stale labels behind a 304.
+ */
+export function timelineCacheHeaders(request: Request): Record<string, string> {
+  return headersFor(request, "timeline", `${getTimelineBuildId() ?? "none"}.${getCorpusBuildId()}`);
+}
+
+function headersFor(request: Request, prefix: string, build: string): Record<string, string> {
   return {
     "Cache-Control": "public, max-age=60, s-maxage=300, stale-while-revalidate=86400",
-    ETag: etagFor(request),
+    ETag: etagFor(request, prefix, build),
     Vary: "Accept-Encoding",
     // Public read-only corpus data can be called by browser tools and hosted LLM clients.
     "Access-Control-Allow-Origin": "*",
@@ -52,22 +66,29 @@ export function corpusCacheHeaders(request: Request): Record<string, string> {
  * this corpus" into "I have this passage" and a request for Romans 8 gets a 304 for John 3.
  * Folding the path and query in makes that failure impossible rather than merely unlikely.
  */
-function etagFor(request: Request): string {
-  // Required, not optional: an earlier call site omitted it and shipped an unscoped tag, which
-  // is the exact failure this function exists to prevent.
-  const build = getCorpusBuildId();
+function etagFor(request: Request, prefix: string, build: string): string {
+  // `request` is required, not optional: an earlier call site omitted it and shipped an
+  // unscoped tag, which is the exact failure this function exists to prevent.
   const url = new URL(request.url);
   const query = [...url.searchParams.entries()].sort(([a], [b]) => a.localeCompare(b));
   const scope = createHash("sha256")
     .update(`${build}\n${url.pathname}\n${JSON.stringify(query)}`)
     .digest("hex")
     .slice(0, 16);
-  return `"corpus-${build}-${scope}"`;
+  return `"${prefix}-${build}-${scope}"`;
 }
 
 /** 304 for a client that already holds this build's answer, or null to serve normally. */
 export function notModified(request: Request): Response | null {
-  const headers = corpusCacheHeaders(request);
+  return notModifiedFor(request, corpusCacheHeaders(request));
+}
+
+/** `notModified` for the timeline API, against `timelineCacheHeaders`. */
+export function timelineNotModified(request: Request): Response | null {
+  return notModifiedFor(request, timelineCacheHeaders(request));
+}
+
+function notModifiedFor(request: Request, headers: Record<string, string>): Response | null {
   const inm = request.headers.get("if-none-match");
   if (!inm) return null;
   // A conditional GET may carry a list, and a proxy may weaken the tag to `W/"…"`.

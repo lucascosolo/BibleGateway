@@ -1,0 +1,16 @@
+id = "lachish-reliefs"
+name = "Lachish reliefs"
+kind = "relief"
+made = { earliest = -700, latest = -692 }
+language = "Akkadian (captions)"
+summary = """
+Carved wall panels from Room XXXVI of Sennacherib's South-West Palace at Nineveh, showing the \
+Assyrian siege and capture of the Judahite city of Lachish: siege ramps and engines, the city's \
+fall, and its people led into captivity."""
+discovered = { place = "South-West Palace, Nineveh (excavated by Austen Henry Layard)" }
+held_by = { institution = "British Museum", accession = "ME 124904–124915" }
+citations = [{ source = "bm-lachish-reliefs" }]
+verses = [
+  { ref = "2Kgs.18.14", link = "background", note = "Sennacherib at Lachish" },
+  { ref = "2Kgs.18.17", link = "background" },
+]

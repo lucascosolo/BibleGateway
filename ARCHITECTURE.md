@@ -468,6 +468,14 @@ is a meaningfully different and more interesting signal than raw inbound count.
 
 ### 3.5 Timeline, dating, and events
 
+> **As built (2026-10-06):** the timeline lives in its own artifact, `data/timeline.db`, built from
+> cited TOML by `packages/timeline/` — not in `bible.db`. Book datings are `events` rows with
+> `axis = 'composition'` rather than a separate `book_datings` table, because positions, arguments
+> and citations apply identically to both axes; the axes are still never merged onto one scale.
+> Historicity questions are `issues`, not dating positions. The schema below is the original
+> design; `packages/timeline/schema.sql` and `docs/plans/2026-10-06-timeline-backend.md` are
+> authoritative.
+
 ```sql
 -- COMPOSITIONAL axis. Multiple rows per book — one per scholarly tradition.
 CREATE TABLE book_datings (

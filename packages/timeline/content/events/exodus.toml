@@ -1,0 +1,84 @@
+id = "exodus"
+title = "The Exodus from Egypt"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+Israel's departure from Egypt under Moses. Among scholars who date it as an event, two dates \
+dominate: a 15th-century date read from 1 Kings 6:1, and a 13th-century date in the reign of \
+Ramesses II. Whether it happened as described at all is a separate question, kept apart from \
+the dating (see the linked historicity issue). Either way it falls before c. 1208 BCE, when the \
+Merneptah Stele already names Israel as a people in Canaan."""
+verses = [
+  { ref = "Exod.12.40-Exod.12.41", link = "dates", note = "430 years in Egypt" },
+  { ref = "Exod.1.11", link = "background", note = "Pithom and Raamses" },
+]
+
+[[positions]]
+id = "early"
+label = "Early date (c. 1446 BCE)"
+tradition = "traditional"
+earliest = -1450
+latest = -1440
+held_by = "Bryant G. Wood"
+summary = """
+Takes the 480 years of 1 Kings 6:1 as a straight count back from the fourth year of Solomon, \
+which puts the Exodus in the mid-15th century BCE."""
+citations = [{ source = "wood-2005", locator = "pp. 475–489" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  1 Kings 6:1 dates the temple's foundation to the 480th year after Israel came out of Egypt, \
+  in Solomon's fourth year; counted back from a fourth year of c. 966 BCE, that is c. 1446 BCE."""
+  citations = [{ source = "wood-2005" }]
+  verses = [{ ref = "1Kgs.6.1", link = "dates" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Exodus 1:11 has the Israelites building a store city called Raamses, a name associated with \
+  the Ramesside pharaohs of the 13th century."""
+  citations = [{ source = "kitchen-2003" }]
+  verses = [{ ref = "Exod.1.11", link = "dates" }]
+
+[[positions]]
+id = "late"
+label = "Late date (13th century BCE, reign of Ramesses II)"
+tradition = "conservative-critical"
+earliest = -1279
+latest = -1213
+held_by = "K. A. Kitchen"
+summary = """
+Places the Exodus in the 13th century BCE under Ramesses II (reigned c. 1279–1213 BCE on the \
+chronology most Egyptologists follow)."""
+citations = [
+  { source = "kitchen-2003" },
+  { source = "wikipedia-ramesses-ii" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The store city "Raamses" of Exodus 1:11 fits the building programme of the Ramesside kings \
+  in the eastern Nile Delta."""
+  citations = [{ source = "kitchen-2003" }]
+  verses = [{ ref = "Exod.1.11", link = "dates" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th; a late \
+  date has to treat the figure as something other than a straight count."""
+  citations = [{ source = "wood-2005" }]
+  verses = [{ ref = "1Kgs.6.1", link = "dates" }]
+
+[[attestations]]
+artifact = "merneptah-stele"
+relation = "consistent"
+note = """
+Does not mention an exodus. It shows Israel already present in Canaan as a people by \
+Merneptah's fifth year (c. 1208 BCE), so any exodus came before that — compatible with either \
+date above."""
+citations = [{ source = "cos-2", locator = "pp. 40–41" }]
