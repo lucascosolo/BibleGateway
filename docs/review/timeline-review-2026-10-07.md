@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `d62fdeeae897bf38`, draft entries only. Check each claim against its cited source; when an
+Build `0c63c7ebc656e578`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -222,7 +222,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 827 BCE – 824 BCE
   - Held by: British Museum, ME 118885 (registration 1848,1104.1)
   - Discovered: 1846, Nimrud (ancient Kalhu), northern Iraq (A. H. Layard)
-  - Summary: A black limestone obelisk about 1.98 m high, from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri'. It also pictures a tribute-bearer. Wikipedia's wording is that this is the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch. Luckenbill's translation of the second epigraph reads: "Tribute of Iaua (Jehu), son of Omri (mâr Humri). Silver, gold, a golden bowl, a golden beaker, golden goblets, pitchers of gold, lead, staves for the hand of the king, javelins, I received from him." The epigraph gives no regnal year. A separate Shalmaneser text in the same volume records tribute from "Tyre, Sidon and of Jehu, son of Omri" after a march to Mount Ba'li-ra'si. Modern scholars usually attach it to the campaign of the annals' eighteenth year (the sixteenth Euphrates crossing, against Hazael). Luckenbill's text itself does not take that step.
+  - Summary: A black limestone obelisk about 1.98 m high, from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri'. It also pictures a tribute-bearer. Wikipedia's wording is that this is the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch. Luckenbill's translation of the second epigraph reads: "Tribute of Iaua (Jehu), son of Omri (mâr Humri). Silver, gold, a golden bowl, a golden beaker, golden goblets, pitchers of gold, lead, staves for the hand of the king, javelins, I received from him." The epigraph gives no regnal year. A separate Shalmaneser text in the same volume records tribute from "Tyre, Sidon and of Jehu, son of Omri" after a march to Mount Ba'li-ra'si. Modern scholars usually attach it to the campaign of the annals' eighteenth year (the sixteenth Euphrates crossing, against Hazael). Luckenbill's text itself does not take that step; Thiele does, dating the tribute to "841 B.C., the eighteenth year of Shalmaneser III".
+  - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 37 (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
   - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q1471650: inventory number 1848-11-04, 0001, British Museum <https://www.wikidata.org/>
   - Source: *Black Obelisk of Shalmaneser III*, Wikipedia <https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III>
   - Source: *Ancient Records of Assyria and Babylonia, Volume I: Historical Records of Assyria from the Earliest Times to Sargon*, Daniel David Luckenbill, 1926, § 590 (epigraph II); § 575 (year 18, Hazael); the Ba'li-ra'si passage before § 673 <https://archive.org/details/ancient_records_assyria1>
@@ -716,6 +717,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (background): 2Kgs 10:32 – 2Kgs 10:33 (Hazael cuts off parts of Israel's territory in his reign)
   - Verse (alludes): Hos 1:4 ('the house of Jehu')
   - Position **841 BCE** (841 BCE, held by Edwin R. Thiele): Thiele's chronology agrees with the tribute of Jehu in 841. Young's tables begin Jehu's reign in 841n/841t, meaning the Nisan and Tishri counts.
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 37 (page image supplied by the user, 2026-10-07). Thiele: "There are only 120 years from 841 B.C., the eighteenth year of Shalmaneser III, when the latter reported having received tribute from Jehu—usually conceded to be very early in Jehu's reign—to the accession of Sargon in 722/21, when the latter claimed to have captured Samaria." <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232; Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Jehu 841 in the chronology table; second-hand <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
   - Attestation — Black Obelisk of Shalmaneser III *corroborates*: The inscription reads: 'I received the tribute of Iaua (Jehu) son of (the people of the land of) Omri'. It is dated in or around 841.
@@ -729,8 +731,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (background): Isa 20:1 (names Sargon as king of Assyria)
   - Verse (alludes): Hos 13:16 ('Samaria will bear her guilt')
   - Verse (alludes): Mic 1:6 (Samaria turned into a heap of rubble)
-  - Position **723 BCE (first half)** (723 BCE, held by Edwin R. Thiele; Rodger C. Young): Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n. Thiele held the same year first: he writes of "my date of 853 for the battle of Qarqar and 723 for Samaria's fall", noting that "the accepted date for the fall of Samaria was 722, a year later than my date".
-    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
+  - Position **723 BCE (first half)** (723 BCE, held by Edwin R. Thiele; Rodger C. Young): Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n. Thiele held the same year first: he writes of "my date of 853 for the battle of Qarqar and 723 for Samaria's fall", noting that "the accepted date for the fall of Samaria was 722, a year later than my date". He places "the accession of Sargon in 722/21, when the latter claimed to have captured Samaria".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24; p. 37 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 583 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
   - Attestation — Inscriptions of Sargon II (Samaria claim) *partially-corroborates*: Sargon claims the conquest and says he resettled 27,280 Israelites. Scholars doubt that the capture was really his.
