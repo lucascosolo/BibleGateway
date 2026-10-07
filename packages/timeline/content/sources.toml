@@ -1104,6 +1104,14 @@ publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
 
 [[source]]
+id = "chadwick-2015"
+kind = "article"
+author = "Jeffrey R. Chadwick"
+title = "Dating the Death of Jesus Christ (PDF supplied by the user, at ~/.cache/jot/sources/chadwick-2015/)"
+container = "BYU Studies Quarterly 54/4, pp. 135–191"
+year = 2015
+
+[[source]]
 id = "grayson-1996"
 kind = "book"
 author = "A. Kirk Grayson"

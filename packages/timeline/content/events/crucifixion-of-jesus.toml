@@ -51,6 +51,46 @@ citations = [
   Either 7 April 30 CE or 3 April 33 CE meets the Friday-Passover rule."""
   citations = [{ source = "wikipedia-date-of-crucifixion" }]
 
+[[positions]]
+id = "chadwick-thursday-30"
+label = "Thursday 6 April 30 CE"
+tradition = "traditional"
+earliest = 30
+latest = 30
+held_by = "Jeffrey R. Chadwick"
+summary = """
+Chadwick, writing for a Latter-day Saint journal, concludes that "Jesus died on Thursday, April 6 (Julian), AD 30", the 14th of Nisan, and was raised on Sunday 9 April. Two things set his view apart. He puts the crucifixion on a Thursday rather than the Friday every other position here assumes. And part of his case for the year rests on the Book of Mormon, which he reads as saying Jesus lived thirty-three full years, so that 33 CE "is too late a year to accommodate his lifespan". He states that the New Testament, Mishnah, historical and astronomical evidence alone would be enough for 30 CE; readers who do not accept the Book of Mormon will want to weigh that claim for themselves. Chadwick also surveys the field: he reports Blinzler's count of scholars favoring 30 CE, adds Murphy-O'Connor, Fitzmyer, Pixner and Ehrman to it, and notes that Raymond Brown left the choice between 30 and 33 open."""
+citations = [
+  { source = "chadwick-2015", locator = "conclusion pp. 188, 190; survey of scholars p. 142; Book of Mormon lifespan pp. 143, 158 and Figure 4 on p. 159" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Reading Tiberius's fifteenth year (Luke 3:1) as autumn 27 to autumn 28, with John's three named Passovers, gives a two-year ministry from Passover 28 to Passover 30. Chadwick calls this "the model supported by the chronological allusion in Luke 3:1, the three specific Passovers mentioned by John", and Josephus on the temple's forty-six years."""
+  citations = [{ source = "chadwick-2015", locator = "pp. 150–153" }]
+  verses = [
+    { ref = "Luke.3.1", link = "dates" },
+    { ref = "John.2.13", link = "dates" },
+    { ref = "John.2.20", link = "dates" },
+    { ref = "John.6.4", link = "dates" },
+    { ref = "John.12.1", link = "dates" },
+  ]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Chadwick accepts Humphreys and Waddington's new-moon calculations but not their extra day for 30 CE. He argues the new moon of 22 March 30 at 19:55 was visible that evening in Jerusalem, so 14 Nisan fell on Thursday 6 April, not Friday 7 April. Only 27, 30 and 33 CE put 14 Nisan within three days before a Sunday under Pilate, and he rules out 27 as too early for the ministry and 33 as too late."""
+  citations = [{ source = "chadwick-2015", locator = "pp. 154–157, Figure 3 on p. 157" }]
+  verses = [{ ref = "John.19.14", link = "dates", note = "The preparation of the Passover" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  The Thursday rests on reading the Gospels' three days as three full days and on his new-moon visibility claim; the Friday of all four Gospel accounts (the day before the Sabbath) is the reading other scholars keep. The lifespan argument from the Book of Mormon is not evidence outside Latter-day Saint tradition."""
+  citations = [{ source = "chadwick-2015", locator = "pp. 156–159, 190" }]
+  verses = [{ ref = "Mark.15.42", link = "dates", note = "The day before the Sabbath" }]
+
 [[attestations]]
 artifact = "tacitus-annals-15-44"
 relation = "corroborates"
