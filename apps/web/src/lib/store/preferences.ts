@@ -18,6 +18,8 @@ export interface LayerToggles {
   interlinear: boolean;
   /** Curated "windows into the text" — small notes on wordplay, custom, or connection. */
   insights: boolean;
+  /** Timeline notes under the verses a dating dispute, outside source or open question concerns. */
+  toledot: boolean;
 }
 
 export type ThemePreference = "light" | "dark" | "system";
@@ -54,6 +56,9 @@ const defaultLayers: LayerToggles = {
   // sentences, not apparatus, and the whole point is that a first-time reader sees it without
   // having to know it exists. See PREFERENCES_VERSION.
   insights: true,
+  // ON by default, same reasoning as `insights`: one line per note, and the reason the timeline
+  // exists. No version bump — the migration spreads defaults under stored layers.
+  toledot: true,
 };
 
 /**
@@ -184,6 +189,7 @@ export function useEffectiveLayers(): LayerToggles {
     sourceCrit: false,
     interlinear: false,
     insights: false,
+    toledot: false,
   };
 }
 

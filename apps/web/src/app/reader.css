@@ -1885,6 +1885,89 @@
   display: none;
 }
 
+/* --- Timeline notes (Toledot) -------------------------------------------------------------
+ *
+ * Marginal apparatus, not an aside: no tint and no box (that is `.insight-note`), and not the
+ * rubric rule of `.omission` (rubric means "the text is missing here"). A dotted hairline and a
+ * caption-sized line in the sans face, so it reads as a pointer into cited scholarship that sits
+ * under the verse without competing with it. Body in --color-ink-muted, never --color-ink-faint:
+ * faint misses 4.5:1 on the raised surfaces at this size (see the contrast note in AGENTS.md). */
+
+.toledot-notes {
+  list-style: none;
+  margin: 0.25rem 0 1rem;
+  padding: 0 0 0 var(--space-3);
+  border-inline-start: 1px dotted var(--color-border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.toledot-note {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-ink-muted);
+}
+
+.toledot-note__glyph {
+  flex: 0 0 auto;
+  color: var(--color-accent-strong);
+}
+
+.toledot-note__lead {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.toledot-note__draft {
+  margin-inline-start: 0.4rem;
+  padding: 0 0.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.toledot-note__link {
+  position: relative;
+  padding-inline: 0.2rem;
+  color: var(--color-accent-strong);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.toledot-note__link:hover {
+  text-decoration: underline;
+}
+
+/* The arrow ends the line, so its touch target can grow inline-end and downward without
+   covering any text (AGENTS.md: 44px targets on inline marks). */
+@media (pointer: coarse) {
+  .toledot-note__link::after {
+    content: "";
+    position: absolute;
+    inset-block: calc((var(--touch-target) - 1.5em) / -2);
+    inset-inline: 0 calc(var(--touch-target) * -1 + 1.5em);
+  }
+}
+
+/* With a gutter, the notes sit under the text column, not under the hanging verse numbers. */
+@container passage (min-width: 34rem) {
+  .passage--reader .toledot-notes {
+    margin-inline-start: var(--space-8);
+  }
+}
+
+/* Selah strips every layer, this one included — see `.qere-readings` above. */
+.passage[data-selah="true"] .toledot-notes {
+  display: none;
+}
+
 /* --- Out-of-scope passage -----------------------------------------------------------------
    One banner for a book the current translation does not contain (see OutOfScopeNotice.tsx).
    Deliberately NOT dressed in the rubric palette that `.omission` uses: rubric red means

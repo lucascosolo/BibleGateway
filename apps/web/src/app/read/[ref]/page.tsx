@@ -40,6 +40,8 @@ import {
   type OriginalWord,
 } from "@/lib/db/originals";
 import { getInsightNotes, type InsightNote } from "@/lib/insights/notes";
+import { getTimelineBuildId, getTimelineNotesForRange, type ToledotNote } from "@/lib/db/timeline";
+import { labelVerses } from "@/lib/db/timeline-present";
 import {
   InvalidReferenceError,
   bookOf,
@@ -49,6 +51,7 @@ import {
   parseReference,
   toVerseId,
   type VerseId,
+  type VerseRange,
   verseOf,
 } from "@/lib/refs";
 import { ReaderInteractions } from "./ReaderInteractions";
@@ -397,6 +400,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   const audioChoices = availableChoices(passageAudio, translation.code);
   const wordClips = passageAudio ? getWordClips(renderRange) : undefined;
   const renderedVerseIds = verses.map((v) => v.verseId);
+  const { notes: toledotNotes, spans: toledotSpans } = buildToledotNotes(renderRange, renderedVerseIds);
 
   return (
     <div className="reader-layout">
@@ -467,6 +471,8 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         wordClips={wordClips}
         variants={variants}
         insightNotes={insightNotes}
+        toledotNotes={toledotNotes}
+        toledotSpans={toledotSpans}
         greekEditionVariants={getGreekEditionVariants(renderRange)}
         greekManuscriptReadings={getGreekManuscriptReadings(renderRange)}
       />
@@ -594,4 +600,46 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
       />
     </div>
   );
+}
+
+/**
+ * Timeline notes keyed by the rendered verse they sit under. A link's anchor is an address, and
+ * the address space is sparse and a translation may not print every verse, so each note moves
+ * to the first verse actually on screen at or after it (a sorted search over the rendered ids,
+ * never a walk of the id space). Two links of one subject landing on the same verse stay one note.
+ */
+function buildToledotNotes(range: VerseRange, renderedVerseIds: readonly VerseId[]) {
+  const notes = new Map<VerseId, ToledotNote[]>();
+  const spans = new Map<string, string>();
+  if (getTimelineBuildId() === null) return { notes, spans };
+  const seen = new Set<string>();
+  for (const note of getTimelineNotesForRange(range)) {
+    let lo = 0;
+    let hi = renderedVerseIds.length;
+    while (lo < hi) {
+      const mid = (lo + hi) >> 1;
+      if (renderedVerseIds[mid] < note.anchor) lo = mid + 1;
+      else hi = mid;
+    }
+    const anchor = renderedVerseIds[lo];
+    if (anchor === undefined) continue;
+    const subjectKey = note.id.slice(0, note.id.lastIndexOf("@"));
+    const id = `${subjectKey}@${anchor}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const placed = { ...note, id, anchor };
+    const existing = notes.get(anchor);
+    if (existing) existing.push(placed);
+    else notes.set(anchor, [placed]);
+    if (note.start !== note.end) {
+      const sameChapter = bookOf(note.start) === bookOf(note.end) && chapterOf(note.start) === chapterOf(note.end);
+      spans.set(
+        id,
+        sameChapter
+          ? `verses ${verseOf(note.start)}–${verseOf(note.end)}`
+          : `spans ${labelVerses([{ start: note.start, end: note.end, linkType: note.linkType, note: null }])[0].label}`,
+      );
+    }
+  }
+  return { notes, spans };
 }

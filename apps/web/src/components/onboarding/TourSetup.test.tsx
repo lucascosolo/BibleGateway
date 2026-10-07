@@ -64,7 +64,7 @@ describe("TourSetup", () => {
 
     // Imported from `LayerControls`, so a layer added there and forgotten here fails this.
     for (const row of layerRows(false)) {
-      expect(screen.getByRole("switch", { name: new RegExp(row.label) })).toBeTruthy();
+      expect(screen.getByRole("switch", { name: new RegExp(row.label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) })).toBeTruthy();
     }
   });
 

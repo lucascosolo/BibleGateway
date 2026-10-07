@@ -21,6 +21,8 @@ import {
 import { usePreferencesStore } from "@/lib/store/preferences";
 import type { InsightNote } from "@/lib/insights/notes";
 import { InsightNotes } from "./InsightNotes";
+import type { ToledotNote } from "@/lib/db/timeline";
+import { ToledotNotes } from "./ToledotNotes";
 import { Interlinear } from "./Interlinear";
 import { OmittedVerse, type OmittedVerseNote } from "./OmittedVerse";
 import { QereReadings } from "./QereReadings";
@@ -60,6 +62,8 @@ export interface PassageLayers {
   interlinear: boolean;
   /** Curated "windows into the text" — see `lib/insights/notes.ts` and `InsightNotes.tsx`. */
   insights: boolean;
+  /** Timeline notes (dating disputes, outside evidence, open questions) — `ToledotNotes.tsx`. */
+  toledot: boolean;
 }
 
 /** Which layers each density is even allowed to show, before user preferences apply. */
@@ -69,7 +73,7 @@ const DENSITY_LAYER_CEILING: Record<PassageDensity, (keyof PassageLayers)[]> = {
   preview: ["highlights", "verseNumbers"],
   // `insights` sits with `notes`/`crossRefs`/`heat` rather than with `variants`/`interlinear`:
   // one or two sentences fit a panel's width where a Hebrew apparatus grid does not.
-  panel: ["highlights", "verseNumbers", "notes", "crossRefs", "heat", "insights"],
+  panel: ["highlights", "verseNumbers", "notes", "crossRefs", "heat", "insights", "toledot"],
   // `interlinear` and `variants` are reader-only. `interlinear` is a stacked cell per word, so
   // at panel width it wraps into an unreadable column and at preview or tooltip width it would
   // dwarf the verse it is supposed to be annotating; `variants` carries the same density.
@@ -83,6 +87,7 @@ const DENSITY_LAYER_CEILING: Record<PassageDensity, (keyof PassageLayers)[]> = {
     "sourceCrit",
     "interlinear",
     "insights",
+    "toledot",
   ],
 };
 
@@ -233,6 +238,10 @@ export interface PassageRendererProps {
    * absent simply means the layer renders nothing.
    */
   insightNotes?: ReadonlyMap<VerseId, readonly InsightNote[]>;
+  /** Timeline notes keyed by the rendered verse they sit under, supplied by the server page. */
+  toledotNotes?: ReadonlyMap<VerseId, readonly ToledotNote[]>;
+  /** Preformatted "verses 1–3" disclosure per note id, for links spanning several verses. */
+  toledotSpans?: ReadonlyMap<string, string>;
   /** Edition-level Greek differences, supplied by the server page and rendered in this surface. */
   greekEditionVariants?: readonly GreekEditionVariant[];
   greekManuscriptReadings?: readonly GreekManuscriptReading[];
@@ -254,6 +263,8 @@ export function PassageRenderer({
   wordClips,
   variants,
   insightNotes,
+  toledotNotes,
+  toledotSpans,
   greekEditionVariants,
   greekManuscriptReadings,
   className,
@@ -275,6 +286,7 @@ export function PassageRenderer({
       sourceCrit: layerPrefs.sourceCrit,
       interlinear: layerPrefs.interlinear,
       insights: layerPrefs.insights,
+      toledot: layerPrefs.toledot,
       ...layerOverrides,
     };
     // Selah mode ("pause and reflect") strips everything for uninterrupted reading.
@@ -289,6 +301,7 @@ export function PassageRenderer({
         sourceCrit: false,
         interlinear: false,
         insights: false,
+        toledot: false,
       };
     }
     // A density can only *reduce* what the user asked for, never add to it.
@@ -356,6 +369,9 @@ export function PassageRenderer({
             />
             {layers.insights && (
               <InsightNotes notes={insightNotes?.get(item.verse.verseId) ?? []} />
+            )}
+            {layers.toledot && (
+              <ToledotNotes notes={toledotNotes?.get(item.verse.verseId) ?? []} spans={toledotSpans} />
             )}
             {layers.interlinear && (
               <Interlinear words={interlinear?.get(item.verse.verseId) ?? []} wordClips={wordClips} />

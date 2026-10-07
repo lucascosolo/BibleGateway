@@ -8,9 +8,9 @@ afterEach(cleanup);
 
 const MEANING: Record<EvidenceGrade, string> = {
   corroborates: "Named by a source outside the Bible",
-  "partially-corroborates": "Partly confirmed; the reading is disputed",
-  consistent: "Fits an outside source without naming them",
-  silent: "Outside sources exist but say nothing",
+  "partially-corroborates": "Partly confirmed by an outside source",
+  consistent: "Fits an outside source",
+  silent: "Outside sources are silent",
   none: "No outside evidence",
 };
 

@@ -561,3 +561,179 @@ export function getTimelineForRange(range: VerseRange): {
   ).map(toPersonSummary);
   return { events, issues, artifacts, persons };
 }
+
+// --- Reader notes -----------------------------------------------------------------------------
+
+export interface ToledotNote {
+  /** `<subject_kind>:<subject_id>@<anchor verse id>` — stable, React key and anchor. */
+  id: string;
+  /** The link's first verse, clamped into the range. The page re-anchors it to a rendered verse. */
+  anchor: VerseId;
+  start: VerseId;
+  end: VerseId;
+  linkType: VerseLink["linkType"];
+  subject:
+    | { kind: "event"; id: string; title: string; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; positions: { label: string }[] }
+    | { kind: "argument"; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }
+    | { kind: "issue"; id: string; title: string; issueKind: IssueSummary["kind"]; status: ReviewStatus }
+    | { kind: "person"; id: string; name: string; evidence: EvidenceGrade; hasTension: boolean; status: ReviewStatus }
+    | { kind: "artifact"; id: string; name: string; status: ReviewStatus; relation: Relation | null };
+  /** The link's own note text when the author wrote one. */
+  note: string | null;
+}
+
+/** For an artifact, a contradiction outranks agreement: a note that says "corroborates" while a
+ *  tension exists would hide the more important fact. */
+const RELATION_RANK: Relation[] = ["in-tension", "corroborates", "partially-corroborates", "consistent", "silent"];
+
+interface LinkRow {
+  kind: "event" | "argument" | "artifact" | "issue" | "person";
+  subjectId: string;
+  start: VerseId;
+  end: VerseId;
+  linkType: VerseLink["linkType"];
+  note: string | null;
+}
+
+const placeholders = (ids: readonly string[]) => ids.map(() => "?").join(",");
+
+/**
+ * One note per verse link intersecting `range`, for every subject kind, deduplicated to one per
+ * subject per anchor verse. Interval intersection on link endpoints; one query for the links and
+ * one per subject kind present — nothing here walks the (sparse) id space.
+ */
+export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
+  const links = all<LinkRow>(
+    `SELECT subject_kind AS kind, subject_id AS subjectId, start_verse_id AS start, end_verse_id AS "end",
+            link_type AS linkType, note
+     FROM verse_links WHERE start_verse_id <= ? AND end_verse_id >= ?
+     ORDER BY start_verse_id, link_id`,
+    range.end,
+    range.start
+  );
+  if (links.length === 0) return [];
+  const idsOf = (kind: LinkRow["kind"]) => [...new Set(links.filter((l) => l.kind === kind).map((l) => l.subjectId))];
+
+  const eventIds = idsOf("event");
+  const events = new Map(
+    (eventIds.length
+      ? all<{ id: string; title: string; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number }>(
+          `SELECT event_id AS id, title, status, confidence, earliest_year AS earliest, latest_year AS latest
+           FROM events WHERE event_id IN (${placeholders(eventIds)})`,
+          ...eventIds
+        )
+      : []
+    ).map((e) => [e.id, { kind: "event" as const, ...e, positions: [] as { label: string }[] }])
+  );
+  if (eventIds.length) {
+    for (const p of all<{ eventId: string; label: string }>(
+      `SELECT event_id AS eventId, label FROM positions WHERE event_id IN (${placeholders(eventIds)}) ORDER BY event_id, ordinal`,
+      ...eventIds
+    )) {
+      events.get(p.eventId)?.positions.push({ label: p.label });
+    }
+  }
+
+  const argumentIds = idsOf("argument");
+  const argumentsById = new Map(
+    (argumentIds.length
+      ? all<{ id: string; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }>(
+          `SELECT a.argument_id AS id, e.event_id AS eventId, e.title AS eventTitle, e.status AS eventStatus,
+                  p.label AS positionLabel, a.stance
+           FROM arguments a JOIN positions p ON p.position_id = a.position_id JOIN events e ON e.event_id = p.event_id
+           WHERE a.argument_id IN (${placeholders(argumentIds)})`,
+          ...argumentIds
+        )
+      : []
+    ).map(({ id, ...rest }) => [id, { kind: "argument" as const, ...rest }])
+  );
+
+  const issueIds = idsOf("issue");
+  const issues = new Map(
+    (issueIds.length
+      ? all<{ id: string; title: string; issueKind: IssueSummary["kind"]; status: ReviewStatus }>(
+          `SELECT issue_id AS id, title, kind AS issueKind, status FROM issues WHERE issue_id IN (${placeholders(issueIds)})`,
+          ...issueIds
+        )
+      : []
+    ).map((i) => [i.id, { kind: "issue" as const, ...i }])
+  );
+
+  const personIds = idsOf("person");
+  const persons = new Map(
+    (personIds.length
+      ? all<{ id: string; name: string; evidence: EvidenceGrade; hasTension: number; status: ReviewStatus }>(
+          `SELECT person_id AS id, name, evidence, has_tension AS hasTension, status FROM persons
+           WHERE person_id IN (${placeholders(personIds)})`,
+          ...personIds
+        )
+      : []
+    ).map((p) => [p.id, { kind: "person" as const, ...p, hasTension: p.hasTension === 1 }])
+  );
+
+  const artifactIds = idsOf("artifact");
+  const artifacts = new Map(
+    (artifactIds.length
+      ? all<{ id: string; name: string; status: ReviewStatus }>(
+          `SELECT artifact_id AS id, name, status FROM artifacts WHERE artifact_id IN (${placeholders(artifactIds)})`,
+          ...artifactIds
+        )
+      : []
+    ).map((a) => [a.id, a])
+  );
+  const relations = artifactIds.length
+    ? all<{ artifactId: string; subjectKind: "person" | "event"; subjectId: string; relation: Relation }>(
+        `SELECT artifact_id AS artifactId, 'person' AS subjectKind, person_id AS subjectId, relation
+         FROM person_attestations WHERE artifact_id IN (${placeholders(artifactIds)})
+         UNION ALL
+         SELECT artifact_id, 'event', event_id, relation
+         FROM attestations WHERE artifact_id IN (${placeholders(artifactIds)})`,
+        ...artifactIds,
+        ...artifactIds
+      )
+    : [];
+
+  /** The strongest relation the artifact has to a person or event linked to a verse it shares. */
+  function relationFor(link: LinkRow): Relation | null {
+    const lo = Math.max(link.start, range.start);
+    const hi = Math.min(link.end, range.end);
+    let best: Relation | null = null;
+    for (const r of relations) {
+      if (r.artifactId !== link.subjectId) continue;
+      const shares = links.some(
+        (other) =>
+          other.kind === r.subjectKind &&
+          other.subjectId === r.subjectId &&
+          Math.max(other.start, lo) <= Math.min(other.end, hi)
+      );
+      if (shares && (best === null || RELATION_RANK.indexOf(r.relation) < RELATION_RANK.indexOf(best))) best = r.relation;
+    }
+    return best;
+  }
+
+  function subjectFor(link: LinkRow): ToledotNote["subject"] | undefined {
+    switch (link.kind) {
+      case "event": return events.get(link.subjectId);
+      case "argument": return argumentsById.get(link.subjectId);
+      case "issue": return issues.get(link.subjectId);
+      case "person": return persons.get(link.subjectId);
+      case "artifact": {
+        const a = artifacts.get(link.subjectId);
+        return a && { kind: "artifact", ...a, relation: relationFor(link) };
+      }
+    }
+  }
+
+  const seen = new Set<string>();
+  const notes: ToledotNote[] = [];
+  for (const link of links) {
+    const subject = subjectFor(link);
+    if (!subject) continue;
+    const anchor = Math.max(link.start, range.start) as VerseId;
+    const id = `${link.kind}:${link.subjectId}@${anchor}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    notes.push({ id, anchor, start: link.start, end: link.end, linkType: link.linkType, subject, note: link.note });
+  }
+  return notes.sort((a, b) => a.anchor - b.anchor);
+}

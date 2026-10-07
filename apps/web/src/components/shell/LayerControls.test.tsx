@@ -25,6 +25,7 @@ function setViewportWidth(width: number) {
 afterEach(() => {
   cleanup();
   usePreferencesStore.setState({ plainLabels: false, selahMode: false });
+  usePreferencesStore.getState().resetSettings();
 });
 
 describe("<LayerControls> presentation", () => {
@@ -72,5 +73,39 @@ describe("<LayerControls> presentation", () => {
     expect(selah.getAttribute("aria-checked")).toBe("false");
     fireEvent.click(selah);
     expect(usePreferencesStore.getState().selahMode).toBe(true);
+  });
+});
+
+describe("<LayerControls> timeline row", () => {
+  function openSwitches() {
+    setViewportWidth(1366);
+    render(<LayerControls />);
+    fireEvent.click(screen.getByRole("button", { name: usePreferencesStore.getState().plainLabels ? "Reading layers" : "Pardes" }));
+    return within(screen.getByRole("dialog")).getAllByRole("switch");
+  }
+  const nameOf = (el: HTMLElement) => el.getAttribute("aria-label") ?? el.textContent ?? "";
+
+  it("offers a toledot row labelled with the term, after insights", () => {
+    const switches = openSwitches();
+    const names = switches.map(nameOf);
+    const toledot = names.findIndex((n) => /Toledot/.test(n));
+    expect(toledot).toBeGreaterThan(-1);
+    expect(names[toledot]).toMatch(/Timeline/);
+    expect(toledot).toBeGreaterThan(names.findIndex((n) => /^Insights/.test(n)));
+  });
+
+  it("drops the term when plain labels are on", () => {
+    usePreferencesStore.setState({ plainLabels: true });
+    const names = openSwitches().map(nameOf);
+    expect(names.some((n) => /^Timeline/.test(n))).toBe(true);
+    expect(names.some((n) => /Toledot/.test(n))).toBe(false);
+  });
+
+  it("toggles the layer", () => {
+    const sw = openSwitches().find((s) => /Toledot/.test(nameOf(s)))!;
+    const before = usePreferencesStore.getState().layers.toledot;
+    expect(before).toBe(true);
+    fireEvent.click(sw);
+    expect(usePreferencesStore.getState().layers.toledot).toBe(false);
   });
 });

@@ -128,7 +128,9 @@ const openapi = {
       get: {
         summary: "Find the timeline events, issues, artifacts and people that bear on a passage",
         parameters: [referenceParameter],
-        responses: { "200": { description: "Events the passage describes or helps date, issues it raises, artifacts linked to it, and people it names." }, "400": errorResponse },
+        description:
+          "`notes` lists one entry per verse link intersecting the passage, deduplicated per subject per anchor verse: `anchor` (the link's first verse, clamped into the passage), `start`/`end` (the full link), `linkType`, the link's own `note`, and a `subject` carrying what the reader's margin sentence is built from (event positions and confidence, issue kind, person evidence grade and tension, or an artifact's strongest `relation` to a person or event linked to the same verse).",
+        responses: { "200": { description: "Events the passage describes or helps date, issues it raises, artifacts linked to it, people it names, and the reader's timeline notes." }, "400": errorResponse },
       },
     },
     "/api/timeline/persons": {

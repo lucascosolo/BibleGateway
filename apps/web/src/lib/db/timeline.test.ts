@@ -47,6 +47,7 @@ beforeAll(async () => {
     INSERT INTO person_events VALUES ('per-b','ev-exodus');
     INSERT INTO citations(subject_kind,subject_id,source_id,locator,ordinal) VALUES
       ('person','per-b','src-a','p. 3',1),('person_attestation','per-b@art-stele','src-b','p. 4',1);
+    INSERT INTO person_attestations VALUES ('per-a@art-far','per-a','art-far','partially-corroborates','Disputed reading.');
     INSERT INTO issues VALUES ('iss-480','chronology','The 480 years','sum','draft');
     INSERT INTO issue_views VALUES ('iss-480/view-1','iss-480',1,'Literal','text');
     INSERT INTO issue_events VALUES ('iss-480','ev-exodus');
@@ -63,7 +64,11 @@ beforeAll(async () => {
       ('artifact','art-stele',2012040,2012040,'background',NULL),
       ('artifact','art-far',27001001,27001001,'background',NULL),
       ('person','per-b',14001001,14001002,'describes',NULL),
-      ('argument','ev-exodus/early/argument-1',9001001,9001002,'alludes',NULL);
+      ('argument','ev-exodus/early/argument-1',9001001,9001002,'alludes',NULL),
+      ('artifact','art-far',19001001,19001001,'background',NULL),
+      ('person','per-a',19001001,19001001,'describes',NULL),
+      ('person','per-a',20001001,20001003,'describes',NULL),
+      ('person','per-a',20001001,20001001,'alludes',NULL);
   `);
   fixture.db = db;
 });
@@ -263,5 +268,71 @@ describe("id listings", () => {
   it("listIssueIds returns every issue id alphabetically", async () => {
     const { listIssueIds } = await import("./timeline");
     expect(listIssueIds()).toEqual(["iss-480", "iss-other"]);
+  });
+});
+
+describe("getTimelineNotesForRange", () => {
+  const range = (start: number, end: number) => ({ start: start as never, end: end as never });
+
+  it("returns one note per intersecting link, each carrying its subject and link note", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const notes = getTimelineNotesForRange(range(11_006_001, 11_006_005));
+    expect(notes.map((n) => n.id).sort()).toEqual(["event:ev-exodus@11006001", "issue:iss-480@11006001"]);
+    const ev = notes.find((n) => n.id === "event:ev-exodus@11006001")!;
+    expect(ev).toMatchObject({ anchor: 11_006_001, start: 11_006_001, end: 11_006_001, linkType: "dates", note: "480 years" });
+    expect(ev.subject).toMatchObject({ kind: "event", id: "ev-exodus", title: "Exodus", status: "draft", confidence: "contested", earliest: -1446, latest: -1200 });
+    expect((ev.subject as { positions: { label: string }[] }).positions.map((p) => p.label)).toEqual(["Early", "Late"]);
+    const iss = notes.find((n) => n.id === "issue:iss-480@11006001")!;
+    expect(iss.note).toBeNull();
+    expect(iss.subject).toMatchObject({ kind: "issue", id: "iss-480", title: "The 480 years", issueKind: "chronology", status: "draft" });
+  });
+
+  it("describes an argument link by its event, position and stance", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const [n] = getTimelineNotesForRange(range(9_001_001, 9_001_001));
+    expect(n.subject).toMatchObject({
+      kind: "argument", eventId: "ev-exodus", eventTitle: "Exodus", eventStatus: "draft", positionLabel: "Early", stance: "for",
+    });
+  });
+
+  it("describes a person by evidence grade and tension", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const [n] = getTimelineNotesForRange(range(14_001_001, 14_001_002));
+    expect(n.subject).toMatchObject({ kind: "person", id: "per-b", name: "Beta", evidence: "corroborates", hasTension: true, status: "draft" });
+  });
+
+  it("clamps the anchor to range.start when the link begins earlier, keeping the full link", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const [n] = getTimelineNotesForRange(range(12_025_009, 12_025_012));
+    expect(n).toMatchObject({ id: "event:ev-fall@12025009", anchor: 12_025_009, start: 12_025_008, end: 12_025_010 });
+  });
+
+  it("excludes links that do not intersect, and counts a link ending exactly at range.start", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    expect(getTimelineNotesForRange(range(12_025_011, 12_025_020))).toEqual([]);
+    expect(getTimelineNotesForRange(range(66_001_001, 66_001_010))).toEqual([]);
+    expect(getTimelineNotesForRange(range(2_012_041, 2_012_045)).map((n) => n.subject.kind)).toEqual(["event"]);
+  });
+
+  it("dedupes a subject linked twice to the same anchor verse", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const notes = getTimelineNotesForRange(range(20_001_001, 20_001_005));
+    expect(notes.map((n) => n.id)).toEqual(["person:per-a@20001001"]);
+  });
+
+  it("sets an artifact's relation from a person linked to the same verse", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const notes = getTimelineNotesForRange(range(19_001_001, 19_001_001));
+    const art = notes.find((n) => n.subject.kind === "artifact")!;
+    expect(art.subject).toMatchObject({ kind: "artifact", id: "art-far", name: "Far Thing", relation: "partially-corroborates" });
+    expect(notes.some((n) => n.subject.kind === "person")).toBe(true);
+  });
+
+  it("uses an event linked to the same verse for the relation, and null when nothing else is linked", async () => {
+    const { getTimelineNotesForRange } = await import("./timeline");
+    const stele = getTimelineNotesForRange(range(2_012_040, 2_012_040)).find((n) => n.subject.kind === "artifact")!;
+    expect(stele.subject).toMatchObject({ relation: "consistent" });
+    const [far] = getTimelineNotesForRange(range(27_001_001, 27_001_001));
+    expect(far.subject).toMatchObject({ kind: "artifact", id: "art-far", relation: null });
   });
 });

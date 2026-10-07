@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 
 import { timelineNotModified } from "@/lib/db/cache";
 import { getBookIndex } from "@/lib/db/corpus";
-import { getTimelineForRange } from "@/lib/db/timeline";
+import { getTimelineForRange, getTimelineNotesForRange } from "@/lib/db/timeline";
 import { InvalidReferenceError, formatRange, parseReference } from "@/lib/refs";
 import { formatRange as formatYears, withDisplay } from "@/lib/timeline/years";
 
@@ -48,5 +48,7 @@ export async function GET(request: NextRequest) {
       lived: person.lived ? withDisplay(person.lived) : null,
       href: `/api/timeline/persons/${person.id}`,
     })),
+    // The inputs of the reader's margin notes, one per verse link per subject per anchor verse.
+    notes: getTimelineNotesForRange(range),
   });
 }

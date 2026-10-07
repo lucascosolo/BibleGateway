@@ -53,6 +53,7 @@ export interface LayerRowSpec {
  */
 export function layerRows(plainLabels: boolean): LayerRowSpec[] {
   const term = (t: string) => (plainLabels ? "" : ` (${t})`);
+  const toledot = getLexiconEntry("toledot");
   return [
     { key: "verseNumbers", label: "Verse numbers", description: "The small number before each verse." },
     { key: "highlights", label: "Highlights", description: "Your saved highlight colours." },
@@ -69,6 +70,12 @@ export function layerRows(plainLabels: boolean): LayerRowSpec[] {
       key: "insights",
       label: "Insights",
       description: "Small windows into the original text — a wordplay, a custom, a connection you might not have seen.",
+    },
+    {
+      key: "toledot",
+      label: `${toledot.plainLabel}${term(toledot.term)}`,
+      description:
+        "Dating disputes, outside evidence and open questions under the verses they concern, linked to the timeline.",
     },
     {
       key: "crossRefs",

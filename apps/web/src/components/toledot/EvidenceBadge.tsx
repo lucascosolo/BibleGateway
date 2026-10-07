@@ -1,17 +1,7 @@
 import clsx from "clsx";
 
 import type { EvidenceGrade } from "@/lib/db/timeline";
-
-/** One line per grade: what a reader should take the word to mean. */
-export const EVIDENCE_MEANING: Record<EvidenceGrade, string> = {
-  corroborates: "Named by a source outside the Bible",
-  "partially-corroborates": "Partly confirmed; the reading is disputed",
-  consistent: "Fits an outside source without naming them",
-  silent: "Outside sources exist but say nothing",
-  none: "No outside evidence",
-};
-
-export const TENSION_MEANING = "An outside source contradicts a biblical detail about them";
+import { EVIDENCE_MEANING, TENSION_MEANING } from "@/lib/timeline/evidence";
 
 /**
  * The derived evidence grade as a word. Its meaning travels in the accessible name, and with
