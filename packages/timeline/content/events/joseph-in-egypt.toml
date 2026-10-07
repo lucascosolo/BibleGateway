@@ -58,3 +58,37 @@ citations = [{ source = "finkelstein-silberman-2002", locator = "p. 67" }, { sou
   The accusation that the brothers are spies who "come to see the weakness of the land" fits an Egypt that was invaded from the east only from the seventh century."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "p. 67" }]
   verses = [{ ref = "Gen.42.9", link = "alludes" }]
+
+[[positions]]
+id = "kitchen-mk-hyksos"
+label = "Middle Kingdom to Hyksos setting, with later touches (Kitchen)"
+tradition = "archaeological"
+earliest = -1860
+latest = -1540
+held_by = "K. A. Kitchen"
+summary = """
+Kitchen, an Egyptologist who defends the Bible's reliability, says Joseph's setting fits the Twelfth to Hyksos period in the East Delta, about 1860-1540 BCE, and not the Ramesside age. He finds two or three dating horizons in the story: an early core, a thirteenth-century element, and possibly later adjustments."""
+citations = [{ source = "kitchen-2003", locator = "pp. 345–348" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The 20 shekels paid for Joseph match the early second-millennium slave price. Prices rose to 30 shekels and more by the fifteenth to thirteenth centuries and to 50-60 in first-millennium Assyria. Kitchen adds that the names Zaphenath-paneah and Asenath fit the Middle Kingdom."""
+  citations = [{ source = "kitchen-2003", locator = "pp. 345–346" }]
+  verses = [
+    { ref = "Gen.37.28", link = "dates" },
+    { ref = "Gen.41.45", link = "dates" },
+  ]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  "The land of Rames(s)es" in Genesis 47:11 is Ramesses II "at the earliest". It is not said by any character but comes from the narrator or a later updater, so Kitchen sees a thirteenth-century horizon in the story. He also notes that Joseph's age of 110 was the Egyptian ideal, most often mentioned in the Ramesside period, and may reflect the same later narrator."""
+  citations = [
+    { source = "kitchen-2003", locator = "p. 348" },
+    { source = "kitchen-2003", locator = "p. 351" },
+  ]
+  verses = [
+    { ref = "Gen.47.11", link = "dates" },
+    { ref = "Gen.50.22", link = "dates" },
+  ]

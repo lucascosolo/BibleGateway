@@ -8,7 +8,7 @@
 id = "kitchen-2003"
 kind = "book"
 author = "K. A. Kitchen"
-title = "On the Reliability of the Old Testament"
+title = "On the Reliability of the Old Testament (page numbers follow the Eerdmans printing, read from a scan at ~/.cache/jot/sources/kitchen-2003/)"
 publisher = "Eerdmans"
 year = 2003
 isbn = "0-8028-4960-1"
@@ -1102,6 +1102,14 @@ author = "Israel Finkelstein and Neil Asher Silberman"
 title = "The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)"
 publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
+
+[[source]]
+id = "pritchard-1969"
+kind = "book"
+author = "James B. Pritchard (ed.)"
+title = "Ancient Near Eastern Texts Relating to the Old Testament, 3rd edition with Supplement (page numbers follow this printing, read from a scan of pp. 1–327 at ~/.cache/jot/sources/pritchard-1969/)"
+publisher = "Princeton University Press"
+year = 1969
 
 [[source]]
 id = "ehrman-2013"

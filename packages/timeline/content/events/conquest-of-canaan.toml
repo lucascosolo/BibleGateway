@@ -59,7 +59,7 @@ summary = """
 Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476). So the conquest must come before that."""
 citations = [
   { source = "wood-2005", locator = "pp. 476, 478" },
-  { source = "kitchen-2003" },
+  { source = "kitchen-2003", locator = "pp. 187–188" },
 ]
 
   [[positions.arguments]]
@@ -68,6 +68,25 @@ citations = [
   Kitchen blames erosion for the lack of 13th-century remains at Jericho. There may have been a Jericho between 1275 and 1220. But above the tiny remains of 1400-1275, all of it has long since gone."""
   citations = [{ source = "wood-2005", locator = "p. 487" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Kitchen, an Egyptologist who defends the Bible's reliability, says Middle Bronze Jericho was destroyed about 1550 and its ruins lay empty for some 200 years. Erosion then removed nearly all of the Late Bronze town, so "We will never find 'Joshua's Jericho'" on the mound."""
+  citations = [{ source = "kitchen-2003", locator = "pp. 187–188" }]
+  verses = [{ ref = "Josh.6.20", link = "describes" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Kitchen reads Joshua as describing "disabling raids", not occupation. After the southern battles the strike force twice returns to its base at Gilgal (Josh. 10:15, 43), and in the north Hazor alone is burned (11:13), as Jericho and Ai were."""
+  citations = [{ source = "kitchen-2003", locator = "pp. 160–162" }]
+  verses = [
+    { ref = "Josh.6.24", link = "describes" },
+    { ref = "Josh.10.15", link = "describes" },
+    { ref = "Josh.10.43", link = "describes" },
+    { ref = "Josh.11.13", link = "describes" },
+  ]
 
   [[positions.arguments]]
   stance = "against"

@@ -4,8 +4,8 @@ kind = "inscription"
 status = "draft"
 made = { earliest = -840, latest = -840 }
 language = "Moabite"
-summary = "A Moabite royal inscription, dated c. 840 BCE, found at Dibon in 1868. It says Omri was king of Israel and oppressed Moab for many days. It credits the god Chemosh with Mesha's victories. It contains the earliest certain mention of YHWH outside the Bible. Line 31 is disputed. Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'."
+summary = "A Moabite royal inscription, dated c. 840 BCE, found at Dibon in 1868. It says Omri was king of Israel and oppressed Moab for many days; in Albright's ANET translation, \"As for Omri, king of Israel, he humbled Moab many years (lit., days)\" (p. 320). It credits the god Chemosh with Mesha's victories. It contains the earliest certain mention of YHWH outside the Bible. Line 31 is disputed. Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'."
 discovered = { year = 1868, place = "Dibon (modern Dhiban), Jordan (F. A. Klein)" }
 held_by = { institution = "Louvre, Paris", accession = "AO 5066" }
-citations = [{ source = "wikipedia-mesha-stele" }, { source = "wikidata", locator = "Q724954: inventory number AO 5066, Department of Near Eastern Antiquities of the Louvre" }, { source = "finkelstein-silberman-2002", locator = "pp. 129, 177" }]
+citations = [{ source = "wikipedia-mesha-stele" }, { source = "wikidata", locator = "Q724954: inventory number AO 5066, Department of Near Eastern Antiquities of the Louvre" }, { source = "finkelstein-silberman-2002", locator = "pp. 129, 177" }, { source = "pritchard-1969", locator = "pp. 320–321, trans. W. F. Albright" }]
 verses = [{ ref = "2Kgs.3.4-2Kgs.3.27", link = "background" }]

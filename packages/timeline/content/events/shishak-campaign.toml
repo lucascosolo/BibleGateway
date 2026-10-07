@@ -35,3 +35,31 @@ artifact = "bubastite-portal"
 relation = "partially-corroborates"
 note = "It records a Shoshenq campaign in the region of Israel and Judah. Scholars debate whether Jerusalem is on the list."
 citations = [{ source = "wikipedia-shoshenq-i" }, { source = "wikipedia-rehoboam" }]
+
+[[positions]]
+id = "kitchen-927-926"
+label = "Campaign in Shoshenq I's year 19 or 20 (927 or 926 BCE) (Kitchen)"
+tradition = "archaeological"
+earliest = -927
+latest = -925
+held_by = "K. A. Kitchen"
+summary = """
+Kitchen, an Egyptologist who defends the Bible's reliability, dates Shoshenq I to about 945-924 BCE and puts his campaign in his year 19 or 20, which is 927 or 926. Rehoboam's fifth year is about 926/925. He says the Egyptian and Hebrew date series are independent of each other yet match well."""
+citations = [{ source = "kitchen-2003", locator = "pp. 32–34" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Kitchen writes that "there is no reason whatever to doubt the identity" of the Bible's Shushaq with Shoshenq I. He points to the top of a stela with Shoshenq's cartouches found in the rubble of Megiddo, which he calls the king's "visiting card"."""
+  citations = [{ source = "kitchen-2003", locator = "pp. 33–34" }]
+  verses = [
+    { ref = "1Kgs.14.25", link = "dates" },
+    { ref = "2Chr.12.2", link = "dates" },
+  ]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Against the claim that Shoshenq copied an older list, Kitchen counts 155 ovals at Karnak and finds that, of the usable names, only nine appear in earlier lists. The other ninety-eight are unique to Shoshenq I's list."""
+  citations = [{ source = "kitchen-2003", locator = "pp. 496–497" }]
+  verses = [{ ref = "1Kgs.14.26", link = "describes" }]

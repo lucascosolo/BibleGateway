@@ -35,8 +35,8 @@ citations = [{ source = "wood-2005", locator = "pp. 475–489" }]
   [[positions.arguments]]
   stance = "against"
   text = """
-  Exodus 1:11 has the Israelites building a store city called Raamses. That name is linked with the Ramesside pharaohs of the 13th century."""
-  citations = [{ source = "kitchen-2003" }]
+  Exodus 1:11 has the Israelites building a store city called Raamses. That name is linked with the Ramesside pharaohs of the 13th century. Kitchen adds that "an exodus before 1320 would have no Delta capital to march from", since Avaris stayed a backwater until Horemhab."""
+  citations = [{ source = "kitchen-2003", locator = "p. 255; p. 310" }]
   verses = [{ ref = "Exod.1.11", link = "dates" }]
 
 [[positions]]
@@ -47,9 +47,9 @@ earliest = -1279
 latest = -1213
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen places the Exodus in the 13th century BCE under Ramesses II. Ramesses reigned about 1279-1213 BCE on the dating most Egyptologists follow. Critical here means the date that leans on Egyptian evidence."""
+Kitchen places the Exodus in the 13th century BCE under Ramesses II. Ramesses reigned about 1279-1213 BCE on the dating most Egyptologists follow. Kitchen's own figure is an exodus "about 1260/1250 (minimum)", with the oppression running "circa 1320-1260/1250", and he calls a thirteenth-century exodus "at present the least objectionable dating". Critical here means the date that leans on Egyptian evidence."""
 citations = [
-  { source = "kitchen-2003" },
+  { source = "kitchen-2003", locator = "pp. 255–259; the date on pp. 307 and 310" },
   { source = "wikipedia-ramesses-ii" },
 ]
 
@@ -57,8 +57,15 @@ citations = [
   stance = "for"
   text = """
   The store city "Raamses" of Exodus 1:11 fits the building program of the Ramesside kings in the eastern Nile Delta."""
-  citations = [{ source = "kitchen-2003" }]
+  citations = [{ source = "kitchen-2003", locator = "pp. 255–256" }]
   verses = [{ ref = "Exod.1.11", link = "dates" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Kitchen, an Egyptologist who defends the Bible's reliability, argues that Raamses is Pi-Ramesse at Qantir, the vast city Ramesses II built. It was largely abandoned about 1130, and its stonework was moved to Tanis without its name. Since later Hebrew writers could not have known the name, he calls Raamses "an early (thirteenth/twelfth century) marker in the exodus tradition." He puts Pithom at Tell er-Retaba and Succoth at Tell el-Maskhuta (pp. 257-258), giving a Late Bronze route for the start of the exodus."""
+  citations = [{ source = "kitchen-2003", locator = "pp. 255–259" }]
+  verses = [{ ref = "Exod.1.11", link = "dates" }, { ref = "Exod.12.37", link = "describes" }]
 
   [[positions.arguments]]
   stance = "against"

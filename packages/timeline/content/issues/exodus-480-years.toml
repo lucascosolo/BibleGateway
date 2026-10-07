@@ -8,7 +8,7 @@ events = ["exodus"]
 verses = [{ ref = "1Kgs.6.1", link = "dates" }]
 citations = [
   { source = "wood-2005" },
-  { source = "kitchen-2003" },
+  { source = "kitchen-2003", locator = "pp. 255–259" },
 ]
 
 [[views]]
@@ -20,5 +20,5 @@ citations = [{ source = "wood-2005" }]
 [[views]]
 label = "Not a straight count"
 text = """
-An Exodus in the 13th century under Ramesses II needs the 480 years to be read as something other than an exact span of time."""
-citations = [{ source = "kitchen-2003" }]
+An Exodus in the 13th century under Ramesses II needs the 480 years to be read as something other than an exact span of time. Kitchen shows that adding up every period given from Exodus to Kings yields not 480 but "554 + x + y + z years", so overlaps between judges are needed on any reading. He offers two origins for the 480: twelve "full generations" of 40 years (12 x 40), or a selection from the aggregate that leaves out the foreign oppressions, which his Table 28 brings to 475 years plus about 5 for Joshua and the elders. Either way the real elapsed time from an exodus "about 1260/1250" to Solomon's fourth year in 967 is about 300 years."""
+citations = [{ source = "kitchen-2003", locator = "pp. 202–203; pp. 307–309 with Table 28 on p. 309" }]

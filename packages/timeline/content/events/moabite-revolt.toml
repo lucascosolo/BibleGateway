@@ -27,3 +27,21 @@ artifact = "mesha-stele"
 relation = "partially-corroborates"
 note = "It says Omri oppressed Moab and credits the god Chemosh with Mesha's victories. Wikipedia says it runs parallel to 2 Kings 3:4-27, but the two accounts differ."
 citations = [{ source = "wikipedia-mesha-stele" }]
+
+[[positions]]
+id = "kitchen-mesha-840"
+label = "Revolt by about 850 BCE; stele no later than about 840/835 BCE (Kitchen)"
+tradition = "archaeological"
+earliest = -852
+latest = -835
+held_by = "K. A. Kitchen"
+summary = """
+Kitchen, an Egyptologist who defends the Bible's reliability, takes Jehoram's accession as about 852 and says Mesha's successful rebellion was hardly later than about 850. He calls about 840/835 the latest credible date for carving the stele, and even that too late."""
+citations = [{ source = "kitchen-2003", locator = "p. 35" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Kitchen says Mesha's rebuilding could take "a couple of years to five or ten years at most", and that the stele was not a memorial written after his death. The Bible and the stele agree that Omri's dynasty ruled Moab as a vassal for many years."""
+  citations = [{ source = "kitchen-2003", locator = "p. 35" }]
+  verses = [{ ref = "2Kgs.3.4", link = "describes" }, { ref = "2Kgs.3.5", link = "describes" }]
