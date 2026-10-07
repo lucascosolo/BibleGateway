@@ -5,7 +5,7 @@ import { spanYears } from "./years";
 import { layoutBars } from "./strip-layout";
 
 function ev(id: string, earliest: number, latest: number, axis: EventSummary["axis"] = "narrative"): EventSummary {
-  return { id, title: id, axis, category: "x", confidence: "firm", status: "draft", earliest, latest, bookIds: [], segment: null };
+  return { id, title: id, axis, category: "x", confidence: "firm", status: "draft", earliest, latest, traditional: null, bookIds: [], segment: null };
 }
 
 const by = (bars: ReturnType<typeof layoutBars>, id: string) => bars.find((b) => b.id === id)!;
@@ -51,5 +51,15 @@ describe("layoutBars", () => {
     const [after] = layoutBars([ev("b", 10, 20)], -10, 100, 1);
     expect(after.left).toBe(spanYears(-10, 10)); // 19, not 20
     expect(after.left).toBe(19);
+  });
+
+  it("lets a traditional lens claim row space without moving the bar", () => {
+    const a = { ...ev("a", -1200, -1150), traditional: { earliest: -1500, latest: -1480 } };
+    const b = ev("b", -1400, -1300);
+    const bars = layoutBars([a, b], -1600, -1000, 1);
+    expect(by(bars, "a").left).toBe(spanYears(-1600, -1200));
+    expect(by(bars, "a").lane).not.toBe(by(bars, "b").lane);
+    const plain = layoutBars([ev("a", -1200, -1150), b], -1600, -1000, 1);
+    expect(by(plain, "a").lane).toBe(by(plain, "b").lane);
   });
 });

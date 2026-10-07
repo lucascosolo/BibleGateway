@@ -26,7 +26,14 @@ export function yearOffset(from: number, year: number, pxPerYear: number): numbe
  * own width (its label), so a short bar's caption never runs under its neighbour.
  */
 export function layoutBars(
-  events: readonly { id: string; axis: Axis; earliest: number; latest: number }[],
+  events: readonly {
+    id: string;
+    axis: Axis;
+    earliest: number;
+    latest: number;
+    /** A traditional-chronology envelope drawn as a dotted lens; it claims row space but never moves the bar. */
+    traditional?: { earliest: number; latest: number } | null;
+  }[],
   from: number,
   to: number,
   pxPerYear: number,
@@ -40,11 +47,17 @@ export function layoutBars(
     .map((event) => {
       const left = yearOffset(from, event.earliest, pxPerYear);
       const width = Math.max(spanYears(event.earliest, event.latest) * pxPerYear, minWidth);
+      // The lens extends the row claim in both directions so a dotted line never runs under a
+      // neighbour's caption; the bar itself keeps the scholarly envelope.
+      const lensStart = event.traditional ? Math.min(event.earliest, event.traditional.earliest) : event.earliest;
+      const lensEnd = event.traditional ? Math.max(event.latest, event.traditional.latest) : event.latest;
+      const claimLeft = yearOffset(from, lensStart, pxPerYear);
+      const claimRight = Math.max(left + Math.max(width, reserve), yearOffset(from, lensEnd, pxPerYear));
       const ends = rowEnds.get(event.axis) ?? [];
       rowEnds.set(event.axis, ends);
-      let lane = ends.findIndex((end) => end < left);
+      let lane = ends.findIndex((end) => end < claimLeft);
       if (lane === -1) lane = ends.length;
-      ends[lane] = left + Math.max(width, reserve);
+      ends[lane] = claimRight;
       return { id: event.id, axis: event.axis, lane, left, width };
     });
 }

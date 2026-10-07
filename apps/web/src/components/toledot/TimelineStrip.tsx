@@ -30,11 +30,15 @@ const CONFIDENCE_PHRASE: Record<EventSummary["confidence"], string> = {
 
 type StripEvent = EventSummary & { display: string };
 
-/** The traditional-chronology envelope in the bar's own coordinates, clipped to the window. */
+/**
+ * The traditional-chronology lens in the bar's own coordinates, clipped to the window. The dotted
+ * line runs from the traditional envelope to the scholarly bar (their union), so a traditional date
+ * centuries away still reads as belonging to this event rather than as a stray fragment.
+ */
 function traditionalExtent(event: StripEvent, from: number, to: number, barLeft: number) {
   if (!event.traditional) return null;
-  const start = Math.min(Math.max(event.traditional.earliest, from), to);
-  const end = Math.max(Math.min(event.traditional.latest, to), from);
+  const start = Math.min(Math.max(Math.min(event.traditional.earliest, event.earliest), from), to);
+  const end = Math.max(Math.min(Math.max(event.traditional.latest, event.latest), to), from);
   return {
     left: yearOffset(from, start, PX_PER_YEAR) - barLeft,
     width: Math.max(spanYears(start, end) * PX_PER_YEAR, 8),

@@ -131,9 +131,12 @@ describe("getTimelineWindow", () => {
 });
 
 describe("traditional lens columns", () => {
+  // The client layer sets `query_only` on the shared mocked handle; lift it for the fixture write.
   const setTraditional = () =>
+    fixture.db!.pragma("query_only = false") &&
     fixture.db!.prepare("UPDATE events SET traditional_earliest = -1900, traditional_latest = -1850 WHERE event_id = 'ev-fall'").run();
   const clear = () =>
+    fixture.db!.pragma("query_only = false") &&
     fixture.db!.prepare("UPDATE events SET traditional_earliest = NULL, traditional_latest = NULL WHERE event_id = 'ev-fall'").run();
 
   it("getEvent returns traditional: null when the columns are NULL", async () => {
