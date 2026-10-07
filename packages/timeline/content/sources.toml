@@ -1104,6 +1104,14 @@ publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
 
 [[source]]
+id = "thiele-1984"
+kind = "article"
+author = "Edwin R. Thiele"
+title = "The Chronology of the Hebrew Kings (popular article; open access at Andrews University Digital Commons, Faculty Publications 3816; PDF at ~/.cache/jot/sources/thiele-1984/)"
+container = "Adventist Review, 17 May 1984, pp. 3–5 (issue pages 515–517)"
+year = 1984
+
+[[source]]
 id = "arabzadeh-2023"
 kind = "article"
 author = "Morteza Arabzadeh Sarbanani"
