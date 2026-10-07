@@ -72,3 +72,21 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 124-126 approx
 Ehrman argues John 21:24 distinguishes the disciple who testified and wrote from the "we" who vouch for him, so the final author was someone other than that disciple. John 19:35 says only that the eyewitness spoke the truth, not who wrote it down."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 124 approx." }]
   verses = [{ ref = "John.21.24", link = "describes", note = "The testifying disciple and the 'we' who vouch for him." }, { ref = "John.19.35", link = "describes", note = "The eyewitness's testimony, with no statement of who wrote it down." }]
+
+[[positions]]
+id = "streeter-elder-90-95"
+label = "A.D. 90 to 95, at Ephesus, by John the Elder rather than the apostle"
+tradition = "critical"
+earliest = 90
+latest = 95
+held_by = "B. H. Streeter (1924)"
+summary = """
+Streeter's The Four Gospels (1924) is the landmark 1924 study of the Gospels' origins. He argues the Fourth Gospel was written in Asia, at Ephesus, about 90 to 95, by John the Elder, a disciple of the Lord and not the apostle John. He thinks the apostle was probably martyred earlier and that the Beloved Disciple is the apostle idealised."""
+citations = [{ source = "streeter-1924", locator = "pp. 427–429, 456" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Streeter argues that Papias speaks of an "Elder John, a disciple of the Lord", and that the writer of 2 and 3 John calls himself the Elder, so these two letters act as the author's signature. He says John 21:24, which names the Beloved Disciple as author, is by a later hand and probably misidentifies him."""
+  citations = [{ source = "streeter-1924", locator = "pp. 427–429" }]
+  verses = [{ ref = "John.21.24", link = "describes", note = "The verse naming the Beloved Disciple as the writer, which Streeter attributes to a later hand." }]

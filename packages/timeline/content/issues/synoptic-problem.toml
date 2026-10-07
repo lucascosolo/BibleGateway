@@ -1,0 +1,39 @@
+id = "synoptic-problem"
+kind = "internal"
+title = "How are Matthew, Mark and Luke related?"
+status = "draft"
+summary = """
+Matthew, Mark and Luke share so much wording and so much of the same order that they must be related, yet they also differ. The most common solution is Markan priority: Mark was written first and Matthew and Luke each used it. The material Matthew and Luke share that is not in Mark is explained by a lost sayings source called Q. In 1924 B. H. Streeter widened this into a four-document hypothesis (Mark, Q, M and L) and proposed a Proto-Luke; Brown notes that other solutions, such as the Griesbach hypothesis, remain on offer."""
+events = ["mark-composition", "matthew-composition", "luke-acts-composition"]
+verses = [
+  { ref = "Mark.1.1", link = "background", note = "The opening of the Gospel that Markan priority treats as the earliest." },
+  { ref = "Luke.1.1-Luke.1.4", link = "describes", note = "The author says many have undertaken to compile a narrative." },
+  { ref = "Matt.3.7-Matt.3.10", link = "describes", note = "John the Baptist's warning, a near-verbatim passage shared with Luke and attributed to Q." },
+  { ref = "Luke.3.7-Luke.3.9", link = "describes", note = "The parallel to Matthew's passage, near-verbatim." },
+  { ref = "Luke.9.51", link = "background", note = "The start of the Lukan travel narrative." },
+]
+citations = [{ source = "streeter-1924", locator = "pp. 151–292" }, { source = "brown-1997", locator = "ch. 6, The Synoptic Problem" }]
+
+[[views]]
+label = "Markan priority and Q (Streeter)"
+text = """
+Streeter's The Four Gospels (1924) is the landmark study that argued Mark was the first Gospel and the base of both Matthew and Luke. The material Matthew and Luke share that is not in Mark he traces to a second, lost source, Q, which he tries to reconstruct."""
+citations = [{ source = "streeter-1924", locator = "pp. 151–198, 271–292" }]
+
+[[views]]
+label = "Proto-Luke"
+text = """
+Streeter proposes that Luke first put together a document of his own, combining Q with Luke's special material, and only later added material from Mark. He calls this earlier document Proto-Luke."""
+citations = [{ source = "streeter-1924", locator = "pp. 199–222" }]
+
+[[views]]
+label = "A Four Document Hypothesis"
+text = """
+Streeter extends the theory to four documents behind the Synoptic Gospels: Mark, Q, M (the special material in Matthew) and L (the special material in Luke). He expects the other Gospels to preserve the traditions of particular churches, and connects Mark with Rome, M with Jerusalem, L with Caesarea and, most probably, Q with Antioch."""
+citations = [{ source = "streeter-1924", locator = "pp. 223–270" }]
+
+[[views]]
+label = "Brown's summary of the modern debate"
+text = """
+Brown says the most common view is that Matthew and Luke each used Mark and wrote independently of each other, with Q behind what they share; this is the Two-Source Theory. He names alternatives. In the Augustinian view Matthew came first and Luke used it; the Griesbach hypothesis (1789) puts the order as Matthew, Luke, Mark. He notes the main objection to Markan priority is the "Minor Agreements" of Matthew and Luke against Mark, and concludes that no solution solves every difficulty."""
+citations = [{ source = "brown-1997", locator = "ch. 6, The Synoptic Problem" }]

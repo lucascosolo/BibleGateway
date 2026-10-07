@@ -84,3 +84,21 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
 Ehrman suggests current events shaped Mark: the war with Rome and the Temple's destruction would make the end seem near, as Jesus predicts in Mark 8:38 to 9:1 and chapter 13. He treats this as a suggestion ("many scholars believe"), not proof."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
   verses = [{ ref = "Mark.13.2", link = "dates", note = "The Temple prediction, read against the war of 66-70 CE." }, { ref = "Mark.9.1", link = "background", note = "The end said to come within the lifetime of some hearers." }]
+
+[[positions]]
+id = "streeter-rome-c65"
+label = "About 65 CE, at Rome, before the Temple fell"
+tradition = "critical"
+earliest = 62
+latest = 68
+held_by = "B. H. Streeter (1924)"
+summary = """
+Streeter's The Four Gospels (1924) is the landmark study that made Mark the earliest Gospel and the base of Matthew and Luke. He holds that Mark was written at Rome, in the lifetime of Peter's circle, and says it "was probably written about 65". Because he gives only "about" a year, the range here is plus or minus three years, the editor's reading."""
+citations = [{ source = "streeter-1924", locator = "pp. 489–495, 524" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Streeter argues that Mark 13 expects the Anti-Christ to appear in the Temple, which presumes the Temple still stood. The same expectation is in 2 Thessalonians, so the chapter is more naturally explained as written before 70 than after it. For Rome he points to 1 Peter 5:13, where "Babylon" can only mean the Roman church, and to a belief that Peter and Mark were together there."""
+  citations = [{ source = "streeter-1924", locator = "pp. 489–490, 493" }]
+  verses = [{ ref = "Mark.13.14", link = "dates", note = "The Anti-Christ expected in the Temple, which implies the Temple still stood." }, { ref = "1Pet.5.13", link = "background", note = "'Babylon' read as Rome, linking Peter and Mark there." }]

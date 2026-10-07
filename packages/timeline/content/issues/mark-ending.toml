@@ -24,3 +24,9 @@ label = "Canonical status is a separate question"
 text = """
 Brown notes that the Council of Trent designated the Longer Ending as Scripture, though it is missing from many witnesses, because Catholic canonicity rests on long liturgical use. Catholics remain free to accept scholars' judgment that the passage was not part of the original Gospel."""
 citations = [{ source = "brown-1997", locator = "ch. 3, section on canonicity and textual criticism" }]
+
+[[views]]
+label = "Streeter: the lost end of Mark"
+text = """
+Streeter's The Four Gospels (1924) is the landmark study that treats Mark as the earliest Gospel. He holds that Mark's original ending was lost very early, either because the Gospel was never finished or because the earliest copy was accidentally damaged. He rejects deliberate suppression, and argues that the copies Matthew and Luke used already stopped at the same abrupt point as our oldest manuscripts. He sees the Longer Ending (16:9-20) as a later addition, probably from Rome, and ventures a tentative guess that the appearance to Mary Magdalene and the lakeside appearance to Peter in John represent the lost ending. He says the evidence is quite insufficient for an assured result."""
+citations = [{ source = "streeter-1924", locator = "pp. 333–360" }]

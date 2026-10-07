@@ -75,3 +75,21 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 110 approx.; Ac
 Ehrman reads the preface as saying the author had several predecessors in writing about Jesus (v. 1) and drew on stories from "eyewitnesses and ministers of the word" (v. 2). So the author concedes he was not himself an eyewitness, and he used earlier sources, including Mark."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 96 approx." }]
   verses = [{ ref = "Luke.1.1-Luke.1.4", link = "describes", note = "The preface names earlier narratives and eyewitness sources." }]
+
+[[positions]]
+id = "streeter-80-90"
+label = "About 80 for the Gospel, Acts by about 90; Luke the companion of Paul"
+tradition = "critical"
+earliest = 80
+latest = 90
+held_by = "B. H. Streeter (1924)"
+summary = """
+Streeter's The Four Gospels (1924) is the landmark 1924 study of the Gospels' sources. He dates the Gospel of Luke to "not later than A.D. 85, more likely about A.D. 80" and thinks Acts is not likely to be later than 90; the range runs from the Gospel's likely date to the Acts limit. He suggests the Gospel was written at Corinth, as a hypothesis, and that Acts took shape at Rome. He accepts Luke, the companion of Paul, as the author, reading the "we" passages as the author's own claim to be an eyewitness."""
+citations = [{ source = "streeter-1924", locator = "pp. 532–535, 540, 548–553" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Streeter argues that Luke, who follows Mark closely, suddenly rewrites Mark 13's Anti-Christ prophecy into one of Jerusalem's destruction and enslavement. He reads this as knowledge of the events of 70, so the Gospel cannot be earlier. The Fourth Gospel's use of Luke then keeps it from running much past 85."""
+  citations = [{ source = "streeter-1924", locator = "p. 540" }]
+  verses = [{ ref = "Luke.21.20", link = "dates", note = "Armies surrounding Jerusalem, taken as reworking Mark 13 after the event." }]

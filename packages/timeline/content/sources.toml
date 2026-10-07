@@ -1152,6 +1152,14 @@ publisher = "Zondervan, Grand Rapids"
 year = 2005
 
 [[source]]
+id = "streeter-1924"
+kind = "book"
+author = "Burnett Hillman Streeter"
+title = "The Four Gospels: A Study of Origins, Treating of the Manuscript Tradition, Sources, Authorship, and Dates (public domain; scan at ~/.cache/jot/sources/streeter-1924/)"
+publisher = "Macmillan, London"
+year = 1924
+
+[[source]]
 id = "brown-1997"
 kind = "book"
 author = "Raymond E. Brown"
