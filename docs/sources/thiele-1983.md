@@ -109,3 +109,12 @@ is reusable beyond `packages/timeline/content` (reader notes, person pages, futu
   120, 125, 139–62; with Menahem 108, 120, 121, 125–28, 139–62; with Pekah 108; receives tribute
   from Israel 125–28. Tishri-to-Tishri regnal year 44–46, 51–53. Zedekiah: accession 187, 206;
   dates of reign 190. Hezekiah synchronisms 38, 168, 174.
+- **pp. 51–52 ("The Fundamental Principles of Hebrew Chronology").** Survey of who used which
+  new year: most chronologists Nisan (Newton 1728, Keil, Kugler, Lewy, Beecher); Kleber Nisan for
+  Judah and Tishri for Israel; "many of the best modern students" Tishri for both (Mowinckel,
+  Morgenstern); Begrich a shift from Tishri to Nisan; Mahler regnal years from the accession day.
+  Thiele's evidence for Tishri years in Judah: temple begun 2nd month of Solomon's 4th year
+  (1 Kings 6:1, 37), finished 8th month of the 11th year (6:38), "seven years in building".
+  Months numbered from Nisan; inclusive counting. Diagram 5: seven Tishri years versus eight Nisan
+  years. Josiah's eighteenth year (2 Kings 22:3; 23:23) as further proof of Tishri reckoning late
+  in Judah's history. No absolute year for Solomon's accession on these pages.
