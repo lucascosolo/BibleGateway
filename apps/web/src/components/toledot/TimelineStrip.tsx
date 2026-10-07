@@ -37,13 +37,12 @@ type StripEvent = EventSummary & { display: string };
  */
 export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]; events: readonly StripEvent[]; from: number; to: number }) {
   const viewport = useRef<HTMLDivElement>(null);
-  const [edges, setEdges] = useState({ start: true, end: false });
+  const [atEnd, setAtEnd] = useState(false);
 
   useEffect(() => {
     const node = viewport.current;
     if (!node) return;
-    const update = () =>
-      setEdges({ start: node.scrollLeft <= 1, end: node.scrollLeft + node.clientWidth >= node.scrollWidth - 1 });
+    const update = () => setAtEnd(node.scrollLeft + node.clientWidth >= node.scrollWidth - 1);
     update();
     node.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
@@ -64,7 +63,7 @@ export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]
       <figcaption className="toledot-strip__hint">
         {formatRange(from, to)}. Scroll sideways along the years; Tab moves through the events in date order.
       </figcaption>
-      <div className="toledot-strip__frame" data-at-start={edges.start} data-at-end={edges.end}>
+      <div className="toledot-strip__frame" data-at-end={atEnd}>
       <div ref={viewport} className="toledot-strip__viewport" tabIndex={0} role="region" aria-label={`Timeline, ${formatRange(from, to)}`}>
         <div className="toledot-strip__canvas" style={{ width }}>
           <div className="toledot-strip__grid" aria-hidden="true">

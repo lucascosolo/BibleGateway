@@ -44,7 +44,7 @@
   position: relative;
   border-block: 1px solid var(--color-border-strong);
 }
-.toledot-strip__frame::before,
+/* Only the trailing edge fades: the leading edge is held by the sticky lane names, which a fade would wash out. */
 .toledot-strip__frame::after {
   content: "";
   position: absolute;
@@ -54,9 +54,7 @@
   z-index: 3;
   transition: opacity 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
-.toledot-strip__frame::before { left: 0; background: linear-gradient(to left, transparent, var(--color-bg)); }
 .toledot-strip__frame::after { right: 0; background: linear-gradient(to right, transparent, var(--color-bg)); }
-.toledot-strip__frame[data-at-start="true"]::before,
 .toledot-strip__frame[data-at-end="true"]::after { opacity: 0; }
 
 .toledot-strip__viewport {
@@ -212,6 +210,10 @@
   color: var(--color-ink-muted);
 }
 .toledot-bar__confidence { font-style: italic; }
+.toledot-bar__title,
+.toledot-bar__meta { align-self: flex-start; max-width: 100%; background: var(--color-bg); padding-right: var(--space-1); }
+.toledot-bar__link:hover .toledot-bar__title,
+.toledot-bar__link:hover .toledot-bar__meta { background: transparent; }
 
 /* --- The register under the strip ------------------------------------------------------------- */
 
@@ -408,6 +410,5 @@
 .toledot-relations__kind { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-muted); }
 
 @media (prefers-reduced-motion: reduce) {
-  .toledot-strip__frame::before,
   .toledot-strip__frame::after { transition: none; }
 }
