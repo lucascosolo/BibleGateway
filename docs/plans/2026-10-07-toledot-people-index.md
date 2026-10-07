@@ -82,3 +82,50 @@ the strip component, no data change:
 
 Tests: era boundary derivation (clusters, single event, empty), `maxRows` overflow, URL round-trip.
 Screenshot 390 and 1280 again and compare the strip height and scroll width with the numbers above.
+
+## Critical scholarship leads; traditional chronology is a lens (added 2026-10-07)
+
+The user: "It's important for the purposes of this app to display critical-historical/archaeological
+scholarship. Traditional biblical chronology can be shown as another lens but clearly with its
+caveats and sources / evidence or lack thereof."
+
+### Builder (`packages/timeline/build.py`)
+
+- `TRADITIONS = {"critical", "archaeological", "chronological", "traditional"}`; a position with
+  any other `tradition` is an error naming the file.
+- An event's stored envelope (`events.earliest_year/latest_year`) is the min/max over its
+  **non-traditional** positions. Only when every position is traditional does the envelope cover
+  them, and the builder then emits a warning naming the event ("only traditional positions").
+- New columns `events.traditional_earliest`, `events.traditional_latest` (nullable, both or
+  neither): the envelope of the traditional positions, so the UI can draw the lens without
+  re-deriving it. `schema.sql` gains them; `SCHEMA_VERSION` becomes "2".
+
+### Web (`apps/web`)
+
+- `lib/timeline/lens.ts` (pure, tested): `TRADITION_ORDER = ["archaeological", "critical",
+  "chronological", "traditional"]`; `isTraditional(t)`; `orderPositions(positions)` stable-sorts by
+  that order; `splitPositions(positions)` returns `{ scholarly, traditional }`.
+- `EventSummary` and `EventDetail` gain `traditional: { earliest: number; latest: number } | null`
+  read from the new columns.
+- Event page: positions render in two sections. "What the evidence supports" lists the scholarly
+  positions in `TRADITION_ORDER`. "Traditional chronology", only when any exist, opens with one
+  standing caveat paragraph: "These dates come from adding up the Bible's own numbers, such as
+  reign lengths and life spans. They are a long-standing way of reading the text, not evidence from
+  archaeology or from records outside the Bible. Each one says whose count it is." Each traditional
+  position keeps its own summary and citations. Styling: the traditional section uses the caption
+  voice, never the alert palette.
+- Strip: a bar is the scholarly envelope. When `traditional` is non-null a second, thinner dotted
+  extension in the same row shows the traditional envelope, with `aria-label` "traditional
+  chronology: {range}". The index row's range text is the scholarly envelope.
+- Reader note (`lib/timeline/notes.ts`): the "Dating disputed" body joins **scholarly** position
+  labels only; when only traditional positions exist the lead is "Traditional date" and the body
+  the label.
+- OpenAPI: `/api/timeline/events/{id}` description mentions `traditional`.
+
+### Tests (test-author first)
+
+`packages/timeline/tests/test_build.py`: unknown tradition errors; envelope excludes traditional;
+traditional-only event warns and uses them; `traditional_*` columns populated and null.
+`apps/web/src/lib/timeline/lens.test.ts`: order, split, stability. `notes.test.ts`: scholarly-only
+join; traditional-only lead. Event page test: both sections, caveat present only with traditional
+positions. Strip test: dotted extension present with `traditional`, absent without.
