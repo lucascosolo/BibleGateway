@@ -32,3 +32,9 @@ citations = [
   { source = "klein-2006-review" },
   { source = "wikipedia-solomon" },
 ]
+
+[[views]]
+label = "Finkelstein and Silberman: a highland village, then Omride Israel"
+text = """
+Israel Finkelstein and Neil Asher Silberman accept that David and Solomon existed ("There is hardly a reason to doubt the historicity of David and Solomon", p. 142) but not the empire. Tenth-century Jerusalem was "at best, no more than a typical highland village" (p. 142), and Judah had about twenty small villages (p. 133). They redate the "Solomonic" gates and palaces at Megiddo, Hazor and Gezer to the early ninth century BCE (p. 141), so that "the Omrides, not Solomon, established the first fully developed monarchy in Israel" (p. 187). On their account Israel was a fully developed state no later than the beginning of the ninth century, while Judah changed little (p. 159)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 133, 141-142" }, { source = "finkelstein-silberman-2002", locator = "pp. 187-189" }, { source = "finkelstein-silberman-2002", locator = "p. 159" }]

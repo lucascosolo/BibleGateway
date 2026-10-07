@@ -29,3 +29,23 @@ artifact = "sargon-ii-inscriptions"
 relation = "partially-corroborates"
 note = "Sargon claims the conquest and says he resettled 27,280 Israelites. Scholars doubt that the capture was really his."
 citations = [{ source = "wikipedia-sargon-ii" }]
+
+[[positions]]
+id = "fs-720"
+label = "720 BCE; Judah then grows"
+tradition = "archaeological"
+earliest = -720
+latest = -720
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman date the conquest of Samaria to 720 BCE. After it, they say, Jerusalem grew from about ten or twelve acres to about 150 acres and from about one thousand to fifteen thousand people within a generation, helped by refugees from Israel.
+"""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 243" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The expansion of Jerusalem across the western hill at the end of the eighth century BCE is their evidence that Judah came of age only after Israel fell.
+"""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 243" }]
+  verses = [{ ref = "2Kgs.17.6", link = "describes" }]

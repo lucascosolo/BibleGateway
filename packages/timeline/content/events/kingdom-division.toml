@@ -41,3 +41,22 @@ earliest = -932
 latest = -931
 summary = "Wikipedia gives the revolt as in 932/931 BCE."
 citations = [{ source = "wikipedia-rehoboam" }]
+
+[[positions]]
+id = "fs-two-highlands"
+label = "Two highland entities; Israel a state by 900 BCE"
+tradition = "archaeological"
+earliest = -930
+latest = -900
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman head their chapter on the division c. 930-720 BCE. They say there is no archaeological evidence that north and south grew out of an earlier political unity, and that Israel was well on the way to full statehood around 900 BCE while Judah stayed marginal.
+"""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 149" }, { source = "finkelstein-silberman-2002", locator = "p. 158" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  "Put simply, while Judah was still economically marginal and backward, Israel was booming." Ashlar palaces appear in the north in the early ninth century and in Judah only in the seventh.
+"""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 158-159" }]

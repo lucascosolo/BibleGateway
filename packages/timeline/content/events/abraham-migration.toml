@@ -39,3 +39,34 @@ held_by = "James Ussher"
 summary = """
 Ussher puts the call of Abraham out of Ur in 1922 BC. After Terah died at Haran, he places a second call in 1921 BC. Ussher's Annals use the same Bible-based count."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 70-71" }]
+
+[[positions]]
+id = "finkelstein-silberman"
+label = "Patriarchal stories written in the 8th-7th centuries BCE (Finkelstein and Silberman)"
+tradition = "critical"
+earliest = -700
+latest = -600
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman do not date the migration itself. They date the writing of the patriarchal stories. Camels as pack animals, Arabian trade goods, Philistines at Gerar and peoples such as the Edomites and Qedarites point, they say, to an intensive period of writing in the eighth and seventh centuries BCE, with the basic framework from the seventh. The range here is that seventh century."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 37-38" }, { source = "finkelstein-silberman-2002", locator = "p. 45" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Camels were not used as beasts of burden before the late second millennium and not widely until well after 1000 BCE. Camel bones at Tell Jemmeh rise in the seventh century."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 37" }]
+  verses = [{ ref = "Gen.37.25", link = "alludes" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Isaac meets "Abimelech, king of the Philistines" at Gerar. The Philistines settled the coast only after 1200 BCE, and Gerar (Tel Haror) became a strong Assyrian stronghold only in the late eighth and seventh centuries."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 37-38" }]
+  verses = [{ ref = "Gen.26.1", link = "alludes" }, { ref = "Gen.20.1", link = "alludes" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Earlier scholars such as Albright held that the picture in Genesis is historical and sought a setting around 2000 BCE. Finkelstein and Silberman report that none of the proposed periods gave a convincing match (pp. 34-36)."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 34-36" }]

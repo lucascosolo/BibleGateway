@@ -32,3 +32,9 @@ citations = [
   { source = "griffiths-1953", locator = "p. 223" },
   { source = "wikipedia-moses" },
 ]
+
+[[views]]
+label = "Israel Finkelstein and Neil Asher Silberman: the Moses story as seventh-century political saga"
+text = """
+Finkelstein and Silberman do not identify a historical Moses. Having found no archaeological support for the Exodus and wandering (pp. 60-64), they read the confrontation of Moses and pharaoh as a story shaped in the seventh century BCE: "The confrontation between Moses and pharaoh mirrored the momentous confrontation between the young King Josiah and the newly crowned Pharaoh Necho" (p. 71). They add that "To pin this biblical image down to a single date is to betray the story's deepest meaning" (p. 71). Older legends of liberation from Egypt may lie underneath (p. 68)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 68-71" }]

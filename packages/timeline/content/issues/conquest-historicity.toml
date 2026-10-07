@@ -31,3 +31,9 @@ label = "A conquest c. 1400 BCE"
 text = """
 Wood argues that the biblical data put the exodus and conquest in the 15th century BCE. He says Jericho was destroyed c. 1400 BCE. He thinks the 13th-century theory should be dropped."""
 citations = [{ source = "wood-2005", locator = "pp. 488–489" }]
+
+[[views]]
+label = "Israel Finkelstein and Neil Asher Silberman: no conquest; Joshua as a Josianic epic"
+text = """
+Finkelstein and Silberman say the evidence for a historical conquest "is, as we will see, weak" (p. 73). Late Bronze Canaan was an Egyptian province whose cities were mostly unwalled (pp. 77-78). At Jericho "there was no trace of a settlement of any kind in the thirteenth century BCE" (pp. 81-82), and at Ai the excavations found no Late Bronze settlement ("Not a single pottery sherd", p. 82). The destruction of Hazor, Aphek, Lachish and Megiddo was spread over more than a century: "No single military force did it, and certainly not in one military campaign" (p. 90). They date Joshua to the seventh century. Its Judah town list matches the borders under Josiah, and Jericho and Ai were the first targets of Josianic expansion (pp. 92-93). Earlier, from the 1920s to the 1950s, excavations at Tell Beit Mirsim, Bethel, Lachish and Hazor had seemed to confirm the conquest (pp. 79-81). Albright's rescue of Ai by moving the story to Bethel is also recorded (p. 82)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 73" }, { source = "finkelstein-silberman-2002", locator = "pp. 77-93" }]

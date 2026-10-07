@@ -24,3 +24,31 @@ held_by = "Rodger C. Young"
 summary = """
 Young counts Josiah's eighteenth year as beginning in Tishri 623 (autumn), with his accession year as 641t. Tishri and Nisan are the two starting points for a regnal year."""
 citations = [{ source = "young-2004", locator = "p. 27" }]
+
+[[positions]]
+id = "fs-josiah-dtr"
+label = "Deuteronomistic history composed under Josiah (c. 639-609 BCE)"
+tradition = "critical"
+earliest = -639
+latest = -609
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman place the Deuteronomistic History, and parts of the Pentateuch, in the reign of Josiah, which began in 639 BCE. They think the epic served his plan to take over the old northern territories. The 609 end date is the editor's, not read from these pages. They add that archaeology gives little evidence for Josiah's specific acts.
+"""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 283-284" }, { source = "finkelstein-silberman-2002", locator = "p. 287" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The Deuteronomistic History is "not history writing in the modern sense" but "ideological and theological". They say it is impossible to know whether earlier versions existed under Hezekiah or Manasseh, or whether it was all composed in Josiah's reign.
+"""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 284" }]
+  verses = [{ ref = "2Kgs.22.3-2Kgs.23.25", link = "describes" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Bethel, Josiah's main target, has not been located, and only one contemporary Judahite temple outside Jerusalem is known (Arad, whose closure is disputed). Seals of the late seventh century drop astral symbols, which may reflect the reform, but household Asherah figurines continued.
+"""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 287-288" }]
+  verses = [{ ref = "2Kgs.23.15", link = "describes" }]

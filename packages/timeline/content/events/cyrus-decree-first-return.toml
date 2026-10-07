@@ -49,3 +49,23 @@ relation = "partially-corroborates"
 note = """
 The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia. Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea."""
 citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "livius-cyrus-cylinder" }]
+
+[[positions]]
+id = "fs-cyrus-539"
+label = "Cyrus 539/538 BCE; about 30,000 in Yehud"
+tradition = "archaeological"
+earliest = -539
+latest = -538
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman say Persia conquered Babylon in 539 BCE and Cyrus issued his decree in his first year; they also write of the proclamation in 538. They read it as Persian policy, not sympathy, and hold the biblical figure of about 50,000 returnees to be exaggerated.
+"""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 298" }, { source = "finkelstein-silberman-2002", locator = "p. 307" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Survey data from Yehud in the fifth-fourth centuries BCE gives about thirty thousand people, against nearly fifty thousand in Ezra 2 and Nehemiah 7. Cyrus supported temples elsewhere too.
+"""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 308" }]
+  verses = [{ ref = "Ezra.1.2-Ezra.1.3", link = "describes" }]

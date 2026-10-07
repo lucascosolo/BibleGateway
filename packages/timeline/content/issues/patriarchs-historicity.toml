@@ -28,3 +28,9 @@ label = "Joseph: a story composed late"
 text = """
 Donald B. Redford dated the writing of the Joseph story to between the 7th century BCE and the third quarter of the 5th century BCE. By the early 1990s most scholars saw it as a wisdom novella by a single author. Thomas Römer argues for the late Persian period."""
 citations = [{ source = "wikipedia-joseph-genesis" }]
+
+[[views]]
+label = "Israel Finkelstein and Neil Asher Silberman: a seventh-century composition"
+text = """
+Finkelstein and Silberman report that the search for the historical patriarchs "was ultimately unsuccessful" (p. 35): Albright's Amorite migration was "later shown to be illusory", and the parallels with second-millennium laws and customs were too general to fix a date (pp. 35-36). They date the writing instead from anachronisms. Camels "were not domesticated as beasts of burden earlier than the late second millennium" (p. 37), and the caravan of "gum, balm, and myrrh" in the Joseph story reflects the Arabian trade of the eighth and seventh centuries BCE (p. 37). Isaac's meeting with "Abimelech, king of the Philistines" at Gerar (Genesis 26:1) suits a Gerar that was an Assyrian stronghold in the late eighth and seventh centuries, not the small Iron Age I village (p. 38). They conclude that the anachronisms "suggest an intensive period of writing the patriarchal narratives in the eighth and seventh centuries BCE" (p. 38), with a basic framework pointing "clearly to a seventh century origin" (p. 45, note). Individual episodes may rest on old local traditions (p. 45). They set this against the earlier mainstream view of Albright, who held that "as a whole, the picture in Genesis is historical" (p. 34)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 34-38" }, { source = "finkelstein-silberman-2002", locator = "p. 45" }]

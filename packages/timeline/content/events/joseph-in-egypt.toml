@@ -40,3 +40,21 @@ held_by = "James Ussher"
 summary = """
 Ussher has Joseph, aged 30, explain Pharaoh's dreams and be made governor in 1715 BC. The seven years of famine begin in 1708 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 131-133" }]
+
+[[positions]]
+id = "finkelstein-silberman"
+label = "Joseph story reflects the 7th-6th centuries BCE (Finkelstein and Silberman)"
+tradition = "critical"
+earliest = -700
+latest = -550
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman point to details in the Joseph story that fit the seventh and sixth centuries: the Egyptian names Zaphenath-paneah, Potiphar, Potiphera and Asenath were most popular then, and Egypt's fear of invasion from the east makes sense only after the Assyrian attacks. The range runs from the seventh century into the sixth, the date they give the Exodus story."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 67" }, { source = "finkelstein-silberman-2002", locator = "p. 37" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The accusation that the brothers are spies who "come to see the weakness of the land" fits an Egypt that was invaded from the east only from the seventh century."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 67" }]
+  verses = [{ ref = "Gen.42.9", link = "alludes" }]

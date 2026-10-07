@@ -86,3 +86,52 @@ held_by = "James Ussher"
 summary = """
 Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraph 312" }]
+
+[[positions]]
+id = "fs-archaeology"
+label = "Canaanite cities fell over more than a century (Finkelstein and Silberman)"
+tradition = "archaeological"
+earliest = -1250
+latest = -1130
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman say excavations show no Late Bronze Jericho or Ai to conquer and no single campaign. Hazor, Aphek, Lachish and Megiddo were destroyed at different times across more than a century, with Lachish after Ramesses III and Megiddo in the second half of the twelfth century. The range covers those destructions."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 81-82" }, { source = "finkelstein-silberman-2002", locator = "p. 90" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Jericho had no settlement of any kind in the thirteenth century BCE, and no destruction. Calling the fallen walls a "romantic mirage", they say there were no walls to fall."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 81-82" }]
+  verses = [{ ref = "Josh.6.1-Josh.6.27", link = "describes" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ai (et-Tell) was a huge Early Bronze Age city with no Late Bronze settlement."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 82" }]
+  verses = [{ ref = "Josh.8.1-Josh.8.29", link = "describes" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  For much of the twentieth century excavations at Tell Beit Mirsim, Bethel, Lachish and Hazor seemed to confirm the conquest (pp. 79-81). Albright's fix for Ai was to move the story to Bethel (p. 82)."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 79-82" }]
+
+[[positions]]
+id = "fs-composition"
+label = "Book of Joshua composed under Josiah (Finkelstein and Silberman)"
+tradition = "critical"
+earliest = -640
+latest = -609
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman say the conquest story was shaped in the reign of Josiah, who began to reign in 639 BCE. They say its Judah town list, its battle plan and its Joshua-as-Josiah portrait fit that background. The range is Josiah's reign as the Bible dates it, which is the editor's reading of their argument."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 92-95" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The list of Judah's towns matches Josiah's borders. The first battles, at Jericho and Ai (the Bethel area), were in the first target of Josianic expansion."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 92-93" }]
+  verses = [{ ref = "Josh.15.21-Josh.15.62", link = "background" }]

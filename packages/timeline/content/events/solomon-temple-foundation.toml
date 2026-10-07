@@ -44,3 +44,23 @@ citations = [{ source = "young-2005", locator = "pp. 228-229" }]
     { ref = "1Kgs.6.1", link = "dates" },
     { ref = "1Kgs.6.37-1Kgs.6.38", link = "dates" },
   ]
+
+[[positions]]
+id = "fs-no-trace"
+label = "No trace of the temple; reign c. 970-931 BCE"
+tradition = "archaeological"
+earliest = -970
+latest = -931
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman give Solomon's reign as c. 970-931 BCE (dates they attribute to Galil) and say no trace of the temple or palace has ever been identified. They do not date the foundation itself.
+"""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131" }, { source = "finkelstein-silberman-2002", locator = "p. 135" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  They say nineteenth- and early twentieth-century digging around the Temple Mount "failed to identify even a trace of Solomon's fabled Temple or palace complex". Some scholars blame Herodian rebuilding.
+"""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 128" }]
+  verses = [{ ref = "1Kgs.6.1", link = "background" }]

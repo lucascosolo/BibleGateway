@@ -73,3 +73,28 @@ relation = "consistent"
 note = """
 The Stele does not mention an exodus. It shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that. This fits either date above."""
 citations = [{ source = "cos-2", locator = "pp. 40–41" }]
+
+[[positions]]
+id = "finkelstein-silberman"
+label = "Exodus story written in the 7th-6th centuries BCE (Finkelstein and Silberman)"
+tradition = "critical"
+earliest = -650
+latest = -550
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman do not date an exodus event. They find no Egyptian or Sinai evidence for one and date the story's final form to the Twenty-sixth Dynasty, the second half of the seventh and first half of the sixth century BCE. They set this against the mainstream 13th-century view, based on the name Raamses and the Merneptah Stele."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 57" }, { source = "finkelstein-silberman-2002", locator = "p. 68" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Pithom (Tell Maskhuta) was settled only in the Twenty-sixth Dynasty, and a Migdol in the eastern delta is known from the seventh century. Jeremiah names Judahites living there."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "p. 66" }]
+  verses = [{ ref = "Exod.1.11", link = "alludes" }, { ref = "Exod.14.2", link = "alludes" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Many scholars saw the name Raamses and Pi-Ramesses of Ramesses II as authentic memory of a 13th-century exodus (p. 57). Finkelstein and Silberman say Egyptian forts and records show no escape and no Israel in Egypt (pp. 60-61)."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 57-61" }]
+  verses = [{ ref = "Exod.1.11", link = "dates" }]

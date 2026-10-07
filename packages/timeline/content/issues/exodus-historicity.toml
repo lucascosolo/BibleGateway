@@ -23,3 +23,9 @@ label = "An authentic tradition"
 text = """
 Hoffmeier studies the Egyptian evidence, including a Semitic presence in the Nile Delta. He argues that it supports the Exodus tradition as authentic."""
 citations = [{ source = "hoffmeier-1997" }]
+
+[[views]]
+label = "Israel Finkelstein and Neil Asher Silberman: the Exodus did not happen as described"
+text = """
+Finkelstein and Silberman grant that migration from Canaan into the eastern delta is "abundantly verified" (p. 52). But for the thirteenth century they find no trace of Israel in Egypt: "Israel is absent - as a possible foe of Egypt, as a friend, or as an enslaved nation" (p. 60). They add that a flight past the Egyptian border forts is hardly credible (p. 61) and that no campsite from the time of Ramesses II has been found in Sinai, including at Kadesh-barnea (pp. 62-63). They conclude: "The conclusion - that the Exodus did not happen at the time and in the manner described in the Bible - seems irrefutable" (p. 63). Sites such as Arad and Heshbon were unoccupied in the Late Bronze Age (p. 64). The mainstream view they set against this puts the Exodus in the thirteenth century because of the name Raamses and the Merneptah Stele (p. 57). They follow Redford in reading the story's geography as seventh-century, with the narrative reaching "its final form" under the Twenty-sixth Dynasty (p. 68), and call it "neither historical truth nor literary fiction" (p. 70)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 52" }, { source = "finkelstein-silberman-2002", locator = "pp. 57-70" }]

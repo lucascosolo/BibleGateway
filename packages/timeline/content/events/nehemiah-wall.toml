@@ -34,3 +34,15 @@ relation = "partially-corroborates"
 note = """
 A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall."""
 citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-sanballat" }]
+
+[[positions]]
+id = "fs-445"
+label = "Around 445 BCE"
+tradition = "archaeological"
+earliest = -445
+latest = -445
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman put Nehemiah's night inspection of Jerusalem around 445 BCE (a line read from the chapter; the surrounding page was not read in full). They present him as the Persian king's cupbearer.
+"""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 301" }, { source = "finkelstein-silberman-2002", locator = "p. 300" }]

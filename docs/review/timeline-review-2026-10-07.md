@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `546676fbfbc4fa5e`, draft entries only. Check each claim against its cited source; when an
+Build `aa24ec4be52b7295`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -192,11 +192,12 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 900 BCE – 801 BCE
   - Held by: Israel Museum, Jerusalem
   - Discovered: 1993, Tel Dan, northern Israel (Avraham Biran's excavation)
-  - Summary: Fragments of a 9th-century BCE victory stone set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David". It is the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) read the word as a place name or a divine name instead. Fragment A was found in 1993. Fragments B1 and B2 followed in June 1994 and were published in 1995.
+  - Summary: Fragments of a 9th-century BCE victory stone set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David". It is the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) read the word as a place name or a divine name instead. Fragment A was found in 1993. Fragments B1 and B2 followed in June 1994 and were published in 1995. Finkelstein and Silberman read it as Hazael of Damascus boasting of killing Jehoram of Israel and a king "of the House of David", around 835 BCE (pp. 129, 177-178). They take it as proof that David's reputation was not a late invention.
   - Source: *An Aramaic Stele Fragment from Tel Dan*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 43 (2–3), pp. 81–98, 1993, pp. 81–98
   - Source: *The Tel Dan Inscription: A New Fragment*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 45 (1), pp. 1–18, 1995, pp. 1–18
   - Source: *The Dan Debate*, Hallvard Hagelia, Bible and Interpretation, September 2010, 2010 <https://bibleinterp.arizona.edu/node/2490>
   - Source: *Tel Dan stele*, Wikipedia <https://en.wikipedia.org/wiki/Tel_Dan_stele>
+  - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 129, 177-178
 
 - [ ] **Kurkh Monolith of Shalmaneser III** — `artifacts/kurkh-monolith.toml` (draft)
   - Kind: inscription, Akkadian (cuneiform)
@@ -216,6 +217,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Summary: A Moabite royal inscription, dated c. 840 BCE, found at Dibon in 1868. It says Omri was king of Israel and oppressed Moab for many days. It credits the god Chemosh with Mesha's victories. It contains the earliest certain mention of YHWH outside the Bible. Line 31 is disputed. Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'.
   - Source: *Mesha Stele*, Wikipedia <https://en.wikipedia.org/wiki/Mesha_Stele>
   - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q724954: inventory number AO 5066, Department of Near Eastern Antiquities of the Louvre <https://www.wikidata.org/>
+  - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 129, 177
   - Verse (background): 2Kgs 3:4 – 2Kgs 3:27
 
 - [ ] **Black Obelisk of Shalmaneser III** — `artifacts/black-obelisk.toml` (draft)
@@ -353,6 +355,103 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Argument (against): Ehrman objects to the early dating: "But how would Paul change his eschatological views so suddenly and decisively?"
       - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 220
 
+- [ ] **Composition of the letter to the Colossians** — `events/colossians-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 55 CE – 100 CE
+  - Summary: This asks who wrote Colossians and when. The letter names Paul as author and twice has him say "I, Paul". Ehrman argues it is a forgery by someone "wanting his readers to think he is Paul", but says "there is really no way to date its appearance precisely". He allows that forgeries in Paul's name could appear in his lifetime. The year bounds of 55 and 100 are therefore the editor's: 55 is a point inside Paul's ministry, and 100 is set because Ephesians, which Ehrman says copies Colossians, is the later letter.
+  - Verse (describes): Col 1:1 (Paul is named as the author, with Timothy.)
+  - Verse (background): Col 1:13 (Ehrman: God has already delivered believers, a realized view.)
+  - Verse (describes): Col 1:23 (The author speaks of himself as I, Paul.)
+  - Verse (background): Col 2:12 – Col 2:13 (Ehrman: believers already raised with Christ, against Romans 6.)
+  - Verse (background): Col 3:1 (Ehrman: if then you have been raised with Christ.)
+  - Verse (background): Col 3:18 – Col 4:1 (Ehrman: a household code at odds with Paul's preference for celibacy.)
+  - Verse (describes): Col 4:18 (The closing signature in the author's own hand, with I, Paul.)
+  - Position **A pseudonymous letter in Paul's name, not datable more closely** (55 CE – 100 CE, held by Bart D. Ehrman): Ehrman holds that Paul did not write Colossians and that it was forged. He declines to date it precisely. Both year bounds are the editor's.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 228, 234, 246
+    - Argument (for): Ehrman on the signature: "Whoever wrote these books wanted their readers to think they really were Paul."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 228
+      - Verse (describes): Col 1:23 (I, Paul.)
+      - Verse (describes): Col 4:18 (The signature with my own hand.)
+    - Argument (for): Ehrman on a coauthor: "attributing the letter to a close co-worker appears to be a counsel of despair."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 227
+      - Verse (describes): Col 1:1 (Paul named first, with Timothy.)
+    - Argument (for): Ehrman on style: "In case after case, Colossians stands apart from Paul’s letters."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 230
+    - Argument (for): Ehrman on style: "The average in all the undisputed letters is 10.4 percent; in Colossians it is 4 percent."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 230
+    - Argument (for): Ehrman on realized resurrection: "Believers have not only died with Christ but they have also been raised with him."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 232
+      - Verse (background): Col 2:12 – Col 2:13 (Raised with Christ.)
+      - Verse (background): Col 3:1 (Have been raised up with Christ.)
+    - Argument (for): Ehrman on forgiveness: "Unlike Paul, this author understands redemption as the “forgiveness of sins”"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 232
+    - Argument (for): Ehrman on the household code: "In short, this is written by someone who knows the church has been here and will be here for the long run."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 234
+      - Verse (background): Col 3:18 – Col 4:1 (The Haustafel.)
+    - Argument (for): Ehrman concludes: "it is clear that with Colossians we are not dealing with a letter of Paul, but a letter of someone wanting his readers to think he is Paul."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 234
+      - Verse (describes): Col 1:1 (The authorial claim.)
+    - Argument (for): Ehrman on the Philemon ties: "or Colossians is written by someone wanting to imitate Paul with the letter of Philemon to hand."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 230
+  - Position **Written by Paul as a prisoner, before about 62 CE** (52 CE – 62 CE, held by Markus Barth and Helmut Blanke (named by Ehrman as arguing the letter is not forged)): Ehrman reports Barth and Blanke arguing that the letter is not forged. Both year bounds are the editor's, from the letter's own picture of Paul as a prisoner and Ehrman's mention of the earthquake of 61 CE as a supposed marker.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 227, 250, 251
+    - Argument (for): Ehrman reports the argument of Barth and Blanke: "Col. 1:1–2 and 4:18 differ so widely from Paul’s epistolary style, they cannot be forged, as a forger would be sure to follow the style"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 250
+      - Verse (describes): Col 4:18 (The closing signature.)
+    - Argument (against): Ehrman answers them: "Once again, Neutestamentlers would be well served to learn more about the practices of ancient forgery."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 250
+    - Argument (for): Ehrman on the Timothy hypothesis, a variant of the traditional view: "even if, to stretch the imagination, one of Paul’s colleagues wrote the letter"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 227
+      - Verse (describes): Col 1:1 (Timothy as cosender.)
+    - Argument (against): Ehrman on the earthquake: "Moreover, recent scholars such as Standhartinger have given good reason for doubting that the town was ever destroyed by earthquake."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 251
+
+- [ ] **Composition of the letter of James** — `events/james-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 60 CE – 100 CE
+  - Summary: This asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem. Ehrman argues this James did not write it, and that it was written after his death, which he puts "presumably sometime in the 60s". He places its concerns in the post-Pauline church "at the end of the first century". Both year bounds are the editor's reading of those phrases. He calls it a counterforgery aimed at a later form of Pauline teaching.
+  - Verse (describes): Jas 1:1 (The letter names James as its author.)
+  - Verse (background): Jas 2:14 – Jas 2:26 (Ehrman: the principal polemic against a Pauline position on faith and works.)
+  - Verse (background): Jas 5:1 – Jas 5:6 (Ehrman: wealthy members point to a later date.)
+  - Verse (background): Jas 5:8 – Jas 5:9 (Ehrman: patience in waiting suggests much time has passed.)
+  - Verse (background): Jas 5:14 (Ehrman: elders in charge, closer to the Pastorals than to Paul.)
+  - Position **After James's death, by the end of the first century** (60 CE – 100 CE, held by Bart D. Ehrman): Ehrman holds that James the brother of Jesus neither wrote nor commissioned the letter. The lower bound of 60 is the editor's, from "presumably sometime in the 60s". The upper bound of 100 is the editor's, from "end of the first century".
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 382, 383, 390
+    - Argument (for): Ehrman on the language: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 379
+      - Verse (describes): Jas 1:1 (The named author.)
+    - Argument (for): Ehrman concludes: "it is virtually impossible to imagine this book coming from the pen of James"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 380
+    - Argument (for): Ehrman on what is missing: "There is nothing about ritual. Or cult. Or kosher food laws. Or Sabbath or feast days. Or circumcision."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 381
+      - Verse (background): Jas 2:8 – Jas 2:12 (The Law here is love and the Decalogue.)
+    - Argument (for): Ehrman on wealth: "Another indication of a late date is the concern over ostentatious wealth in the community."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 383
+      - Verse (background): Jas 5:1 – Jas 5:6 (Charge against the rich.)
+    - Argument (for): Ehrman on delay: "This seems to indicate that a good deal of time has passed in the expectation of the parousia"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 383
+      - Verse (background): Jas 5:8 – Jas 5:9 (The Lord's coming is at hand.)
+    - Argument (for): Ehrman on church order: "“elders” appear to be in charge of the community (5:14)"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 383
+      - Verse (background): Jas 5:14 (Elders.)
+    - Argument (for): Ehrman on the claim: "This book, in short, claims to be written by someone who did not write it."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 383
+      - Verse (describes): Jas 1:1 (The authorial claim.)
+    - Argument (for): Ehrman on dependence on Paul: "The book of James, in other words, is a counterforgery."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 385
+      - Verse (background): Jas 2:14 – Jas 2:26 (Faith and works.)
+    - Argument (for): Ehrman on the setting: "the views the book counters are easily situated in the post-Pauline situation of the church at the end of the first century."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 390
+  - Position **Written by James, the brother of Jesus, before about 69 CE** (45 CE – 69 CE, held by Luke Timothy Johnson (named by Ehrman as a supporter of authenticity)): Ehrman names Luke Timothy Johnson as a supporter of authenticity. Both year bounds are the editor's: the upper follows Ehrman's "sometime in the 60s" for James's death, the lower is arbitrary.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 379, 384
+    - Argument (for): Ehrman reports Johnson: "Luke Johnson has made a strong case that there is no hard evidence of real animosity between the historical James and the historical Paul"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 383
+    - Argument (against): Ehrman rejects Johnson on Paul: "Johnson is wrong to argue that “there is absolutely no reason to read this section [i.e., 2:14–26] as particularly responsive to Paul.”"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 384
+      - Verse (background): Jas 2:14 – Jas 2:26 (The passage at issue.)
+    - Argument (against): Ehrman on literacy: "The first, as already mentioned, is that James of Nazareth could almost certainly not write."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 379
+    - Argument (against): Eusebius on James, quoted by Ehrman: "Admittedly its authenticity is doubted"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 117
+
 - [ ] **Composition of 1 Peter** — `events/1-peter-composition.toml` (draft)
   - Axis / confidence: composition / contested; range 70 CE – 112 CE
   - Summary: This asks who wrote 1 Peter and when. The letter names Peter as its author. Bart Ehrman argues Peter did not write it, and says it is "best located" between Nero and Trajan. He cites a view that "Babylon", a code name for Rome, points to after 70 CE. He warns this does not put it at the time of Pliny's letter, around 112 CE. The year bounds are the editor's reading of that. The traditional date is in Peter's life, which Ehrman places before 70 CE.
@@ -377,6 +476,39 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 320
     - Argument (for): Ehrman reports that Nero's persecution is "traditionally" thought to have led to Peter's martyrdom, which sets Peter's life as the time. He argues the later persecution "for the name" does not fit it.
       - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 320
+
+- [ ] **Composition of the letter of Jude** — `events/jude-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 70 CE – 100 CE
+  - Summary: This asks who wrote the letter of Jude and when. The letter names Jude, brother of James, whom Ehrman takes to be the brother of Jesus. Ehrman holds that it is a forgery, written "relatively late in the first century, after the age of the apostles" by a highly educated Greek-speaking Christian. The year bounds of 70 and 100 are the editor's reading of that phrase; Ehrman gives no years.
+  - Verse (describes): Jude 1:1 (The letter names Jude, brother of James, as its author.)
+  - Verse (background): Jude 1:3 (Ehrman: the faith as a body of belief delivered long ago.)
+  - Verse (background): Jude 1:4 (Ehrman: charge that opponents turn grace into licentiousness, read as aimed at a later Paulinism.)
+  - Verse (background): Jude 1:17 – Jude 1:18 (Ehrman: the apostles are spoken of as figures of the past.)
+  - Position **After the age of the apostles, late in the first century** (70 CE – 100 CE, held by Bart D. Ehrman): Ehrman holds that Jude the brother of Jesus did not write the letter. Both year bounds are the editor's: 70 for "after the age of the apostles" and 100 for the end of "the first century".
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 393, 394
+    - Argument (for): Ehrman on the date: "the book gives every indication of being produced relatively late in the first century, after the “age of the apostles.”"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 393
+      - Verse (background): Jude 1:17 – Jude 1:18 (The apostles are in the past.)
+    - Argument (for): Ehrman on terminology: "The author speaks of “the faith” as the content of the body of knowledge that makes up the Christian religion"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 393
+      - Verse (background): Jude 1:3 (The faith delivered once for all.)
+    - Argument (for): Ehrman on language: "he writes very good Greek, not the sort of skill one can acquire simply by spending time on the mission field without years of serious literary training."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 393
+    - Argument (for): Ehrman concludes: "he was not the Aramaicspeaking peasant of Nazareth, the brother of Jesus and James."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 395
+      - Verse (describes): Jude 1:1 (The authorial claim.)
+    - Argument (for): Ehrman on the polemic: "the charge makes even better sense against later forms of Paulinism, such as that represented in the book of Ephesians"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 396
+      - Verse (background): Jude 1:4 (Grace altered into licentiousness.)
+  - Position **Written by Jude, the brother of James and of Jesus** (40 CE – 70 CE, held by Richard Bauckham (named by Ehrman as defending authenticity)): Ehrman notes that Bauckham makes a spirited defense of authenticity. Both year bounds are the editor's; Ehrman gives none for this view.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 393, 422
+    - Argument (for): Ehrman on the claim: "The author of this short text, therefore, is almost certainly claiming to be a brother of both James and Jesus"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 391
+      - Verse (describes): Jude 1:1 (The authorial claim.)
+    - Argument (against): Ehrman rejects the obscurity objection: "The objection has more rhetorical than substantive force, however."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 391
+    - Argument (against): Ehrman on Jude's family: "Nothing suggests that their progenitor, Jude, was any different."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 394
 
 - [ ] **John on Patmos and the composition of Revelation** — `events/revelation-composition-patmos.toml` (draft)
   - Axis / confidence: composition / contested; range 95 CE
@@ -442,7 +574,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 77, 81 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Abraham's migration to Canaan** — `events/abraham-migration.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 2000 BCE – 1001 BCE
+  - Axis / confidence: narrative / speculative; range 2000 BCE – 600 BCE
   - Summary: Abraham travels from Haran to Canaan. He stops first at Shechem, goes down to Egypt during a famine, then returns. Whether there was a historical age of the patriarchs at all is a separate question (see the linked issue). The positions here give the dates offered by people who accept that setting.
   - Verse (describes): Gen 11:31 – Gen 11:32 (Terah's family leaves Ur for Haran)
   - Verse (describes): Gen 12:1 – Gen 12:9 (The call, and the journey to Shechem, Bethel and the Negeb)
@@ -457,9 +589,21 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
   - Position **Ussher, Annals: Abraham called from Ur, 1922 BC (AM 2083)** (1922 BCE, held by James Ussher): Ussher puts the call of Abraham out of Ur in 1922 BC. After Terah died at Haran, he places a second call in 1921 BC. Ussher's Annals use the same Bible-based count.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 70-71 <https://archive.org/details/AnnalsOfTheWorld>
+  - Position **Patriarchal stories written in the 8th-7th centuries BCE (Finkelstein and Silberman)** (700 BCE – 600 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman do not date the migration itself. They date the writing of the patriarchal stories. Camels as pack animals, Arabian trade goods, Philistines at Gerar and peoples such as the Edomites and Qedarites point, they say, to an intensive period of writing in the eighth and seventh centuries BCE, with the basic framework from the seventh. The range here is that seventh century.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 37-38
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 45
+    - Argument (for): Camels were not used as beasts of burden before the late second millennium and not widely until well after 1000 BCE. Camel bones at Tell Jemmeh rise in the seventh century.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 37
+      - Verse (alludes): Gen 37:25
+    - Argument (for): Isaac meets "Abimelech, king of the Philistines" at Gerar. The Philistines settled the coast only after 1200 BCE, and Gerar (Tel Haror) became a strong Assyrian stronghold only in the late eighth and seventh centuries.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 37-38
+      - Verse (alludes): Gen 20:1
+      - Verse (alludes): Gen 26:1
+    - Argument (against): Earlier scholars such as Albright held that the picture in Genesis is historical and sought a setting around 2000 BCE. Finkelstein and Silberman report that none of the proposed periods gave a convincing match (pp. 34-36).
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 34-36
 
 - [ ] **Jacob's family descends into Egypt** — `events/jacob-descent-egypt.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1860 BCE – 1700 BCE
+  - Axis / confidence: narrative / speculative; range 1860 BCE – 550 BCE
   - Summary: Jacob and his household, seventy people in all, move to Egypt at Joseph's invitation during the famine. They settle in Goshen. The date depends on how the exodus is dated. Whether this happened historically is a separate question (see the patriarchs issue).
   - Verse (describes): Gen 45:9 – Gen 45:28 (Joseph invites his father, and Jacob decides to go)
   - Verse (describes): Gen 46:1 – Gen 46:34 (God reassures Jacob at Beersheba. The list of those who went down. Arrival in Goshen)
@@ -477,9 +621,15 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - Position **Ussher, Annals: Jacob goes down into Egypt, 1706 BC** (1706 BCE, held by James Ussher): Ussher has Jacob, aged 130, go down into Egypt at the start of the third year of the famine, in 1706 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 135-138 <https://archive.org/details/AnnalsOfTheWorld>
+  - Position **Descent to Egypt written in the 7th-6th centuries BCE (Finkelstein and Silberman)** (700 BCE – 550 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman accept that immigration from Canaan to the eastern Nile delta is well attested, as at Tell ed-Daba, but find no evidence of Israelites there. They place the writing of the descent and Goshen traditions in the seventh and sixth centuries.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 52-55
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 66-67
+    - Argument (for): Goshen is a Semitic, not an Egyptian, name. They follow Redford in deriving it from Geshem, a Qedarite dynastic name, and the Qedarites reached the delta only from the sixth century.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 66-67
+      - Verse (alludes): Gen 45:10
 
 - [ ] **Joseph in Egypt** — `events/joseph-in-egypt.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1860 BCE – 1840 BCE
+  - Axis / confidence: narrative / speculative; range 1860 BCE – 550 BCE
   - Summary: Joseph is sold by his brothers to traders. He rises from slavery and prison to become Pharaoh's vizier, and he saves Egypt and his own family from famine. Many scholars read the story as a late wisdom novella (see the patriarchs issue). The one dating position here sets limits only on when his family arrived.
   - Verse (describes): Gen 37:1 – Gen 37:36 (Sold into Egypt)
   - Verse (describes): Gen 39:1 – Gen 39:23 (Potiphar's house and prison)
@@ -495,6 +645,12 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - Position **Ussher, Annals: Joseph made governor, 1715 BC (age 30)** (1715 BCE, held by James Ussher): Ussher has Joseph, aged 30, explain Pharaoh's dreams and be made governor in 1715 BC. The seven years of famine begin in 1708 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 131-133 <https://archive.org/details/AnnalsOfTheWorld>
+  - Position **Joseph story reflects the 7th-6th centuries BCE (Finkelstein and Silberman)** (700 BCE – 550 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman point to details in the Joseph story that fit the seventh and sixth centuries: the Egyptian names Zaphenath-paneah, Potiphar, Potiphera and Asenath were most popular then, and Egypt's fear of invasion from the east makes sense only after the Assyrian attacks. The range runs from the seventh century into the sixth, the date they give the Exodus story.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 67
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 37
+    - Argument (for): The accusation that the brothers are spies who "come to see the weakness of the land" fits an Egypt that was invaded from the east only from the seventh century.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 67
+      - Verse (alludes): Gen 42:9
 
 - [ ] **Ruth** — `events/ruth.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1400 BCE – 1073 BCE
@@ -512,7 +668,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **The period of the judges** — `events/judges-period.toml` (draft)
-  - Axis / confidence: narrative / contested; range 1300 BCE – 1073 BCE
+  - Axis / confidence: narrative / contested; range 1300 BCE – 1000 BCE
   - Summary: These are the generations between Joshua and the kings. Tribal leaders, the judges, rescue Israel from its oppressors, again and again. The cycle runs from turning away from God, to oppression, to a cry for help, to rescue. The datable anchors sit inside a disputed range. How far the book can be trusted as history is itself debated (see the linked issues). The Introduction to Thiele's book puts the critical view bluntly: the Hebrew stories of the judges "can be dated only in wide and sweeping generalizations", archaeological dating without written finds "can do more than indicate a period, a half or quarter century, or happily a decade" only seldom, and "efforts to demonstrate an accurate chronology simply do not merit serious consideration".
   - Verse (describes): Judg 2:6 – Judg 3:6 (The introduction: the repeating cycle, and the nations left in the land)
   - Verse (describes): Judg 3:7 – Judg 16:31 (The stories of the judges, from Othniel to Samson)
@@ -528,6 +684,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Position **Early-date framework (c. 1300-1073 BCE anchors)** (1300 BCE – 1073 BCE, held by Bryant G. Wood): In Wood's early-date scheme, Eglon's palace at Jericho dates to about 1300 BC (Judges 3:12-30) and Deborah and Barak to about 1230 BC. Estimates for the start of Jephthah's time as judge run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range runs from the first of these anchors to the last estimate. It is not a claim about where the period ends.
     - Source: *Introduction to Thiele, The Mysterious Numbers of the Hebrew Kings (1983); the author's name is not on the page images read*, 1983, p. 26 (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+  - Position **Highland villages c. 1200-1000 BCE (Finkelstein and Silberman)** (1200 BCE – 1000 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman describe a third wave of highland settlement beginning around 1200 BCE, with about 250 sites and 45,000 people. They give the Iron Age I period as about 1150-900 BCE. They say the first Israelites were mostly local people who settled after the Canaanite collapse. This is an archaeological horizon, not a date for the book of Judges.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 114-115
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 118
 
 - [ ] **Deborah and Barak** — `events/deborah-barak.toml` (draft)
   - Axis / confidence: narrative / contested; range 1285 BCE – 1067 BCE
@@ -545,7 +704,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 351 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **The Exodus from Egypt** — `events/exodus.toml` (draft)
-  - Axis / confidence: narrative / contested; range 1279 BCE – 1213 BCE
+  - Axis / confidence: narrative / contested; range 1279 BCE – 550 BCE
   - Summary: This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates. One is in the 15th century BCE, read from 1 Kings 6:1. The other is in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan.
   - Verse (background): Exod 1:11 (The store cities Pithom and Raamses)
   - Verse (dates): Exod 12:40 – Exod 12:41 (430 years in Egypt)
@@ -567,6 +726,16 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Argument (against): Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th. A late date has to treat the figure as something other than a plain count.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
       - Verse (dates): 1Kgs 6:1
+  - Position **Exodus story written in the 7th-6th centuries BCE (Finkelstein and Silberman)** (650 BCE – 550 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman do not date an exodus event. They find no Egyptian or Sinai evidence for one and date the story's final form to the Twenty-sixth Dynasty, the second half of the seventh and first half of the sixth century BCE. They set this against the mainstream 13th-century view, based on the name Raamses and the Merneptah Stele.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 57
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 68
+    - Argument (for): Pithom (Tell Maskhuta) was settled only in the Twenty-sixth Dynasty, and a Migdol in the eastern delta is known from the seventh century. Jeremiah names Judahites living there.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 66
+      - Verse (alludes): Exod 1:11
+      - Verse (alludes): Exod 14:2
+    - Argument (against): Many scholars saw the name Raamses and Pi-Ramesses of Ramesses II as authentic memory of a 13th-century exodus (p. 57). Finkelstein and Silberman say Egyptian forts and records show no escape and no Israel in Egypt (pp. 60-61).
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 57-61
+      - Verse (dates): Exod 1:11
   - Attestation — Merneptah Stele *consistent*: The Stele does not mention an exodus. It shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that. This fits either date above.
     - Source: *The Context of Scripture, Volume 2: Monumental Inscriptions*, William W. Hallo and K. Lawson Younger Jr. (eds.), 2000, pp. 40–41
 
@@ -592,26 +761,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Position **Ussher, Annals: Israel at Sinai, 1491 BC** (1491 BCE, held by James Ussher): The chronologist James Ussher dates the exodus to 2513b AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 192 and preceding exodus entries <https://archive.org/details/AnnalsOfTheWorld>
 
-- [ ] **Gideon** — `events/gideon.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1230 BCE – 1073 BCE
-  - Summary: Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal. With 300 men he routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself.
-  - Verse (describes): Judg 6:1 – Judg 6:40 (Midianite oppression, the call, the altar of Baal and the fleece)
-  - Verse (describes): Judg 7:1 – Judg 7:25 (The 300 men and the night attack)
-  - Verse (describes): Judg 8:1 – Judg 8:35 (The chase after the kings, the ephod, the kingship refused and Gideon's death)
-  - Verse (describes): Judg 9:1 – Judg 9:57 (Abimelech, Jerubbaal's son)
-  - Verse (alludes): 1Sam 12:11 (The Lord sent Jerubbaal and Barak, Jephthah and Samuel)
-  - Verse (alludes): Ps 83:9 – Ps 83:12 (Do to them as you did to Midian, and to Oreb, Zeeb, Zebah and Zalmunna)
-  - Verse (alludes): Isa 9:4 (As on the day of Midian)
-  - Verse (alludes): Isa 10:26 (The slaughter of Midian at the rock of Oreb)
-  - Verse (alludes): Heb 11:32 (Gideon is named among the faithful)
-  - Position **Between Deborah (c. 1230) and Jephthah (1130-1073)** (1230 BCE – 1073 BCE): This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and before Jephthah. Jephthah's time as judge is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment is reported that seems to show the name Jerubbaal. It shows only that the name is ancient.
-    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Source: *Gideon*, Wikipedia <https://en.wikipedia.org/wiki/Gideon>
-  - Position **Ussher, Annals: Gideon called, 1245 BC** (1245 BCE, held by James Ussher): Ussher dates Gideon's call to 1245 BC, after the fourth oppression, by the Midianites. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
-    - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 356 <https://archive.org/details/AnnalsOfTheWorld>
-
 - [ ] **The fall of Jericho and the conquest of Canaan** — `events/conquest-of-canaan.toml` (draft)
-  - Axis / confidence: narrative / speculative; range 1220 BCE – 1210 BCE
+  - Axis / confidence: narrative / speculative; range 1250 BCE – 609 BCE
   - Summary: Israel crosses the Jordan under Joshua. Jericho falls, and then Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE. Most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date.
   - Verse (describes): Josh 3:1 – Josh 4:24 (The crossing of the Jordan)
   - Verse (describes): Josh 5:13 – Josh 6:27 (The fall of Jericho)
@@ -647,6 +798,40 @@ A claim you cannot confirm should be cut or corrected, not left in.
       - Verse (describes): Judg 4:2
   - Position **Ussher, Annals: fall of Jericho, 1451 BC** (1451 BCE, held by James Ussher): Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 312 <https://archive.org/details/AnnalsOfTheWorld>
+  - Position **Canaanite cities fell over more than a century (Finkelstein and Silberman)** (1250 BCE – 1130 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman say excavations show no Late Bronze Jericho or Ai to conquer and no single campaign. Hazor, Aphek, Lachish and Megiddo were destroyed at different times across more than a century, with Lachish after Ramesses III and Megiddo in the second half of the twelfth century. The range covers those destructions.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 81-82
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 90
+    - Argument (for): Jericho had no settlement of any kind in the thirteenth century BCE, and no destruction. Calling the fallen walls a "romantic mirage", they say there were no walls to fall.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 81-82
+      - Verse (describes): Josh 6:1 – Josh 6:27
+    - Argument (for): Ai (et-Tell) was a huge Early Bronze Age city with no Late Bronze settlement.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 82
+      - Verse (describes): Josh 8:1 – Josh 8:29
+    - Argument (against): For much of the twentieth century excavations at Tell Beit Mirsim, Bethel, Lachish and Hazor seemed to confirm the conquest (pp. 79-81). Albright's fix for Ai was to move the story to Bethel (p. 82).
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 79-82
+  - Position **Book of Joshua composed under Josiah (Finkelstein and Silberman)** (640 BCE – 609 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman say the conquest story was shaped in the reign of Josiah, who began to reign in 639 BCE. They say its Judah town list, its battle plan and its Joshua-as-Josiah portrait fit that background. The range is Josiah's reign as the Bible dates it, which is the editor's reading of their argument.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 92-95
+    - Argument (for): The list of Judah's towns matches Josiah's borders. The first battles, at Jericho and Ai (the Bethel area), were in the first target of Josianic expansion.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 92-93
+      - Verse (background): Josh 15:21 – Josh 15:62
+
+- [ ] **Gideon** — `events/gideon.toml` (draft)
+  - Axis / confidence: narrative / speculative; range 1230 BCE – 1073 BCE
+  - Summary: Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal. With 300 men he routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself.
+  - Verse (describes): Judg 6:1 – Judg 6:40 (Midianite oppression, the call, the altar of Baal and the fleece)
+  - Verse (describes): Judg 7:1 – Judg 7:25 (The 300 men and the night attack)
+  - Verse (describes): Judg 8:1 – Judg 8:35 (The chase after the kings, the ephod, the kingship refused and Gideon's death)
+  - Verse (describes): Judg 9:1 – Judg 9:57 (Abimelech, Jerubbaal's son)
+  - Verse (alludes): 1Sam 12:11 (The Lord sent Jerubbaal and Barak, Jephthah and Samuel)
+  - Verse (alludes): Ps 83:9 – Ps 83:12 (Do to them as you did to Midian, and to Oreb, Zeeb, Zebah and Zalmunna)
+  - Verse (alludes): Isa 9:4 (As on the day of Midian)
+  - Verse (alludes): Isa 10:26 (The slaughter of Midian at the rock of Oreb)
+  - Verse (alludes): Heb 11:32 (Gideon is named among the faithful)
+  - Position **Between Deborah (c. 1230) and Jephthah (1130-1073)** (1230 BCE – 1073 BCE): This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and before Jephthah. Jephthah's time as judge is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment is reported that seems to show the name Jerubbaal. It shows only that the name is ancient.
+    - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+    - Source: *Gideon*, Wikipedia <https://en.wikipedia.org/wiki/Gideon>
+  - Position **Ussher, Annals: Gideon called, 1245 BC** (1245 BCE, held by James Ussher): Ussher dates Gideon's call to 1245 BC, after the fourth oppression, by the Midianites. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
+    - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 356 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Samson** — `events/samson.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1200 BCE – 1001 BCE
@@ -696,7 +881,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **David takes Jerusalem** — `events/david-takes-jerusalem.toml` (draft)
-  - Axis / confidence: narrative / contested; range 1002 BCE – 1001 BCE
+  - Axis / confidence: narrative / contested; range 1005 BCE – 970 BCE
   - Summary: David captures the Jebusite stronghold of Zion and makes it the city of David. Before that he had ruled over Judah from Hebron for seven years and six months.
   - Verse (dates): 2Sam 5:5 (Seven years and six months at Hebron, then thirty-three in Jerusalem)
   - Verse (describes): 2Sam 5:6 – 2Sam 5:10 (The capture of the stronghold of Zion)
@@ -705,6 +890,12 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (alludes): Ps 132:13 ('Yahweh has chosen Zion')
   - Position **c. 1002-1001 BCE (derived)** (1002 BCE – 1001 BCE, held by Rodger C. Young): This date is worked out by the editor and is not stated by Young. It takes Young's conjectural start of David's reign (1009t?) and subtracts the 7.5 years at Hebron from 2 Samuel 5:5. Treat it as approximate.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
+  - Position **A modest highland village in David's time** (1005 BCE – 970 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman use David's reign of c. 1005-970 BCE (Galil's dates) and think he did take Jerusalem. They find no evidence that it was more than a typical hill-country village, and no sign of a great empire.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 131
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 142
+    - Argument (for): Excavations in the City of David found Middle Bronze and later Iron Age remains but little tenth-century pottery and no monumental building. The "most optimistic assessment" is a limited village.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 133
+      - Verse (describes): 2Sam 5:6
 
 - [ ] **Solomon's accession** — `events/solomon-accession.toml` (draft)
   - Axis / confidence: narrative / contested; range 971 BCE – 968 BCE
@@ -720,7 +911,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 227 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **The foundation of Solomon's temple** — `events/solomon-temple-foundation.toml` (draft)
-  - Axis / confidence: narrative / contested; range 967 BCE – 966 BCE
+  - Axis / confidence: narrative / contested; range 970 BCE – 931 BCE
   - Summary: Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). Which calendar year that is depends on where you start counting Solomon's reign.
   - Verse (describes): 1Kgs 5:1 – 1Kgs 5:18 (the preparations, with King Hiram)
   - Verse (dates): 1Kgs 6:1 (Solomon's fourth year, in the month of Ziv)
@@ -738,9 +929,15 @@ A claim you cannot confirm should be cut or corrected, not left in.
       - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, pp. 51–52 and Diagram 5 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
       - Verse (dates): 1Kgs 6:1
       - Verse (dates): 1Kgs 6:37 – 1Kgs 6:38
+  - Position **No trace of the temple; reign c. 970-931 BCE** (970 BCE – 931 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman give Solomon's reign as c. 970-931 BCE (dates they attribute to Galil) and say no trace of the temple or palace has ever been identified. They do not date the foundation itself.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 131
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 135
+    - Argument (for): They say nineteenth- and early twentieth-century digging around the Temple Mount "failed to identify even a trace of Solomon's fabled Temple or palace complex". Some scholars blame Herodian rebuilding.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 128
+      - Verse (background): 1Kgs 6:1
 
 - [ ] **The division of the kingdom** — `events/kingdom-division.toml` (draft)
-  - Axis / confidence: narrative / contested; range 932 BCE – 930 BCE
+  - Axis / confidence: narrative / contested; range 932 BCE – 900 BCE
   - Summary: After Solomon dies, the northern tribes break away from his son Rehoboam and make Jeroboam their king.
   - Verse (background): 1Kgs 11:26 – 1Kgs 11:40 (Ahijah's prophecy and Jeroboam's flight)
   - Verse (describes): 1Kgs 12:1 – 1Kgs 12:24 (the meeting at Shechem, where the kingdom splits)
@@ -755,6 +952,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Rehoboam 931/0 in the chronology table; second-hand, not Thiele's pages <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
   - Position **932/931 BCE** (932 BCE – 931 BCE): Wikipedia gives the revolt as in 932/931 BCE.
     - Source: *Rehoboam*, Wikipedia <https://en.wikipedia.org/wiki/Rehoboam>
+  - Position **Two highland entities; Israel a state by 900 BCE** (930 BCE – 900 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman head their chapter on the division c. 930-720 BCE. They say there is no archaeological evidence that north and south grew out of an earlier political unity, and that Israel was well on the way to full statehood around 900 BCE while Judah stayed marginal.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 149
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 158
+    - Argument (for): "Put simply, while Judah was still economically marginal and backward, Israel was booming." Ashlar palaces appear in the north in the early ninth century and in Judah only in the seventh.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 158-159
 
 - [ ] **Shishak's campaign against Judah** — `events/shishak-campaign.toml` (draft)
   - Axis / confidence: narrative / contested; range 926 BCE – 925 BCE
@@ -812,7 +1014,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Black Obelisk of Shalmaneser III*, Wikipedia <https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III>
 
 - [ ] **The fall of Samaria** — `events/samaria-fall.toml` (draft)
-  - Axis / confidence: narrative / contested; range 723 BCE
+  - Axis / confidence: narrative / contested; range 723 BCE – 720 BCE
   - Summary: Assyria takes Samaria after a siege and carries the people of Israel away. Rodger C. Young, following Olmstead, Thiele and Tadmor, holds that King Shalmaneser V captured it. Sargon II, whose inscriptions claim the conquest, did not.
   - Verse (describes): 2Kgs 17:1 – 2Kgs 17:41 (Hoshea's reign, the siege, and the exile)
   - Verse (describes): 2Kgs 18:9 – 2Kgs 18:12 (the sixth year of Hezekiah and the ninth of Hoshea)
@@ -823,6 +1025,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, pp. 17–18, Preface to the Third Edition pp. 23–24, and p. 37 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 583 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
+  - Position **720 BCE; Judah then grows** (720 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman date the conquest of Samaria to 720 BCE. After it, they say, Jerusalem grew from about ten or twelve acres to about 150 acres and from about one thousand to fifteen thousand people within a generation, helped by refugees from Israel.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 243
+    - Argument (for): The expansion of Jerusalem across the western hill at the end of the eighth century BCE is their evidence that Judah came of age only after Israel fell.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 243
+      - Verse (describes): 2Kgs 17:6
   - Attestation — Inscriptions of Sargon II (Samaria claim) *partially-corroborates*: Sargon claims the conquest and says he resettled 27,280 Israelites. Scholars doubt that the capture was really his.
     - Source: *Sargon II*, Wikipedia <https://en.wikipedia.org/wiki/Sargon_II>
 
@@ -843,7 +1050,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Sennacherib's Annals*, Wikipedia <https://en.wikipedia.org/wiki/Sennacherib%27s_Annals>
 
 - [ ] **Josiah's reform** — `events/josiah-reform.toml` (draft)
-  - Axis / confidence: narrative / contested; range 623 BCE – 622 BCE
+  - Axis / confidence: narrative / contested; range 639 BCE – 609 BCE
   - Summary: In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it. Thiele uses the episode to show how Judah counted years: everything from the repair funds to the Passover (2 Kings 22:3 to 23:23) falls in the eighteenth year, and the Passover is on 14 Nisan, so the year "must have commenced before 1 Nisan and been carried over beyond 1 Nisan", which means Judah's regnal year began in Tishri.
   - Verse (describes): 2Kgs 22:3 – 2Kgs 23:25 (The book is found, the covenant renewed and the cult purged)
   - Verse (describes): 2Chr 34:8 – 2Chr 35:19 (The parallel in Chronicles, with the Passover)
@@ -852,6 +1059,15 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (alludes): Zeph 1:4 – Zeph 1:6 (A message against Baal worship)
   - Position **623-622 BCE** (623 BCE – 622 BCE, held by Rodger C. Young): Young counts Josiah's eighteenth year as beginning in Tishri 623 (autumn), with his accession year as 641t. Tishri and Nisan are the two starting points for a regnal year.
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 27 <https://www.rcyoung.org/articles/jerusalem.pdf>
+  - Position **Deuteronomistic history composed under Josiah (c. 639-609 BCE)** (639 BCE – 609 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman place the Deuteronomistic History, and parts of the Pentateuch, in the reign of Josiah, which began in 639 BCE. They think the epic served his plan to take over the old northern territories. The 609 end date is the editor's, not read from these pages. They add that archaeology gives little evidence for Josiah's specific acts.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 283-284
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 287
+    - Argument (for): The Deuteronomistic History is "not history writing in the modern sense" but "ideological and theological". They say it is impossible to know whether earlier versions existed under Hezekiah or Manasseh, or whether it was all composed in Josiah's reign.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 284
+      - Verse (describes): 2Kgs 22:3 – 2Kgs 23:25
+    - Argument (for): Bethel, Josiah's main target, has not been located, and only one contemporary Judahite temple outside Jerusalem is known (Arad, whose closure is disputed). Seals of the late seventh century drop astral symbols, which may reflect the reform, but household Asherah figurines continued.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 287-288
+      - Verse (describes): 2Kgs 23:15
 
 - [ ] **Josiah's death at Megiddo** — `events/josiah-death-megiddo.toml` (draft)
   - Axis / confidence: narrative / contested; range 609 BCE
@@ -923,6 +1139,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Argument (for): Young lines up the Judean reign data (Zedekiah's eleventh year, 2 Kings 25:2) with the Babylonian way of counting. That places the breach in Tammuz 587 BCE.
       - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004 <https://www.rcyoung.org/articles/jerusalem.pdf>
       - Verse (dates): 2Kgs 25:2
+  - Position **586 BCE; Judah not left empty** (586 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman date the destruction of Jerusalem to 586 BCE. They say excavations show the city was systematically destroyed, but that life went on north and south of it.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 307
+    - Argument (for): The burned City of David was reoccupied in the Persian period. Tell en-Nasbeh (Mizpah) was not destroyed, so Judah was not "in total ruin and uninhabited".
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 307
+      - Verse (describes): 2Kgs 25:8 – 2Kgs 25:10
   - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *silent*: This chronicle (ABC 5) ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the city. It gives the earlier capture of 597 BCE instead.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - Attestation — Lachish Letters *consistent*: The letters were written in Judah's last years before the conquest. In Letter 4, an officer can still see the signals of Lachish but no longer those of Azekah. Jeremiah 34:7 describes the same situation, with those two as the last fortified cities holding out. The letters do not date the fall itself.
@@ -960,6 +1181,12 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Argument (against): The Cyrus Cylinder focuses on Babylon and Mesopotamia. It mentions neither Judah nor Jerusalem. Kuhrt calls its passage on restoring peoples a literary device. She says its purely Babylonian setting gives no proof for Jewish exiles.
       - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
       - Source: *Edict of Cyrus*, Wikipedia <https://en.wikipedia.org/wiki/Edict_of_Cyrus>
+  - Position **Cyrus 539/538 BCE; about 30,000 in Yehud** (539 BCE – 538 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman say Persia conquered Babylon in 539 BCE and Cyrus issued his decree in his first year; they also write of the proclamation in 538. They read it as Persian policy, not sympathy, and hold the biblical figure of about 50,000 returnees to be exaggerated.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 298
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 307
+    - Argument (for): Survey data from Yehud in the fifth-fourth centuries BCE gives about thirty thousand people, against nearly fifty thousand in Ezra 2 and Nehemiah 7. Cyrus supported temples elsewhere too.
+      - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 308
+      - Verse (describes): Ezra 1:2 – Ezra 1:3
   - Attestation — Cyrus Cylinder *partially-corroborates*: The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia. Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea.
     - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
     - Source: *Cyrus Cylinder*, Livius.org <https://www.livius.org/sources/content/cyrus-cylinder/>
@@ -996,6 +1223,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Ezra-Nehemiah: A Commentary (author not shown on the citing page)*, 1988, p. 140, as cited by Wikipedia 'Nehemiah' n. 5
     - Source: *Artaxerxes I of Persia*, Wikipedia <https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia>
     - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 53 (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
+  - Position **Around 445 BCE** (445 BCE, held by Israel Finkelstein and Neil Asher Silberman): Finkelstein and Silberman put Nehemiah's night inspection of Jerusalem around 445 BCE (a line read from the chapter; the surrounding page was not read in full). They present him as the Persian king's cupbearer.
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 301
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 300
   - Attestation — Elephantine petition to rebuild the Yahu temple (407 BCE) *partially-corroborates*: A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall.
     - Source: *Elephantine papyri*, Wikipedia <https://en.wikipedia.org/wiki/Elephantine_papyri>
     - Source: *Sanballat the Horonite*, Wikipedia <https://en.wikipedia.org/wiki/Sanballat_the_Horonite>
@@ -1281,8 +1511,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **David** — `persons/david.toml` (draft)
   - Role: king of Judah and Israel
   - Evidence grade (derived): partially-corroborates
-  - Summary: David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David". That means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate).
+  - Summary: David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David". That means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate). Finkelstein and Silberman think David existed: the Tel Dan inscription shows the "reputation of David was not a literary invention of a much later period", but his Jerusalem was a modest village and no empire.
   - Source: *Tel Dan stele*, Wikipedia <https://en.wikipedia.org/wiki/Tel_Dan_stele>
+  - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 129, 142
   - Verse (describes): 2Sam 5:1 – 2Sam 5:5 (David made king over Israel)
   - Attestation — Tel Dan Stele *partially-corroborates*: Names the "House of David" (bytdwd, line 9) in the 9th century BCE. That is generations after David's traditional reign. It shows a dynasty was known by his name. It is not a witness from his own time. Most scholars accept the reading and a minority dispute it.
     - Source: *An Aramaic Stele Fragment from Tel Dan*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 43 (2–3), pp. 81–98, 1993, pp. 81–98
@@ -1359,8 +1590,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Solomon** — `persons/solomon.toml` (draft)
   - Role: king of Judah and Israel
   - Evidence grade (derived): none
-  - Summary: Solomon was David's son and the builder of the First Temple. He is remembered as the wealthiest and wisest king of a united Israel. No inscription from his own time or close to it names him. Was 10th-century Jerusalem the capital of a substantial kingdom, or a modest highland centre? That is one of the central debates of biblical archaeology (see the linked issue).
+  - Summary: Solomon was David's son and the builder of the First Temple. He is remembered as the wealthiest and wisest king of a united Israel. No inscription from his own time or close to it names him. Was 10th-century Jerusalem the capital of a substantial kingdom, or a modest highland centre? That is one of the central debates of biblical archaeology (see the linked issue). Finkelstein and Silberman hold that Solomon existed but ruled no empire: "Archeologically we can say no more about David and Solomon except that they existed", and the gates and palaces credited to him they date to the Omrides.
   - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
+  - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 142-143, 187
   - Verse (describes): 1Kgs 1:1 – 1Kgs 11:43
 
 ## Issues
@@ -1472,6 +1704,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 475–476 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - View **A conquest c. 1400 BCE**: Wood argues that the biblical data put the exodus and conquest in the 15th century BCE. He says Jericho was destroyed c. 1400 BCE. He thinks the 13th-century theory should be dropped.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 488–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+  - View **Israel Finkelstein and Neil Asher Silberman: no conquest; Joshua as a Josianic epic**: Finkelstein and Silberman say the evidence for a historical conquest "is, as we will see, weak" (p. 73). Late Bronze Canaan was an Egyptian province whose cities were mostly unwalled (pp. 77-78). At Jericho "there was no trace of a settlement of any kind in the thirteenth century BCE" (pp. 81-82), and at Ai the excavations found no Late Bronze settlement ("Not a single pottery sherd", p. 82). The destruction of Hazor, Aphek, Lachish and Megiddo was spread over more than a century: "No single military force did it, and certainly not in one military campaign" (p. 90). They date Joshua to the seventh century. Its Judah town list matches the borders under Josiah, and Jericho and Ai were the first targets of Josianic expansion (pp. 92-93). Earlier, from the 1920s to the 1950s, excavations at Tell Beit Mirsim, Bethel, Lachish and Hazor had seemed to confirm the conquest (pp. 79-81). Albright's rescue of Ai by moving the story to Bethel is also recorded (p. 82).
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 73
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 77-93
 
 - [ ] **Did the Exodus happen as described?** — `issues/exodus-historicity.toml` (draft)
   - Kind: historical
@@ -1483,6 +1718,18 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts*, Israel Finkelstein and Neil Asher Silberman, 2001
   - View **An authentic tradition**: Hoffmeier studies the Egyptian evidence, including a Semitic presence in the Nile Delta. He argues that it supports the Exodus tradition as authentic.
     - Source: *Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition*, James K. Hoffmeier, 1997
+  - View **Israel Finkelstein and Neil Asher Silberman: the Exodus did not happen as described**: Finkelstein and Silberman grant that migration from Canaan into the eastern delta is "abundantly verified" (p. 52). But for the thirteenth century they find no trace of Israel in Egypt: "Israel is absent - as a possible foe of Egypt, as a friend, or as an enslaved nation" (p. 60). They add that a flight past the Egyptian border forts is hardly credible (p. 61) and that no campsite from the time of Ramesses II has been found in Sinai, including at Kadesh-barnea (pp. 62-63). They conclude: "The conclusion - that the Exodus did not happen at the time and in the manner described in the Bible - seems irrefutable" (p. 63). Sites such as Arad and Heshbon were unoccupied in the Late Bronze Age (p. 64). The mainstream view they set against this puts the Exodus in the thirteenth century because of the name Raamses and the Merneptah Stele (p. 57). They follow Redford in reading the story's geography as seventh-century, with the narrative reaching "its final form" under the Twenty-sixth Dynasty (p. 68), and call it "neither historical truth nor literary fiction" (p. 70).
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 52
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 57-70
+
+- [ ] **Did the brothers of Jesus write James and Jude?** — `issues/james-and-jude-authorship.toml` (draft)
+  - Kind: historical
+  - Summary: The letters of James and Jude name brothers of Jesus as their authors. Ehrman argues neither did the writing.
+  - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 379, 383, 384
+  - View **Forgeries in the names of Jesus's brothers**: Ehrman says James the brother of Jesus "could almost certainly not write", and that the letter "claims to be written by someone who did not write it". He calls it a counterforgery aimed at a later Pauline position. Of Jude he says it was written "relatively late in the first century, after the age of the apostles", by an author who was "not the Aramaicspeaking peasant of Nazareth".
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 379, 383, 385, 393, 395
+  - View **James wrote it (Luke Timothy Johnson)**: Ehrman reports that Luke Johnson has made a strong case that there is no hard evidence of real animosity between James and Paul, and that Johnson is a supporter of authenticity. Ehrman disagrees. For Jude he notes that Richard Bauckham makes a spirited defense of authenticity.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 379, 383, 384
 
 - [ ] **How historical is the Book of Judges?** — `issues/judges-historicity.toml` (draft)
   - Kind: historical
@@ -1495,6 +1742,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Book of Judges*, Wikipedia, section on historicity <https://en.wikipedia.org/wiki/Book_of_Judges>
   - View **Samson as a folk hero**: Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu, and with Heracles. Conservative scholars regard him as a real historical person.
     - Source: *Samson*, Wikipedia <https://en.wikipedia.org/wiki/Samson>
+  - View **Israel Finkelstein and Neil Asher Silberman: early Israel grew out of the Canaanite highlands**: Finkelstein and Silberman describe a third wave of highland settlement beginning "around 1200 BCE" with about 250 sites and some 45,000 people (p. 115), after two earlier waves (table, p. 114). They hold that many early Israelites "were thus apparently nomads who gradually became farmers" (p. 113). Their conclusion: "There was no mass Exodus from Egypt. There was no violent conquest of Canaan. Most of the people who formed early Israel were local people" who were "themselves originally Canaanites" (p. 118). The emergence of Israel was "an outcome of the collapse of the Canaanite culture, not its cause" (p. 118).
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 113-118
 
 - [ ] **Is there a historical Moses?** — `issues/moses-historicity.toml` (draft)
   - Kind: historical
@@ -1509,6 +1758,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - View **An Egyptian name**: The name Moses is commonly linked to the Egyptian msy / mose, "born of" or "child of". It appears in names such as Thutmose and Ramose. Some read this as a sign that the tradition has a genuine Egyptian setting.
     - Source: *The Egyptian Derivation of the Name Moses*, J. Gwyn Griffiths, Journal of Near Eastern Studies 12, p. 223, 1953, p. 223
     - Source: *Moses*, Wikipedia <https://en.wikipedia.org/wiki/Moses>
+  - View **Israel Finkelstein and Neil Asher Silberman: the Moses story as seventh-century political saga**: Finkelstein and Silberman do not identify a historical Moses. Having found no archaeological support for the Exodus and wandering (pp. 60-64), they read the confrontation of Moses and pharaoh as a story shaped in the seventh century BCE: "The confrontation between Moses and pharaoh mirrored the momentous confrontation between the young King Josiah and the newly crowned Pharaoh Necho" (p. 71). They add that "To pin this biblical image down to a single date is to betray the story's deepest meaning" (p. 71). Older legends of liberation from Egypt may lie underneath (p. 68).
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 68-71
 
 - [ ] **Were Abraham, Isaac, Jacob and Joseph historical figures of a patriarchal age?** — `issues/patriarchs-historicity.toml` (draft)
   - Kind: historical
@@ -1522,6 +1773,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Historicity of the Bible*, Wikipedia <https://en.wikipedia.org/wiki/Historicity_of_the_Bible>
   - View **Joseph: a story composed late**: Donald B. Redford dated the writing of the Joseph story to between the 7th century BCE and the third quarter of the 5th century BCE. By the early 1990s most scholars saw it as a wisdom novella by a single author. Thomas Römer argues for the late Persian period.
     - Source: *Joseph (Genesis)*, Wikipedia <https://en.wikipedia.org/wiki/Joseph_(Genesis)>
+  - View **Israel Finkelstein and Neil Asher Silberman: a seventh-century composition**: Finkelstein and Silberman report that the search for the historical patriarchs "was ultimately unsuccessful" (p. 35): Albright's Amorite migration was "later shown to be illusory", and the parallels with second-millennium laws and customs were too general to fix a date (pp. 35-36). They date the writing instead from anachronisms. Camels "were not domesticated as beasts of burden earlier than the late second millennium" (p. 37), and the caravan of "gum, balm, and myrrh" in the Joseph story reflects the Arabian trade of the eighth and seventh centuries BCE (p. 37). Isaac's meeting with "Abimelech, king of the Philistines" at Gerar (Genesis 26:1) suits a Gerar that was an Assyrian stronghold in the late eighth and seventh centuries, not the small Iron Age I village (p. 38). They conclude that the anachronisms "suggest an intensive period of writing the patriarchal narratives in the eighth and seventh centuries BCE" (p. 38), with a basic framework pointing "clearly to a seventh century origin" (p. 45, note). Individual episodes may rest on old local traditions (p. 45). They set this against the earlier mainstream view of Albright, who held that "as a whole, the picture in Genesis is historical" (p. 34).
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 34-38
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 45
 
 - [ ] **Are the disputed letters of Paul forgeries?** — `issues/pauline-pseudepigrapha.toml` (draft)
   - Kind: historical
@@ -1566,3 +1820,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *David and Solomon: In Search of the Bible's Sacred Kings and the Roots of the Western Tradition*, Israel Finkelstein and Neil Asher Silberman, 2006
     - Source: *Review of Finkelstein and Silberman, David and Solomon*, Julia M. Klein, Archaeology (January 2006 issue, per the archive URL), 2006 <https://archive.archaeology.org/0601/reviews/kings.html>
     - Source: *Solomon*, Wikipedia <https://en.wikipedia.org/wiki/Solomon>
+  - View **Finkelstein and Silberman: a highland village, then Omride Israel**: Israel Finkelstein and Neil Asher Silberman accept that David and Solomon existed ("There is hardly a reason to doubt the historicity of David and Solomon", p. 142) but not the empire. Tenth-century Jerusalem was "at best, no more than a typical highland village" (p. 142), and Judah had about twenty small villages (p. 133). They redate the "Solomonic" gates and palaces at Megiddo, Hazor and Gezer to the early ninth century BCE (p. 141), so that "the Omrides, not Solomon, established the first fully developed monarchy in Israel" (p. 187). On their account Israel was a fully developed state no later than the beginning of the ninth century, while Judah changed little (p. 159).
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 133, 141-142
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, pp. 187-189
+    - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)*, Israel Finkelstein and Neil Asher Silberman, 2002, p. 159

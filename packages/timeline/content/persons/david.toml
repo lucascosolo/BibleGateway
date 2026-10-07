@@ -2,10 +2,10 @@ id = "david"
 name = "David"
 role = "king of Judah and Israel"
 summary = """
-David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David". That means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate)."""
+David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David". That means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate). Finkelstein and Silberman think David existed: the Tel Dan inscription shows the "reputation of David was not a literary invention of a much later period", but his Jerusalem was a modest village and no empire."""
 status = "draft"
 verses = [{ ref = "2Sam.5.1-2Sam.5.5", link = "describes", note = "David made king over Israel" }]
-citations = [{ source = "wikipedia-tel-dan-stele" }]
+citations = [{ source = "wikipedia-tel-dan-stele" }, { source = "finkelstein-silberman-2002", locator = "pp. 129, 142" }]
 
 [[attestations]]
 artifact = "tel-dan-stele"
