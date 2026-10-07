@@ -1079,3 +1079,10 @@ title = "Ancient Records of Assyria and Babylonia, Volume II: Historical Records
 publisher = "University of Chicago Press"
 year = 1927
 url = "https://archive.org/details/ancient_records_assyria2"
+
+[[source]]
+id = "wikidata"
+kind = "web"
+title = "Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07"
+publisher = "Wikimedia Foundation"
+url = "https://www.wikidata.org/"

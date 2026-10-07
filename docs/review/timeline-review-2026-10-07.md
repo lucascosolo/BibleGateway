@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `c1cc2c2f783ceeae`, draft entries only. Check each claim against its cited source; when an
+Build `d62fdeeae897bf38`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -182,6 +182,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Held by: Egyptian Museum, Cairo, JE 31408
   - Discovered: 1896, Thebes (Flinders Petrie)
   - Summary: A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c. 1208 BCE). Near the end (line 27) it lists peoples of Canaan he claims to have defeated. One entry reads "Israel is laid waste, its seed is no more". This is the earliest known mention of Israel outside the Bible. Israel is written with the sign for a people, not for a city-state or a land.
+  - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q754378: inventory number JE 31408, Egyptian Museum <https://www.wikidata.org/>
   - Source: *The Context of Scripture, Volume 2: Monumental Inscriptions*, William W. Hallo and K. Lawson Younger Jr. (eds.), 2000, pp. 40–41
   - Source: *Merneptah Stele*, Wikipedia <https://en.wikipedia.org/wiki/Merneptah_Stele>
 
@@ -202,6 +203,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Held by: British Museum, BM 118884
   - Discovered: 1861, Kurkh, south-eastern Turkey (J. G. Taylor)
   - Summary: An Assyrian stone slab recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. It lists the allies who stood against him. Among them is "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a), with 2,000 chariots and 10,000 foot soldiers.
+  - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q1793123 (the pair of monoliths) gives ME 118883; the two monoliths carry consecutive numbers and this file follows Wikipedia for Shalmaneser III's <https://www.wikidata.org/>
   - Source: *The Kurkh Monolith of Shalmaneser III*, Center for Online Judaic Studies <https://cojs.org/?p=6525>
   - Source: *Kurkh Monoliths*, Wikipedia <https://en.wikipedia.org/wiki/Kurkh_Monoliths>
 
@@ -212,14 +214,16 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Discovered: 1868, Dibon (modern Dhiban), Jordan (F. A. Klein)
   - Summary: A Moabite royal inscription, dated c. 840 BCE, found at Dibon in 1868. It says Omri was king of Israel and oppressed Moab for many days. It credits the god Chemosh with Mesha's victories. It contains the earliest certain mention of YHWH outside the Bible. Line 31 is disputed. Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'.
   - Source: *Mesha Stele*, Wikipedia <https://en.wikipedia.org/wiki/Mesha_Stele>
+  - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q724954: inventory number AO 5066, Department of Near Eastern Antiquities of the Louvre <https://www.wikidata.org/>
   - Verse (background): 2Kgs 3:4 – 2Kgs 3:27
 
 - [ ] **Black Obelisk of Shalmaneser III** — `artifacts/black-obelisk.toml` (draft)
   - Kind: inscription, Akkadian (cuneiform)
   - Made: 827 BCE – 824 BCE
-  - Held by: British Museum, ME 118885
+  - Held by: British Museum, ME 118885 (registration 1848,1104.1)
   - Discovered: 1846, Nimrud (ancient Kalhu), northern Iraq (A. H. Layard)
   - Summary: A black limestone obelisk about 1.98 m high, from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri'. It also pictures a tribute-bearer. Wikipedia's wording is that this is the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch. Luckenbill's translation of the second epigraph reads: "Tribute of Iaua (Jehu), son of Omri (mâr Humri). Silver, gold, a golden bowl, a golden beaker, golden goblets, pitchers of gold, lead, staves for the hand of the king, javelins, I received from him." The epigraph gives no regnal year. A separate Shalmaneser text in the same volume records tribute from "Tyre, Sidon and of Jehu, son of Omri" after a march to Mount Ba'li-ra'si. Modern scholars usually attach it to the campaign of the annals' eighteenth year (the sixteenth Euphrates crossing, against Hazael). Luckenbill's text itself does not take that step.
+  - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q1471650: inventory number 1848-11-04, 0001, British Museum <https://www.wikidata.org/>
   - Source: *Black Obelisk of Shalmaneser III*, Wikipedia <https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III>
   - Source: *Ancient Records of Assyria and Babylonia, Volume I: Historical Records of Assyria from the Earliest Times to Sargon*, Daniel David Luckenbill, 1926, § 590 (epigraph II); § 575 (year 18, Hazael); the Ba'li-ra'si passage before § 673 <https://archive.org/details/ancient_records_assyria1>
   - Verse (background): 2Kgs 9:1 – 2Kgs 9:13
@@ -280,6 +284,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Held by: British Museum, BM 90920
   - Discovered: 1879, Babylon (Hormuzd Rassam)
   - Summary: A clay cylinder of Cyrus, made after he conquered Babylon. It speaks of restoring gods and sending displaced peoples back to sites in Mesopotamia. As Wikipedia summarises, it mentions no Jews, Jerusalem or Judea. Whether it bears on Ezra 1 is disputed. Kuhrt calls the restoration passage a literary device.
+  - Source: *Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07*, Q405008: inventory number 90920, British Museum <https://www.wikidata.org/>
   - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
   - Source: *Cyrus Cylinder*, Livius.org <https://www.livius.org/sources/content/cyrus-cylinder/>
   - Verse (background): Ezra 1:1 – Ezra 1:4 (Cyrus's proclamation)
@@ -681,7 +686,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Summary: Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention it.
   - Verse (background): 1Kgs 16:29 – 1Kgs 16:34 (Ahab becomes king. The Bible does not mention Qarqar)
   - Verse (background): 1Kgs 22:1 – 1Kgs 22:4 (three years without war between Syria and Israel)
-  - Position **853 BCE** (853 BCE, held by Edwin R. Thiele): Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853.
+  - Position **853 BCE** (853 BCE, held by Edwin R. Thiele): Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853. In his own words: "As I first completed my pattern of reigns, I faced problems of a single year with my date of 853 for the battle of Qarqar and 723 for Samaria's fall. The accepted date for Qarqar then was 854, a year earlier than my date." He adds that "Assyrian chronology likewise calls for precisely 152 years from the battle of Qarqar in 853 to Sennacherib's attack on Hezekiah in 701".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Ahab ends 853 in the chronology table; second-hand <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 593 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232 <https://www.rcyoung.org/articles/rtables.pdf>
@@ -723,7 +729,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (background): Isa 20:1 (names Sargon as king of Assyria)
   - Verse (alludes): Hos 13:16 ('Samaria will bear her guilt')
   - Verse (alludes): Mic 1:6 (Samaria turned into a heap of rubble)
-  - Position **723 BCE (first half)** (723 BCE, held by Rodger C. Young): Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n.
+  - Position **723 BCE (first half)** (723 BCE, held by Edwin R. Thiele; Rodger C. Young): Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n. Thiele held the same year first: he writes of "my date of 853 for the battle of Qarqar and 723 for Samaria's fall", noting that "the accepted date for the fall of Samaria was 722, a year later than my date".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 583 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
   - Attestation — Inscriptions of Sargon II (Samaria claim) *partially-corroborates*: Sargon claims the conquest and says he resettled 27,280 Israelites. Scholars doubt that the capture was really his.
@@ -738,6 +745,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): Isa 36:1 – Isa 37:38
   - Position **701 BCE** (701 BCE): The Assyrian records date the campaign to 701 BCE. Scholars do not seriously dispute this.
     - Source: *Sennacherib's campaign in the Levant*, Wikipedia <https://en.wikipedia.org/wiki/Sennacherib%27s_campaign_in_the_Levant>
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07): "The year 701, when Sennacherib came against Jerusalem in the fourteenth year of Hezekiah, is a major anchor point in my pattern." <https://archive.org/details/mysteriousnumber0000thie>
   - Attestation — Lachish reliefs *corroborates*: These carvings show the siege and fall of Lachish. 2 Kings 18:14 and 18:17 place Sennacherib there during the campaign.
     - Source: *Lachish reliefs, South-West Palace of Sennacherib, Nineveh (collection record)*, British Museum <https://www.britishmuseum.org/collection/object/W_1856-0909-14>
   - Attestation — Taylor Prism (annals of Sennacherib) *corroborates*: Sennacherib's own account says he took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". It claims payment from Hezekiah but not the capture of the city. That agrees with 2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken.
@@ -810,10 +818,10 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (dates): Jer 52:12 (Nebuchadnezzar's nineteenth year)
   - Verse (background): Jer 52:29 (A deportation in the eighteenth year)
   - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Thiele dates the destruction to 586 BCE, counting from Nebuchadnezzar's nineteenth year. Young records that Thiele "was among those preferring 586".
-    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1 <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 21 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Argument (for): 2 Kings 25:8 and Jeremiah 52:12 date the burning of the temple to Nebuchadnezzar's nineteenth year.
-      - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983
+      - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983 <https://archive.org/details/mysteriousnumber0000thie>
       - Verse (dates): 2Kgs 25:8
       - Verse (dates): Jer 52:12
   - Position **587 BCE** (587 BCE, held by Rodger C. Young): Young dates the breach of the walls to the summer month of Tammuz in 587 BCE.

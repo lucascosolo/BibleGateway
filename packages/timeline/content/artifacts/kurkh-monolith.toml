@@ -9,6 +9,7 @@ An Assyrian stone slab recording Shalmaneser III's campaign of 853 BCE and the b
 discovered = { year = 1861, place = "Kurkh, south-eastern Turkey (J. G. Taylor)" }
 held_by = { institution = "British Museum", accession = "BM 118884" }
 citations = [
+  { source = "wikidata", locator = "Q1793123 (the pair of monoliths) gives ME 118883; the two monoliths carry consecutive numbers and this file follows Wikipedia for Shalmaneser III's" },
   { source = "cojs-kurkh-monolith" },
   { source = "wikipedia-kurkh-monoliths" },
 ]

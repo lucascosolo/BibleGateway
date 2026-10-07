@@ -9,6 +9,7 @@ A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c
 discovered = { year = 1896, place = "Thebes (Flinders Petrie)" }
 held_by = { institution = "Egyptian Museum, Cairo", accession = "JE 31408" }
 citations = [
+  { source = "wikidata", locator = "Q754378: inventory number JE 31408, Egyptian Museum" },
   { source = "cos-2", locator = "pp. 40–41" },
   { source = "wikipedia-merneptah-stele" },
 ]

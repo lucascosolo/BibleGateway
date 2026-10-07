@@ -7,8 +7,9 @@ language = "Akkadian (cuneiform)"
 summary = """
 A black limestone obelisk about 1.98 m high, from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri'. It also pictures a tribute-bearer. Wikipedia's wording is that this is the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch. Luckenbill's translation of the second epigraph reads: "Tribute of Iaua (Jehu), son of Omri (mâr Humri). Silver, gold, a golden bowl, a golden beaker, golden goblets, pitchers of gold, lead, staves for the hand of the king, javelins, I received from him." The epigraph gives no regnal year. A separate Shalmaneser text in the same volume records tribute from "Tyre, Sidon and of Jehu, son of Omri" after a march to Mount Ba'li-ra'si. Modern scholars usually attach it to the campaign of the annals' eighteenth year (the sixteenth Euphrates crossing, against Hazael). Luckenbill's text itself does not take that step."""
 discovered = { year = 1846, place = "Nimrud (ancient Kalhu), northern Iraq (A. H. Layard)" }
-held_by = { institution = "British Museum", accession = "ME 118885" }
+held_by = { institution = "British Museum", accession = "ME 118885 (registration 1848,1104.1)" }
 citations = [
+  { source = "wikidata", locator = "Q1471650: inventory number 1848-11-04, 0001, British Museum" },
   { source = "wikipedia-black-obelisk" },
   { source = "luckenbill-arab-1", locator = "§ 590 (epigraph II); § 575 (year 18, Hazael); the Ba'li-ra'si passage before § 673" },
 ]

@@ -9,6 +9,7 @@ A clay cylinder of Cyrus, made after he conquered Babylon. It speaks of restorin
 discovered = { year = 1879, place = "Babylon (Hormuzd Rassam)" }
 held_by = { institution = "British Museum", accession = "BM 90920" }
 citations = [
+  { source = "wikidata", locator = "Q405008: inventory number 90920, British Museum" },
   { source = "wikipedia-cyrus-cylinder" },
   { source = "livius-cyrus-cylinder" },
 ]
