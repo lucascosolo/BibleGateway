@@ -8,9 +8,10 @@ import { IssueList } from "@/components/toledot/Lists";
 import { RelationGroup } from "@/components/toledot/RelationGroup";
 import { ToledotStructuredData } from "@/components/toledot/ToledotStructuredData";
 import { VerseLinks } from "@/components/toledot/VerseLinks";
-import { getEvent, getIssueSummaries } from "@/lib/db/timeline";
+import { getEvent, getIssueSummaries, type Position } from "@/lib/db/timeline";
 import { bookNames, labelVerses } from "@/lib/db/timeline-present";
 import { excerpt } from "@/lib/seo";
+import { splitPositions } from "@/lib/timeline/lens";
 import { formatRange } from "@/lib/timeline/years";
 
 export const dynamic = "force-dynamic";
@@ -21,13 +22,54 @@ interface Props {
 
 const AXIS_PHRASE = { narrative: "When it happened", composition: "When it was written", canon: "When it became scripture" } as const;
 
+const TRADITIONAL_CAVEAT =
+  "These dates come from adding up the Bible's own numbers, such as reign lengths and life spans. They are a long-standing way of reading the text, not evidence from archaeology or from records outside the Bible. Each one says whose count it is.";
+
+function PositionList({ positions, from, to }: { positions: readonly Position[]; from: number; to: number }) {
+  return (
+    <ol className="toledot-positions">
+      {positions.map((position) => (
+        <li key={position.id} className="toledot-position">
+          <h3 className="toledot-position__label">{position.label}</h3>
+          <p className="toledot-position__meta">
+            <span className="toledot-position__range">{formatRange(position.earliest, position.latest)}</span>
+            {" · "}{position.tradition}
+            {position.heldBy ? <> · held by {position.heldBy}</> : null}
+          </p>
+          <RangeTrack from={from} to={to} earliest={position.earliest} latest={position.latest} />
+          <p className="toledot-prose">{position.summary}</p>
+          <Citations citations={position.citations} />
+          {(["for", "against"] as const).map((stance) => {
+            const args = position.arguments.filter((argument) => argument.stance === stance);
+            if (args.length === 0) return null;
+            return (
+              <div key={stance} className="toledot-arguments" data-stance={stance}>
+                <h4 className="toledot-arguments__heading">{stance === "for" ? "For" : "Against"}</h4>
+                <ul className="toledot-arguments__list">
+                  {args.map((argument) => (
+                    <li key={argument.id}>
+                      <p className="toledot-prose toledot-prose--small">{argument.text}</p>
+                      <VerseLinks verses={labelVerses(argument.verses)} />
+                      <Citations citations={argument.citations} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 export async function generateMetadata({ params }: Props) {
   const event = getEvent((await params).id);
   if (!event) notFound();
   const range = formatRange(event.earliest, event.latest);
   return shareMetadata(
     `${event.title}: dated ${range} · Toledot · Jot`,
-    excerpt(`${event.title}, ${range} (${event.confidence}). ${event.positions.length} scholarly position${event.positions.length === 1 ? "" : "s"} with arguments and sources. ${event.summary}`, 200),
+    excerpt(`${event.title}, ${range} (${event.confidence}). ${event.positions.length} position${event.positions.length === 1 ? "" : "s"} with arguments and sources. ${event.summary}`, 200),
     `/toledot/events/${event.id}`,
     { card: { kind: "page", page: "toledot" } },
   );
@@ -38,6 +80,11 @@ export default async function EventPage({ params }: Props) {
   if (!event) notFound();
   const books = bookNames(event.bookIds);
   const issues = getIssueSummaries(event.issueIds);
+  const { scholarly, traditional } = splitPositions(event.positions);
+  // The tracks share one scale across both sections, so a traditional count far from the
+  // evidence reads as far.
+  const trackFrom = Math.min(event.earliest, event.traditional?.earliest ?? event.earliest);
+  const trackTo = Math.max(event.latest, event.traditional?.latest ?? event.latest);
 
   return (
     <EntityShell
@@ -45,7 +92,8 @@ export default async function EventPage({ params }: Props) {
       status={event.status}
       meta={
         <>
-          {AXIS_PHRASE[event.axis]}: <strong>{formatRange(event.earliest, event.latest)}</strong> · {event.confidence} dating
+          {AXIS_PHRASE[event.axis]}: <strong>{formatRange(event.earliest, event.latest)}</strong>
+          {scholarly.length === 0 ? " (traditional count)" : null} · {event.confidence} dating
           {books.length ? <> · {books.join(", ")}</> : null}
         </>
       }
@@ -54,41 +102,20 @@ export default async function EventPage({ params }: Props) {
       <p className="toledot-prose">{event.summary}</p>
       <VerseLinks verses={labelVerses(event.verses)} />
 
-      <EntitySection title={event.positions.length === 1 ? "The position" : `${event.positions.length} positions on the date`}>
-        <ol className="toledot-positions">
-          {event.positions.map((position) => (
-            <li key={position.id} className="toledot-position">
-              <h3 className="toledot-position__label">{position.label}</h3>
-              <p className="toledot-position__meta">
-                <span className="toledot-position__range">{formatRange(position.earliest, position.latest)}</span>
-                {" · "}{position.tradition}
-                {position.heldBy ? <> · held by {position.heldBy}</> : null}
-              </p>
-              <RangeTrack from={event.earliest} to={event.latest} earliest={position.earliest} latest={position.latest} />
-              <p className="toledot-prose">{position.summary}</p>
-              <Citations citations={position.citations} />
-              {(["for", "against"] as const).map((stance) => {
-                const args = position.arguments.filter((argument) => argument.stance === stance);
-                if (args.length === 0) return null;
-                return (
-                  <div key={stance} className="toledot-arguments" data-stance={stance}>
-                    <h4 className="toledot-arguments__heading">{stance === "for" ? "For" : "Against"}</h4>
-                    <ul className="toledot-arguments__list">
-                      {args.map((argument) => (
-                        <li key={argument.id}>
-                          <p className="toledot-prose toledot-prose--small">{argument.text}</p>
-                          <VerseLinks verses={labelVerses(argument.verses)} />
-                          <Citations citations={argument.citations} />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                );
-              })}
-            </li>
-          ))}
-        </ol>
+      <EntitySection title="What the evidence supports">
+        {scholarly.length ? (
+          <PositionList positions={scholarly} from={trackFrom} to={trackTo} />
+        ) : (
+          <p className="toledot-draft">No archaeological or critical dating is on file for this event yet.</p>
+        )}
       </EntitySection>
+
+      {traditional.length ? (
+        <EntitySection title="Traditional chronology">
+          <p className="toledot-draft toledot-lens-caveat">{TRADITIONAL_CAVEAT}</p>
+          <PositionList positions={traditional} from={trackFrom} to={trackTo} />
+        </EntitySection>
+      ) : null}
 
       {event.attestations.length ? (
         <EntitySection title="Outside evidence">

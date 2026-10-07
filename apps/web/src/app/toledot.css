@@ -205,6 +205,16 @@
 .toledot-bar__rule::after { right: 0; }
 .toledot-bar[data-confidence="contested"] .toledot-bar__rule { border-top-style: dashed; }
 .toledot-bar[data-confidence="speculative"] .toledot-bar__rule { border-top-style: dotted; }
+/* The traditional-chronology lens: a thinner, fainter dotted line in the same row, drawn beneath
+   the scholarly rule and its labels. Its range is in the aria-label; the bar's text stays the
+   scholarly envelope. */
+.toledot-bar__link { position: relative; }
+.toledot-bar__traditional {
+  position: absolute;
+  top: calc(3px + var(--text-sm) * var(--leading-snug) + 7px + 0.75px);
+  border-top: 1.5px dotted var(--color-ink-faint);
+  pointer-events: none;
+}
 .toledot-bar__meta {
   white-space: nowrap;
   font-family: var(--font-sans);
@@ -415,3 +425,4 @@
 @media (prefers-reduced-motion: reduce) {
   .toledot-strip__frame::after { transition: none; }
 }
+.toledot-lens-caveat { max-width: 62ch; margin: 0 0 var(--space-3); }

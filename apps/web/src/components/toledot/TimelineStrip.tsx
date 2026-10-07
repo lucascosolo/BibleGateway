@@ -30,6 +30,18 @@ const CONFIDENCE_PHRASE: Record<EventSummary["confidence"], string> = {
 
 type StripEvent = EventSummary & { display: string };
 
+/** The traditional-chronology envelope in the bar's own coordinates, clipped to the window. */
+function traditionalExtent(event: StripEvent, from: number, to: number, barLeft: number) {
+  if (!event.traditional) return null;
+  const start = Math.min(Math.max(event.traditional.earliest, from), to);
+  const end = Math.max(Math.min(event.traditional.latest, to), from);
+  return {
+    left: yearOffset(from, start, PX_PER_YEAR) - barLeft,
+    width: Math.max(spanYears(start, end) * PX_PER_YEAR, 8),
+    label: `traditional chronology: ${formatRange(event.traditional.earliest, event.traditional.latest)}`,
+  };
+}
+
 /**
  * The Toledot strip: three ruled lanes (one per axis, never merged onto one scale), each event
  * a range from its earliest to its latest year. Confidence is the rule's style AND a word, the
@@ -113,6 +125,7 @@ export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]
                   <ol className="toledot-lane__bars">
                     {laneBars.map((bar) => {
                       const event = byId.get(bar.id)!;
+                      const lens = traditionalExtent(event, from, to, bar.left);
                       return (
                         <li
                           key={bar.id}
@@ -120,6 +133,14 @@ export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]
                           data-confidence={event.confidence}
                           style={{ left: bar.left, top: bar.lane * ROW_HEIGHT, width: Math.max(bar.width, LABEL_RESERVE) }}
                         >
+                          {lens ? (
+                            <span
+                              className="toledot-bar__traditional"
+                              role="img"
+                              aria-label={lens.label}
+                              style={{ left: lens.left, width: lens.width }}
+                            />
+                          ) : null}
                           <Link
                             href={`/toledot/events/${event.id}`}
                             className="toledot-bar__link"

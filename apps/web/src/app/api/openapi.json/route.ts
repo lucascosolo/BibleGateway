@@ -91,7 +91,7 @@ const openapi = {
       get: {
         summary: "List timeline events and eras in a window of years",
         description:
-          "Years are integers: negative = BCE, positive = CE, no year 0. Every event is a range (the envelope of the scholarly positions on its date), never a point, with a confidence and a review status ('draft' until a human has reviewed it). Events are returned in `tracks`, one list per axis — narrative (when events happened), composition (when texts were written), canon (when collections were recognised) — never merged into one list; `axis` fills only that track. `available` is false when no timeline is deployed.",
+          "Years are integers: negative = BCE, positive = CE, no year 0. Every event is a range (the envelope of its archaeological, critical and chronological positions; traditional chronology counts only when it is the sole position), never a point, with `traditional` giving the separate envelope of its traditional-chronology positions, or null, with a confidence and a review status ('draft' until a human has reviewed it). Events are returned in `tracks`, one list per axis — narrative (when events happened), composition (when texts were written), canon (when collections were recognised) — never merged into one list; `axis` fills only that track. `available` is false when no timeline is deployed.",
         parameters: [
           { name: "from", in: "query", schema: { type: "integer", default: -4000, example: -1500 } },
           { name: "to", in: "query", schema: { type: "integer", default: 400, example: -500 } },
@@ -104,7 +104,7 @@ const openapi = {
       get: {
         summary: "Read one timeline event: positions, arguments, attestations and issues",
         description:
-          "Each scholarly position on the date with its range and holders, the cited arguments for and against it, the sources outside the Bible that corroborate it, are consistent with it, are silent, or are in tension with it, and the linked chronological and historical issues.",
+          "Each position on the date with its range, tradition and holders (`tradition` is archaeological, critical, chronological or traditional; traditional chronology adds up the Bible's own numbers and is a lens, not evidence, and its envelope is in `traditional`, null when there is none; `earliest`/`latest` exclude it unless it is the only position), the cited arguments for and against it, the sources outside the Bible that corroborate it, are consistent with it, are silent, or are in tension with it, and the linked chronological and historical issues.",
         parameters: [{ name: "id", in: "path", required: true, schema: { type: "string", example: "exodus" } }],
         responses: { "200": { description: "The event in full, with citations." }, "404": errorResponse },
       },
