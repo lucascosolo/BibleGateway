@@ -5,7 +5,7 @@ status = "draft"
 made = { earliest = -853, latest = -852 }
 language = "Akkadian (cuneiform)"
 summary = """
-An Assyrian stone slab recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. It lists the allies who stood against him. Among them is "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a), with 2,000 chariots and 10,000 foot soldiers. Oppenheim's ANET translation reads: "2,000 chariots, 10,000 foot soldiers of Ahab, the Israelite" (p. 279)."""
+An Assyrian stone slab recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. It lists the allies who stood against him. Among them is "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a), with 2,000 chariots and 10,000 foot soldiers. Oppenheim's ANET translation reads: "2,000 chariots, 10,000 foot soldiers of Ahab, the Israelite" (p. 279). Grayson's translation of the same line reads: "2,000 chariots (and) 10,000 troops of Ahab (Ahabbu) the Israelite (Sir'alaia)" (A.0.102.2 ii 91–92)."""
 discovered = { year = 1861, place = "Kurkh, south-eastern Turkey (J. G. Taylor)" }
 held_by = { institution = "British Museum", accession = "BM 118884" }
 citations = [
@@ -13,4 +13,5 @@ citations = [
   { source = "cojs-kurkh-monolith" },
   { source = "wikipedia-kurkh-monoliths" },
   { source = "pritchard-1969", locator = "pp. 278–279 (Sixth Year, Monolith Inscription, ii 78–102), trans. A. Leo Oppenheim" },
+  { source = "grayson-1996", locator = "p. 11 (introduction to A.0.102.2: the Kurkh stele, found by J. E. Taylor in 1861; the last event narrated is Qarqar, 853 BC, so the monument was carved late in 853 or in 852); pp. 23–24, A.0.102.2 ii 89b–102 (Qarqar; Ahab at ii 91–92)" },
 ]

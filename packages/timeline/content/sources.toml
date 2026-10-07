@@ -1104,6 +1104,14 @@ publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
 
 [[source]]
+id = "grayson-1996"
+kind = "book"
+author = "A. Kirk Grayson"
+title = "Assyrian Rulers of the Early First Millennium BC II (858–745 BC). The Royal Inscriptions of Mesopotamia, Assyrian Periods, vol. 3 (page numbers follow this printing, read from a scan at ~/.cache/jot/sources/grayson-1996/)"
+publisher = "University of Toronto Press"
+year = 1996
+
+[[source]]
 id = "pritchard-1969"
 kind = "book"
 author = "James B. Pritchard (ed.)"

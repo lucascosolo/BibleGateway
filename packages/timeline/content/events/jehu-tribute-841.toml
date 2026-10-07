@@ -31,5 +31,5 @@ citations = [
 artifact = "black-obelisk"
 relation = "corroborates"
 note = """
-The inscription reads: 'I received the tribute of Iaua (Jehu) son of (the people of the land of) Omri'. It is dated in or around 841."""
-citations = [{ source = "wikipedia-black-obelisk" }]
+The inscription reads: 'I received the tribute of Iaua (Jehu) son of (the people of the land of) Omri'. It is dated in or around 841. Grayson's translation of the epigraph: "I received tribute from Jehu (Iaua) of the house of Omri (Humrî)"; he assigns it to the eighteenth regnal year, 841 BC."""
+citations = [{ source = "wikipedia-black-obelisk" }, { source = "grayson-1996", locator = "p. 149, A.0.102.88 (epigraph); p. 54, A.0.102.10 iv 10–12; p. 48, A.0.102.8 lines 26\"–27\"; p. 60, A.0.102.12 lines 29–30" }]

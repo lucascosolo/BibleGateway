@@ -36,5 +36,5 @@ citations = [{ source = "wikipedia-battle-of-qarqar" }]
 artifact = "kurkh-monolith"
 relation = "corroborates"
 note = """
-The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite."""
-citations = [{ source = "wikipedia-kurkh-monoliths" }, { source = "wikipedia-battle-of-qarqar" }]
+The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite. Grayson's translation: "2,000 chariots (and) 10,000 troops of Ahab (Ahabbu) the Israelite (Sir'alaia)"."""
+citations = [{ source = "wikipedia-kurkh-monoliths" }, { source = "wikipedia-battle-of-qarqar" }, { source = "grayson-1996", locator = "pp. 23–24, A.0.102.2 ii 89b–102 (Ahab at ii 91–92); introduction p. 11 dates the battle to 853 BC" }]
