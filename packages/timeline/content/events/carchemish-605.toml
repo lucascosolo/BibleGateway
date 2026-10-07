@@ -20,10 +20,10 @@ label = "605 BCE"
 tradition = "chronological"
 earliest = -605
 latest = -605
-held_by = "Rodger C. Young"
 summary = """
-Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count. It falls in the second half of the year Jeremiah gives (606t)."""
-citations = [{ source = "young-2004", locator = "pp. 33 (table), 36" }, { source = "young-2005", locator = "p. 232" }]
+Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count. It falls in the second half of the year Jeremiah gives (606t). Thiele agrees: the battle "is now definitely dated by Babylonian evidence (B.M. 21946) in the twenty-first year of Nabopolassar, 605 B.C."; Nabopolassar died on 8 Av (16 August) 605 and Nebuchadnezzar took the throne on 7 September."""
+held_by = "Rodger C. Young; Edwin R. Thiele"
+citations = [{ source = "thiele-1983", locator = "p. 184; p. 185; p. 180, table of fixed dates (page images supplied by the user, 2026-10-07)" }, { source = "young-2004", locator = "pp. 33 (table), 36" }, { source = "young-2005", locator = "p. 232" }]
 
 [[attestations]]
 artifact = "babylonian-chronicle-abc5"

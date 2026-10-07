@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `a9c33b45e458055a`, draft entries only. Check each claim against its cited source; when an
+Build `2254c68e1cf88967`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -19,6 +19,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Discovered: 1896, Purchased by the British Museum
   - Summary: A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the 11th year of Nebuchadnezzar II. For Nebuchadnezzar's seventh year it records that "on the second day of the month Addaru he seized the city and captured the king". That means Jerusalem and Jehoiachin, in February/March 597 BCE. The date the tablet itself was written is not recorded here. It is the events it records that are dated.
   - Source: *Assyrian and Babylonian Chronicles*, A. Kirk Grayson, 1975, Chronicle 5
+  - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 180, table of tablets: B.M. 21946 covers Nabopolassar year 21 and Nebuchadnezzar accession to year 11 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
   - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - Verse (background): 2Kgs 24:10 – 2Kgs 24:12
 
@@ -776,7 +777,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): 2Chr 35:20 – 2Chr 35:27 (Chronicles says he was wounded by archers. The nation mourns)
   - Verse (alludes): Jer 22:10 – Jer 22:12 (Jeremiah speaks of Shallum, who succeeded Josiah)
   - Verse (alludes): Zech 12:11 (Mourning at Hadadrimmon in the valley of Megiddon (a link made by tradition))
-  - Position **609 BCE (Tammuz)** (609 BCE, held by Rodger C. Young): Young works out from the Babylonian Chronicles that Josiah died in the fourth month of 609.
+  - Position **609 BCE (Tammuz)** (609 BCE, held by Rodger C. Young; Edwin R. Thiele): Young works out from the Babylonian Chronicles that Josiah died in the fourth month of 609. Thiele has the same: "609—Josiah slain at Megiddo by Neco of Egypt (2 Kings 23:29)", with Neco at Megiddo in Tammuz (25 June to 23 July) on his Diagram 20.
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 180, §36; p. 182, Diagram 20 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 35 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
   - Position **June or July 609 BCE** (609 BCE): Wikipedia gives June or July 609.
@@ -790,7 +792,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (dates): Jer 25:1 (fourth year of Jehoiakim)
   - Verse (describes): Jer 46:2 – Jer 46:12 (A message from God about Egypt at Carchemish)
   - Verse (dates): Jer 46:2 (fourth year of Jehoiakim)
-  - Position **605 BCE** (605 BCE, held by Rodger C. Young): Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count. It falls in the second half of the year Jeremiah gives (606t).
+  - Position **605 BCE** (605 BCE, held by Rodger C. Young; Edwin R. Thiele): Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count. It falls in the second half of the year Jeremiah gives (606t). Thiele agrees: the battle "is now definitely dated by Babylonian evidence (B.M. 21946) in the twenty-first year of Nabopolassar, 605 B.C."; Nabopolassar died on 8 Av (16 August) 605 and Nebuchadnezzar took the throne on 7 September.
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 184; p. 185; p. 180, table of fixed dates (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 33 (table), 36 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232 <https://www.rcyoung.org/articles/rtables.pdf>
   - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *corroborates*: On the tablet, lines 2-4 say the Babylonian army marched to Carchemish and crossed the river against the Egyptian army, which withdrew. This was year 21 of Nabopolassar.
@@ -800,7 +803,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Axis / confidence: narrative / firm; range 597 BCE
   - Summary: Babylon captures Jerusalem for the first time. Jehoiachin surrenders and is taken to Babylon, and Zedekiah is made king in his place. The Babylonian Chronicle, an ancient Babylonian record, gives the date down to the month.
   - Verse (describes): 2Kgs 24:10 – 2Kgs 24:17
-  - Position **February/March 597 BCE (2 Addaru, Nebuchadnezzar's 7th year)** (597 BCE): The Babylonian Chronicle dates the seizure of the city and the capture of its king to the second day of Addaru, in Nebuchadnezzar's seventh year.
+  - Position **February/March 597 BCE (2 Addaru, Nebuchadnezzar's 7th year)** (597 BCE, held by Edwin R. Thiele): The Babylonian Chronicle dates the seizure of the city and the capture of its king to the second day of Addaru, in Nebuchadnezzar's seventh year. Thiele converts the date: Nebuchadnezzar "besieged Jerusalem and captured the city on 2 Adar (Saturday, 16 March) 597", after an expedition begun in Kislev (17 December 598 to 15 January 597).
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186; p. 180, table of fixed dates (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *Assyrian and Babylonian Chronicles*, A. Kirk Grayson, 1975, Chronicle 5
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *corroborates*: The Chronicle says Nebuchadnezzar "seized the city and captured the king" on 2 Addaru of his seventh year. It says he then appointed a king of his own choice. This matches 2 Kings 24:12-17.
@@ -812,7 +816,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): Ezek 1:1 (The thirtieth year, fourth month, fifth day, by the river Chebar)
   - Verse (describes): Ezek 1:2 (The fifth year of King Jehoiachin's captivity)
   - Verse (describes): Ezek 1:3 (The word of Yahweh comes to Ezekiel the priest)
-  - Position **593 BCE (fifth year of Jehoiachin's exile)** (593 BCE, held by Walther Eichrodt (as cited by Wikipedia, footnote 6)): The fifth year of Jehoiachin's exile is 593 BCE. The "thirtieth year" is read in two ways. One reading takes it as Ezekiel's age. The other, found in rabbinic sources, counts it from the discovery of the Book of the Law in 622 BCE.
+  - Position **593 BCE (fifth year of Jehoiachin's exile)** (593 BCE, held by Edwin R. Thiele; Walther Eichrodt (as cited by Wikipedia, footnote 6)): The fifth year of Jehoiachin's exile is 593 BCE. The "thirtieth year" is read in two ways. One reading takes it as Ezekiel's age. The other, found in rabbinic sources, counts it from the discovery of the Book of the Law in 622 BCE. Thiele's Chart 31 fixes the day: "593—31 July—Ezekiel has vision on 4/5/5—Ezek. 1:1–2".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 184, Chart 31 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *Ezekiel*, Wikipedia, Chronology section, footnote 6: Eichrodt, Ezekiel: A Commentary (2003), p. 407, not checked directly <https://en.wikipedia.org/wiki/Ezekiel>
     - Source: *Book of Ezekiel*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Ezekiel>
 
@@ -822,8 +827,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): 2Kgs 25:1 – 2Kgs 25:21
   - Verse (dates): Jer 52:12 (Nebuchadnezzar's nineteenth year)
   - Verse (background): Jer 52:29 (A deportation in the eighteenth year)
-  - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Thiele dates the destruction to 586 BCE, counting from Nebuchadnezzar's nineteenth year. Young records that Thiele "was among those preferring 586".
-    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1 <https://archive.org/details/mysteriousnumber0000thie>
+  - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Thiele dates the destruction to 586 BCE, counting from Nebuchadnezzar's nineteenth year. His Chart 31 reads: "586—19 July—Jerusalem taken on 4/9/11—2 Kings 25:2–3" and "586—15 Aug.—19th of Nebuchadnezzar—temple burned on 5/7/19—2 Kings 25:8–9", with the siege begun "588—15 Jan." (2 Kings 25:1). Young records that Thiele "was among those preferring 586".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 184, Chart 31; the season discussed from p. 186 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 21 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Argument (for): 2 Kings 25:8 and Jeremiah 52:12 date the burning of the temple to Nebuchadnezzar's nineteenth year.
       - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983 <https://archive.org/details/mysteriousnumber0000thie>
@@ -1315,6 +1320,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - View **Eighth year**: 2 Kings 24:12 says the king of Babylon took Jehoiachin "in the eighth year of his reign".
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
+  - View **Both are right: Nisan years in Babylon, Tishri years in Kings**: Thiele resolves the two numbers by the two calendars. Babylon counted regnal years from Nisan in spring; the book of Kings counted Nebuchadnezzar's years from Tishri in autumn. "The last half of the Babylonian Nisan year overlaps the first half of the Hebrew Tishri year. Thus Jerusalem fell to Nebuchadnezzar in his seventh year according to his own reckoning but in his eighth year according to the reckoning in Kings. The overlap was from Tishri in the fall of 598 to Nisan in the spring of 597. Since Jerusalem fell in Adar, the last month of the Babylonian year, this was in the spring of 597."
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
 
 - [ ] **The 300 years of Judges 11:26** — `issues/judges-300-years.toml` (draft)
   - Kind: chronology

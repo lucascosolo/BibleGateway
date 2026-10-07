@@ -103,8 +103,10 @@ parallel scratch copies validated by the builder and merged the same afternoon. 
   interval (derived from other cited figures); the Cyrus "no single decree" bounds.
 - **Thiele is cited directly only for the Preface to the Third Edition (pp. 23–24: 853 for
   Qarqar, 723 for Samaria, 701 for Sennacherib), from page images the user supplied on
-  2026-10-07; the body of the book is still cited through Young** (Solomon's accession, the temple
-  foundation, Jerusalem 586). Young's JETS page locators in batch B were mapped from PDF page order, not checked
+  2026-10-07; pp. 180–186 (Carchemish 605, the 597 capture, Ezekiel 593, Jerusalem 586, Josiah 609, the
+  B.M. tablet numbers) and the chapter opening on 931/930; the page-by-page ledger is
+  `docs/sources/thiele-1983.md`. Still through Young only: Solomon's accession and the temple
+  foundation.** Young's JETS page locators in batch B were mapped from PDF page order, not checked
   against printed headers.
 - **No named holder** for: the 30 CE crucifixion, Ezekiel's 593 call, Babylon 539, the temple's
   516 and 450–400 datings, Ezra 398, Nehemiah 445/444, Alexander, Antiochus, Pompey.

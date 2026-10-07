@@ -20,10 +20,10 @@ label = "609 BCE (Tammuz)"
 tradition = "chronological"
 earliest = -609
 latest = -609
-held_by = "Rodger C. Young"
 summary = """
-Young works out from the Babylonian Chronicles that Josiah died in the fourth month of 609."""
-citations = [{ source = "young-2004", locator = "p. 35" }, { source = "young-2005", locator = "Table 2, p. 246" }]
+Young works out from the Babylonian Chronicles that Josiah died in the fourth month of 609. Thiele has the same: "609—Josiah slain at Megiddo by Neco of Egypt (2 Kings 23:29)", with Neco at Megiddo in Tammuz (25 June to 23 July) on his Diagram 20."""
+held_by = "Rodger C. Young; Edwin R. Thiele"
+citations = [{ source = "thiele-1983", locator = "p. 180, §36; p. 182, Diagram 20 (page images supplied by the user, 2026-10-07)" }, { source = "young-2004", locator = "p. 35" }, { source = "young-2005", locator = "Table 2, p. 246" }]
 
 [[positions]]
 id = "june-july-609"

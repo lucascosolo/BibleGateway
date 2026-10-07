@@ -22,3 +22,9 @@ label = "Eighth year"
 text = """
 2 Kings 24:12 says the king of Babylon took Jehoiachin "in the eighth year of his reign"."""
 citations = [{ source = "livius-abc5" }]
+
+[[views]]
+label = "Both are right: Nisan years in Babylon, Tishri years in Kings"
+text = """
+Thiele resolves the two numbers by the two calendars. Babylon counted regnal years from Nisan in spring; the book of Kings counted Nebuchadnezzar's years from Tishri in autumn. "The last half of the Babylonian Nisan year overlaps the first half of the Hebrew Tishri year. Thus Jerusalem fell to Nebuchadnezzar in his seventh year according to his own reckoning but in his eighth year according to the reckoning in Kings. The overlap was from Tishri in the fall of 598 to Nisan in the spring of 597. Since Jerusalem fell in Adar, the last month of the Babylonian year, this was in the spring of 597.\""""
+citations = [{ source = "thiele-1983", locator = "p. 186 (page images supplied by the user, 2026-10-07)" }]
