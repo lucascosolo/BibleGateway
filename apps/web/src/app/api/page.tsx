@@ -47,7 +47,12 @@ const endpoints = [
   {
     method: "GET",
     path: "/api/timeline/passage?ref=1+Kings+6:1",
-    description: "Timeline events, chronological issues and outside sources that bear on a passage.",
+    description: "Timeline events, chronological issues, outside sources and people that bear on a passage.",
+  },
+  {
+    method: "GET",
+    path: "/api/timeline/persons/hezekiah",
+    description: "One biblical figure: every source outside the Bible that names, fits or contradicts them, with a derived evidence grade.",
   },
   {
     method: "GET",

@@ -126,9 +126,26 @@ const openapi = {
     },
     "/api/timeline/passage": {
       get: {
-        summary: "Find the timeline events, issues and artifacts that bear on a passage",
+        summary: "Find the timeline events, issues, artifacts and people that bear on a passage",
         parameters: [referenceParameter],
-        responses: { "200": { description: "Events the passage describes or helps date, issues it raises, and artifacts linked to it." }, "400": errorResponse },
+        responses: { "200": { description: "Events the passage describes or helps date, issues it raises, artifacts linked to it, and people it names." }, "400": errorResponse },
+      },
+    },
+    "/api/timeline/persons": {
+      get: {
+        summary: "List biblical figures with their evidence grade",
+        description:
+          "Each person's `evidence` grade is derived from their attestations outside the Bible, never typed by hand: corroborates > partially-corroborates > consistent > silent > none. `has_tension` is true when at least one outside source contradicts a biblical detail about them. Every entry carries a review status ('draft' until a human has reviewed it).",
+        responses: { "200": { description: "People, earliest first, with evidence grade, tension flag and status." } },
+      },
+    },
+    "/api/timeline/persons/{id}": {
+      get: {
+        summary: "Read one biblical figure: every outside source that names, fits or contradicts them",
+        description:
+          "Attestations with their relation (corroborates, partially-corroborates, consistent, silent, in-tension) and cited notes, the events and issues the person is linked to, and the verses that name them.",
+        parameters: [{ name: "id", in: "path", required: true, schema: { type: "string", example: "hezekiah" } }],
+        responses: { "200": { description: "The person in full, with citations." }, "404": errorResponse },
       },
     },
   },
