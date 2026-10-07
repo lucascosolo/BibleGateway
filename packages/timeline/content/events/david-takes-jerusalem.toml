@@ -4,11 +4,12 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "David captures the Jebusite stronghold of Zion and makes it the city of David, after reigning over Judah in Hebron for seven years and six months."
+summary = """
+David captures the Jebusite stronghold of Zion and makes it the city of David. Before that he had ruled over Judah from Hebron for seven years and six months."""
 verses = [
-  { ref = "2Sam.5.6-2Sam.5.10", link = "describes", note = "capture of the stronghold of Zion" },
-  { ref = "1Chr.11.4-1Chr.11.9", link = "describes", note = "Chronicles parallel" },
-  { ref = "2Sam.5.5", link = "dates", note = "seven years and six months at Hebron, then thirty-three in Jerusalem" },
+  { ref = "2Sam.5.6-2Sam.5.10", link = "describes", note = "The capture of the stronghold of Zion" },
+  { ref = "1Chr.11.4-1Chr.11.9", link = "describes", note = "The parallel in Chronicles" },
+  { ref = "2Sam.5.5", link = "dates", note = "Seven years and six months at Hebron, then thirty-three in Jerusalem" },
   { ref = "Ps.132.13", link = "alludes", note = "'Yahweh has chosen Zion'" },
   { ref = "Ps.78.70", link = "alludes", note = "God chose David his servant" },
 ]
@@ -20,5 +21,6 @@ tradition = "chronological"
 earliest = -1002
 latest = -1001
 held_by = "Rodger C. Young"
-summary = "Derived by the editor, not stated by Young: his conjectural start of David's reign (1009t?) less the 7.5 Hebron years of 2 Samuel 5:5. Treat as approximate."
+summary = """
+This date is worked out by the editor and is not stated by Young. It takes Young's conjectural start of David's reign (1009t?) and subtracts the 7.5 years at Hebron from 2 Samuel 5:5. Treat it as approximate."""
 citations = [{ source = "young-2005", locator = "Table 2, p. 246" }]

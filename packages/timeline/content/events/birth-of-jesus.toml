@@ -5,15 +5,13 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-Matthew sets Jesus's birth under Herod the king and Luke ties it to a census under Quirinius. \
-Most scholars infer a date between 6 and 4 BCE from Herod's death; the Quirinius census that \
-Josephus dates to 6 CE does not fit that window, and the tension is unresolved."""
+Matthew sets Jesus's birth in the reign of Herod the king. Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death. Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved."""
 verses = [
-  { ref = "Matt.1.18-Matt.2.23", link = "describes", note = "birth at Bethlehem in the days of Herod" },
-  { ref = "Luke.2.1-Luke.2.2", link = "dates", note = "decree of Augustus; Quirinius governor of Syria" },
-  { ref = "Luke.2.3-Luke.2.20", link = "describes", note = "the registration, the birth and the shepherds" },
-  { ref = "Luke.3.23", link = "alludes", note = "about thirty years old at the start of his ministry" },
-  { ref = "Gal.4.4", link = "alludes", note = "born of a woman, born under the law" },
+  { ref = "Matt.1.18-Matt.2.23", link = "describes", note = "The birth at Bethlehem in the days of Herod" },
+  { ref = "Luke.2.1-Luke.2.2", link = "dates", note = "A decree of Augustus, while Quirinius is governor of Syria" },
+  { ref = "Luke.2.3-Luke.2.20", link = "describes", note = "The registration, the birth and the shepherds" },
+  { ref = "Luke.3.23", link = "alludes", note = "Jesus is about thirty years old when his ministry begins" },
+  { ref = "Gal.4.4", link = "alludes", note = "Born of a woman, born under the law" },
 ]
 
 [[positions]]
@@ -24,10 +22,7 @@ earliest = -6
 latest = -4
 held_by = "Emil Schürer"
 summary = """
-Takes Herod's death in 4 BCE (Schürer's chronology, worked back from Archelaus's removal in 6 CE) \
-as the latest point for a birth in Herod's days; Wikipedia reports that most scholars assume a \
-birth between 6 and 4 BCE on this basis. Schürer's own date concerns Herod's death, and the \
-birth range is the inference from it."""
+Schürer dated Herod's death to 4 BCE, working back from Archelaus's removal in 6 CE. That is the latest point for a birth in Herod's days. Wikipedia reports that most scholars assume a birth between 6 and 4 BCE on this basis. Schürer's own date is for Herod's death. The birth range is an inference from it."""
 citations = [
   { source = "wikipedia-herod-the-great" },
   { source = "wikipedia-chronology-of-jesus" },
@@ -43,8 +38,7 @@ citations = [
   [[positions.arguments]]
   stance = "against"
   text = """
-  Luke 2:2 links the birth to a registration under Quirinius, which Josephus dates to the \
-  removal of Archelaus in 6 CE, about a decade later."""
+  Luke 2:2 links the birth to a registration under Quirinius. Josephus dates that to the removal of Archelaus in 6 CE, about ten years later."""
   citations = [{ source = "wikipedia-census-of-quirinius" }, { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" }]
   verses = [{ ref = "Luke.2.2", link = "dates" }]
 
@@ -56,17 +50,14 @@ earliest = -2
 latest = -2
 held_by = "Clement of Alexandria"
 summary = """
-Clement of Alexandria's figure of 2 BCE comes from subtracting thirty years from the start of \
-the ministry in about 29 CE; Eusebius likewise places the birth in the forty-second year of \
-Augustus, 2 BCE."""
+Clement of Alexandria's date of 2 BCE comes from subtracting thirty years from the start of the ministry, in about 29 CE. Eusebius also places the birth in the forty-second year of Augustus, which is 2 BCE. Here traditional means the dating of early church writers."""
 citations = [{ source = "wikipedia-chronology-of-jesus" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-18-1"
 relation = "in-tension"
 note = """
-Josephus has Cyrenius come to Syria to assess Judea after Archelaus's removal, a census he \
-places at 6 CE, after the death of Herod under whom Matthew sets the birth."""
+Josephus says Cyrenius came to Syria to assess Judea after Archelaus's removal. He places that census in 6 CE. That is after the death of Herod, the king under whom Matthew sets the birth."""
 citations = [
   { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
   { source = "wikipedia-census-of-quirinius" },

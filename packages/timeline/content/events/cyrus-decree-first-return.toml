@@ -5,12 +5,12 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-In his first year Cyrus proclaims that Yahweh has charged him to build a house in Jerusalem, and exiles may go up (Ezra 1; 2 Chronicles 36). The return is dated 538 BCE in the usual chronology. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples but names no Jews, and some scholars deny the decree is authentic."""
+In his first year Cyrus announces that Yahweh has told him to build a house in Jerusalem. Exiles may go up (Ezra 1; 2 Chronicles 36). The usual chronology dates the return to 538 BCE. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples, but it names no Jews. Some scholars deny the decree is genuine."""
 verses = [
-  { ref = "Ezra.1.1-Ezra.1.4", link = "describes", note = "Cyrus's proclamation in his first year" },
-  { ref = "2Chr.36.22-2Chr.36.23", link = "describes", note = "The same proclamation closing Chronicles" },
-  { ref = "Isa.44.28", link = "alludes", note = "Cyrus named: Jerusalem will be built, the temple's foundation laid" },
-  { ref = "Isa.45.1", link = "alludes", note = "Cyrus called Yahweh's anointed" },
+  { ref = "Ezra.1.1-Ezra.1.4", link = "describes", note = "Cyrus's announcement in his first year" },
+  { ref = "2Chr.36.22-2Chr.36.23", link = "describes", note = "The same announcement, which closes Chronicles" },
+  { ref = "Isa.44.28", link = "alludes", note = "Cyrus is named. Jerusalem will be built and the temple's foundation laid" },
+  { ref = "Isa.45.1", link = "alludes", note = "Cyrus is called Yahweh's anointed" },
 ]
 
 [[positions]]
@@ -20,7 +20,7 @@ tradition = "traditional"
 earliest = -539
 latest = -538
 summary = """
-The decree follows the conquest of Babylon in 539 BCE and the return under Cyrus is dated 538 BCE."""
+The decree comes after the conquest of Babylon in 539 BCE, and the usual dating puts the return under Cyrus in 538 BCE. Here traditional means the usual dating, which follows the biblical accounts."""
 citations = [
   { source = "wikipedia-edict-of-cyrus" },
   { source = "wikipedia-ezra-nehemiah" },
@@ -34,18 +34,18 @@ earliest = -539
 latest = -520
 held_by = "Lester L. Grabbe"
 summary = """
-Grabbe holds that the alleged decree permitting, even commanding, the Jews to rebuild the temple cannot be considered authentic. Other scholars suggest the return was gradual. The years bound the window from the conquest to Haggai's 520 BCE and are the cataloguer's, not Grabbe's."""
+Grabbe holds that the reported decree, which lets or even orders the Jews to rebuild the temple, cannot be considered genuine. Other scholars suggest the return was gradual. The years run from the conquest to Haggai's 520 BCE. They are the cataloguer's bounds, not Grabbe's."""
 citations = [{ source = "wikipedia-edict-of-cyrus" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  The Cyrus Cylinder focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem; Kuhrt calls its restoration passage a literary device and says its purely Babylonian context provides no proof for Jewish exiles."""
+  The Cyrus Cylinder focuses on Babylon and Mesopotamia. It mentions neither Judah nor Jerusalem. Kuhrt calls its passage on restoring peoples a literary device. She says its purely Babylonian setting gives no proof for Jewish exiles."""
   citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "wikipedia-edict-of-cyrus" }]
 
 [[attestations]]
 artifact = "cyrus-cylinder"
 relation = "partially-corroborates"
 note = """
-Restores deities and returns displaced populations to Mesopotamian sites, the same policy Ezra 1 ascribes to Cyrus, but does not mention Jews, Jerusalem or Judea."""
+The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia. Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea."""
 citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "livius-cyrus-cylinder" }]

@@ -5,13 +5,13 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera, who served Jabin king of Hazor, at the Kishon; Jael kills Sisera, and Judges 5 celebrates the victory in verse. The date is contested between the late 13th century and the 11th."""
+The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera at the Kishon. Sisera served Jabin, king of Hazor. Jael kills Sisera, and Judges 5 celebrates the victory in verse. The date is disputed, from the late 13th century to the 11th."""
 verses = [
-  { ref = "Judg.4.1-Judg.4.24", link = "describes", note = "Deborah, Barak, Sisera, Jael: the prose account" },
-  { ref = "Judg.5.1-Judg.5.31", link = "describes", note = "The Song of Deborah, the poetic account" },
-  { ref = "1Sam.12.9-1Sam.12.11", link = "alludes", note = "Samuel: the Lord sent Jerubbaal, Barak and Jephthah; Sisera is named as the earlier oppressor" },
+  { ref = "Judg.4.1-Judg.4.24", link = "describes", note = "Deborah, Barak, Sisera and Jael: the story in prose" },
+  { ref = "Judg.5.1-Judg.5.31", link = "describes", note = "The Song of Deborah: the story in poetry" },
+  { ref = "1Sam.12.9-1Sam.12.11", link = "alludes", note = "Samuel says the Lord sent Jerubbaal, Barak and Jephthah. Sisera is named as the earlier oppressor" },
   { ref = "Ps.83.9-Ps.83.10", link = "alludes", note = "Do to them as to Sisera and Jabin at the river Kishon" },
-  { ref = "Heb.11.32", link = "alludes", note = "Barak named among those the writer has no time to tell of" },
+  { ref = "Heb.11.32", link = "alludes", note = "Barak is named among those the writer has no time to tell about" },
 ]
 
 [[positions]]
@@ -22,8 +22,7 @@ earliest = -1230
 latest = -1230
 held_by = "Bryant G. Wood"
 summary = """
-Wood has Joshua destroying an earlier Hazor c. 1400 BC and Deborah and Barak administering the \
-coup de grace c. 1230 BC, the date of the Late Bronze Age city's destruction at Hazor."""
+Wood has Joshua destroying an earlier Hazor about 1400 BC. He has Deborah and Barak finishing the job about 1230 BC, the date when the Late Bronze Age city of Hazor was destroyed."""
 citations = [{ source = "wood-2005", locator = "pp. 476–477, 488" }]
 
 [[positions]]
@@ -34,8 +33,7 @@ earliest = -1107
 latest = -1067
 held_by = "Seder Olam Rabbah"
 summary = """
-Seder Olam Rabbah places Deborah's 40 years of judging Israel from 1107 BC until her death in \
-1067 BC (as reported by Wikipedia)."""
+Seder Olam Rabbah, an early Jewish chronology of the Bible, puts Deborah's 40 years of judging Israel from 1107 BC until her death in 1067 BC (as reported by Wikipedia)."""
 citations = [{ source = "wikipedia-deborah" }]
 
 [[positions]]
@@ -46,5 +44,5 @@ earliest = -1285
 latest = -1285
 held_by = "James Ussher"
 summary = """
-Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim stands under 2719d AM, 1285 BC."""
+Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim is under 1285 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraph 351" }]

@@ -5,10 +5,10 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-Antiochus IV outlaws Jewish practice and the Jerusalem temple is turned to Zeus worship (167 BCE); the Maccabees resist and cleanse the temple on 25 Kislev 164 BCE, the origin of Hanukkah. First Maccabees is not in this corpus. Scholars take the King of the North in Daniel as Antiochus IV."""
+Antiochus IV bans Jewish practice, and the Jerusalem temple is turned over to the worship of Zeus (167 BCE). The Maccabees resist. They cleanse the temple on 25 Kislev 164 BCE, which is the origin of Hanukkah. First Maccabees is not in this corpus. Scholars take the King of the North in Daniel to be Antiochus IV."""
 verses = [
-  { ref = "Dan.8.9-Dan.8.14", link = "describes", note = "The little horn: the sanctuary and the continual burnt offering" },
-  { ref = "Dan.11.31", link = "describes", note = "The sanctuary profaned, the continual offering taken away, the abomination set up" },
+  { ref = "Dan.8.9-Dan.8.14", link = "describes", note = "The little horn attacks the sanctuary and the daily burnt offering" },
+  { ref = "Dan.11.31", link = "describes", note = "The sanctuary is profaned, the daily offering is taken away, and the abomination is set up" },
   { ref = "John.10.22", link = "alludes", note = "The Feast of the Dedication at Jerusalem (Hanukkah)" },
 ]
 
@@ -19,8 +19,8 @@ tradition = "chronological"
 earliest = -167
 latest = -164
 held_by = "First Maccabees (author unnamed)"
-summary = """First Maccabees 1:54 (NRSVUE): "Now on the fifteenth day of Chislev, in the one hundred forty-fifth year, they erected a desolating sacrilege on the altar of burnt offering"; 4:52: "Early in the morning on the twenty-fifth day of the ninth month, which is the month of Chislev, in the one hundred forty-eighth year". Years 145 and 148 of the Seleucid count are 167 and 164 BCE; that conversion is the cataloguer's and Wikipedia's, no converting scholar was found. 
-The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with the temple rededicated on 25 Kislev 164 BCE; the abomination is dated to 167 BCE, when Antiochus ended the twice-daily sacrifice."""
+summary = """
+First Maccabees 1:54 (NRSVUE) says: "Now on the fifteenth day of Chislev, in the one hundred forty-fifth year, they erected a desolating sacrilege on the altar of burnt offering". Chapter 4:52 says: "Early in the morning on the twenty-fifth day of the ninth month, which is the month of Chislev, in the one hundred forty-eighth year". Years 145 and 148 of the Seleucid count are 167 and 164 BCE. That conversion is the cataloguer's and Wikipedia's, and no scholar who made it was found. The main phase of the revolt ran 167-164 BCE, with fighting until 141 BCE. The temple was rededicated on 25 Kislev 164 BCE. The abomination is dated to 167 BCE, when Antiochus ended the twice-daily sacrifice."""
 citations = [
   { source = "biblegateway-1-maccabees-nrsvue", locator = "1:54; 4:52" },
   { source = "wikipedia-maccabean-revolt" },

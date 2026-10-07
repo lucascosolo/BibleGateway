@@ -113,3 +113,10 @@ parallel scratch copies validated by the builder and merged the same afternoon. 
   which Sargon inscription carries the Samaria claim; whether the Bubastite Portal names
   Jerusalem; Shalmaneser III's regnal year for Jehu's tribute; the Delphi inscription's find-spot
   and editor; Peter's death year; Josephus on the Baptist and on Festus (not read).
+
+A plain-language pass on 2026-10-07 rewrote every summary, argument and note for a lay reader. A
+checker confirmed that no id, label, tradition, year, holder, citation, locator or verse reference
+changed. The editors added short glosses at a term's first appearance in a file ("Ussher's 1650s
+count, not an archaeological date"; "Seder Olam Rabbah, an early Jewish chronology"; what a
+coregency or an acclamation is). Those glosses are the editors' wording and are not separately
+cited; a reviewer should read them as explanation, not as sourced claims.

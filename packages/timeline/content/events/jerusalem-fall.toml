@@ -5,14 +5,11 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-Babylon breaches Jerusalem's walls after a long siege, burns the temple and deports much of the \
-population. Scholars agree on the sequence and disagree by one year on the date, 587 or 586 \
-BCE, because the biblical data are given in regnal years whose counting conventions are \
-themselves debated."""
+Babylon breaks through Jerusalem's walls after a long siege, burns the temple and deports much of the population. Scholars agree on the order of events. They differ by one year on the date, 587 or 586 BCE. The Bible gives the dates in the years of each king's reign, and the rules for counting those years are themselves debated."""
 verses = [
   { ref = "2Kgs.25.1-2Kgs.25.21", link = "describes" },
   { ref = "Jer.52.12", link = "dates", note = "Nebuchadnezzar's nineteenth year" },
-  { ref = "Jer.52.29", link = "background", note = "a deportation in the eighteenth year" },
+  { ref = "Jer.52.29", link = "background", note = "A deportation in the eighteenth year" },
 ]
 
 [[positions]]
@@ -23,8 +20,7 @@ earliest = -586
 latest = -586
 held_by = "Edwin R. Thiele"
 summary = """
-Dates the destruction to 586 BCE, reckoning from Nebuchadnezzar's nineteenth year. Young records \
-that Thiele "was among those preferring 586"."""
+Thiele dates the destruction to 586 BCE, counting from Nebuchadnezzar's nineteenth year. Young records that Thiele "was among those preferring 586"."""
 citations = [
   { source = "thiele-1983", locator = "p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1" },
   { source = "young-2004", locator = "p. 21" },
@@ -33,8 +29,7 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  2 Kings 25:8 and Jeremiah 52:12 date the burning of the temple to Nebuchadnezzar's nineteenth \
-  year."""
+  2 Kings 25:8 and Jeremiah 52:12 date the burning of the temple to Nebuchadnezzar's nineteenth year."""
   citations = [{ source = "thiele-1983" }]
   verses = [
     { ref = "2Kgs.25.8", link = "dates" },
@@ -49,14 +44,13 @@ earliest = -587
 latest = -587
 held_by = "Rodger C. Young"
 summary = """
-Dates the breach of the walls to the summer month of Tammuz in 587 BCE."""
+Young dates the breach of the walls to the summer month of Tammuz in 587 BCE."""
 citations = [{ source = "young-2004", locator = "pp. 21–38; the conclusion at p. 27" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Reconciling the Judean regnal data (Zedekiah's eleventh year, 2 Kings 25:2) with the \
-  Babylonian reckoning places the breach in Tammuz 587 BCE."""
+  Young lines up the Judean reign data (Zedekiah's eleventh year, 2 Kings 25:2) with the Babylonian way of counting. That places the breach in Tammuz 587 BCE."""
   citations = [{ source = "young-2004" }]
   verses = [{ ref = "2Kgs.25.2", link = "dates" }]
 
@@ -64,15 +58,12 @@ citations = [{ source = "young-2004", locator = "pp. 21–38; the conclusion at 
 artifact = "lachish-letters"
 relation = "consistent"
 note = """
-Written in Judah's last years before the conquest. Letter 4's officer can still see the signals \
-of Lachish but no longer those of Azekah — the situation Jeremiah 34:7 describes, with those two \
-the last fortified cities holding out. The letters do not date the fall itself."""
+The letters were written in Judah's last years before the conquest. In Letter 4, an officer can still see the signals of Lachish but no longer those of Azekah. Jeremiah 34:7 describes the same situation, with those two as the last fortified cities holding out. The letters do not date the fall itself."""
 citations = [{ source = "wikipedia-lachish-letters" }]
 
 [[attestations]]
 artifact = "babylonian-chronicle-abc5"
 relation = "silent"
 note = """
-ABC 5 ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the \
-city; it fixes the earlier capture of 597 BCE instead."""
+This chronicle (ABC 5) ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the city. It gives the earlier capture of 597 BCE instead."""
 citations = [{ source = "livius-abc5" }]

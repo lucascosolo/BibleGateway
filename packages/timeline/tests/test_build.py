@@ -115,7 +115,7 @@ verses = [{ ref = "1Kgs.6.1", link = "dates" }, { ref = "Exod.12.40-Exod.12.41",
 [[positions]]
 id = "early"
 label = "Early"
-tradition = "Conservative"
+tradition = "chronological"
 earliest = -1446
 latest = -1406
 summary = "Early date."
@@ -129,7 +129,7 @@ citations = [{ source = "src-b", locator = "ch. 2" }]
 [[positions]]
 id = "late"
 label = "Late"
-tradition = "Critical"
+tradition = "critical"
 earliest = -1290
 latest = -1200
 summary = "Late date."
@@ -154,7 +154,7 @@ books = ["Dan"]
 [[positions]]
 id = "sixth"
 label = "Sixth century"
-tradition = "Traditional"
+tradition = "chronological"
 earliest = -600
 latest = -530
 summary = "Written in exile."
@@ -163,7 +163,7 @@ citations = [{ source = "src-a" }]
 [[positions]]
 id = "second"
 label = "Second century"
-tradition = "Critical"
+tradition = "critical"
 earliest = -167
 latest = -164
 summary = "Written under Antiochus."
@@ -583,6 +583,41 @@ class BuildId(BuildCase):
         mutate(f, "events/ev-narr.toml", 'summary = "Something happened."', 'summary = "Somethign happened."')
         b = self.build_id(f, "c2")
         self.assertNotEqual(a, b)
+
+
+class TraditionalLens(BuildCase):
+    """Contract: docs/plans/2026-10-07-toledot-people-index.md, 'Critical scholarship leads'."""
+
+    def narr_row(self):
+        return self.query("SELECT earliest_year, latest_year, traditional_earliest, traditional_latest "
+                          "FROM events WHERE event_id = 'ev-narr'")[0]
+
+    def test_unknown_tradition_is_an_error_naming_the_file(self):
+        f = valid_files()
+        mutate(f, "events/ev-narr.toml", 'tradition = "chronological"', 'tradition = "Conservative"')
+        self.assert_fails_naming(f, "ev-narr.toml")
+
+    def test_envelope_excludes_traditional_and_traditional_columns_hold_it(self):
+        f = valid_files()
+        mutate(f, "events/ev-narr.toml", 'tradition = "chronological"', 'tradition = "traditional"')
+        r = self.build(f)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(self.narr_row(), (-1290, -1200, -1446, -1406))
+
+    def test_traditional_only_event_uses_them_and_warns(self):
+        f = valid_files()
+        mutate(f, "events/ev-narr.toml", 'tradition = "chronological"', 'tradition = "traditional"')
+        mutate(f, "events/ev-narr.toml", 'tradition = "critical"', 'tradition = "traditional"')
+        r = self.build(f)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(self.narr_row(), (-1446, -1200, -1446, -1200))
+        self.assertIn("only traditional", r.stdout + r.stderr)
+
+    def test_no_traditional_positions_leaves_columns_null(self):
+        r = self.build(valid_files())
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(self.narr_row(), (-1446, -1200, None, None))
+        self.assertNotIn("only traditional", r.stdout + r.stderr)
 
 
 if __name__ == "__main__":

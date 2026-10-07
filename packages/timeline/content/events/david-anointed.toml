@@ -4,14 +4,15 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "Samuel anoints the youngest son of Jesse in secret during Saul's reign. The Bible gives no year; the only bounds available are those of Saul's reign."
+summary = """
+Samuel secretly anoints Jesse's youngest son during Saul's reign. The Bible gives no year. The only limits available are those of Saul's reign."""
 verses = [
-  { ref = "1Sam.16.1-1Sam.16.13", link = "describes", note = "private anointing at Bethlehem" },
-  { ref = "2Sam.2.1-2Sam.2.4", link = "describes", note = "later anointed king over Judah at Hebron" },
-  { ref = "2Sam.5.1-2Sam.5.5", link = "describes", note = "anointed king over all Israel" },
-  { ref = "1Chr.11.1-1Chr.11.3", link = "describes", note = "Chronicles parallel: anointed at Hebron" },
+  { ref = "1Sam.16.1-1Sam.16.13", link = "describes", note = "A private anointing at Bethlehem" },
+  { ref = "2Sam.2.1-2Sam.2.4", link = "describes", note = "Later anointed king over Judah at Hebron" },
+  { ref = "2Sam.5.1-2Sam.5.5", link = "describes", note = "Anointed king over all Israel" },
+  { ref = "1Chr.11.1-1Chr.11.3", link = "describes", note = "The parallel in Chronicles: anointed at Hebron" },
   { ref = "Ps.89.20", link = "alludes", note = "'I have anointed him with my holy oil'" },
-  { ref = "Acts.13.22", link = "alludes", note = "Paul's sermon: God raised up David as king" },
+  { ref = "Acts.13.22", link = "alludes", note = "In Paul's sermon, God raised up David as king" },
 ]
 
 [[positions]]
@@ -21,5 +22,6 @@ tradition = "chronological"
 earliest = -1051
 latest = -1009
 held_by = "Rodger C. Young"
-summary = "Young gives no date for the anointing. These are the editor's bounds: Saul's conjectural reign in Table 2 (1051t?-1009t?), during which 1 Samuel 16 places the anointing."
+summary = """
+Young gives no date for the anointing. These bounds are the editor's. They are Saul's reign as Young's Table 2 conjectures it (1051t?-1009t?), the period in which 1 Samuel 16 places the anointing."""
 citations = [{ source = "young-2005", locator = "Table 2, p. 246" }]

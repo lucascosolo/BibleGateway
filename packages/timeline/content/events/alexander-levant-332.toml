@@ -5,10 +5,10 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-Alexander besieges and takes Tyre (January to July 332 BCE) and then moves south against Gaza (October 332 BCE). Daniel 8 and 11 are the passages usually brought to bear on the Greek conquest: Wikipedia's Daniel 8 article gives Collins (1984) as "Scholars agree that the goat's first horn, which is broken, is Alexander the Great, and the four horns ... the four generals who divided his empire", and its Daniel 11 article says verses 2-4 cover Alexander's conquests and the breakup of his empire (no scholar cited there). No Jerusalem episode was confirmed in sources read."""
+Alexander besieges and takes Tyre from January to July 332 BCE. He then moves south against Gaza in October 332 BCE. Scholars usually read Daniel 8 and 11 as describing the Greek conquest. Wikipedia's Daniel 8 article gives Collins (1984): "Scholars agree that the goat's first horn, which is broken, is Alexander the Great, and the four horns ... the four generals who divided his empire". Its Daniel 11 article says verses 2-4 cover Alexander's conquests and the breakup of his empire, with no scholar cited. No visit to Jerusalem was confirmed in the sources read."""
 verses = [
-  { ref = "Dan.8.5-Dan.8.8", link = "alludes", note = "The goat from the west with one notable horn, broken, replaced by four; Collins (1984) via Wikipedia identifies the horn as Alexander" },
-  { ref = "Dan.11.3", link = "alludes", note = "A mighty king who rules with great dominion; Daniel 11:2-4 read as Alexander and the breakup of his empire (Wikipedia, no scholar cited)" },
+  { ref = "Dan.8.5-Dan.8.8", link = "alludes", note = "A goat from the west has one notable horn. It breaks and is replaced by four. Collins (1984), quoted by Wikipedia, identifies the horn as Alexander" },
+  { ref = "Dan.11.3", link = "alludes", note = "A mighty king rules with great power. Daniel 11:2-4 is read as Alexander and the breakup of his empire (Wikipedia, no scholar cited)" },
 ]
 
 [[positions]]
@@ -18,5 +18,5 @@ tradition = "chronological"
 earliest = -332
 latest = -332
 summary = """
-The siege of Tyre lasted January to July 332 BCE and Alexander then moved south to Gaza, besieged in October 332 BCE."""
+The siege of Tyre lasted from January to July 332 BCE. Alexander then moved south to Gaza, which was besieged in October 332 BCE."""
 citations = [{ source = "wikipedia-siege-of-tyre-332", locator = "cites Arrian, Anabasis 2.24.4 and Diodorus 17.46.4 for casualties only; the months are not attributed there" }, { source = "wikipedia-alexander-the-great" }, { source = "wikipedia-daniel-8" }, { source = "wikipedia-daniel-11" }]

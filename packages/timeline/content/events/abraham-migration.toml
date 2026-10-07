@@ -5,17 +5,17 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Abraham's journey from Haran to Canaan, with a first stop at Shechem, a detour to Egypt in famine, and return. Whether there was a historical patriarchal age at all is a separate question (see the linked issue); the positions here record the dates offered by those who accept the setting."""
+Abraham travels from Haran to Canaan. He stops first at Shechem, goes down to Egypt during a famine, then returns. Whether there was a historical age of the patriarchs at all is a separate question (see the linked issue). The positions here give the dates offered by people who accept that setting."""
 verses = [
   { ref = "Gen.11.31-Gen.11.32", link = "describes", note = "Terah's family leaves Ur for Haran" },
-  { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "The call and the journey to Shechem, Bethel and the Negeb" },
+  { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "The call, and the journey to Shechem, Bethel and the Negeb" },
   { ref = "Gen.12.10-Gen.12.20", link = "describes", note = "Famine and the stay in Egypt" },
   { ref = "Gen.13.1-Gen.13.4", link = "describes", note = "Return from Egypt to the Negeb and Bethel" },
-  { ref = "Josh.24.2-Josh.24.3", link = "alludes", note = "Joshua's review: God took Abraham from beyond the River and led him through Canaan" },
-  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "Prayer: God chose Abram and brought him out of Ur of the Chaldeans" },
-  { ref = "Acts.7.2-Acts.7.5", link = "alludes", note = "Stephen: the God of glory appeared to Abraham in Mesopotamia and he moved to Haran, then Canaan" },
+  { ref = "Josh.24.2-Josh.24.3", link = "alludes", note = "Joshua recalls that God took Abraham from beyond the River and led him through Canaan" },
+  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "A prayer recalls that God chose Abram and brought him out of Ur of the Chaldeans" },
+  { ref = "Acts.7.2-Acts.7.5", link = "alludes", note = "Stephen says the God of glory appeared to Abraham in Mesopotamia. Abraham then moved to Haran, then Canaan" },
   { ref = "Heb.11.8-Heb.11.10", link = "alludes", note = "By faith Abraham obeyed and set out, not knowing where he was going" },
-  { ref = "Ps.105.9-Ps.105.15", link = "alludes", note = "The covenant with Abraham and God's protection of the wandering patriarchs" },
+  { ref = "Ps.105.9-Ps.105.15", link = "alludes", note = "The covenant with Abraham, and God's protection of the wandering patriarchs" },
 ]
 
 [[positions]]
@@ -26,7 +26,7 @@ earliest = -1922
 latest = -1922
 held_by = "James Ussher"
 summary = """
-Ussher fixed the span from creation to Abraham's migration as 2082 years, from 4004 to 1922 BC."""
+Ussher counted 2082 years from creation to Abraham's move, from 4004 to 1922 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "wikipedia-ussher-chronology" }]
 
 [[positions]]
@@ -37,9 +37,7 @@ earliest = -2000
 latest = -1001
 held_by = "William F. Albright and G. Ernest Wright"
 summary = """
-Albright and Wright believed the patriarchs were real individuals or believable composites who \
-lived in the patriarchal age, the 2nd millennium BCE. The range is the whole millennium, not a \
-narrower claim."""
+Albright and Wright believed the patriarchs were real people, or believable composites of real people, who lived in the 2nd millennium BCE. The range is the whole thousand years, not a narrower claim."""
 citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
 
 [[positions]]
@@ -50,5 +48,5 @@ earliest = -1922
 latest = -1922
 held_by = "James Ussher"
 summary = """
-Ussher heads the call of Abraham out of Ur 2083a AM, 1922 BC; after Terah died at Haran he is called again in 2083 AM, 1921 BC."""
+Ussher puts the call of Abraham out of Ur in 1922 BC. After Terah died at Haran, he places a second call in 1921 BC. Ussher's Annals use the same Bible-based count."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 70-71" }]

@@ -5,18 +5,18 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Joseph, sold by his brothers to traders, rises from slavery and prison to become Pharaoh's vizier and saves Egypt and his family from famine. The story is widely read as a late wisdom novella (see the patriarchs issue); the one dating position here bounds only the arrival of his family."""
+Joseph is sold by his brothers to traders. He rises from slavery and prison to become Pharaoh's vizier, and he saves Egypt and his own family from famine. Many scholars read the story as a late wisdom novella (see the patriarchs issue). The one dating position here sets limits only on when his family arrived."""
 verses = [
   { ref = "Gen.37.1-Gen.37.36", link = "describes", note = "Sold into Egypt" },
   { ref = "Gen.39.1-Gen.39.23", link = "describes", note = "Potiphar's house and prison" },
-  { ref = "Gen.40.1-Gen.41.57", link = "describes", note = "Dreams interpreted; elevation under Pharaoh; the years of plenty and famine" },
-  { ref = "Gen.42.1-Gen.45.28", link = "describes", note = "The brothers come for grain; Joseph reveals himself" },
-  { ref = "Gen.50.15-Gen.50.26", link = "describes", note = "Joseph forgives his brothers; his death at 110 and his oath about his bones" },
+  { ref = "Gen.40.1-Gen.41.57", link = "describes", note = "Dreams interpreted, Joseph raised up under Pharaoh, and the years of plenty and famine" },
+  { ref = "Gen.42.1-Gen.45.28", link = "describes", note = "The brothers come for grain, and Joseph reveals himself" },
+  { ref = "Gen.50.15-Gen.50.26", link = "describes", note = "Joseph forgives his brothers. He dies at 110 after making them swear about his bones" },
   { ref = "Exod.13.19", link = "alludes", note = "Moses takes Joseph's bones, as Joseph had made Israel swear" },
   { ref = "Josh.24.32", link = "alludes", note = "Joseph's bones buried at Shechem" },
-  { ref = "Ps.105.16-Ps.105.22", link = "alludes", note = "God sent a man ahead, Joseph sold as a slave, made lord of Pharaoh's house" },
-  { ref = "Acts.7.9-Acts.7.16", link = "alludes", note = "Stephen: the patriarchs, jealous, sold Joseph, but God was with him" },
-  { ref = "Heb.11.22", link = "alludes", note = "By faith Joseph spoke of the exodus and gave instructions about his bones" },
+  { ref = "Ps.105.16-Ps.105.22", link = "alludes", note = "God sent a man ahead. Joseph was sold as a slave and made lord of Pharaoh's house" },
+  { ref = "Acts.7.9-Acts.7.16", link = "alludes", note = "Stephen says the jealous patriarchs sold Joseph, but God was with him" },
+  { ref = "Heb.11.22", link = "alludes", note = "By faith Joseph spoke of the exodus and gave orders about his bones" },
 ]
 
 [[positions]]
@@ -27,9 +27,7 @@ earliest = -1860
 latest = -1840
 held_by = "Bryant G. Wood"
 summary = """
-Wood identifies a mid-19th-century BC Asiatic settlement at Pi-Ramesse with Jacob's family \
-shortly after their arrival in Egypt. Joseph's rise precedes that arrival (Genesis 45-46), so \
-this is a bracket for the end of his rise, not a date for his life."""
+Wood identifies an Asiatic settlement at Pi-Ramesse, from the mid-19th century BC, with Jacob's family soon after they reached Egypt. Joseph's rise came before that arrival (Genesis 45-46). So this is a limit for the end of his rise, not a date for his life."""
 citations = [{ source = "wood-2005", locator = "p. 488" }]
 
 [[positions]]
@@ -40,5 +38,5 @@ earliest = -1715
 latest = -1715
 held_by = "James Ussher"
 summary = """
-Ussher has Joseph, 30 years old, interpret Pharaoh's dreams and be made governor under 2289b AM, 1715 BC; the seven years of famine begin under 2296c AM, 1708 BC."""
+Ussher has Joseph, aged 30, explain Pharaoh's dreams and be made governor in 1715 BC. The seven years of famine begin in 1708 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 131-133" }]

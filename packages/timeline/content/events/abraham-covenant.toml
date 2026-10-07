@@ -5,19 +5,19 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-God's covenant with Abram: the promise of land and offspring sealed in the ritual of Genesis 15, renewed with circumcision as its sign in Genesis 17. Historicity is a separate question (see the linked issue)."""
+God promises Abram land and descendants. The promise is sealed in a ritual in Genesis 15. It is renewed in Genesis 17, where circumcision becomes its sign. Whether Abraham was a historical figure is a separate question (see the linked issue)."""
 verses = [
-  { ref = "Gen.12.1-Gen.12.3", link = "describes", note = "The initial promise: a great nation and blessing for all families" },
-  { ref = "Gen.15.1-Gen.15.21", link = "describes", note = "The covenant between the pieces; the land promised from the river of Egypt to the Euphrates" },
-  { ref = "Gen.17.1-Gen.17.27", link = "describes", note = "Covenant renewed; name changed to Abraham; circumcision as the sign" },
-  { ref = "Gen.22.15-Gen.22.18", link = "describes", note = "The promise reaffirmed after the binding of Isaac" },
+  { ref = "Gen.12.1-Gen.12.3", link = "describes", note = "The first promise: a great nation, and blessing for all families" },
+  { ref = "Gen.15.1-Gen.15.21", link = "describes", note = "The covenant between the pieces. The land is promised from the river of Egypt to the Euphrates" },
+  { ref = "Gen.17.1-Gen.17.27", link = "describes", note = "The covenant is renewed. Abram becomes Abraham. Circumcision is the sign" },
+  { ref = "Gen.22.15-Gen.22.18", link = "describes", note = "The promise is repeated after Abraham is stopped from sacrificing Isaac" },
   { ref = "Exod.2.24", link = "alludes", note = "God remembered his covenant with Abraham, Isaac and Jacob" },
   { ref = "Ps.105.8-Ps.105.11", link = "alludes", note = "He remembers his covenant forever, the covenant made with Abraham" },
   { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "God made a covenant with Abraham to give his descendants the land" },
   { ref = "Acts.7.8", link = "alludes", note = "Stephen: God gave him the covenant of circumcision" },
   { ref = "Rom.4.1-Rom.4.13", link = "alludes", note = "Paul: Abraham was counted righteous by faith, before circumcision" },
   { ref = "Gal.3.15-Gal.3.18", link = "alludes", note = "Paul: the promise to Abraham and his offspring precedes the law" },
-  { ref = "Heb.11.17-Heb.11.19", link = "alludes", note = "Abraham, having received the promises, offered Isaac" },
+  { ref = "Heb.11.17-Heb.11.19", link = "alludes", note = "Abraham had received the promises, yet offered Isaac" },
 ]
 
 [[positions]]
@@ -28,8 +28,7 @@ earliest = -2000
 latest = -1001
 held_by = "William F. Albright and G. Ernest Wright"
 summary = """
-Albright and Wright placed the patriarchs in the 2nd millennium BCE. The sources read give no \
-narrower date for the covenant itself, so the range is the whole millennium."""
+Albright and Wright placed the patriarchs in the 2nd millennium BCE. The sources read give no narrower date for the covenant itself, so the range is the whole thousand years."""
 citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
 
 [[positions]]
@@ -40,5 +39,5 @@ earliest = -1912
 latest = -1912
 held_by = "James Ussher"
 summary = """
-Ussher places the Genesis 15 covenant under 2092 AM, 1912 BC, and the Genesis 17 covenant of circumcision (Abram aged 99) under 2107c AM, 1897 BC."""
+Ussher dates the covenant of Genesis 15 to 1912 BC. He dates the Genesis 17 covenant of circumcision, when Abram was 99, to 1897 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 77, 81" }]

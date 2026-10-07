@@ -4,9 +4,10 @@ axis = "narrative"
 category = "political"
 confidence = "firm"
 status = "draft"
-summary = "Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention it."
+summary = """
+Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention it."""
 verses = [
-  { ref = "1Kgs.16.29-1Kgs.16.34", link = "background", note = "Ahab's accession; Qarqar is not mentioned in the Bible" },
+  { ref = "1Kgs.16.29-1Kgs.16.34", link = "background", note = "Ahab becomes king. The Bible does not mention Qarqar" },
   { ref = "1Kgs.22.1-1Kgs.22.4", link = "background", note = "three years without war between Syria and Israel" },
 ]
 
@@ -17,7 +18,8 @@ tradition = "chronological"
 earliest = -853
 latest = -853
 held_by = "Edwin R. Thiele"
-summary = "Thiele found his Hebrew-text chronology required Qarqar in 853."
+summary = """
+Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853."""
 citations = [{ source = "wikipedia-mysterious-numbers", locator = "Ahab ends 853 in the chronology table; second-hand" }, { source = "young-2004-samaria", locator = "p. 593" }, { source = "young-2005", locator = "p. 232" }]
 
 [[positions]]
@@ -26,11 +28,13 @@ label = "854 BCE (alternative eponym list)"
 tradition = "archaeological"
 earliest = -854
 latest = -854
-summary = "Wikipedia: 853, or 854 depending on which version of the Assyrian Eponym List is used."
+summary = """
+Wikipedia says the date is 853, or 854, depending on which version of the Assyrian Eponym List is used. That list names one official for each year."""
 citations = [{ source = "wikipedia-battle-of-qarqar" }]
 
 [[attestations]]
 artifact = "kurkh-monolith"
 relation = "corroborates"
-note = "Lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite."
+note = """
+The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite."""
 citations = [{ source = "wikipedia-kurkh-monoliths" }, { source = "wikipedia-battle-of-qarqar" }]

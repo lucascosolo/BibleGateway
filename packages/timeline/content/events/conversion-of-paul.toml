@@ -5,12 +5,11 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-Paul the persecutor encounters the risen Jesus near Damascus and becomes an apostle. Acts tells \
-it three times; Paul alludes to it in Galatians and 1 Corinthians. Scholars date it to 31–36 CE."""
+Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times. Paul refers to it in Galatians and 1 Corinthians. Scholars date it to 31-36 CE."""
 verses = [
-  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Luke's narrative on the road to Damascus" },
-  { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "Paul's account to the crowd in Jerusalem" },
-  { ref = "Acts.26.9-Acts.26.18", link = "describes", note = "Paul's account before Agrippa" },
+  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Luke's story of the road to Damascus" },
+  { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "Paul tells the crowd in Jerusalem" },
+  { ref = "Acts.26.9-Acts.26.18", link = "describes", note = "Paul tells the story before Agrippa" },
   { ref = "Gal.1.13-Gal.1.17", link = "alludes", note = "God was pleased to reveal his Son to me" },
   { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "last of all he appeared also to me" },
   { ref = "1Cor.9.1", link = "alludes", note = "have I not seen Jesus our Lord" },
@@ -25,8 +24,7 @@ earliest = 31
 latest = 36
 held_by = "Bromley (1979), Barnett (2002), Niswonger (1992)"
 summary = """
-Wikipedia reports that Paul's conversion has been dated to 31–36 CE by Bromley (1979), Barnett \
-(2002) and Niswonger (1992); the page gives surnames only and does not name the works."""
+Wikipedia reports that Bromley (1979), Barnett (2002) and Niswonger (1992) have dated Paul's conversion to 31-36 CE. The page gives surnames only and does not name their works."""
 citations = [{ source = "wikipedia-paul-the-apostle" }]
 
 [[positions]]
@@ -36,9 +34,7 @@ tradition = "critical"
 earliest = 34
 latest = 40
 summary = """
-Wikipedia says Acts suggests the conversion occurred four to seven years after the crucifixion; \
-the years here are that interval applied to a 30 CE or 33 CE crucifixion (34–40), my computation, \
-not a cited scholar's."""
+Wikipedia says Acts suggests the conversion came four to seven years after the crucifixion. The years here (34-40) are that gap added to a crucifixion in 30 CE or 33 CE. That sum is the cataloguer's own, not a cited scholar's."""
 citations = [{ source = "wikipedia-conversion-of-paul" }]
 
 [[positions]]
@@ -48,8 +44,5 @@ tradition = "chronological"
 earliest = 33
 latest = 36
 summary = """
-Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted \
-scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus \
-before this date range." No individual holder is named on that page; Riesner, Jewett and \
-Luedemann were not found on the pages read."""
+Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page. Riesner, Jewett and Luedemann were not found on the pages read."""
 citations = [{ source = "wikipedia-chronology-of-jesus", locator = "section Conversion of Paul" }]

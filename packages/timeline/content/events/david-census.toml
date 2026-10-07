@@ -4,11 +4,12 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "David numbers the people, a plague follows, and David buys the threshing-floor where he builds an altar, later associated with the temple site. The Bible gives no regnal year."
+summary = """
+David counts the people and a plague follows. David then buys the threshing-floor and builds an altar there. The place is later linked with the temple site. The Bible gives no year of his reign."""
 verses = [
-  { ref = "2Sam.24.1-2Sam.24.25", link = "describes", note = "census, plague, purchase of the threshing-floor" },
-  { ref = "1Chr.21.1-1Chr.22.1", link = "describes", note = "Chronicles parallel; 22:1 names it the site of the house" },
-  { ref = "2Chr.3.1", link = "alludes", note = "Solomon builds on Mount Moriah where Yahweh appeared to David at the threshing-floor" },
+  { ref = "2Sam.24.1-2Sam.24.25", link = "describes", note = "The census, the plague and the purchase of the threshing-floor" },
+  { ref = "1Chr.21.1-1Chr.22.1", link = "describes", note = "The parallel in Chronicles. Chapter 22:1 names it the site of the house" },
+  { ref = "2Chr.3.1", link = "alludes", note = "Solomon builds on Mount Moriah, where Yahweh appeared to David at the threshing-floor" },
 ]
 
 [[positions]]
@@ -18,5 +19,6 @@ tradition = "chronological"
 earliest = -1009
 latest = -969
 held_by = "Rodger C. Young"
-summary = "Bounds only: David's conjectural forty years in Table 2 (1009t?-969t?). No source consulted dates the census within them."
+summary = """
+These bounds are only the limits of David's reign. The reign is Young's conjecture of forty years in Table 2 (1009t?-969t?). No source consulted dates the census within it."""
 citations = [{ source = "young-2005", locator = "Table 2, p. 246" }]

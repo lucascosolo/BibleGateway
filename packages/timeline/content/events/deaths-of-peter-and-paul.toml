@@ -5,14 +5,12 @@ category = "political"
 confidence = "speculative"
 status = "draft"
 summary = """
-Rests on tradition only: 1 Clement says both suffered martyrdom, and Eusebius reports that Paul \
-was beheaded at Rome and Peter crucified there under Nero. Wikipedia places Paul's death c. 64–65 \
-CE; the New Testament does not narrate either death."""
+This rests on tradition only. 1 Clement says both men were martyred. Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE. The New Testament does not tell of either death."""
 verses = [
-  { ref = "John.21.18-John.21.19", link = "alludes", note = "Peter will stretch out his hands, signifying how he would die" },
-  { ref = "2Tim.4.6-2Tim.4.8", link = "alludes", note = "Paul expects his departure" },
-  { ref = "2Pet.1.14", link = "alludes", note = "Peter knows his tent will soon be put off" },
-  { ref = "Acts.28.30-Acts.28.31", link = "background", note = "Paul at Rome awaiting trial" },
+  { ref = "John.21.18-John.21.19", link = "alludes", note = "Peter will stretch out his hands, a sign of how he would die" },
+  { ref = "2Tim.4.6-2Tim.4.8", link = "alludes", note = "Paul expects to die soon" },
+  { ref = "2Pet.1.14", link = "alludes", note = "Peter knows his body, his tent, will soon be put off" },
+  { ref = "Acts.28.30-Acts.28.31", link = "background", note = "Paul at Rome, waiting for his trial" },
 ]
 
 [[positions]]
@@ -22,8 +20,7 @@ tradition = "traditional"
 earliest = 64
 latest = 65
 summary = """
-Wikipedia dates Paul's death to c. 64–65 CE in Rome under Nero, citing 1 Clement 5 and \
-Eusebius. Eusebius places Peter's crucifixion under Nero as well; neither source gives a year."""
+Wikipedia dates Paul's death to about 64-65 CE, in Rome under Nero, citing 1 Clement 5 and Eusebius. Eusebius places Peter's crucifixion under Nero as well. Neither source gives a year. Traditional here means the early church accounts."""
 citations = [
   { source = "wikipedia-paul-the-apostle" },
   { source = "newadvent-eusebius-he-2", locator = "2.25.5" },
@@ -36,11 +33,7 @@ tradition = "traditional"
 earliest = 67
 latest = 68
 summary = """
-Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero", \
-and that Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. \
-Jerome gives no calendar year. Nero's reign began on 13 October 54 and ended with his death on \
-9 June 68, so his fourteenth regnal year runs from October 67 to June 68; Eusebius's Chronicle \
-was not read."""
+Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero". He says Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year. Nero's reign began on 13 October 54 and ended with his death on 9 June 68. So his fourteenth year runs from October 67 to June 68. Eusebius's Chronicle was not read."""
 citations = [
   { source = "newadvent-jerome-de-viris", locator = "ch. 1 (Peter); ch. 5 (Paul)" },
   { source = "wikipedia-nero", locator = "lead and reign sections: accession 13 October 54, death 9 June 68" },
@@ -50,12 +43,12 @@ citations = [
 artifact = "one-clement-5"
 relation = "consistent"
 note = """
-Says both men suffered martyrdom, Paul "under the prefects", without place or date."""
+1 Clement says both men were martyred, Paul "under the prefects". It gives no place or date."""
 citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]
 
 [[attestations]]
 artifact = "eusebius-he-2-25"
 relation = "consistent"
 note = """
-Late tradition: Paul beheaded at Rome, Peter crucified under Nero."""
+This is a late tradition. Paul was beheaded at Rome and Peter was crucified under Nero."""
 citations = [{ source = "newadvent-eusebius-he-2", locator = "2.25.5–8" }]

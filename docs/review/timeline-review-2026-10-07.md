@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `9565db429f23883f`, draft entries only. Check each claim against its cited source; when an
+Build `4084ffd3c4f08b16`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -9,7 +9,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Arch of Titus** — `artifacts/arch-of-titus.toml` (draft)
   - Kind: relief, Latin
   - Made: date not established
-  - Summary: A triumphal arch on the Via Sacra in Rome, southeast of the Forum, built c. 81 CE by Domitian after Titus's death. One panel shows the spoils taken from the Temple in Jerusalem, the golden menorah foremost; the other shows Titus as triumphator. The inscription dedicates the arch to the deified Titus Vespasian Augustus, son of the deified Vespasian.
+  - Summary: A triumphal arch on the Via Sacra in Rome, southeast of the Forum. Domitian built it c. 81 CE, after Titus's death. One panel shows the spoils taken from the Temple in Jerusalem, with the golden menorah in front. The other shows Titus as the victor in his triumph. The inscription dedicates the arch to the deified Titus Vespasian Augustus, son of the deified Vespasian.
   - Source: *Arch of Titus*, Wikipedia <https://en.wikipedia.org/wiki/Arch_of_Titus>
 
 - [ ] **Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle")** — `artifacts/babylonian-chronicle-abc5.toml` (draft)
@@ -17,7 +17,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: date not established
   - Held by: British Museum, BM 21946
   - Discovered: 1896, Purchased by the British Museum
-  - Summary: A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the 11th year of Nebuchadnezzar II. For Nebuchadnezzar's seventh year it records that "on the second day of the month Addaru he seized the city and captured the king" — Jerusalem and Jehoiachin — which falls in February/March 597 BCE. The tablet's own date of writing is not recorded here; it is the events it records that are dated.
+  - Summary: A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the 11th year of Nebuchadnezzar II. For Nebuchadnezzar's seventh year it records that "on the second day of the month Addaru he seized the city and captured the king". That means Jerusalem and Jehoiachin, in February/March 597 BCE. The date the tablet itself was written is not recorded here. It is the events it records that are dated.
   - Source: *Assyrian and Babylonian Chronicles*, A. Kirk Grayson, 1975, Chronicle 5
   - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - Verse (background): 2Kgs 24:10 – 2Kgs 24:12
@@ -25,7 +25,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Bubastite Portal (Shoshenq I's Karnak campaign list)** — `artifacts/bubastite-portal.toml` (draft)
   - Kind: inscription, Egyptian (hieroglyphic)
   - Made: date not established
-  - Summary: At Karnak, a list of cities in the region comprising Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel conquered by Shoshenq I, conventionally identified with the Shishak of 1 Kings 14:25. Wikipedia's Shoshenq I article says the list "does not include Jerusalem" and lists proposed explanations (the mention was erased, Rehoboam's tribute spared the city, or Shoshenq claimed a conquest he did not carry out); Finkelstein is cited as treating the looting narrative as a theological construct. No verdict is taken here.
+  - Summary: At Karnak, a list of cities conquered by Shoshenq I. They lie in the region of Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel. He is conventionally identified with the Shishak of 1 Kings 14:25. Wikipedia's Shoshenq I article says the list "does not include Jerusalem". It lists proposed explanations: the mention was erased, Rehoboam's tribute spared the city, or Shoshenq claimed a conquest he did not carry out. Finkelstein is cited as treating the looting story as a theological construct. No verdict is taken here.
   - Source: *Shoshenq I*, Wikipedia <https://en.wikipedia.org/wiki/Shoshenq_I>
   - Source: *Rehoboam*, Wikipedia <https://en.wikipedia.org/wiki/Rehoboam>
   - Verse (background): 1Kgs 14:25 – 1Kgs 14:26
@@ -35,19 +35,19 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: date not established
   - Held by: Israel Museum, Jerusalem
   - Discovered: 1990, Jerusalem, Peace Forest / North Talpiot
-  - Summary: An ornate limestone bone box found in December 1990 in a burial cave in south Jerusalem, inscribed "Yehosef bar Qayafa" ("Joseph son of Caiaphas") on one side and "Yehosef bar Qafa" on another. Many identify it with the high priest Joseph Caiaphas; others point to the spelling, the absence of a priestly title and the plainness of the tomb.
+  - Summary: An ornate limestone bone box found in December 1990 in a burial cave in south Jerusalem. One side is inscribed "Yehosef bar Qayafa" ("Joseph son of Caiaphas"). Another side reads "Yehosef bar Qafa". Many identify it with the high priest Joseph Caiaphas. Others point to the spelling, the lack of a priestly title and the plain tomb.
   - Source: *Caiaphas ossuary*, Wikipedia <https://en.wikipedia.org/wiki/Caiaphas_ossuary>
 
 - [ ] **Eusebius, Church History 2.25** — `artifacts/eusebius-he-2-25.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Eusebius records "that Paul was beheaded in Rome itself, and that Peter likewise was crucified under Nero", citing Dionysius of Corinth (they "suffered martyrdom at the same time") and Gaius's reference to their trophies at the Vatican and the Ostian way.
+  - Summary: Eusebius records "that Paul was beheaded in Rome itself, and that Peter likewise was crucified under Nero". He cites Dionysius of Corinth, who says they "suffered martyrdom at the same time". He also cites Gaius, who mentions their trophies at the Vatican and on the Ostian way.
   - Source: *Eusebius, Church History, book 2 (New Advent)*, Eusebius of Caesarea, 2.25.5–8 <https://www.newadvent.org/fathers/250102.htm>
 
 - [ ] **Eusebius, Church History 3.18 and 5.8 (John on Patmos, Irenaeus on the Apocalypse)** — `artifacts/eusebius-he-3-18.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Eusebius says John was condemned to dwell on Patmos in Domitian's persecution (3.18.1) and quotes Irenaeus that the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian" (3.18.3; also 5.8.6).
+  - Summary: Eusebius says John was condemned to live on Patmos during Domitian's persecution (3.18.1). He quotes Irenaeus that the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian" (3.18.3; also 5.8.6).
   - Source: *Eusebius, Church History, book 3 (New Advent)*, Eusebius of Caesarea, 3.18.1, 3.18.3 <https://www.newadvent.org/fathers/250103.htm>
   - Source: *Eusebius, Church History, book 5 (New Advent)*, Eusebius of Caesarea, 5.8.6 <https://www.newadvent.org/fathers/250105.htm>
   - Verse (background): Rev 1:9 (John on Patmos)
@@ -55,7 +55,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Delphi inscription of Claudius naming Gallio** — `artifacts/gallio-inscription.toml` (draft)
   - Kind: inscription, Greek
   - Made: date not established
-  - Summary: An inscription from Delphi in which the emperor Claudius refers to Gallio as "my friend and proconsul". It mentions Claudius's twenty-sixth acclamation as imperator, which corresponds to 52 CE, and so fixes Gallio's proconsulship of Achaea (Acts 18:12) at about 51–52 CE. Wikipedia gives the find-spot as the temple of Apollo at Delphi, the text as nine fragments of a letter from Claudius, the standard publication as Fouilles de Delphes III 4:286 and SIG II 801d, and the museum as the Delphi Archaeological Museum; the date of discovery (early 20th century) is as reported there. The editor's name was not read.
+  - Summary: An inscription from Delphi in which the emperor Claudius calls Gallio "my friend and proconsul". It mentions Claudius's twenty-sixth acclamation as imperator, which matches 52 CE. That fixes Gallio's term as proconsul of Achaea (Acts 18:12) at about 51–52 CE. Wikipedia gives the find-spot as the temple of Apollo at Delphi. The text is nine fragments of a letter from Claudius. The standard publication is Fouilles de Delphes III 4:286 and SIG II 801d. The museum is the Delphi Archaeological Museum. The date of discovery (early 20th century) is as reported there. The editor's name was not read.
   - Source: *Gallio inscription*, Wikipedia, 2026 <https://en.wikipedia.org/wiki/Gallio_inscription>
   - Source: *Lucius Junius Gallio Annaeanus*, Wikipedia <https://en.wikipedia.org/wiki/Lucius_Junius_Gallio_Annaeanus>
   - Verse (dates): Acts 18:12 (Gallio proconsul of Achaia)
@@ -64,19 +64,19 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Kind: seal, Hebrew (paleo-Hebrew script)
   - Made: date not established
   - Discovered: 2009, Ophel, Jerusalem (Eilat Mazar's excavation)
-  - Summary: A clay seal impression found in Eilat Mazar's excavation of the Ophel in Jerusalem, reading "Belonging to Hezekiah [son of] Ahaz, king of Judah". Found in 2009 and deciphered in 2015. Where it is held is not recorded here.
+  - Summary: A clay seal impression found in Eilat Mazar's excavation of the Ophel in Jerusalem. It reads "Belonging to Hezekiah [son of] Ahaz, king of Judah". It was found in 2009 and deciphered in 2015. Where it is held is not recorded here.
   - Source: *King Hezekiah in the Bible: Royal Seal of Hezekiah Comes to Light*, Biblical Archaeology Society <https://www.biblicalarchaeology.org/daily/news/king-hezekiah-in-the-bible-royal-seal-of-hezekiah-comes-to-light/>
 
 - [ ] **Irenaeus, Against Heresies 5.30.3 (date of the Apocalypse)** — `artifacts/irenaeus-against-heresies-5-30.toml` (draft)
   - Kind: literary-text, Greek (surviving in Latin)
   - Made: date not established
-  - Summary: Irenaeus, on the number of the beast, says of the Apocalypse: "For that was seen no very long time since, but almost in our day, towards the end of Domitian's reign." Roberts and Rambaut translation, read directly on New Advent.
+  - Summary: Irenaeus is writing about the number of the beast. He says of the Apocalypse: "For that was seen no very long time since, but almost in our day, towards the end of Domitian's reign." This is the Roberts and Rambaut translation, read directly on New Advent.
   - Source: *Against Heresies, book 5, in Ante-Nicene Fathers vol. 1 (New Advent)*, Irenaeus of Lyons, trans. Alexander Roberts and William Rambaut, 1885, 5.30.3 <https://www.newadvent.org/fathers/0103530.htm>
 
 - [ ] **Josephus, Antiquities 14.61 (Pompey's siege of the temple)** — `artifacts/josephus-antiquities-14-61.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: A fragment of Josephus's account of Pompey's siege of the Temple Mount: the defenders' side had great towers and a ditch, a deep valley and precipices, and the bridge on which Pompey had gotten in was broken down (Whiston's translation). Only section 61 was read.
+  - Summary: A fragment of Josephus's account of Pompey's siege of the Temple Mount. The defenders had great towers and a ditch, a deep valley and steep drops. The bridge Pompey had used to get in was broken down (Whiston's translation). Only section 61 was read.
   - Source: *Antiquities of the Jews 14.61 (Lexundria)*, Flavius Josephus, trans. William Whiston <https://lexundria.com/j_aj/14.61/wst>
 
 - [ ] **Josephus, Antiquities 15.380 (Herod begins to rebuild the temple)** — `artifacts/josephus-antiquities-15-380.toml` (draft)
@@ -89,7 +89,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Josephus, Antiquities 18.1–2 (the census of Cyrenius)** — `artifacts/josephus-antiquities-18-1.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus says Cyrenius (Quirinius), a Roman senator, came into Syria sent by Caesar "to take an account of their substance", with Coponius sent to hold supreme power over the Jews; Judea had been added to the province of Syria after Archelaus's removal. Antiquities 17.342–355 puts that removal in the tenth year of Archelaus's rule.
+  - Summary: Josephus says Cyrenius (Quirinius), a Roman senator, came into Syria. Caesar sent him "to take an account of their substance". Coponius was sent to hold supreme power over the Jews. Judea had been added to the province of Syria after Archelaus was removed. Antiquities 17.342–355 puts that removal in the tenth year of Archelaus's rule.
   - Source: *Antiquities of the Jews, 18.1-18.25 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.1–2 <https://lexundria.com/j_aj/18.1-18.25/wst>
   - Source: *Antiquities of the Jews, 17.342-17.355 (Lexundria)*, Flavius Josephus, trans. William Whiston, 17.342–355 <https://lexundria.com/j_aj/17.339-17.355/wst>
   - Verse (background): Luke 2:1 – Luke 2:2 (Quirinius as governor of Syria)
@@ -97,46 +97,46 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Josephus, Antiquities 18.116-119 (John called the Baptist)** — `artifacts/josephus-antiquities-18-116.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus says some Jews held that the destruction of Herod's army was divine punishment for what he did "against John, that was called the Baptist" (18.116). He calls John "a good man" who commanded the Jews to practise virtue and come to baptism, "not in order to the putting away of some sins, but for the purification of the body" (18.117); Herod, fearing John's influence might raise a rebellion, sent him prisoner to Machaerus and had him put to death (18.118-119). Josephus does not mention Tiberius's fifteenth year, Pilate, or any date for John's ministry. Quoted from Whiston's translation.
+  - Summary: Josephus says some Jews held that the destruction of Herod's army was divine punishment for what he did "against John, that was called the Baptist" (18.116). He calls John "a good man". John told the Jews to practise virtue and come to baptism, "not in order to the putting away of some sins, but for the purification of the body" (18.117). Herod feared John's influence might lead to a rebellion. He sent John as a prisoner to Machaerus and had him put to death (18.118-119). Josephus does not mention Tiberius's fifteenth year, Pilate, or any date for John's ministry. Quoted from Whiston's translation.
   - Source: *Antiquities of the Jews, book 18, sections 116-119 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.116-119 <https://lexundria.com/j_aj/18.116/wst>
 
 - [ ] **Josephus, Antiquities 18.55 and following (Pilate)** — `artifacts/josephus-antiquities-18-55.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus narrates Pilate's governorship of Judaea, opening with his bringing the army's standards bearing Caesar's image from Caesarea into Jerusalem: "BUT now Pilate, the procurator of Judea, removed the army from Cesarea to Jerusalem…" (Whiston's translation).
+  - Summary: Josephus tells of Pilate's time as governor of Judaea. He begins with Pilate bringing the army's standards, which bore Caesar's image, from Caesarea into Jerusalem: "BUT now Pilate, the procurator of Judea, removed the army from Cesarea to Jerusalem…" (Whiston's translation).
   - Source: *Antiquities of the Jews, book 18 (Perseus Digital Library)*, Flavius Josephus, trans. William Whiston, 18.55 <https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0146:book=18:section=63>
 
 - [ ] **Josephus, Antiquities book 18 (Joseph Caiaphas)** — `artifacts/josephus-antiquities-18-caiaphas.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus records that the Roman prefect Valerius Gratus appointed Joseph, called Caiaphas, high priest, and that the Syrian legate Vitellius later removed him.
+  - Summary: Josephus records that the Roman prefect Valerius Gratus appointed Joseph, called Caiaphas, as high priest. Later the Syrian legate Vitellius removed him.
   - Source: *Antiquities of the Jews, book 18, with Niese section numbers (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.35 (appointed by Gratus); 18.95 (removed by Vitellius) <https://lexundria.com/j_aj/18.26-18.95/wst>
   - Source: *Caiaphas*, Wikipedia, Antiquities, book 18 <https://en.wikipedia.org/wiki/Caiaphas>
 
 - [ ] **Josephus, Antiquities 19.343–352 (the death of Agrippa I)** — `artifacts/josephus-antiquities-19-343.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: At Caesarea Agrippa appears in a garment wholly of silver; flatterers cry that he is a god; he sees an owl on a rope, takes it for a messenger of ill tidings, is seized by a violent pain in the belly and dies after five days, in the fifty-fourth year of his age, having reigned four years under Caius and three under Claudius (Whiston's translation).
+  - Summary: At Caesarea, Agrippa appears in a garment made wholly of silver. Flatterers cry that he is a god. He sees an owl on a rope and takes it for a messenger of bad news. A violent pain seizes his belly, and he dies after five days. He was in the fifty-fourth year of his age. He had reigned four years under Caius and three under Claudius (Whiston's translation).
   - Source: *Antiquities of the Jews, 19.343-19.352 (Lexundria)*, Flavius Josephus, trans. William Whiston, 19.343–351 <https://lexundria.com/j_aj/19.343-19.352/wst>
   - Verse (background): Acts 12:21 – Acts 12:23 (Luke's parallel account)
 
 - [ ] **Josephus, Antiquities 20.182 (Festus succeeds Felix)** — `artifacts/josephus-antiquities-20-182.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus writes: "Now when Porcius Festus was sent as successor to Felix by Nero, the principal of the Jewish inhabitants of Caesarea went up to Rome to accuse Felix; and he had certainly been brought to punishment, unless Nero had yielded to the importunate solicitations of his brother Pallas" (Whiston). It states the succession and Nero's role; it gives no year.
+  - Summary: Josephus writes: "Now when Porcius Festus was sent as successor to Felix by Nero, the principal of the Jewish inhabitants of Caesarea went up to Rome to accuse Felix; and he had certainly been brought to punishment, unless Nero had yielded to the importunate solicitations of his brother Pallas" (Whiston). It states who followed whom, and Nero's part in it. It gives no year.
   - Source: *Antiquities of the Jews, book 20, with Niese section numbers (Lexundria)*, Flavius Josephus, trans. William Whiston, 20.182 <https://lexundria.com/j_aj/20.182/wst>
 
 - [ ] **Josephus, Antiquities 20.9.1 (James, brother of Jesus)** — `artifacts/josephus-antiquities-20-200.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus reports that the high priest Ananus had "the brother of Jesus who was called Christ, whose name was James" stoned. Modern scholarship almost universally accepts the passage as authentic. (Section 20.200 in the Niese numbering; 20.9.1 in Whiston's.)
+  - Summary: Josephus reports that the high priest Ananus had "the brother of Jesus who was called Christ, whose name was James" stoned. Modern scholars almost all accept the passage as genuine. (Section 20.200 in the Niese numbering; 20.9.1 in Whiston's.)
   - Source: *Josephus on Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Josephus_on_Jesus>
   - Verse (background): Gal 1:19 (James, the Lord's brother)
 
 - [ ] **Josephus, Antiquities 18.63–64 (the Testimonium Flavianum)** — `artifacts/josephus-testimonium-flavianum.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus's paragraph on Jesus: "Now there was about this time Jesus, a wise man…", condemned to the cross by Pilate "at the suggestion of the principal men amongst us". Since the late 20th century the majority view has been that it is partly authentic, with Christian additions (such as "He was [the] Christ") worked into an original notice; John P. Meier's reconstruction of that core is the most widely accepted.
+  - Summary: Josephus's paragraph on Jesus begins: "Now there was about this time Jesus, a wise man…". It says Pilate condemned him to the cross "at the suggestion of the principal men amongst us". Since the late 20th century most scholars have thought it is partly genuine, with Christian additions (such as "He was [the] Christ") worked into an original notice. John P. Meier's reconstruction of that core is the most widely accepted.
   - Source: *Antiquities of the Jews, book 18 (Perseus Digital Library)*, Flavius Josephus, trans. William Whiston, 18.63 <https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0146:book=18:section=63>
   - Source: *A Marginal Jew: Rethinking the Historical Jesus, Volume 1*, John P. Meier, 1991, ch. 3
   - Source: *Josephus on Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Josephus_on_Jesus>
@@ -144,26 +144,26 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Josephus, Jewish War 6.249–250** — `artifacts/josephus-war-6-249.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: Josephus records that the temple was burned on "the tenth day of the month Lous [Ab], upon which it was formerly burnt by the king of Babylon" (Whiston's translation). It is the Roman-side eyewitness narrative of the destruction of the Second Temple.
+  - Summary: Josephus records that the temple was burned on "the tenth day of the month Lous [Ab], upon which it was formerly burnt by the king of Babylon" (Whiston's translation). It is the account of the Second Temple's destruction by an eyewitness on the Roman side.
   - Source: *The Jewish War, 6.249-6.270 (Lexundria)*, Flavius Josephus, trans. William Whiston, 6.249–250 <https://lexundria.com/j_bj/6.249-6.270/wst>
 
 - [ ] **Nabonidus Chronicle (ABC 7)** — `artifacts/nabonidus-chronicle-abc7.toml` (draft)
   - Kind: chronicle, Akkadian (cuneiform)
   - Made: date not established
-  - Summary: A Babylonian chronicle of the reign of Nabonidus. For his seventeenth year it records the battle at Opis, the capture of Sippar "without a battle", and that "Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon", and that on the third of Arahsamna Cyrus entered Babylon. The tablet's museum number was not shown on the page read.
+  - Summary: A Babylonian chronicle of the reign of Nabonidus. For his seventeenth year it records the battle at Opis, and the capture of Sippar "without a battle". It says "Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon". It also says Cyrus entered Babylon on the third of Arahsamna. The tablet's museum number was not shown on the page read.
   - Source: *ABC 7 (Nabonidus Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-7-nabonidus-chronicle/>
   - Verse (background): Dan 5:30 – Dan 5:31 (The night Babylon fell)
 
 - [ ] **1 Clement 5–6** — `artifacts/one-clement-5.toml` (draft)
   - Kind: literary-text, Greek
   - Made: date not established
-  - Summary: A letter to Corinth that names Peter, who "endured not one or two, but numerous labours" and suffered martyrdom, and Paul, who preached in east and west and "suffered martyrdom under the prefects" (Hoole translation). It gives no place or year.
+  - Summary: A letter to the church at Corinth. It names Peter, who "endured not one or two, but numerous labours" and died as a martyr. It also names Paul, who preached in east and west and "suffered martyrdom under the prefects" (Hoole translation). It gives no place or year.
   - Source: *1 Clement, Hoole translation (Early Christian Writings)*, Clement of Rome, ch. 5 <http://www.earlychristianwritings.com/text/1clement-roberts.html>
 
 - [ ] **Inscriptions of Sargon II (Samaria claim)** — `artifacts/sargon-ii-inscriptions.toml` (draft)
   - Kind: inscription, Akkadian (cuneiform)
   - Made: date not established
-  - Summary: Sargon II's royal inscriptions claim he conquered Samaria and resettled 27,280 Israelites (Wikipedia's wording). Wikipedia judges it more likely that Shalmaneser V captured the city, since the Babylonian Chronicles and the Hebrew Bible treat the fall of Israel as that reign's signature event. The Nimrud Prism figure is 27,290 in COJS (after Younger, BAR 29/6), against Wikipedia's 27,280; the two sources disagree. Luckenbill's Ancient Records prints two of the texts. The Annals, first year, restore the figure: "[27,290 people, who lived therein] I carried away; 50 chariots for my royal equipment, I selected from [among them]" (the bracketed words are the editor's restoration). The Display Inscription has it intact: "I besieged and captured Samaria, carrying off 27,290 of the people who dwelt therein." The 27,280 reading was not found in Luckenbill.
+  - Summary: Sargon II's royal inscriptions claim he conquered Samaria and moved 27,280 Israelites elsewhere (Wikipedia's wording). Wikipedia judges it more likely that Shalmaneser V captured the city. The Babylonian Chronicles and the Hebrew Bible both treat the fall of Israel as the main event of that reign. For the Nimrud Prism, COJS gives the figure as 27,290 (after Younger, BAR 29/6), against Wikipedia's 27,280. The two sources disagree. Luckenbill's Ancient Records prints two of the texts. In the Annals, first year, the figure is restored: "[27,290 people, who lived therein] I carried away; 50 chariots for my royal equipment, I selected from [among them]" (the bracketed words are the editor's restoration). The Display Inscription has it intact: "I besieged and captured Samaria, carrying off 27,290 of the people who dwelt therein." The 27,280 reading was not found in Luckenbill.
   - Source: *Ancient Records of Assyria and Babylonia, Volume II: Historical Records of Assyria from Sargon to the End*, Daniel David Luckenbill, 1927, § 4 (Annals, year 1, restored); § 55 (Display Inscription) <https://archive.org/details/ancient_records_assyria2>
   - Source: *Sargon II*, Wikipedia <https://en.wikipedia.org/wiki/Sargon_II>
   - Source: *The Nimrud Prism, 720 BCE*, Center for Online Judaic Studies (citing K. Lawson Younger Jr., Israelites in Exile, BAR 29/6, Nov-Dec 2003), 2003, page title: The Nimrud Prism, 720 BCE; states 27,290 people deported <https://cojs.org/the_nimrud_prism-_720_bce/>
@@ -172,7 +172,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Tacitus, Annals 15.44** — `artifacts/tacitus-annals-15-44.toml` (draft)
   - Kind: literary-text, Latin
   - Made: date not established
-  - Summary: The Roman historian Tacitus, describing Nero's persecution of Christians after the fire of Rome, explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat" — Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate. The two online Latin texts cited differ in one word: the Latin Library prints "Tibero", Perseus "Tiberio".
+  - Summary: The Roman historian Tacitus is describing Nero's persecution of Christians after the fire of Rome. He explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat". In English: Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate. The two online Latin texts cited differ in one word. The Latin Library prints "Tibero" and Perseus prints "Tiberio".
   - Source: *Annales, book 15 (Latin text, The Latin Library)*, Tacitus, 15.44 <https://www.thelatinlibrary.com/tacitus/tac.ann15.shtml>
   - Source: *Annales, book 15, chapter 44 (Latin text, Perseus Digital Library)*, Tacitus, 15.44 <http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0077%3Abook%3D15%3Achapter%3D44>
 
@@ -181,7 +181,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 1208 BCE
   - Held by: Egyptian Museum, Cairo, JE 31408
   - Discovered: 1896, Thebes (Flinders Petrie)
-  - Summary: A granite victory stele of Pharaoh Merneptah, dated to his fifth regnal year (c. 1208 BCE). Near its end (line 27) it lists peoples of Canaan he claims to have defeated, including "Israel is laid waste, its seed is no more" — the earliest known mention of Israel outside the Bible. Israel is written with the determinative for a people, not a city-state or land.
+  - Summary: A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c. 1208 BCE). Near the end (line 27) it lists peoples of Canaan he claims to have defeated. One entry reads "Israel is laid waste, its seed is no more". This is the earliest known mention of Israel outside the Bible. Israel is written with the sign for a people, not for a city-state or a land.
   - Source: *The Context of Scripture, Volume 2: Monumental Inscriptions*, William W. Hallo and K. Lawson Younger Jr. (eds.), 2000, pp. 40–41
   - Source: *Merneptah Stele*, Wikipedia <https://en.wikipedia.org/wiki/Merneptah_Stele>
 
@@ -190,7 +190,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 900 BCE – 801 BCE
   - Held by: Israel Museum, Jerusalem
   - Discovered: 1993, Tel Dan, northern Israel (Avraham Biran's excavation)
-  - Summary: Fragments of a 9th-century BCE victory stele set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David" — the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) have read the word as a place or divine name instead. Fragment A was found in 1993; fragments B1 and B2 followed in June 1994 and were published in 1995.
+  - Summary: Fragments of a 9th-century BCE victory stone set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David". It is the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) read the word as a place name or a divine name instead. Fragment A was found in 1993. Fragments B1 and B2 followed in June 1994 and were published in 1995.
   - Source: *An Aramaic Stele Fragment from Tel Dan*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 43 (2–3), pp. 81–98, 1993, pp. 81–98
   - Source: *The Tel Dan Inscription: A New Fragment*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 45 (1), pp. 1–18, 1995, pp. 1–18
   - Source: *The Dan Debate*, Hallvard Hagelia, Bible and Interpretation, September 2010, 2010 <https://bibleinterp.arizona.edu/node/2490>
@@ -201,7 +201,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 853 BCE – 852 BCE
   - Held by: British Museum, BM 118884
   - Discovered: 1861, Kurkh, south-eastern Turkey (J. G. Taylor)
-  - Summary: An Assyrian stele recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. Among the coalition ranged against him it lists "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a) with 2,000 chariots and 10,000 foot soldiers.
+  - Summary: An Assyrian stone slab recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. It lists the allies who stood against him. Among them is "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a), with 2,000 chariots and 10,000 foot soldiers.
   - Source: *The Kurkh Monolith of Shalmaneser III*, Center for Online Judaic Studies <https://cojs.org/?p=6525>
   - Source: *Kurkh Monoliths*, Wikipedia <https://en.wikipedia.org/wiki/Kurkh_Monoliths>
 
@@ -210,7 +210,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 840 BCE
   - Held by: Louvre, Paris, AO 5066
   - Discovered: 1868, Dibon (modern Dhiban), Jordan (F. A. Klein)
-  - Summary: A Moabite royal inscription, dated c. 840 BCE, found at Dibon in 1868. It says Omri was king of Israel and oppressed Moab for many days, credits the god Chemosh with Mesha's victories, and contains the earliest certain extrabiblical reference to YHWH. Line 31 is disputed: Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'.
+  - Summary: A Moabite royal inscription, dated c. 840 BCE, found at Dibon in 1868. It says Omri was king of Israel and oppressed Moab for many days. It credits the god Chemosh with Mesha's victories. It contains the earliest certain mention of YHWH outside the Bible. Line 31 is disputed. Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'.
   - Source: *Mesha Stele*, Wikipedia <https://en.wikipedia.org/wiki/Mesha_Stele>
   - Verse (background): 2Kgs 3:4 – 2Kgs 3:27
 
@@ -219,7 +219,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 827 BCE – 824 BCE
   - Held by: British Museum, ME 118885
   - Discovered: 1846, Nimrud (ancient Kalhu), northern Iraq (A. H. Layard)
-  - Summary: A black limestone obelisk about 1.98 m high from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri' and pictures a tribute-bearer, the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch (Wikipedia's wording). Luckenbill's translation of the second epigraph reads: "Tribute of Iaua (Jehu), son of Omri (mâr Humri). Silver, gold, a golden bowl, a golden beaker, golden goblets, pitchers of gold, lead, staves for the hand of the king, javelins, I received from him." The epigraph gives no regnal year; a separate Shalmaneser text in the same volume records tribute from "Tyre, Sidon and of Jehu, son of Omri" after a march to Mount Ba'li-ra'si, and the annals' eighteenth year (the sixteenth Euphrates crossing, against Hazael) is the campaign modern scholars usually attach it to, a step Luckenbill's text itself does not take.
+  - Summary: A black limestone obelisk about 1.98 m high, from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri'. It also pictures a tribute-bearer. Wikipedia's wording is that this is the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch. Luckenbill's translation of the second epigraph reads: "Tribute of Iaua (Jehu), son of Omri (mâr Humri). Silver, gold, a golden bowl, a golden beaker, golden goblets, pitchers of gold, lead, staves for the hand of the king, javelins, I received from him." The epigraph gives no regnal year. A separate Shalmaneser text in the same volume records tribute from "Tyre, Sidon and of Jehu, son of Omri" after a march to Mount Ba'li-ra'si. Modern scholars usually attach it to the campaign of the annals' eighteenth year (the sixteenth Euphrates crossing, against Hazael). Luckenbill's text itself does not take that step.
   - Source: *Black Obelisk of Shalmaneser III*, Wikipedia <https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III>
   - Source: *Ancient Records of Assyria and Babylonia, Volume I: Historical Records of Assyria from the Earliest Times to Sargon*, Daniel David Luckenbill, 1926, § 590 (epigraph II); § 575 (year 18, Hazael); the Ba'li-ra'si passage before § 673 <https://archive.org/details/ancient_records_assyria1>
   - Verse (background): 2Kgs 9:1 – 2Kgs 9:13
@@ -229,7 +229,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 700 BCE – 692 BCE
   - Held by: British Museum, ME 124904–124915
   - Discovered: South-West Palace, Nineveh (excavated by Austen Henry Layard)
-  - Summary: Carved wall panels from Room XXXVI of Sennacherib's South-West Palace at Nineveh, showing the Assyrian siege and capture of the Judahite city of Lachish: siege ramps and engines, the city's fall, and its people led into captivity.
+  - Summary: Carved wall panels from Room XXXVI of Sennacherib's South-West Palace at Nineveh. They show the Assyrian siege and capture of the Judahite city of Lachish. You can see siege ramps and engines, the fall of the city, and its people led away as captives.
   - Source: *Lachish reliefs, South-West Palace of Sennacherib, Nineveh (collection record)*, British Museum <https://www.britishmuseum.org/collection/object/W_1856-0909-14>
   - Verse (background): 2Kgs 18:14 (Sennacherib at Lachish)
   - Verse (background): 2Kgs 18:17
@@ -238,7 +238,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Kind: inscription, Akkadian (cuneiform)
   - Made: 691 BCE
   - Held by: British Museum, BM 91032
-  - Summary: A clay prism recording Sennacherib's campaigns, including his third campaign into Judah. Two parallel copies survive, the Oriental Institute (Chicago) Prism and the Jerusalem Prism (Israel Museum). The annals say he besieged and took 46 walled cities of Judah, and that he shut Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not claim that Jerusalem was taken.
+  - Summary: A clay prism recording Sennacherib's campaigns, including his third campaign into Judah. Two matching copies survive: the Oriental Institute (Chicago) Prism and the Jerusalem Prism (Israel Museum). The annals say he besieged and took 46 walled cities of Judah. They say he shut Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not claim that Jerusalem was taken.
   - Source: *Taylor Prism (collection record, registration 1855,1003.1)*, British Museum <https://www.britishmuseum.org/collection/object/W_1855-1003-1>
   - Source: *Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms*, Center for Online Judaic Studies <https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/>
   - Source: *Sennacherib's Annals*, Wikipedia <https://en.wikipedia.org/wiki/Sennacherib%27s_Annals>
@@ -249,7 +249,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 595 BCE – 570 BCE
   - Held by: Vorderasiatisches Museum, Berlin, VAT 16378
   - Discovered: Babylon
-  - Summary: An administrative cuneiform tablet from Babylon listing oil rations issued to foreign captives, among them "Ya'u-kinu, king of the land of Yahudu" — Jehoiachin, king of Judah — and five of his sons. Published by Ernst Weidner in 1939.
+  - Summary: A clay tablet from Babylon, written in cuneiform, listing oil rations given to foreign captives. One entry is "Ya'u-kinu, king of the land of Yahudu". That is Jehoiachin, king of Judah. Five of his sons are listed too. Ernst Weidner published it in 1939.
   - Source: *VAT 16378 (collection record)*, Staatliche Museen zu Berlin, Vorderasiatisches Museum <https://search.smb.museum/en/object/obj-1743721>
   - Source: *Jojachin, König von Juda, in babylonischen Keilschrifttexten*, Ernst F. Weidner, Mélanges syriens offerts à M. René Dussaud, pp. 923–935, 1939, pp. 923–935
   - Source: *Jehoiachin's Rations Tablets*, Wikipedia <https://en.wikipedia.org/wiki/Jehoiachin%27s_Rations_Tablets>
@@ -260,7 +260,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 590 BCE – 586 BCE
   - Held by: British Museum (most); Israel Museum (Letter 6 and others), ME 125701–125707, 125715a
   - Discovered: 1935, Tell ed-Duweir (Lachish), excavated by James Leslie Starkey
-  - Summary: Ink-written potsherds found in the gate area of Lachish, written in the last years before the Babylonian conquest (c. 590 BCE). In Letter 4 an officer writes that "we are watching for the fire signals of Lachish … because we cannot see Azekah" — matching Jeremiah 34:7, where Lachish and Azekah are the last fortified cities of Judah still holding out.
+  - Summary: Messages written in ink on pieces of broken pottery, found in the gate area of Lachish. They date from the last years before the Babylonian conquest (c. 590 BCE). In Letter 4 an officer writes: "we are watching for the fire signals of Lachish … because we cannot see Azekah". This matches Jeremiah 34:7, where Lachish and Azekah are the last fortified cities of Judah still holding out.
   - Source: *Lachish letters*, Wikipedia <https://en.wikipedia.org/wiki/Lachish_letters>
   - Verse (background): Jer 34:7 (Lachish and Azekah remain)
 
@@ -269,7 +269,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 556 BCE – 539 BCE
   - Held by: British Museum, BM 91125
   - Discovered: 1854, Ur, southern Iraq (J. G. Taylor)
-  - Summary: A foundation cylinder of Nabonidus, the last king of Babylon, from the ziggurat at Ur. Its closing prayer asks the moon-god to instil reverence in "Belshazzar, the eldest son, my offspring" — naming Belshazzar as the son of Nabonidus.
+  - Summary: A clay cylinder buried in the foundations of the ziggurat at Ur. Nabonidus, the last king of Babylon, had it made. Its closing prayer asks the moon-god to instil reverence in "Belshazzar, the eldest son, my offspring". So it names Belshazzar as the son of Nabonidus.
   - Source: *Nabonidus Cylinder from Ur*, Livius.org, col. iii, lines 3–31 (the closing prayer) <https://www.livius.org/sources/content/nabonidus-cylinder-from-ur/>
   - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
   - Verse (background): Dan 5:1 – Dan 5:31
@@ -279,7 +279,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 539 BCE – 530 BCE
   - Held by: British Museum, BM 90920
   - Discovered: 1879, Babylon (Hormuzd Rassam)
-  - Summary: A clay cylinder of Cyrus after his conquest of Babylon. It speaks of restoring deities and returning displaced peoples to Mesopotamian sites but, as Wikipedia summarises, mentions no Jews, Jerusalem or Judea; whether it bears on Ezra 1 is disputed (Kuhrt calls the restoration passage a literary device).
+  - Summary: A clay cylinder of Cyrus, made after he conquered Babylon. It speaks of restoring gods and sending displaced peoples back to sites in Mesopotamia. As Wikipedia summarises, it mentions no Jews, Jerusalem or Judea. Whether it bears on Ezra 1 is disputed. Kuhrt calls the restoration passage a literary device.
   - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
   - Source: *Cyrus Cylinder*, Livius.org <https://www.livius.org/sources/content/cyrus-cylinder/>
   - Verse (background): Ezra 1:1 – Ezra 1:4 (Cyrus's proclamation)
@@ -287,7 +287,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Elephantine petition to rebuild the Yahu temple (407 BCE)** — `artifacts/elephantine-temple-petition-407.toml` (draft)
   - Kind: papyrus, Aramaic
   - Made: 407 BCE
-  - Summary: A letter of 407 BCE (year 17 of Darius II) from Yedoniah and the priests of Elephantine to Bagoas, governor of Judea, asking leave to rebuild their temple destroyed in 410 BCE. It also appeals to Sanballat's sons Delaiah and Shelemiah and to Johanan the high priest. Sanballat and Johanan are both figures of the book of Nehemiah. Wikipedia's Elephantine papyri article labels it Cowley AP 30 (the Sayce-Cowley collection); the page read does not say which museum holds this papyrus.
+  - Summary: A letter of 407 BCE (year 17 of Darius II) from Yedoniah and the priests of Elephantine to Bagoas, governor of Judea. They ask leave to rebuild their temple, which was destroyed in 410 BCE. They also appeal to Sanballat's sons Delaiah and Shelemiah, and to Johanan the high priest. Sanballat and Johanan both appear in the book of Nehemiah. Wikipedia's Elephantine papyri article labels this letter Cowley AP 30 (the Sayce-Cowley collection). The page read does not say which museum holds this papyrus.
   - Source: *Elephantine papyri*, Wikipedia <https://en.wikipedia.org/wiki/Elephantine_papyri>
   - Source: *Sanballat the Horonite*, Wikipedia <https://en.wikipedia.org/wiki/Sanballat_the_Horonite>
   - Verse (background): Neh 2:10 (Sanballat the Horonite)
@@ -298,7 +298,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 26 CE – 37 CE
   - Held by: Israel Museum, Jerusalem
   - Discovered: 1961, Caesarea Maritima (theatre area)
-  - Summary: A limestone dedication block from Caesarea Maritima recording a building for Tiberius by "[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e" — Pontius Pilate, prefect of Judaea. Found in 1961 in the theatre area by Maria Teresa Fortuna Canivet, during excavations led by Antonio Frova; a replica stands at Caesarea. Dated by Pilate's governorship (26/27–36/37 CE).
+  - Summary: A limestone block from Caesarea Maritima recording a building put up for Tiberius. The inscription names "[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e", Pontius Pilate, prefect of Judaea. Maria Teresa Fortuna Canivet found it in 1961 in the theatre area, during excavations led by Antonio Frova. A replica stands at Caesarea. It is dated by Pilate's time as governor (26/27–36/37 CE).
   - Source: *L'Année épigraphique 1963, no. 104 (the Pilate inscription)*, 1963
   - Source: *Pilate stone*, Wikipedia <https://en.wikipedia.org/wiki/Pilate_stone>
   - Source: *Pontius Pilate*, Wikipedia <https://en.wikipedia.org/wiki/Pontius_Pilate>
@@ -308,357 +308,357 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **Composition of Daniel 7–12** — `events/daniel-composition.toml` (draft)
   - Axis / confidence: composition / contested; range 600 BCE – 164 BCE
-  - Summary: When the visions of Daniel were written. The book is set in the 6th century BCE, in the Babylonian and Persian courts; most critical scholars date the visions to the persecution under the Seleucid king Antiochus IV in the 160s BCE, while conservative scholars hold that part or all of them may go back to the 6th century.
+  - Summary: This asks when the visions of Daniel were written. The book is set in the 6th century BCE, in the Babylonian and Persian courts. Most critical scholars date the visions to the persecution under the Seleucid king Antiochus IV in the 160s BCE. Conservative scholars hold that part or all of them may go back to the 6th century.
   - Verse (describes): Dan 7:1 – Dan 12:13
-  - Position **167–164 BCE (Antiochus IV's persecution)** (167 BCE – 164 BCE, held by John J. Collins): Chapters 7–12 were written during the persecution of the Jews under Antiochus IV Epiphanes, before the rededication of the temple.
+  - Position **167–164 BCE (Antiochus IV's persecution)** (167 BCE – 164 BCE, held by John J. Collins): Collins holds that chapters 7-12 were written during the persecution of the Jews under Antiochus IV Epiphanes, before the temple was rededicated. Critical here means the mainstream scholarly view.
     - Source: *Daniel (Hermeneia)*, John J. Collins, 1993
-    - Argument (for): The visions are read as prophecy written after the events they describe up to the reign of Antiochus IV, which fixes their composition within that persecution.
+    - Argument (for): Collins reads the visions as prophecy written after the events they describe, up to the reign of Antiochus IV. That fixes their writing within his persecution.
       - Source: *Daniel (Hermeneia)*, John J. Collins, 1993
-  - Position **Sixth century BCE (in part or whole)** (600 BCE – 501 BCE, held by Joyce G. Baldwin): Part or all of chapters 7–12 may go back to the 6th century BCE, the period in which the book is set.
+  - Position **Sixth century BCE (in part or whole)** (600 BCE – 501 BCE, held by Joyce G. Baldwin): Baldwin holds that part or all of chapters 7-12 may go back to the 6th century BCE, the time in which the book is set. Traditional here means the older view that the book was written when it says it was.
     - Source: *Daniel (Tyndale Old Testament Commentaries)*, Joyce G. Baldwin, 1978
-    - Argument (for): The visions need not be prophecy written after the event (vaticinia ex eventu), and so need not be dated by the latest events they describe.
+    - Argument (for): Baldwin argues the visions need not be prophecy written after the event (the Latin term is vaticinia ex eventu). So they need not be dated by the latest events they describe.
       - Source: *Daniel (Tyndale Old Testament Commentaries)*, Joyce G. Baldwin, 1978
 
 - [ ] **John on Patmos and the composition of Revelation** — `events/revelation-composition-patmos.toml` (draft)
   - Axis / confidence: composition / contested; range 81 CE – 96 CE
-  - Summary: Revelation says its author John was on Patmos. Irenaeus, quoted by Eusebius, places the vision at the end of Domitian's reign (81–96 CE); Wikipedia reports a common date of about 95 CE.
-  - Verse (describes): Rev 1:9 – Rev 1:11 (John on Patmos 'on account of the word of God')
-  - Position **End of Domitian's reign** (81 CE – 96 CE, held by Irenaeus of Lyons): Irenaeus (Against Heresies 5.30.3, read directly: "towards the end of Domitian's reign"; Eusebius quotes him similarly) says the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian". The years are Domitian's reign, 81–96.
+  - Summary: Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Wikipedia reports that the usual date is about 95 CE.
+  - Verse (describes): Rev 1:9 – Rev 1:11 (John is on Patmos 'on account of the word of God')
+  - Position **End of Domitian's reign** (81 CE – 96 CE, held by Irenaeus of Lyons): Irenaeus (Against Heresies 5.30.3, read directly: "towards the end of Domitian's reign"; Eusebius quotes him similarly) says the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian". The years given here are simply the years of Domitian's reign, 81 to 96.
     - Source: *Against Heresies, book 5, in Ante-Nicene Fathers vol. 1 (New Advent)*, Irenaeus of Lyons, trans. Alexander Roberts and William Rambaut, 1885, 5.30.3 <https://www.newadvent.org/fathers/0103530.htm>
     - Source: *Eusebius, Church History, book 5 (New Advent)*, Eusebius of Caesarea, 5.8.6 <https://www.newadvent.org/fathers/250105.htm>
     - Source: *Eusebius, Church History, book 3 (New Advent)*, Eusebius of Caesarea, 3.18.3 <https://www.newadvent.org/fathers/250103.htm>
     - Source: *Book of Revelation*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Revelation>
-  - Position **About 95 CE** (95 CE): Wikipedia: Revelation is "commonly dated to about 95 AD", on clues in the visions pointing to Domitian's reign. No individual holder is named on the cited page.
+  - Position **About 95 CE** (95 CE): Wikipedia says Revelation is "commonly dated to about 95 AD", because clues in the visions point to Domitian's reign. The cited page names no one scholar who holds this.
     - Source: *Book of Revelation*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Revelation>
-  - Attestation — Eusebius, Church History 3.18 and 5.8 (John on Patmos, Irenaeus on the Apocalypse) *consistent*: Eusebius reports John condemned to Patmos in Domitian's persecution, and quotes Irenaeus on the date of the vision.
+  - Attestation — Eusebius, Church History 3.18 and 5.8 (John on Patmos, Irenaeus on the Apocalypse) *consistent*: Eusebius reports that John was sent to Patmos during Domitian's persecution. He also quotes Irenaeus on the date of the vision.
     - Source: *Eusebius, Church History, book 3 (New Advent)*, Eusebius of Caesarea, 3.18.1, 3.18.3 <https://www.newadvent.org/fathers/250103.htm>
-  - Attestation — Irenaeus, Against Heresies 5.30.3 (date of the Apocalypse) *consistent*: Irenaeus writes that the Apocalypse "was seen no very long time since, but almost in our day, towards the end of Domitian's reign". He does not name the author's exile on Patmos in this sentence.
+  - Attestation — Irenaeus, Against Heresies 5.30.3 (date of the Apocalypse) *consistent*: Irenaeus writes that the Apocalypse "was seen no very long time since, but almost in our day, towards the end of Domitian's reign". This sentence does not mention the author's exile on Patmos.
     - Source: *Against Heresies, book 5, in Ante-Nicene Fathers vol. 1 (New Advent)*, Irenaeus of Lyons, trans. Alexander Roberts and William Rambaut, 1885, 5.30.3 <https://www.newadvent.org/fathers/0103530.htm>
 
 - [ ] **The covenant with Abraham** — `events/abraham-covenant.toml` (draft)
   - Axis / confidence: narrative / speculative; range 2000 BCE – 1001 BCE
-  - Summary: God's covenant with Abram: the promise of land and offspring sealed in the ritual of Genesis 15, renewed with circumcision as its sign in Genesis 17. Historicity is a separate question (see the linked issue).
-  - Verse (describes): Gen 12:1 – Gen 12:3 (The initial promise: a great nation and blessing for all families)
-  - Verse (describes): Gen 15:1 – Gen 15:21 (The covenant between the pieces; the land promised from the river of Egypt to the Euphrates)
-  - Verse (describes): Gen 17:1 – Gen 17:27 (Covenant renewed; name changed to Abraham; circumcision as the sign)
-  - Verse (describes): Gen 22:15 – Gen 22:18 (The promise reaffirmed after the binding of Isaac)
+  - Summary: God promises Abram land and descendants. The promise is sealed in a ritual in Genesis 15. It is renewed in Genesis 17, where circumcision becomes its sign. Whether Abraham was a historical figure is a separate question (see the linked issue).
+  - Verse (describes): Gen 12:1 – Gen 12:3 (The first promise: a great nation, and blessing for all families)
+  - Verse (describes): Gen 15:1 – Gen 15:21 (The covenant between the pieces. The land is promised from the river of Egypt to the Euphrates)
+  - Verse (describes): Gen 17:1 – Gen 17:27 (The covenant is renewed. Abram becomes Abraham. Circumcision is the sign)
+  - Verse (describes): Gen 22:15 – Gen 22:18 (The promise is repeated after Abraham is stopped from sacrificing Isaac)
   - Verse (alludes): Exod 2:24 (God remembered his covenant with Abraham, Isaac and Jacob)
   - Verse (alludes): Neh 9:7 – Neh 9:8 (God made a covenant with Abraham to give his descendants the land)
   - Verse (alludes): Ps 105:8 – Ps 105:11 (He remembers his covenant forever, the covenant made with Abraham)
   - Verse (alludes): Acts 7:8 (Stephen: God gave him the covenant of circumcision)
   - Verse (alludes): Rom 4:1 – Rom 4:13 (Paul: Abraham was counted righteous by faith, before circumcision)
   - Verse (alludes): Gal 3:15 – Gal 3:18 (Paul: the promise to Abraham and his offspring precedes the law)
-  - Verse (alludes): Heb 11:17 – Heb 11:19 (Abraham, having received the promises, offered Isaac)
-  - Position **A 2nd-millennium BCE patriarchal age** (2000 BCE – 1001 BCE, held by William F. Albright and G. Ernest Wright): Albright and Wright placed the patriarchs in the 2nd millennium BCE. The sources read give no narrower date for the covenant itself, so the range is the whole millennium.
+  - Verse (alludes): Heb 11:17 – Heb 11:19 (Abraham had received the promises, yet offered Isaac)
+  - Position **A 2nd-millennium BCE patriarchal age** (2000 BCE – 1001 BCE, held by William F. Albright and G. Ernest Wright): Albright and Wright placed the patriarchs in the 2nd millennium BCE. The sources read give no narrower date for the covenant itself, so the range is the whole thousand years.
     - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
-  - Position **Ussher, Annals: covenant of Genesis 15, 1912 BC** (1912 BCE, held by James Ussher): Ussher places the Genesis 15 covenant under 2092 AM, 1912 BC, and the Genesis 17 covenant of circumcision (Abram aged 99) under 2107c AM, 1897 BC.
+  - Position **Ussher, Annals: covenant of Genesis 15, 1912 BC** (1912 BCE, held by James Ussher): Ussher dates the covenant of Genesis 15 to 1912 BC. He dates the Genesis 17 covenant of circumcision, when Abram was 99, to 1897 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 77, 81 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Abraham's migration to Canaan** — `events/abraham-migration.toml` (draft)
   - Axis / confidence: narrative / speculative; range 2000 BCE – 1001 BCE
-  - Summary: Abraham's journey from Haran to Canaan, with a first stop at Shechem, a detour to Egypt in famine, and return. Whether there was a historical patriarchal age at all is a separate question (see the linked issue); the positions here record the dates offered by those who accept the setting.
+  - Summary: Abraham travels from Haran to Canaan. He stops first at Shechem, goes down to Egypt during a famine, then returns. Whether there was a historical age of the patriarchs at all is a separate question (see the linked issue). The positions here give the dates offered by people who accept that setting.
   - Verse (describes): Gen 11:31 – Gen 11:32 (Terah's family leaves Ur for Haran)
-  - Verse (describes): Gen 12:1 – Gen 12:9 (The call and the journey to Shechem, Bethel and the Negeb)
+  - Verse (describes): Gen 12:1 – Gen 12:9 (The call, and the journey to Shechem, Bethel and the Negeb)
   - Verse (describes): Gen 12:10 – Gen 12:20 (Famine and the stay in Egypt)
   - Verse (describes): Gen 13:1 – Gen 13:4 (Return from Egypt to the Negeb and Bethel)
-  - Verse (alludes): Josh 24:2 – Josh 24:3 (Joshua's review: God took Abraham from beyond the River and led him through Canaan)
-  - Verse (alludes): Neh 9:7 – Neh 9:8 (Prayer: God chose Abram and brought him out of Ur of the Chaldeans)
-  - Verse (alludes): Ps 105:9 – Ps 105:15 (The covenant with Abraham and God's protection of the wandering patriarchs)
-  - Verse (alludes): Acts 7:2 – Acts 7:5 (Stephen: the God of glory appeared to Abraham in Mesopotamia and he moved to Haran, then Canaan)
+  - Verse (alludes): Josh 24:2 – Josh 24:3 (Joshua recalls that God took Abraham from beyond the River and led him through Canaan)
+  - Verse (alludes): Neh 9:7 – Neh 9:8 (A prayer recalls that God chose Abram and brought him out of Ur of the Chaldeans)
+  - Verse (alludes): Ps 105:9 – Ps 105:15 (The covenant with Abraham, and God's protection of the wandering patriarchs)
+  - Verse (alludes): Acts 7:2 – Acts 7:5 (Stephen says the God of glory appeared to Abraham in Mesopotamia. Abraham then moved to Haran, then Canaan)
   - Verse (alludes): Heb 11:8 – Heb 11:10 (By faith Abraham obeyed and set out, not knowing where he was going)
-  - Position **Ussher: 1922 BC** (1922 BCE, held by James Ussher): Ussher fixed the span from creation to Abraham's migration as 2082 years, from 4004 to 1922 BC.
+  - Position **Ussher: 1922 BC** (1922 BCE, held by James Ussher): Ussher counted 2082 years from creation to Abraham's move, from 4004 to 1922 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *Ussher chronology*, Wikipedia <https://en.wikipedia.org/wiki/Ussher_chronology>
-  - Position **A 2nd-millennium BCE patriarchal age** (2000 BCE – 1001 BCE, held by William F. Albright and G. Ernest Wright): Albright and Wright believed the patriarchs were real individuals or believable composites who lived in the patriarchal age, the 2nd millennium BCE. The range is the whole millennium, not a narrower claim.
+  - Position **A 2nd-millennium BCE patriarchal age** (2000 BCE – 1001 BCE, held by William F. Albright and G. Ernest Wright): Albright and Wright believed the patriarchs were real people, or believable composites of real people, who lived in the 2nd millennium BCE. The range is the whole thousand years, not a narrower claim.
     - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
-  - Position **Ussher, Annals: Abraham called from Ur, 1922 BC (AM 2083)** (1922 BCE, held by James Ussher): Ussher heads the call of Abraham out of Ur 2083a AM, 1922 BC; after Terah died at Haran he is called again in 2083 AM, 1921 BC.
+  - Position **Ussher, Annals: Abraham called from Ur, 1922 BC (AM 2083)** (1922 BCE, held by James Ussher): Ussher puts the call of Abraham out of Ur in 1922 BC. After Terah died at Haran, he places a second call in 1921 BC. Ussher's Annals use the same Bible-based count.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 70-71 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Jacob's family descends into Egypt** — `events/jacob-descent-egypt.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1928 BCE – 1700 BCE
-  - Summary: Jacob and his household, seventy persons in all, move to Egypt at Joseph's invitation during the famine and settle in Goshen. The date depends on how the exodus is dated; historicity is a separate question (see the patriarchs issue).
-  - Verse (describes): Gen 45:9 – Gen 45:28 (Joseph invites his father; Jacob resolves to go)
-  - Verse (describes): Gen 46:1 – Gen 46:34 (God's reassurance at Beersheba; the list of those who went down; arrival in Goshen)
-  - Verse (describes): Gen 47:1 – Gen 47:12 (Presented to Pharaoh and settled in the land of Rameses)
-  - Verse (describes): Exod 1:1 – Exod 1:7 (The sons of Israel who came to Egypt with Jacob, and their increase)
-  - Verse (alludes): Deut 26:5 (A wandering Aramean was my father; he went down to Egypt few in number)
+  - Summary: Jacob and his household, seventy people in all, move to Egypt at Joseph's invitation during the famine. They settle in Goshen. The date depends on how the exodus is dated. Whether this happened historically is a separate question (see the patriarchs issue).
+  - Verse (describes): Gen 45:9 – Gen 45:28 (Joseph invites his father, and Jacob decides to go)
+  - Verse (describes): Gen 46:1 – Gen 46:34 (God reassures Jacob at Beersheba. The list of those who went down. Arrival in Goshen)
+  - Verse (describes): Gen 47:1 – Gen 47:12 (Jacob is presented to Pharaoh and settled in the land of Rameses)
+  - Verse (describes): Exod 1:1 – Exod 1:7 (The sons of Israel who came to Egypt with Jacob, and how they multiplied)
+  - Verse (alludes): Deut 26:5 (A wandering Aramean was my father. He went down to Egypt with few people)
   - Verse (alludes): Josh 24:4 (Jacob and his children went down to Egypt)
-  - Verse (alludes): Ps 105:23 (Israel came to Egypt; Jacob lived as a foreigner in the land of Ham)
-  - Verse (alludes): Acts 7:14 – Acts 7:15 (Stephen: Joseph sent for Jacob and seventy-five persons; Jacob went down to Egypt)
-  - Position **Masoretic Text chronology: 1928 BCE** (1928 BCE, held by the Masoretic Text chronology as tabulated by Wikipedia): In the article's table for the Masoretic Text, Jacob's entry into Egypt falls in 1928 BCE (AM 2236).
+  - Verse (alludes): Ps 105:23 (Israel came to Egypt. Jacob lived as a foreigner in the land of Ham)
+  - Verse (alludes): Acts 7:14 – Acts 7:15 (Stephen says Joseph sent for Jacob and seventy-five persons, and Jacob went down to Egypt)
+  - Position **Masoretic Text chronology: 1928 BCE** (1928 BCE, held by the Masoretic Text chronology as tabulated by Wikipedia): In the Wikipedia article's table for the Masoretic Text (the traditional Hebrew text of the Bible), Jacob enters Egypt in 1928 BCE (AM 2236). AM means years counted from creation.
     - Source: *Chronology of the Bible*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_the_Bible>
-  - Position **Mid-19th century BCE (with a 15th-century exodus)** (1860 BCE – 1840 BCE, held by Bryant G. Wood): Wood links a mid-19th-century BC Asiatic settlement at Pi-Ramesse that "could well be that of Jacob and his family shortly after their arrival in Egypt" with a 15th-century exodus. The range is a reading of "mid-19th century", not Wood's own figures.
+  - Position **Mid-19th century BCE (with a 15th-century exodus)** (1860 BCE – 1840 BCE, held by Bryant G. Wood): Wood links an Asiatic settlement at Pi-Ramesse from the mid-19th century BC with a 15th-century exodus. He says it "could well be that of Jacob and his family shortly after their arrival in Egypt". The range here is a reading of "mid-19th century". It is not Wood's own figures.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **c. 1700 BCE (with a 13th-century exodus)** (1700 BCE, held by advocates of a 13th-century exodus, as characterised by Bryant G. Wood): Wood says that with a 13th-century exodus Jacob would have had to enter Egypt much later, c. 1700 BC, than the settlement he identifies.
+  - Position **c. 1700 BCE (with a 13th-century exodus)** (1700 BCE, held by advocates of a 13th-century exodus, as characterised by Bryant G. Wood): Wood says that with a 13th-century exodus, Jacob would have had to enter Egypt much later, about 1700 BC. That is later than the settlement he identifies.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **Ussher, Annals: Jacob goes down into Egypt, 1706 BC** (1706 BCE, held by James Ussher): Ussher has Jacob, aged 130, go down into Egypt at the beginning of the third year of the famine, under 2298b AM, 1706 BC.
+  - Position **Ussher, Annals: Jacob goes down into Egypt, 1706 BC** (1706 BCE, held by James Ussher): Ussher has Jacob, aged 130, go down into Egypt at the start of the third year of the famine, in 1706 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 135-138 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Joseph in Egypt** — `events/joseph-in-egypt.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1860 BCE – 1715 BCE
-  - Summary: Joseph, sold by his brothers to traders, rises from slavery and prison to become Pharaoh's vizier and saves Egypt and his family from famine. The story is widely read as a late wisdom novella (see the patriarchs issue); the one dating position here bounds only the arrival of his family.
+  - Summary: Joseph is sold by his brothers to traders. He rises from slavery and prison to become Pharaoh's vizier, and he saves Egypt and his own family from famine. Many scholars read the story as a late wisdom novella (see the patriarchs issue). The one dating position here sets limits only on when his family arrived.
   - Verse (describes): Gen 37:1 – Gen 37:36 (Sold into Egypt)
   - Verse (describes): Gen 39:1 – Gen 39:23 (Potiphar's house and prison)
-  - Verse (describes): Gen 40:1 – Gen 41:57 (Dreams interpreted; elevation under Pharaoh; the years of plenty and famine)
-  - Verse (describes): Gen 42:1 – Gen 45:28 (The brothers come for grain; Joseph reveals himself)
-  - Verse (describes): Gen 50:15 – Gen 50:26 (Joseph forgives his brothers; his death at 110 and his oath about his bones)
+  - Verse (describes): Gen 40:1 – Gen 41:57 (Dreams interpreted, Joseph raised up under Pharaoh, and the years of plenty and famine)
+  - Verse (describes): Gen 42:1 – Gen 45:28 (The brothers come for grain, and Joseph reveals himself)
+  - Verse (describes): Gen 50:15 – Gen 50:26 (Joseph forgives his brothers. He dies at 110 after making them swear about his bones)
   - Verse (alludes): Exod 13:19 (Moses takes Joseph's bones, as Joseph had made Israel swear)
   - Verse (alludes): Josh 24:32 (Joseph's bones buried at Shechem)
-  - Verse (alludes): Ps 105:16 – Ps 105:22 (God sent a man ahead, Joseph sold as a slave, made lord of Pharaoh's house)
-  - Verse (alludes): Acts 7:9 – Acts 7:16 (Stephen: the patriarchs, jealous, sold Joseph, but God was with him)
-  - Verse (alludes): Heb 11:22 (By faith Joseph spoke of the exodus and gave instructions about his bones)
-  - Position **Family arrives in Egypt in the mid-19th century BCE** (1860 BCE – 1840 BCE, held by Bryant G. Wood): Wood identifies a mid-19th-century BC Asiatic settlement at Pi-Ramesse with Jacob's family shortly after their arrival in Egypt. Joseph's rise precedes that arrival (Genesis 45-46), so this is a bracket for the end of his rise, not a date for his life.
+  - Verse (alludes): Ps 105:16 – Ps 105:22 (God sent a man ahead. Joseph was sold as a slave and made lord of Pharaoh's house)
+  - Verse (alludes): Acts 7:9 – Acts 7:16 (Stephen says the jealous patriarchs sold Joseph, but God was with him)
+  - Verse (alludes): Heb 11:22 (By faith Joseph spoke of the exodus and gave orders about his bones)
+  - Position **Family arrives in Egypt in the mid-19th century BCE** (1860 BCE – 1840 BCE, held by Bryant G. Wood): Wood identifies an Asiatic settlement at Pi-Ramesse, from the mid-19th century BC, with Jacob's family soon after they reached Egypt. Joseph's rise came before that arrival (Genesis 45-46). So this is a limit for the end of his rise, not a date for his life.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **Ussher, Annals: Joseph made governor, 1715 BC (age 30)** (1715 BCE, held by James Ussher): Ussher has Joseph, 30 years old, interpret Pharaoh's dreams and be made governor under 2289b AM, 1715 BC; the seven years of famine begin under 2296c AM, 1708 BC.
+  - Position **Ussher, Annals: Joseph made governor, 1715 BC (age 30)** (1715 BCE, held by James Ussher): Ussher has Joseph, aged 30, explain Pharaoh's dreams and be made governor in 1715 BC. The seven years of famine begin in 1708 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 131-133 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **The Sinai covenant and the giving of the law** — `events/sinai-covenant.toml` (draft)
   - Axis / confidence: narrative / contested; range 1491 BCE – 1260 BCE
-  - Summary: At Sinai, three months after leaving Egypt, Israel is bound to God by covenant: the Decalogue, the Book of the Covenant, the tabernacle instructions and the sealing of the covenant. Its date follows the date of the exodus; whether the covenant's form can itself be dated is disputed (see the linked issue).
-  - Verse (describes): Exod 19:1 – Exod 19:25 (Arrival at Sinai in the third month; the theophany)
-  - Verse (describes): Exod 20:1 – Exod 20:21 (The Decalogue)
-  - Verse (describes): Exod 21:1 – Exod 23:33 (The Book of the Covenant)
-  - Verse (describes): Exod 24:1 – Exod 24:18 (The covenant ratified; Moses on the mountain)
-  - Verse (describes): Exod 31:18 (Two tablets of stone)
-  - Verse (describes): Exod 32:1 – Exod 34:35 (The golden calf; the tablets renewed)
-  - Verse (alludes): Deut 5:1 – Deut 5:22 (Moses recalls the covenant at Horeb and the Decalogue)
+  - Summary: Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue).
+  - Verse (describes): Exod 19:1 – Exod 19:25 (arrival at Sinai in the third month; God appears on the mountain)
+  - Verse (describes): Exod 20:1 – Exod 20:21 (the Ten Commandments)
+  - Verse (describes): Exod 21:1 – Exod 23:33 (the Book of the Covenant, a set of laws)
+  - Verse (describes): Exod 24:1 – Exod 24:18 (the covenant is sealed; Moses goes up the mountain)
+  - Verse (describes): Exod 31:18 (the two stone tablets)
+  - Verse (describes): Exod 32:1 – Exod 34:35 (the golden calf, and the tablets made again)
+  - Verse (alludes): Deut 5:1 – Deut 5:22 (Moses recalls the covenant at Horeb, and the Ten Commandments)
   - Verse (alludes): Neh 9:13 – Neh 9:14 (You came down on Mount Sinai and gave them right rules and the Sabbath)
-  - Verse (alludes): Ps 68:7 – Ps 68:8 (The earth quaked at God's presence, Sinai itself before God)
-  - Verse (alludes): Acts 7:37 – Acts 7:44 (Stephen: Moses received living oracles at Sinai)
-  - Verse (alludes): Gal 3:17 – Gal 3:19 (The law came 430 years after the promise to Abraham)
+  - Verse (alludes): Ps 68:7 – Ps 68:8 (the earth shook at God's presence, and Sinai itself before God)
+  - Verse (alludes): Acts 7:37 – Acts 7:44 (Stephen: Moses received living words at Sinai)
+  - Verse (alludes): Gal 3:17 – Gal 3:19 (the law came 430 years after the promise to Abraham)
   - Verse (alludes): Heb 12:18 – Heb 12:21 (You have not come to a mountain that can be touched)
-  - Position **With a 15th-century exodus (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): Wood dates the exodus to c. 1446 BC; Exodus 19:1 puts Sinai in the third month after leaving Egypt, so the covenant falls in the same year.
+  - Position **With a 15th-century exodus (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): The scholar Bryant G. Wood dates the exodus to about 1446 BC. Exodus 19:1 puts Sinai in the third month after leaving Egypt, so the covenant falls in the same year.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 477 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **With a 13th-century exodus (c. 1260 BCE)** (1260 BCE, held by K. A. Kitchen): Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II; Sinai follows within months. Kitchen also argues that the covenant texts match Hittite treaty forms of c. 1400-1200 BC.
+  - Position **With a 13th-century exodus (c. 1260 BCE)** (1260 BCE, held by K. A. Kitchen): The scholar K. A. Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II. Sinai follows within months. Kitchen also argues that the covenant texts match the form of Hittite treaties from about 1400 to 1200 BC.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 478–479 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **Ussher, Annals: Israel at Sinai, 1491 BC** (1491 BCE, held by James Ussher): Ussher dates the exodus to 2513b AM, 1491 BC, and the arrival at Sinai on the third day of the third month of that first year.
+  - Position **Ussher, Annals: Israel at Sinai, 1491 BC** (1491 BCE, held by James Ussher): The chronologist James Ussher dates the exodus to 2513b AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 192 and preceding exodus entries <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **The fall of Jericho and the conquest of Canaan** — `events/conquest-of-canaan.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1451 BCE – 1210 BCE
-  - Summary: Israel crosses the Jordan under Joshua, Jericho falls, and Ai, Gibeon, the southern and northern coalitions and Hazor follow. Two datings are argued by those who accept a conquest (c. 1400 and c. 1220-1210 BCE), while most archaeologists reject the conquest model altogether; that dispute is kept in the linked historicity issue, not turned into a date.
-  - Verse (describes): Josh 3:1 – Josh 4:24 (Crossing the Jordan)
+  - Summary: Israel crosses the Jordan under Joshua. Jericho falls, and then Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE. Most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date.
+  - Verse (describes): Josh 3:1 – Josh 4:24 (The crossing of the Jordan)
   - Verse (describes): Josh 5:13 – Josh 6:27 (The fall of Jericho)
   - Verse (describes): Josh 7:1 – Josh 8:29 (Achan and the destruction of Ai)
   - Verse (describes): Josh 9:1 – Josh 10:43 (Gibeon and the southern campaign)
-  - Verse (describes): Josh 11:1 – Josh 11:23 (The northern coalition; Hazor burned)
-  - Verse (describes): Josh 12:1 – Josh 12:24 (List of defeated kings)
+  - Verse (describes): Josh 11:1 – Josh 11:23 (The northern coalition. Hazor is burned)
+  - Verse (describes): Josh 12:1 – Josh 12:24 (A list of defeated kings)
   - Verse (alludes): Josh 24:11 – Josh 24:13 (Joshua's farewell: you crossed the Jordan and came to Jericho)
-  - Verse (describes): Judg 1:1 – Judg 1:36 (The same period seen as incomplete conquest by the tribes)
+  - Verse (describes): Judg 1:1 – Judg 1:36 (The same period, seen as an incomplete conquest by the tribes)
   - Verse (alludes): Neh 9:22 – Neh 9:25 (You gave them kingdoms and peoples; they took fortified cities)
   - Verse (alludes): Ps 44:1 – Ps 44:3 (Our fathers did not win the land by their own sword)
   - Verse (alludes): Ps 78:54 – Ps 78:55 (He drove out nations and apportioned their inheritance)
   - Verse (alludes): Ps 105:43 – Ps 105:45 (He gave them the lands of the nations)
-  - Verse (alludes): Acts 7:45 (Stephen: the tabernacle was brought in with Joshua when they dispossessed the nations)
-  - Verse (alludes): Heb 11:30 – Heb 11:31 (By faith the walls of Jericho fell; Rahab)
-  - Position **Conquest c. 1406-1400 BCE** (1406 BCE – 1400 BCE, held by Bryant G. Wood): Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 support a 15th-century exodus and a conquest in 1406-1400 BC, with Jericho destroyed c. 1400 and the Jubilee count back-calculated to 1406.
+  - Verse (alludes): Acts 7:45 (Stephen says the tabernacle was brought in with Joshua when they drove out the nations)
+  - Verse (alludes): Heb 11:30 – Heb 11:31 (By faith the walls of Jericho fell. Rahab is also named)
+  - Position **Conquest c. 1406-1400 BCE** (1406 BCE – 1400 BCE, held by Bryant G. Wood): Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400. The Jubilee count (Israel's cycle of 50-year release years) is worked backward to 1406.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 488–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Argument (for): Kitchen's own account of Jericho concedes remains of c. 1400-1275 BC above the Middle Bronze city; Wood holds that the Spring Hill sequence has a gap c. 1320-1100 BC and no 13th-century pottery, which suits a destruction c. 1400 rather than a 13th-century one.
+    - Argument (for): Kitchen's own account of Jericho admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery. He says this suits a destruction around 1400 better than a 13th-century one.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
       - Verse (describes): Josh 6:20
-    - Argument (against): Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE, too early for a 15th-century or any later conquest; 1995 radiocarbon testing dated the destruction level to the late 17th or 16th century BCE.
+    - Argument (against): Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE.
       - Source: *Battle of Jericho*, Wikipedia, sections on Kenyon and radiocarbon testing <https://en.wikipedia.org/wiki/Battle_of_Jericho>
       - Verse (describes): Josh 6:20
-  - Position **Conquest 1220-1210 BCE** (1220 BCE – 1210 BCE, held by K. A. Kitchen): Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (Wood's report of Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, c. 1210 BC (Wood p. 476), so the conquest must precede that.
+  - Position **Conquest 1220-1210 BCE** (1220 BCE – 1210 BCE, held by K. A. Kitchen): Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476). So the conquest must come before that.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476, 478 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
     - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
-    - Argument (for): Kitchen attributes the lack of 13th-century occupation at Jericho to erosion: there may have been a Jericho during 1275-1220, but above the tiny remains of 1400-1275 all of it has long since gone.
+    - Argument (for): Kitchen blames erosion for the lack of 13th-century remains at Jericho. There may have been a Jericho between 1275 and 1220. But above the tiny remains of 1400-1275, all of it has long since gone.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
       - Verse (describes): Josh 6:20
-    - Argument (against): Wood: at Jericho and Ai no evidence has been found for occupation in the late 13th century; a destruction of Hazor c. 1230 BC would leave no city for the Jabin of Judges 4 to rule.
+    - Argument (against): Wood says no evidence has been found at Jericho and Ai for settlement in the late 13th century. He adds that a destruction of Hazor around 1230 BC would leave no city for the Jabin of Judges 4 to rule.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476–477 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
       - Verse (describes): Josh 11:10 – Josh 11:11
       - Verse (describes): Judg 4:2
-  - Position **Ussher, Annals: fall of Jericho, 1451 BC** (1451 BCE, held by James Ussher): Ussher places the fall of Jericho under 2553c AM, 1451 BC.
+  - Position **Ussher, Annals: fall of Jericho, 1451 BC** (1451 BCE, held by James Ussher): Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 312 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **The Exodus from Egypt** — `events/exodus.toml` (draft)
   - Axis / confidence: narrative / contested; range 1450 BCE – 1213 BCE
-  - Summary: Israel's departure from Egypt under Moses. Among scholars who date it as an event, two dates dominate: a 15th-century date read from 1 Kings 6:1, and a 13th-century date in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it falls before c. 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan.
-  - Verse (background): Exod 1:11 (Pithom and Raamses)
+  - Summary: This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates. One is in the 15th century BCE, read from 1 Kings 6:1. The other is in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan.
+  - Verse (background): Exod 1:11 (The store cities Pithom and Raamses)
   - Verse (dates): Exod 12:40 – Exod 12:41 (430 years in Egypt)
-  - Position **Early date (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): Takes the 480 years of 1 Kings 6:1 as a straight count back from the fourth year of Solomon, which puts the Exodus in the mid-15th century BCE.
+  - Position **Early date (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): Wood takes the 480 years of 1 Kings 6:1 as a plain count back from the fourth year of Solomon. That puts the Exodus in the middle of the 15th century BCE. Traditional here means the date that follows the Bible's own numbers.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 475–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Argument (for): 1 Kings 6:1 dates the temple's foundation to the 480th year after Israel came out of Egypt, in Solomon's fourth year; counted back from a fourth year of c. 967/966 BCE (Young: the spring of 967 or 966 depending on the reckoning rule), that is c. 1446 BCE.
+    - Argument (for): 1 Kings 6:1 dates the start of the temple to the 480th year after Israel came out of Egypt. That year is Solomon's fourth. Counting back from a fourth year of about 967/966 BCE gives about 1446 BCE. Young says the fourth year is the spring of 967 or 966, depending on the counting rule.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
       - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, pp. 599, 601 <https://www.rcyoung.org/articles/solomon.pdf>
       - Verse (dates): 1Kgs 6:1
-    - Argument (against): Exodus 1:11 has the Israelites building a store city called Raamses, a name associated with the Ramesside pharaohs of the 13th century.
+    - Argument (against): Exodus 1:11 has the Israelites building a store city called Raamses. That name is linked with the Ramesside pharaohs of the 13th century.
       - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
       - Verse (dates): Exod 1:11
-  - Position **Late date (13th century BCE, reign of Ramesses II)** (1279 BCE – 1213 BCE, held by K. A. Kitchen): Places the Exodus in the 13th century BCE under Ramesses II (reigned c. 1279–1213 BCE on the chronology most Egyptologists follow).
+  - Position **Late date (13th century BCE, reign of Ramesses II)** (1279 BCE – 1213 BCE, held by K. A. Kitchen): Kitchen places the Exodus in the 13th century BCE under Ramesses II. Ramesses reigned about 1279-1213 BCE on the dating most Egyptologists follow. Critical here means the date that leans on Egyptian evidence.
     - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
     - Source: *Ramesses II (reign dates following von Beckerath 1997)*, Wikipedia <https://en.wikipedia.org/wiki/Ramesses_II>
-    - Argument (for): The store city "Raamses" of Exodus 1:11 fits the building programme of the Ramesside kings in the eastern Nile Delta.
+    - Argument (for): The store city "Raamses" of Exodus 1:11 fits the building program of the Ramesside kings in the eastern Nile Delta.
       - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
       - Verse (dates): Exod 1:11
-    - Argument (against): Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th; a late date has to treat the figure as something other than a straight count.
+    - Argument (against): Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th. A late date has to treat the figure as something other than a plain count.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
       - Verse (dates): 1Kgs 6:1
-  - Attestation — Merneptah Stele *consistent*: Does not mention an exodus. It shows Israel already present in Canaan as a people by Merneptah's fifth year (c. 1208 BCE), so any exodus came before that — compatible with either date above.
+  - Attestation — Merneptah Stele *consistent*: The Stele does not mention an exodus. It shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that. This fits either date above.
     - Source: *The Context of Scripture, Volume 2: Monumental Inscriptions*, William W. Hallo and K. Lawson Younger Jr. (eds.), 2000, pp. 40–41
 
 - [ ] **Ruth** — `events/ruth.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1400 BCE – 1073 BCE
-  - Summary: Ruth the Moabite, widowed in Moab, returns to Bethlehem with Naomi, gleans in Boaz's field and marries him; their son Obed is grandfather of David. The story is set 'when the judges ruled'; the book itself is generally dated much later (see the linked issue).
-  - Verse (describes): Ruth 1:1 – Ruth 1:22 (Famine, Moab, Naomi and Ruth return to Bethlehem)
-  - Verse (describes): Ruth 2:1 – Ruth 2:23 (Ruth gleans in Boaz's field)
-  - Verse (describes): Ruth 3:1 – Ruth 3:18 (The threshing floor)
-  - Verse (describes): Ruth 4:1 – Ruth 4:17 (Redemption at the gate; marriage; Obed's birth)
-  - Verse (describes): Ruth 4:18 – Ruth 4:22 (Genealogy from Perez to David)
+  - Summary: Ruth, a Moabite widow, returns to Bethlehem with her mother-in-law Naomi. She gathers leftover grain in Boaz's field and marries him. Their son Obed becomes King David's grandfather. The story is set 'when the judges ruled'. The book itself is generally dated much later (see the linked issue).
+  - Verse (describes): Ruth 1:1 – Ruth 1:22 (famine, Moab, and Naomi and Ruth's return to Bethlehem)
+  - Verse (describes): Ruth 2:1 – Ruth 2:23 (Ruth gathers leftover grain in Boaz's field)
+  - Verse (describes): Ruth 3:1 – Ruth 3:18 (the night on the threshing floor)
+  - Verse (describes): Ruth 4:1 – Ruth 4:17 (Boaz settles the claim at the town gate, marries Ruth, and Obed is born)
+  - Verse (describes): Ruth 4:18 – Ruth 4:22 (the family line from Perez to David)
   - Verse (alludes): 1Chr 2:11 – 1Chr 2:15 (Salmon, Boaz, Obed, Jesse, David)
-  - Verse (alludes): Matt 1:5 – Matt 1:6 (Boaz, Ruth and Obed in the ancestry of Jesus)
-  - Position **In the days when the judges ruled (Ruth 1:1)** (1400 BCE – 1073 BCE): A bracket from the book's own setting, not a date offered by any scholar: the narrative is set in the time of the judges, and the range is the span of Wood's judges-period anchors. Josephus, by contrast, has Boaz living at the time of Eli.
+  - Verse (alludes): Matt 1:5 – Matt 1:6 (Boaz, Ruth and Obed in the family line of Jesus)
+  - Position **In the days when the judges ruled (Ruth 1:1)** (1400 BCE – 1073 BCE): This range comes from the book's own setting, not from any scholar. The story is set in the time of the judges. The range covers the dates the scholar Bryant G. Wood gives for that period. Josephus, by contrast, has Boaz living in the time of Eli.
     - Source: *Book of Ruth*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Ruth>
     - Source: *Boaz*, Wikipedia <https://en.wikipedia.org/wiki/Boaz>
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **The period of the judges** — `events/judges-period.toml` (draft)
   - Axis / confidence: narrative / contested; range 1300 BCE – 1073 BCE
-  - Summary: The generations between Joshua and the monarchy, in which tribal leaders (the judges) deliver Israel from oppressors in a repeated cycle of apostasy, oppression, cry and rescue. The datable anchors sit inside a disputed range; the book's historical value is itself debated (see the linked issues).
-  - Verse (describes): Judg 2:6 – Judg 3:6 (Programmatic introduction: the cycle and the nations left in the land)
-  - Verse (describes): Judg 3:7 – Judg 16:31 (The accounts of the judges from Othniel to Samson)
-  - Verse (dates): Judg 11:26 (Jephthah: Israel has held the Arnon region for 300 years)
-  - Verse (describes): Judg 17:1 – Judg 21:25 (Closing episodes; no king in Israel)
+  - Summary: These are the generations between Joshua and the kings. Tribal leaders, the judges, rescue Israel from its oppressors, again and again. The cycle runs from turning away from God, to oppression, to a cry for help, to rescue. The datable anchors sit inside a disputed range. How far the book can be trusted as history is itself debated (see the linked issues).
+  - Verse (describes): Judg 2:6 – Judg 3:6 (The introduction: the repeating cycle, and the nations left in the land)
+  - Verse (describes): Judg 3:7 – Judg 16:31 (The stories of the judges, from Othniel to Samson)
+  - Verse (dates): Judg 11:26 (Jephthah says Israel has held the Arnon region for 300 years)
+  - Verse (describes): Judg 17:1 – Judg 21:25 (The closing episodes. There is no king in Israel)
   - Verse (alludes): 1Sam 12:9 – 1Sam 12:11 (Samuel recalls Jerubbaal, Barak, Jephthah and Samson)
   - Verse (dates): 1Kgs 6:1 (480 years from the exodus to Solomon's fourth year)
-  - Verse (alludes): Neh 9:26 – Neh 9:28 (Disobedience and deliverance by saviours)
-  - Verse (alludes): Ps 78:56 – Ps 78:64 (Israel's rebellion in the time of the judges, up to Shiloh's fall)
-  - Verse (alludes): Ps 106:34 – Ps 106:46 (They did not destroy the peoples; he often delivered them)
-  - Verse (alludes): Acts 13:20 (Paul: after that he gave them judges until Samuel)
-  - Verse (alludes): Heb 11:32 – Heb 11:34 (Gideon, Barak, Samson, Jephthah named among the faithful)
-  - Position **Early-date framework (c. 1300-1073 BCE anchors)** (1300 BCE – 1073 BCE, held by Bryant G. Wood): In Wood's early-date scheme Eglon's palace at Jericho dates c. 1300 BC (Judges 3:12-30) and Deborah and Barak c. 1230 BC; estimates for the start of Jephthah's judgeship run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range runs from the first of these anchors to the last estimate; it is not a claim about where the period ends.
+  - Verse (alludes): Neh 9:26 – Neh 9:28 (Disobedience, and rescue by deliverers)
+  - Verse (alludes): Ps 78:56 – Ps 78:64 (Israel's rebellion in the time of the judges, up to the fall of Shiloh)
+  - Verse (alludes): Ps 106:34 – Ps 106:46 (They did not destroy the peoples. He rescued them again and again)
+  - Verse (alludes): Acts 13:20 (Paul says that after that God gave them judges until Samuel)
+  - Verse (alludes): Heb 11:32 – Heb 11:34 (Gideon, Barak, Samson and Jephthah are named among the faithful)
+  - Position **Early-date framework (c. 1300-1073 BCE anchors)** (1300 BCE – 1073 BCE, held by Bryant G. Wood): In Wood's early-date scheme, Eglon's palace at Jericho dates to about 1300 BC (Judges 3:12-30) and Deborah and Barak to about 1230 BC. Estimates for the start of Jephthah's time as judge run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range runs from the first of these anchors to the last estimate. It is not a claim about where the period ends.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **Deborah and Barak** — `events/deborah-barak.toml` (draft)
   - Axis / confidence: narrative / contested; range 1285 BCE – 1067 BCE
-  - Summary: The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera, who served Jabin king of Hazor, at the Kishon; Jael kills Sisera, and Judges 5 celebrates the victory in verse. The date is contested between the late 13th century and the 11th.
-  - Verse (describes): Judg 4:1 – Judg 4:24 (Deborah, Barak, Sisera, Jael: the prose account)
-  - Verse (describes): Judg 5:1 – Judg 5:31 (The Song of Deborah, the poetic account)
-  - Verse (alludes): 1Sam 12:9 – 1Sam 12:11 (Samuel: the Lord sent Jerubbaal, Barak and Jephthah; Sisera is named as the earlier oppressor)
+  - Summary: The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera at the Kishon. Sisera served Jabin, king of Hazor. Jael kills Sisera, and Judges 5 celebrates the victory in verse. The date is disputed, from the late 13th century to the 11th.
+  - Verse (describes): Judg 4:1 – Judg 4:24 (Deborah, Barak, Sisera and Jael: the story in prose)
+  - Verse (describes): Judg 5:1 – Judg 5:31 (The Song of Deborah: the story in poetry)
+  - Verse (alludes): 1Sam 12:9 – 1Sam 12:11 (Samuel says the Lord sent Jerubbaal, Barak and Jephthah. Sisera is named as the earlier oppressor)
   - Verse (alludes): Ps 83:9 – Ps 83:10 (Do to them as to Sisera and Jabin at the river Kishon)
-  - Verse (alludes): Heb 11:32 (Barak named among those the writer has no time to tell of)
-  - Position **c. 1230 BCE (a late stroke in a 15th-century conquest)** (1230 BCE, held by Bryant G. Wood): Wood has Joshua destroying an earlier Hazor c. 1400 BC and Deborah and Barak administering the coup de grace c. 1230 BC, the date of the Late Bronze Age city's destruction at Hazor.
+  - Verse (alludes): Heb 11:32 (Barak is named among those the writer has no time to tell about)
+  - Position **c. 1230 BCE (a late stroke in a 15th-century conquest)** (1230 BCE, held by Bryant G. Wood): Wood has Joshua destroying an earlier Hazor about 1400 BC. He has Deborah and Barak finishing the job about 1230 BC, the date when the Late Bronze Age city of Hazor was destroyed.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 476–477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - Position **Seder Olam: 1107-1067 BC** (1107 BCE – 1067 BCE, held by Seder Olam Rabbah): Seder Olam Rabbah places Deborah's 40 years of judging Israel from 1107 BC until her death in 1067 BC (as reported by Wikipedia).
+  - Position **Seder Olam: 1107-1067 BC** (1107 BCE – 1067 BCE, held by Seder Olam Rabbah): Seder Olam Rabbah, an early Jewish chronology of the Bible, puts Deborah's 40 years of judging Israel from 1107 BC until her death in 1067 BC (as reported by Wikipedia).
     - Source: *Deborah*, Wikipedia <https://en.wikipedia.org/wiki/Deborah>
-  - Position **Ussher, Annals: Deborah judges, 1285 BC** (1285 BCE, held by James Ussher): Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim stands under 2719d AM, 1285 BC.
+  - Position **Ussher, Annals: Deborah judges, 1285 BC** (1285 BCE, held by James Ussher): Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim is under 1285 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 351 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Gideon** — `events/gideon.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1245 BCE – 1073 BCE
-  - Summary: Gideon of Manasseh, called Jerubbaal, destroys his father's altar to Baal and, with 300 men, routs the Midianite and Amalekite raiders; he refuses the kingship, but his son Abimelech later seizes it. The sources read give no date for Gideon himself.
-  - Verse (describes): Judg 6:1 – Judg 6:40 (Midianite oppression; the call; the altar of Baal; the fleece)
-  - Verse (describes): Judg 7:1 – Judg 7:25 (The 300 and the night attack)
-  - Verse (describes): Judg 8:1 – Judg 8:35 (Pursuit of the kings; the ephod; kingship refused; Gideon's death)
+  - Summary: Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal. With 300 men he routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself.
+  - Verse (describes): Judg 6:1 – Judg 6:40 (Midianite oppression, the call, the altar of Baal and the fleece)
+  - Verse (describes): Judg 7:1 – Judg 7:25 (The 300 men and the night attack)
+  - Verse (describes): Judg 8:1 – Judg 8:35 (The chase after the kings, the ephod, the kingship refused and Gideon's death)
   - Verse (describes): Judg 9:1 – Judg 9:57 (Abimelech, Jerubbaal's son)
   - Verse (alludes): 1Sam 12:11 (The Lord sent Jerubbaal and Barak, Jephthah and Samuel)
-  - Verse (alludes): Ps 83:9 – Ps 83:12 (Do to them as to Midian; Oreb, Zeeb, Zebah and Zalmunna)
+  - Verse (alludes): Ps 83:9 – Ps 83:12 (Do to them as you did to Midian, and to Oreb, Zeeb, Zebah and Zalmunna)
   - Verse (alludes): Isa 9:4 (As on the day of Midian)
   - Verse (alludes): Isa 10:26 (The slaughter of Midian at the rock of Oreb)
-  - Verse (alludes): Heb 11:32 (Gideon named among the faithful)
-  - Position **Between Deborah (c. 1230) and Jephthah (1130-1073)** (1230 BCE – 1073 BCE): A bracket from the order of the book, not a date offered by any scholar: Gideon follows Deborah and Barak (c. 1230 BC in Wood's scheme) and precedes Jephthah, whose judgeship is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment appearing to represent the name Jerubbaal is reported; it supports only the antiquity of the name.
+  - Verse (alludes): Heb 11:32 (Gideon is named among the faithful)
+  - Position **Between Deborah (c. 1230) and Jephthah (1130-1073)** (1230 BCE – 1073 BCE): This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and before Jephthah. Jephthah's time as judge is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment is reported that seems to show the name Jerubbaal. It shows only that the name is ancient.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
     - Source: *Gideon*, Wikipedia <https://en.wikipedia.org/wiki/Gideon>
-  - Position **Ussher, Annals: Gideon called, 1245 BC** (1245 BCE, held by James Ussher): Ussher dates Gideon's call after the fourth (Midianite) oppression to 2759d AM, 1245 BC.
+  - Position **Ussher, Annals: Gideon called, 1245 BC** (1245 BCE, held by James Ussher): Ussher dates Gideon's call to 1245 BC, after the fourth oppression, by the Midianites. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraph 356 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Samson** — `events/samson.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1200 BCE – 1001 BCE
-  - Summary: Samson of Dan, a Nazirite from birth, fights the Philistines single-handed, is betrayed by Delilah and dies pulling down the temple of Dagon at Gaza. His exploits are set in the Philistine oppression; the sources read give no scholarly date for him, and his historicity is debated (see the linked issue).
-  - Verse (describes): Judg 13:1 – Judg 13:25 (Birth announced; Nazirite vow)
-  - Verse (describes): Judg 14:1 – Judg 15:20 (Timnah marriage, riddle, foxes, the jawbone)
-  - Verse (describes): Judg 16:1 – Judg 16:31 (Gaza, Delilah, capture, death)
-  - Verse (alludes): 1Sam 12:11 (Samuel lists the deliverers the Lord sent)
-  - Verse (alludes): Heb 11:32 (Samson named among the faithful)
-  - Position **Iron Age I horizon (12th-11th century BCE)** (1200 BCE – 1001 BCE): A bracket from one object, not a date for Samson: a circular seal about 15 mm across, from Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion, which suggests hero stories of this kind circulated then; scholars explicitly say it does not confirm Samson as a historical figure.
+  - Summary: Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue).
+  - Verse (describes): Judg 13:1 – Judg 13:25 (his birth is announced, and the Nazirite vow)
+  - Verse (describes): Judg 14:1 – Judg 15:20 (the Timnah wedding, the riddle, the foxes, the jawbone)
+  - Verse (describes): Judg 16:1 – Judg 16:31 (Gaza, Delilah, his capture and his death)
+  - Verse (alludes): 1Sam 12:11 (Samuel lists the rescuers the Lord sent)
+  - Verse (alludes): Heb 11:32 (Samson is named among the people of faith)
+  - Position **Iron Age I horizon (12th-11th century BCE)** (1200 BCE – 1001 BCE): This range comes from one object. It is not a date for Samson. A round seal about 15 mm across, found at Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion. That suggests hero stories like Samson's were told then. Scholars say plainly that it does not prove Samson was a real person.
     - Source: *Samson*, Wikipedia <https://en.wikipedia.org/wiki/Samson>
-  - Position **Ussher, Annals: Samson born, 1155 BC** (1155 BCE, held by James Ussher): Ussher has the angel appear to Manoah's wife in 2848d AM, 1156 BC and Samson born in 2849b AM, 1155 BC.
+  - Position **Ussher, Annals: Samson born, 1155 BC** (1155 BCE, held by James Ussher): The chronologist James Ussher has the angel appear to Manoah's wife in 2848d AM (year of the world), which is 1156 BC. He has Samson born in 2849b AM, which is 1155 BC.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 379-380 <https://archive.org/details/AnnalsOfTheWorld>
 
 - [ ] **Samuel anoints David** — `events/david-anointed.toml` (draft)
   - Axis / confidence: narrative / contested; range 1051 BCE – 1009 BCE
-  - Summary: Samuel anoints the youngest son of Jesse in secret during Saul's reign. The Bible gives no year; the only bounds available are those of Saul's reign.
-  - Verse (describes): 1Sam 16:1 – 1Sam 16:13 (private anointing at Bethlehem)
-  - Verse (describes): 2Sam 2:1 – 2Sam 2:4 (later anointed king over Judah at Hebron)
-  - Verse (describes): 2Sam 5:1 – 2Sam 5:5 (anointed king over all Israel)
-  - Verse (describes): 1Chr 11:1 – 1Chr 11:3 (Chronicles parallel: anointed at Hebron)
+  - Summary: Samuel secretly anoints Jesse's youngest son during Saul's reign. The Bible gives no year. The only limits available are those of Saul's reign.
+  - Verse (describes): 1Sam 16:1 – 1Sam 16:13 (A private anointing at Bethlehem)
+  - Verse (describes): 2Sam 2:1 – 2Sam 2:4 (Later anointed king over Judah at Hebron)
+  - Verse (describes): 2Sam 5:1 – 2Sam 5:5 (Anointed king over all Israel)
+  - Verse (describes): 1Chr 11:1 – 1Chr 11:3 (The parallel in Chronicles: anointed at Hebron)
   - Verse (alludes): Ps 89:20 ('I have anointed him with my holy oil')
-  - Verse (alludes): Acts 13:22 (Paul's sermon: God raised up David as king)
-  - Position **Between 1051 and 1009 BCE (bounds)** (1051 BCE – 1009 BCE, held by Rodger C. Young): Young gives no date for the anointing. These are the editor's bounds: Saul's conjectural reign in Table 2 (1051t?-1009t?), during which 1 Samuel 16 places the anointing.
+  - Verse (alludes): Acts 13:22 (In Paul's sermon, God raised up David as king)
+  - Position **Between 1051 and 1009 BCE (bounds)** (1051 BCE – 1009 BCE, held by Rodger C. Young): Young gives no date for the anointing. These bounds are the editor's. They are Saul's reign as Young's Table 2 conjectures it (1051t?-1009t?), the period in which 1 Samuel 16 places the anointing.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **Samuel anoints Saul and Saul's accession** — `events/saul-accession.toml` (draft)
   - Axis / confidence: narrative / contested; range 1051 BCE
-  - Summary: Samuel anoints Saul privately, Saul is chosen by lot at Mizpah and acclaimed at Gilgal. The Bible gives no absolute date; 1 Samuel 13:1 is textually difficult, so even the length of his reign is disputed.
-  - Verse (describes): 1Sam 9:1 – 1Sam 10:16 (private anointing by Samuel)
-  - Verse (describes): 1Sam 10:17 – 1Sam 10:27 (chosen by lot at Mizpah)
-  - Verse (describes): 1Sam 11:12 – 1Sam 11:15 (acclaimed king at Gilgal)
-  - Verse (dates): 1Sam 13:1 (regnal-length verse; the Hebrew text is difficult)
+  - Summary: Samuel anoints Saul in private. Saul is then chosen by lot at Mizpah and acclaimed king at Gilgal. The Bible gives no calendar date. The Hebrew of 1 Samuel 13:1 is hard to read, so even the length of his reign is disputed.
+  - Verse (describes): 1Sam 9:1 – 1Sam 10:16 (Samuel anoints Saul in private)
+  - Verse (describes): 1Sam 10:17 – 1Sam 10:27 (Saul is chosen by lot at Mizpah)
+  - Verse (describes): 1Sam 11:12 – 1Sam 11:15 (Saul is acclaimed king at Gilgal)
+  - Verse (dates): 1Sam 13:1 (the verse giving the length of his reign; the Hebrew text is hard to read)
   - Verse (alludes): Hos 13:11 ('I have given you a king in my anger')
-  - Verse (alludes): Acts 13:21 (Paul's sermon: God gave them Saul for forty years)
-  - Position **c. 1051 BCE (conjectural)** (1051 BCE, held by Rodger C. Young): Table 2 begins Saul's reign at Tishri 1051 BCE (1051t?) and ends it 1009t?, with the question marks Young's own. Young's Table 2 marks Saul's and David's dates as conjectural.
+  - Verse (alludes): Acts 13:21 (Paul's sermon: God gave them Saul, who ruled forty years)
+  - Position **c. 1051 BCE (conjectural)** (1051 BCE, held by Rodger C. Young): Rodger C. Young's Table 2 starts Saul's reign at Tishri 1051 BCE (1051t?) and ends it in 1009t?. The question marks are Young's own. His Table 2 marks all of Saul's and David's dates as guesses.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246; p. 227; MT difficulty at 1 Sam 13:1, p. 241 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **David's census and the threshing-floor** — `events/david-census.toml` (draft)
   - Axis / confidence: narrative / contested; range 1009 BCE – 969 BCE
-  - Summary: David numbers the people, a plague follows, and David buys the threshing-floor where he builds an altar, later associated with the temple site. The Bible gives no regnal year.
-  - Verse (describes): 2Sam 24:1 – 2Sam 24:25 (census, plague, purchase of the threshing-floor)
-  - Verse (describes): 1Chr 21:1 – 1Chr 22:1 (Chronicles parallel; 22:1 names it the site of the house)
-  - Verse (alludes): 2Chr 3:1 (Solomon builds on Mount Moriah where Yahweh appeared to David at the threshing-floor)
-  - Position **Within David's reign, 1009-969 BCE (bounds)** (1009 BCE – 969 BCE, held by Rodger C. Young): Bounds only: David's conjectural forty years in Table 2 (1009t?-969t?). No source consulted dates the census within them.
+  - Summary: David counts the people and a plague follows. David then buys the threshing-floor and builds an altar there. The place is later linked with the temple site. The Bible gives no year of his reign.
+  - Verse (describes): 2Sam 24:1 – 2Sam 24:25 (The census, the plague and the purchase of the threshing-floor)
+  - Verse (describes): 1Chr 21:1 – 1Chr 22:1 (The parallel in Chronicles. Chapter 22:1 names it the site of the house)
+  - Verse (alludes): 2Chr 3:1 (Solomon builds on Mount Moriah, where Yahweh appeared to David at the threshing-floor)
+  - Position **Within David's reign, 1009-969 BCE (bounds)** (1009 BCE – 969 BCE, held by Rodger C. Young): These bounds are only the limits of David's reign. The reign is Young's conjecture of forty years in Table 2 (1009t?-969t?). No source consulted dates the census within it.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **David takes Jerusalem** — `events/david-takes-jerusalem.toml` (draft)
   - Axis / confidence: narrative / contested; range 1002 BCE – 1001 BCE
-  - Summary: David captures the Jebusite stronghold of Zion and makes it the city of David, after reigning over Judah in Hebron for seven years and six months.
-  - Verse (dates): 2Sam 5:5 (seven years and six months at Hebron, then thirty-three in Jerusalem)
-  - Verse (describes): 2Sam 5:6 – 2Sam 5:10 (capture of the stronghold of Zion)
-  - Verse (describes): 1Chr 11:4 – 1Chr 11:9 (Chronicles parallel)
+  - Summary: David captures the Jebusite stronghold of Zion and makes it the city of David. Before that he had ruled over Judah from Hebron for seven years and six months.
+  - Verse (dates): 2Sam 5:5 (Seven years and six months at Hebron, then thirty-three in Jerusalem)
+  - Verse (describes): 2Sam 5:6 – 2Sam 5:10 (The capture of the stronghold of Zion)
+  - Verse (describes): 1Chr 11:4 – 1Chr 11:9 (The parallel in Chronicles)
   - Verse (alludes): Ps 78:70 (God chose David his servant)
   - Verse (alludes): Ps 132:13 ('Yahweh has chosen Zion')
-  - Position **c. 1002-1001 BCE (derived)** (1002 BCE – 1001 BCE, held by Rodger C. Young): Derived by the editor, not stated by Young: his conjectural start of David's reign (1009t?) less the 7.5 Hebron years of 2 Samuel 5:5. Treat as approximate.
+  - Position **c. 1002-1001 BCE (derived)** (1002 BCE – 1001 BCE, held by Rodger C. Young): This date is worked out by the editor and is not stated by Young. It takes Young's conjectural start of David's reign (1009t?) and subtracts the 7.5 years at Hebron from 2 Samuel 5:5. Treat it as approximate.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **Solomon's accession** — `events/solomon-accession.toml` (draft)
   - Axis / confidence: narrative / contested; range 971 BCE – 968 BCE
-  - Summary: Solomon is anointed as David's successor, in the Bible's telling twice, and reigns forty years. Young argues for an initial coregency with David.
+  - Summary: Solomon is anointed to succeed David (twice, in the Bible's telling) and reigns forty years. Rodger C. Young argues that at first Solomon ruled jointly with David, a coregency.
   - Verse (describes): 1Kgs 1:28 – 1Kgs 1:53 (David has Solomon anointed at Gihon)
-  - Verse (describes): 1Kgs 2:12 (Solomon sits on his father's throne)
-  - Verse (describes): 1Chr 28:1 – 1Chr 29:25 (Chronicles parallel; 29:22 records the second anointing)
+  - Verse (describes): 1Kgs 2:12 (Solomon takes his father's throne)
+  - Verse (describes): 1Chr 28:1 – 1Chr 29:25 (the same story in Chronicles; 29:22 records the second anointing)
   - Verse (alludes): Ps 72:1 (psalm 'of' or 'for' Solomon: 'the royal son')
-  - Position **971-969 BCE (coregency, then sole reign)** (971 BCE – 969 BCE, held by Rodger C. Young): Table 2: coregency from Tishri 971, sole reign from 969 (marked uncertain), death 932. Young treats the forty years as running from the coregency.
+  - Position **971-969 BCE (coregency, then sole reign)** (971 BCE – 969 BCE, held by Rodger C. Young): In Young's Table 2, the joint rule begins in Tishri 971, Solomon rules alone from 969 (marked uncertain), and he dies in 932. Young counts the forty years from the start of the joint rule.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246; p. 227 <https://www.rcyoung.org/articles/rtables.pdf>
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 599 <https://www.rcyoung.org/articles/solomon.pdf>
-  - Position **c. 970-968 BCE (derived)** (970 BCE – 968 BCE, held by Edwin R. Thiele): Derived: Young says that moving Solomon's death earlier moved Solomon's beginning one year earlier than in Thiele's chronology. Thiele's own figures were not read.
+  - Position **c. 970-968 BCE (derived)** (970 BCE – 968 BCE, held by Edwin R. Thiele): This date is worked out indirectly. Young says that moving Solomon's death earlier also moved his start one year earlier than in the chronologist Edwin Thiele's count. Thiele's own figures were not read.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 227 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **The foundation of Solomon's temple** — `events/solomon-temple-foundation.toml` (draft)
   - Axis / confidence: narrative / contested; range 967 BCE – 966 BCE
-  - Summary: Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). The year depends on when Solomon's reign is counted from.
-  - Verse (describes): 1Kgs 5:1 – 1Kgs 5:18 (preparations with Hiram)
-  - Verse (dates): 1Kgs 6:1 (fourth year of Solomon, month Ziv)
-  - Verse (describes): 1Kgs 6:2 – 1Kgs 6:38 (construction)
-  - Verse (describes): 2Chr 2:1 – 2Chr 2:18 (Chronicles: preparations)
-  - Verse (describes): 2Chr 3:1 – 2Chr 3:2 (Chronicles: begins in the second month of the fourth year)
-  - Verse (alludes): Ezra 5:11 (the house built many years before)
+  - Summary: Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). Which calendar year that is depends on where you start counting Solomon's reign.
+  - Verse (describes): 1Kgs 5:1 – 1Kgs 5:18 (the preparations, with King Hiram)
+  - Verse (dates): 1Kgs 6:1 (Solomon's fourth year, in the month of Ziv)
+  - Verse (describes): 1Kgs 6:2 – 1Kgs 6:38 (the building work)
+  - Verse (describes): 2Chr 2:1 – 2Chr 2:18 (the preparations, as told in Chronicles)
+  - Verse (describes): 2Chr 3:1 – 2Chr 3:2 (Chronicles: work begins in the second month of the fourth year)
+  - Verse (alludes): Ezra 5:11 (the house built many years earlier)
   - Verse (alludes): Acts 7:47 (Stephen: Solomon built him a house)
-  - Position **967 BCE (spring)** (967 BCE, held by Rodger C. Young): Fourth year 968t, second month Ziv, so spring 967 BCE.
+  - Position **967 BCE (spring)** (967 BCE, held by Rodger C. Young): Rodger C. Young counts Solomon's fourth year as 968t (a year counted from autumn). The second month, Ziv, then falls in spring 967 BCE.
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 599 <https://www.rcyoung.org/articles/solomon.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 228 n. 4 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Position **966 BCE** (966 BCE, held by Edwin R. Thiele): Thiele's dates place the foundation in 966 BCE, according to Young.
+  - Position **966 BCE** (966 BCE, held by Edwin R. Thiele): According to Young, the chronologist Edwin Thiele's dates place the foundation in 966 BCE.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, pp. 228-229 <https://www.rcyoung.org/articles/rtables.pdf>
 
 - [ ] **The division of the kingdom** — `events/kingdom-division.toml` (draft)
   - Axis / confidence: narrative / contested; range 932 BCE – 930 BCE
-  - Summary: After Solomon's death the northern tribes break from Rehoboam and make Jeroboam king.
+  - Summary: After Solomon dies, the northern tribes break away from his son Rehoboam and make Jeroboam their king.
   - Verse (background): 1Kgs 11:26 – 1Kgs 11:40 (Ahijah's prophecy and Jeroboam's flight)
-  - Verse (describes): 1Kgs 12:1 – 1Kgs 12:24 (the assembly at Shechem and the split)
-  - Verse (describes): 2Chr 10:1 – 2Chr 11:4 (Chronicles parallel)
+  - Verse (describes): 1Kgs 12:1 – 1Kgs 12:24 (the meeting at Shechem, where the kingdom splits)
+  - Verse (describes): 2Chr 10:1 – 2Chr 11:4 (the same story told in Chronicles)
   - Verse (alludes): Isa 7:17 ('from the day that Ephraim departed from Judah')
-  - Position **932-931 BCE** (932 BCE – 931 BCE, held by Rodger C. Young): Solomon died before Tishri 931, so Rehoboam began in 932t; Jeroboam began some time in 931n.
+  - Position **932-931 BCE** (932 BCE – 931 BCE, held by Rodger C. Young): Young reasons that Solomon died before Tishri 931 (the autumn month that starts the year in this count). So Rehoboam began in 932t, a year counted from autumn. Jeroboam began some time in 931n, a year counted from spring.
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, pp. 590-591 <https://www.rcyoung.org/articles/solomon.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 227 n. 3 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Position **931-930 BCE** (931 BCE – 930 BCE, held by Edwin R. Thiele): Thiele assumed Solomon died in the latter half of 931n (931t/930n).
+  - Position **931-930 BCE** (931 BCE – 930 BCE, held by Edwin R. Thiele): The chronologist Edwin Thiele assumed that Solomon died in the second half of 931n (931t/930n).
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 591 <https://www.rcyoung.org/articles/solomon.pdf>
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Rehoboam 931/0 in the chronology table; second-hand, not Thiele's pages <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
   - Position **932/931 BCE** (932 BCE – 931 BCE): Wikipedia gives the revolt as in 932/931 BCE.
@@ -666,106 +666,106 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **Shishak's campaign against Judah** — `events/shishak-campaign.toml` (draft)
   - Axis / confidence: narrative / contested; range 926 BCE – 925 BCE
-  - Summary: In Rehoboam's fifth year Shishak of Egypt takes Judah's fortified cities and the temple treasures. Shishak is conventionally identified with Shoshenq I, whose Karnak list records a campaign. Young cautions that the Egyptian date rests on the biblical chronology.
-  - Verse (background): 1Kgs 11:40 (Jeroboam had earlier fled to Shishak)
-  - Verse (describes): 1Kgs 14:25 – 1Kgs 14:28 (Rehoboam's fifth year; treasures taken)
-  - Verse (describes): 2Chr 12:2 – 2Chr 12:12 (Chronicles parallel; Shemaiah's prophecy)
-  - Position **c. 925 BCE** (925 BCE): Conventional date of the campaign. Shoshenq I's reign is 945-924 (Kitchen), 943 start (Krauss) or 962-941 (Schneider 2010).
+  - Summary: In Rehoboam's fifth year, Shishak of Egypt takes Judah's walled cities and the temple treasures. Shishak is usually identified with the pharaoh Shoshenq I, whose list of conquests at Karnak records a campaign. Rodger C. Young cautions that the Egyptian date itself rests on the Bible's chronology.
+  - Verse (background): 1Kgs 11:40 (Jeroboam had earlier fled to Shishak for safety)
+  - Verse (describes): 1Kgs 14:25 – 1Kgs 14:28 (Rehoboam's fifth year; the treasures are taken)
+  - Verse (describes): 2Chr 12:2 – 2Chr 12:12 (the same story in Chronicles, with Shemaiah's prophecy)
+  - Position **c. 925 BCE** (925 BCE): This is the usual date of the campaign. Scholars date Shoshenq I's reign differently: 945-924 (Kitchen), a 943 start (Krauss), or 962-941 (Schneider 2010).
     - Source: *Shoshenq I*, Wikipedia <https://en.wikipedia.org/wiki/Shoshenq_I>
-  - Position **c. 926 BCE (derived)** (926 BCE, held by Rodger C. Young): Derived from the arithmetic of Young's footnote (spring 925 pairs with Rehoboam's accession 931t, so accession 932t gives spring 926). Young says Sheshonq's dates are taken from the scriptural chronology and cannot establish biblical dates.
+  - Position **c. 926 BCE (derived)** (926 BCE, held by Rodger C. Young): This date is worked out from the arithmetic in Young's footnote. Spring 925 pairs with Rehoboam taking the throne in 931t, so taking the throne in 932t gives spring 926. Young says Sheshonq's dates are taken from the Bible's own chronology, so they cannot be used to establish biblical dates.
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 598 n. 8 <https://www.rcyoung.org/articles/solomon.pdf>
-  - Attestation — Bubastite Portal (Shoshenq I's Karnak campaign list) *partially-corroborates*: Records a Shoshenq campaign in Israel and Judah's region; whether Jerusalem is listed is debated.
+  - Attestation — Bubastite Portal (Shoshenq I's Karnak campaign list) *partially-corroborates*: It records a Shoshenq campaign in the region of Israel and Judah. Scholars debate whether Jerusalem is on the list.
     - Source: *Shoshenq I*, Wikipedia <https://en.wikipedia.org/wiki/Shoshenq_I>
     - Source: *Rehoboam*, Wikipedia <https://en.wikipedia.org/wiki/Rehoboam>
 
 - [ ] **The battle of Qarqar** — `events/battle-of-qarqar.toml` (draft)
   - Axis / confidence: narrative / firm; range 854 BCE – 853 BCE
   - Summary: Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention it.
-  - Verse (background): 1Kgs 16:29 – 1Kgs 16:34 (Ahab's accession; Qarqar is not mentioned in the Bible)
+  - Verse (background): 1Kgs 16:29 – 1Kgs 16:34 (Ahab becomes king. The Bible does not mention Qarqar)
   - Verse (background): 1Kgs 22:1 – 1Kgs 22:4 (three years without war between Syria and Israel)
-  - Position **853 BCE** (853 BCE, held by Edwin R. Thiele): Thiele found his Hebrew-text chronology required Qarqar in 853.
+  - Position **853 BCE** (853 BCE, held by Edwin R. Thiele): Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853.
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Ahab ends 853 in the chronology table; second-hand <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 593 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Position **854 BCE (alternative eponym list)** (854 BCE): Wikipedia: 853, or 854 depending on which version of the Assyrian Eponym List is used.
+  - Position **854 BCE (alternative eponym list)** (854 BCE): Wikipedia says the date is 853, or 854, depending on which version of the Assyrian Eponym List is used. That list names one official for each year.
     - Source: *Battle of Qarqar*, Wikipedia <https://en.wikipedia.org/wiki/Battle_of_Qarqar>
-  - Attestation — Kurkh Monolith of Shalmaneser III *corroborates*: Lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite.
+  - Attestation — Kurkh Monolith of Shalmaneser III *corroborates*: The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite.
     - Source: *Kurkh Monoliths*, Wikipedia <https://en.wikipedia.org/wiki/Kurkh_Monoliths>
     - Source: *Battle of Qarqar*, Wikipedia <https://en.wikipedia.org/wiki/Battle_of_Qarqar>
 
 - [ ] **The Moabite revolt** — `events/moabite-revolt.toml` (draft)
   - Axis / confidence: narrative / contested; range 852 BCE – 841 BCE
-  - Summary: Moab under Mesha rebels against Israel and Jehoram campaigns against it. The Mesha Stele gives Moab's side.
+  - Summary: Moab, led by King Mesha, rebels against Israel, and King Jehoram marches against it. A stone monument called the Mesha Stele tells the story from Moab's side.
   - Verse (background): 2Kgs 1:1 (revolt after Ahab's death)
-  - Verse (describes): 2Kgs 3:4 – 2Kgs 3:27 (Mesha's revolt and the campaign)
+  - Verse (describes): 2Kgs 3:4 – 2Kgs 3:27 (Mesha's revolt and the war that follows)
   - Verse (alludes): Isa 15:1 – Isa 16:14 (oracle on Moab)
   - Verse (alludes): Jer 48:1 – Jer 48:47 (oracle on Moab)
-  - Position **852-841 BCE (bounds)** (852 BCE – 841 BCE, held by Rodger C. Young): Bounds only: Joram's reign in Table 1. The Mesha Stele itself is dated c. 840.
+  - Position **852-841 BCE (bounds)** (852 BCE – 841 BCE, held by Rodger C. Young): These dates are only outer limits. They are the years of Joram's reign from Rodger C. Young's Table 1. The Mesha Stele itself is dated to about 840.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Attestation — Mesha Stele (Moabite Stone) *partially-corroborates*: Says Omri oppressed Moab and credits Chemosh with Mesha's victories; Wikipedia says it parallels 2 Kings 3:4-27 but the accounts differ.
+  - Attestation — Mesha Stele (Moabite Stone) *partially-corroborates*: It says Omri oppressed Moab and credits the god Chemosh with Mesha's victories. Wikipedia says it runs parallel to 2 Kings 3:4-27, but the two accounts differ.
     - Source: *Mesha Stele*, Wikipedia <https://en.wikipedia.org/wiki/Mesha_Stele>
 
 - [ ] **Jehu's tribute to Shalmaneser III** — `events/jehu-tribute-841.toml` (draft)
   - Axis / confidence: narrative / firm; range 841 BCE
-  - Summary: Jehu, called 'son of Omri' by the Assyrians, pays tribute to Shalmaneser III c. 841 BCE. The Bible does not mention the tribute.
-  - Verse (background): 2Kgs 9:1 – 2Kgs 10:36 (Jehu's revolt; the tribute is not mentioned)
-  - Verse (background): 2Kgs 10:32 – 2Kgs 10:33 (Hazael cuts off Israel's borders in his reign)
+  - Summary: Jehu, called 'son of Omri' by the Assyrians, pays tribute to Shalmaneser III about 841 BCE. The Bible does not mention the tribute.
+  - Verse (background): 2Kgs 9:1 – 2Kgs 10:36 (Jehu's revolt. The tribute is not mentioned)
+  - Verse (background): 2Kgs 10:32 – 2Kgs 10:33 (Hazael cuts off parts of Israel's territory in his reign)
   - Verse (alludes): Hos 1:4 ('the house of Jehu')
-  - Position **841 BCE** (841 BCE, held by Edwin R. Thiele): Thiele's chronology agrees with the tribute of Jehu in 841; Young's tables begin Jehu in 841n/841t.
+  - Position **841 BCE** (841 BCE, held by Edwin R. Thiele): Thiele's chronology agrees with the tribute of Jehu in 841. Young's tables begin Jehu's reign in 841n/841t, meaning the Nisan and Tishri counts.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232; Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Jehu 841 in the chronology table; second-hand <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
-  - Attestation — Black Obelisk of Shalmaneser III *corroborates*: Inscription reads: 'I received the tribute of Iaua (Jehu) son of (the people of the land of) Omri'; dated in or around 841.
+  - Attestation — Black Obelisk of Shalmaneser III *corroborates*: The inscription reads: 'I received the tribute of Iaua (Jehu) son of (the people of the land of) Omri'. It is dated in or around 841.
     - Source: *Black Obelisk of Shalmaneser III*, Wikipedia <https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III>
 
 - [ ] **The fall of Samaria** — `events/samaria-fall.toml` (draft)
   - Axis / confidence: narrative / contested; range 723 BCE
-  - Summary: Assyria takes Samaria after a siege and deports Israel. Young, following Olmstead, Thiele and Tadmor, holds that Shalmaneser V captured it, not Sargon II, whose inscriptions claim it.
-  - Verse (describes): 2Kgs 17:1 – 2Kgs 17:41 (Hoshea's reign, the siege and the exile)
-  - Verse (describes): 2Kgs 18:9 – 2Kgs 18:12 (sixth year of Hezekiah, ninth of Hoshea)
-  - Verse (background): Isa 20:1 (names Sargon king of Assyria)
+  - Summary: Assyria takes Samaria after a siege and carries the people of Israel away. Rodger C. Young, following Olmstead, Thiele and Tadmor, holds that King Shalmaneser V captured it. Sargon II, whose inscriptions claim the conquest, did not.
+  - Verse (describes): 2Kgs 17:1 – 2Kgs 17:41 (Hoshea's reign, the siege, and the exile)
+  - Verse (describes): 2Kgs 18:9 – 2Kgs 18:12 (the sixth year of Hezekiah and the ninth of Hoshea)
+  - Verse (background): Isa 20:1 (names Sargon as king of Assyria)
   - Verse (alludes): Hos 13:16 ('Samaria will bear her guilt')
-  - Verse (alludes): Mic 1:6 (Samaria made a rubble heap)
-  - Position **723 BCE (first half)** (723 BCE, held by Rodger C. Young): Samaria fell before Tishri 1, 723, over fifteen months before Sargon's accession in Tebeth 722n.
+  - Verse (alludes): Mic 1:6 (Samaria turned into a heap of rubble)
+  - Position **723 BCE (first half)** (723 BCE, held by Rodger C. Young): Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n.
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 583 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 1, p. 245 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Attestation — Inscriptions of Sargon II (Samaria claim) *partially-corroborates*: Claims the conquest and 27,280 resettled Israelites; attribution of the capture to Sargon is doubted.
+  - Attestation — Inscriptions of Sargon II (Samaria claim) *partially-corroborates*: Sargon claims the conquest and says he resettled 27,280 Israelites. Scholars doubt that the capture was really his.
     - Source: *Sargon II*, Wikipedia <https://en.wikipedia.org/wiki/Sargon_II>
 
 - [ ] **Sennacherib's campaign against Judah** — `events/sennacherib-campaign-judah.toml` (draft)
   - Axis / confidence: narrative / firm; range 701 BCE
-  - Summary: The Assyrian king Sennacherib's third campaign, in which he took the fortified cities of Judah, besieged Lachish, and confronted Hezekiah at Jerusalem. One of the best-attested events in the Hebrew Bible: the Assyrian annals and the palace reliefs at Nineveh describe it from the Assyrian side.
+  - Summary: On his third military campaign, the Assyrian king Sennacherib took the walled cities of Judah, besieged Lachish, and faced King Hezekiah at Jerusalem. It is one of the best-confirmed events in the Hebrew Bible. Assyria's own records and the carved palace walls at Nineveh describe it from the Assyrian side.
   - Verse (describes): 2Kgs 18:13 – 2Kgs 19:37
-  - Verse (dates): 2Kgs 18:13 (Hezekiah's fourteenth year)
+  - Verse (dates): 2Kgs 18:13 (in Hezekiah's fourteenth year)
   - Verse (describes): 2Chr 32:1 – 2Chr 32:23
   - Verse (describes): Isa 36:1 – Isa 37:38
-  - Position **701 BCE** (701 BCE): The campaign is dated to 701 BCE from the Assyrian records; the date is not seriously disputed.
+  - Position **701 BCE** (701 BCE): The Assyrian records date the campaign to 701 BCE. Scholars do not seriously dispute this.
     - Source: *Sennacherib's campaign in the Levant*, Wikipedia <https://en.wikipedia.org/wiki/Sennacherib%27s_campaign_in_the_Levant>
-  - Attestation — Lachish reliefs *corroborates*: Depict the siege and fall of Lachish, where 2 Kings 18:14 and 18:17 place Sennacherib during the campaign.
+  - Attestation — Lachish reliefs *corroborates*: These carvings show the siege and fall of Lachish. 2 Kings 18:14 and 18:17 place Sennacherib there during the campaign.
     - Source: *Lachish reliefs, South-West Palace of Sennacherib, Nineveh (collection record)*, British Museum <https://www.britishmuseum.org/collection/object/W_1856-0909-14>
-  - Attestation — Taylor Prism (annals of Sennacherib) *corroborates*: Sennacherib's own account: 46 walled cities of Judah taken and Hezekiah shut up in Jerusalem "like a bird in a cage". It claims tribute but not the city's capture, which agrees with 2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken.
+  - Attestation — Taylor Prism (annals of Sennacherib) *corroborates*: Sennacherib's own account says he took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". It claims payment from Hezekiah but not the capture of the city. That agrees with 2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken.
     - Source: *Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms*, Center for Online Judaic Studies <https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/>
     - Source: *Sennacherib's Annals*, Wikipedia <https://en.wikipedia.org/wiki/Sennacherib%27s_Annals>
 
 - [ ] **Josiah's reform** — `events/josiah-reform.toml` (draft)
   - Axis / confidence: narrative / contested; range 623 BCE – 622 BCE
-  - Summary: In his eighteenth year Josiah repairs the temple, the book of the law is found and he purges the cult. Historicity is debated; this file dates only.
-  - Verse (describes): 2Kgs 22:3 – 2Kgs 23:25 (book found, covenant, purge)
-  - Verse (describes): 2Chr 34:8 – 2Chr 35:19 (Chronicles parallel, with the Passover)
-  - Verse (alludes): Jer 1:2 (Jeremiah called in Josiah's thirteenth year)
+  - Summary: In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it.
+  - Verse (describes): 2Kgs 22:3 – 2Kgs 23:25 (The book is found, the covenant renewed and the cult purged)
+  - Verse (describes): 2Chr 34:8 – 2Chr 35:19 (The parallel in Chronicles, with the Passover)
+  - Verse (alludes): Jer 1:2 (Jeremiah is called in Josiah's thirteenth year)
   - Verse (alludes): Zeph 1:1 (Zephaniah in Josiah's days)
-  - Verse (alludes): Zeph 1:4 – Zeph 1:6 (oracle against Baal worship)
-  - Position **623-622 BCE** (623 BCE – 622 BCE, held by Rodger C. Young): Josiah's eighteenth year began Tishri 623 on his accession year 641t.
+  - Verse (alludes): Zeph 1:4 – Zeph 1:6 (A message against Baal worship)
+  - Position **623-622 BCE** (623 BCE – 622 BCE, held by Rodger C. Young): Young counts Josiah's eighteenth year as beginning in Tishri 623 (autumn), with his accession year as 641t. Tishri and Nisan are the two starting points for a regnal year.
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 27 <https://www.rcyoung.org/articles/jerusalem.pdf>
 
 - [ ] **Josiah's death at Megiddo** — `events/josiah-death-megiddo.toml` (draft)
   - Axis / confidence: narrative / contested; range 609 BCE
   - Summary: Josiah goes out against Pharaoh Neco and dies at Megiddo.
-  - Verse (describes): 2Kgs 23:28 – 2Kgs 23:30 (killed at Megiddo)
-  - Verse (dates): 2Kgs 23:29 (Neco going up to the Euphrates)
-  - Verse (describes): 2Chr 35:20 – 2Chr 35:27 (Chronicles: wounded by archers; mourning)
-  - Verse (alludes): Jer 22:10 – Jer 22:12 (Jeremiah on Shallum, who succeeded Josiah)
-  - Verse (alludes): Zech 12:11 (mourning at Hadadrimmon in the valley of Megiddon (traditional link))
-  - Position **609 BCE (Tammuz)** (609 BCE, held by Rodger C. Young): Young derives the death from the Babylonian Chronicles as the fourth month of 609.
+  - Verse (describes): 2Kgs 23:28 – 2Kgs 23:30 (Killed at Megiddo)
+  - Verse (dates): 2Kgs 23:29 (Neco goes up to the Euphrates)
+  - Verse (describes): 2Chr 35:20 – 2Chr 35:27 (Chronicles says he was wounded by archers. The nation mourns)
+  - Verse (alludes): Jer 22:10 – Jer 22:12 (Jeremiah speaks of Shallum, who succeeded Josiah)
+  - Verse (alludes): Zech 12:11 (Mourning at Hadadrimmon in the valley of Megiddon (a link made by tradition))
+  - Position **609 BCE (Tammuz)** (609 BCE, held by Rodger C. Young): Young works out from the Babylonian Chronicles that Josiah died in the fourth month of 609.
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 35 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
   - Position **June or July 609 BCE** (609 BCE): Wikipedia gives June or July 609.
@@ -777,149 +777,149 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (alludes): 2Kgs 24:7 (Egypt does not come out of its land again)
   - Verse (background): 2Chr 35:20 (Neco goes to fight at Carchemish)
   - Verse (dates): Jer 25:1 (fourth year of Jehoiakim)
-  - Verse (describes): Jer 46:2 – Jer 46:12 (oracle on Egypt at Carchemish)
+  - Verse (describes): Jer 46:2 – Jer 46:12 (A message from God about Egypt at Carchemish)
   - Verse (dates): Jer 46:2 (fourth year of Jehoiakim)
-  - Position **605 BCE** (605 BCE, held by Rodger C. Young): Dated 605n/605t, in the latter half of the year Jeremiah gives (606t).
+  - Position **605 BCE** (605 BCE, held by Rodger C. Young): Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count. It falls in the second half of the year Jeremiah gives (606t).
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 33 (table), 36 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *corroborates*: Obv. 2-4: marched to Carchemish, crossed the river against the Egyptian army, which withdrew; year 21 of Nabopolassar.
+  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *corroborates*: On the tablet, lines 2-4 say the Babylonian army marched to Carchemish and crossed the river against the Egyptian army, which withdrew. This was year 21 of Nabopolassar.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
 
 - [ ] **Nebuchadnezzar takes Jerusalem and Jehoiachin** — `events/jerusalem-capture-597.toml` (draft)
   - Axis / confidence: narrative / firm; range 597 BCE
-  - Summary: The first Babylonian capture of Jerusalem: Jehoiachin surrenders, is taken to Babylon, and Zedekiah is installed in his place. Dated to the month, from the Babylonian side, by the Babylonian Chronicle.
+  - Summary: Babylon captures Jerusalem for the first time. Jehoiachin surrenders and is taken to Babylon, and Zedekiah is made king in his place. The Babylonian Chronicle, an ancient Babylonian record, gives the date down to the month.
   - Verse (describes): 2Kgs 24:10 – 2Kgs 24:17
-  - Position **February/March 597 BCE (2 Addaru, Nebuchadnezzar's 7th year)** (597 BCE): The Babylonian Chronicle dates the seizure of the city and the capture of its king to the second day of Addaru in Nebuchadnezzar's seventh year.
+  - Position **February/March 597 BCE (2 Addaru, Nebuchadnezzar's 7th year)** (597 BCE): The Babylonian Chronicle dates the seizure of the city and the capture of its king to the second day of Addaru, in Nebuchadnezzar's seventh year.
     - Source: *Assyrian and Babylonian Chronicles*, A. Kirk Grayson, 1975, Chronicle 5
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
-  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *corroborates*: Records that Nebuchadnezzar "seized the city and captured the king" on 2 Addaru of his seventh year, and appointed a king of his own choice — matching 2 Kings 24:12–17.
+  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *corroborates*: The Chronicle says Nebuchadnezzar "seized the city and captured the king" on 2 Addaru of his seventh year. It says he then appointed a king of his own choice. This matches 2 Kings 24:12-17.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
 
 - [ ] **Ezekiel's call by the Chebar canal** — `events/ezekiel-call.toml` (draft)
   - Axis / confidence: narrative / contested; range 593 BCE
-  - Summary: Ezekiel, among the exiles by the river Chebar, sees the visions of God in the fifth year of Jehoiachin's captivity. The standard modern dating is 593 BCE (July, by one commentary summary); what the "thirtieth year" of Ezekiel 1:1 counts is unsettled.
-  - Verse (describes): Ezek 1:1 (Thirtieth year, fourth month, fifth day; by the river Chebar)
-  - Verse (describes): Ezek 1:2 (Fifth year of King Jehoiachin's captivity)
+  - Summary: Ezekiel is among the exiles by the river Chebar. He sees visions of God in the fifth year of Jehoiachin's captivity. The standard modern date is 593 BCE (July, by one commentary summary). What the "thirtieth year" in Ezekiel 1:1 is counting is unsettled.
+  - Verse (describes): Ezek 1:1 (The thirtieth year, fourth month, fifth day, by the river Chebar)
+  - Verse (describes): Ezek 1:2 (The fifth year of King Jehoiachin's captivity)
   - Verse (describes): Ezek 1:3 (The word of Yahweh comes to Ezekiel the priest)
-  - Position **593 BCE (fifth year of Jehoiachin's exile)** (593 BCE, held by Walther Eichrodt (as cited by Wikipedia, footnote 6)): The fifth year of the exile of Jehoiachin is 593 BCE. The "thirtieth year" is read either as Ezekiel's age or, in rabbinic sources, as counted from the discovery of the Book of the Law in 622 BCE.
+  - Position **593 BCE (fifth year of Jehoiachin's exile)** (593 BCE, held by Walther Eichrodt (as cited by Wikipedia, footnote 6)): The fifth year of Jehoiachin's exile is 593 BCE. The "thirtieth year" is read in two ways. One reading takes it as Ezekiel's age. The other, found in rabbinic sources, counts it from the discovery of the Book of the Law in 622 BCE.
     - Source: *Ezekiel*, Wikipedia, Chronology section, footnote 6: Eichrodt, Ezekiel: A Commentary (2003), p. 407, not checked directly <https://en.wikipedia.org/wiki/Ezekiel>
     - Source: *Book of Ezekiel*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Ezekiel>
 
 - [ ] **The fall of Jerusalem and the destruction of the First Temple** — `events/jerusalem-fall.toml` (draft)
   - Axis / confidence: narrative / contested; range 587 BCE – 586 BCE
-  - Summary: Babylon breaches Jerusalem's walls after a long siege, burns the temple and deports much of the population. Scholars agree on the sequence and disagree by one year on the date, 587 or 586 BCE, because the biblical data are given in regnal years whose counting conventions are themselves debated.
+  - Summary: Babylon breaks through Jerusalem's walls after a long siege, burns the temple and deports much of the population. Scholars agree on the order of events. They differ by one year on the date, 587 or 586 BCE. The Bible gives the dates in the years of each king's reign, and the rules for counting those years are themselves debated.
   - Verse (describes): 2Kgs 25:1 – 2Kgs 25:21
   - Verse (dates): Jer 52:12 (Nebuchadnezzar's nineteenth year)
-  - Verse (background): Jer 52:29 (a deportation in the eighteenth year)
-  - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Dates the destruction to 586 BCE, reckoning from Nebuchadnezzar's nineteenth year. Young records that Thiele "was among those preferring 586".
+  - Verse (background): Jer 52:29 (A deportation in the eighteenth year)
+  - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Thiele dates the destruction to 586 BCE, counting from Nebuchadnezzar's nineteenth year. Young records that Thiele "was among those preferring 586".
     - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 21 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Argument (for): 2 Kings 25:8 and Jeremiah 52:12 date the burning of the temple to Nebuchadnezzar's nineteenth year.
       - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983
       - Verse (dates): 2Kgs 25:8
       - Verse (dates): Jer 52:12
-  - Position **587 BCE** (587 BCE, held by Rodger C. Young): Dates the breach of the walls to the summer month of Tammuz in 587 BCE.
+  - Position **587 BCE** (587 BCE, held by Rodger C. Young): Young dates the breach of the walls to the summer month of Tammuz in 587 BCE.
     - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 21–38; the conclusion at p. 27 <https://www.rcyoung.org/articles/jerusalem.pdf>
-    - Argument (for): Reconciling the Judean regnal data (Zedekiah's eleventh year, 2 Kings 25:2) with the Babylonian reckoning places the breach in Tammuz 587 BCE.
+    - Argument (for): Young lines up the Judean reign data (Zedekiah's eleventh year, 2 Kings 25:2) with the Babylonian way of counting. That places the breach in Tammuz 587 BCE.
       - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004 <https://www.rcyoung.org/articles/jerusalem.pdf>
       - Verse (dates): 2Kgs 25:2
-  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *silent*: ABC 5 ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the city; it fixes the earlier capture of 597 BCE instead.
+  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *silent*: This chronicle (ABC 5) ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the city. It gives the earlier capture of 597 BCE instead.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
-  - Attestation — Lachish Letters *consistent*: Written in Judah's last years before the conquest. Letter 4's officer can still see the signals of Lachish but no longer those of Azekah — the situation Jeremiah 34:7 describes, with those two the last fortified cities holding out. The letters do not date the fall itself.
+  - Attestation — Lachish Letters *consistent*: The letters were written in Judah's last years before the conquest. In Letter 4, an officer can still see the signals of Lachish but no longer those of Azekah. Jeremiah 34:7 describes the same situation, with those two as the last fortified cities holding out. The letters do not date the fall itself.
     - Source: *Lachish letters*, Wikipedia <https://en.wikipedia.org/wiki/Lachish_letters>
 
 - [ ] **Babylon falls to Cyrus** — `events/babylon-falls-539.toml` (draft)
   - Axis / confidence: narrative / firm; range 539 BCE
-  - Summary: Cyrus's army takes Babylon in October 539 BCE, ending the Neo-Babylonian empire. The Nabonidus Chronicle records the battle at Opis, the taking of Sippar and the entry into Babylon without a battle; Daniel 5 sets the death of Belshazzar on the same night.
+  - Summary: Cyrus's army takes Babylon in October 539 BCE, which ends the Neo-Babylonian empire. The Nabonidus Chronicle records the battle at Opis, the taking of Sippar, and the entry into Babylon without a battle. Daniel 5 puts the death of Belshazzar on the same night.
   - Verse (alludes): Isa 13:17 (Yahweh stirs up the Medes against Babylon)
   - Verse (alludes): Isa 45:1 (Cyrus, to whom doors are opened and gates not shut)
   - Verse (alludes): Jer 51:11 (Yahweh has stirred up the kings of the Medes against Babylon)
-  - Verse (describes): Dan 5:30 (Belshazzar slain that night)
+  - Verse (describes): Dan 5:30 (Belshazzar is killed that night)
   - Verse (describes): Dan 5:31 (Darius the Mede receives the kingdom)
-  - Position **October 539 BCE (16 Tashritu)** (539 BCE, held by A. K. Grayson (editor and translator of ABC 7, per Livius)): Babylon was captured on the 16th of Tashritu, 12 October 539 BCE on the Julian calendar, in Nabonidus's seventeenth year. The primary text is the Nabonidus Chronicle, in Grayson's translation as reproduced by Livius: "On the sixteenth day, Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon"; Cyrus himself entered "on the third day of the month Arahsamna". Read directly on Livius: the entry into Babylon is at iii.15–16 and Cyrus's own entry at iii.18; the month of the sixteenth day falls in a damaged line (iii.12) and is not legible in the translation as printed, so the equation with 12 October 539 rests on the modern reconstruction cited below.
+  - Position **October 539 BCE (16 Tashritu)** (539 BCE, held by A. K. Grayson (editor and translator of ABC 7, per Livius)): Babylon was captured on the 16th of Tashritu, which is 12 October 539 BCE on the Julian calendar. This was in Nabonidus's seventeenth year. The main source is the Nabonidus Chronicle, in Grayson's translation as reproduced by Livius: "On the sixteenth day, Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon". Cyrus himself entered "on the third day of the month Arahsamna". On the Livius page, the entry into Babylon is at iii.15-16 and Cyrus's own entry at iii.18. The month of the sixteenth day falls in a damaged line (iii.12) and cannot be read in the translation as printed. So the match with 12 October 539 rests on the modern reconstruction cited below.
     - Source: *ABC 7 (Nabonidus Chronicle)*, Livius.org, col. iii 15–16 (sixteenth day); iii 18 (Cyrus enters, 3 Arahsamna) <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-7-nabonidus-chronicle/>
     - Source: *Fall of Babylon*, Wikipedia <https://en.wikipedia.org/wiki/Fall_of_Babylon>
-  - Attestation — Cyrus Cylinder *consistent*: Describes the conquest as occurring "without battle", which modern scholars treat as propaganda (Wikipedia's summary); Herodotus and Xenophon give differing accounts of how the city was taken.
+  - Attestation — Cyrus Cylinder *consistent*: The Cylinder describes the conquest as happening "without battle". Modern scholars treat that as propaganda (Wikipedia's summary). Herodotus and Xenophon give differing accounts of how the city was taken.
     - Source: *Fall of Babylon*, Wikipedia <https://en.wikipedia.org/wiki/Fall_of_Babylon>
     - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
-  - Attestation — Nabonidus Chronicle (ABC 7) *partially-corroborates*: Records Cyrus's entry into Babylon without battle in Nabonidus's seventeenth year, matching the fall of Babylon in Daniel 5; it does not mention Belshazzar's death on the page read.
+  - Attestation — Nabonidus Chronicle (ABC 7) *partially-corroborates*: The Chronicle records Cyrus entering Babylon without a battle in Nabonidus's seventeenth year. That matches the fall of Babylon in Daniel 5. It does not mention Belshazzar's death on the page read.
     - Source: *ABC 7 (Nabonidus Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-7-nabonidus-chronicle/>
 
 - [ ] **Cyrus's decree and the first return** — `events/cyrus-decree-first-return.toml` (draft)
   - Axis / confidence: narrative / contested; range 539 BCE – 520 BCE
-  - Summary: In his first year Cyrus proclaims that Yahweh has charged him to build a house in Jerusalem, and exiles may go up (Ezra 1; 2 Chronicles 36). The return is dated 538 BCE in the usual chronology. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples but names no Jews, and some scholars deny the decree is authentic.
-  - Verse (describes): 2Chr 36:22 – 2Chr 36:23 (The same proclamation closing Chronicles)
-  - Verse (describes): Ezra 1:1 – Ezra 1:4 (Cyrus's proclamation in his first year)
-  - Verse (alludes): Isa 44:28 (Cyrus named: Jerusalem will be built, the temple's foundation laid)
-  - Verse (alludes): Isa 45:1 (Cyrus called Yahweh's anointed)
-  - Position **538 BCE (first year of Cyrus over Babylon)** (539 BCE – 538 BCE): The decree follows the conquest of Babylon in 539 BCE and the return under Cyrus is dated 538 BCE.
+  - Summary: In his first year Cyrus announces that Yahweh has told him to build a house in Jerusalem. Exiles may go up (Ezra 1; 2 Chronicles 36). The usual chronology dates the return to 538 BCE. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples, but it names no Jews. Some scholars deny the decree is genuine.
+  - Verse (describes): 2Chr 36:22 – 2Chr 36:23 (The same announcement, which closes Chronicles)
+  - Verse (describes): Ezra 1:1 – Ezra 1:4 (Cyrus's announcement in his first year)
+  - Verse (alludes): Isa 44:28 (Cyrus is named. Jerusalem will be built and the temple's foundation laid)
+  - Verse (alludes): Isa 45:1 (Cyrus is called Yahweh's anointed)
+  - Position **538 BCE (first year of Cyrus over Babylon)** (539 BCE – 538 BCE): The decree comes after the conquest of Babylon in 539 BCE, and the usual dating puts the return under Cyrus in 538 BCE. Here traditional means the usual dating, which follows the biblical accounts.
     - Source: *Edict of Cyrus*, Wikipedia <https://en.wikipedia.org/wiki/Edict_of_Cyrus>
     - Source: *Ezra–Nehemiah*, Wikipedia <https://en.wikipedia.org/wiki/Ezra%E2%80%93Nehemiah>
-  - Position **No authentic decree; gradual return (539-520 BCE bounds)** (539 BCE – 520 BCE, held by Lester L. Grabbe): Grabbe holds that the alleged decree permitting, even commanding, the Jews to rebuild the temple cannot be considered authentic. Other scholars suggest the return was gradual. The years bound the window from the conquest to Haggai's 520 BCE and are the cataloguer's, not Grabbe's.
+  - Position **No authentic decree; gradual return (539-520 BCE bounds)** (539 BCE – 520 BCE, held by Lester L. Grabbe): Grabbe holds that the reported decree, which lets or even orders the Jews to rebuild the temple, cannot be considered genuine. Other scholars suggest the return was gradual. The years run from the conquest to Haggai's 520 BCE. They are the cataloguer's bounds, not Grabbe's.
     - Source: *Edict of Cyrus*, Wikipedia <https://en.wikipedia.org/wiki/Edict_of_Cyrus>
-    - Argument (against): The Cyrus Cylinder focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem; Kuhrt calls its restoration passage a literary device and says its purely Babylonian context provides no proof for Jewish exiles.
+    - Argument (against): The Cyrus Cylinder focuses on Babylon and Mesopotamia. It mentions neither Judah nor Jerusalem. Kuhrt calls its passage on restoring peoples a literary device. She says its purely Babylonian setting gives no proof for Jewish exiles.
       - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
       - Source: *Edict of Cyrus*, Wikipedia <https://en.wikipedia.org/wiki/Edict_of_Cyrus>
-  - Attestation — Cyrus Cylinder *partially-corroborates*: Restores deities and returns displaced populations to Mesopotamian sites, the same policy Ezra 1 ascribes to Cyrus, but does not mention Jews, Jerusalem or Judea.
+  - Attestation — Cyrus Cylinder *partially-corroborates*: The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia. Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea.
     - Source: *Cyrus Cylinder*, Wikipedia <https://en.wikipedia.org/wiki/Cyrus_Cylinder>
     - Source: *Cyrus Cylinder*, Livius.org <https://www.livius.org/sources/content/cyrus-cylinder/>
 
 - [ ] **The Second Temple: foundation and completion** — `events/second-temple-built.toml` (draft)
   - Axis / confidence: narrative / contested; range 516 BCE – 400 BCE
-  - Summary: The foundation is laid under Zerubbabel and Jeshua in the second year after the return (Ezra 3); work stops, then resumes under the prophets Haggai and Zechariah (dated to the second year of Darius), and the house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), spring 516 BCE. Some scholars date the building later.
-  - Verse (describes): Ezra 3:8 (Second year of their coming; Zerubbabel and Jeshua begin)
-  - Verse (describes): Ezra 3:10 (The builders lay the foundation of Yahweh's temple)
-  - Verse (describes): Ezra 4:24 (The work ceases until the second year of Darius)
-  - Verse (describes): Ezra 5:1 (Haggai and Zechariah prophesy to the Jews)
-  - Verse (describes): Ezra 6:14 (The elders build and finish it)
-  - Verse (describes): Ezra 6:15 (Finished 3 Adar, sixth year of Darius)
-  - Verse (alludes): Hag 1:1 (Second year of Darius, sixth month, first day; word to Zerubbabel and Joshua)
+  - Summary: The exiles return, and in the second year Zerubbabel and Jeshua lay the foundation (Ezra 3). Work then stops. It starts again under the prophets Haggai and Zechariah, in the second year of King Darius. The house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), in spring 516 BCE. Some scholars date the building later.
+  - Verse (describes): Ezra 3:8 (the second year after they came; Zerubbabel and Jeshua begin)
+  - Verse (describes): Ezra 3:10 (the builders lay the foundation of Yahweh's temple)
+  - Verse (describes): Ezra 4:24 (the work stops until the second year of Darius)
+  - Verse (describes): Ezra 5:1 (Haggai and Zechariah speak to the Jews as prophets)
+  - Verse (describes): Ezra 6:14 (the elders build the temple and finish it)
+  - Verse (describes): Ezra 6:15 (finished on 3 Adar, in Darius's sixth year)
+  - Verse (alludes): Hag 1:1 (the first day of the sixth month, second year of Darius; a message to Zerubbabel and Joshua)
   - Verse (alludes): Hag 2:18 (The day the foundation of Yahweh's temple was laid)
-  - Verse (alludes): Zech 1:1 (Eighth month, second year of Darius)
-  - Position **Completed spring 516 BCE (sixth year of Darius)** (516 BCE): The Temple was completed on the third of Adar in Darius's sixth year, 25 February 516 BCE (Wikipedia's Haggai article), "ready for consecration in the spring of 516 BCE". Haggai's oracles are of 520 BCE; the foundation of Ezra 3 is given as 535 BCE in the Second Temple article.
+  - Verse (alludes): Zech 1:1 (the eighth month, second year of Darius)
+  - Position **Completed spring 516 BCE (sixth year of Darius)** (516 BCE): The Temple was completed on the third of Adar in Darius's sixth year, which is 25 February 516 BCE (Wikipedia's Haggai article). It was "ready for consecration in the spring of 516 BCE". Haggai's messages date to 520 BCE. The Second Temple article puts the foundation of Ezra 3 at 535 BCE.
     - Source: *Second Temple*, Wikipedia <https://en.wikipedia.org/wiki/Second_Temple>
     - Source: *Book of Haggai*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Haggai>
     - Source: *Book of Zechariah*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Zechariah>
-  - Position **Built between 450 and 400 BCE** (450 BCE – 400 BCE): Wikipedia notes that the Second Temple was constructed "either around 516 BCE or between 450 and 400 BCE"; the page read names no scholar for the later date, and Haggai is placed by some at 417 BCE under a Darius II reading.
+  - Position **Built between 450 and 400 BCE** (450 BCE – 400 BCE): Wikipedia notes that the Second Temple was constructed "either around 516 BCE or between 450 and 400 BCE". The page read names no scholar for the later date. Some place Haggai at 417 BCE, if the Darius in the book is Darius II.
     - Source: *Second Temple*, Wikipedia <https://en.wikipedia.org/wiki/Second_Temple>
     - Source: *Book of Haggai*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Haggai>
 
 - [ ] **Ezra's mission to Jerusalem** — `events/ezra-mission.toml` (draft)
   - Axis / confidence: narrative / contested; range 458 BCE – 398 BCE
-  - Summary: Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king". Which Artaxerxes is disputed: Artaxerxes I gives 458 BCE (the most widely accepted), Artaxerxes II gives 398 BCE, and a third group reads "seventh" as a scribal error.
+  - Summary: Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king". Scholars dispute which Artaxerxes this is. Artaxerxes I gives 458 BCE, the most widely accepted date. Artaxerxes II gives 398 BCE. A third group reads "seventh" as a scribe's mistake.
   - Verse (describes): Ezra 7:7 (Exiles go up in the seventh year of Artaxerxes)
-  - Verse (describes): Ezra 7:8 (Ezra comes in the fifth month of the seventh year)
-  - Position **458 BCE (Artaxerxes I, seventh year)** (458 BCE – 457 BCE, held by Edwin M. Yamauchi): Yamauchi, in the Expositor's Bible Commentary (abridged), takes Artaxerxes I as the traditional view and "which we believe is correct": Ezra arrived in 458 (457).
+  - Verse (describes): Ezra 7:8 (Ezra arrives in the fifth month of the seventh year)
+  - Position **458 BCE (Artaxerxes I, seventh year)** (458 BCE – 457 BCE, held by Edwin M. Yamauchi): Yamauchi, in the Expositor's Bible Commentary (abridged), calls Artaxerxes I the traditional view and says "which we believe is correct". On that view Ezra arrived in 458 (457).
     - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin, quotation from Yamauchi, Expositor's Bible Commentary (Abridged) <https://www.preceptaustin.org/ezra-7-commentary>
-  - Position **398 BCE (Artaxerxes II, seventh year)** (398 BCE, held by Albin van Hoonacker): Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). Wikipedia's Albin van Hoonacker article lists his 1890 "Nehemie et Esdras. Nouvelle hypothese sur la chronologie de l'epoque de la Restauration juive" and his 1892 "Nehemie en l'an 20 d'Artaxerxes I. Esdras en l'an 7 d'Artaxerxes II", arguing Ezra in year 7 of Artaxerxes II; the 398 conversion is the Ezra article's.
+  - Position **398 BCE (Artaxerxes II, seventh year)** (398 BCE, held by Albin van Hoonacker): On this view Nehemiah comes before Ezra, and Ezra came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). Wikipedia's Albin van Hoonacker article lists two of his works. They are his 1890 "Nehemie et Esdras. Nouvelle hypothese sur la chronologie de l'epoque de la Restauration juive" and his 1892 "Nehemie en l'an 20 d'Artaxerxes I. Esdras en l'an 7 d'Artaxerxes II". These argue for Ezra in year 7 of Artaxerxes II. The 398 conversion is the Ezra article's.
     - Source: *Albin van Hoonacker*, Wikipedia, list of works, 1890 and 1892 <https://en.wikipedia.org/wiki/Albin_van_Hoonacker>
     - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
     - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
-    - Argument (for): Nehemiah and Ezra seem to have no knowledge of each other and their missions do not overlap; reversing the order puts Ezra about fifty years after Nehemiah.
+    - Argument (for): Nehemiah and Ezra seem to know nothing of each other, and their missions do not overlap. Reversing the order puts Ezra about fifty years after Nehemiah.
       - Source: *Artaxerxes I of Persia*, Wikipedia <https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia>
       - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
 
 - [ ] **Nehemiah rebuilds the wall of Jerusalem** — `events/nehemiah-wall.toml` (draft)
   - Axis / confidence: narrative / contested; range 445 BCE – 444 BCE
-  - Summary: In the twentieth year of Artaxerxes (445 or 444 BCE) Nehemiah, the king's cupbearer, is sent to Jerusalem and the wall is finished in fifty-two days despite Sanballat the Horonite. The Elephantine papyri of 407 BCE name Sanballat's sons and the high priest Johanan, tying the Nehemiah story to a documented milieu.
-  - Verse (describes): Neh 2:1 (Nisan, twentieth year of Artaxerxes)
-  - Verse (describes): Neh 2:10 (Sanballat the Horonite and Tobiah are grieved)
-  - Verse (describes): Neh 6:15 (The wall finished in fifty-two days)
-  - Verse (alludes): Neh 13:28 (A son of Joiada son-in-law to Sanballat)
-  - Position **445 or 444 BCE (Artaxerxes I, twentieth year)** (445 BCE – 444 BCE): Artaxerxes I ruled from August 465 to December 424 BCE; his twentieth year is 445 or 444 BCE, and the wall was rebuilt within 52 days. Wikipedia's Nehemiah article refers the date to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988); that page was not read and the article does not show the author's name.
+  - Summary: In the twentieth year of King Artaxerxes (445 or 444 BCE), Nehemiah, the king's cupbearer, is sent to Jerusalem. The wall is finished in fifty-two days, despite opposition from Sanballat the Horonite. Letters found at Elephantine in Egypt, from 407 BCE, name Sanballat's sons and the high priest Johanan. That ties the Nehemiah story to a world we can check outside the Bible.
+  - Verse (describes): Neh 2:1 (the month of Nisan, in the twentieth year of Artaxerxes)
+  - Verse (describes): Neh 2:10 (Sanballat the Horonite and Tobiah are upset)
+  - Verse (describes): Neh 6:15 (the wall is finished in fifty-two days)
+  - Verse (alludes): Neh 13:28 (a son of Joiada is son-in-law to Sanballat)
+  - Position **445 or 444 BCE (Artaxerxes I, twentieth year)** (445 BCE – 444 BCE): Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name.
     - Source: *Nehemiah*, Wikipedia, n. 5 <https://en.wikipedia.org/wiki/Nehemiah>
     - Source: *Ezra-Nehemiah: A Commentary (author not shown on the citing page)*, 1988, p. 140, as cited by Wikipedia 'Nehemiah' n. 5
     - Source: *Artaxerxes I of Persia*, Wikipedia <https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia>
-  - Attestation — Elephantine petition to rebuild the Yahu temple (407 BCE) *partially-corroborates*: Names Sanballat's sons Delaiah and Shelemiah and Johanan the high priest in 407 BCE; Sanballat and Johanan both appear in Nehemiah, but this does not date the wall.
+  - Attestation — Elephantine petition to rebuild the Yahu temple (407 BCE) *partially-corroborates*: A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall.
     - Source: *Elephantine papyri*, Wikipedia <https://en.wikipedia.org/wiki/Elephantine_papyri>
     - Source: *Sanballat the Horonite*, Wikipedia <https://en.wikipedia.org/wiki/Sanballat_the_Horonite>
 
 - [ ] **Alexander's conquest of the Levant** — `events/alexander-levant-332.toml` (draft)
   - Axis / confidence: narrative / contested; range 332 BCE
-  - Summary: Alexander besieges and takes Tyre (January to July 332 BCE) and then moves south against Gaza (October 332 BCE). Daniel 8 and 11 are the passages usually brought to bear on the Greek conquest: Wikipedia's Daniel 8 article gives Collins (1984) as "Scholars agree that the goat's first horn, which is broken, is Alexander the Great, and the four horns ... the four generals who divided his empire", and its Daniel 11 article says verses 2-4 cover Alexander's conquests and the breakup of his empire (no scholar cited there). No Jerusalem episode was confirmed in sources read.
-  - Verse (alludes): Dan 8:5 – Dan 8:8 (The goat from the west with one notable horn, broken, replaced by four; Collins (1984) via Wikipedia identifies the horn as Alexander)
-  - Verse (alludes): Dan 11:3 (A mighty king who rules with great dominion; Daniel 11:2-4 read as Alexander and the breakup of his empire (Wikipedia, no scholar cited))
-  - Position **332 BCE (Tyre January-July; Gaza October)** (332 BCE): The siege of Tyre lasted January to July 332 BCE and Alexander then moved south to Gaza, besieged in October 332 BCE.
+  - Summary: Alexander besieges and takes Tyre from January to July 332 BCE. He then moves south against Gaza in October 332 BCE. Scholars usually read Daniel 8 and 11 as describing the Greek conquest. Wikipedia's Daniel 8 article gives Collins (1984): "Scholars agree that the goat's first horn, which is broken, is Alexander the Great, and the four horns ... the four generals who divided his empire". Its Daniel 11 article says verses 2-4 cover Alexander's conquests and the breakup of his empire, with no scholar cited. No visit to Jerusalem was confirmed in the sources read.
+  - Verse (alludes): Dan 8:5 – Dan 8:8 (A goat from the west has one notable horn. It breaks and is replaced by four. Collins (1984), quoted by Wikipedia, identifies the horn as Alexander)
+  - Verse (alludes): Dan 11:3 (A mighty king rules with great power. Daniel 11:2-4 is read as Alexander and the breakup of his empire (Wikipedia, no scholar cited))
+  - Position **332 BCE (Tyre January-July; Gaza October)** (332 BCE): The siege of Tyre lasted from January to July 332 BCE. Alexander then moved south to Gaza, which was besieged in October 332 BCE.
     - Source: *Siege of Tyre (332 BC)*, Wikipedia, cites Arrian, Anabasis 2.24.4 and Diodorus 17.46.4 for casualties only; the months are not attributed there <https://en.wikipedia.org/wiki/Siege_of_Tyre_(332_BC)>
     - Source: *Alexander the Great*, Wikipedia <https://en.wikipedia.org/wiki/Alexander_the_Great>
     - Source: *Daniel 8*, Wikipedia <https://en.wikipedia.org/wiki/Daniel_8>
@@ -927,12 +927,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **Antiochus IV desecrates the temple; the Maccabean revolt** — `events/antiochus-desecration-maccabean-revolt.toml` (draft)
   - Axis / confidence: narrative / contested; range 167 BCE – 164 BCE
-  - Summary: Antiochus IV outlaws Jewish practice and the Jerusalem temple is turned to Zeus worship (167 BCE); the Maccabees resist and cleanse the temple on 25 Kislev 164 BCE, the origin of Hanukkah. First Maccabees is not in this corpus. Scholars take the King of the North in Daniel as Antiochus IV.
-  - Verse (describes): Dan 8:9 – Dan 8:14 (The little horn: the sanctuary and the continual burnt offering)
-  - Verse (describes): Dan 11:31 (The sanctuary profaned, the continual offering taken away, the abomination set up)
+  - Summary: Antiochus IV bans Jewish practice, and the Jerusalem temple is turned over to the worship of Zeus (167 BCE). The Maccabees resist. They cleanse the temple on 25 Kislev 164 BCE, which is the origin of Hanukkah. First Maccabees is not in this corpus. Scholars take the King of the North in Daniel to be Antiochus IV.
+  - Verse (describes): Dan 8:9 – Dan 8:14 (The little horn attacks the sanctuary and the daily burnt offering)
+  - Verse (describes): Dan 11:31 (The sanctuary is profaned, the daily offering is taken away, and the abomination is set up)
   - Verse (alludes): John 10:22 (The Feast of the Dedication at Jerusalem (Hanukkah))
-  - Position **167-164 BCE** (167 BCE – 164 BCE, held by First Maccabees (author unnamed)): First Maccabees 1:54 (NRSVUE): "Now on the fifteenth day of Chislev, in the one hundred forty-fifth year, they erected a desolating sacrilege on the altar of burnt offering"; 4:52: "Early in the morning on the twenty-fifth day of the ninth month, which is the month of Chislev, in the one hundred forty-eighth year". Years 145 and 148 of the Seleucid count are 167 and 164 BCE; that conversion is the cataloguer's and Wikipedia's, no converting scholar was found. 
-The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with the temple rededicated on 25 Kislev 164 BCE; the abomination is dated to 167 BCE, when Antiochus ended the twice-daily sacrifice.
+  - Position **167-164 BCE** (167 BCE – 164 BCE, held by First Maccabees (author unnamed)): First Maccabees 1:54 (NRSVUE) says: "Now on the fifteenth day of Chislev, in the one hundred forty-fifth year, they erected a desolating sacrilege on the altar of burnt offering". Chapter 4:52 says: "Early in the morning on the twenty-fifth day of the ninth month, which is the month of Chislev, in the one hundred forty-eighth year". Years 145 and 148 of the Seleucid count are 167 and 164 BCE. That conversion is the cataloguer's and Wikipedia's, and no scholar who made it was found. The main phase of the revolt ran 167-164 BCE, with fighting until 141 BCE. The temple was rededicated on 25 Kislev 164 BCE. The abomination is dated to 167 BCE, when Antiochus ended the twice-daily sacrifice.
     - Source: *1 Maccabees 1:54 and 4:52 (Bible Gateway, NRSVUE)*, First Maccabees (author unnamed), NRSVUE, 1:54; 4:52 <https://www.biblegateway.com/passage/?search=1+Maccabees+1%3A54%3B+1+Maccabees+4%3A52&version=NRSVUE>
     - Source: *Maccabean Revolt*, Wikipedia <https://en.wikipedia.org/wiki/Maccabean_Revolt>
     - Source: *Abomination of desolation*, Wikipedia <https://en.wikipedia.org/wiki/Abomination_of_desolation>
@@ -940,205 +939,205 @@ The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with th
 
 - [ ] **Pompey takes Jerusalem** — `events/pompey-takes-jerusalem.toml` (draft)
   - Axis / confidence: narrative / contested; range 63 BCE
-  - Summary: In 63 BCE Pompey intervenes in the dispute between Hyrcanus II and Aristobulus II, takes the upper city and, after three months, the Temple precinct; he enters the Holy of Holies and Judea becomes a Roman client kingdom. No passage in the corpus narrates this.
-  - Position **63 BCE** (63 BCE, held by Flavius Josephus): Josephus, Antiquities 14.66 (Whiston): "the city was taken on the third month, on the day of the fast, upon the hundred and seventy-ninth olympiad, when Caius Antonius and Marcus Tullius Cicero were consuls". Wikipedia gives the year as 63 BC (the consular year is the cataloguer's reading). Pompey's siege of Jerusalem took place in 63 BCE and lasted three months before the Temple precinct was breached.
+  - Summary: In 63 BCE the Roman general Pompey steps into a quarrel between two rivals, Hyrcanus II and Aristobulus II. He takes the upper city and, after three months, the Temple area. He enters the Holy of Holies, and Judea becomes a Roman client kingdom, ruled under Rome's control. No passage in the Bible text here tells this story.
+  - Position **63 BCE** (63 BCE, held by Flavius Josephus): Josephus, Antiquities 14.66 (Whiston): "the city was taken on the third month, on the day of the fast, upon the hundred and seventy-ninth olympiad, when Caius Antonius and Marcus Tullius Cicero were consuls". Wikipedia gives the year as 63 BC. Turning the consuls' names into a year is the cataloguer's own reading. Pompey besieged Jerusalem in 63 BCE. The siege lasted three months before the Temple area was broken into.
     - Source: *Antiquities of the Jews 14.66 (Lexundria)*, Flavius Josephus, trans. William Whiston, Ant. 14.66 <https://www.lexundria.com/j_aj/14.66/wst>
     - Source: *Siege of Jerusalem (63 BC)*, Wikipedia <https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(63_BC)>
-  - Attestation — Josephus, Antiquities 14.61 (Pompey's siege of the temple) *corroborates*: Josephus describes the temple's defences and the bridge by which Pompey had gotten in.
+  - Attestation — Josephus, Antiquities 14.61 (Pompey's siege of the temple) *corroborates*: Josephus describes the Temple's defences and the bridge Pompey used to get in.
     - Source: *Antiquities of the Jews 14.61 (Lexundria)*, Flavius Josephus, trans. William Whiston <https://lexundria.com/j_aj/14.61/wst>
 
 - [ ] **Herod the Great: reign and the rebuilding of the temple** — `events/herod-reign-temple.toml` (draft)
   - Axis / confidence: narrative / contested; range 37 BCE – 1 BCE
-  - Summary: Herod reigns from 37 BCE to his death in 4 BCE on the older reckoning (36-1 BCE on Steinmann's). In his eighteenth year (20-19 BCE) he undertakes to rebuild the temple, work still running when John 2:20 says it had taken forty-six years.
-  - Verse (alludes): Matt 2:1 (Jesus born in the days of King Herod)
+  - Summary: On the older count, Herod reigns from 37 BCE until his death in 4 BCE. On Steinmann's count, he reigns from 36 to 1 BCE. In his eighteenth year (20-19 BCE) he sets out to rebuild the temple. John 2:20 says the work had taken forty-six years, so it was still going.
+  - Verse (alludes): Matt 2:1 (Jesus is born in the days of King Herod)
   - Verse (alludes): Luke 1:5 (In the days of Herod, king of Judea)
-  - Verse (alludes): John 2:20 (Forty-six years to build this temple)
+  - Verse (alludes): John 2:20 (It took forty-six years to build this temple)
   - Position **37-4 BCE (Schurer)** (37 BCE – 4 BCE, held by Emil Schürer): Most 20th-century scholarship followed Schürer's 1896 chronology, which put Herod's death in 4 BCE.
     - Source: *Herod the Great*, Wikipedia, section on the dates of his reign <https://en.wikipedia.org/wiki/Herod_the_Great>
-  - Position **36-1 BCE (Steinmann)** (36 BCE – 1 BCE, held by Steinmann): Wikipedia sets Steinmann's chronology of the reign at 36-1 BCE (first name not shown on the page read).
+  - Position **36-1 BCE (Steinmann)** (36 BCE – 1 BCE, held by Steinmann): Wikipedia gives Steinmann's chronology of the reign as 36-1 BCE. The page read does not show his first name.
     - Source: *Herod the Great*, Wikipedia, section on the dates of his reign <https://en.wikipedia.org/wiki/Herod_the_Great>
-  - Position **Temple begun c. 20/19 BCE (Josephus, eighteenth year)** (20 BCE – 19 BCE): Josephus dates the start of the rebuilding to Herod's eighteenth year, 20-19 BCE; construction of the Temple itself took about a year and a half and the porticoes and outer walls a further eight years.
+  - Position **Temple begun c. 20/19 BCE (Josephus, eighteenth year)** (20 BCE – 19 BCE): Josephus dates the start of the rebuilding to Herod's eighteenth year, 20-19 BCE. Building the Temple itself took about a year and a half. The porches and outer walls took another eight years.
     - Source: *Antiquities of the Jews 15.380 (Lexundria)*, Flavius Josephus, trans. William Whiston <https://lexundria.com/j_aj/15.380/wst>
     - Source: *Herod's Temple*, Wikipedia <https://en.wikipedia.org/wiki/Herod%27s_Temple>
     - Source: *Herod the Great*, Wikipedia <https://en.wikipedia.org/wiki/Herod_the_Great>
-  - Position **Enclosures from 25 BCE, temple building 19 BCE (Mahieu)** (25 BCE – 19 BCE, held by Bieke Mahieu): Mahieu dates work on the Temple enclosures from 25 BCE and that on the Temple building to 19 BCE.
+  - Position **Enclosures from 25 BCE, temple building 19 BCE (Mahieu)** (25 BCE – 19 BCE, held by Bieke Mahieu): Mahieu dates work on the Temple enclosures from 25 BCE and work on the Temple building itself to 19 BCE.
     - Source: *Herod's Temple*, Wikipedia <https://en.wikipedia.org/wiki/Herod%27s_Temple>
   - Attestation — Josephus, Antiquities 15.380 (Herod begins to rebuild the temple) *corroborates*: Josephus places the start of the rebuilding in the eighteenth year of Herod's reign.
     - Source: *Antiquities of the Jews 15.380 (Lexundria)*, Flavius Josephus, trans. William Whiston <https://lexundria.com/j_aj/15.380/wst>
 
 - [ ] **The birth of Jesus** — `events/birth-of-jesus.toml` (draft)
   - Axis / confidence: narrative / contested; range 6 BCE – 2 BCE
-  - Summary: Matthew sets Jesus's birth under Herod the king and Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from Herod's death; the Quirinius census that Josephus dates to 6 CE does not fit that window, and the tension is unresolved.
-  - Verse (describes): Matt 1:18 – Matt 2:23 (birth at Bethlehem in the days of Herod)
-  - Verse (dates): Luke 2:1 – Luke 2:2 (decree of Augustus; Quirinius governor of Syria)
-  - Verse (describes): Luke 2:3 – Luke 2:20 (the registration, the birth and the shepherds)
-  - Verse (alludes): Luke 3:23 (about thirty years old at the start of his ministry)
-  - Verse (alludes): Gal 4:4 (born of a woman, born under the law)
-  - Position **6–4 BCE** (6 BCE – 4 BCE, held by Emil Schürer): Takes Herod's death in 4 BCE (Schürer's chronology, worked back from Archelaus's removal in 6 CE) as the latest point for a birth in Herod's days; Wikipedia reports that most scholars assume a birth between 6 and 4 BCE on this basis. Schürer's own date concerns Herod's death, and the birth range is the inference from it.
+  - Summary: Matthew sets Jesus's birth in the reign of Herod the king. Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death. Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved.
+  - Verse (describes): Matt 1:18 – Matt 2:23 (The birth at Bethlehem in the days of Herod)
+  - Verse (dates): Luke 2:1 – Luke 2:2 (A decree of Augustus, while Quirinius is governor of Syria)
+  - Verse (describes): Luke 2:3 – Luke 2:20 (The registration, the birth and the shepherds)
+  - Verse (alludes): Luke 3:23 (Jesus is about thirty years old when his ministry begins)
+  - Verse (alludes): Gal 4:4 (Born of a woman, born under the law)
+  - Position **6–4 BCE** (6 BCE – 4 BCE, held by Emil Schürer): Schürer dated Herod's death to 4 BCE, working back from Archelaus's removal in 6 CE. That is the latest point for a birth in Herod's days. Wikipedia reports that most scholars assume a birth between 6 and 4 BCE on this basis. Schürer's own date is for Herod's death. The birth range is an inference from it.
     - Source: *Herod the Great*, Wikipedia <https://en.wikipedia.org/wiki/Herod_the_Great>
     - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
     - Argument (for): Matthew 2 places the birth in the days of Herod the king, so it cannot fall after his death.
       - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
       - Verse (dates): Matt 2:1
-    - Argument (against): Luke 2:2 links the birth to a registration under Quirinius, which Josephus dates to the removal of Archelaus in 6 CE, about a decade later.
+    - Argument (against): Luke 2:2 links the birth to a registration under Quirinius. Josephus dates that to the removal of Archelaus in 6 CE, about ten years later.
       - Source: *Census of Quirinius*, Wikipedia <https://en.wikipedia.org/wiki/Census_of_Quirinius>
       - Source: *Antiquities of the Jews, 18.1-18.25 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.1–2 <https://lexundria.com/j_aj/18.1-18.25/wst>
       - Verse (dates): Luke 2:2
-  - Position **2 BCE** (2 BCE, held by Clement of Alexandria): Clement of Alexandria's figure of 2 BCE comes from subtracting thirty years from the start of the ministry in about 29 CE; Eusebius likewise places the birth in the forty-second year of Augustus, 2 BCE.
+  - Position **2 BCE** (2 BCE, held by Clement of Alexandria): Clement of Alexandria's date of 2 BCE comes from subtracting thirty years from the start of the ministry, in about 29 CE. Eusebius also places the birth in the forty-second year of Augustus, which is 2 BCE. Here traditional means the dating of early church writers.
     - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
-  - Attestation — Josephus, Antiquities 18.1–2 (the census of Cyrenius) *in-tension*: Josephus has Cyrenius come to Syria to assess Judea after Archelaus's removal, a census he places at 6 CE, after the death of Herod under whom Matthew sets the birth.
+  - Attestation — Josephus, Antiquities 18.1–2 (the census of Cyrenius) *in-tension*: Josephus says Cyrenius came to Syria to assess Judea after Archelaus's removal. He places that census in 6 CE. That is after the death of Herod, the king under whom Matthew sets the birth.
     - Source: *Antiquities of the Jews, 18.1-18.25 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.1–2 <https://lexundria.com/j_aj/18.1-18.25/wst>
     - Source: *Census of Quirinius*, Wikipedia <https://en.wikipedia.org/wiki/Census_of_Quirinius>
 
 - [ ] **The ministry of John the Baptist** — `events/john-baptist-ministry.toml` (draft)
   - Axis / confidence: narrative / contested; range 28 CE – 29 CE
-  - Summary: Luke dates the word of God coming to John to the fifteenth year of Tiberius. Counting from Augustus's death in September 14 CE, scholars place the start of his ministry in late 28 or early 29 CE.
+  - Summary: Luke dates the moment God's word came to John to the fifteenth year of Tiberius. Counting from Augustus's death in September 14 CE, scholars place the start of John's ministry in late 28 or early 29 CE.
   - Verse (describes): Matt 3:1 – Matt 3:12 (John in the wilderness of Judea)
-  - Verse (describes): Mark 1:2 – Mark 1:8 (the forerunner baptizing)
-  - Verse (dates): Luke 3:1 – Luke 3:2 (fifteenth year of Tiberius; Pilate governor of Judea)
-  - Verse (describes): Luke 3:3 – Luke 3:20 (preaching, baptism and imprisonment)
-  - Verse (describes): John 1:19 – John 1:28 (the testimony at Bethany beyond the Jordan)
+  - Verse (describes): Mark 1:2 – Mark 1:8 (The forerunner, baptizing)
+  - Verse (dates): Luke 3:1 – Luke 3:2 (The fifteenth year of Tiberius, with Pilate governor of Judea)
+  - Verse (describes): Luke 3:3 – Luke 3:20 (His preaching, his baptizing and his imprisonment)
+  - Verse (describes): John 1:19 – John 1:28 (His testimony at Bethany beyond the Jordan)
   - Verse (alludes): Acts 13:24 – Acts 13:25 (Paul recalls John's baptism of repentance)
-  - Position **Late 28 or early 29 CE** (28 CE – 29 CE): Tiberius's reign began at Augustus's death in September 14 CE, so Luke 3:1–2 implies that John's ministry began in late 28 or early 29 CE. No individual holder is named in the cited page.
+  - Position **Late 28 or early 29 CE** (28 CE – 29 CE): Tiberius's reign began at Augustus's death in September 14 CE. So Luke 3:1-2 implies that John's ministry began in late 28 or early 29 CE. The page cited names no individual scholar who holds this.
     - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
-    - Argument (for): Luke names Tiberius's fifteenth year, Pontius Pilate as governor and Herod as tetrarch of Galilee as the setting of John's call.
+    - Argument (for): Luke names Tiberius's fifteenth year, Pontius Pilate as governor, and Herod as tetrarch of Galilee as the setting of John's call.
       - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
       - Verse (dates): Luke 3:1
-  - Attestation — Josephus, Antiquities 18.116-119 (John called the Baptist) *consistent*: Josephus independently reports John the Baptist, his call to baptism and virtue, and his execution by Herod at Machaerus. He does not date John to Tiberius's fifteenth year and names no year or Pilate, so it neither confirms nor contradicts Luke 3:1-2.
+  - Attestation — Josephus, Antiquities 18.116-119 (John called the Baptist) *consistent*: Josephus reports on John the Baptist independently. He tells of John's call to baptism and good living, and of his execution by Herod at Machaerus. He does not date John to Tiberius's fifteenth year, and he names no year and no Pilate. So he neither confirms nor contradicts Luke 3:1-2.
     - Source: *Antiquities of the Jews, book 18, sections 116-119 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.116-119 <https://lexundria.com/j_aj/18.116/wst>
 
 - [ ] **The crucifixion of Jesus** — `events/crucifixion-of-jesus.toml` (draft)
   - Axis / confidence: narrative / contested; range 30 CE – 33 CE
-  - Summary: All four Gospels place the crucifixion at Passover, on a Friday, under Pontius Pilate. Scholars generally agree on a date between 30 and 36 CE; the Friday-Passover requirement leaves 30 CE and 33 CE as the two astronomically plausible years, and the choice between them is open.
-  - Verse (describes): Matt 27:11 – Matt 27:56 (trial before Pilate, crucifixion and death)
-  - Verse (describes): Mark 15:1 – Mark 15:41 (handed over to Pilate; crucified at Golgotha)
-  - Verse (describes): Luke 23:1 – Luke 23:49 (before Pilate and Herod; crucifixion)
-  - Verse (describes): John 18:28 – John 19:37 (Pilate's judgment hall to the piercing)
-  - Verse (alludes): Acts 2:23 (Peter on the crucifixion at Pentecost)
-  - Verse (alludes): 1Cor 15:3 – 1Cor 15:4 (Christ died for our sins, buried, raised)
-  - Verse (alludes): 1Tim 6:13 (the good confession before Pontius Pilate)
-  - Position **Friday 3 April 33 CE** (33 CE, held by Colin Humphreys): Humphreys (2011) argues for Wednesday 1 April 33 CE for the Last Supper and Friday 3 April 33 CE for the crucifixion from a double-calendar analysis; Wikipedia also reports Newton and Fotheringham (1910) favoring 3 April 33 CE.
+  - Summary: All four Gospels place the crucifixion at Passover, on a Friday, under Pontius Pilate. Scholars generally agree on a date between 30 and 36 CE. The Friday-Passover rule leaves two plausible years by the astronomy, 30 CE and 33 CE. Which of the two is right is still open.
+  - Verse (describes): Matt 27:11 – Matt 27:56 (The trial before Pilate, the crucifixion and the death)
+  - Verse (describes): Mark 15:1 – Mark 15:41 (Jesus is handed over to Pilate and crucified at Golgotha)
+  - Verse (describes): Luke 23:1 – Luke 23:49 (Jesus appears before Pilate and Herod, then is crucified)
+  - Verse (describes): John 18:28 – John 19:37 (From Pilate's judgment hall to the spear in his side)
+  - Verse (alludes): Acts 2:23 (Peter speaks of the crucifixion at Pentecost)
+  - Verse (alludes): 1Cor 15:3 – 1Cor 15:4 (Christ died for our sins, was buried and was raised)
+  - Verse (alludes): 1Tim 6:13 (The good confession before Pontius Pilate)
+  - Position **Friday 3 April 33 CE** (33 CE, held by Colin Humphreys): Humphreys (2011) argues for Wednesday 1 April 33 CE for the Last Supper and Friday 3 April 33 CE for the crucifixion. He reaches this by comparing two calendars. Wikipedia also reports that Newton and Fotheringham (1910) favored 3 April 33 CE.
     - Source: *Date of the crucifixion of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Date_of_the_crucifixion>
     - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
-  - Position **Friday 7 April 30 CE** (30 CE, held by Rainer Riesner): Humphreys and Waddington find that the lunar Jewish calendar leaves two plausible Fridays, 7 April 30 CE and 3 April 33 CE; they themselves prefer 33. Rainer Riesner holds that 14 Nisan (7 April) of the year 30 is "far and away the most likely date of the crucifixion", and says this is also the view of the majority of contemporary scholars. Wikipedia's Chronology of Jesus (section "Astronomical analysis - Newton's method") says Humphreys rejects AD 27 and AD 34 and confirms 7 April AD 30 and 3 April AD 33 as the two feasible dates.
+  - Position **Friday 7 April 30 CE** (30 CE, held by Rainer Riesner): Humphreys and Waddington find that the Jewish lunar calendar leaves two plausible Fridays, 7 April 30 CE and 3 April 33 CE. They themselves prefer 33. Rainer Riesner holds that 14 Nisan (7 April) of the year 30 is "far and away the most likely date of the crucifixion". He says this is also the view of the majority of contemporary scholars. Wikipedia's Chronology of Jesus (section "Astronomical analysis - Newton's method") says Humphreys rejects AD 27 and AD 34. It says he confirms 7 April AD 30 and 3 April AD 33 as the two feasible dates.
     - Source: *Crucifixion of Jesus (Wikipedia)*, Chronology section, quoting Riesner <https://en.wikipedia.org/wiki/Crucifixion_of_Jesus>
     - Source: *Date of the crucifixion of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Date_of_the_crucifixion>
     - Source: *Chronology of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
-    - Argument (for): The Friday-Passover requirement alone is met by 7 April 30 CE as well as 3 April 33 CE.
+    - Argument (for): Either 7 April 30 CE or 3 April 33 CE meets the Friday-Passover rule.
       - Source: *Date of the crucifixion of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Date_of_the_crucifixion>
-  - Attestation — Josephus, Antiquities 18.63–64 (the Testimonium Flavianum) *partially-corroborates*: Probably mentions Jesus's crucifixion under Pilate in its original form, but the transmitted text contains Christian additions.
+  - Attestation — Josephus, Antiquities 18.63–64 (the Testimonium Flavianum) *partially-corroborates*: The original text probably mentioned Jesus's crucifixion under Pilate. But the text we have contains Christian additions.
     - Source: *Josephus on Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Josephus_on_Jesus>
-  - Attestation — Tacitus, Annals 15.44 *corroborates*: Says Christus suffered the extreme penalty in Tiberius's reign at the hands of the procurator Pontius Pilate; it fixes the window of 26–37 CE, not the year.
+  - Attestation — Tacitus, Annals 15.44 *corroborates*: Tacitus says Christus suffered the extreme penalty in Tiberius's reign at the hands of the procurator Pontius Pilate. That fixes a window of 26-37 CE, not the year.
     - Source: *Annales, book 15 (Latin text, The Latin Library)*, Tacitus, 15.44 <https://www.thelatinlibrary.com/tacitus/tac.ann15.shtml>
 
 - [ ] **Pentecost and the outpouring of the Spirit** — `events/pentecost.toml` (draft)
   - Axis / confidence: narrative / contested; range 30 CE – 33 CE
-  - Summary: Acts 2 narrates the first Pentecost after the resurrection, when the apostles speak in other tongues and Peter preaches in Jerusalem. Its year follows the date given to the crucifixion, which is unsettled. Both positions below take the year of the crucifixion and have the same holders; no scholar read dates Pentecost separately.
+  - Summary: Acts 2 tells of the first Pentecost after the resurrection. The apostles speak in other languages, and Peter preaches in Jerusalem. Its year depends on the year given to the crucifixion, which is unsettled. Both positions below simply take the crucifixion year and have the same holders. No scholar read dates Pentecost on its own.
   - Verse (background): Joel 2:28 – Joel 2:32 (the prophecy Peter quotes)
-  - Verse (describes): Acts 2:1 – Acts 2:41 (the day of Pentecost, the tongues, Peter's sermon)
-  - Verse (alludes): Acts 11:15 – Acts 11:16 (Peter recalls the Spirit falling at the beginning)
-  - Position **33 CE** (33 CE, held by Colin Humphreys): If the crucifixion falls on 3 April 33 CE, as Humphreys argues, the Pentecost of Acts 2 falls later in 33 CE. The year is derived from the crucifixion date, not separately attested.
+  - Verse (describes): Acts 2:1 – Acts 2:41 (the day of Pentecost, the speaking in other languages, Peter's sermon)
+  - Verse (alludes): Acts 11:15 – Acts 11:16 (Peter recalls the Spirit coming down at the start)
+  - Position **33 CE** (33 CE, held by Colin Humphreys): The scholar Colin Humphreys argues that the crucifixion fell on 3 April 33 CE. If so, the Pentecost of Acts 2 came later that same year. The year is worked out from the crucifixion date. No source gives it directly.
     - Source: *Date of the crucifixion of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Date_of_the_crucifixion>
-  - Position **30 CE** (30 CE): If the crucifixion falls on 7 April 30 CE, the Pentecost of Acts 2 falls later in 30 CE. The year is derived from the crucifixion date.
+  - Position **30 CE** (30 CE): If the crucifixion fell on 7 April 30 CE, the Pentecost of Acts 2 came later in 30 CE. The year is worked out from the crucifixion date.
     - Source: *Date of the crucifixion of Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Date_of_the_crucifixion>
 
 - [ ] **The conversion of Paul** — `events/conversion-of-paul.toml` (draft)
   - Axis / confidence: narrative / contested; range 31 CE – 40 CE
-  - Summary: Paul the persecutor encounters the risen Jesus near Damascus and becomes an apostle. Acts tells it three times; Paul alludes to it in Galatians and 1 Corinthians. Scholars date it to 31–36 CE.
-  - Verse (describes): Acts 9:1 – Acts 9:19 (Luke's narrative on the road to Damascus)
-  - Verse (describes): Acts 22:3 – Acts 22:16 (Paul's account to the crowd in Jerusalem)
-  - Verse (describes): Acts 26:9 – Acts 26:18 (Paul's account before Agrippa)
+  - Summary: Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times. Paul refers to it in Galatians and 1 Corinthians. Scholars date it to 31-36 CE.
+  - Verse (describes): Acts 9:1 – Acts 9:19 (Luke's story of the road to Damascus)
+  - Verse (describes): Acts 22:3 – Acts 22:16 (Paul tells the crowd in Jerusalem)
+  - Verse (describes): Acts 26:9 – Acts 26:18 (Paul tells the story before Agrippa)
   - Verse (alludes): 1Cor 9:1 (have I not seen Jesus our Lord)
   - Verse (alludes): 1Cor 15:8 – 1Cor 15:10 (last of all he appeared also to me)
   - Verse (alludes): Gal 1:13 – Gal 1:17 (God was pleased to reveal his Son to me)
   - Verse (alludes): 1Tim 1:12 – 1Tim 1:16 (formerly a blasphemer and persecutor)
-  - Position **31–36 CE** (31 CE – 36 CE, held by Bromley (1979), Barnett (2002), Niswonger (1992)): Wikipedia reports that Paul's conversion has been dated to 31–36 CE by Bromley (1979), Barnett (2002) and Niswonger (1992); the page gives surnames only and does not name the works.
+  - Position **31–36 CE** (31 CE – 36 CE, held by Bromley (1979), Barnett (2002), Niswonger (1992)): Wikipedia reports that Bromley (1979), Barnett (2002) and Niswonger (1992) have dated Paul's conversion to 31-36 CE. The page gives surnames only and does not name their works.
     - Source: *Paul the Apostle*, Wikipedia <https://en.wikipedia.org/wiki/Paul_the_Apostle>
-  - Position **Four to seven years after the crucifixion** (34 CE – 40 CE): Wikipedia says Acts suggests the conversion occurred four to seven years after the crucifixion; the years here are that interval applied to a 30 CE or 33 CE crucifixion (34–40), my computation, not a cited scholar's.
+  - Position **Four to seven years after the crucifixion** (34 CE – 40 CE): Wikipedia says Acts suggests the conversion came four to seven years after the crucifixion. The years here (34-40) are that gap added to a crucifixion in 30 CE or 33 CE. That sum is the cataloguer's own, not a cited scholar's.
     - Source: *Conversion of Paul the Apostle*, Wikipedia <https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle>
-  - Position **33-36 CE** (33 CE – 36 CE): Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page; Riesner, Jewett and Luedemann were not found on the pages read.
+  - Position **33-36 CE** (33 CE – 36 CE): Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page. Riesner, Jewett and Luedemann were not found on the pages read.
     - Source: *Chronology of Jesus*, Wikipedia, section Conversion of Paul <https://en.wikipedia.org/wiki/Chronology_of_Jesus>
 
 - [ ] **The death of Herod Agrippa I** — `events/death-of-agrippa-i.toml` (draft)
   - Axis / confidence: narrative / firm; range 44 CE
-  - Summary: Acts and Josephus both report that Herod Agrippa I died suddenly after being acclaimed as a god at Caesarea. Josephus gives the circumstances and the length of his reign; the death is dated 44 CE.
+  - Summary: Acts and Josephus both report that Herod Agrippa I died suddenly after the crowd hailed him as a god at Caesarea. Josephus adds the circumstances and the length of his reign. The death is dated to 44 CE.
   - Verse (background): Acts 12:1 – Acts 12:4 (Herod's earlier persecution of the church)
-  - Verse (describes): Acts 12:19 – Acts 12:23 (Tyre and Sidon; struck down for not giving glory to God)
-  - Position **44 CE** (44 CE): Dated to 44 CE in the Wikipedia article on Herod Agrippa. Josephus counts four years of reign under Caius and three under Claudius.
+  - Verse (describes): Acts 12:19 – Acts 12:23 (Tyre and Sidon. Herod is struck down for not giving glory to God)
+  - Position **44 CE** (44 CE): The Wikipedia article on Herod Agrippa dates the death to 44 CE. Josephus counts four years of reign under Caius and three under Claudius.
     - Source: *Herod Agrippa*, Wikipedia <https://en.wikipedia.org/wiki/Herod_Agrippa>
     - Source: *Antiquities of the Jews, 19.343-19.352 (Lexundria)*, Flavius Josephus, trans. William Whiston, 19.351 <https://lexundria.com/j_aj/19.343-19.352/wst>
-  - Attestation — Josephus, Antiquities 19.343–352 (the death of Agrippa I) *partially-corroborates*: Both accounts have a public acclamation of Agrippa as a god at Caesarea and a fatal illness following at once; Josephus has a silver garment, an owl omen and five days of belly pain where Acts has an angel and worms.
+  - Attestation — Josephus, Antiquities 19.343–352 (the death of Agrippa I) *partially-corroborates*: Both accounts have a crowd hailing Agrippa as a god at Caesarea, followed at once by a fatal illness. Josephus describes a silver garment, an owl as an omen, and five days of stomach pain. Acts has an angel and worms.
     - Source: *Antiquities of the Jews, 19.343-19.352 (Lexundria)*, Flavius Josephus, trans. William Whiston, 19.344–350 <https://lexundria.com/j_aj/19.343-19.352/wst>
     - Source: *Herod Agrippa*, Wikipedia <https://en.wikipedia.org/wiki/Herod_Agrippa>
 
 - [ ] **The Jerusalem council** — `events/jerusalem-council.toml` (draft)
   - Axis / confidence: narrative / contested; range 48 CE – 50 CE
-  - Summary: Apostles and elders meet in Jerusalem on whether Gentile converts must be circumcised and keep the law, and issue a decree. It is dated about 48–50 CE; an overwhelming majority of scholars identify Acts 15 with Paul's account in Galatians 2:1–10.
-  - Verse (describes): Acts 15:1 – Acts 15:35 (the debate, Peter and James, the apostolic decree)
-  - Verse (alludes): Acts 16:4 (the decrees delivered to the churches)
-  - Verse (alludes): Acts 21:25 (James recalls the decree for Gentile believers)
-  - Verse (describes): Gal 2:1 – Gal 2:10 (Paul's own account; most identify it with Acts 15)
-  - Position **49 CE** (49 CE, held by Brown (1997)): Wikipedia, citing Brown's An Introduction to the New Testament (1997), gives 49 CE as the traditional dating and 47 or 51 as a revisionist minority dating.
+  - Summary: Apostles and elders meet in Jerusalem to decide whether non-Jewish converts must be circumcised and keep the Jewish law. They issue a decree. It is dated to about 48-50 CE. An overwhelming majority of scholars identify Acts 15 with Paul's own account in Galatians 2:1-10.
+  - Verse (describes): Acts 15:1 – Acts 15:35 (The debate, Peter and James, and the apostles' decree)
+  - Verse (alludes): Acts 16:4 (The decrees are delivered to the churches)
+  - Verse (alludes): Acts 21:25 (James recalls the decree for non-Jewish believers)
+  - Verse (describes): Gal 2:1 – Gal 2:10 (Paul's own account. Most scholars identify it with Acts 15)
+  - Position **49 CE** (49 CE, held by Brown (1997)): Wikipedia cites Brown's An Introduction to the New Testament (1997). It gives 49 CE as the traditional date and 47 or 51 as a minority dating that departs from the usual view.
     - Source: *Paul the Apostle*, Wikipedia <https://en.wikipedia.org/wiki/Paul_the_Apostle>
-  - Position **c. 48–50 CE** (48 CE – 50 CE): The Council of Jerusalem is dated to c. 48–50 CE in Wikipedia's article.
+  - Position **c. 48–50 CE** (48 CE – 50 CE): Wikipedia's article dates the Council of Jerusalem to about 48-50 CE.
     - Source: *Council of Jerusalem*, Wikipedia <https://en.wikipedia.org/wiki/Council_of_Jerusalem>
 
 - [ ] **Paul before Gallio at Corinth** — `events/paul-before-gallio.toml` (draft)
   - Axis / confidence: narrative / firm; range 51 CE – 52 CE
-  - Summary: Paul's opponents bring him before Gallio, proconsul of Achaia, at Corinth, and Gallio refuses to judge. The Delphi inscription of Claudius dates Gallio's tenure to about 51–52 CE, the most accurately known date in Paul's life.
-  - Verse (background): Acts 18:1 – Acts 18:11 (Paul's eighteen months at Corinth)
-  - Verse (describes): Acts 18:12 – Acts 18:17 (the Jews bring Paul before Gallio's tribunal)
-  - Position **51–52 CE** (51 CE – 52 CE): Gallio's tenure as proconsul can be dated fairly accurately to 51–52 CE through the Delphi inscription, whose reference to Claudius's twenty-sixth acclamation corresponds to 52 CE.
+  - Summary: Paul's opponents bring him before Gallio, the Roman governor of Achaia, at Corinth. Gallio refuses to judge the case. A stone inscription from Delphi, carrying a letter of Emperor Claudius, dates Gallio's time in office to about 51 to 52 CE. That is the best-known date in Paul's life.
+  - Verse (background): Acts 18:1 – Acts 18:11 (Paul's eighteen months in Corinth)
+  - Verse (describes): Acts 18:12 – Acts 18:17 (the Jews bring Paul before Gallio's judgment seat)
+  - Position **51–52 CE** (51 CE – 52 CE): Gallio's time as governor can be dated fairly closely to 51 to 52 CE. The Delphi inscription mentions Claudius's twenty-sixth acclamation (a public salute as victorious emperor), and that corresponds to 52 CE.
     - Source: *Lucius Junius Gallio Annaeanus*, Wikipedia <https://en.wikipedia.org/wiki/Lucius_Junius_Gallio_Annaeanus>
-  - Attestation — Delphi inscription of Claudius naming Gallio *corroborates*: Claudius calls Gallio "my friend and proconsul", confirming that he held the Achaean proconsulship and when. Found at Delphi; published as Fouilles de Delphes III 4:286 and SIG II 801d; cites Claudius's 26th acclamation (Wikipedia, Gallio inscription).
+  - Attestation — Delphi inscription of Claudius naming Gallio *corroborates*: Claudius calls Gallio "my friend and proconsul". This confirms that Gallio governed Achaia, and roughly when. The stone was found at Delphi and is published as Fouilles de Delphes III 4:286 and SIG II 801d. It cites Claudius's 26th acclamation (Wikipedia, Gallio inscription).
     - Source: *Gallio inscription*, Wikipedia, 2026 <https://en.wikipedia.org/wiki/Gallio_inscription>
     - Source: *Lucius Junius Gallio Annaeanus*, Wikipedia <https://en.wikipedia.org/wiki/Lucius_Junius_Gallio_Annaeanus>
 
 - [ ] **Paul's arrest and trials before Felix and Festus** — `events/paul-arrest-felix-festus.toml` (draft)
   - Axis / confidence: narrative / contested; range 55 CE – 61 CE
-  - Summary: Paul is arrested in Jerusalem, held at Caesarea under the governor Felix, and after two years is heard by his successor Festus, to whom he appeals to Caesar. The year of Festus's accession is disputed, between c. 55 and 61 CE, with 59 favored by F. F. Bruce.
-  - Verse (describes): Acts 21:27 – Acts 21:36 (the arrest in the temple)
-  - Verse (describes): Acts 23:23 – Acts 24:27 (Caesarea; Felix; two years' detention)
-  - Verse (describes): Acts 25:1 – Acts 26:32 (Festus; the appeal to Caesar; Agrippa II)
-  - Position **Festus succeeds Felix c. 59 CE** (59 CE, held by F. F. Bruce): Wikipedia says Bruce cites 59 CE for Festus's accession, based on provincial coinage of Nero's fifth year, and that most scholars favor 58–60.
+  - Summary: Paul is arrested in Jerusalem and held at Caesarea under the governor Felix. After two years he is heard by Felix's successor, Festus, and appeals to Caesar. Scholars disagree on the year Festus took office, anywhere from about 55 to 61 CE. The scholar F. F. Bruce favors 59.
+  - Verse (describes): Acts 21:27 – Acts 21:36 (Paul is arrested in the temple)
+  - Verse (describes): Acts 23:23 – Acts 24:27 (Caesarea, Felix, and two years in custody)
+  - Verse (describes): Acts 25:1 – Acts 26:32 (Festus, the appeal to Caesar, and King Agrippa II)
+  - Position **Festus succeeds Felix c. 59 CE** (59 CE, held by F. F. Bruce): Wikipedia says Bruce gives 59 CE for Festus taking office. He bases this on local coins struck in Nero's fifth year. Wikipedia adds that most scholars favor 58 to 60.
     - Source: *Porcius Festus*, Wikipedia <https://en.wikipedia.org/wiki/Porcius_Festus>
-  - Position **Festus's accession between c. 55 and 61 CE** (55 CE – 61 CE): The earliest proposed start of Festus's term is c. 55–56 and the latest is 61 CE.
+  - Position **Festus's accession between c. 55 and 61 CE** (55 CE – 61 CE): The earliest suggested start for Festus's term is about 55 to 56 CE. The latest is 61 CE.
     - Source: *Porcius Festus*, Wikipedia <https://en.wikipedia.org/wiki/Porcius_Festus>
-  - Attestation — Josephus, Antiquities 20.182 (Festus succeeds Felix) *corroborates*: Josephus says Nero sent Porcius Festus as successor to Felix, as Acts 24:27 has it. He gives no year, so it does not settle the 55-61 CE range.
+  - Attestation — Josephus, Antiquities 20.182 (Festus succeeds Felix) *corroborates*: Josephus says Nero sent Porcius Festus to replace Felix, just as Acts 24:27 says. He gives no year, so this does not settle the range of 55 to 61 CE.
     - Source: *Antiquities of the Jews, book 20, with Niese section numbers (Lexundria)*, Flavius Josephus, trans. William Whiston, 20.182 <https://lexundria.com/j_aj/20.182/wst>
 
 - [ ] **The deaths of Peter and Paul** — `events/deaths-of-peter-and-paul.toml` (draft)
   - Axis / confidence: narrative / speculative; range 64 CE – 68 CE
-  - Summary: Rests on tradition only: 1 Clement says both suffered martyrdom, and Eusebius reports that Paul was beheaded at Rome and Peter crucified there under Nero. Wikipedia places Paul's death c. 64–65 CE; the New Testament does not narrate either death.
-  - Verse (alludes): John 21:18 – John 21:19 (Peter will stretch out his hands, signifying how he would die)
-  - Verse (background): Acts 28:30 – Acts 28:31 (Paul at Rome awaiting trial)
-  - Verse (alludes): 2Tim 4:6 – 2Tim 4:8 (Paul expects his departure)
-  - Verse (alludes): 2Pet 1:14 (Peter knows his tent will soon be put off)
-  - Position **c. 64–65 CE, under Nero** (64 CE – 65 CE): Wikipedia dates Paul's death to c. 64–65 CE in Rome under Nero, citing 1 Clement 5 and Eusebius. Eusebius places Peter's crucifixion under Nero as well; neither source gives a year.
+  - Summary: This rests on tradition only. 1 Clement says both men were martyred. Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE. The New Testament does not tell of either death.
+  - Verse (alludes): John 21:18 – John 21:19 (Peter will stretch out his hands, a sign of how he would die)
+  - Verse (background): Acts 28:30 – Acts 28:31 (Paul at Rome, waiting for his trial)
+  - Verse (alludes): 2Tim 4:6 – 2Tim 4:8 (Paul expects to die soon)
+  - Verse (alludes): 2Pet 1:14 (Peter knows his body, his tent, will soon be put off)
+  - Position **c. 64–65 CE, under Nero** (64 CE – 65 CE): Wikipedia dates Paul's death to about 64-65 CE, in Rome under Nero, citing 1 Clement 5 and Eusebius. Eusebius places Peter's crucifixion under Nero as well. Neither source gives a year. Traditional here means the early church accounts.
     - Source: *Paul the Apostle*, Wikipedia <https://en.wikipedia.org/wiki/Paul_the_Apostle>
     - Source: *Eusebius, Church History, book 2 (New Advent)*, Eusebius of Caesarea, 2.25.5 <https://www.newadvent.org/fathers/250102.htm>
-  - Position **Fourteenth year of Nero (Jerome)** (67 CE – 68 CE): Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero", and that Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year. Nero's reign began on 13 October 54 and ended with his death on 9 June 68, so his fourteenth regnal year runs from October 67 to June 68; Eusebius's Chronicle was not read.
+  - Position **Fourteenth year of Nero (Jerome)** (67 CE – 68 CE): Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero". He says Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year. Nero's reign began on 13 October 54 and ended with his death on 9 June 68. So his fourteenth year runs from October 67 to June 68. Eusebius's Chronicle was not read.
     - Source: *De viris illustribus (Lives of Illustrious Men), chapters 1 and 5 (New Advent)*, Jerome, 2026, ch. 1 (Peter); ch. 5 (Paul) <https://www.newadvent.org/fathers/2708.htm>
     - Source: *Nero (Wikipedia)*, lead and reign sections: accession 13 October 54, death 9 June 68 <https://en.wikipedia.org/wiki/Nero>
-  - Attestation — Eusebius, Church History 2.25 *consistent*: Late tradition: Paul beheaded at Rome, Peter crucified under Nero.
+  - Attestation — Eusebius, Church History 2.25 *consistent*: This is a late tradition. Paul was beheaded at Rome and Peter was crucified under Nero.
     - Source: *Eusebius, Church History, book 2 (New Advent)*, Eusebius of Caesarea, 2.25.5–8 <https://www.newadvent.org/fathers/250102.htm>
-  - Attestation — 1 Clement 5–6 *consistent*: Says both men suffered martyrdom, Paul "under the prefects", without place or date.
+  - Attestation — 1 Clement 5–6 *consistent*: 1 Clement says both men were martyred, Paul "under the prefects". It gives no place or date.
     - Source: *1 Clement, Hoole translation (Early Christian Writings)*, Clement of Rome, ch. 5 <http://www.earlychristianwritings.com/text/1clement-roberts.html>
 
 - [ ] **The destruction of the Second Temple** — `events/second-temple-destruction.toml` (draft)
   - Axis / confidence: narrative / firm; range 70 CE
-  - Summary: Titus's army besieged Jerusalem from 13 April to 8 September 70 CE and the Second Temple burned on 10 Av. Jesus's words about the temple in the Synoptic Gospels allude to the event; Josephus narrates it from the Roman side, and the Arch of Titus shows the spoils.
-  - Verse (alludes): Matt 24:1 – Matt 24:2 (parallel: the temple buildings thrown down)
-  - Verse (alludes): Mark 13:1 – Mark 13:2 (not one stone left upon another)
+  - Summary: The Roman army under Titus besieged Jerusalem from 13 April to 8 September 70 CE. The Second Temple burned on 10 Av. Jesus's words about the temple, in Matthew, Mark and Luke, point to this event. Josephus tells it from the Roman side, and the Arch of Titus in Rome shows the loot.
+  - Verse (alludes): Matt 24:1 – Matt 24:2 (the same saying: the temple buildings thrown down)
+  - Verse (alludes): Mark 13:1 – Mark 13:2 (not one stone will be left on another)
   - Verse (alludes): Luke 19:43 – Luke 19:44 (enemies will not leave one stone on another)
-  - Verse (alludes): Luke 21:5 – Luke 21:6 (parallel: the days will come when not one stone)
+  - Verse (alludes): Luke 21:5 – Luke 21:6 (the same saying: the days will come when not one stone is left)
   - Verse (alludes): Luke 21:20 – Luke 21:24 (Jerusalem surrounded by armies)
-  - Position **70 CE (10 Av)** (70 CE): The siege lasted from 13 April to 8 September 70 CE; the Second Temple was destroyed on 10 Av. Josephus says it burned on the tenth of Lous, the day on which the king of Babylon had burned the first temple.
+  - Position **70 CE (10 Av)** (70 CE): The siege lasted from 13 April to 8 September 70 CE. The Second Temple was destroyed on 10 Av. Josephus says it burned on the tenth of Lous. That was the same day the king of Babylon had burned the first temple.
     - Source: *Siege of Jerusalem (70 CE)*, Wikipedia <https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(70_CE)>
     - Source: *The Jewish War, 6.249-6.270 (Lexundria)*, Flavius Josephus, trans. William Whiston, 6.249–250 <https://lexundria.com/j_bj/6.249-6.270/wst>
-  - Attestation — Arch of Titus *corroborates*: One relief panel shows the spoils taken from the Temple in Jerusalem, with the menorah as its main focus.
+  - Attestation — Arch of Titus *corroborates*: One carved panel shows the loot taken from the Temple in Jerusalem. The menorah, the temple lampstand, is its main focus.
     - Source: *Arch of Titus*, Wikipedia <https://en.wikipedia.org/wiki/Arch_of_Titus>
-  - Attestation — Josephus, Jewish War 6.249–250 *corroborates*: The eyewitness account of the burning of the temple on the tenth of Lous.
+  - Attestation — Josephus, Jewish War 6.249–250 *corroborates*: Josephus, who saw it, describes the burning of the temple on the tenth of Lous.
     - Source: *The Jewish War, 6.249-6.270 (Lexundria)*, Flavius Josephus, trans. William Whiston, 6.249–250 <https://lexundria.com/j_bj/6.249-6.270/wst>
 
 ## People
@@ -1146,73 +1145,73 @@ The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with th
 - [ ] **Ahab** — `persons/ahab.toml` (draft)
   - Role: king of Israel (reigned c. 874–853 BCE)
   - Evidence grade (derived): corroborates
-  - Summary: Son of Omri, king of the northern kingdom of Israel from Samaria, remembered in Kings chiefly for his conflict with Elijah. An Assyrian inscription names him as a major member of the coalition that met Shalmaneser III at Qarqar in 853 BCE. Young's reconstruction of the regnal data gives his reign as 874–853 BCE.
+  - Summary: Ahab was the son of Omri and king of the northern kingdom of Israel, ruling from Samaria. Kings remembers him mostly for his conflict with Elijah. An Assyrian inscription names him as a major member of the coalition that met Shalmaneser III at Qarqar in 853 BCE. Young's reconstruction of the regnal data gives his reign as 874–853 BCE.
   - Source: *The Kurkh Monolith of Shalmaneser III*, Center for Online Judaic Studies <https://cojs.org/?p=6525>
   - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
   - Verse (describes): 1Kgs 16:29 – 1Kgs 22:40
-  - Attestation — Kurkh Monolith of Shalmaneser III *corroborates*: Names "Ahab the Israelite" among Shalmaneser III's opponents at Qarqar (853 BCE), credited with 2,000 chariots and 10,000 foot soldiers.
+  - Attestation — Kurkh Monolith of Shalmaneser III *corroborates*: Names "Ahab the Israelite" among Shalmaneser III's opponents at Qarqar (853 BCE). It credits him with 2,000 chariots and 10,000 foot soldiers.
     - Source: *The Kurkh Monolith of Shalmaneser III*, Center for Online Judaic Studies <https://cojs.org/?p=6525>
     - Source: *Kurkh Monoliths*, Wikipedia <https://en.wikipedia.org/wiki/Kurkh_Monoliths>
 
 - [ ] **Belshazzar** — `persons/belshazzar.toml` (draft)
   - Role: crown prince of Babylon (called king in Daniel)
   - Evidence grade (derived): corroborates
-  - Summary: The ruler of Babylon at the feast of Daniel 5, the night the city fell. Long known only from Daniel, he is named in a cylinder of Nabonidus as the king's eldest son. That he existed is corroborated; that Daniel calls him king and son of Nebuchadnezzar is a separate question (see the linked issue).
+  - Summary: Belshazzar ruled Babylon at the feast of Daniel 5, the night the city fell. For a long time he was known only from Daniel. A cylinder of Nabonidus names him as the king's eldest son. So his existence is backed up. Why Daniel calls him king, and son of Nebuchadnezzar, is a separate question (see the linked issue).
   - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
   - Verse (describes): Dan 5:1 – Dan 5:31
-  - Attestation — Nabonidus Cylinder from Ur *corroborates*: Nabonidus prays for "Belshazzar, the eldest son, my offspring" — naming him, and as the son of Nabonidus, not of Nebuchadnezzar.
+  - Attestation — Nabonidus Cylinder from Ur *corroborates*: Nabonidus prays for "Belshazzar, the eldest son, my offspring". It names him as the son of Nabonidus, not of Nebuchadnezzar.
     - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
 
 - [ ] **Caiaphas** — `persons/caiaphas.toml` (draft)
   - Also known as: Joseph Caiaphas
   - Role: high priest in Jerusalem
   - Evidence grade (derived): corroborates
-  - Summary: The high priest at the trial of Jesus in the Gospels. Josephus names him as high priest, and a family ossuary found in Jerusalem in 1990 is widely, though not universally, identified as his.
+  - Summary: Caiaphas was the high priest at the trial of Jesus in the Gospels. Josephus names him as high priest. A family burial box found in Jerusalem in 1990 is widely, though not universally, identified as his.
   - Source: *Caiaphas, Joseph*, Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library, 2007 <https://www.jewishvirtuallibrary.org/caiaphas-joseph>
   - Source: *Caiaphas*, Wikipedia <https://en.wikipedia.org/wiki/Caiaphas>
   - Verse (describes): Matt 26:3
   - Verse (describes): John 18:13
-  - Attestation — Caiaphas ossuary *partially-corroborates*: Inscribed "Joseph son of Caiaphas". The identification with the high priest is widely accepted but disputed on the spelling, the lack of a title and the plainness of the tomb.
+  - Attestation — Caiaphas ossuary *partially-corroborates*: Inscribed "Joseph son of Caiaphas". Many accept that this is the high priest. Others doubt it because of the spelling, the lack of a title and the plain tomb.
     - Source: *Caiaphas ossuary*, Wikipedia <https://en.wikipedia.org/wiki/Caiaphas_ossuary>
-  - Attestation — Josephus, Antiquities book 18 (Joseph Caiaphas) *corroborates*: Josephus names Joseph called Caiaphas as high priest: made Gratus's appointee's successor (18.35) and deprived of the office by Vitellius, who appointed Jonathan son of Ananus (18.95).
+  - Attestation — Josephus, Antiquities book 18 (Joseph Caiaphas) *corroborates*: Josephus names Joseph called Caiaphas as high priest. He was made high priest after Gratus's appointee (18.35). Vitellius removed him and appointed Jonathan son of Ananus (18.95).
     - Source: *Antiquities of the Jews, book 18, with Niese section numbers (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.35; 18.95 <https://lexundria.com/j_aj/18.26-18.95/wst>
     - Source: *Caiaphas, Joseph*, Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library, 2007 <https://www.jewishvirtuallibrary.org/caiaphas-joseph>
 
 - [ ] **David** — `persons/david.toml` (draft)
   - Role: king of Judah and Israel
   - Evidence grade (derived): partially-corroborates
-  - Summary: The shepherd who became king, founder of the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that refers to the "House of David" — the dynasty, not the man — a reading most scholars accept and a minority dispute. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate).
+  - Summary: David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David". That means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate).
   - Source: *Tel Dan stele*, Wikipedia <https://en.wikipedia.org/wiki/Tel_Dan_stele>
   - Verse (describes): 2Sam 5:1 – 2Sam 5:5 (David made king over Israel)
-  - Attestation — Tel Dan Stele *partially-corroborates*: Names the "House of David" (bytdwd, line 9) in the 9th century BCE, generations after David's traditional reign: evidence that a dynasty was known by his name, not a contemporary witness to him. The reading is accepted by most scholars and disputed by a minority.
+  - Attestation — Tel Dan Stele *partially-corroborates*: Names the "House of David" (bytdwd, line 9) in the 9th century BCE. That is generations after David's traditional reign. It shows a dynasty was known by his name. It is not a witness from his own time. Most scholars accept the reading and a minority dispute it.
     - Source: *An Aramaic Stele Fragment from Tel Dan*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 43 (2–3), pp. 81–98, 1993, pp. 81–98
     - Source: *Tel Dan stele*, Wikipedia <https://en.wikipedia.org/wiki/Tel_Dan_stele>
 
 - [ ] **Hezekiah** — `persons/hezekiah.toml` (draft)
   - Role: king of Judah (sole reign from 716/715 BCE)
   - Evidence grade (derived): corroborates
-  - Summary: King of Judah during Sennacherib's invasion of 701 BCE. Named in the Assyrian king's own annals and on a royal seal impression from Jerusalem. His accession is a known chronological problem: Young reconstructs a coregency with Ahaz from 729/728 BCE, a sole reign from 716/715 and his death in 687, and notes that Thiele did not recognise the Ahaz–Hezekiah coregency.
+  - Summary: Hezekiah was king of Judah when Sennacherib invaded in 701 BCE. The Assyrian king's own annals name him, and so does a royal seal impression from Jerusalem. The start of his reign is a known problem in the dates. Young reconstructs a joint reign with Ahaz from 729/728 BCE, a reign on his own from 716/715, and his death in 687. He notes that Thiele did not recognise the Ahaz–Hezekiah joint reign.
   - Source: *Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms*, Center for Online Judaic Studies <https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/>
   - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246; §3, p. 227 <https://www.rcyoung.org/articles/rtables.pdf>
   - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 589 <https://www.rcyoung.org/articles/solomon.pdf>
   - Verse (describes): 2Kgs 18:1 – 2Kgs 20:21
-  - Attestation — Royal bulla of Hezekiah (Ophel) *corroborates*: A seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah", matching the parentage given in 2 Kings 18:1.
+  - Attestation — Royal bulla of Hezekiah (Ophel) *corroborates*: A seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah". It matches the father named in 2 Kings 18:1.
     - Source: *King Hezekiah in the Bible: Royal Seal of Hezekiah Comes to Light*, Biblical Archaeology Society <https://www.biblicalarchaeology.org/daily/news/king-hezekiah-in-the-bible-royal-seal-of-hezekiah-comes-to-light/>
-  - Attestation — Taylor Prism (annals of Sennacherib) *corroborates*: Sennacherib names "Hezekiah the Judahite", who had not submitted to his yoke, and says he shut him up in Jerusalem "like a bird in a cage".
+  - Attestation — Taylor Prism (annals of Sennacherib) *corroborates*: Sennacherib names "Hezekiah the Judahite", who had not submitted to his yoke. He says he shut Hezekiah up in Jerusalem "like a bird in a cage".
     - Source: *Taylor Prism (collection record, registration 1855,1003.1)*, British Museum <https://www.britishmuseum.org/collection/object/W_1855-1003-1>
     - Source: *Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms*, Center for Online Judaic Studies <https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/>
 
 - [ ] **Jehoiachin** — `persons/jehoiachin.toml` (draft)
   - Role: king of Judah
   - Evidence grade (derived): corroborates
-  - Summary: King of Judah for three months before surrendering Jerusalem to Nebuchadnezzar in 597 BCE; taken to Babylon, where 2 Kings ends with him released from prison and given a daily allowance. Babylonian ration lists name him as king of Judah, receiving oil in Babylon. Young dates the capture from the Babylonian Chronicle to 2 Adar 597 BCE.
+  - Summary: Jehoiachin was king of Judah for three months. He surrendered Jerusalem to Nebuchadnezzar in 597 BCE and was taken to Babylon. 2 Kings ends with him released from prison and given a daily allowance. Babylonian ration lists name him as king of Judah, receiving oil in Babylon. Young dates the capture, using the Babylonian Chronicle, to 2 Adar 597 BCE.
   - Source: *Jehoiachin's Rations Tablets*, Wikipedia <https://en.wikipedia.org/wiki/Jehoiachin%27s_Rations_Tablets>
   - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 21, 25 <https://www.rcyoung.org/articles/jerusalem.pdf>
   - Verse (describes): 2Kgs 24:8 – 2Kgs 24:17
   - Verse (describes): 2Kgs 25:27 – 2Kgs 25:30
-  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *consistent*: Records that Nebuchadnezzar "captured the king" of Jerusalem in 597 BCE and appointed a king of his own choice, without naming either; it fits Jehoiachin's surrender and Zedekiah's installation but does not name him.
+  - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *consistent*: Records that Nebuchadnezzar "captured the king" of Jerusalem in 597 BCE and appointed a king of his own choice. It names neither man. It fits Jehoiachin's surrender and Zedekiah's installation, but does not name him.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
-  - Attestation — Jehoiachin ration tablet *corroborates*: Lists oil rations for "Ya'u-kinu, king of the land of Yahudu" and his five sons in Babylon — the captive king of 2 Kings 24:15 and 25:27–30, still styled king.
+  - Attestation — Jehoiachin ration tablet *corroborates*: Lists oil rations for "Ya'u-kinu, king of the land of Yahudu" and his five sons in Babylon. This is the captive king of 2 Kings 24:15 and 25:27–30, still called king.
     - Source: *VAT 16378 (collection record)*, Staatliche Museen zu Berlin, Vorderasiatisches Museum <https://search.smb.museum/en/object/obj-1743721>
     - Source: *Jojachin, König von Juda, in babylonischen Keilschrifttexten*, Ernst F. Weidner, Mélanges syriens offerts à M. René Dussaud, pp. 923–935, 1939, pp. 923–935
 
@@ -1220,28 +1219,28 @@ The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with th
   - Also known as: Jesus Christ
   - Role: Jewish teacher from Galilee, crucified under Pontius Pilate
   - Evidence grade (derived): corroborates
-  - Summary: Most historians of antiquity, Bart Ehrman prominent among them, conclude that Jesus existed and was crucified under Pontius Pilate, whatever they make of the Gospels' further claims. Two Roman-era historians outside the Christian tradition mention him: Tacitus explicitly, and Josephus in two passages, one of which was expanded by later Christian copyists.
+  - Summary: Most historians of antiquity, Bart Ehrman among them, conclude that Jesus existed and was crucified under Pontius Pilate. They say this whatever they make of the Gospels' other claims. Two Roman-era writers outside the Christian tradition mention him. Tacitus does so directly. Josephus does so in two passages, and later Christian copyists expanded one of them.
   - Source: *Did Jesus Exist? The Historical Argument for Jesus of Nazareth*, Bart D. Ehrman, 2012
   - Verse (describes): Mark 15:1 – Mark 15:15 (handed over by Pilate)
-  - Attestation — Josephus, Antiquities 20.9.1 (James, brother of Jesus) *corroborates*: Identifies James as "the brother of Jesus who was called Christ" in passing, in a passage almost universally accepted as authentic.
+  - Attestation — Josephus, Antiquities 20.9.1 (James, brother of Jesus) *corroborates*: Mentions in passing James as "the brother of Jesus who was called Christ". Almost all scholars accept this passage as genuine.
     - Source: *Josephus on Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Josephus_on_Jesus>
-  - Attestation — Josephus, Antiquities 18.63–64 (the Testimonium Flavianum) *partially-corroborates*: Probably mentions Jesus and his crucifixion under Pilate in its original form, but the passage as transmitted contains Christian additions, so how much of it Josephus wrote is disputed; the majority view keeps a reconstructed core.
+  - Attestation — Josephus, Antiquities 18.63–64 (the Testimonium Flavianum) *partially-corroborates*: In its original form it probably mentions Jesus and his crucifixion under Pilate. But the passage as handed down has Christian additions. So how much of it Josephus wrote is disputed. Most scholars keep a rebuilt core.
     - Source: *A Marginal Jew: Rethinking the Historical Jesus, Volume 1*, John P. Meier, 1991, ch. 3
     - Source: *Josephus on Jesus*, Wikipedia <https://en.wikipedia.org/wiki/Josephus_on_Jesus>
-  - Attestation — Tacitus, Annals 15.44 *corroborates*: Names "Christus" as executed by the procurator Pontius Pilate in the reign of Tiberius — a hostile Roman source, writing of Christians, not for them.
+  - Attestation — Tacitus, Annals 15.44 *corroborates*: Names "Christus" as executed by the procurator Pontius Pilate in the reign of Tiberius. Tacitus was a hostile Roman source, writing about Christians, not for them.
     - Source: *Annales, book 15 (Latin text, The Latin Library)*, Tacitus, 15.44 <https://www.thelatinlibrary.com/tacitus/tac.ann15.shtml>
 
 - [ ] **Moses** — `persons/moses.toml` (draft)
   - Role: prophet and lawgiver
   - Evidence grade (derived): none
-  - Summary: The leader of the Exodus and the giver of the Law at Sinai. No source outside the Bible from his own time names him, and none in Egyptian records; whether a historical figure lies behind the tradition is debated (see the linked issue).
+  - Summary: Moses led the Exodus and gave the Law at Sinai. No source outside the Bible from his own time names him, and no Egyptian record does. Whether a real person lies behind the tradition is debated (see the linked issue).
   - Source: *Moses*, Wikipedia <https://en.wikipedia.org/wiki/Moses>
   - Verse (describes): Exod 2:10 (named by Pharaoh's daughter)
 
 - [ ] **Pontius Pilate** — `persons/pontius-pilate.toml` (draft)
   - Role: Roman prefect of Judaea (26–36 CE)
   - Evidence grade (derived): corroborates
-  - Summary: The Roman governor who sentenced Jesus to crucifixion. Attested by an inscription bearing his name and title, and by two Roman-era historians.
+  - Summary: Pilate was the Roman governor who sentenced Jesus to crucifixion. An inscription carries his name and title. Two Roman-era historians also mention him.
   - Source: *Pontius Pilate*, Livius.org <https://www.livius.org/articles/person/pontius-pilate/>
   - Source: *Caiaphas, Joseph*, Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library, 2007, Pilate (26–36) <https://www.jewishvirtuallibrary.org/caiaphas-joseph>
   - Source: *Pontius Pilate*, Wikipedia <https://en.wikipedia.org/wiki/Pontius_Pilate>
@@ -1249,7 +1248,7 @@ The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with th
   - Verse (describes): Luke 3:1
   - Attestation — Josephus, Antiquities 18.55 and following (Pilate) *corroborates*: Josephus narrates episodes from Pilate's governorship of Judaea.
     - Source: *Antiquities of the Jews, book 18 (Perseus Digital Library)*, Flavius Josephus, trans. William Whiston, 18.55 <https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0146:book=18:section=63>
-  - Attestation — Pilate Stone *corroborates*: A building dedication by "[Ponti]us Pilatus, [Praef]ectus Iuda[ea]e" — his name and his title, prefect of Judaea, carved in his own time.
+  - Attestation — Pilate Stone *corroborates*: A building dedication by "[Ponti]us Pilatus, [Praef]ectus Iuda[ea]e". It gives his name and his title, prefect of Judaea, carved in his own time.
     - Source: *L'Année épigraphique 1963, no. 104 (the Pilate inscription)*, 1963
     - Source: *Pilate stone*, Wikipedia <https://en.wikipedia.org/wiki/Pilate_stone>
   - Attestation — Tacitus, Annals 15.44 *corroborates*: Names Pontius Pilate as the procurator under whom Christus was executed.
@@ -1258,7 +1257,7 @@ The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with th
 - [ ] **Solomon** — `persons/solomon.toml` (draft)
   - Role: king of Judah and Israel
   - Evidence grade (derived): none
-  - Summary: David's son, builder of the First Temple, remembered as the wealthiest and wisest king of a united Israel. No contemporary or near-contemporary inscription names him. Whether 10th-century Jerusalem was the capital of a substantial kingdom or a modest highland centre is one of the central debates of biblical archaeology (see the linked issue).
+  - Summary: Solomon was David's son and the builder of the First Temple. He is remembered as the wealthiest and wisest king of a united Israel. No inscription from his own time or close to it names him. Was 10th-century Jerusalem the capital of a substantial kingdom, or a modest highland centre? That is one of the central debates of biblical archaeology (see the linked issue).
   - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
   - Verse (describes): 1Kgs 1:1 – 1Kgs 11:43
 
@@ -1266,182 +1265,182 @@ The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with th
 
 - [ ] **The 480 years of 1 Kings 6:1** — `issues/exodus-480-years.toml` (draft)
   - Kind: chronology
-  - Summary: 1 Kings 6:1 dates the founding of Solomon's temple to the 480th year after the Exodus. Taken as a straight count it puts the Exodus in the 15th century BCE; the archaeological case many scholars make for a 13th-century setting cannot accommodate that, so how the figure is read largely decides the date.
+  - Summary: 1 Kings 6:1 says Solomon's temple was founded in the 480th year after the Exodus. Counted straight, that puts the Exodus in the 15th century BCE. Many scholars argue from archaeology for the 13th century instead, and that does not fit the count. So how you read the number largely decides the date.
   - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
   - Verse (dates): 1Kgs 6:1
-  - View **A literal count**: The 480 years are a chronological datum to be counted back from Solomon's fourth year, giving a mid-15th-century Exodus.
+  - View **A literal count**: The 480 years are a date to be counted back from Solomon's fourth year. That gives an Exodus in the middle of the 15th century BCE.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - View **Not a straight count**: A 13th-century Exodus under Ramesses II requires reading the 480 years as something other than an exact interval.
+  - View **Not a straight count**: An Exodus in the 13th century under Ramesses II needs the 480 years to be read as something other than an exact span of time.
     - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
 
 - [ ] **Ezra's seventh year: 458 or 398 BCE?** — `issues/ezra-artaxerxes-458-or-398.toml` (draft)
   - Kind: chronology
-  - Summary: Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" without saying which. Three views are summarised in the sources read: the seventh year of Artaxerxes I (458/457 BCE), of Artaxerxes II (398 BCE), or a corrupted number.
+  - Summary: Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The sources read give three views. It was the seventh year of Artaxerxes I (458/457 BCE). It was the seventh year of Artaxerxes II (398 BCE). Or the number was copied wrongly.
   - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
   - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
   - Verse (dates): Ezra 7:7
   - Verse (dates): Ezra 7:8
   - Verse (dates): Neh 2:1
-  - View **458/457 BCE (Artaxerxes I)**: Yamauchi holds Artaxerxes I, "the traditional view", correct: Ezra arrived in 458 (457). Wikipedia calls it the most widely accepted.
+  - View **458/457 BCE (Artaxerxes I)**: Yamauchi holds that Artaxerxes I, "the traditional view", is correct. Ezra arrived in 458 (457). Wikipedia calls this the most widely accepted view.
     - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
     - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
-  - View **398 BCE (Artaxerxes II)**: Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works).
+  - View **398 BCE (Artaxerxes II)**: On this view Nehemiah came before Ezra. Ezra arrived in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works).
     - Source: *Albin van Hoonacker*, Wikipedia <https://en.wikipedia.org/wiki/Albin_van_Hoonacker>
     - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
     - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
-  - View **428 BCE (thirty-seventh year of Artaxerxes I)**: The letter of Ezra 7:11-26 is from the thirty-seventh year of Artaxerxes I, 428 BCE.
+  - View **428 BCE (thirty-seventh year of Artaxerxes I)**: The letter in Ezra 7:11-26 comes from the thirty-seventh year of Artaxerxes I, 428 BCE.
     - Source: *Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)*, Precept Austin <https://www.preceptaustin.org/ezra-7-commentary>
-  - View **Scribal error; Ezra and Nehemiah contemporaries**: A last group of scholars regards "the seventh year" as a scribal error and treats the two men as contemporaries.
+  - View **Scribal error; Ezra and Nehemiah contemporaries**: A last group of scholars thinks "the seventh year" is a copyist's mistake. They treat Ezra and Nehemiah as men who lived at the same time.
     - Source: *Ezra*, Wikipedia <https://en.wikipedia.org/wiki/Ezra>
 
 - [ ] **Nebuchadnezzar's seventh or eighth year?** — `issues/jehoiachin-year-seven-or-eight.toml` (draft)
   - Kind: chronology
-  - Summary: The capture of Jehoiachin is dated to Nebuchadnezzar's eighth year in 2 Kings 24:12, but the Babylonian Chronicle places it in his seventh, and Jeremiah 52:28 dates the deportation to the seventh. The difference is usually put down to different ways of counting regnal years; this entry does not yet document those explanations.
+  - Summary: 2 Kings 24:12 dates the capture of Jehoiachin to Nebuchadnezzar's eighth year. The Babylonian Chronicle puts it in his seventh. Jeremiah 52:28 also dates the deportation to the seventh. The gap is usually put down to different ways of counting a king's years. This entry does not yet document those explanations.
   - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - Verse (dates): 2Kgs 24:12
   - Verse (dates): Jer 52:28
-  - View **Seventh year**: The Babylonian Chronicle dates the seizure of Jerusalem to Nebuchadnezzar's seventh year, in agreement with Jeremiah 52:28.
+  - View **Seventh year**: The Babylonian Chronicle dates the capture of Jerusalem to Nebuchadnezzar's seventh year. This agrees with Jeremiah 52:28.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
   - View **Eighth year**: 2 Kings 24:12 says the king of Babylon took Jehoiachin "in the eighth year of his reign".
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
 
 - [ ] **The 300 years of Judges 11:26** — `issues/judges-300-years.toml` (draft)
   - Kind: chronology
-  - Summary: Jephthah tells the king of Ammon that Israel had held the territory along the Arnon for three hundred years. Wood takes this as support for a 15th-century conquest; Kitchen treats it as the bluster of an ignorant man rather than a chronological datum.
+  - Summary: Jephthah tells the king of Ammon that Israel had held the land along the Arnon for three hundred years. Wood takes this as support for a 15th-century conquest. Kitchen sees it as the bluster of an ignorant man, not a real date.
   - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477–478, 486–487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - Verse (dates): Judg 11:26
-  - View **A chronological datum**: Wood: since estimates for the start of Jephthah's judgeship fall between 1130 and 1073 BCE, three hundred years implies Reuben had occupied the area since c. 1400 BCE; Judges 11:26 comports with the other chronological data and with external data supporting a 15th-century exodus-conquest.
+  - View **A chronological datum**: Wood: estimates for the start of Jephthah's time as judge fall between 1130 and 1073 BCE. Three hundred years before that means Reuben had held the area since c. 1400 BCE. Judges 11:26 fits the other dates in the Bible and the evidence outside it for a 15th-century exodus and conquest.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477–478, 487 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - View **Hyperbole**: Kitchen, quoted by Wood, calls Jephthah's claim "propagandistic" and "a brave man's bold bluster" and says it is fatuous to use it as a serious chronological datum.
+  - View **Hyperbole**: Kitchen, quoted by Wood, calls Jephthah's claim "propagandistic" and "a brave man's bold bluster". He says it is fatuous to use it as a serious date.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, p. 486 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **Herod's death and Quirinius's census** — `issues/quirinius-census-and-herod-death.toml` (draft)
   - Kind: chronology
-  - Summary: Matthew places Jesus's birth in the days of Herod the king; Luke 2:1–2 ties it to a registration "while Quirinius was governor of Syria". Josephus dates Quirinius's census to the removal of Archelaus, 6 CE, while the usual date for Herod's death is 4 BCE, so the two Gospel anchors are about a decade apart.
+  - Summary: Matthew places Jesus's birth in the days of Herod the king. Luke 2:1–2 ties it to a registration "while Quirinius was governor of Syria". Josephus dates Quirinius's census to 6 CE, when Archelaus was removed. The usual date for Herod's death is 4 BCE. So the two Gospel clues are about ten years apart.
   - Source: *Census of Quirinius*, Wikipedia <https://en.wikipedia.org/wiki/Census_of_Quirinius>
   - Source: *Herod the Great*, Wikipedia <https://en.wikipedia.org/wiki/Herod_the_Great>
   - Source: *Antiquities of the Jews, 18.1-18.25 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.1–2 <https://lexundria.com/j_aj/18.1-18.25/wst>
   - Verse (dates): Matt 2:1
   - Verse (dates): Luke 2:1 – Luke 2:2
-  - View **The two anchors conflict**: Josephus has Quirinius sent to Syria to assess Judea after Archelaus's removal, which he places in the tenth year of Archelaus's rule, 6 CE; Schürer's chronology puts Herod's death in 4 BCE by working back from that same date. Read plainly, Luke's census comes after Herod's death.
+  - View **The two anchors conflict**: Josephus says Quirinius was sent to Syria to assess Judea after Archelaus was removed. He places that in the tenth year of Archelaus's rule, 6 CE. Schürer's chronology puts Herod's death in 4 BCE by working back from that same date. Read plainly, Luke's census comes after Herod's death.
     - Source: *Antiquities of the Jews, 17.342-17.355 (Lexundria)*, Flavius Josephus, trans. William Whiston, 17.342–355 <https://lexundria.com/j_aj/17.339-17.355/wst>
     - Source: *Antiquities of the Jews, 18.1-18.25 (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.1–2 <https://lexundria.com/j_aj/18.1-18.25/wst>
     - Source: *Herod the Great*, Wikipedia <https://en.wikipedia.org/wiki/Herod_the_Great>
-  - View **Luke says 'before', not 'first' (I. Howard Marshall, 1978; Brook W. R. Pearson, 1999)**: Marshall argued that the Greek of Luke 2:2 should be read "before" rather than "first", so that the verse speaks of a registration before Quirinius's governorship; Pearson made a similar translation argument.
+  - View **Luke says 'before', not 'first' (I. Howard Marshall, 1978; Brook W. R. Pearson, 1999)**: Marshall argued that the Greek of Luke 2:2 should be read "before" rather than "first". The verse would then speak of a registration before Quirinius was governor. Pearson made a similar argument about the translation.
     - Source: *Census of Quirinius*, Wikipedia <https://en.wikipedia.org/wiki/Census_of_Quirinius>
-  - View **A census in Herod's last years (Colin Humphreys, 1995; Wayne Brindle, 1984; James Nollet, 2012)**: Humphreys proposed a non-taxing census dated to Herod's final years; Brindle theorized a census under Herod with a dual governorship; Nollet asserted that Quirinius held two governorships, with a census in 2 BCE.
+  - View **A census in Herod's last years (Colin Humphreys, 1995; Wayne Brindle, 1984; James Nollet, 2012)**: Humphreys proposed a census, without taxes, dated to Herod's final years. Brindle theorized a census under Herod, with two governors sharing the post. Nollet asserted that Quirinius held two governorships, with a census in 2 BCE.
     - Source: *Census of Quirinius*, Wikipedia <https://en.wikipedia.org/wiki/Census_of_Quirinius>
-  - View **Herod died in 1 BCE (Andrew Steinmann, Rodger Young; Filmer)**: Steinmann and Young argue from the coins of Herod's sons that their regnal years began in 5 BCE while Herod lived, and so that he died in 1 BCE; the eclipse of 13 March 4 BCE leaves too little time before the following Passover for the events Josephus records.
+  - View **Herod died in 1 BCE (Andrew Steinmann, Rodger Young; Filmer)**: Steinmann and Young argue from the coins of Herod's sons. Their reigns began in 5 BCE while Herod was alive, so Herod died in 1 BCE. They add that the eclipse of 13 March 4 BCE leaves too little time before the next Passover for the events Josephus records.
     - Source: *Herod the Great*, Wikipedia <https://en.wikipedia.org/wiki/Herod_the_Great>
 
 - [ ] **Does the form of the Sinai covenant date it?** — `issues/sinai-covenant-format.toml` (draft)
   - Kind: chronology
-  - Summary: Kitchen argues that the Sinai covenant texts best match Hittite treaties of c. 1400–1200 BCE; Wood replies that the biblical covenant texts follow no fixed format and that Kitchen rearranged them to fit.
+  - Summary: Kitchen argues that the Sinai covenant texts match Hittite treaties of c. 1400–1200 BCE better than anything else. Wood replies that the biblical covenant texts follow no fixed format. He says Kitchen rearranged them to fit.
   - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 479–483 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
   - Verse (describes): Exod 19:3 – Exod 19:8
-  - View **A late-second-millennium treaty form**: Kitchen concludes that Exodus, Leviticus, Deuteronomy and the renewal in Joshua 24 most closely match Hittite treaties of c. 1400–1200 BCE, in which oaths appear and blessings follow curses.
+  - View **A late-second-millennium treaty form**: Kitchen concludes that Exodus, Leviticus, Deuteronomy and the renewal in Joshua 24 are closest to Hittite treaties of c. 1400–1200 BCE. In those treaties oaths appear, and blessings follow curses.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 479, 482 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - View **No fixed format**: Wood: the biblical covenant texts are highly fluid; Kitchen selected portions and rearranged them to match the Hittite format, and in the Hittite treaties blessings follow curses whereas in the biblical texts the opposite is the case.
+  - View **No fixed format**: Wood: the biblical covenant texts vary a great deal. Kitchen picked out parts and rearranged them to match the Hittite format. In the Hittite treaties blessings follow curses. In the biblical texts it is the other way round.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 479–481 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **Belshazzar: king, and son of Nebuchadnezzar?** — `issues/belshazzar-king-and-father.toml` (draft)
   - Kind: historical
-  - Summary: Daniel 5 calls Belshazzar king, and has him spoken of as Nebuchadnezzar's son (5:2, 5:22). The Babylonian sources name him as the eldest son of Nabonidus, the last king of Babylon; on the cylinder he is the king's son rather than king. A Babylonian text records Nabonidus handing the kingship to his eldest son before leaving Babylon, which bears on the title; the parentage remains a discrepancy.
+  - Summary: Daniel 5 calls Belshazzar king. It also speaks of him as Nebuchadnezzar's son (5:2, 5:22). Babylonian sources say he was the eldest son of Nabonidus, the last king of Babylon. On the cylinder he is the king's son, not the king. Another Babylonian text says Nabonidus handed the kingship to his eldest son before leaving Babylon. That helps explain the title "king". The question of whose son he was remains a discrepancy.
   - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
   - Verse (describes): Dan 5:2 (Nebuchadnezzar his father)
   - Verse (describes): Dan 5:22 (you, his son)
-  - View **The Babylonian record**: The Nabonidus Cylinder from Ur names Belshazzar as "the eldest son, my offspring" of Nabonidus.
+  - View **The Babylonian record**: The Nabonidus Cylinder from Ur calls Belshazzar "the eldest son, my offspring" of Nabonidus.
     - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
-  - View **Kingship entrusted to the eldest son**: The Verse Account of Nabonidus, in Oppenheim's translation, says that as the third year was about to begin Nabonidus "entrusted the army [?] to his oldest son, his first born", and "let everything go, entrusted the kingship to him, and, himself, he started out for a long journey". Read with the cylinder, this has Belshazzar exercising royal authority in Babylon under his father, which bears on Daniel's calling him king; it says nothing about Nebuchadnezzar.
+  - View **Kingship entrusted to the eldest son**: The Verse Account of Nabonidus, in Oppenheim's translation, says that as the third year was about to begin Nabonidus "entrusted the army [?] to his oldest son, his first born". It adds that he "let everything go, entrusted the kingship to him, and, himself, he started out for a long journey". Read with the cylinder, this shows Belshazzar ruling in Babylon under his father. That bears on why Daniel calls him king. It says nothing about Nebuchadnezzar.
     - Source: *Verse Account of Nabonidus (Livius.org reproduction of the ANET translation)*, A. Leo Oppenheim (trans.), in James B. Pritchard, Ancient Near Eastern Texts relating to the Old Testament, 1950, column ii, lines 5–6 <https://www.livius.org/sources/content/anet/verse-account-of-nabonidus/>
 
 - [ ] **Did Israel conquer Canaan as Joshua describes?** — `issues/conquest-historicity.toml` (draft)
   - Kind: historical
-  - Summary: Whether a military conquest of Canaan, and the fall of Jericho in particular, happened as narrated is separate from when it would have happened. Evangelical defenders of a conquest argue about its date; most archaeologists no longer defend the conquest model at all.
+  - Summary: Did Israel conquer Canaan by force, and did Jericho fall as the story says? That is a separate question from when it would have happened. Evangelical defenders of a conquest argue about its date. Most archaeologists no longer defend the conquest model at all.
   - Source: *Battle of Jericho*, Wikipedia <https://en.wikipedia.org/wiki/Battle_of_Jericho>
   - Source: *Historicity of the Bible*, Wikipedia <https://en.wikipedia.org/wiki/Historicity_of_the_Bible>
   - Verse (describes): Josh 6:20
-  - View **No conquest model**: William G. Dever: "No mainstream biblicist or archaeologist any longer espouses the conquest model." Kathleen Kenyon showed that Jericho's destruction belonged to the end of the Middle Bronze Age, not the Late Bronze Age, and radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th centuries BCE.
+  - View **No conquest model**: William G. Dever: "No mainstream biblicist or archaeologist any longer espouses the conquest model." Kathleen Kenyon showed that Jericho was destroyed at the end of the Middle Bronze Age, not the Late Bronze Age. Radiocarbon testing in 1995 dated the destruction layer to the late 17th or 16th centuries BCE.
     - Source: *Battle of Jericho*, Wikipedia, section on academic consensus and radiocarbon testing <https://en.wikipedia.org/wiki/Battle_of_Jericho>
     - Source: *Joshua*, Wikipedia <https://en.wikipedia.org/wiki/Joshua>
-  - View **A conquest at the end of the Late Bronze Age**: Albright, working from Tell Beit Mirsim, Beitin and Lachish, argued for a conquest in the late 13th century BCE; Wood reports that after Albright's death in 1971 the evidence for this dissipated and most Palestinian archaeologists abandoned it, though Kitchen defends it.
+  - View **A conquest at the end of the Late Bronze Age**: Albright studied Tell Beit Mirsim, Beitin and Lachish. He argued for a conquest in the late 13th century BCE. Wood reports that after Albright died in 1971 the evidence for this faded, and most Palestinian archaeologists dropped the idea. Kitchen still defends it.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 475–476 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-  - View **A conquest c. 1400 BCE**: Wood argues that the biblical data place the exodus-conquest in the 15th century BCE, that Jericho was destroyed c. 1400 BCE, and that the 13th-century theory should be abandoned.
+  - View **A conquest c. 1400 BCE**: Wood argues that the biblical data put the exodus and conquest in the 15th century BCE. He says Jericho was destroyed c. 1400 BCE. He thinks the 13th-century theory should be dropped.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 488–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **Did the Exodus happen as described?** — `issues/exodus-historicity.toml` (draft)
   - Kind: historical
-  - Summary: A question prior to the date. No Egyptian record mentions an Israelite exodus, and scholars divide over what the silence and the archaeology mean. Kept separate from the dating positions: a view that the event did not happen as described has no date range to offer.
+  - Summary: This question comes before the date. No Egyptian record mentions an Israelite exodus. Scholars disagree about what that silence and the archaeology mean. This entry is kept apart from the dating views. If the event did not happen as described, there is no date to offer.
   - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts*, Israel Finkelstein and Neil Asher Silberman, 2001
   - Source: *Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition*, James K. Hoffmeier, 1997
   - Verse (describes): Exod 12:40 – Exod 12:41
-  - View **Not as described**: Finkelstein and Silberman find no compelling archaeological evidence for an exodus as narrated. They see in the story perhaps a distant memory of the expulsion of the Hyksos, shaped into its present form in the late 7th century BCE, in Josiah's time, against Egyptian domination; the early Israelites, on their reading, emerged from within Canaan.
+  - View **Not as described**: Finkelstein and Silberman find no convincing archaeological evidence for an exodus as told. They see perhaps a distant memory of the Hyksos being driven out of Egypt. They think the story took its present form in the late 7th century BCE, in Josiah's time, as a reply to Egyptian rule. On their reading, the early Israelites came from within Canaan.
     - Source: *The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts*, Israel Finkelstein and Neil Asher Silberman, 2001
-  - View **An authentic tradition**: Hoffmeier examines the Egyptian evidence, including a Semitic presence in the Nile Delta, and argues that it supports the authenticity of the Exodus tradition.
+  - View **An authentic tradition**: Hoffmeier studies the Egyptian evidence, including a Semitic presence in the Nile Delta. He argues that it supports the Exodus tradition as authentic.
     - Source: *Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition*, James K. Hoffmeier, 1997
 
 - [ ] **How historical is the Book of Judges?** — `issues/judges-historicity.toml` (draft)
   - Kind: historical
-  - Summary: Scholars divide on whether the stories of Deborah, Gideon, Samson and the other judges preserve pre-monarchic memory. The book as it stands was edited long after the events, and no judge is named in a contemporary inscription; the dating positions on the individual events record only the brackets offered by those who accept the setting.
+  - Summary: Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree. The book was edited long after the events. No judge is named in an inscription from their own time. The dating views on the individual events only record the date ranges offered by those who accept the setting.
   - Source: *Book of Judges*, Wikipedia, sections on dating and historicity <https://en.wikipedia.org/wiki/Book_of_Judges>
   - Verse (describes): Judg 2:16 – Judg 2:19
   - View **Plausible, with the ring of truth**: William G. Dever finds the accounts historically plausible, with "the ring of truth for an archaeologist".
     - Source: *Book of Judges*, Wikipedia, section on historicity <https://en.wikipedia.org/wiki/Book_of_Judges>
-  - View **Cannot be assessed**: Israel Finkelstein: it is impossible to know to what extent the tales are based on authentic memories. Lester Grabbe calls the book too problematic to use as a historical source while allowing that an actual historical core cannot be ruled out.
+  - View **Cannot be assessed**: Israel Finkelstein: it is impossible to know how far the tales rest on real memories. Lester Grabbe calls the book too problematic to use as a historical source. He allows that a real historical core cannot be ruled out.
     - Source: *Book of Judges*, Wikipedia, section on historicity <https://en.wikipedia.org/wiki/Book_of_Judges>
-  - View **Samson as a folk hero**: Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu and with Heracles; conservative scholars regard him as a literal historical figure.
+  - View **Samson as a folk hero**: Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu, and with Heracles. Conservative scholars regard him as a real historical person.
     - Source: *Samson*, Wikipedia <https://en.wikipedia.org/wiki/Samson>
 
 - [ ] **Is there a historical Moses?** — `issues/moses-historicity.toml` (draft)
   - Kind: historical
-  - Summary: No source outside the Bible from Moses' own time names him, and no Egyptian record mentions him. Scholars divide between seeing him as a figure of tradition with no recoverable history, and seeing a historical leader of some kind behind the story.
+  - Summary: No source outside the Bible from Moses' own time names him. No Egyptian record mentions him. Scholars split into two camps. Some see a figure of tradition with no recoverable history. Others see a real leader of some kind behind the story.
   - Source: *Moses*, Wikipedia <https://en.wikipedia.org/wiki/Moses>
   - Verse (describes): Exod 2:10
-  - View **No trace outside the tradition**: No contemporary Egyptian source mentions Moses, and no reference to him appears in any Egyptian source before the 4th century BCE; Jan Assmann describes him as a figure of memory with no traces outside the tradition.
+  - View **No trace outside the tradition**: No Egyptian source from his time mentions Moses. No Egyptian source mentions him before the 4th century BCE. Jan Assmann describes him as a figure of memory with no traces outside the tradition.
     - Source: *Moses*, Wikipedia <https://en.wikipedia.org/wiki/Moses>
-  - View **A leader behind the story**: William Dever has early Israel emerging largely from Canaanite villages, but including some who had left Egypt, and allows for a Moses-like leader among such a group.
+  - View **A leader behind the story**: William Dever has early Israel growing mostly out of Canaanite villages, but including some people who had left Egypt. He allows for a Moses-like leader among that group.
     - Source: *Who Were the Early Israelites and Where Did They Come From?*, William G. Dever, 2003
     - Source: *Emerging Confederation (review of Dever, Who Were the Early Israelites)*, Michael D. Coogan, America, 9 June 2003, 2003 <https://www.americamagazine.org/books/2003/06/09/emerging-confederation/>
-  - View **An Egyptian name**: The name Moses is commonly connected with Egyptian msy / mose, "born of" or "child of", as in names such as Thutmose and Ramose — read by some as a detail pointing to a genuine Egyptian setting for the tradition.
+  - View **An Egyptian name**: The name Moses is commonly linked to the Egyptian msy / mose, "born of" or "child of". It appears in names such as Thutmose and Ramose. Some read this as a sign that the tradition has a genuine Egyptian setting.
     - Source: *The Egyptian Derivation of the Name Moses*, J. Gwyn Griffiths, Journal of Near Eastern Studies 12, p. 223, 1953, p. 223
     - Source: *Moses*, Wikipedia <https://en.wikipedia.org/wiki/Moses>
 
 - [ ] **Were Abraham, Isaac, Jacob and Joseph historical figures of a patriarchal age?** — `issues/patriarchs-historicity.toml` (draft)
   - Kind: historical
-  - Summary: A question prior to any date. Until the 1970s a 2nd-millennium BCE "patriarchal age" was widely accepted; since then most scholars have treated the patriarchal narratives as a later literary construction. Kept apart from the dating positions on the patriarchal events, which record only the dates offered by those who accept the setting.
+  - Summary: This question comes before any date. Until the 1970s many scholars accepted a "patriarchal age" in the 2nd millennium BCE. Since then most have treated the patriarchal stories as a later work of literature. This entry is kept apart from the dating views on the patriarchal events. Those only record the dates offered by people who accept the setting.
   - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
   - Verse (describes): Gen 12:1 – Gen 12:9
-  - View **A 2nd-millennium patriarchal age**: William F. Albright and G. Ernest Wright believed the patriarchs and matriarchs were either real individuals or believable composites of people who lived in the patriarchal age, the 2nd millennium BCE.
+  - View **A 2nd-millennium patriarchal age**: William F. Albright and G. Ernest Wright believed the patriarchs and matriarchs were real people, or believable blends of people, who lived in the patriarchal age, the 2nd millennium BCE.
     - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
-  - View **A late literary construct**: Thomas L. Thompson (The Historicity of the Patriarchal Narratives, 1974) and John Van Seters (Abraham in History and Tradition, 1975) challenged the older view; Van Seters argued that the names, social setting and messages of the stories point to Iron Age creations. The article reports that nearly all scholars now view the patriarchal age as a late literary construct.
+  - View **A late literary construct**: Thomas L. Thompson (The Historicity of the Patriarchal Narratives, 1974) and John Van Seters (Abraham in History and Tradition, 1975) challenged the older view. Van Seters argued that the names, social setting and messages of the stories point to creations of the Iron Age. The article reports that nearly all scholars now see the patriarchal age as a late literary construct.
     - Source: *Abraham*, Wikipedia, section 'Historicity' <https://en.wikipedia.org/wiki/Abraham>
     - Source: *Historicity of the Bible*, Wikipedia <https://en.wikipedia.org/wiki/Historicity_of_the_Bible>
-  - View **Joseph: a story composed late**: Donald B. Redford dated the composition of the Joseph story to between the 7th century BCE and the third quarter of the 5th century BCE; by the early 1990s most scholars saw it as a wisdom novella by a single author. Thomas Römer argues for the late Persian period.
+  - View **Joseph: a story composed late**: Donald B. Redford dated the writing of the Joseph story to between the 7th century BCE and the third quarter of the 5th century BCE. By the early 1990s most scholars saw it as a wisdom novella by a single author. Thomas Römer argues for the late Persian period.
     - Source: *Joseph (Genesis)*, Wikipedia <https://en.wikipedia.org/wiki/Joseph_(Genesis)>
 
 - [ ] **When was Ruth written, and is it history?** — `issues/ruth-historicity.toml` (draft)
   - Kind: historical
-  - Summary: Ruth is set in the time of the judges, but the book itself is generally dated to the Persian period. The date of composition is a different question from the date of the events it narrates.
+  - Summary: Ruth is set in the time of the judges. The book itself is generally dated to the Persian period. When it was written is a different question from when its events took place.
   - Source: *Book of Ruth*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Ruth>
   - Verse (describes): Ruth 1:1
-  - View **Written in the Persian period**: The book was likely written in Biblical Hebrew during the Persian period (c. 550–330 BCE); some scholars propose the 5th century BCE, reading Ruth's non-Israelite identity and the stress on an inclusive attitude towards foreigners as a sign of that setting.
+  - View **Written in the Persian period**: The book was likely written in Biblical Hebrew during the Persian period (c. 550–330 BCE). Some scholars propose the 5th century BCE. They read Ruth's non-Israelite background, and the stress on welcoming foreigners, as signs of that setting.
     - Source: *Book of Ruth*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Ruth>
-  - View **Set in the days of the judges**: The narrative places itself in the time of the judges and ends in the genealogy of David; according to Josephus, Boaz lived at the time of Eli, and some rabbis identify Boaz with the judge Ibzan of Bethlehem.
+  - View **Set in the days of the judges**: The story places itself in the time of the judges and ends with the family tree of David. According to Josephus, Boaz lived at the time of Eli. Some rabbis identify Boaz with the judge Ibzan of Bethlehem.
     - Source: *Book of Ruth*, Wikipedia <https://en.wikipedia.org/wiki/Book_of_Ruth>
     - Source: *Boaz*, Wikipedia <https://en.wikipedia.org/wiki/Boaz>
 
 - [ ] **Solomon's kingdom: an empire or a highland chiefdom?** — `issues/solomon-united-monarchy.toml` (draft)
   - Kind: historical
-  - Summary: The Bible describes Solomon ruling a wealthy united kingdom from Jerusalem. No inscription names him, so the debate turns on archaeology — above all on the date of monumental gates and buildings once attributed to him.
+  - Summary: The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem. No inscription names him. So the debate turns on archaeology, above all on the date of the large gates and buildings once credited to him.
   - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
   - Source: *Solomon*, Wikipedia <https://en.wikipedia.org/wiki/Solomon>
   - Verse (describes): 1Kgs 9:15 (Solomon builds Hazor, Megiddo and Gezer)
   - View **No inscription names him**: Eric Cline: there is still not a single contemporary or near-contemporary inscription that mentions Solomon.
     - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
-  - View **Solomonic gates**: Yigael Yadin attributed the monumental gates and structures he excavated at Hazor, Megiddo and Gezer to Solomon's building programme, reading them alongside 1 Kings 9:15.
+  - View **Solomonic gates**: Yigael Yadin dug up large gates and buildings at Hazor, Megiddo and Gezer. He credited them to Solomon's building programme, reading them alongside 1 Kings 9:15.
     - Source: *Solomon*, Wikipedia <https://en.wikipedia.org/wiki/Solomon>
-  - View **A modest chiefdom; the gates are later**: Finkelstein and Silberman redate those structures to the Omride kings of the 9th century BCE and see 10th-century Jerusalem as the rough hilltop stronghold of a local dynasty of tribal chiefs, not the capital of an empire.
+  - View **A modest chiefdom; the gates are later**: Finkelstein and Silberman move those buildings to the Omride kings of the 9th century BCE. They see 10th-century Jerusalem as the rough hilltop stronghold of a local family of tribal chiefs, not the capital of an empire.
     - Source: *David and Solomon: In Search of the Bible's Sacred Kings and the Roots of the Western Tradition*, Israel Finkelstein and Neil Asher Silberman, 2006
     - Source: *Review of Finkelstein and Silberman, David and Solomon*, Julia M. Klein, Archaeology (January 2006 issue, per the archive URL), 2006 <https://archive.archaeology.org/0601/reviews/kings.html>
     - Source: *Solomon*, Wikipedia <https://en.wikipedia.org/wiki/Solomon>

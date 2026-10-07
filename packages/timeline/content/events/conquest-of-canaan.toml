@@ -5,22 +5,22 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Israel crosses the Jordan under Joshua, Jericho falls, and Ai, Gibeon, the southern and northern coalitions and Hazor follow. Two datings are argued by those who accept a conquest (c. 1400 and c. 1220-1210 BCE), while most archaeologists reject the conquest model altogether; that dispute is kept in the linked historicity issue, not turned into a date."""
+Israel crosses the Jordan under Joshua. Jericho falls, and then Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE. Most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date."""
 verses = [
-  { ref = "Josh.3.1-Josh.4.24", link = "describes", note = "Crossing the Jordan" },
+  { ref = "Josh.3.1-Josh.4.24", link = "describes", note = "The crossing of the Jordan" },
   { ref = "Josh.5.13-Josh.6.27", link = "describes", note = "The fall of Jericho" },
   { ref = "Josh.7.1-Josh.8.29", link = "describes", note = "Achan and the destruction of Ai" },
   { ref = "Josh.9.1-Josh.10.43", link = "describes", note = "Gibeon and the southern campaign" },
-  { ref = "Josh.11.1-Josh.11.23", link = "describes", note = "The northern coalition; Hazor burned" },
-  { ref = "Josh.12.1-Josh.12.24", link = "describes", note = "List of defeated kings" },
-  { ref = "Judg.1.1-Judg.1.36", link = "describes", note = "The same period seen as incomplete conquest by the tribes" },
+  { ref = "Josh.11.1-Josh.11.23", link = "describes", note = "The northern coalition. Hazor is burned" },
+  { ref = "Josh.12.1-Josh.12.24", link = "describes", note = "A list of defeated kings" },
+  { ref = "Judg.1.1-Judg.1.36", link = "describes", note = "The same period, seen as an incomplete conquest by the tribes" },
   { ref = "Josh.24.11-Josh.24.13", link = "alludes", note = "Joshua's farewell: you crossed the Jordan and came to Jericho" },
   { ref = "Ps.44.1-Ps.44.3", link = "alludes", note = "Our fathers did not win the land by their own sword" },
   { ref = "Ps.78.54-Ps.78.55", link = "alludes", note = "He drove out nations and apportioned their inheritance" },
   { ref = "Ps.105.43-Ps.105.45", link = "alludes", note = "He gave them the lands of the nations" },
   { ref = "Neh.9.22-Neh.9.25", link = "alludes", note = "You gave them kingdoms and peoples; they took fortified cities" },
-  { ref = "Acts.7.45", link = "alludes", note = "Stephen: the tabernacle was brought in with Joshua when they dispossessed the nations" },
-  { ref = "Heb.11.30-Heb.11.31", link = "alludes", note = "By faith the walls of Jericho fell; Rahab" },
+  { ref = "Acts.7.45", link = "alludes", note = "Stephen says the tabernacle was brought in with Joshua when they drove out the nations" },
+  { ref = "Heb.11.30-Heb.11.31", link = "alludes", note = "By faith the walls of Jericho fell. Rahab is also named" },
 ]
 
 [[positions]]
@@ -31,26 +31,20 @@ earliest = -1406
 latest = -1400
 held_by = "Bryant G. Wood"
 summary = """
-Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 support a 15th-century \
-exodus and a conquest in 1406-1400 BC, with Jericho destroyed c. 1400 and the Jubilee count \
-back-calculated to 1406."""
+Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400. The Jubilee count (Israel's cycle of 50-year release years) is worked backward to 1406."""
 citations = [{ source = "wood-2005", locator = "pp. 488–489" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen's own account of Jericho concedes remains of c. 1400-1275 BC above the Middle Bronze \
-  city; Wood holds that the Spring Hill sequence has a gap c. 1320-1100 BC and no 13th-century \
-  pottery, which suits a destruction c. 1400 rather than a 13th-century one."""
+  Kitchen's own account of Jericho admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery. He says this suits a destruction around 1400 better than a 13th-century one."""
   citations = [{ source = "wood-2005", locator = "p. 487" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around \
-  1550 BCE, too early for a 15th-century or any later conquest; 1995 radiocarbon testing \
-  dated the destruction level to the late 17th or 16th century BCE."""
+  Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE."""
   citations = [{ source = "wikipedia-battle-of-jericho", locator = "sections on Kenyon and radiocarbon testing" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
@@ -62,9 +56,7 @@ earliest = -1220
 latest = -1210
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (Wood's report of \
-Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, \
-c. 1210 BC (Wood p. 476), so the conquest must precede that."""
+Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476). So the conquest must come before that."""
 citations = [
   { source = "wood-2005", locator = "pp. 476, 478" },
   { source = "kitchen-2003" },
@@ -73,17 +65,14 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen attributes the lack of 13th-century occupation at Jericho to erosion: there may have \
-  been a Jericho during 1275-1220, but above the tiny remains of 1400-1275 all of it has long \
-  since gone."""
+  Kitchen blames erosion for the lack of 13th-century remains at Jericho. There may have been a Jericho between 1275 and 1220. But above the tiny remains of 1400-1275, all of it has long since gone."""
   citations = [{ source = "wood-2005", locator = "p. 487" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Wood: at Jericho and Ai no evidence has been found for occupation in the late 13th century; \
-  a destruction of Hazor c. 1230 BC would leave no city for the Jabin of Judges 4 to rule."""
+  Wood says no evidence has been found at Jericho and Ai for settlement in the late 13th century. He adds that a destruction of Hazor around 1230 BC would leave no city for the Jabin of Judges 4 to rule."""
   citations = [{ source = "wood-2005", locator = "pp. 476–477" }]
   verses = [{ ref = "Josh.11.10-Josh.11.11", link = "describes" }, { ref = "Judg.4.2", link = "describes" }]
 
@@ -95,5 +84,5 @@ earliest = -1451
 latest = -1451
 held_by = "James Ussher"
 summary = """
-Ussher places the fall of Jericho under 2553c AM, 1451 BC."""
+Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraph 312" }]

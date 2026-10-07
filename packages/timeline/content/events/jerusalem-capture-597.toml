@@ -5,9 +5,7 @@ category = "political"
 confidence = "firm"
 status = "draft"
 summary = """
-The first Babylonian capture of Jerusalem: Jehoiachin surrenders, is taken to Babylon, and \
-Zedekiah is installed in his place. Dated to the month, from the Babylonian side, by the \
-Babylonian Chronicle."""
+Babylon captures Jerusalem for the first time. Jehoiachin surrenders and is taken to Babylon, and Zedekiah is made king in his place. The Babylonian Chronicle, an ancient Babylonian record, gives the date down to the month."""
 verses = [{ ref = "2Kgs.24.10-2Kgs.24.17", link = "describes" }]
 
 [[positions]]
@@ -17,8 +15,7 @@ tradition = "chronological"
 earliest = -597
 latest = -597
 summary = """
-The Babylonian Chronicle dates the seizure of the city and the capture of its king to the \
-second day of Addaru in Nebuchadnezzar's seventh year."""
+The Babylonian Chronicle dates the seizure of the city and the capture of its king to the second day of Addaru, in Nebuchadnezzar's seventh year."""
 citations = [
   { source = "grayson-1975", locator = "Chronicle 5" },
   { source = "livius-abc5" },
@@ -28,6 +25,5 @@ citations = [
 artifact = "babylonian-chronicle-abc5"
 relation = "corroborates"
 note = """
-Records that Nebuchadnezzar "seized the city and captured the king" on 2 Addaru of his \
-seventh year, and appointed a king of his own choice — matching 2 Kings 24:12–17."""
+The Chronicle says Nebuchadnezzar "seized the city and captured the king" on 2 Addaru of his seventh year. It says he then appointed a king of his own choice. This matches 2 Kings 24:12-17."""
 citations = [{ source = "livius-abc5" }]

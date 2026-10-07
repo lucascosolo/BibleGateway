@@ -5,16 +5,16 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Jacob and his household, seventy persons in all, move to Egypt at Joseph's invitation during the famine and settle in Goshen. The date depends on how the exodus is dated; historicity is a separate question (see the patriarchs issue)."""
+Jacob and his household, seventy people in all, move to Egypt at Joseph's invitation during the famine. They settle in Goshen. The date depends on how the exodus is dated. Whether this happened historically is a separate question (see the patriarchs issue)."""
 verses = [
-  { ref = "Gen.45.9-Gen.45.28", link = "describes", note = "Joseph invites his father; Jacob resolves to go" },
-  { ref = "Gen.46.1-Gen.46.34", link = "describes", note = "God's reassurance at Beersheba; the list of those who went down; arrival in Goshen" },
-  { ref = "Gen.47.1-Gen.47.12", link = "describes", note = "Presented to Pharaoh and settled in the land of Rameses" },
-  { ref = "Exod.1.1-Exod.1.7", link = "describes", note = "The sons of Israel who came to Egypt with Jacob, and their increase" },
-  { ref = "Deut.26.5", link = "alludes", note = "A wandering Aramean was my father; he went down to Egypt few in number" },
+  { ref = "Gen.45.9-Gen.45.28", link = "describes", note = "Joseph invites his father, and Jacob decides to go" },
+  { ref = "Gen.46.1-Gen.46.34", link = "describes", note = "God reassures Jacob at Beersheba. The list of those who went down. Arrival in Goshen" },
+  { ref = "Gen.47.1-Gen.47.12", link = "describes", note = "Jacob is presented to Pharaoh and settled in the land of Rameses" },
+  { ref = "Exod.1.1-Exod.1.7", link = "describes", note = "The sons of Israel who came to Egypt with Jacob, and how they multiplied" },
+  { ref = "Deut.26.5", link = "alludes", note = "A wandering Aramean was my father. He went down to Egypt with few people" },
   { ref = "Josh.24.4", link = "alludes", note = "Jacob and his children went down to Egypt" },
-  { ref = "Ps.105.23", link = "alludes", note = "Israel came to Egypt; Jacob lived as a foreigner in the land of Ham" },
-  { ref = "Acts.7.14-Acts.7.15", link = "alludes", note = "Stephen: Joseph sent for Jacob and seventy-five persons; Jacob went down to Egypt" },
+  { ref = "Ps.105.23", link = "alludes", note = "Israel came to Egypt. Jacob lived as a foreigner in the land of Ham" },
+  { ref = "Acts.7.14-Acts.7.15", link = "alludes", note = "Stephen says Joseph sent for Jacob and seventy-five persons, and Jacob went down to Egypt" },
 ]
 
 [[positions]]
@@ -25,7 +25,7 @@ earliest = -1928
 latest = -1928
 held_by = "the Masoretic Text chronology as tabulated by Wikipedia"
 summary = """
-In the article's table for the Masoretic Text, Jacob's entry into Egypt falls in 1928 BCE (AM 2236)."""
+In the Wikipedia article's table for the Masoretic Text (the traditional Hebrew text of the Bible), Jacob enters Egypt in 1928 BCE (AM 2236). AM means years counted from creation."""
 citations = [{ source = "wikipedia-chronology-of-the-bible" }]
 
 [[positions]]
@@ -36,9 +36,7 @@ earliest = -1860
 latest = -1840
 held_by = "Bryant G. Wood"
 summary = """
-Wood links a mid-19th-century BC Asiatic settlement at Pi-Ramesse that "could well be that of \
-Jacob and his family shortly after their arrival in Egypt" with a 15th-century exodus. The \
-range is a reading of "mid-19th century", not Wood's own figures."""
+Wood links an Asiatic settlement at Pi-Ramesse from the mid-19th century BC with a 15th-century exodus. He says it "could well be that of Jacob and his family shortly after their arrival in Egypt". The range here is a reading of "mid-19th century". It is not Wood's own figures."""
 citations = [{ source = "wood-2005", locator = "p. 488" }]
 
 [[positions]]
@@ -49,8 +47,7 @@ earliest = -1700
 latest = -1700
 held_by = "advocates of a 13th-century exodus, as characterised by Bryant G. Wood"
 summary = """
-Wood says that with a 13th-century exodus Jacob would have had to enter Egypt much later, \
-c. 1700 BC, than the settlement he identifies."""
+Wood says that with a 13th-century exodus, Jacob would have had to enter Egypt much later, about 1700 BC. That is later than the settlement he identifies."""
 citations = [{ source = "wood-2005", locator = "p. 488" }]
 
 [[positions]]
@@ -61,5 +58,5 @@ earliest = -1706
 latest = -1706
 held_by = "James Ussher"
 summary = """
-Ussher has Jacob, aged 130, go down into Egypt at the beginning of the third year of the famine, under 2298b AM, 1706 BC."""
+Ussher has Jacob, aged 130, go down into Egypt at the start of the third year of the famine, in 1706 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 135-138" }]
