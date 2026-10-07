@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `0c63c7ebc656e578`, draft entries only. Check each claim against its cited source; when an
+Build `5e3871597acf1e4e`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -662,7 +662,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Position **932-931 BCE** (932 BCE – 931 BCE, held by Rodger C. Young): Young reasons that Solomon died before Tishri 931 (the autumn month that starts the year in this count). So Rehoboam began in 932t, a year counted from autumn. Jeroboam began some time in 931n, a year counted from spring.
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, pp. 590-591 <https://www.rcyoung.org/articles/solomon.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 227 n. 3 <https://www.rcyoung.org/articles/rtables.pdf>
-  - Position **931-930 BCE** (931 BCE – 930 BCE, held by Edwin R. Thiele): The chronologist Edwin Thiele assumed that Solomon died in the second half of 931n (931t/930n).
+  - Position **931-930 BCE** (931 BCE – 930 BCE, held by Edwin R. Thiele): The chronologist Edwin Thiele assumed that Solomon died in the second half of 931n (931t/930n). In his own words he had "fixed 931/30 as the year of the division of the monarchy", and he explains how: "With an interval of 78 years between the accession of Jeroboam I and the death of Ahab, and with the latter taking place in 853 B.C., we thus secure the date 931/930 B.C. as the year of Jeroboam's accession and of the schism between Judah and Israel." He then uses 930 "in the interests of simplicity", adding that 931 "might have been equally appropriate or even more accurate", depending on the season of Jeroboam's rebellion.
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, chapter 'The Chronology of Judah and Israel (930–841 B.C.)', opening pages (page images supplied by the user, 2026-10-07; page numbers not visible on the images) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 591 <https://www.rcyoung.org/articles/solomon.pdf>
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Rehoboam 931/0 in the chronology table; second-hand, not Thiele's pages <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
   - Position **932/931 BCE** (932 BCE – 931 BCE): Wikipedia gives the revolt as in 932/931 BCE.
@@ -687,8 +688,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Summary: Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention it.
   - Verse (background): 1Kgs 16:29 – 1Kgs 16:34 (Ahab becomes king. The Bible does not mention Qarqar)
   - Verse (background): 1Kgs 22:1 – 1Kgs 22:4 (three years without war between Syria and Israel)
-  - Position **853 BCE** (853 BCE, held by Edwin R. Thiele): Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853. In his own words: "As I first completed my pattern of reigns, I faced problems of a single year with my date of 853 for the battle of Qarqar and 723 for Samaria's fall. The accepted date for Qarqar then was 854, a year earlier than my date." He adds that "Assyrian chronology likewise calls for precisely 152 years from the battle of Qarqar in 853 to Sennacherib's attack on Hezekiah in 701".
-    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
+  - Position **853 BCE** (853 BCE, held by Edwin R. Thiele): Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853. In his own words: "As I first completed my pattern of reigns, I faced problems of a single year with my date of 853 for the battle of Qarqar and 723 for Samaria's fall. The accepted date for Qarqar then was 854, a year earlier than my date." He adds that "Assyrian chronology likewise calls for precisely 152 years from the battle of Qarqar in 853 to Sennacherib's attack on Hezekiah in 701", and he builds the whole pattern of the divided kingdom "with 853 fixed as the last year of Ahab".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, Preface to the Third Edition, pp. 23–24; chapter 'The Chronology of Judah and Israel (930–841 B.C.)', opening pages (page images supplied by the user, 2026-10-07; page numbers not visible on the images) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *The Mysterious Numbers of the Hebrew Kings*, Wikipedia, 2026, Ahab ends 853 in the chronology table; second-hand <https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings>
     - Source: *When Was Samaria Captured? The Need for Precision in Biblical Chronologies*, Rodger C. Young, Journal of the Evangelical Theological Society 47/4, pp. 577–595, 2004, p. 593 <https://www.rcyoung.org/articles/samaria.pdf>
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 232 <https://www.rcyoung.org/articles/rtables.pdf>
