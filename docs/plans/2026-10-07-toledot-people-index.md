@@ -61,3 +61,24 @@ Vitest for `groupPersons` (every section, ordering, unplaced, ties), the filter 
 `persons` key in the builder (`packages/timeline/tests`). Screenshot `/toledot` at 390 and 1280
 with ≥40 people and read it: section summaries legible, no horizontal overflow, filter reachable
 above the fold.
+
+## The strip at 53 events (added 2026-10-07 after the first screenshot)
+
+Measured with the merged content: the strip viewport scrolls 5,533px at both 390 and 1280px; the
+narrative lane stacks eight rows deep around the monarchy while the composition and canon lanes are
+empty for 2,000 years and still take full height. Two changes, both in the pure layout module and
+the strip component, no data change:
+
+1. **Era windows instead of one window.** A row of era chips above the strip (Patriarchs,
+   Exodus and conquest, Judges, United monarchy, Divided kingdom, Exile and return, Second Temple,
+   New Testament) each sets `[from, to]`; the boundaries are derived from the events present (the
+   gaps between clusters), so they move as content grows. The default window is the era holding the
+   most events. "All" keeps the current behaviour. The chip row is a `radiogroup`; the chosen era is
+   in the URL (`?era=`) so a link lands on the right window and the server renders it.
+2. **Lanes shrink to their content.** An axis with nothing in the window renders as one caption
+   row, not a full lane. Row height within a lane comes from the number of rows actually used, and
+   `layoutBars` gains a `maxRows` beyond which the overflow is listed below the strip ("and 6 more
+   in this window") rather than drawn, so the phone never scrolls through eight rows of bars.
+
+Tests: era boundary derivation (clusters, single event, empty), `maxRows` overflow, URL round-trip.
+Screenshot 390 and 1280 again and compare the strip height and scroll width with the numbers above.
