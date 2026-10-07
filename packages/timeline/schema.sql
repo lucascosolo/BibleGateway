@@ -36,21 +36,32 @@ CREATE TABLE eras (
 CREATE TABLE events (
   event_id      TEXT PRIMARY KEY,
   title         TEXT NOT NULL,
-  axis          TEXT NOT NULL CHECK (axis IN ('narrative','composition')),
+  -- Three timelines, never merged onto one scale: when events happened, when texts were
+  -- written, when collections were recognised as scripture.
+  axis          TEXT NOT NULL CHECK (axis IN ('narrative','composition','canon')),
   category      TEXT NOT NULL CHECK (category IN ('biblical-narrative','political','composition','canon')),
   confidence    TEXT NOT NULL CHECK (confidence IN ('firm','contested','speculative')),
   status        TEXT NOT NULL CHECK (status IN ('draft','reviewed')),
   summary       TEXT NOT NULL,
-  -- Composition axis only: the book (bible.db books.book_id) and optional segment label.
-  book_id       INTEGER,
+  -- Composition axis only: an optional label for the part being dated ('Daniel 7–12',
+  -- 'Priestly source'). The books are in event_books; the exact extent in verse_links.
   segment_label TEXT,
   -- DERIVED: the envelope of this event's positions. Never authored directly.
   earliest_year INTEGER NOT NULL CHECK (earliest_year <> 0),
   latest_year   INTEGER NOT NULL CHECK (latest_year <> 0),
-  CHECK (earliest_year <= latest_year),
-  CHECK ((axis = 'composition') = (book_id IS NOT NULL))
+  CHECK (earliest_year <= latest_year)
 );
 CREATE INDEX events_window_idx ON events (axis, earliest_year, latest_year);
+
+-- The books a composition event dates (bible.db books.book_id). A join table, not a column:
+-- a source document such as the Priestly source spans several books. The builder requires at
+-- least one row for every composition event and none for any other.
+CREATE TABLE event_books (
+  event_id TEXT NOT NULL REFERENCES events,
+  book_id  INTEGER NOT NULL,
+  PRIMARY KEY (event_id, book_id)
+);
+CREATE INDEX event_books_book_idx ON event_books (book_id);
 
 CREATE TABLE positions (
   position_id   TEXT PRIMARY KEY,           -- '<event id>/<position id>'
@@ -67,7 +78,7 @@ CREATE TABLE positions (
 );
 
 CREATE TABLE arguments (
-  argument_id INTEGER PRIMARY KEY,
+  argument_id TEXT PRIMARY KEY,             -- '<position id>/argument-<n>', stable per content
   position_id TEXT NOT NULL REFERENCES positions,
   ordinal     INTEGER NOT NULL,
   stance      TEXT NOT NULL CHECK (stance IN ('for','against')),
@@ -94,7 +105,7 @@ CREATE TABLE artifacts (
 );
 
 CREATE TABLE attestations (
-  attestation_id INTEGER PRIMARY KEY,
+  attestation_id TEXT PRIMARY KEY,          -- '<event id>@<artifact id>' 
   artifact_id    TEXT NOT NULL REFERENCES artifacts,
   event_id       TEXT NOT NULL REFERENCES events,
   relation       TEXT NOT NULL CHECK (relation IN ('corroborates','partially-corroborates','consistent','silent','in-tension')),
@@ -112,7 +123,7 @@ CREATE TABLE issues (
 );
 
 CREATE TABLE issue_views (
-  view_id  INTEGER PRIMARY KEY,
+  view_id  TEXT PRIMARY KEY,                -- '<issue id>/view-<n>', stable per content
   issue_id TEXT NOT NULL REFERENCES issues,
   ordinal  INTEGER NOT NULL,
   label    TEXT NOT NULL,

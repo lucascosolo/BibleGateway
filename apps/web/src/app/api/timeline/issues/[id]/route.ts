@@ -1,9 +1,10 @@
 import type { NextRequest } from "next/server";
 
 import { timelineNotModified } from "@/lib/db/cache";
-import { getEvent, getIssue } from "@/lib/db/timeline";
+import { getEventTitles, getIssue } from "@/lib/db/timeline";
+import { labelVerses } from "@/lib/db/timeline-present";
 
-import { json, labelVerses, problem } from "../../shared";
+import { json, problem } from "../../shared";
 
 export const dynamic = "force-dynamic";
 
@@ -25,9 +26,6 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   return json(request, {
     ...issue,
     verses: labelVerses(issue.verses),
-    events: issue.eventIds.flatMap((eventId) => {
-      const event = getEvent(eventId);
-      return event ? [{ id: event.id, title: event.title, href: `/api/timeline/events/${event.id}` }] : [];
-    }),
+    events: getEventTitles(issue.eventIds).map((event) => ({ ...event, href: `/api/timeline/events/${event.id}` })),
   });
 }

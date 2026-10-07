@@ -1,10 +1,11 @@
 import type { NextRequest } from "next/server";
 
 import { timelineNotModified } from "@/lib/db/cache";
-import { getBookIndex } from "@/lib/db/corpus";
-import { getEvent, getIssue } from "@/lib/db/timeline";
+import { getEvent, getIssueSummaries } from "@/lib/db/timeline";
+import { bookNames, labelVerses } from "@/lib/db/timeline-present";
+import { withDisplay } from "@/lib/timeline/years";
 
-import { json, labelVerses, problem, withYears } from "../../shared";
+import { json, problem } from "../../shared";
 
 export const dynamic = "force-dynamic";
 
@@ -25,20 +26,17 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   if (!event) return problem(404, `no timeline event "${id}"`);
 
   return json(request, {
-    ...withYears(event),
-    book: event.bookId === null ? null : getBookIndex().get(event.bookId)?.name ?? null,
+    ...withDisplay(event),
+    books: bookNames(event.bookIds),
     verses: labelVerses(event.verses),
     positions: event.positions.map((position) => ({
-      ...withYears(position),
+      ...withDisplay(position),
       arguments: position.arguments.map((argument) => ({ ...argument, verses: labelVerses(argument.verses) })),
     })),
     attestations: event.attestations.map((attestation) => ({
       ...attestation,
       href: `/api/timeline/artifacts/${attestation.artifactId}`,
     })),
-    issues: event.issueIds.flatMap((issueId) => {
-      const issue = getIssue(issueId);
-      return issue ? [{ id: issue.id, kind: issue.kind, title: issue.title, status: issue.status, href: `/api/timeline/issues/${issue.id}` }] : [];
-    }),
+    issues: getIssueSummaries(event.issueIds).map((issue) => ({ ...issue, href: `/api/timeline/issues/${issue.id}` })),
   });
 }

@@ -46,3 +46,8 @@ export function overlaps(aStart: number, aEnd: number, bStart: number, bEnd: num
   for (const year of [aStart, aEnd, bStart, bEnd]) assertYear(year);
   return aStart <= bEnd && bStart <= aEnd;
 }
+
+/** The item with a `display` string for its range added: `{ earliest: -1446, … }` → `"1446… BCE"`. */
+export function withDisplay<T extends { earliest: number; latest: number }>(item: T): T & { display: string } {
+  return { ...item, display: formatRange(item.earliest, item.latest) };
+}

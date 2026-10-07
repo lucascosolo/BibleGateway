@@ -4,9 +4,9 @@ import { timelineNotModified } from "@/lib/db/cache";
 import { getBookIndex } from "@/lib/db/corpus";
 import { getTimelineForRange } from "@/lib/db/timeline";
 import { InvalidReferenceError, formatRange, parseReference } from "@/lib/refs";
-import { formatRange as formatYears } from "@/lib/timeline/years";
+import { formatRange as formatYears, withDisplay } from "@/lib/timeline/years";
 
-import { json, problem, withYears } from "../shared";
+import { json, problem } from "../shared";
 
 export const dynamic = "force-dynamic";
 
@@ -36,7 +36,7 @@ export async function GET(request: NextRequest) {
   const found = getTimelineForRange(range);
   return json(request, {
     reference: formatRange(range, books),
-    events: found.events.map((event) => ({ ...withYears(event), href: `/api/timeline/events/${event.id}` })),
+    events: found.events.map((event) => ({ ...withDisplay(event), href: `/api/timeline/events/${event.id}` })),
     issues: found.issues.map((issue) => ({ ...issue, href: `/api/timeline/issues/${issue.id}` })),
     artifacts: found.artifacts.map((artifact) => ({
       ...artifact,

@@ -91,13 +91,13 @@ const openapi = {
       get: {
         summary: "List timeline events and eras in a window of years",
         description:
-          "Years are integers: negative = BCE, positive = CE, no year 0. Every event is a range (the envelope of the scholarly positions on its date), never a point, with a confidence and a review status ('draft' until a human has reviewed it). `axis` separates when events happened (narrative) from when texts were written (composition). `available` is false when no timeline is deployed.",
+          "Years are integers: negative = BCE, positive = CE, no year 0. Every event is a range (the envelope of the scholarly positions on its date), never a point, with a confidence and a review status ('draft' until a human has reviewed it). Events are returned in `tracks`, one list per axis — narrative (when events happened), composition (when texts were written), canon (when collections were recognised) — never merged into one list; `axis` fills only that track. `available` is false when no timeline is deployed.",
         parameters: [
           { name: "from", in: "query", schema: { type: "integer", default: -4000, example: -1500 } },
           { name: "to", in: "query", schema: { type: "integer", default: 400, example: -500 } },
-          { name: "axis", in: "query", schema: { type: "string", enum: ["narrative", "composition"] } },
+          { name: "axis", in: "query", schema: { type: "string", enum: ["narrative", "composition", "canon"] } },
         ],
-        responses: { "200": { description: "Overlapping events and eras, earliest first." }, "400": errorResponse },
+        responses: { "200": { description: "Overlapping eras, and events grouped by axis in `tracks`, earliest first." }, "400": errorResponse },
       },
     },
     "/api/timeline/events/{id}": {

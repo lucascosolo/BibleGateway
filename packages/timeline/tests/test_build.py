@@ -114,7 +114,7 @@ category = "composition"
 confidence = "contested"
 status = "draft"
 summary = "When it was written."
-book = "Dan"
+books = ["Dan"]
 
 [[positions]]
 id = "sixth"
@@ -223,11 +223,46 @@ class HappyPath(BuildCase):
         self.assertEqual(rows["ev-narr"], (-1446, -1200))
         self.assertEqual(rows["ev-comp"], (-600, -164))
 
-    def test_composition_event_has_book_id_and_narrative_has_none(self):
+    def test_composition_event_has_event_books_and_narrative_has_none(self):
         self.build(valid_files())
-        rows = dict(self.query("SELECT event_id, book_id FROM events"))
-        self.assertEqual(rows["ev-comp"], 27)
-        self.assertIsNone(rows["ev-narr"])
+        self.assertEqual(self.query("SELECT event_id, book_id FROM event_books"), [("ev-comp", 27)])
+
+    def test_composition_event_with_two_books(self):
+        f = valid_files()
+        mutate(f, "events/ev-comp.toml", 'books = ["Dan"]', 'books = ["Gen", "Exod"]')
+        r = self.build(f)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(self.query("SELECT book_id FROM event_books WHERE event_id='ev-comp' ORDER BY book_id"),
+                         [(1,), (2,)])
+
+    def test_canon_axis_event_builds(self):
+        f = valid_files()
+        f["events/ev-canon.toml"] = f["events/ev-narr.toml"].replace("ev-narr", "ev-canon").replace(
+            'axis = "narrative"', 'axis = "canon"').replace('category = "biblical-narrative"', 'category = "canon"')
+        r = self.build(f)
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertEqual(self.query("SELECT axis FROM events WHERE event_id='ev-canon'"), [("canon",)])
+
+    def test_stable_text_ids(self):
+        self.build(valid_files())
+        self.assertEqual(self.query("SELECT argument_id FROM arguments"), [("ev-narr/early/argument-1",)])
+        self.assertEqual(self.query("SELECT attestation_id FROM attestations"), [("ev-narr@art-one",)])
+        self.assertEqual(self.query("SELECT view_id FROM issue_views"), [("iss-one/view-1",)])
+        for kind, sid in (("argument", "ev-narr/early/argument-1"), ("attestation", "ev-narr@art-one"),
+                          ("issue_view", "iss-one/view-1")):
+            n = self.query(f"SELECT COUNT(*) FROM citations WHERE subject_kind='{kind}' AND subject_id='{sid}'")[0][0]
+            self.assertGreaterEqual(n, 1, kind)
+
+    def test_ids_identical_across_file_creation_order(self):
+        f = valid_files()
+        o1 = os.path.join(self.outdir, "o1.db")
+        o2 = os.path.join(self.outdir, "o2.db")
+        self.assertEqual(self.build(f, name="c1", order=list(f), out=o1).returncode, 0)
+        self.assertEqual(self.build(f, name="c2", order=list(reversed(list(f))), out=o2).returncode, 0)
+        sql = ("SELECT argument_id FROM arguments UNION ALL SELECT attestation_id FROM attestations "
+               "UNION ALL SELECT view_id FROM issue_views ORDER BY 1")
+        self.assertEqual(self.query(sql, o1), self.query(sql, o2))
+        self.assertEqual(len(self.query(sql, o1)), 3)
 
     def test_every_claim_carries_citations(self):
         self.build(valid_files())
@@ -235,10 +270,10 @@ class HappyPath(BuildCase):
             "era": "SELECT era_id FROM eras",
             "artifact": "SELECT artifact_id FROM artifacts",
             "position": "SELECT position_id FROM positions",
-            "argument": "SELECT CAST(argument_id AS TEXT) FROM arguments",
-            "attestation": "SELECT CAST(attestation_id AS TEXT) FROM attestations",
+            "argument": "SELECT argument_id FROM arguments",
+            "attestation": "SELECT attestation_id FROM attestations",
             "issue": "SELECT issue_id FROM issues",
-            "issue_view": "SELECT CAST(view_id AS TEXT) FROM issue_views",
+            "issue_view": "SELECT view_id FROM issue_views",
         }
         for kind, sql in checks.items():
             for (sid,) in self.query(sql):
@@ -307,17 +342,27 @@ class Gates(BuildCase):
 
     def test_composition_event_missing_book(self):
         f = valid_files()
-        mutate(f, "events/ev-comp.toml", 'book = "Dan"\n', "")
+        mutate(f, "events/ev-comp.toml", 'books = ["Dan"]\n', "")
         self.assert_fails_naming(f, "ev-comp.toml")
 
-    def test_narrative_event_with_book(self):
+    def test_composition_event_with_empty_books(self):
         f = valid_files()
-        mutate(f, "events/ev-narr.toml", 'axis = "narrative"', 'axis = "narrative"\nbook = "Dan"')
+        mutate(f, "events/ev-comp.toml", 'books = ["Dan"]', "books = []")
+        self.assert_fails_naming(f, "ev-comp.toml")
+
+    def test_old_singular_book_key_is_unknown(self):
+        f = valid_files()
+        mutate(f, "events/ev-comp.toml", 'books = ["Dan"]', 'book = "Dan"')
+        self.assert_fails_naming(f, "ev-comp.toml", "book")
+
+    def test_narrative_event_with_books(self):
+        f = valid_files()
+        mutate(f, "events/ev-narr.toml", 'axis = "narrative"', 'axis = "narrative"\nbooks = ["Dan"]')
         self.assert_fails_naming(f, "ev-narr.toml")
 
     def test_composition_event_with_unknown_book(self):
         f = valid_files()
-        mutate(f, "events/ev-comp.toml", 'book = "Dan"', 'book = "Zzz"')
+        mutate(f, "events/ev-comp.toml", 'books = ["Dan"]', 'books = ["Dan", "Zzz"]')
         self.assert_fails_naming(f, "ev-comp.toml", "Zzz")
 
     def test_attestation_to_unknown_artifact(self):

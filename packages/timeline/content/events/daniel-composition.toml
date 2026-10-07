@@ -4,7 +4,7 @@ axis = "composition"
 category = "composition"
 confidence = "contested"
 status = "draft"
-book = "Dan"
+books = ["Dan"]
 segment = "Daniel 7–12 (the visions)"
 summary = """
 When the visions of Daniel were written. The book is set in the 6th century BCE, in the \

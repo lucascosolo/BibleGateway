@@ -14,7 +14,10 @@ python3 -I packages/timeline/build.py \
 
 Stdlib only (Python 3.11+). Run it on this PC and ship the file; it never runs on a server. The
 app finds it at `data/timeline.db` (override with `TIMELINE_DB_PATH`) and shows nothing timeline-
-related without it.
+related without it. **Restart the service after shipping a new file**: the app opens the
+database once per process (as with `audio.db`), so a renamed-in file is not picked up until then.
+The server log warns if the timeline was validated against a different corpus build than the one
+deployed; rebuild it against the deployed `bible.db` when it does.
 
 Tests: `python3 -m unittest discover -s packages/timeline/tests`.
 

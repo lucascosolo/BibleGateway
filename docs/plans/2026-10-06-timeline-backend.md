@@ -34,6 +34,27 @@ design record this refines.
    `issue` of kind `historical` linked to the event, with its own cited views — never a position
    with invented years.
 
+## Revision 1 (2026-10-06, after architecture review)
+
+- **Three axes**: `narrative` (when events happened), `composition` (when texts were written),
+  `canon` (when collections were recognised and closed). Never merged onto one scale.
+- **Composition events name books through `event_books`**, not a single `events.book_id`:
+  content key `books = ["Gen", "Exod", ...]` (OSIS ids, ≥1, all must exist in `bible.db`),
+  **required** when `axis = "composition"` and forbidden otherwise. A source document (the
+  Priestly source, the Deuteronomistic History) spans several books; its exact extent is given
+  by its `verses` links. The old singular `book` key is removed (unknown key = error).
+- **Stable text ids for every child row**: arguments `"<position id>/argument-<n>"`, attestations
+  `"<event id>@<artifact id>"`, issue views `"<issue id>/view-<n>"` (n from 1, authored order).
+  They are what `citations.subject_id` and `verse_links.subject_id` hold, so they are the same
+  on every rebuild of the same content; the API exposes them as `id` for deep links.
+- **`/api/timeline` returns `tracks: { narrative: [...], composition: [...], canon: [...] }`**,
+  always all three keys; `axis` limits which one is filled (the others are `[]`). No flat merged
+  `events` list.
+- `lib/db/timeline.ts` logs one warning when `meta.corpus_build_id` differs from the deployed
+  corpus build id (verse links were validated against a different `bible.db`).
+- A new `timeline.db` is picked up on service restart (the handle is opened once per process,
+  as with `audio.db`).
+
 ## Years
 
 Integers. Negative = BCE, positive = CE, **no year zero** (`-1` is 1 BCE, `1` is 1 CE). A zero
@@ -97,12 +118,12 @@ non-zero, printing every failure (not only the first) as `<file>: <message>`.
 ## Database (`packages/timeline/schema.sql`, the single schema source)
 
 Used by the builder and by the TypeScript tests' fixtures. Tables: `meta(key, value)`,
-`sources`, `eras`, `events` (with derived `earliest_year`, `latest_year`, nullable `book_id`),
+`sources`, `eras`, `events` (with derived `earliest_year`, `latest_year`), `event_books`,
 `positions`, `arguments`, `artifacts`, `attestations`, `issues`, `issue_views`, `issue_events`,
 `verse_links(subject_kind, subject_id, start_verse_id, end_verse_id, link_type, note)`,
 `citations(subject_kind, subject_id, source_id, locator, ordinal)`. `subject_kind` is one of
 `era`, `event`, `position`, `argument`, `artifact`, `attestation`, `issue`, `issue_view`.
-Argument, attestation and issue-view subject ids are their integer row ids rendered as text.
+Argument, attestation and issue-view ids are the stable text ids of Revision 1.
 
 ## App layer
 

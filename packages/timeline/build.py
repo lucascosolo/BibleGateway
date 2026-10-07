@@ -43,7 +43,7 @@ ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 REF_RE = re.compile(r"^([1-4]?[A-Za-z]+)\.(\d+)\.(\d+)$")
 
 SOURCE_KINDS = {"book", "chapter", "article", "edition", "museum", "web"}
-AXES = {"narrative", "composition"}
+AXES = {"narrative", "composition", "canon"}
 CATEGORIES = {"biblical-narrative", "political", "composition", "canon"}
 CONFIDENCE = {"firm", "contested", "speculative"}
 STATUSES = {"draft", "reviewed"}
@@ -364,7 +364,7 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
     spec: Spec = {
         "id": (str, True), "title": (str, True), "axis": (str, True), "category": (str, True),
         "confidence": (str, True), "status": (str, True), "summary": (str, True),
-        "book": (str, False), "segment": (str, False), "verses": (list, False),
+        "books": (list, False), "segment": (str, False), "verses": (list, False),
         "positions": (list, True), "attestations": (list, False),
     }
     position_spec: Spec = {
@@ -385,16 +385,21 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
         check_enum(report, where, "confidence", event["confidence"], CONFIDENCE)
         check_enum(report, where, "status", event["status"], STATUSES)
 
-        book_id = None
+        # A composition event dates one or more books: a source document such as the Priestly
+        # source spans several, so this is a list, never a single book.
+        book_ids: list[int] = []
         if event["axis"] == "composition":
-            if "book" not in event:
-                report.error(where, "a composition event needs 'book' (the OSIS id of the book it dates)")
-            elif event["book"] not in corpus.book_ids:
-                report.error(where, f"unknown OSIS book '{event['book']}'")
+            books = event.get("books")
+            if not books:
+                report.error(where, "a composition event needs 'books' (OSIS ids of the books it dates)")
             else:
-                book_id = corpus.book_ids[event["book"]]
-        elif "book" in event or "segment" in event:
-            report.error(where, "'book' and 'segment' belong to composition events only")
+                for osis in books:
+                    if not isinstance(osis, str) or osis not in corpus.book_ids:
+                        report.error(where, f"unknown OSIS book '{osis}' in 'books'")
+                    elif corpus.book_ids[osis] not in book_ids:
+                        book_ids.append(corpus.book_ids[osis])
+        elif "books" in event or "segment" in event:
+            report.error(where, "'books' and 'segment' belong to composition events only")
 
         positions: list[dict[str, Any]] = []
         if not event["positions"]:
@@ -445,7 +450,7 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
 
         content.events[event["id"]] = {
             **event,
-            "book_id": book_id,
+            "book_ids": book_ids,
             "positions": positions,
             "attestations": attestations,
             "verses": verses(report, where, event.get("verses"), corpus),
@@ -598,10 +603,13 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
         earliest = min(p["earliest"] for p in e["positions"])
         latest = max(p["latest"] for p in e["positions"])
         db.execute(
-            "INSERT INTO events VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            """INSERT INTO events (event_id, title, axis, category, confidence, status, summary,
+                                   segment_label, earliest_year, latest_year)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (e["id"], e["title"], e["axis"], e["category"], e["confidence"], e["status"], e["summary"],
-             e["book_id"], e.get("segment"), earliest, latest),
+             e.get("segment"), earliest, latest),
         )
+        db.executemany("INSERT INTO event_books VALUES (?, ?)", [(e["id"], book_id) for book_id in e["book_ids"]])
         link("event", e["id"], e["verses"])
         for ordinal, p in enumerate(e["positions"]):
             position_id = f"{e['id']}/{p['id']}"
@@ -611,28 +619,33 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
             )
             cite("position", position_id, p["citations"])
             for a_ordinal, argument in enumerate(p["arguments"]):
-                cursor = db.execute(
-                    "INSERT INTO arguments (position_id, ordinal, stance, text) VALUES (?, ?, ?, ?)",
-                    (position_id, a_ordinal, argument["stance"], argument["text"]),
+                # Stable, content-derived ids (never rowids): the same content rebuilds to the
+                # same ids, so a link to one argument survives a rebuild.
+                argument_id = f"{position_id}/argument-{a_ordinal + 1}"
+                db.execute(
+                    "INSERT INTO arguments (argument_id, position_id, ordinal, stance, text) VALUES (?, ?, ?, ?, ?)",
+                    (argument_id, position_id, a_ordinal, argument["stance"], argument["text"]),
                 )
-                cite("argument", str(cursor.lastrowid), argument["citations"])
-                link("argument", str(cursor.lastrowid), argument["verses"])
+                cite("argument", argument_id, argument["citations"])
+                link("argument", argument_id, argument["verses"])
         for t in e["attestations"]:
-            cursor = db.execute(
-                "INSERT INTO attestations (artifact_id, event_id, relation, note) VALUES (?, ?, ?, ?)",
-                (t["artifact"], e["id"], t["relation"], t["note"]),
+            attestation_id = f"{e['id']}@{t['artifact']}"
+            db.execute(
+                "INSERT INTO attestations (attestation_id, artifact_id, event_id, relation, note) VALUES (?, ?, ?, ?, ?)",
+                (attestation_id, t["artifact"], e["id"], t["relation"], t["note"]),
             )
-            cite("attestation", str(cursor.lastrowid), t["citations"])
+            cite("attestation", attestation_id, t["citations"])
     for i in content.issues.values():
         db.execute("INSERT INTO issues VALUES (?, ?, ?, ?, ?)", (i["id"], i["kind"], i["title"], i["summary"], i["status"]))
         cite("issue", i["id"], i["citations"])
         link("issue", i["id"], i["verses"])
         for ordinal, view in enumerate(i["views"]):
-            cursor = db.execute(
-                "INSERT INTO issue_views (issue_id, ordinal, label, text) VALUES (?, ?, ?, ?)",
-                (i["id"], ordinal, view["label"], view["text"]),
+            view_id = f"{i['id']}/view-{ordinal + 1}"
+            db.execute(
+                "INSERT INTO issue_views (view_id, issue_id, ordinal, label, text) VALUES (?, ?, ?, ?, ?)",
+                (view_id, i["id"], ordinal, view["label"], view["text"]),
             )
-            cite("issue_view", str(cursor.lastrowid), view["citations"])
+            cite("issue_view", view_id, view["citations"])
         db.executemany("INSERT INTO issue_events VALUES (?, ?)", [(i["id"], event_id) for event_id in i["events"]])
 
     db.executemany(

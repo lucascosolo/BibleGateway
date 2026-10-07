@@ -1,10 +1,12 @@
 import type { NextRequest } from "next/server";
 
 import { timelineNotModified } from "@/lib/db/cache";
-import { getBookIndex } from "@/lib/db/corpus";
-import { getTimelineWindow, type Axis } from "@/lib/db/timeline";
+import { getTimelineWindow } from "@/lib/db/timeline";
+import { bookNames } from "@/lib/db/timeline-present";
+import { AXES, isAxis, type Axis } from "@/lib/timeline/axes";
+import { withDisplay } from "@/lib/timeline/years";
 
-import { json, problem, withYears } from "./shared";
+import { json, problem } from "./shared";
 
 // Reads query params and a request header; see apps/web/src/app/api/passage/route.ts.
 export const dynamic = "force-dynamic";
@@ -25,8 +27,13 @@ function year(value: string | null, fallback: number): number | string {
  *
  * Events and eras overlapping a window of years, earliest first. Each event is a RANGE — the
  * envelope of the scholarly positions on its date — never a point, with `confidence` and the
- * review `status` the UI must show. `axis` keeps the two timelines apart: `narrative` (when the
- * events happened) and `composition` (when the texts were written). Omit it for both.
+ * review `status` the UI must show.
+ *
+ * Events come back in `tracks`, one list per axis — `narrative` (when events happened),
+ * `composition` (when texts were written), `canon` (when collections were recognised) — and
+ * never as one merged list: the three are different questions on different scales, and a flat
+ * list sorted by year is the conflation ARCHITECTURE.md §0.2 forbids. `axis` fills only that
+ * track; the others are empty.
  */
 export async function GET(request: NextRequest) {
   const unchanged = timelineNotModified(request);
@@ -39,23 +46,26 @@ export async function GET(request: NextRequest) {
   if (typeof to === "string") return problem(400, `to: ${to}`);
   if (from > to) return problem(400, "from must not be after to");
   const axisParam = params.get("axis");
-  if (axisParam !== null && axisParam !== "narrative" && axisParam !== "composition") {
-    return problem(400, 'axis must be "narrative" or "composition"');
+  if (axisParam !== null && !isAxis(axisParam)) {
+    return problem(400, `axis must be one of ${AXES.map((a) => `"${a}"`).join(", ")}`);
   }
   const axis = (axisParam ?? undefined) as Axis | undefined;
 
   const window = getTimelineWindow({ from, to, axis });
-  const books = getBookIndex();
+  const tracks = Object.fromEntries(AXES.map((name) => [name, [] as unknown[]])) as Record<Axis, unknown[]>;
+  for (const event of window.events) {
+    tracks[event.axis].push({
+      ...withDisplay(event),
+      books: bookNames(event.bookIds),
+      href: `/api/timeline/events/${event.id}`,
+    });
+  }
   return json(request, {
     available: window.available,
     from,
     to,
     axis: axis ?? null,
-    eras: window.eras.map((era) => ({ ...era, display: withYears({ earliest: era.start, latest: era.end }).display })),
-    events: window.events.map((event) => ({
-      ...withYears(event),
-      book: event.bookId === null ? null : books.get(event.bookId)?.name ?? null,
-      href: `/api/timeline/events/${event.id}`,
-    })),
+    eras: window.eras.map((era) => ({ ...era, display: withDisplay({ earliest: era.start, latest: era.end }).display })),
+    tracks,
   });
 }

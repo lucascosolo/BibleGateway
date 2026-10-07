@@ -6,6 +6,8 @@ import path from "node:path";
 
 import type { VerseId, VerseRange } from "@/lib/refs/verse-id";
 
+import { getCorpusBuildId } from "./client";
+
 /**
  * Read-only handle on the Toledot artifact, `data/timeline.db` (built by
  * `packages/timeline/build.py`; contract in `docs/plans/2026-10-06-timeline-backend.md`).
@@ -26,10 +28,34 @@ const DB_PATH =
 
 let instance: Database.Database | null | undefined;
 
+/**
+ * Opened once per process, like `audio.db`: a newly deployed timeline.db is picked up on the
+ * next service restart, not by the rename alone.
+ */
 function db(): Database.Database | null {
   if (instance !== undefined) return instance;
   instance = fs.existsSync(DB_PATH) ? new Database(DB_PATH, { readonly: true, fileMustExist: true }) : null;
+  if (instance) warnOnCorpusMismatch(instance);
   return instance;
+}
+
+/**
+ * The builder checked every verse link against one specific bible.db. Against a different one
+ * a link may label a verse that no longer exists, so say so once, loudly, in the server log.
+ */
+function warnOnCorpusMismatch(handle: Database.Database): void {
+  try {
+    const built = (handle.prepare(`SELECT value FROM meta WHERE key = 'corpus_build_id'`).get() as { value: string } | undefined)?.value;
+    const deployed = getCorpusBuildId();
+    if (built && deployed !== "dev" && built !== deployed) {
+      console.warn(
+        `[timeline] timeline.db was validated against corpus ${built}, but corpus ${deployed} is deployed; ` +
+          `rebuild it (packages/timeline/build.py) so its verse links are checked against this corpus.`
+      );
+    }
+  } catch {
+    // A warning must never take the timeline down.
+  }
 }
 
 const statements = new Map<string, Database.Statement>();
@@ -54,7 +80,8 @@ function get<T>(sql: string, ...params: unknown[]): T | null {
 
 // --- Types ------------------------------------------------------------------------------------
 
-export type Axis = "narrative" | "composition";
+import type { Axis } from "@/lib/timeline/axes";
+export type { Axis };
 export type ReviewStatus = "draft" | "reviewed";
 
 export interface Citation {
@@ -94,12 +121,14 @@ export interface EventSummary {
   status: ReviewStatus;
   earliest: number;
   latest: number;
-  /** Composition axis only. */
-  bookId: number | null;
+  /** Composition axis only: the books dated (a source document can span several). */
+  bookIds: number[];
   segment: string | null;
 }
 
 export interface Argument {
+  /** Stable across rebuilds of the same content: `<position id>/argument-<n>`. */
+  id: string;
   stance: "for" | "against";
   text: string;
   citations: Citation[];
@@ -121,6 +150,8 @@ export interface Position {
 export type Relation = "corroborates" | "partially-corroborates" | "consistent" | "silent" | "in-tension";
 
 export interface EventAttestation {
+  /** `<event id>@<artifact id>`. */
+  id: string;
   artifactId: string;
   artifactName: string;
   artifactKind: string;
@@ -152,7 +183,7 @@ export interface ArtifactDetail extends ArtifactSummary {
   heldBy: { institution: string; accession: string | null } | null;
   citations: Citation[];
   verses: VerseLink[];
-  attestations: { eventId: string; eventTitle: string; relation: Relation; note: string; citations: Citation[] }[];
+  attestations: { id: string; eventId: string; eventTitle: string; relation: Relation; note: string; citations: Citation[] }[];
 }
 
 export interface IssueSummary {
@@ -165,7 +196,7 @@ export interface IssueSummary {
 export interface IssueDetail extends IssueSummary {
   summary: string;
   citations: Citation[];
-  views: { label: string; text: string; citations: Citation[] }[];
+  views: { id: string; label: string; text: string; citations: Citation[] }[];
   eventIds: string[];
   verses: VerseLink[];
 }
@@ -181,7 +212,7 @@ export interface TimelineWindow {
 
 type SubjectKind = "era" | "event" | "position" | "argument" | "artifact" | "attestation" | "issue" | "issue_view";
 
-function citationsFor(kind: SubjectKind, id: string | number): Citation[] {
+function citationsFor(kind: SubjectKind, id: string): Citation[] {
   return all<Citation>(
     `SELECT s.source_id AS sourceId, s.kind, s.title, s.author, s.container, s.publisher, s.year, s.url,
             c.locator
@@ -189,22 +220,29 @@ function citationsFor(kind: SubjectKind, id: string | number): Citation[] {
      WHERE c.subject_kind = ? AND c.subject_id = ?
      ORDER BY c.ordinal`,
     kind,
-    String(id)
+    id
   );
 }
 
-function versesFor(kind: "event" | "argument" | "artifact" | "issue", id: string | number): VerseLink[] {
+function versesFor(kind: "event" | "argument" | "artifact" | "issue", id: string): VerseLink[] {
   return all<VerseLink>(
     `SELECT start_verse_id AS start, end_verse_id AS "end", link_type AS linkType, note
      FROM verse_links WHERE subject_kind = ? AND subject_id = ?
      ORDER BY start_verse_id, link_id`,
     kind,
-    String(id)
+    id
   );
 }
 
 const EVENT_SUMMARY_COLUMNS = `event_id AS id, title, axis, category, confidence, status,
-  earliest_year AS earliest, latest_year AS latest, book_id AS bookId, segment_label AS segment`;
+  earliest_year AS earliest, latest_year AS latest, segment_label AS segment,
+  (SELECT group_concat(book_id) FROM event_books b WHERE b.event_id = events.event_id) AS bookIdList`;
+
+type EventSummaryRow = Omit<EventSummary, "bookIds"> & { bookIdList: string | null };
+
+function toSummary<T extends EventSummaryRow>({ bookIdList, ...row }: T): Omit<T, "bookIdList"> & { bookIds: number[] } {
+  return { ...row, bookIds: bookIdList ? bookIdList.split(",").map(Number) : [] };
+}
 
 // --- Accessors --------------------------------------------------------------------------------
 
@@ -216,8 +254,8 @@ export function getTimelineBuildId(): string | null {
 /** Events and eras overlapping `[from, to]` (inclusive), earliest first. */
 export function getTimelineWindow({ from, to, axis }: { from: number; to: number; axis?: Axis }): TimelineWindow {
   if (!db()) return { available: false, eras: [], events: [] };
-  const events = axis
-    ? all<EventSummary>(
+  const events = (axis
+    ? all<EventSummaryRow>(
         `SELECT ${EVENT_SUMMARY_COLUMNS} FROM events
          WHERE axis = ? AND earliest_year <= ? AND latest_year >= ?
          ORDER BY earliest_year, latest_year, event_id`,
@@ -225,13 +263,14 @@ export function getTimelineWindow({ from, to, axis }: { from: number; to: number
         to,
         from
       )
-    : all<EventSummary>(
+    : all<EventSummaryRow>(
         `SELECT ${EVENT_SUMMARY_COLUMNS} FROM events
          WHERE earliest_year <= ? AND latest_year >= ?
          ORDER BY earliest_year, latest_year, event_id`,
         to,
         from
-      );
+      )
+  ).map(toSummary);
   const eras = all<Omit<Era, "citations">>(
     `SELECT era_id AS id, name, start_year AS start, end_year AS "end", summary FROM eras
      WHERE start_year <= ? AND end_year >= ? ORDER BY start_year, era_id`,
@@ -241,12 +280,33 @@ export function getTimelineWindow({ from, to, axis }: { from: number; to: number
   return { available: true, eras, events };
 }
 
+/** Id and title only, for listing related events without loading each one in full. */
+export function getEventTitles(ids: readonly string[]): { id: string; title: string }[] {
+  if (ids.length === 0) return [];
+  return all<{ id: string; title: string }>(
+    `SELECT event_id AS id, title FROM events WHERE event_id IN (${ids.map(() => "?").join(",")})
+     ORDER BY earliest_year, event_id`,
+    ...ids
+  );
+}
+
+/** Summary rows for a list of issue ids, without their views and citations. */
+export function getIssueSummaries(ids: readonly string[]): IssueSummary[] {
+  if (ids.length === 0) return [];
+  return all<IssueSummary>(
+    `SELECT issue_id AS id, kind, title, status FROM issues WHERE issue_id IN (${ids.map(() => "?").join(",")})
+     ORDER BY issue_id`,
+    ...ids
+  );
+}
+
 export function getEvent(id: string): EventDetail | null {
-  const row = get<EventSummary & { summary: string }>(
+  const found = get<EventSummaryRow & { summary: string }>(
     `SELECT ${EVENT_SUMMARY_COLUMNS}, summary FROM events WHERE event_id = ?`,
     id
   );
-  if (!row) return null;
+  if (!found) return null;
+  const row = toSummary(found);
 
   const positions = all<Omit<Position, "citations" | "arguments">>(
     `SELECT position_id AS id, label, tradition, earliest_year AS earliest, latest_year AS latest,
@@ -256,23 +316,23 @@ export function getEvent(id: string): EventDetail | null {
   ).map((position) => ({
     ...position,
     citations: citationsFor("position", position.id),
-    arguments: all<{ argumentId: number; stance: Argument["stance"]; text: string }>(
-      `SELECT argument_id AS argumentId, stance, text FROM arguments WHERE position_id = ? ORDER BY ordinal`,
+    arguments: all<Omit<Argument, "citations" | "verses">>(
+      `SELECT argument_id AS id, stance, text FROM arguments WHERE position_id = ? ORDER BY ordinal`,
       position.id
-    ).map(({ argumentId, ...argument }) => ({
+    ).map((argument) => ({
       ...argument,
-      citations: citationsFor("argument", argumentId),
-      verses: versesFor("argument", argumentId),
+      citations: citationsFor("argument", argument.id),
+      verses: versesFor("argument", argument.id),
     })),
   }));
 
-  const attestations = all<{ attestationId: number } & Omit<EventAttestation, "citations">>(
-    `SELECT t.attestation_id AS attestationId, t.artifact_id AS artifactId, a.name AS artifactName,
+  const attestations = all<Omit<EventAttestation, "citations">>(
+    `SELECT t.attestation_id AS id, t.artifact_id AS artifactId, a.name AS artifactName,
             a.kind AS artifactKind, t.relation, t.note
      FROM attestations t JOIN artifacts a ON a.artifact_id = t.artifact_id
      WHERE t.event_id = ? ORDER BY a.made_earliest, a.artifact_id`,
     id
-  ).map(({ attestationId, ...attestation }) => ({ ...attestation, citations: citationsFor("attestation", attestationId) }));
+  ).map((attestation) => ({ ...attestation, citations: citationsFor("attestation", attestation.id) }));
 
   const issueIds = all<{ id: string }>(
     `SELECT issue_id AS id FROM issue_events WHERE event_id = ? ORDER BY issue_id`,
@@ -295,12 +355,12 @@ export function getArtifact(id: string): ArtifactDetail | null {
     id
   );
   if (!row) return null;
-  const attestations = all<{ attestationId: number; eventId: string; eventTitle: string; relation: Relation; note: string }>(
-    `SELECT t.attestation_id AS attestationId, t.event_id AS eventId, e.title AS eventTitle, t.relation, t.note
+  const attestations = all<{ id: string; eventId: string; eventTitle: string; relation: Relation; note: string }>(
+    `SELECT t.attestation_id AS id, t.event_id AS eventId, e.title AS eventTitle, t.relation, t.note
      FROM attestations t JOIN events e ON e.event_id = t.event_id
      WHERE t.artifact_id = ? ORDER BY e.earliest_year, e.event_id`,
     id
-  ).map(({ attestationId, ...attestation }) => ({ ...attestation, citations: citationsFor("attestation", attestationId) }));
+  ).map((attestation) => ({ ...attestation, citations: citationsFor("attestation", attestation.id) }));
   return {
     id: row.id,
     name: row.name,
@@ -324,10 +384,10 @@ export function getIssue(id: string): IssueDetail | null {
     id
   );
   if (!row) return null;
-  const views = all<{ viewId: number; label: string; text: string }>(
-    `SELECT view_id AS viewId, label, text FROM issue_views WHERE issue_id = ? ORDER BY ordinal`,
+  const views = all<{ id: string; label: string; text: string }>(
+    `SELECT view_id AS id, label, text FROM issue_views WHERE issue_id = ? ORDER BY ordinal`,
     id
-  ).map(({ viewId, ...view }) => ({ ...view, citations: citationsFor("issue_view", viewId) }));
+  ).map((view) => ({ ...view, citations: citationsFor("issue_view", view.id) }));
   const eventIds = all<{ id: string }>(
     `SELECT event_id AS id FROM issue_events WHERE issue_id = ? ORDER BY event_id`,
     id
@@ -347,13 +407,13 @@ export function getTimelineForRange(range: VerseRange): {
   issues: IssueSummary[];
   artifacts: ArtifactSummary[];
 } {
-  const events = all<EventSummary>(
+  const events = all<EventSummaryRow>(
     `SELECT ${EVENT_SUMMARY_COLUMNS} FROM events WHERE event_id IN (
        SELECT subject_id FROM verse_links
        WHERE subject_kind = 'event' AND start_verse_id <= ? AND end_verse_id >= ?
        UNION
        SELECT p.event_id FROM verse_links l
-       JOIN arguments a ON l.subject_kind = 'argument' AND CAST(a.argument_id AS TEXT) = l.subject_id
+       JOIN arguments a ON l.subject_kind = 'argument' AND a.argument_id = l.subject_id
        JOIN positions p ON p.position_id = a.position_id
        WHERE l.start_verse_id <= ? AND l.end_verse_id >= ?
      ) ORDER BY earliest_year, event_id`,
@@ -361,7 +421,7 @@ export function getTimelineForRange(range: VerseRange): {
     range.start,
     range.end,
     range.start
-  );
+  ).map(toSummary);
   const issues = all<IssueSummary>(
     `SELECT issue_id AS id, kind, title, status FROM issues WHERE issue_id IN (
        SELECT subject_id FROM verse_links

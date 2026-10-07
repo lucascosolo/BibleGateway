@@ -4,7 +4,9 @@ import { timelineNotModified } from "@/lib/db/cache";
 import { getArtifact } from "@/lib/db/timeline";
 import { formatRange } from "@/lib/timeline/years";
 
-import { json, labelVerses, problem } from "../../shared";
+import { labelVerses } from "@/lib/db/timeline-present";
+
+import { json, problem } from "../../shared";
 
 export const dynamic = "force-dynamic";
 
