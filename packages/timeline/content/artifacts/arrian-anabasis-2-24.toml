@@ -1,0 +1,14 @@
+id = "arrian-anabasis-2-24"
+name = "Arrian, Anabasis of Alexander 2.24–25 (the capture of Tyre)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+Arrian, writing in the second century CE from the lost accounts of Alexander's officers Ptolemy and Aristobulus, closes his account of the seven-month siege of Tyre with a date in the Athenian calendar: the city was taken "in the month Hecatombaion, when Anicetus was archon at Athens". Chinnock's note converts this to the end of July and beginning of August 332 BCE, citing Diodorus 17.46 for the length of the siege. Arrian then has Darius's peace offer refused and Alexander turn south to Gaza, whose governor Batis refused to submit, and from Gaza to Pelusium in Egypt in seven days. Arrian says nothing of Jerusalem; Chinnock's footnote sends the reader to Josephus, Antiquities 11.8, for the story of Alexander's visit."""
+citations = [
+  { source = "arrian-chinnock-1884", locator = "pp. 134–135 (Book II, chs. 24–25) and p. 140 (Book III, ch. 1)" },
+]
+verses = [
+  { ref = "Dan.8.5-Dan.8.7", link = "background", note = "The goat from the west that scholars read as Alexander" },
+  { ref = "Zech.9.3-Zech.9.4", link = "background", note = "Tyre's wealth and its fall into the sea, often read beside the siege" },
+]

@@ -1120,6 +1120,14 @@ publisher = "Oxford University Press"
 year = 2000
 
 [[source]]
+id = "arrian-chinnock-1884"
+kind = "book"
+author = "Arrian, translated by E. J. Chinnock"
+title = "The Anabasis of Alexander; or, The History of the Wars and Conquests of Alexander the Great (public domain; Cornell copy on archive.org, cu31924026460752; PDF at ~/.cache/jot/sources/arrian-chinnock-1884/; printed page = PDF page − 22)"
+publisher = "Hodder and Stoughton, London"
+year = 1884
+
+[[source]]
 id = "carson-moo-2005"
 kind = "book"
 author = "D. A. Carson and Douglas J. Moo"

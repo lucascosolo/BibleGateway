@@ -19,4 +19,11 @@ earliest = -332
 latest = -332
 summary = """
 The siege of Tyre lasted from January to July 332 BCE. Alexander then moved south to Gaza, which was besieged in October 332 BCE."""
-citations = [{ source = "wikipedia-siege-of-tyre-332", locator = "cites Arrian, Anabasis 2.24.4 and Diodorus 17.46.4 for casualties only; the months are not attributed there" }, { source = "wikipedia-alexander-the-great" }, { source = "wikipedia-daniel-8" }, { source = "wikipedia-daniel-11" }]
+citations = [{ source = "arrian-chinnock-1884", locator = "pp. 134–135: Tyre taken in Hecatombaion, archon Anicetus (= late July/early August 332), with Diodorus 17.46 for the seven months; p. 140 for the march from Gaza to Pelusium" }, { source = "wikipedia-siege-of-tyre-332", locator = "cites Arrian, Anabasis 2.24.4 and Diodorus 17.46.4 for casualties only; the months are not attributed there" }, { source = "wikipedia-alexander-the-great" }, { source = "wikipedia-daniel-8" }, { source = "wikipedia-daniel-11" }]
+
+[[attestations]]
+artifact = "arrian-anabasis-2-24"
+relation = "corroborates"
+note = """
+Arrian gives the one firm date in the campaign: Tyre fell "in the month Hecatombaion, when Anicetus was archon at Athens", that is in the summer of 332 BCE. He then has Alexander move south to Gaza and on to Egypt. Arrian is a second-century writer working from the lost memoirs of Ptolemy and Aristobulus, so the date is secondhand but is the earliest surviving one. He does not mention Jerusalem; the visit to the city is told only by Josephus."""
+citations = [{ source = "arrian-chinnock-1884", locator = "pp. 134–135, 140" }]
