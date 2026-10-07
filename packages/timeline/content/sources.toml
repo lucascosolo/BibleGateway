@@ -1104,6 +1104,14 @@ publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
 
 [[source]]
+id = "humphreys-waddington-1992"
+kind = "article"
+author = "Colin J. Humphreys and W. G. Waddington"
+title = "The Jewish Calendar, a Lunar Eclipse and the Date of Christ's Crucifixion (PDF supplied by the user, at ~/.cache/jot/sources/humphreys-waddington-1992/)"
+container = "Tyndale Bulletin 43/2, pp. 331–351"
+year = 1992
+
+[[source]]
 id = "chadwick-2015"
 kind = "article"
 author = "Jeffrey R. Chadwick"

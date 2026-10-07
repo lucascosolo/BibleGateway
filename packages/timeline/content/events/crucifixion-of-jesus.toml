@@ -22,13 +22,44 @@ label = "Friday 3 April 33 CE"
 tradition = "chronological"
 earliest = 33
 latest = 33
-held_by = "Colin Humphreys"
+held_by = "Colin J. Humphreys and W. G. Waddington"
 summary = """
-Humphreys (2011) argues for Wednesday 1 April 33 CE for the Last Supper and Friday 3 April 33 CE for the crucifixion. He reaches this by comparing two calendars. Wikipedia also reports that Newton and Fotheringham (1910) favored 3 April 33 CE."""
+Humphreys and Waddington reconstruct the first-century Jewish calendar by computing when the new crescent could first be seen from Jerusalem. Their Table 1 gives the date of 14 Nisan for every year of Pilate's term, 26 to 36 CE. Only three years put 14 Nisan on a Friday: 11 April 27, 7 April 30 and 3 April 33. They rule out 27 as too early for a ministry that began after Tiberius's fifteenth year, and 34 (possible only with a leap month) as too late for Paul's conversion. That leaves "the only two plausible years for the Crucifixion are AD 30 and AD 33". They prefer 33, and add a second argument: a partial lunar eclipse was visible at moonrise over Jerusalem on the evening of 3 April 33, which they read as the "moon turned to blood" that Peter quotes from Joel at Pentecost (Acts 2:20). Humphreys (2011) later argued for Wednesday 1 April 33 for the Last Supper on the same crucifixion date. Wikipedia also reports that Newton and Fotheringham (1910) favored 3 April 33."""
 citations = [
+  { source = "humphreys-waddington-1992", locator = "Table 1 on p. 335; Table 2 on p. 337; pp. 337–340 for the elimination; conclusion p. 350" },
   { source = "wikipedia-date-of-crucifixion" },
   { source = "wikipedia-chronology-of-jesus" },
 ]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  With 27 and 34 eliminated, the crucifixion must fall on 14 Nisan, so the Last Supper "cannot have been a Passover meal held at the official Passover meal time". John's three Passovers and a ministry beginning no earlier than autumn 28 then exclude 30 CE; John 2:20's forty-six years puts the first Passover of the ministry in 30 or 31; and the Gospels' weak Pilate fits the period after Sejanus's fall in October 31."""
+  citations = [{ source = "humphreys-waddington-1992", locator = "pp. 338–340" }]
+  verses = [
+    { ref = "John.18.28", link = "dates", note = "The day before Passover" },
+    { ref = "John.19.31", link = "dates" },
+    { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "The fifteenth year of Tiberius" },
+    { ref = "John.2.20", link = "dates", note = "Forty-six years to build the temple" },
+    { ref = "1Cor.5.7", link = "alludes", note = "Christ our Passover" },
+  ]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Their calculations show a lunar eclipse visible from Jerusalem at moonrise on 3 April 33, with most of the rising moon "turned to blood". Jews waiting for moonrise to begin the Passover meal would have seen it, and Peter's audience seven weeks later would have understood Joel's "moon to blood" as that eclipse. They also cite the apocryphal "Report of Pilate" and Cyril of Alexandria as textual echoes."""
+  citations = [{ source = "humphreys-waddington-1992", locator = "pp. 340–347, 350" }]
+  verses = [
+    { ref = "Acts.2.19-Acts.2.21", link = "alludes", note = "The sun to darkness and the moon to blood" },
+    { ref = "Matt.27.45", link = "background", note = "Darkness from the sixth to the ninth hour" },
+  ]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  The authors themselves grant that "the date 7 April AD 30 is also strongly supported" and that "without further evidence it does not seem possible to decide conclusively between these two dates". The eclipse argument depends on reading Acts 2:20 as a report of a recent event rather than a future prophecy, which, they note, commentators dispute."""
+  citations = [{ source = "humphreys-waddington-1992", locator = "pp. 340–341" }]
+  verses = [{ ref = "Acts.2.16-Acts.2.17", link = "alludes" }]
 
 [[positions]]
 id = "30"
@@ -48,8 +79,11 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  Either 7 April 30 CE or 3 April 33 CE meets the Friday-Passover rule."""
-  citations = [{ source = "wikipedia-date-of-crucifixion" }]
+  Either 7 April 30 CE or 3 April 33 CE meets the Friday-Passover rule. Humphreys and Waddington's own Table 1 gives Friday 7 April for 14 Nisan in 30 CE, and they concede that this date "is also strongly supported"."""
+  citations = [
+    { source = "humphreys-waddington-1992", locator = "Table 1 on p. 335; p. 340" },
+    { source = "wikipedia-date-of-crucifixion" },
+  ]
 
 [[positions]]
 id = "chadwick-thursday-30"
