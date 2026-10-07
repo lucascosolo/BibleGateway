@@ -4,7 +4,7 @@ title = "Are the disputed letters of Paul forgeries?"
 status = "draft"
 summary = """
 Some letters that name Paul as their author may have been written by others. Ehrman argues that 2 Thessalonians is a deliberate forgery. Only 2 Thessalonians has been entered so far."""
-events = ["2-thessalonians-composition"]
+events = ["2-thessalonians-composition", "colossians-composition"]
 citations = [{ source = "ehrman-2013", locator = "PDF pp. 211, 225" }]
 
 [[views]]

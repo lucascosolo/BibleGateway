@@ -1,0 +1,90 @@
+id = "jude-composition"
+title = "Composition of the letter of Jude"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Jude"]
+summary = """
+This asks who wrote the letter of Jude and when. The letter names Jude, brother of James, whom Ehrman takes to be the brother of Jesus. Ehrman holds that it is a forgery, written "relatively late in the first century, after the age of the apostles" by a highly educated Greek-speaking Christian. The year bounds of 70 and 100 are the editor's reading of that phrase; Ehrman gives no years."""
+verses = [
+  { ref = "Jude.1.1", link = "describes", note = "The letter names Jude, brother of James, as its author." },
+  { ref = "Jude.1.3", link = "background", note = "Ehrman: the faith as a body of belief delivered long ago." },
+  { ref = "Jude.1.17-Jude.1.18", link = "background", note = "Ehrman: the apostles are spoken of as figures of the past." },
+  { ref = "Jude.1.4", link = "background", note = "Ehrman: charge that opponents turn grace into licentiousness, read as aimed at a later Paulinism." },
+]
+
+[[positions]]
+id = "after-the-apostles-late-first-century"
+label = "After the age of the apostles, late in the first century"
+tradition = "critical"
+earliest = 70
+latest = 100
+held_by = "Bart D. Ehrman"
+summary = """
+Ehrman holds that Jude the brother of Jesus did not write the letter. Both year bounds are the editor's: 70 for "after the age of the apostles" and 100 for the end of "the first century"."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 393, 394" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on the date: "the book gives every indication of being produced relatively late in the first century, after the “age of the apostles.”""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 393" }]
+  verses = [{ ref = "Jude.1.17-Jude.1.18", link = "background", note = "The apostles are in the past." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on terminology: "The author speaks of “the faith” as the content of the body of knowledge that makes up the Christian religion""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 393" }]
+  verses = [{ ref = "Jude.1.3", link = "background", note = "The faith delivered once for all." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on language: "he writes very good Greek, not the sort of skill one can acquire simply by spending time on the mission field without years of serious literary training.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 393" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman concludes: "he was not the Aramaicspeaking peasant of Nazareth, the brother of Jesus and James.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 395" }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on the polemic: "the charge makes even better sense against later forms of Paulinism, such as that represented in the book of Ephesians""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 396" }]
+  verses = [{ ref = "Jude.1.4", link = "background", note = "Grace altered into licentiousness." }]
+
+[[positions]]
+id = "jude-brother-of-jesus"
+label = "Written by Jude, the brother of James and of Jesus"
+tradition = "traditional"
+earliest = 40
+latest = 70
+held_by = "Richard Bauckham (named by Ehrman as defending authenticity)"
+summary = """
+Ehrman notes that Bauckham makes a spirited defense of authenticity. Both year bounds are the editor's; Ehrman gives none for this view."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 393, 422" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on the claim: "The author of this short text, therefore, is almost certainly claiming to be a brother of both James and Jesus""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 391" }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim." }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Ehrman rejects the obscurity objection: "The objection has more rhetorical than substantive force, however.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 391" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Ehrman on Jude's family: "Nothing suggests that their progenitor, Jude, was any different.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 394" }]
