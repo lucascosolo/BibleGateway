@@ -1,0 +1,20 @@
+id = "james-and-jude-authorship"
+kind = "historical"
+title = "Did the brothers of Jesus write James and Jude?"
+status = "draft"
+summary = """
+The letters of James and Jude name brothers of Jesus as their authors. Ehrman argues neither did the writing. Only James has been entered so far."""
+events = ["james-composition"]
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 379, 383, 384" }]
+
+[[views]]
+label = "Forgeries in the names of Jesus's brothers"
+text = """
+Ehrman says James the brother of Jesus "could almost certainly not write", and that the letter "claims to be written by someone who did not write it". He calls it a counterforgery aimed at a later Pauline position."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 379, 383, 385" }]
+
+[[views]]
+label = "James wrote it (Luke Timothy Johnson)"
+text = """
+Ehrman reports that Luke Johnson has made a strong case that there is no hard evidence of real animosity between James and Paul, and that Johnson is a supporter of authenticity. Ehrman disagrees."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 379, 383, 384" }]

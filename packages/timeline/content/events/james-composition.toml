@@ -1,0 +1,124 @@
+id = "james-composition"
+title = "Composition of the letter of James"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["Jas"]
+summary = """
+This asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem. Ehrman argues this James did not write it, and that it was written after his death, which he puts "presumably sometime in the 60s". He places its concerns in the post-Pauline church "at the end of the first century". Both year bounds are the editor's reading of those phrases. He calls it a counterforgery aimed at a later form of Pauline teaching."""
+verses = [
+  { ref = "Jas.1.1", link = "describes", note = "The letter names James as its author." },
+  { ref = "Jas.2.14-Jas.2.26", link = "background", note = "Ehrman: the principal polemic against a Pauline position on faith and works." },
+  { ref = "Jas.5.1-Jas.5.6", link = "background", note = "Ehrman: wealthy members point to a later date." },
+  { ref = "Jas.5.8-Jas.5.9", link = "background", note = "Ehrman: patience in waiting suggests much time has passed." },
+  { ref = "Jas.5.14", link = "background", note = "Ehrman: elders in charge, closer to the Pastorals than to Paul." },
+]
+
+[[positions]]
+id = "after-james-end-of-first-century"
+label = "After James's death, by the end of the first century"
+tradition = "critical"
+earliest = 60
+latest = 100
+held_by = "Bart D. Ehrman"
+summary = """
+Ehrman holds that James the brother of Jesus neither wrote nor commissioned the letter. The lower bound of 60 is the editor's, from "presumably sometime in the 60s". The upper bound of 100 is the editor's, from "end of the first century"."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 382, 383, 390" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on the language: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 379" }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The named author." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman concludes: "it is virtually impossible to imagine this book coming from the pen of James""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 380" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on what is missing: "There is nothing about ritual. Or cult. Or kosher food laws. Or Sabbath or feast days. Or circumcision.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 381" }]
+  verses = [{ ref = "Jas.2.8-Jas.2.12", link = "background", note = "The Law here is love and the Decalogue." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on wealth: "Another indication of a late date is the concern over ostentatious wealth in the community.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+  verses = [{ ref = "Jas.5.1-Jas.5.6", link = "background", note = "Charge against the rich." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on delay: "This seems to indicate that a good deal of time has passed in the expectation of the parousia""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+  verses = [{ ref = "Jas.5.8-Jas.5.9", link = "background", note = "The Lord's coming is at hand." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on church order: "“elders” appear to be in charge of the community (5:14)""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+  verses = [{ ref = "Jas.5.14", link = "background", note = "Elders." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on the claim: "This book, in short, claims to be written by someone who did not write it.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The authorial claim." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on dependence on Paul: "The book of James, in other words, is a counterforgery.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 385" }]
+  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "Faith and works." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman on the setting: "the views the book counters are easily situated in the post-Pauline situation of the church at the end of the first century.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 390" }]
+
+[[positions]]
+id = "james-brother-of-jesus"
+label = "Written by James, the brother of Jesus, before about 69 CE"
+tradition = "traditional"
+earliest = 45
+latest = 69
+held_by = "Luke Timothy Johnson (named by Ehrman as a supporter of authenticity)"
+summary = """
+Ehrman names Luke Timothy Johnson as a supporter of authenticity. Both year bounds are the editor's: the upper follows Ehrman's "sometime in the 60s" for James's death, the lower is arbitrary."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 379, 384" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman reports Johnson: "Luke Johnson has made a strong case that there is no hard evidence of real animosity between the historical James and the historical Paul""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Ehrman rejects Johnson on Paul: "Johnson is wrong to argue that “there is absolutely no reason to read this section [i.e., 2:14–26] as particularly responsive to Paul.”""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 384" }]
+  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "The passage at issue." }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Ehrman on literacy: "The first, as already mentioned, is that James of Nazareth could almost certainly not write.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 379" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Eusebius on James, quoted by Ehrman: "Admittedly its authenticity is doubted""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 117" }]
