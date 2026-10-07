@@ -36,6 +36,10 @@ export const WORKSPACES: Workspace[] = [
   // "Word study" rather than the lexicon's "Original language": a nav label has to fit beside
   // three others at 768px, and it should say what you DO here, not what the text is made of.
   { key: "lashon", href: "/lashon", plainLabel: "Word study", lexiconId: "lashon", icon: "root" },
+  // Built 2026-10-06: the strip and the per-person/event/artifact/issue pages exist with real,
+  // cited (draft) data behind them, so Toledot leaves PLANNED_WORKSPACES and takes a primary
+  // slot. Before Notes so the research surfaces sit together and the notebook keeps the end.
+  { key: "toledot", href: "/toledot", plainLabel: "Timeline", lexiconId: "toledot", icon: "timeline" },
   { key: "notes", href: "/notes", plainLabel: "Notes", icon: "notes" },
 ];
 
@@ -50,15 +54,6 @@ export const HOME_WORKSPACE: Workspace = { key: "home", href: "/", plainLabel: "
 
 /** The workspaces named above but not yet built — surfaced on `/roadmap`, not in primary nav. */
 export const PLANNED_WORKSPACES: Workspace[] = [
-  {
-    key: "toledot",
-    href: "/toledot",
-    plainLabel: "Timeline",
-    lexiconId: "toledot",
-    icon: "timeline",
-    status: "planned",
-    phase: 2,
-  },
   {
     key: "geniza",
     href: "/geniza",

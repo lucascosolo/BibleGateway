@@ -40,7 +40,11 @@ export function TopTabs({ active }: { active: Workspace["key"] }) {
                   : "border-transparent text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]",
               )}
             >
-              <span className="relative flex shrink-0">
+              {/* Icons only from 1024px. Five labelled tabs with icons need ~470px; at 768px the
+                  wordmark and the controls leave the nav ~360px, and the row scrolled Notes out
+                  of reach entirely (measured 2026-10-06 when Toledot joined the list). Labels
+                  carry the meaning; the rail and the phone bar keep their icons. */}
+              <span className="relative hidden shrink-0 lg:flex">
                 <Icon className="h-4 w-4" />
                 {ws.status === "planned" && <PlannedMarker />}
               </span>
