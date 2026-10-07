@@ -111,9 +111,8 @@ parallel scratch copies validated by the builder and merged the same afternoon. 
 - **Verses linked on the text alone**, with no source tying them to the event: Daniel 8:5–8 and
   11:3 to Alexander. Pompey has no verse links because no corpus passage narrates it.
 - **Irenaeus on Revelation** is cited as quoted in Eusebius (HE 5.8.6, 3.18.3), not read directly.
-- Still unconfirmed: Ussher's and Seder Olam's dates beyond Abraham's 1922; Kitchen's own pages;
-  which Sargon inscription carries the Samaria claim; whether the Bubastite Portal names
-  Jerusalem; Shalmaneser III's regnal year for Jehu's tribute; the Delphi inscription's find-spot
+- Still unconfirmed: Seder Olam's dates from its own text; Kitchen's own pages;
+  whether the Bubastite Portal names Jerusalem (the debate is now recorded); the Delphi inscription's find-spot
   and editor; Peter's death year; Josephus on the Baptist and on Festus (not read).
 
 A plain-language pass on 2026-10-07 rewrote every summary, argument and note for a lay reader. A
