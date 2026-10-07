@@ -1,0 +1,9 @@
+id = "josephus-antiquities-15-380"
+name = "Josephus, Antiquities 15.380 (Herod begins to rebuild the temple)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+Josephus: "And now Herod, in the eighteenth year of his reign, and after the acts already mentioned, undertook a very great work, that is, to build of himself the temple of God" (Whiston's translation)."""
+citations = [{ source = "lexundria-josephus-ant-15-380" }]
+verses = [{ ref = "John.2.20", link = "background", note = "Forty-six years to build this temple" }]

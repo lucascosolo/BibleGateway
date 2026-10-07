@@ -1,0 +1,43 @@
+id = "abraham-migration"
+title = "Abraham's migration to Canaan"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "speculative"
+status = "draft"
+summary = """
+Abraham's journey from Haran to Canaan, with a first stop at Shechem, a detour to Egypt in famine, and return. Whether there was a historical patriarchal age at all is a separate question (see the linked issue); the positions here record the dates offered by those who accept the setting."""
+verses = [
+  { ref = "Gen.11.31-Gen.11.32", link = "describes", note = "Terah's family leaves Ur for Haran" },
+  { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "The call and the journey to Shechem, Bethel and the Negeb" },
+  { ref = "Gen.12.10-Gen.12.20", link = "describes", note = "Famine and the stay in Egypt" },
+  { ref = "Gen.13.1-Gen.13.4", link = "describes", note = "Return from Egypt to the Negeb and Bethel" },
+  { ref = "Josh.24.2-Josh.24.3", link = "alludes", note = "Joshua's review: God took Abraham from beyond the River and led him through Canaan" },
+  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "Prayer: God chose Abram and brought him out of Ur of the Chaldeans" },
+  { ref = "Acts.7.2-Acts.7.5", link = "alludes", note = "Stephen: the God of glory appeared to Abraham in Mesopotamia and he moved to Haran, then Canaan" },
+  { ref = "Heb.11.8-Heb.11.10", link = "alludes", note = "By faith Abraham obeyed and set out, not knowing where he was going" },
+  { ref = "Ps.105.9-Ps.105.15", link = "alludes", note = "The covenant with Abraham and God's protection of the wandering patriarchs" },
+]
+
+[[positions]]
+id = "ussher"
+label = "Ussher: 1922 BC"
+tradition = "traditional"
+earliest = -1922
+latest = -1922
+held_by = "James Ussher"
+summary = """
+Ussher fixed the span from creation to Abraham's migration as 2082 years, from 4004 to 1922 BC."""
+citations = [{ source = "wikipedia-ussher-chronology" }]
+
+[[positions]]
+id = "second-millennium"
+label = "A 2nd-millennium BCE patriarchal age"
+tradition = "archaeological"
+earliest = -2000
+latest = -1001
+held_by = "William F. Albright and G. Ernest Wright"
+summary = """
+Albright and Wright believed the patriarchs were real individuals or believable composites who \
+lived in the patriarchal age, the 2nd millennium BCE. The range is the whole millennium, not a \
+narrower claim."""
+citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]

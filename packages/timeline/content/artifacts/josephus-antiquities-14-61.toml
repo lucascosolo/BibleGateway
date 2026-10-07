@@ -1,0 +1,8 @@
+id = "josephus-antiquities-14-61"
+name = "Josephus, Antiquities 14.61 (Pompey's siege of the temple)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+A fragment of Josephus's account of Pompey's siege of the Temple Mount: the defenders' side had great towers and a ditch, a deep valley and precipices, and the bridge on which Pompey had gotten in was broken down (Whiston's translation). Only section 61 was read."""
+citations = [{ source = "lexundria-josephus-ant-14-61" }]

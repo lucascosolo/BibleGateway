@@ -1,0 +1,34 @@
+id = "judges-historicity"
+kind = "historical"
+title = "How historical is the Book of Judges?"
+status = "draft"
+summary = """
+Scholars divide on whether the stories of Deborah, Gideon, Samson and the other judges preserve \
+pre-monarchic memory. The book as it stands was edited long after the events, and no judge is \
+named in a contemporary inscription; the dating positions on the individual events record only \
+the brackets offered by those who accept the setting."""
+events = ["judges-period", "deborah-barak", "gideon", "samson"]
+verses = [{ ref = "Judg.2.16-Judg.2.19", link = "describes" }]
+citations = [{ source = "wikipedia-book-of-judges", locator = "sections on dating and historicity" }]
+
+[[views]]
+label = "Plausible, with the ring of truth"
+text = """
+William G. Dever finds the accounts historically plausible, with "the ring of truth for an \
+archaeologist"."""
+citations = [{ source = "wikipedia-book-of-judges", locator = "section on historicity" }]
+
+[[views]]
+label = "Cannot be assessed"
+text = """
+Israel Finkelstein: it is impossible to know to what extent the tales are based on authentic \
+memories. Lester Grabbe calls the book too problematic to use as a historical source while \
+allowing that an actual historical core cannot be ruled out."""
+citations = [{ source = "wikipedia-book-of-judges", locator = "section on historicity" }]
+
+[[views]]
+label = "Samson as a folk hero"
+text = """
+Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu and with \
+Heracles; conservative scholars regard him as a literal historical figure."""
+citations = [{ source = "wikipedia-samson" }]

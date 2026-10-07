@@ -1,0 +1,27 @@
+id = "judges-300-years"
+kind = "chronology"
+title = "The 300 years of Judges 11:26"
+status = "draft"
+summary = """
+Jephthah tells the king of Ammon that Israel had held the territory along the Arnon for three \
+hundred years. Wood takes this as support for a 15th-century conquest; Kitchen treats it as the \
+bluster of an ignorant man rather than a chronological datum."""
+events = ["conquest-of-canaan", "judges-period"]
+verses = [{ ref = "Judg.11.26", link = "dates" }]
+citations = [{ source = "wood-2005", locator = "pp. 477–478, 486–487" }]
+
+[[views]]
+label = "A chronological datum"
+text = """
+Wood: since estimates for the start of Jephthah's judgeship fall between 1130 and 1073 BCE, \
+three hundred years implies Reuben had occupied the area since c. 1400 BCE; Judges 11:26 \
+comports with the other chronological data and with external data supporting a 15th-century \
+exodus-conquest."""
+citations = [{ source = "wood-2005", locator = "pp. 477–478, 487" }]
+
+[[views]]
+label = "Hyperbole"
+text = """
+Kitchen, quoted by Wood, calls Jephthah's claim "propagandistic" and "a brave man's bold bluster" \
+and says it is fatuous to use it as a serious chronological datum."""
+citations = [{ source = "wood-2005", locator = "p. 486" }]

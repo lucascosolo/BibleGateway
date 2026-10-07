@@ -1,0 +1,28 @@
+id = "samson"
+title = "Samson"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "speculative"
+status = "draft"
+summary = """
+Samson of Dan, a Nazirite from birth, fights the Philistines single-handed, is betrayed by Delilah and dies pulling down the temple of Dagon at Gaza. His exploits are set in the Philistine oppression; the sources read give no scholarly date for him, and his historicity is debated (see the linked issue)."""
+verses = [
+  { ref = "Judg.13.1-Judg.13.25", link = "describes", note = "Birth announced; Nazirite vow" },
+  { ref = "Judg.14.1-Judg.15.20", link = "describes", note = "Timnah marriage, riddle, foxes, the jawbone" },
+  { ref = "Judg.16.1-Judg.16.31", link = "describes", note = "Gaza, Delilah, capture, death" },
+  { ref = "Heb.11.32", link = "alludes", note = "Samson named among the faithful" },
+  { ref = "1Sam.12.11", link = "alludes", note = "Samuel lists the deliverers the Lord sent" },
+]
+
+[[positions]]
+id = "iron-age-i"
+label = "Iron Age I horizon (12th-11th century BCE)"
+tradition = "archaeological"
+earliest = -1200
+latest = -1001
+summary = """
+A bracket from one object, not a date for Samson: a circular seal about 15 mm across, from \
+Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion, \
+which suggests hero stories of this kind circulated then; scholars explicitly say it does not \
+confirm Samson as a historical figure."""
+citations = [{ source = "wikipedia-samson" }]

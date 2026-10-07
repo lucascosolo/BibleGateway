@@ -1,0 +1,26 @@
+id = "sinai-covenant-format"
+kind = "chronology"
+title = "Does the form of the Sinai covenant date it?"
+status = "draft"
+summary = """
+Kitchen argues that the Sinai covenant texts best match Hittite treaties of c. 1400–1200 BCE; \
+Wood replies that the biblical covenant texts follow no fixed format and that Kitchen rearranged \
+them to fit."""
+events = ["sinai-covenant"]
+verses = [{ ref = "Exod.19.3-Exod.19.8", link = "describes" }]
+citations = [{ source = "wood-2005", locator = "pp. 479–483" }]
+
+[[views]]
+label = "A late-second-millennium treaty form"
+text = """
+Kitchen concludes that Exodus, Leviticus, Deuteronomy and the renewal in Joshua 24 most closely \
+match Hittite treaties of c. 1400–1200 BCE, in which oaths appear and blessings follow curses."""
+citations = [{ source = "wood-2005", locator = "pp. 479, 482" }]
+
+[[views]]
+label = "No fixed format"
+text = """
+Wood: the biblical covenant texts are highly fluid; Kitchen selected portions and rearranged them \
+to match the Hittite format, and in the Hittite treaties blessings follow curses whereas in the \
+biblical texts the opposite is the case."""
+citations = [{ source = "wood-2005", locator = "pp. 479–481" }]

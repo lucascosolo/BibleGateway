@@ -442,3 +442,283 @@ kind = "edition"
 author = "Tacitus"
 title = "Annales, book 15, chapter 44 (Latin text, Perseus Digital Library)"
 url = "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0077%3Abook%3D15%3Achapter%3D44"
+
+[[source]]
+id = "wikipedia-abraham"
+kind = "web"
+author = "Wikipedia"
+title = "Abraham"
+url = "https://en.wikipedia.org/wiki/Abraham"
+
+[[source]]
+id = "wikipedia-ussher-chronology"
+kind = "web"
+author = "Wikipedia"
+title = "Ussher chronology"
+url = "https://en.wikipedia.org/wiki/Ussher_chronology"
+
+[[source]]
+id = "wikipedia-chronology-of-the-bible"
+kind = "web"
+author = "Wikipedia"
+title = "Chronology of the Bible"
+url = "https://en.wikipedia.org/wiki/Chronology_of_the_Bible"
+
+[[source]]
+id = "wikipedia-historicity-of-the-bible"
+kind = "web"
+author = "Wikipedia"
+title = "Historicity of the Bible"
+url = "https://en.wikipedia.org/wiki/Historicity_of_the_Bible"
+
+[[source]]
+id = "wikipedia-battle-of-jericho"
+kind = "web"
+author = "Wikipedia"
+title = "Battle of Jericho"
+url = "https://en.wikipedia.org/wiki/Battle_of_Jericho"
+
+[[source]]
+id = "wikipedia-book-of-judges"
+kind = "web"
+author = "Wikipedia"
+title = "Book of Judges"
+url = "https://en.wikipedia.org/wiki/Book_of_Judges"
+
+[[source]]
+id = "wikipedia-joshua"
+kind = "web"
+author = "Wikipedia"
+title = "Joshua"
+url = "https://en.wikipedia.org/wiki/Joshua"
+
+[[source]]
+id = "wikipedia-book-of-ruth"
+kind = "web"
+author = "Wikipedia"
+title = "Book of Ruth"
+url = "https://en.wikipedia.org/wiki/Book_of_Ruth"
+
+[[source]]
+id = "wikipedia-joseph-genesis"
+kind = "web"
+author = "Wikipedia"
+title = "Joseph (Genesis)"
+url = "https://en.wikipedia.org/wiki/Joseph_(Genesis)"
+
+[[source]]
+id = "wikipedia-deborah"
+kind = "web"
+author = "Wikipedia"
+title = "Deborah"
+url = "https://en.wikipedia.org/wiki/Deborah"
+
+[[source]]
+id = "wikipedia-gideon"
+kind = "web"
+author = "Wikipedia"
+title = "Gideon"
+url = "https://en.wikipedia.org/wiki/Gideon"
+
+[[source]]
+id = "wikipedia-samson"
+kind = "web"
+author = "Wikipedia"
+title = "Samson"
+url = "https://en.wikipedia.org/wiki/Samson"
+
+[[source]]
+id = "wikipedia-boaz"
+kind = "web"
+author = "Wikipedia"
+title = "Boaz"
+url = "https://en.wikipedia.org/wiki/Boaz"
+
+[[source]]
+id = "livius-abc7"
+kind = "edition"
+author = "Livius.org"
+title = "ABC 7 (Nabonidus Chronicle)"
+url = "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-7-nabonidus-chronicle/"
+
+[[source]]
+id = "livius-cyrus-cylinder"
+kind = "web"
+author = "Livius.org"
+title = "Cyrus Cylinder"
+url = "https://www.livius.org/sources/content/cyrus-cylinder/"
+
+[[source]]
+id = "wikipedia-cyrus-cylinder"
+kind = "web"
+author = "Wikipedia"
+title = "Cyrus Cylinder"
+url = "https://en.wikipedia.org/wiki/Cyrus_Cylinder"
+
+[[source]]
+id = "wikipedia-ezekiel"
+kind = "web"
+author = "Wikipedia"
+title = "Ezekiel"
+url = "https://en.wikipedia.org/wiki/Ezekiel"
+
+[[source]]
+id = "wikipedia-book-of-ezekiel"
+kind = "web"
+author = "Wikipedia"
+title = "Book of Ezekiel"
+url = "https://en.wikipedia.org/wiki/Book_of_Ezekiel"
+
+[[source]]
+id = "wikipedia-second-temple"
+kind = "web"
+author = "Wikipedia"
+title = "Second Temple"
+url = "https://en.wikipedia.org/wiki/Second_Temple"
+
+[[source]]
+id = "wikipedia-book-of-haggai"
+kind = "web"
+author = "Wikipedia"
+title = "Book of Haggai"
+url = "https://en.wikipedia.org/wiki/Book_of_Haggai"
+
+[[source]]
+id = "wikipedia-book-of-zechariah"
+kind = "web"
+author = "Wikipedia"
+title = "Book of Zechariah"
+url = "https://en.wikipedia.org/wiki/Book_of_Zechariah"
+
+[[source]]
+id = "wikipedia-ezra"
+kind = "web"
+author = "Wikipedia"
+title = "Ezra"
+url = "https://en.wikipedia.org/wiki/Ezra"
+
+[[source]]
+id = "wikipedia-ezra-nehemiah"
+kind = "web"
+author = "Wikipedia"
+title = "Ezra–Nehemiah"
+url = "https://en.wikipedia.org/wiki/Ezra%E2%80%93Nehemiah"
+
+[[source]]
+id = "wikipedia-nehemiah"
+kind = "web"
+author = "Wikipedia"
+title = "Nehemiah"
+url = "https://en.wikipedia.org/wiki/Nehemiah"
+
+[[source]]
+id = "wikipedia-elephantine-papyri"
+kind = "web"
+author = "Wikipedia"
+title = "Elephantine papyri"
+url = "https://en.wikipedia.org/wiki/Elephantine_papyri"
+
+[[source]]
+id = "wikipedia-sanballat"
+kind = "web"
+author = "Wikipedia"
+title = "Sanballat the Horonite"
+url = "https://en.wikipedia.org/wiki/Sanballat_the_Horonite"
+
+[[source]]
+id = "wikipedia-artaxerxes-i"
+kind = "web"
+author = "Wikipedia"
+title = "Artaxerxes I of Persia"
+url = "https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia"
+
+[[source]]
+id = "wikipedia-edict-of-cyrus"
+kind = "web"
+author = "Wikipedia"
+title = "Edict of Cyrus"
+url = "https://en.wikipedia.org/wiki/Edict_of_Cyrus"
+
+[[source]]
+id = "wikipedia-fall-of-babylon"
+kind = "web"
+author = "Wikipedia"
+title = "Fall of Babylon"
+url = "https://en.wikipedia.org/wiki/Fall_of_Babylon"
+
+[[source]]
+id = "preceptaustin-ezra-7"
+kind = "web"
+author = "Precept Austin"
+title = "Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)"
+url = "https://www.preceptaustin.org/ezra-7-commentary"
+
+[[source]]
+id = "wikipedia-antiochus-iv"
+kind = "web"
+author = "Wikipedia"
+title = "Antiochus IV Epiphanes"
+url = "https://en.wikipedia.org/wiki/Antiochus_IV_Epiphanes"
+
+[[source]]
+id = "wikipedia-maccabean-revolt"
+kind = "web"
+author = "Wikipedia"
+title = "Maccabean Revolt"
+url = "https://en.wikipedia.org/wiki/Maccabean_Revolt"
+
+[[source]]
+id = "wikipedia-abomination-of-desolation"
+kind = "web"
+author = "Wikipedia"
+title = "Abomination of desolation"
+url = "https://en.wikipedia.org/wiki/Abomination_of_desolation"
+
+[[source]]
+id = "wikipedia-siege-jerusalem-63bc"
+kind = "web"
+author = "Wikipedia"
+title = "Siege of Jerusalem (63 BC)"
+url = "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(63_BC)"
+
+[[source]]
+id = "wikipedia-herod-the-great"
+kind = "web"
+author = "Wikipedia"
+title = "Herod the Great"
+url = "https://en.wikipedia.org/wiki/Herod_the_Great"
+
+[[source]]
+id = "wikipedia-herods-temple"
+kind = "web"
+author = "Wikipedia"
+title = "Herod's Temple"
+url = "https://en.wikipedia.org/wiki/Herod%27s_Temple"
+
+[[source]]
+id = "wikipedia-siege-of-tyre-332"
+kind = "web"
+author = "Wikipedia"
+title = "Siege of Tyre (332 BC)"
+url = "https://en.wikipedia.org/wiki/Siege_of_Tyre_(332_BC)"
+
+[[source]]
+id = "wikipedia-alexander-the-great"
+kind = "web"
+author = "Wikipedia"
+title = "Alexander the Great"
+url = "https://en.wikipedia.org/wiki/Alexander_the_Great"
+
+[[source]]
+id = "lexundria-josephus-ant-15-380"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews 15.380 (Lexundria)"
+url = "https://lexundria.com/j_aj/15.380/wst"
+
+[[source]]
+id = "lexundria-josephus-ant-14-61"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews 14.61 (Lexundria)"
+url = "https://lexundria.com/j_aj/14.61/wst"

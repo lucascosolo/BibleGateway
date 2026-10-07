@@ -1,0 +1,46 @@
+id = "second-temple-built"
+title = "The Second Temple: foundation and completion"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+The foundation is laid under Zerubbabel and Jeshua in the second year after the return (Ezra 3); work stops, then resumes under the prophets Haggai and Zechariah (dated to the second year of Darius), and the house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), spring 516 BCE. Some scholars date the building later."""
+verses = [
+  { ref = "Ezra.3.8", link = "describes", note = "Second year of their coming; Zerubbabel and Jeshua begin" },
+  { ref = "Ezra.3.10", link = "describes", note = "The builders lay the foundation of Yahweh's temple" },
+  { ref = "Ezra.4.24", link = "describes", note = "The work ceases until the second year of Darius" },
+  { ref = "Ezra.5.1", link = "describes", note = "Haggai and Zechariah prophesy to the Jews" },
+  { ref = "Ezra.6.14", link = "describes", note = "The elders build and finish it" },
+  { ref = "Ezra.6.15", link = "describes", note = "Finished 3 Adar, sixth year of Darius" },
+  { ref = "Hag.1.1", link = "alludes", note = "Second year of Darius, sixth month, first day; word to Zerubbabel and Joshua" },
+  { ref = "Hag.2.18", link = "alludes", note = "The day the foundation of Yahweh's temple was laid" },
+  { ref = "Zech.1.1", link = "alludes", note = "Eighth month, second year of Darius" },
+]
+
+[[positions]]
+id = "516"
+label = "Completed spring 516 BCE (sixth year of Darius)"
+tradition = "traditional"
+earliest = -516
+latest = -516
+summary = """
+The Temple was completed on the third of Adar in Darius's sixth year, 25 February 516 BCE (Wikipedia's Haggai article), "ready for consecration in the spring of 516 BCE". Haggai's oracles are of 520 BCE; the foundation of Ezra 3 is given as 535 BCE in the Second Temple article."""
+citations = [
+  { source = "wikipedia-second-temple" },
+  { source = "wikipedia-book-of-haggai" },
+  { source = "wikipedia-book-of-zechariah" },
+]
+
+[[positions]]
+id = "later-building"
+label = "Built between 450 and 400 BCE"
+tradition = "critical"
+earliest = -450
+latest = -400
+summary = """
+Wikipedia notes that the Second Temple was constructed "either around 516 BCE or between 450 and 400 BCE"; the page read names no scholar for the later date, and Haggai is placed by some at 417 BCE under a Darius II reading."""
+citations = [
+  { source = "wikipedia-second-temple" },
+  { source = "wikipedia-book-of-haggai" },
+]

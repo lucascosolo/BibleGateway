@@ -1,0 +1,13 @@
+id = "elephantine-temple-petition-407"
+name = "Elephantine petition to rebuild the Yahu temple (407 BCE)"
+kind = "papyrus"
+status = "draft"
+made = { earliest = -407, latest = -407 }
+language = "Aramaic"
+summary = """
+A letter of 407 BCE (year 17 of Darius II) from Yedoniah and the priests of Elephantine to Bagoas, governor of Judea, asking leave to rebuild their temple destroyed in 410 BCE. It also appeals to Sanballat's sons Delaiah and Shelemiah and to Johanan the high priest. Sanballat and Johanan are both figures of the book of Nehemiah."""
+citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-sanballat" }]
+verses = [
+  { ref = "Neh.2.10", link = "background", note = "Sanballat the Horonite" },
+  { ref = "Neh.13.28", link = "background", note = "Sanballat's son-in-law, of the high-priestly house" },
+]

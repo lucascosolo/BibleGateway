@@ -1,0 +1,42 @@
+id = "babylon-falls-539"
+title = "Babylon falls to Cyrus"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+Cyrus's army takes Babylon in October 539 BCE, ending the Neo-Babylonian empire. The Nabonidus Chronicle records the battle at Opis, the taking of Sippar and the entry into Babylon without a battle; Daniel 5 sets the death of Belshazzar on the same night."""
+verses = [
+  { ref = "Dan.5.30", link = "describes", note = "Belshazzar slain that night" },
+  { ref = "Dan.5.31", link = "describes", note = "Darius the Mede receives the kingdom" },
+  { ref = "Isa.13.17", link = "alludes", note = "Yahweh stirs up the Medes against Babylon" },
+  { ref = "Jer.51.11", link = "alludes", note = "Yahweh has stirred up the kings of the Medes against Babylon" },
+  { ref = "Isa.45.1", link = "alludes", note = "Cyrus, to whom doors are opened and gates not shut" },
+]
+
+[[positions]]
+id = "october-539"
+label = "October 539 BCE (16 Tashritu)"
+tradition = "chronological"
+earliest = -539
+latest = -539
+summary = """
+Babylon was captured on the 16th of Tashritu, 12 October 539 BCE on the Julian calendar, in Nabonidus's seventeenth year."""
+citations = [
+  { source = "livius-abc7" },
+  { source = "wikipedia-fall-of-babylon" },
+]
+
+[[attestations]]
+artifact = "nabonidus-chronicle-abc7"
+relation = "partially-corroborates"
+note = """
+Records Cyrus's entry into Babylon without battle in Nabonidus's seventeenth year, matching the fall of Babylon in Daniel 5; it does not mention Belshazzar's death on the page read."""
+citations = [{ source = "livius-abc7" }]
+
+[[attestations]]
+artifact = "cyrus-cylinder"
+relation = "consistent"
+note = """
+Describes the conquest as occurring "without battle", which modern scholars treat as propaganda (Wikipedia's summary); Herodotus and Xenophon give differing accounts of how the city was taken."""
+citations = [{ source = "wikipedia-fall-of-babylon" }, { source = "wikipedia-cyrus-cylinder" }]

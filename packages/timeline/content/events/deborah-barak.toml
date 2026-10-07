@@ -1,0 +1,39 @@
+id = "deborah-barak"
+title = "Deborah and Barak"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera, who served Jabin king of Hazor, at the Kishon; Jael kills Sisera, and Judges 5 celebrates the victory in verse. The date is contested between the late 13th century and the 11th."""
+verses = [
+  { ref = "Judg.4.1-Judg.4.24", link = "describes", note = "Deborah, Barak, Sisera, Jael: the prose account" },
+  { ref = "Judg.5.1-Judg.5.31", link = "describes", note = "The Song of Deborah, the poetic account" },
+  { ref = "1Sam.12.9-1Sam.12.11", link = "alludes", note = "Samuel: the Lord sent Jerubbaal, Barak and Jephthah; Sisera is named as the earlier oppressor" },
+  { ref = "Ps.83.9-Ps.83.10", link = "alludes", note = "Do to them as to Sisera and Jabin at the river Kishon" },
+  { ref = "Heb.11.32", link = "alludes", note = "Barak named among those the writer has no time to tell of" },
+]
+
+[[positions]]
+id = "wood-1230"
+label = "c. 1230 BCE (a late stroke in a 15th-century conquest)"
+tradition = "traditional"
+earliest = -1230
+latest = -1230
+held_by = "Bryant G. Wood"
+summary = """
+Wood has Joshua destroying an earlier Hazor c. 1400 BC and Deborah and Barak administering the \
+coup de grace c. 1230 BC, the date of the Late Bronze Age city's destruction at Hazor."""
+citations = [{ source = "wood-2005", locator = "pp. 476–477, 488" }]
+
+[[positions]]
+id = "seder-olam"
+label = "Seder Olam: 1107-1067 BC"
+tradition = "traditional"
+earliest = -1107
+latest = -1067
+held_by = "Seder Olam Rabbah"
+summary = """
+Seder Olam Rabbah places Deborah's 40 years of judging Israel from 1107 BC until her death in \
+1067 BC (as reported by Wikipedia)."""
+citations = [{ source = "wikipedia-deborah" }]

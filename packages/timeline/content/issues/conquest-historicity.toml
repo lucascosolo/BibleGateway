@@ -1,0 +1,41 @@
+id = "conquest-historicity"
+kind = "historical"
+title = "Did Israel conquer Canaan as Joshua describes?"
+status = "draft"
+summary = """
+Whether a military conquest of Canaan, and the fall of Jericho in particular, happened as \
+narrated is separate from when it would have happened. Evangelical defenders of a conquest \
+argue about its date; most archaeologists no longer defend the conquest model at all."""
+events = ["conquest-of-canaan", "judges-period"]
+verses = [{ ref = "Josh.6.20", link = "describes" }]
+citations = [
+  { source = "wikipedia-battle-of-jericho" },
+  { source = "wikipedia-historicity-of-the-bible" },
+]
+
+[[views]]
+label = "No conquest model"
+text = """
+William G. Dever: "No mainstream biblicist or archaeologist any longer espouses the conquest \
+model." Kathleen Kenyon showed that Jericho's destruction belonged to the end of the Middle \
+Bronze Age, not the Late Bronze Age, and radiocarbon testing in 1995 dated the destruction \
+level to the late 17th or 16th centuries BCE."""
+citations = [
+  { source = "wikipedia-battle-of-jericho", locator = "section on academic consensus and radiocarbon testing" },
+  { source = "wikipedia-joshua" },
+]
+
+[[views]]
+label = "A conquest at the end of the Late Bronze Age"
+text = """
+Albright, working from Tell Beit Mirsim, Beitin and Lachish, argued for a conquest in the late \
+13th century BCE; Wood reports that after Albright's death in 1971 the evidence for this \
+dissipated and most Palestinian archaeologists abandoned it, though Kitchen defends it."""
+citations = [{ source = "wood-2005", locator = "pp. 475–476" }]
+
+[[views]]
+label = "A conquest c. 1400 BCE"
+text = """
+Wood argues that the biblical data place the exodus-conquest in the 15th century BCE, that \
+Jericho was destroyed c. 1400 BCE, and that the 13th-century theory should be abandoned."""
+citations = [{ source = "wood-2005", locator = "pp. 488–489" }]

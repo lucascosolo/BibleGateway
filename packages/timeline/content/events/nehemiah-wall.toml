@@ -1,0 +1,31 @@
+id = "nehemiah-wall"
+title = "Nehemiah rebuilds the wall of Jerusalem"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+In the twentieth year of Artaxerxes (445 or 444 BCE) Nehemiah, the king's cupbearer, is sent to Jerusalem and the wall is finished in fifty-two days despite Sanballat the Horonite. The Elephantine papyri of 407 BCE name Sanballat's sons and the high priest Johanan, tying the Nehemiah story to a documented milieu."""
+verses = [
+  { ref = "Neh.2.1", link = "describes", note = "Nisan, twentieth year of Artaxerxes" },
+  { ref = "Neh.2.10", link = "describes", note = "Sanballat the Horonite and Tobiah are grieved" },
+  { ref = "Neh.6.15", link = "describes", note = "The wall finished in fifty-two days" },
+  { ref = "Neh.13.28", link = "alludes", note = "A son of Joiada son-in-law to Sanballat" },
+]
+
+[[positions]]
+id = "445-444"
+label = "445 or 444 BCE (Artaxerxes I, twentieth year)"
+tradition = "chronological"
+earliest = -445
+latest = -444
+summary = """
+Artaxerxes I ruled from August 465 to December 424 BCE; his twentieth year is 445 or 444 BCE, and the wall was rebuilt within 52 days."""
+citations = [{ source = "wikipedia-nehemiah" }, { source = "wikipedia-artaxerxes-i" }]
+
+[[attestations]]
+artifact = "elephantine-temple-petition-407"
+relation = "partially-corroborates"
+note = """
+Names Sanballat's sons Delaiah and Shelemiah and Johanan the high priest in 407 BCE; Sanballat and Johanan both appear in Nehemiah, but this does not date the wall."""
+citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-sanballat" }]

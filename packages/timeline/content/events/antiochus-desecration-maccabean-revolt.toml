@@ -1,0 +1,27 @@
+id = "antiochus-desecration-maccabean-revolt"
+title = "Antiochus IV desecrates the temple; the Maccabean revolt"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+Antiochus IV outlaws Jewish practice and the Jerusalem temple is turned to Zeus worship (167 BCE); the Maccabees resist and cleanse the temple on 25 Kislev 164 BCE, the origin of Hanukkah. First Maccabees is not in this corpus. Scholars take the King of the North in Daniel as Antiochus IV."""
+verses = [
+  { ref = "Dan.8.9-Dan.8.14", link = "describes", note = "The little horn: the sanctuary and the continual burnt offering" },
+  { ref = "Dan.11.31", link = "describes", note = "The sanctuary profaned, the continual offering taken away, the abomination set up" },
+  { ref = "John.10.22", link = "alludes", note = "The Feast of the Dedication at Jerusalem (Hanukkah)" },
+]
+
+[[positions]]
+id = "167-164"
+label = "167-164 BCE"
+tradition = "chronological"
+earliest = -167
+latest = -164
+summary = """
+The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with the temple rededicated on 25 Kislev 164 BCE; the abomination is dated to 167 BCE, when Antiochus ended the twice-daily sacrifice."""
+citations = [
+  { source = "wikipedia-maccabean-revolt" },
+  { source = "wikipedia-abomination-of-desolation" },
+  { source = "wikipedia-antiochus-iv" },
+]

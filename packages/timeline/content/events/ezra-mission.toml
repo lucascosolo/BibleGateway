@@ -1,0 +1,39 @@
+id = "ezra-mission"
+title = "Ezra's mission to Jerusalem"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king". Which Artaxerxes is disputed: Artaxerxes I gives 458 BCE (the most widely accepted), Artaxerxes II gives 398 BCE, and a third group reads "seventh" as a scribal error."""
+verses = [
+  { ref = "Ezra.7.7", link = "describes", note = "Exiles go up in the seventh year of Artaxerxes" },
+  { ref = "Ezra.7.8", link = "describes", note = "Ezra comes in the fifth month of the seventh year" },
+]
+
+[[positions]]
+id = "458"
+label = "458 BCE (Artaxerxes I, seventh year)"
+tradition = "traditional"
+earliest = -458
+latest = -457
+held_by = "Edwin M. Yamauchi"
+summary = """
+Yamauchi, in the Expositor's Bible Commentary (abridged), takes Artaxerxes I as the traditional view and "which we believe is correct": Ezra arrived in 458 (457)."""
+citations = [{ source = "preceptaustin-ezra-7", locator = "quotation from Yamauchi, Expositor's Bible Commentary (Abridged)" }]
+
+[[positions]]
+id = "398"
+label = "398 BCE (Artaxerxes II, seventh year)"
+tradition = "critical"
+earliest = -398
+latest = -398
+summary = """
+Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). It was proposed in 1890; the pages read name no proponent."""
+citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Nehemiah and Ezra seem to have no knowledge of each other and their missions do not overlap; reversing the order puts Ezra about fifty years after Nehemiah."""
+  citations = [{ source = "wikipedia-artaxerxes-i" }, { source = "wikipedia-ezra" }]

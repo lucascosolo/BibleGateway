@@ -1,0 +1,46 @@
+id = "sinai-covenant"
+title = "The Sinai covenant and the giving of the law"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+At Sinai, three months after leaving Egypt, Israel is bound to God by covenant: the Decalogue, the Book of the Covenant, the tabernacle instructions and the sealing of the covenant. Its date follows the date of the exodus; whether the covenant's form can itself be dated is disputed (see the linked issue)."""
+verses = [
+  { ref = "Exod.19.1-Exod.19.25", link = "describes", note = "Arrival at Sinai in the third month; the theophany" },
+  { ref = "Exod.20.1-Exod.20.21", link = "describes", note = "The Decalogue" },
+  { ref = "Exod.21.1-Exod.23.33", link = "describes", note = "The Book of the Covenant" },
+  { ref = "Exod.24.1-Exod.24.18", link = "describes", note = "The covenant ratified; Moses on the mountain" },
+  { ref = "Exod.31.18", link = "describes", note = "Two tablets of stone" },
+  { ref = "Exod.32.1-Exod.34.35", link = "describes", note = "The golden calf; the tablets renewed" },
+  { ref = "Deut.5.1-Deut.5.22", link = "alludes", note = "Moses recalls the covenant at Horeb and the Decalogue" },
+  { ref = "Neh.9.13-Neh.9.14", link = "alludes", note = "You came down on Mount Sinai and gave them right rules and the Sabbath" },
+  { ref = "Ps.68.7-Ps.68.8", link = "alludes", note = "The earth quaked at God's presence, Sinai itself before God" },
+  { ref = "Acts.7.37-Acts.7.44", link = "alludes", note = "Stephen: Moses received living oracles at Sinai" },
+  { ref = "Gal.3.17-Gal.3.19", link = "alludes", note = "The law came 430 years after the promise to Abraham" },
+  { ref = "Heb.12.18-Heb.12.21", link = "alludes", note = "You have not come to a mountain that can be touched" },
+]
+
+[[positions]]
+id = "early"
+label = "With a 15th-century exodus (c. 1446 BCE)"
+tradition = "traditional"
+earliest = -1450
+latest = -1440
+held_by = "Bryant G. Wood"
+summary = """
+Wood dates the exodus to c. 1446 BC; Exodus 19:1 puts Sinai in the third month after leaving \
+Egypt, so the covenant falls in the same year."""
+citations = [{ source = "wood-2005", locator = "p. 477" }]
+
+[[positions]]
+id = "late"
+label = "With a 13th-century exodus (c. 1260 BCE)"
+tradition = "chronological"
+earliest = -1260
+latest = -1260
+held_by = "K. A. Kitchen"
+summary = """
+Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II; Sinai follows within \
+months. Kitchen also argues that the covenant texts match Hittite treaty forms of c. 1400-1200 BC."""
+citations = [{ source = "wood-2005", locator = "pp. 478–479" }]

@@ -1,0 +1,67 @@
+id = "herod-reign-temple"
+title = "Herod the Great: reign and the rebuilding of the temple"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+Herod reigns from 37 BCE to his death in 4 BCE on the older reckoning (36-1 BCE on Steinmann's). In his eighteenth year (20-19 BCE) he undertakes to rebuild the temple, work still running when John 2:20 says it had taken forty-six years."""
+verses = [
+  { ref = "Matt.2.1", link = "alludes", note = "Jesus born in the days of King Herod" },
+  { ref = "Luke.1.5", link = "alludes", note = "In the days of Herod, king of Judea" },
+  { ref = "John.2.20", link = "alludes", note = "Forty-six years to build this temple" },
+]
+
+[[positions]]
+id = "schurer-37-4"
+label = "37-4 BCE (Schurer)"
+tradition = "chronological"
+earliest = -37
+latest = -4
+held_by = "Emil Schürer"
+summary = """
+Most 20th-century scholarship followed Schürer's 1896 chronology, which put Herod's death in 4 BCE."""
+citations = [{ source = "wikipedia-herod-the-great", locator = "section on the dates of his reign" }]
+
+[[positions]]
+id = "steinmann-36-1"
+label = "36-1 BCE (Steinmann)"
+tradition = "chronological"
+earliest = -36
+latest = -1
+held_by = "Steinmann"
+summary = """
+Wikipedia sets Steinmann's chronology of the reign at 36-1 BCE (first name not shown on the page read)."""
+citations = [{ source = "wikipedia-herod-the-great", locator = "section on the dates of his reign" }]
+
+[[positions]]
+id = "temple-20-19"
+label = "Temple begun c. 20/19 BCE (Josephus, eighteenth year)"
+tradition = "chronological"
+earliest = -20
+latest = -19
+summary = """
+Josephus dates the start of the rebuilding to Herod's eighteenth year, 20-19 BCE; construction of the Temple itself took about a year and a half and the porticoes and outer walls a further eight years."""
+citations = [
+  { source = "lexundria-josephus-ant-15-380" },
+  { source = "wikipedia-herods-temple" },
+  { source = "wikipedia-herod-the-great" },
+]
+
+[[positions]]
+id = "mahieu-25-19"
+label = "Enclosures from 25 BCE, temple building 19 BCE (Mahieu)"
+tradition = "archaeological"
+earliest = -25
+latest = -19
+held_by = "Bieke Mahieu"
+summary = """
+Mahieu dates work on the Temple enclosures from 25 BCE and that on the Temple building to 19 BCE."""
+citations = [{ source = "wikipedia-herods-temple" }]
+
+[[attestations]]
+artifact = "josephus-antiquities-15-380"
+relation = "corroborates"
+note = """
+Josephus places the start of the rebuilding in the eighteenth year of Herod's reign."""
+citations = [{ source = "lexundria-josephus-ant-15-380" }]

@@ -1,0 +1,22 @@
+id = "alexander-levant-332"
+title = "Alexander's conquest of the Levant"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+Alexander besieges and takes Tyre (January to July 332 BCE) and then moves south against Gaza (October 332 BCE). Daniel 8 and 11 are the passages usually brought to bear on the Greek conquest; no Jerusalem episode was confirmed in sources read."""
+verses = [
+  { ref = "Dan.8.5-Dan.8.8", link = "alludes", note = "The goat from the west with one notable horn, broken, replaced by four" },
+  { ref = "Dan.11.3", link = "alludes", note = "A mighty king who rules with great dominion" },
+]
+
+[[positions]]
+id = "332"
+label = "332 BCE (Tyre January-July; Gaza October)"
+tradition = "chronological"
+earliest = -332
+latest = -332
+summary = """
+The siege of Tyre lasted January to July 332 BCE and Alexander then moved south to Gaza, besieged in October 332 BCE."""
+citations = [{ source = "wikipedia-siege-of-tyre-332" }, { source = "wikipedia-alexander-the-great" }]
