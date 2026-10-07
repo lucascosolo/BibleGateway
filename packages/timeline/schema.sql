@@ -49,7 +49,13 @@ CREATE TABLE events (
   -- DERIVED: the envelope of this event's positions. Never authored directly.
   earliest_year INTEGER NOT NULL CHECK (earliest_year <> 0),
   latest_year   INTEGER NOT NULL CHECK (latest_year <> 0),
-  CHECK (earliest_year <= latest_year)
+  -- DERIVED: the envelope of the positions whose tradition is 'traditional', NULL when there are
+  -- none. The year columns above exclude them unless they are the only positions.
+  traditional_earliest INTEGER CHECK (traditional_earliest <> 0),
+  traditional_latest   INTEGER CHECK (traditional_latest <> 0),
+  CHECK (earliest_year <= latest_year),
+  CHECK ((traditional_earliest IS NULL) = (traditional_latest IS NULL)),
+  CHECK (traditional_earliest IS NULL OR traditional_earliest <= traditional_latest)
 );
 CREATE INDEX events_window_idx ON events (axis, earliest_year, latest_year);
 

@@ -37,7 +37,7 @@ from pathlib import Path
 from typing import Any
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
-SCHEMA_VERSION = "1"
+SCHEMA_VERSION = "2"
 
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 REF_RE = re.compile(r"^([1-4]?[A-Za-z]+)\.(\d+)\.(\d+)$")
@@ -48,6 +48,7 @@ CATEGORIES = {"biblical-narrative", "political", "composition", "canon"}
 CONFIDENCE = {"firm", "contested", "speculative"}
 STATUSES = {"draft", "reviewed"}
 STANCES = {"for", "against"}
+TRADITIONS = {"critical", "archaeological", "chronological", "traditional"}
 RELATIONS = {"corroborates", "partially-corroborates", "consistent", "silent", "in-tension"}
 ARTIFACT_KINDS = {"inscription", "chronicle", "relief", "papyrus", "ostracon", "manuscript", "seal", "coin", "site", "literary-text"}
 
@@ -425,6 +426,7 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
                 report.error(here, f"duplicate position id '{position['id']}'")
                 continue
             seen_positions.add(position["id"])
+            check_enum(report, here, "tradition", position["tradition"], TRADITIONS)
             check_years(report, here, position["earliest"], position["latest"])
             arguments: list[dict[str, Any]] = []
             for a_index, raw_argument in enumerate(position.get("arguments", [])):
@@ -444,6 +446,9 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
                 "arguments": arguments,
                 "citations": citations(report, here, position["citations"], content),
             })
+
+        if positions and all(p["tradition"] == "traditional" for p in positions):
+            report.warn(where, f"event '{event['id']}' has only traditional positions; its envelope is the traditional count")
 
         attestations: list[dict[str, Any]] = []
         seen_artifacts: set[str] = set()
@@ -687,15 +692,22 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
         cite("artifact", a["id"], a["citations"])
         link("artifact", a["id"], a["verses"])
     for e in content.events.values():
-        # The range is DERIVED from the positions — there is no second copy to drift.
-        earliest = min(p["earliest"] for p in e["positions"])
-        latest = max(p["latest"] for p in e["positions"])
+        # The ranges are DERIVED from the positions — there is no second copy to drift. The
+        # scholarly envelope leads; the traditional count is a separate lens, and stands in for
+        # the envelope only when it is all there is.
+        traditional = [p for p in e["positions"] if p["tradition"] == "traditional"]
+        scholarly = [p for p in e["positions"] if p["tradition"] != "traditional"] or traditional
+        earliest = min(p["earliest"] for p in scholarly)
+        latest = max(p["latest"] for p in scholarly)
+        trad_earliest = min((p["earliest"] for p in traditional), default=None)
+        trad_latest = max((p["latest"] for p in traditional), default=None)
         db.execute(
             """INSERT INTO events (event_id, title, axis, category, confidence, status, summary,
-                                   segment_label, earliest_year, latest_year)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                                   segment_label, earliest_year, latest_year,
+                                   traditional_earliest, traditional_latest)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (e["id"], e["title"], e["axis"], e["category"], e["confidence"], e["status"], e["summary"],
-             e.get("segment"), earliest, latest),
+             e.get("segment"), earliest, latest, trad_earliest, trad_latest),
         )
         db.executemany("INSERT INTO event_books VALUES (?, ?)", [(e["id"], book_id) for book_id in e["book_ids"]])
         link("event", e["id"], e["verses"])
