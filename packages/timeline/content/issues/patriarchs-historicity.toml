@@ -3,10 +3,7 @@ kind = "historical"
 title = "Were Abraham, Isaac, Jacob and Joseph historical figures of a patriarchal age?"
 status = "draft"
 summary = """
-A question prior to any date. Until the 1970s a 2nd-millennium BCE "patriarchal age" was widely \
-accepted; since then most scholars have treated the patriarchal narratives as a later literary \
-construction. Kept apart from the dating positions on the patriarchal events, which record only \
-the dates offered by those who accept the setting."""
+This question comes before any date. Until the 1970s many scholars accepted a "patriarchal age" in the 2nd millennium BCE. Since then most have treated the patriarchal stories as a later work of literature. This entry is kept apart from the dating views on the patriarchal events. Those only record the dates offered by people who accept the setting."""
 events = ["abraham-migration", "abraham-covenant", "jacob-descent-egypt", "joseph-in-egypt"]
 verses = [{ ref = "Gen.12.1-Gen.12.9", link = "describes" }]
 citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
@@ -14,18 +11,13 @@ citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }
 [[views]]
 label = "A 2nd-millennium patriarchal age"
 text = """
-William F. Albright and G. Ernest Wright believed the patriarchs and matriarchs were either real \
-individuals or believable composites of people who lived in the patriarchal age, the 2nd \
-millennium BCE."""
+William F. Albright and G. Ernest Wright believed the patriarchs and matriarchs were real people, or believable blends of people, who lived in the patriarchal age, the 2nd millennium BCE."""
 citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
 
 [[views]]
 label = "A late literary construct"
 text = """
-Thomas L. Thompson (The Historicity of the Patriarchal Narratives, 1974) and John Van Seters \
-(Abraham in History and Tradition, 1975) challenged the older view; Van Seters argued that the \
-names, social setting and messages of the stories point to Iron Age creations. The article \
-reports that nearly all scholars now view the patriarchal age as a late literary construct."""
+Thomas L. Thompson (The Historicity of the Patriarchal Narratives, 1974) and John Van Seters (Abraham in History and Tradition, 1975) challenged the older view. Van Seters argued that the names, social setting and messages of the stories point to creations of the Iron Age. The article reports that nearly all scholars now see the patriarchal age as a late literary construct."""
 citations = [
   { source = "wikipedia-abraham", locator = "section 'Historicity'" },
   { source = "wikipedia-historicity-of-the-bible" },
@@ -34,7 +26,5 @@ citations = [
 [[views]]
 label = "Joseph: a story composed late"
 text = """
-Donald B. Redford dated the composition of the Joseph story to between the 7th century BCE and \
-the third quarter of the 5th century BCE; by the early 1990s most scholars saw it as a wisdom \
-novella by a single author. Thomas Römer argues for the late Persian period."""
+Donald B. Redford dated the writing of the Joseph story to between the 7th century BCE and the third quarter of the 5th century BCE. By the early 1990s most scholars saw it as a wisdom novella by a single author. Thomas Römer argues for the late Persian period."""
 citations = [{ source = "wikipedia-joseph-genesis" }]

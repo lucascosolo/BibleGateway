@@ -5,15 +5,12 @@ category = "political"
 confidence = "firm"
 status = "draft"
 summary = """
-The Assyrian king Sennacherib's third campaign, in which he took the fortified cities of Judah, \
-besieged Lachish, and confronted Hezekiah at Jerusalem. One of the best-attested events in the \
-Hebrew Bible: the Assyrian annals and the palace reliefs at Nineveh describe it from the \
-Assyrian side."""
+On his third military campaign, the Assyrian king Sennacherib took the walled cities of Judah, besieged Lachish, and faced King Hezekiah at Jerusalem. It is one of the best-confirmed events in the Hebrew Bible. Assyria's own records and the carved palace walls at Nineveh describe it from the Assyrian side."""
 verses = [
   { ref = "2Kgs.18.13-2Kgs.19.37", link = "describes" },
   { ref = "Isa.36.1-Isa.37.38", link = "describes" },
   { ref = "2Chr.32.1-2Chr.32.23", link = "describes" },
-  { ref = "2Kgs.18.13", link = "dates", note = "Hezekiah's fourteenth year" },
+  { ref = "2Kgs.18.13", link = "dates", note = "in Hezekiah's fourteenth year" },
 ]
 
 [[positions]]
@@ -23,16 +20,14 @@ tradition = "chronological"
 earliest = -701
 latest = -701
 summary = """
-The campaign is dated to 701 BCE from the Assyrian records; the date is not seriously disputed."""
+The Assyrian records date the campaign to 701 BCE. Scholars do not seriously dispute this."""
 citations = [{ source = "wikipedia-sennacherib-levant" }]
 
 [[attestations]]
 artifact = "sennacherib-taylor-prism"
 relation = "corroborates"
 note = """
-Sennacherib's own account: 46 walled cities of Judah taken and Hezekiah shut up in Jerusalem \
-"like a bird in a cage". It claims tribute but not the city's capture, which agrees with \
-2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken."""
+Sennacherib's own account says he took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". It claims payment from Hezekiah but not the capture of the city. That agrees with 2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken."""
 citations = [
   { source = "cojs-sennacherib-prisms" },
   { source = "wikipedia-sennacherib-annals" },
@@ -42,6 +37,5 @@ citations = [
 artifact = "lachish-reliefs"
 relation = "corroborates"
 note = """
-Depict the siege and fall of Lachish, where 2 Kings 18:14 and 18:17 place Sennacherib during \
-the campaign."""
+These carvings show the siege and fall of Lachish. 2 Kings 18:14 and 18:17 place Sennacherib there during the campaign."""
 citations = [{ source = "bm-lachish-reliefs" }]

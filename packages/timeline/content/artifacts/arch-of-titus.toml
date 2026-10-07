@@ -4,8 +4,5 @@ kind = "relief"
 status = "draft"
 language = "Latin"
 summary = """
-A triumphal arch on the Via Sacra in Rome, southeast of the Forum, built c. 81 CE by Domitian \
-after Titus's death. One panel shows the spoils taken from the Temple in Jerusalem, the golden \
-menorah foremost; the other shows Titus as triumphator. The inscription dedicates the arch to \
-the deified Titus Vespasian Augustus, son of the deified Vespasian."""
+A triumphal arch on the Via Sacra in Rome, southeast of the Forum. Domitian built it c. 81 CE, after Titus's death. One panel shows the spoils taken from the Temple in Jerusalem, with the golden menorah in front. The other shows Titus as the victor in his triumph. The inscription dedicates the arch to the deified Titus Vespasian Augustus, son of the deified Vespasian."""
 citations = [{ source = "wikipedia-arch-of-titus" }]

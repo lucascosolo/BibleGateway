@@ -5,11 +5,7 @@ status = "draft"
 made = { earliest = -691, latest = -691 }
 language = "Akkadian (cuneiform)"
 summary = """
-A clay prism recording Sennacherib's campaigns, including his third campaign into Judah. Two \
-parallel copies survive, the Oriental Institute (Chicago) Prism and the Jerusalem Prism (Israel \
-Museum). The annals say he besieged and took 46 walled cities of Judah, and that he shut \
-Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not \
-claim that Jerusalem was taken."""
+A clay prism recording Sennacherib's campaigns, including his third campaign into Judah. Two matching copies survive: the Oriental Institute (Chicago) Prism and the Jerusalem Prism (Israel Museum). The annals say he besieged and took 46 walled cities of Judah. They say he shut Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not claim that Jerusalem was taken."""
 held_by = { institution = "British Museum", accession = "BM 91032" }
 citations = [
   { source = "bm-taylor-prism" },

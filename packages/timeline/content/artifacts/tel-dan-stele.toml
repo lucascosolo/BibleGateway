@@ -5,12 +5,7 @@ status = "draft"
 made = { earliest = -900, latest = -801 }
 language = "Old Aramaic"
 summary = """
-Fragments of a 9th-century BCE victory stele set up by an Aramean king at Dan in northern \
-Israel. Line 9 is usually read bytdwd, "House of David" — the earliest known reference outside \
-the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels \
-Peter Lemche and Thomas Thompson) have read the word as a place or divine name instead. \
-Fragment A was found in 1993; fragments B1 and B2 followed in June 1994 and were published in \
-1995."""
+Fragments of a 9th-century BCE victory stone set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David". It is the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) read the word as a place name or a divine name instead. Fragment A was found in 1993. Fragments B1 and B2 followed in June 1994 and were published in 1995."""
 discovered = { year = 1993, place = "Tel Dan, northern Israel (Avraham Biran's excavation)" }
 held_by = { institution = "Israel Museum, Jerusalem" }
 citations = [

@@ -5,7 +5,7 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-In 63 BCE Pompey intervenes in the dispute between Hyrcanus II and Aristobulus II, takes the upper city and, after three months, the Temple precinct; he enters the Holy of Holies and Judea becomes a Roman client kingdom. No passage in the corpus narrates this."""
+In 63 BCE the Roman general Pompey steps into a quarrel between two rivals, Hyrcanus II and Aristobulus II. He takes the upper city and, after three months, the Temple area. He enters the Holy of Holies, and Judea becomes a Roman client kingdom, ruled under Rome's control. No passage in the Bible text here tells this story."""
 
 [[positions]]
 id = "63"
@@ -15,12 +15,12 @@ earliest = -63
 latest = -63
 held_by = "Flavius Josephus"
 summary = """
-Josephus, Antiquities 14.66 (Whiston): "the city was taken on the third month, on the day of the fast, upon the hundred and seventy-ninth olympiad, when Caius Antonius and Marcus Tullius Cicero were consuls". Wikipedia gives the year as 63 BC (the consular year is the cataloguer's reading). Pompey's siege of Jerusalem took place in 63 BCE and lasted three months before the Temple precinct was breached."""
+Josephus, Antiquities 14.66 (Whiston): "the city was taken on the third month, on the day of the fast, upon the hundred and seventy-ninth olympiad, when Caius Antonius and Marcus Tullius Cicero were consuls". Wikipedia gives the year as 63 BC. Turning the consuls' names into a year is the cataloguer's own reading. Pompey besieged Jerusalem in 63 BCE. The siege lasted three months before the Temple area was broken into."""
 citations = [{ source = "lexundria-josephus-ant-14-66", locator = "Ant. 14.66" }, { source = "wikipedia-siege-jerusalem-63bc" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-14-61"
 relation = "corroborates"
 note = """
-Josephus describes the temple's defences and the bridge by which Pompey had gotten in."""
+Josephus describes the Temple's defences and the bridge Pompey used to get in."""
 citations = [{ source = "lexundria-josephus-ant-14-61" }]

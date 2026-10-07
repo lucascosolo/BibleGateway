@@ -3,7 +3,7 @@ kind = "chronology"
 title = "Ezra's seventh year: 458 or 398 BCE?"
 status = "draft"
 summary = """
-Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" without saying which. Three views are summarised in the sources read: the seventh year of Artaxerxes I (458/457 BCE), of Artaxerxes II (398 BCE), or a corrupted number."""
+Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The sources read give three views. It was the seventh year of Artaxerxes I (458/457 BCE). It was the seventh year of Artaxerxes II (398 BCE). Or the number was copied wrongly."""
 events = ["ezra-mission"]
 verses = [
   { ref = "Ezra.7.7", link = "dates" },
@@ -15,23 +15,23 @@ citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
 [[views]]
 label = "458/457 BCE (Artaxerxes I)"
 text = """
-Yamauchi holds Artaxerxes I, "the traditional view", correct: Ezra arrived in 458 (457). Wikipedia calls it the most widely accepted."""
+Yamauchi holds that Artaxerxes I, "the traditional view", is correct. Ezra arrived in 458 (457). Wikipedia calls this the most widely accepted view."""
 citations = [{ source = "preceptaustin-ezra-7" }, { source = "wikipedia-ezra" }]
 
 [[views]]
 label = "398 BCE (Artaxerxes II)"
 text = """
-Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works)."""
+On this view Nehemiah came before Ezra. Ezra arrived in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works)."""
 citations = [{ source = "wikipedia-albin-van-hoonacker" }, { source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
 
 [[views]]
 label = "428 BCE (thirty-seventh year of Artaxerxes I)"
 text = """
-The letter of Ezra 7:11-26 is from the thirty-seventh year of Artaxerxes I, 428 BCE."""
+The letter in Ezra 7:11-26 comes from the thirty-seventh year of Artaxerxes I, 428 BCE."""
 citations = [{ source = "preceptaustin-ezra-7" }]
 
 [[views]]
 label = "Scribal error; Ezra and Nehemiah contemporaries"
 text = """
-A last group of scholars regards "the seventh year" as a scribal error and treats the two men as contemporaries."""
+A last group of scholars thinks "the seventh year" is a copyist's mistake. They treat Ezra and Nehemiah as men who lived at the same time."""
 citations = [{ source = "wikipedia-ezra" }]

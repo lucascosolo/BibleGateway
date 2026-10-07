@@ -4,8 +4,6 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-Josephus reports that the high priest Ananus had "the brother of Jesus who was called Christ, \
-whose name was James" stoned. Modern scholarship almost universally accepts the passage as \
-authentic. (Section 20.200 in the Niese numbering; 20.9.1 in Whiston's.)"""
+Josephus reports that the high priest Ananus had "the brother of Jesus who was called Christ, whose name was James" stoned. Modern scholars almost all accept the passage as genuine. (Section 20.200 in the Niese numbering; 20.9.1 in Whiston's.)"""
 citations = [{ source = "wikipedia-josephus-on-jesus" }]
 verses = [{ ref = "Gal.1.19", link = "background", note = "James, the Lord's brother" }]

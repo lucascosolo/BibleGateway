@@ -4,10 +4,7 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-Josephus says Cyrenius (Quirinius), a Roman senator, came into Syria sent by Caesar "to take an \
-account of their substance", with Coponius sent to hold supreme power over the Jews; Judea had \
-been added to the province of Syria after Archelaus's removal. Antiquities 17.342–355 puts that \
-removal in the tenth year of Archelaus's rule."""
+Josephus says Cyrenius (Quirinius), a Roman senator, came into Syria. Caesar sent him "to take an account of their substance". Coponius was sent to hold supreme power over the Jews. Judea had been added to the province of Syria after Archelaus was removed. Antiquities 17.342–355 puts that removal in the tenth year of Archelaus's rule."""
 citations = [
   { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
   { source = "lexundria-josephus-ant-17-342", locator = "17.342–355" },

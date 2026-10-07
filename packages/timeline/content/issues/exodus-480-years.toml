@@ -3,10 +3,7 @@ kind = "chronology"
 title = "The 480 years of 1 Kings 6:1"
 status = "draft"
 summary = """
-1 Kings 6:1 dates the founding of Solomon's temple to the 480th year after the Exodus. Taken as \
-a straight count it puts the Exodus in the 15th century BCE; the archaeological case many \
-scholars make for a 13th-century setting cannot accommodate that, so how the figure is read \
-largely decides the date."""
+1 Kings 6:1 says Solomon's temple was founded in the 480th year after the Exodus. Counted straight, that puts the Exodus in the 15th century BCE. Many scholars argue from archaeology for the 13th century instead, and that does not fit the count. So how you read the number largely decides the date."""
 events = ["exodus"]
 verses = [{ ref = "1Kgs.6.1", link = "dates" }]
 citations = [
@@ -17,13 +14,11 @@ citations = [
 [[views]]
 label = "A literal count"
 text = """
-The 480 years are a chronological datum to be counted back from Solomon's fourth year, giving a \
-mid-15th-century Exodus."""
+The 480 years are a date to be counted back from Solomon's fourth year. That gives an Exodus in the middle of the 15th century BCE."""
 citations = [{ source = "wood-2005" }]
 
 [[views]]
 label = "Not a straight count"
 text = """
-A 13th-century Exodus under Ramesses II requires reading the 480 years as something other than \
-an exact interval."""
+An Exodus in the 13th century under Ramesses II needs the 480 years to be read as something other than an exact span of time."""
 citations = [{ source = "kitchen-2003" }]

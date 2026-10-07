@@ -5,12 +5,12 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-In the twentieth year of Artaxerxes (445 or 444 BCE) Nehemiah, the king's cupbearer, is sent to Jerusalem and the wall is finished in fifty-two days despite Sanballat the Horonite. The Elephantine papyri of 407 BCE name Sanballat's sons and the high priest Johanan, tying the Nehemiah story to a documented milieu."""
+In the twentieth year of King Artaxerxes (445 or 444 BCE), Nehemiah, the king's cupbearer, is sent to Jerusalem. The wall is finished in fifty-two days, despite opposition from Sanballat the Horonite. Letters found at Elephantine in Egypt, from 407 BCE, name Sanballat's sons and the high priest Johanan. That ties the Nehemiah story to a world we can check outside the Bible."""
 verses = [
-  { ref = "Neh.2.1", link = "describes", note = "Nisan, twentieth year of Artaxerxes" },
-  { ref = "Neh.2.10", link = "describes", note = "Sanballat the Horonite and Tobiah are grieved" },
-  { ref = "Neh.6.15", link = "describes", note = "The wall finished in fifty-two days" },
-  { ref = "Neh.13.28", link = "alludes", note = "A son of Joiada son-in-law to Sanballat" },
+  { ref = "Neh.2.1", link = "describes", note = "the month of Nisan, in the twentieth year of Artaxerxes" },
+  { ref = "Neh.2.10", link = "describes", note = "Sanballat the Horonite and Tobiah are upset" },
+  { ref = "Neh.6.15", link = "describes", note = "the wall is finished in fifty-two days" },
+  { ref = "Neh.13.28", link = "alludes", note = "a son of Joiada is son-in-law to Sanballat" },
 ]
 
 [[positions]]
@@ -20,9 +20,7 @@ tradition = "chronological"
 earliest = -445
 latest = -444
 summary = """
-Artaxerxes I ruled from August 465 to December 424 BCE; his twentieth year is 445 or 444 BCE, and the wall was rebuilt within 52 days. Wikipedia's \
-Nehemiah article refers the date to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary \
-(1988); that page was not read and the article does not show the author's name."""
+Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name."""
 citations = [
   { source = "wikipedia-nehemiah", locator = "n. 5" },
   { source = "ezra-nehemiah-commentary-1988", locator = "p. 140, as cited by Wikipedia 'Nehemiah' n. 5" },
@@ -33,5 +31,5 @@ citations = [
 artifact = "elephantine-temple-petition-407"
 relation = "partially-corroborates"
 note = """
-Names Sanballat's sons Delaiah and Shelemiah and Johanan the high priest in 407 BCE; Sanballat and Johanan both appear in Nehemiah, but this does not date the wall."""
+A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall."""
 citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-sanballat" }]

@@ -4,6 +4,6 @@ kind = "chronicle"
 status = "draft"
 language = "Akkadian (cuneiform)"
 summary = """
-A Babylonian chronicle of the reign of Nabonidus. For his seventeenth year it records the battle at Opis, the capture of Sippar "without a battle", and that "Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon", and that on the third of Arahsamna Cyrus entered Babylon. The tablet's museum number was not shown on the page read."""
+A Babylonian chronicle of the reign of Nabonidus. For his seventeenth year it records the battle at Opis, and the capture of Sippar "without a battle". It says "Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon". It also says Cyrus entered Babylon on the third of Arahsamna. The tablet's museum number was not shown on the page read."""
 citations = [{ source = "livius-abc7" }]
 verses = [{ ref = "Dan.5.30-Dan.5.31", link = "background", note = "The night Babylon fell" }]

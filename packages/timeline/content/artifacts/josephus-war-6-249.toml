@@ -4,7 +4,5 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-Josephus records that the temple was burned on "the tenth day of the month Lous [Ab], upon which \
-it was formerly burnt by the king of Babylon" (Whiston's translation). It is the Roman-side \
-eyewitness narrative of the destruction of the Second Temple."""
+Josephus records that the temple was burned on "the tenth day of the month Lous [Ab], upon which it was formerly burnt by the king of Babylon" (Whiston's translation). It is the account of the Second Temple's destruction by an eyewitness on the Roman side."""
 citations = [{ source = "lexundria-josephus-war-6-249", locator = "6.249–250" }]

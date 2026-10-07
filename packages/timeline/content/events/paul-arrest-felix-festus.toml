@@ -5,21 +5,18 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-Paul is arrested in Jerusalem, held at Caesarea under the governor Felix, and after two years is \
-heard by his successor Festus, to whom he appeals to Caesar. The year of Festus's accession is \
-disputed, between c. 55 and 61 CE, with 59 favored by F. F. Bruce."""
+Paul is arrested in Jerusalem and held at Caesarea under the governor Felix. After two years he is heard by Felix's successor, Festus, and appeals to Caesar. Scholars disagree on the year Festus took office, anywhere from about 55 to 61 CE. The scholar F. F. Bruce favors 59."""
 verses = [
-  { ref = "Acts.21.27-Acts.21.36", link = "describes", note = "the arrest in the temple" },
-  { ref = "Acts.23.23-Acts.24.27", link = "describes", note = "Caesarea; Felix; two years' detention" },
-  { ref = "Acts.25.1-Acts.26.32", link = "describes", note = "Festus; the appeal to Caesar; Agrippa II" },
+  { ref = "Acts.21.27-Acts.21.36", link = "describes", note = "Paul is arrested in the temple" },
+  { ref = "Acts.23.23-Acts.24.27", link = "describes", note = "Caesarea, Felix, and two years in custody" },
+  { ref = "Acts.25.1-Acts.26.32", link = "describes", note = "Festus, the appeal to Caesar, and King Agrippa II" },
 ]
 
 [[attestations]]
 artifact = "josephus-antiquities-20-182"
 relation = "corroborates"
 note = """
-Josephus says Nero sent Porcius Festus as successor to Felix, as Acts 24:27 has it. He gives no \
-year, so it does not settle the 55-61 CE range."""
+Josephus says Nero sent Porcius Festus to replace Felix, just as Acts 24:27 says. He gives no year, so this does not settle the range of 55 to 61 CE."""
 citations = [{ source = "lexundria-josephus-ant-20", locator = "20.182" }]
 
 [[positions]]
@@ -30,8 +27,7 @@ earliest = 59
 latest = 59
 held_by = "F. F. Bruce"
 summary = """
-Wikipedia says Bruce cites 59 CE for Festus's accession, based on provincial coinage of Nero's \
-fifth year, and that most scholars favor 58–60."""
+Wikipedia says Bruce gives 59 CE for Festus taking office. He bases this on local coins struck in Nero's fifth year. Wikipedia adds that most scholars favor 58 to 60."""
 citations = [{ source = "wikipedia-porcius-festus" }]
 
 [[positions]]
@@ -41,5 +37,5 @@ tradition = "critical"
 earliest = 55
 latest = 61
 summary = """
-The earliest proposed start of Festus's term is c. 55–56 and the latest is 61 CE."""
+The earliest suggested start for Festus's term is about 55 to 56 CE. The latest is 61 CE."""
 citations = [{ source = "wikipedia-porcius-festus" }]

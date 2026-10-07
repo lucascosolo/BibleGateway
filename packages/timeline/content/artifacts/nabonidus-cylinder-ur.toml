@@ -5,9 +5,7 @@ status = "draft"
 made = { earliest = -556, latest = -539 }
 language = "Akkadian (cuneiform)"
 summary = """
-A foundation cylinder of Nabonidus, the last king of Babylon, from the ziggurat at Ur. Its \
-closing prayer asks the moon-god to instil reverence in "Belshazzar, the eldest son, my \
-offspring" — naming Belshazzar as the son of Nabonidus."""
+A clay cylinder buried in the foundations of the ziggurat at Ur. Nabonidus, the last king of Babylon, had it made. Its closing prayer asks the moon-god to instil reverence in "Belshazzar, the eldest son, my offspring". So it names Belshazzar as the son of Nabonidus."""
 discovered = { year = 1854, place = "Ur, southern Iraq (J. G. Taylor)" }
 held_by = { institution = "British Museum", accession = "BM 91125" }
 citations = [

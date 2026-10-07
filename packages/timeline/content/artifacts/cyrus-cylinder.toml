@@ -5,7 +5,7 @@ status = "draft"
 made = { earliest = -539, latest = -530 }
 language = "Akkadian (cuneiform)"
 summary = """
-A clay cylinder of Cyrus after his conquest of Babylon. It speaks of restoring deities and returning displaced peoples to Mesopotamian sites but, as Wikipedia summarises, mentions no Jews, Jerusalem or Judea; whether it bears on Ezra 1 is disputed (Kuhrt calls the restoration passage a literary device)."""
+A clay cylinder of Cyrus, made after he conquered Babylon. It speaks of restoring gods and sending displaced peoples back to sites in Mesopotamia. As Wikipedia summarises, it mentions no Jews, Jerusalem or Judea. Whether it bears on Ezra 1 is disputed. Kuhrt calls the restoration passage a literary device."""
 discovered = { year = 1879, place = "Babylon (Hormuzd Rassam)" }
 held_by = { institution = "British Museum", accession = "BM 90920" }
 citations = [

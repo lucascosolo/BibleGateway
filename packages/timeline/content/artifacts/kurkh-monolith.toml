@@ -5,9 +5,7 @@ status = "draft"
 made = { earliest = -853, latest = -852 }
 language = "Akkadian (cuneiform)"
 summary = """
-An Assyrian stele recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. \
-Among the coalition ranged against him it lists "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a) \
-with 2,000 chariots and 10,000 foot soldiers."""
+An Assyrian stone slab recording Shalmaneser III's campaign of 853 BCE and the battle of Qarqar. It lists the allies who stood against him. Among them is "Ahab the Israelite" (A-ha-ab-bu Sir-ila-a-a), with 2,000 chariots and 10,000 foot soldiers."""
 discovered = { year = 1861, place = "Kurkh, south-eastern Turkey (J. G. Taylor)" }
 held_by = { institution = "British Museum", accession = "BM 118884" }
 citations = [

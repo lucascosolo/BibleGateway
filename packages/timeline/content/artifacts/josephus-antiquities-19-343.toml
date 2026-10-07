@@ -4,9 +4,6 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-At Caesarea Agrippa appears in a garment wholly of silver; flatterers cry that he is a god; he \
-sees an owl on a rope, takes it for a messenger of ill tidings, is seized by a violent pain in \
-the belly and dies after five days, in the fifty-fourth year of his age, having reigned four \
-years under Caius and three under Claudius (Whiston's translation)."""
+At Caesarea, Agrippa appears in a garment made wholly of silver. Flatterers cry that he is a god. He sees an owl on a rope and takes it for a messenger of bad news. A violent pain seizes his belly, and he dies after five days. He was in the fifty-fourth year of his age. He had reigned four years under Caius and three under Claudius (Whiston's translation)."""
 citations = [{ source = "lexundria-josephus-ant-19-343", locator = "19.343–351" }]
 verses = [{ ref = "Acts.12.21-Acts.12.23", link = "background", note = "Luke's parallel account" }]

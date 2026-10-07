@@ -3,9 +3,7 @@ kind = "historical"
 title = "Is there a historical Moses?"
 status = "draft"
 summary = """
-No source outside the Bible from Moses' own time names him, and no Egyptian record mentions him. \
-Scholars divide between seeing him as a figure of tradition with no recoverable history, and \
-seeing a historical leader of some kind behind the story."""
+No source outside the Bible from Moses' own time names him. No Egyptian record mentions him. Scholars split into two camps. Some see a figure of tradition with no recoverable history. Others see a real leader of some kind behind the story."""
 persons = ["moses"]
 events = ["exodus"]
 verses = [{ ref = "Exod.2.10", link = "describes" }]
@@ -14,16 +12,13 @@ citations = [{ source = "wikipedia-moses" }]
 [[views]]
 label = "No trace outside the tradition"
 text = """
-No contemporary Egyptian source mentions Moses, and no reference to him appears in any Egyptian \
-source before the 4th century BCE; Jan Assmann describes him as a figure of memory with no \
-traces outside the tradition."""
+No Egyptian source from his time mentions Moses. No Egyptian source mentions him before the 4th century BCE. Jan Assmann describes him as a figure of memory with no traces outside the tradition."""
 citations = [{ source = "wikipedia-moses" }]
 
 [[views]]
 label = "A leader behind the story"
 text = """
-William Dever has early Israel emerging largely from Canaanite villages, but including some \
-who had left Egypt, and allows for a Moses-like leader among such a group."""
+William Dever has early Israel growing mostly out of Canaanite villages, but including some people who had left Egypt. He allows for a Moses-like leader among that group."""
 citations = [
   { source = "dever-2003" },
   { source = "coogan-2003-review" },
@@ -32,9 +27,7 @@ citations = [
 [[views]]
 label = "An Egyptian name"
 text = """
-The name Moses is commonly connected with Egyptian msy / mose, "born of" or "child of", as in \
-names such as Thutmose and Ramose — read by some as a detail pointing to a genuine Egyptian \
-setting for the tradition."""
+The name Moses is commonly linked to the Egyptian msy / mose, "born of" or "child of". It appears in names such as Thutmose and Ramose. Some read this as a sign that the tradition has a genuine Egyptian setting."""
 citations = [
   { source = "griffiths-1953", locator = "p. 223" },
   { source = "wikipedia-moses" },

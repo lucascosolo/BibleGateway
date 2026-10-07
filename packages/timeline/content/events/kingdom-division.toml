@@ -4,11 +4,11 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "After Solomon's death the northern tribes break from Rehoboam and make Jeroboam king."
+summary = "After Solomon dies, the northern tribes break away from his son Rehoboam and make Jeroboam their king."
 verses = [
   { ref = "1Kgs.11.26-1Kgs.11.40", link = "background", note = "Ahijah's prophecy and Jeroboam's flight" },
-  { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "the assembly at Shechem and the split" },
-  { ref = "2Chr.10.1-2Chr.11.4", link = "describes", note = "Chronicles parallel" },
+  { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "the meeting at Shechem, where the kingdom splits" },
+  { ref = "2Chr.10.1-2Chr.11.4", link = "describes", note = "the same story told in Chronicles" },
   { ref = "Isa.7.17", link = "alludes", note = "'from the day that Ephraim departed from Judah'" },
 ]
 
@@ -19,7 +19,7 @@ tradition = "chronological"
 earliest = -932
 latest = -931
 held_by = "Rodger C. Young"
-summary = "Solomon died before Tishri 931, so Rehoboam began in 932t; Jeroboam began some time in 931n."
+summary = "Young reasons that Solomon died before Tishri 931 (the autumn month that starts the year in this count). So Rehoboam began in 932t, a year counted from autumn. Jeroboam began some time in 931n, a year counted from spring."
 citations = [{ source = "young-2003", locator = "pp. 590-591" }, { source = "young-2005", locator = "p. 227 n. 3" }]
 
 [[positions]]
@@ -29,7 +29,7 @@ tradition = "chronological"
 earliest = -931
 latest = -930
 held_by = "Edwin R. Thiele"
-summary = "Thiele assumed Solomon died in the latter half of 931n (931t/930n)."
+summary = "The chronologist Edwin Thiele assumed that Solomon died in the second half of 931n (931t/930n)."
 citations = [{ source = "young-2003", locator = "p. 591" }, { source = "wikipedia-mysterious-numbers", locator = "Rehoboam 931/0 in the chronology table; second-hand, not Thiele's pages" }]
 
 [[positions]]

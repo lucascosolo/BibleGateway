@@ -5,17 +5,17 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-The foundation is laid under Zerubbabel and Jeshua in the second year after the return (Ezra 3); work stops, then resumes under the prophets Haggai and Zechariah (dated to the second year of Darius), and the house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), spring 516 BCE. Some scholars date the building later."""
+The exiles return, and in the second year Zerubbabel and Jeshua lay the foundation (Ezra 3). Work then stops. It starts again under the prophets Haggai and Zechariah, in the second year of King Darius. The house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), in spring 516 BCE. Some scholars date the building later."""
 verses = [
-  { ref = "Ezra.3.8", link = "describes", note = "Second year of their coming; Zerubbabel and Jeshua begin" },
-  { ref = "Ezra.3.10", link = "describes", note = "The builders lay the foundation of Yahweh's temple" },
-  { ref = "Ezra.4.24", link = "describes", note = "The work ceases until the second year of Darius" },
-  { ref = "Ezra.5.1", link = "describes", note = "Haggai and Zechariah prophesy to the Jews" },
-  { ref = "Ezra.6.14", link = "describes", note = "The elders build and finish it" },
-  { ref = "Ezra.6.15", link = "describes", note = "Finished 3 Adar, sixth year of Darius" },
-  { ref = "Hag.1.1", link = "alludes", note = "Second year of Darius, sixth month, first day; word to Zerubbabel and Joshua" },
+  { ref = "Ezra.3.8", link = "describes", note = "the second year after they came; Zerubbabel and Jeshua begin" },
+  { ref = "Ezra.3.10", link = "describes", note = "the builders lay the foundation of Yahweh's temple" },
+  { ref = "Ezra.4.24", link = "describes", note = "the work stops until the second year of Darius" },
+  { ref = "Ezra.5.1", link = "describes", note = "Haggai and Zechariah speak to the Jews as prophets" },
+  { ref = "Ezra.6.14", link = "describes", note = "the elders build the temple and finish it" },
+  { ref = "Ezra.6.15", link = "describes", note = "finished on 3 Adar, in Darius's sixth year" },
+  { ref = "Hag.1.1", link = "alludes", note = "the first day of the sixth month, second year of Darius; a message to Zerubbabel and Joshua" },
   { ref = "Hag.2.18", link = "alludes", note = "The day the foundation of Yahweh's temple was laid" },
-  { ref = "Zech.1.1", link = "alludes", note = "Eighth month, second year of Darius" },
+  { ref = "Zech.1.1", link = "alludes", note = "the eighth month, second year of Darius" },
 ]
 
 [[positions]]
@@ -25,7 +25,7 @@ tradition = "traditional"
 earliest = -516
 latest = -516
 summary = """
-The Temple was completed on the third of Adar in Darius's sixth year, 25 February 516 BCE (Wikipedia's Haggai article), "ready for consecration in the spring of 516 BCE". Haggai's oracles are of 520 BCE; the foundation of Ezra 3 is given as 535 BCE in the Second Temple article."""
+The Temple was completed on the third of Adar in Darius's sixth year, which is 25 February 516 BCE (Wikipedia's Haggai article). It was "ready for consecration in the spring of 516 BCE". Haggai's messages date to 520 BCE. The Second Temple article puts the foundation of Ezra 3 at 535 BCE."""
 citations = [
   { source = "wikipedia-second-temple" },
   { source = "wikipedia-book-of-haggai" },
@@ -39,7 +39,7 @@ tradition = "critical"
 earliest = -450
 latest = -400
 summary = """
-Wikipedia notes that the Second Temple was constructed "either around 516 BCE or between 450 and 400 BCE"; the page read names no scholar for the later date, and Haggai is placed by some at 417 BCE under a Darius II reading."""
+Wikipedia notes that the Second Temple was constructed "either around 516 BCE or between 450 and 400 BCE". The page read names no scholar for the later date. Some place Haggai at 417 BCE, if the Darius in the book is Darius II."""
 citations = [
   { source = "wikipedia-second-temple" },
   { source = "wikipedia-book-of-haggai" },

@@ -4,13 +4,13 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "Samuel anoints Saul privately, Saul is chosen by lot at Mizpah and acclaimed at Gilgal. The Bible gives no absolute date; 1 Samuel 13:1 is textually difficult, so even the length of his reign is disputed."
+summary = "Samuel anoints Saul in private. Saul is then chosen by lot at Mizpah and acclaimed king at Gilgal. The Bible gives no calendar date. The Hebrew of 1 Samuel 13:1 is hard to read, so even the length of his reign is disputed."
 verses = [
-  { ref = "1Sam.9.1-1Sam.10.16", link = "describes", note = "private anointing by Samuel" },
-  { ref = "1Sam.10.17-1Sam.10.27", link = "describes", note = "chosen by lot at Mizpah" },
-  { ref = "1Sam.11.12-1Sam.11.15", link = "describes", note = "acclaimed king at Gilgal" },
-  { ref = "1Sam.13.1", link = "dates", note = "regnal-length verse; the Hebrew text is difficult" },
-  { ref = "Acts.13.21", link = "alludes", note = "Paul's sermon: God gave them Saul for forty years" },
+  { ref = "1Sam.9.1-1Sam.10.16", link = "describes", note = "Samuel anoints Saul in private" },
+  { ref = "1Sam.10.17-1Sam.10.27", link = "describes", note = "Saul is chosen by lot at Mizpah" },
+  { ref = "1Sam.11.12-1Sam.11.15", link = "describes", note = "Saul is acclaimed king at Gilgal" },
+  { ref = "1Sam.13.1", link = "dates", note = "the verse giving the length of his reign; the Hebrew text is hard to read" },
+  { ref = "Acts.13.21", link = "alludes", note = "Paul's sermon: God gave them Saul, who ruled forty years" },
   { ref = "Hos.13.11", link = "alludes", note = "'I have given you a king in my anger'" },
 ]
 
@@ -21,5 +21,5 @@ tradition = "chronological"
 earliest = -1051
 latest = -1051
 held_by = "Rodger C. Young"
-summary = "Table 2 begins Saul's reign at Tishri 1051 BCE (1051t?) and ends it 1009t?, with the question marks Young's own. Young's Table 2 marks Saul's and David's dates as conjectural."
+summary = "Rodger C. Young's Table 2 starts Saul's reign at Tishri 1051 BCE (1051t?) and ends it in 1009t?. The question marks are Young's own. His Table 2 marks all of Saul's and David's dates as guesses."
 citations = [{ source = "young-2005", locator = "Table 2, p. 246; p. 227; MT difficulty at 1 Sam 13:1, p. 241" }]

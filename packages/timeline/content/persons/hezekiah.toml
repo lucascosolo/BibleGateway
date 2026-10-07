@@ -2,10 +2,7 @@ id = "hezekiah"
 name = "Hezekiah"
 role = "king of Judah (sole reign from 716/715 BCE)"
 summary = """
-King of Judah during Sennacherib's invasion of 701 BCE. Named in the Assyrian king's own annals \
-and on a royal seal impression from Jerusalem. His accession is a known chronological \
-problem: Young reconstructs a coregency with Ahaz from 729/728 BCE, a sole reign from 716/715 \
-and his death in 687, and notes that Thiele did not recognise the Ahaz–Hezekiah coregency."""
+Hezekiah was king of Judah when Sennacherib invaded in 701 BCE. The Assyrian king's own annals name him, and so does a royal seal impression from Jerusalem. The start of his reign is a known problem in the dates. Young reconstructs a joint reign with Ahaz from 729/728 BCE, a reign on his own from 716/715, and his death in 687. He notes that Thiele did not recognise the Ahaz–Hezekiah joint reign."""
 status = "draft"
 verses = [{ ref = "2Kgs.18.1-2Kgs.20.21", link = "describes" }]
 events = ["sennacherib-campaign-judah"]
@@ -19,8 +16,7 @@ citations = [
 artifact = "sennacherib-taylor-prism"
 relation = "corroborates"
 note = """
-Sennacherib names "Hezekiah the Judahite", who had not submitted to his yoke, and says he \
-shut him up in Jerusalem "like a bird in a cage"."""
+Sennacherib names "Hezekiah the Judahite", who had not submitted to his yoke. He says he shut Hezekiah up in Jerusalem "like a bird in a cage"."""
 citations = [
   { source = "bm-taylor-prism" },
   { source = "cojs-sennacherib-prisms" },
@@ -30,6 +26,5 @@ citations = [
 artifact = "hezekiah-bulla-ophel"
 relation = "corroborates"
 note = """
-A seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah", \
-matching the parentage given in 2 Kings 18:1."""
+A seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah". It matches the father named in 2 Kings 18:1."""
 citations = [{ source = "bas-hezekiah-bulla" }]

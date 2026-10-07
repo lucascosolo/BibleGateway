@@ -3,10 +3,7 @@ kind = "chronology"
 title = "Nebuchadnezzar's seventh or eighth year?"
 status = "draft"
 summary = """
-The capture of Jehoiachin is dated to Nebuchadnezzar's eighth year in 2 Kings 24:12, but the \
-Babylonian Chronicle places it in his seventh, and Jeremiah 52:28 dates the deportation to the \
-seventh. The difference is usually put down to different ways of counting regnal years; this \
-entry does not yet document those explanations."""
+2 Kings 24:12 dates the capture of Jehoiachin to Nebuchadnezzar's eighth year. The Babylonian Chronicle puts it in his seventh. Jeremiah 52:28 also dates the deportation to the seventh. The gap is usually put down to different ways of counting a king's years. This entry does not yet document those explanations."""
 events = ["jerusalem-capture-597"]
 verses = [
   { ref = "2Kgs.24.12", link = "dates" },
@@ -17,8 +14,7 @@ citations = [{ source = "livius-abc5" }]
 [[views]]
 label = "Seventh year"
 text = """
-The Babylonian Chronicle dates the seizure of Jerusalem to Nebuchadnezzar's seventh year, in \
-agreement with Jeremiah 52:28."""
+The Babylonian Chronicle dates the capture of Jerusalem to Nebuchadnezzar's seventh year. This agrees with Jeremiah 52:28."""
 citations = [{ source = "livius-abc5" }]
 
 [[views]]

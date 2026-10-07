@@ -4,10 +4,7 @@ kind = "inscription"
 status = "draft"
 language = "Hebrew script"
 summary = """
-An ornate limestone bone box found in December 1990 in a burial cave in south Jerusalem, \
-inscribed "Yehosef bar Qayafa" ("Joseph son of Caiaphas") on one side and "Yehosef bar Qafa" \
-on another. Many identify it with the high priest Joseph Caiaphas; others point to the \
-spelling, the absence of a priestly title and the plainness of the tomb."""
+An ornate limestone bone box found in December 1990 in a burial cave in south Jerusalem. One side is inscribed "Yehosef bar Qayafa" ("Joseph son of Caiaphas"). Another side reads "Yehosef bar Qafa". Many identify it with the high priest Joseph Caiaphas. Others point to the spelling, the lack of a priestly title and the plain tomb."""
 discovered = { year = 1990, place = "Jerusalem, Peace Forest / North Talpiot" }
 held_by = { institution = "Israel Museum, Jerusalem" }
 citations = [{ source = "wikipedia-caiaphas-ossuary" }]

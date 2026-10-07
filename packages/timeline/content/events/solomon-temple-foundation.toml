@@ -4,15 +4,15 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). The year depends on when Solomon's reign is counted from."
+summary = "Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). Which calendar year that is depends on where you start counting Solomon's reign."
 verses = [
-  { ref = "1Kgs.6.1", link = "dates", note = "fourth year of Solomon, month Ziv" },
-  { ref = "1Kgs.5.1-1Kgs.5.18", link = "describes", note = "preparations with Hiram" },
-  { ref = "1Kgs.6.2-1Kgs.6.38", link = "describes", note = "construction" },
-  { ref = "2Chr.2.1-2Chr.2.18", link = "describes", note = "Chronicles: preparations" },
-  { ref = "2Chr.3.1-2Chr.3.2", link = "describes", note = "Chronicles: begins in the second month of the fourth year" },
+  { ref = "1Kgs.6.1", link = "dates", note = "Solomon's fourth year, in the month of Ziv" },
+  { ref = "1Kgs.5.1-1Kgs.5.18", link = "describes", note = "the preparations, with King Hiram" },
+  { ref = "1Kgs.6.2-1Kgs.6.38", link = "describes", note = "the building work" },
+  { ref = "2Chr.2.1-2Chr.2.18", link = "describes", note = "the preparations, as told in Chronicles" },
+  { ref = "2Chr.3.1-2Chr.3.2", link = "describes", note = "Chronicles: work begins in the second month of the fourth year" },
   { ref = "Acts.7.47", link = "alludes", note = "Stephen: Solomon built him a house" },
-  { ref = "Ezra.5.11", link = "alludes", note = "the house built many years before" },
+  { ref = "Ezra.5.11", link = "alludes", note = "the house built many years earlier" },
 ]
 
 [[positions]]
@@ -22,7 +22,7 @@ tradition = "chronological"
 earliest = -967
 latest = -967
 held_by = "Rodger C. Young"
-summary = "Fourth year 968t, second month Ziv, so spring 967 BCE."
+summary = "Rodger C. Young counts Solomon's fourth year as 968t (a year counted from autumn). The second month, Ziv, then falls in spring 967 BCE."
 citations = [{ source = "young-2003", locator = "p. 599" }, { source = "young-2005", locator = "p. 228 n. 4" }]
 
 [[positions]]
@@ -32,5 +32,5 @@ tradition = "chronological"
 earliest = -966
 latest = -966
 held_by = "Edwin R. Thiele"
-summary = "Thiele's dates place the foundation in 966 BCE, according to Young."
+summary = "According to Young, the chronologist Edwin Thiele's dates place the foundation in 966 BCE."
 citations = [{ source = "young-2005", locator = "pp. 228-229" }]

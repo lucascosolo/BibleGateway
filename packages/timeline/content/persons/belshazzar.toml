@@ -2,10 +2,7 @@ id = "belshazzar"
 name = "Belshazzar"
 role = "crown prince of Babylon (called king in Daniel)"
 summary = """
-The ruler of Babylon at the feast of Daniel 5, the night the city fell. Long known only from \
-Daniel, he is named in a cylinder of Nabonidus as the king's eldest son. That he existed is \
-corroborated; that Daniel calls him king and son of Nebuchadnezzar is a separate question (see \
-the linked issue)."""
+Belshazzar ruled Babylon at the feast of Daniel 5, the night the city fell. For a long time he was known only from Daniel. A cylinder of Nabonidus names him as the king's eldest son. So his existence is backed up. Why Daniel calls him king, and son of Nebuchadnezzar, is a separate question (see the linked issue)."""
 status = "draft"
 verses = [{ ref = "Dan.5.1-Dan.5.31", link = "describes" }]
 citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
@@ -14,6 +11,5 @@ citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
 artifact = "nabonidus-cylinder-ur"
 relation = "corroborates"
 note = """
-Nabonidus prays for "Belshazzar, the eldest son, my offspring" — naming him, and as the son of \
-Nabonidus, not of Nebuchadnezzar."""
+Nabonidus prays for "Belshazzar, the eldest son, my offspring". It names him as the son of Nabonidus, not of Nebuchadnezzar."""
 citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]

@@ -5,10 +5,7 @@ status = "draft"
 made = { earliest = 26, latest = 37 }
 language = "Latin"
 summary = """
-A limestone dedication block from Caesarea Maritima recording a building for Tiberius by \
-"[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e" — Pontius Pilate, prefect of Judaea. Found in 1961 \
-in the theatre area by Maria Teresa Fortuna Canivet, during excavations led by Antonio Frova; a \
-replica stands at Caesarea. Dated by Pilate's governorship (26/27–36/37 CE)."""
+A limestone block from Caesarea Maritima recording a building put up for Tiberius. The inscription names "[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e", Pontius Pilate, prefect of Judaea. Maria Teresa Fortuna Canivet found it in 1961 in the theatre area, during excavations led by Antonio Frova. A replica stands at Caesarea. It is dated by Pilate's time as governor (26/27–36/37 CE)."""
 discovered = { year = 1961, place = "Caesarea Maritima (theatre area)" }
 held_by = { institution = "Israel Museum, Jerusalem" }
 citations = [

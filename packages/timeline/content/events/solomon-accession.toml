@@ -4,11 +4,11 @@ axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
-summary = "Solomon is anointed as David's successor, in the Bible's telling twice, and reigns forty years. Young argues for an initial coregency with David."
+summary = "Solomon is anointed to succeed David (twice, in the Bible's telling) and reigns forty years. Rodger C. Young argues that at first Solomon ruled jointly with David, a coregency."
 verses = [
   { ref = "1Kgs.1.28-1Kgs.1.53", link = "describes", note = "David has Solomon anointed at Gihon" },
-  { ref = "1Kgs.2.12", link = "describes", note = "Solomon sits on his father's throne" },
-  { ref = "1Chr.28.1-1Chr.29.25", link = "describes", note = "Chronicles parallel; 29:22 records the second anointing" },
+  { ref = "1Kgs.2.12", link = "describes", note = "Solomon takes his father's throne" },
+  { ref = "1Chr.28.1-1Chr.29.25", link = "describes", note = "the same story in Chronicles; 29:22 records the second anointing" },
   { ref = "Ps.72.1", link = "alludes", note = "psalm 'of' or 'for' Solomon: 'the royal son'" },
 ]
 
@@ -19,7 +19,7 @@ tradition = "chronological"
 earliest = -971
 latest = -969
 held_by = "Rodger C. Young"
-summary = "Table 2: coregency from Tishri 971, sole reign from 969 (marked uncertain), death 932. Young treats the forty years as running from the coregency."
+summary = "In Young's Table 2, the joint rule begins in Tishri 971, Solomon rules alone from 969 (marked uncertain), and he dies in 932. Young counts the forty years from the start of the joint rule."
 citations = [{ source = "young-2005", locator = "Table 2, p. 246; p. 227" }, { source = "young-2003", locator = "p. 599" }]
 
 [[positions]]
@@ -29,5 +29,5 @@ tradition = "chronological"
 earliest = -970
 latest = -968
 held_by = "Edwin R. Thiele"
-summary = "Derived: Young says that moving Solomon's death earlier moved Solomon's beginning one year earlier than in Thiele's chronology. Thiele's own figures were not read."
+summary = "This date is worked out indirectly. Young says that moving Solomon's death earlier also moved his start one year earlier than in the chronologist Edwin Thiele's count. Thiele's own figures were not read."
 citations = [{ source = "young-2005", locator = "p. 227" }]

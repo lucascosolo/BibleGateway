@@ -4,9 +4,9 @@ axis = "narrative"
 category = "political"
 confidence = "contested"
 status = "draft"
-summary = "Moab under Mesha rebels against Israel and Jehoram campaigns against it. The Mesha Stele gives Moab's side."
+summary = "Moab, led by King Mesha, rebels against Israel, and King Jehoram marches against it. A stone monument called the Mesha Stele tells the story from Moab's side."
 verses = [
-  { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Mesha's revolt and the campaign" },
+  { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Mesha's revolt and the war that follows" },
   { ref = "2Kgs.1.1", link = "background", note = "revolt after Ahab's death" },
   { ref = "Isa.15.1-Isa.16.14", link = "alludes", note = "oracle on Moab" },
   { ref = "Jer.48.1-Jer.48.47", link = "alludes", note = "oracle on Moab" },
@@ -19,11 +19,11 @@ tradition = "chronological"
 earliest = -852
 latest = -841
 held_by = "Rodger C. Young"
-summary = "Bounds only: Joram's reign in Table 1. The Mesha Stele itself is dated c. 840."
+summary = "These dates are only outer limits. They are the years of Joram's reign from Rodger C. Young's Table 1. The Mesha Stele itself is dated to about 840."
 citations = [{ source = "young-2005", locator = "Table 1, p. 245" }]
 
 [[attestations]]
 artifact = "mesha-stele"
 relation = "partially-corroborates"
-note = "Says Omri oppressed Moab and credits Chemosh with Mesha's victories; Wikipedia says it parallels 2 Kings 3:4-27 but the accounts differ."
+note = "It says Omri oppressed Moab and credits the god Chemosh with Mesha's victories. Wikipedia says it runs parallel to 2 Kings 3:4-27, but the two accounts differ."
 citations = [{ source = "wikipedia-mesha-stele" }]

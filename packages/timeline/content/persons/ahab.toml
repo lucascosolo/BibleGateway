@@ -2,10 +2,7 @@ id = "ahab"
 name = "Ahab"
 role = "king of Israel (reigned c. 874–853 BCE)"
 summary = """
-Son of Omri, king of the northern kingdom of Israel from Samaria, remembered in Kings chiefly \
-for his conflict with Elijah. An Assyrian inscription names him as a major member of the \
-coalition that met Shalmaneser III at Qarqar in 853 BCE. Young's reconstruction of the regnal \
-data gives his reign as 874–853 BCE."""
+Ahab was the son of Omri and king of the northern kingdom of Israel, ruling from Samaria. Kings remembers him mostly for his conflict with Elijah. An Assyrian inscription names him as a major member of the coalition that met Shalmaneser III at Qarqar in 853 BCE. Young's reconstruction of the regnal data gives his reign as 874–853 BCE."""
 status = "draft"
 verses = [{ ref = "1Kgs.16.29-1Kgs.22.40", link = "describes" }]
 citations = [
@@ -17,8 +14,7 @@ citations = [
 artifact = "kurkh-monolith"
 relation = "corroborates"
 note = """
-Names "Ahab the Israelite" among Shalmaneser III's opponents at Qarqar (853 BCE), credited with \
-2,000 chariots and 10,000 foot soldiers."""
+Names "Ahab the Israelite" among Shalmaneser III's opponents at Qarqar (853 BCE). It credits him with 2,000 chariots and 10,000 foot soldiers."""
 citations = [
   { source = "cojs-kurkh-monolith" },
   { source = "wikipedia-kurkh-monoliths" },

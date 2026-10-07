@@ -5,14 +5,11 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-Acts 2 narrates the first Pentecost after the resurrection, when the apostles speak in other \
-tongues and Peter preaches in Jerusalem. Its year follows the date given to the crucifixion, \
-which is unsettled. Both positions below take the year of the crucifixion and have the same \
-holders; no scholar read dates Pentecost separately."""
+Acts 2 tells of the first Pentecost after the resurrection. The apostles speak in other languages, and Peter preaches in Jerusalem. Its year depends on the year given to the crucifixion, which is unsettled. Both positions below simply take the crucifixion year and have the same holders. No scholar read dates Pentecost on its own."""
 verses = [
-  { ref = "Acts.2.1-Acts.2.41", link = "describes", note = "the day of Pentecost, the tongues, Peter's sermon" },
+  { ref = "Acts.2.1-Acts.2.41", link = "describes", note = "the day of Pentecost, the speaking in other languages, Peter's sermon" },
   { ref = "Joel.2.28-Joel.2.32", link = "background", note = "the prophecy Peter quotes" },
-  { ref = "Acts.11.15-Acts.11.16", link = "alludes", note = "Peter recalls the Spirit falling at the beginning" },
+  { ref = "Acts.11.15-Acts.11.16", link = "alludes", note = "Peter recalls the Spirit coming down at the start" },
 ]
 
 [[positions]]
@@ -23,8 +20,7 @@ earliest = 33
 latest = 33
 held_by = "Colin Humphreys"
 summary = """
-If the crucifixion falls on 3 April 33 CE, as Humphreys argues, the Pentecost of Acts 2 falls \
-later in 33 CE. The year is derived from the crucifixion date, not separately attested."""
+The scholar Colin Humphreys argues that the crucifixion fell on 3 April 33 CE. If so, the Pentecost of Acts 2 came later that same year. The year is worked out from the crucifixion date. No source gives it directly."""
 citations = [{ source = "wikipedia-date-of-crucifixion" }]
 
 [[positions]]
@@ -34,6 +30,5 @@ tradition = "chronological"
 earliest = 30
 latest = 30
 summary = """
-If the crucifixion falls on 7 April 30 CE, the Pentecost of Acts 2 falls later in 30 CE. The year \
-is derived from the crucifixion date."""
+If the crucifixion fell on 7 April 30 CE, the Pentecost of Acts 2 came later in 30 CE. The year is worked out from the crucifixion date."""
 citations = [{ source = "wikipedia-date-of-crucifixion" }]
