@@ -20,11 +20,11 @@ beforeAll(async () => {
     INSERT INTO sources(source_id,kind,title) VALUES ('src-a','book','Book A'),('src-b','article','Article B');
     INSERT INTO eras VALUES ('era-1','Monarchy',-1000,-587,'s'),('era-2','Exile',-586,-539,'s'),('era-3','Hellenistic',-330,-63,'s');
 
-    INSERT INTO events VALUES ('ev-exodus','Exodus','narrative','biblical-narrative','contested','draft','sum',NULL,-1446,-1200);
-    INSERT INTO events VALUES ('ev-fall','Fall of Jerusalem','narrative','political','firm','reviewed','sum',NULL,-587,-586);
-    INSERT INTO events VALUES ('ev-dan','Daniel written','composition','composition','contested','draft','sum',NULL,-600,-164);
+    INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-exodus','Exodus','narrative','biblical-narrative','contested','draft','sum',NULL,-1446,-1200);
+    INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-fall','Fall of Jerusalem','narrative','political','firm','reviewed','sum',NULL,-587,-586);
+    INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-dan','Daniel written','composition','composition','contested','draft','sum',NULL,-600,-164);
     INSERT INTO event_books VALUES ('ev-dan',27),('ev-dan',26);
-    INSERT INTO events VALUES ('ev-canon','Torah closed','canon','canon','speculative','draft','sum',NULL,-450,-400);
+    INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-canon','Torah closed','canon','canon','speculative','draft','sum',NULL,-450,-400);
 
     INSERT INTO positions VALUES ('ev-exodus/late','ev-exodus',2,'Late','Critical',-1290,-1200,'late sum','Scholars B');
     INSERT INTO positions VALUES ('ev-exodus/early','ev-exodus',1,'Early','Conservative',-1446,-1406,'early sum',NULL);
@@ -127,6 +127,31 @@ describe("getTimelineWindow", () => {
     const w = getTimelineWindow({ from: -600, to: -586 });
     expect(w.eras.map((e) => e.id).sort()).toEqual(["era-1", "era-2"]);
     expect(w.eras[0]).toHaveProperty("name");
+  });
+});
+
+describe("traditional lens columns", () => {
+  const setTraditional = () =>
+    fixture.db!.prepare("UPDATE events SET traditional_earliest = -1900, traditional_latest = -1850 WHERE event_id = 'ev-fall'").run();
+  const clear = () =>
+    fixture.db!.prepare("UPDATE events SET traditional_earliest = NULL, traditional_latest = NULL WHERE event_id = 'ev-fall'").run();
+
+  it("getEvent returns traditional: null when the columns are NULL", async () => {
+    const { getEvent } = await import("./timeline");
+    expect(getEvent("ev-exodus")!.traditional).toBeNull();
+  });
+
+  it("getEvent and getEventSummaries return the populated envelope", async () => {
+    const { getEvent, getEventSummaries } = await import("./timeline");
+    setTraditional();
+    try {
+      expect(getEvent("ev-fall")!.traditional).toEqual({ earliest: -1900, latest: -1850 });
+      const rows = getEventSummaries(["ev-fall", "ev-exodus"]);
+      expect(rows.find((e) => e.id === "ev-fall")!.traditional).toEqual({ earliest: -1900, latest: -1850 });
+      expect(rows.find((e) => e.id === "ev-exodus")!.traditional).toBeNull();
+    } finally {
+      clear();
+    }
   });
 });
 

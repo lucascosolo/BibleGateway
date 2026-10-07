@@ -15,7 +15,7 @@ function note(subject: Subject, extra: Partial<ToledotNote> = {}): ToledotNote {
 
 const event = (over: Record<string, unknown> = {}): Subject => ({
   kind: "event", id: "ev-exodus", title: "The Exodus", status: "reviewed", confidence: "contested",
-  earliest: -1446, latest: -1200, positions: [{ label: "Early date (c. 1446 BCE)" }, { label: "Late date (13th century BCE)" }],
+  earliest: -1446, latest: -1200, positions: [{ label: "Early date (c. 1446 BCE)", tradition: "chronological" }, { label: "Late date (13th century BCE)", tradition: "critical" }],
   ...over,
 }) as Subject;
 
@@ -30,13 +30,35 @@ describe("toledotSentence: events", () => {
   });
 
   it("one position, firm: 'Dated' with the formatted range", () => {
-    const s = toledotSentence(note(event({ confidence: "firm", earliest: -587, latest: -586, title: "Fall of Jerusalem", positions: [{ label: "Only" }] })));
+    const s = toledotSentence(note(event({ confidence: "firm", earliest: -587, latest: -586, title: "Fall of Jerusalem", positions: [{ label: "Only", tradition: "critical" }] })));
     expect(s).toMatchObject({ lead: "Dated", body: "587–586 BCE — Fall of Jerusalem", href: "/toledot/events/ev-exodus" });
   });
 
   it("one position, not firm: names the confidence", () => {
-    const s = toledotSentence(note(event({ confidence: "speculative", earliest: -450, latest: -450, title: "Torah closed", positions: [{ label: "Only" }] })));
+    const s = toledotSentence(note(event({ confidence: "speculative", earliest: -450, latest: -450, title: "Torah closed", positions: [{ label: "Only", tradition: "critical" }] })));
     expect(s).toMatchObject({ lead: "Dated, speculative", body: "450 BCE — Torah closed" });
+  });
+});
+
+describe("toledotSentence: traditional lens", () => {
+  it("joins scholarly position labels only", () => {
+    const s = toledotSentence(note(event({
+      positions: [
+        { label: "A", tradition: "chronological" }, { label: "B", tradition: "traditional" }, { label: "C", tradition: "critical" },
+      ],
+    })));
+    expect(s.lead).toBe("Dating disputed");
+    expect(s.body).toContain("A");
+    expect(s.body).toContain("C");
+    expect(s.body).not.toContain("B");
+  });
+
+  it("only traditional positions: lead 'Traditional date', body is the label", () => {
+    const s = toledotSentence(note(event({
+      positions: [{ label: "Ussher's count", tradition: "traditional" }],
+    })));
+    expect(s.lead).toBe("Traditional date");
+    expect(s.body).toContain("Ussher's count");
   });
 });
 

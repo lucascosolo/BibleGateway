@@ -8,7 +8,7 @@ afterEach(cleanup);
 
 type Ev = EventSummary & { display: string };
 const ev = (id: string, title: string, axis: Ev["axis"], confidence: Ev["confidence"], display: string): Ev => ({
-  id, title, axis, category: "x", confidence, status: "draft", earliest: -900, latest: -800, bookIds: [], segment: null, display,
+  id, title, axis, category: "x", confidence, status: "draft", earliest: -900, latest: -800, bookIds: [], segment: null, traditional: null, display,
 });
 
 const eras: Era[] = [{ id: "monarchy", name: "Divided monarchy", start: -930, end: -586, summary: "", citations: [] }];
@@ -38,5 +38,17 @@ describe("TimelineStrip", () => {
     for (const axis of ["narrative", "composition", "canon"]) {
       expect(screen.getAllByLabelText(new RegExp(`^${axis}`, "i")).length).toBeGreaterThan(0);
     }
+  });
+
+  it("draws a labelled traditional-chronology extension when the event has one", () => {
+    const withTrad: Ev[] = [{ ...ev("fall-of-samaria", "Fall of Samaria", "narrative", "contested", "722–720 BCE"), traditional: { earliest: -1900, latest: -1850 } }];
+    const { container } = render(<TimelineStrip eras={eras} events={withTrad} from={-2000} to={300} />);
+    const el = container.querySelector('[aria-label^="traditional chronology:"]');
+    expect(el).not.toBeNull();
+  });
+
+  it("draws none when traditional is null", () => {
+    const { container } = render(<TimelineStrip eras={eras} events={events} from={-1000} to={300} />);
+    expect(container.querySelector('[aria-label^="traditional chronology:"]')).toBeNull();
   });
 });
