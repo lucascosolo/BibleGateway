@@ -20,10 +20,11 @@ label = "October 539 BCE (16 Tashritu)"
 tradition = "chronological"
 earliest = -539
 latest = -539
+held_by = "A. K. Grayson (editor and translator of ABC 7, per Livius)"
 summary = """
-Babylon was captured on the 16th of Tashritu, 12 October 539 BCE on the Julian calendar, in Nabonidus's seventeenth year."""
+Babylon was captured on the 16th of Tashritu, 12 October 539 BCE on the Julian calendar, in Nabonidus's seventeenth year. The primary text is the Nabonidus Chronicle, in Grayson's translation as reproduced by Livius: "On the sixteenth day, Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon"; Cyrus himself entered "on the third day of the month Arahsamna". Read directly on Livius: the entry into Babylon is at iii.15–16 and Cyrus's own entry at iii.18; the month of the sixteenth day falls in a damaged line (iii.12) and is not legible in the translation as printed, so the equation with 12 October 539 rests on the modern reconstruction cited below."""
 citations = [
-  { source = "livius-abc7" },
+  { source = "livius-abc7", locator = "col. iii 15–16 (sixteenth day); iii 18 (Cyrus enters, 3 Arahsamna)" },
   { source = "wikipedia-fall-of-babylon" },
 ]
 

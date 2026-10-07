@@ -20,8 +20,14 @@ tradition = "chronological"
 earliest = -445
 latest = -444
 summary = """
-Artaxerxes I ruled from August 465 to December 424 BCE; his twentieth year is 445 or 444 BCE, and the wall was rebuilt within 52 days."""
-citations = [{ source = "wikipedia-nehemiah" }, { source = "wikipedia-artaxerxes-i" }]
+Artaxerxes I ruled from August 465 to December 424 BCE; his twentieth year is 445 or 444 BCE, and the wall was rebuilt within 52 days. Wikipedia's \
+Nehemiah article refers the date to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary \
+(1988); that page was not read and the article does not show the author's name."""
+citations = [
+  { source = "wikipedia-nehemiah", locator = "n. 5" },
+  { source = "ezra-nehemiah-commentary-1988", locator = "p. 140, as cited by Wikipedia 'Nehemiah' n. 5" },
+  { source = "wikipedia-artaxerxes-i" },
+]
 
 [[attestations]]
 artifact = "elephantine-temple-petition-407"

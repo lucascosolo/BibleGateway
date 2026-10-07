@@ -7,7 +7,8 @@ status = "draft"
 summary = """
 Acts 2 narrates the first Pentecost after the resurrection, when the apostles speak in other \
 tongues and Peter preaches in Jerusalem. Its year follows the date given to the crucifixion, \
-which is unsettled."""
+which is unsettled. Both positions below take the year of the crucifixion and have the same \
+holders; no scholar read dates Pentecost separately."""
 verses = [
   { ref = "Acts.2.1-Acts.2.41", link = "describes", note = "the day of Pentecost, the tongues, Peter's sermon" },
   { ref = "Joel.2.28-Joel.2.32", link = "background", note = "the prophecy Peter quotes" },

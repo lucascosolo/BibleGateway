@@ -40,3 +40,16 @@ Wikipedia says Acts suggests the conversion occurred four to seven years after t
 the years here are that interval applied to a 30 CE or 33 CE crucifixion (34–40), my computation, \
 not a cited scholar's."""
 citations = [{ source = "wikipedia-conversion-of-paul" }]
+
+[[positions]]
+id = "33-36"
+label = "33-36 CE"
+tradition = "chronological"
+earliest = 33
+latest = 36
+summary = """
+Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted \
+scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus \
+before this date range." No individual holder is named on that page; Riesner, Jewett and \
+Luedemann were not found on the pages read."""
+citations = [{ source = "wikipedia-chronology-of-jesus", locator = "section Conversion of Paul" }]

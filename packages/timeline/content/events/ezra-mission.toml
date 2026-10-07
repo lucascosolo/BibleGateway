@@ -28,9 +28,10 @@ label = "398 BCE (Artaxerxes II, seventh year)"
 tradition = "critical"
 earliest = -398
 latest = -398
+held_by = "Albin van Hoonacker"
 summary = """
-Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). It was proposed in 1890; the pages read name no proponent."""
-citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
+Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). Wikipedia's Albin van Hoonacker article lists his 1890 "Nehemie et Esdras. Nouvelle hypothese sur la chronologie de l'epoque de la Restauration juive" and his 1892 "Nehemie en l'an 20 d'Artaxerxes I. Esdras en l'an 7 d'Artaxerxes II", arguing Ezra in year 7 of Artaxerxes II; the 398 conversion is the Ezra article's."""
+citations = [{ source = "wikipedia-albin-van-hoonacker", locator = "list of works, 1890 and 1892" }, { source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
 
   [[positions.arguments]]
   stance = "for"

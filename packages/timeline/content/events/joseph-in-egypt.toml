@@ -31,3 +31,14 @@ Wood identifies a mid-19th-century BC Asiatic settlement at Pi-Ramesse with Jaco
 shortly after their arrival in Egypt. Joseph's rise precedes that arrival (Genesis 45-46), so \
 this is a bracket for the end of his rise, not a date for his life."""
 citations = [{ source = "wood-2005", locator = "p. 488" }]
+
+[[positions]]
+id = "ussher-1715"
+label = "Ussher, Annals: Joseph made governor, 1715 BC (age 30)"
+tradition = "traditional"
+earliest = -1715
+latest = -1715
+held_by = "James Ussher"
+summary = """
+Ussher has Joseph, 30 years old, interpret Pharaoh's dreams and be made governor under 2289b AM, 1715 BC; the seven years of famine begin under 2296c AM, 1708 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraphs 131-133" }]

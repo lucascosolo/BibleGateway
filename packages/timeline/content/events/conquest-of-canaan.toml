@@ -86,3 +86,14 @@ citations = [
   a destruction of Hazor c. 1230 BC would leave no city for the Jabin of Judges 4 to rule."""
   citations = [{ source = "wood-2005", locator = "pp. 476–477" }]
   verses = [{ ref = "Josh.11.10-Josh.11.11", link = "describes" }, { ref = "Judg.4.2", link = "describes" }]
+
+[[positions]]
+id = "ussher-1451"
+label = "Ussher, Annals: fall of Jericho, 1451 BC"
+tradition = "traditional"
+earliest = -1451
+latest = -1451
+held_by = "James Ussher"
+summary = """
+Ussher places the fall of Jericho under 2553c AM, 1451 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraph 312" }]

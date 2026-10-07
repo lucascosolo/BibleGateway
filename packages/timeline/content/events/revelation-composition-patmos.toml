@@ -20,9 +20,10 @@ earliest = 81
 latest = 96
 held_by = "Irenaeus of Lyons"
 summary = """
-Irenaeus, as quoted by Eusebius, says the Apocalypse "was seen not long ago, but almost in our \
+Irenaeus (Against Heresies 5.30.3, read directly: "towards the end of Domitian's reign"; Eusebius quotes him similarly) says the Apocalypse "was seen not long ago, but almost in our \
 own generation, at the end of the reign of Domitian". The years are Domitian's reign, 81–96."""
 citations = [
+  { source = "newadvent-irenaeus-ah-5", locator = "5.30.3" },
   { source = "newadvent-eusebius-he-5", locator = "5.8.6" },
   { source = "newadvent-eusebius-he-3", locator = "3.18.3" },
   { source = "wikipedia-book-of-revelation" },
@@ -46,3 +47,12 @@ note = """
 Eusebius reports John condemned to Patmos in Domitian's persecution, and quotes Irenaeus on \
 the date of the vision."""
 citations = [{ source = "newadvent-eusebius-he-3", locator = "3.18.1, 3.18.3" }]
+
+[[attestations]]
+artifact = "irenaeus-against-heresies-5-30"
+relation = "consistent"
+note = """
+Irenaeus writes that the Apocalypse "was seen no very long time since, but almost in our day, \
+towards the end of Domitian's reign". He does not name the author's exile on Patmos in this \
+sentence."""
+citations = [{ source = "newadvent-irenaeus-ah-5", locator = "5.30.3" }]

@@ -6,7 +6,10 @@ language = "Greek"
 summary = """
 An inscription from Delphi in which the emperor Claudius refers to Gallio as "my friend and \
 proconsul". It mentions Claudius's twenty-sixth acclamation as imperator, which corresponds to \
-52 CE, and so fixes Gallio's proconsulship of Achaea (Acts 18:12) at about 51–52 CE. Language, \
-find-spot details and museum are not confirmed here."""
-citations = [{ source = "wikipedia-gallio" }]
+52 CE, and so fixes Gallio's proconsulship of Achaea (Acts 18:12) at about 51–52 CE. Wikipedia gives the find-spot as the \
+temple of Apollo at Delphi, the text as nine fragments of a letter from Claudius, the standard \
+publication as Fouilles de Delphes III 4:286 and SIG II 801d, and the museum as the Delphi \
+Archaeological Museum; the date of discovery (early 20th century) is as reported there. The \
+editor's name was not read."""
+citations = [{ source = "wikipedia-gallio-inscription" }, { source = "wikipedia-gallio" }]
 verses = [{ ref = "Acts.18.12", link = "dates", note = "Gallio proconsul of Achaia" }]

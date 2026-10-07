@@ -29,6 +29,23 @@ citations = [
   { source = "newadvent-eusebius-he-2", locator = "2.25.5" },
 ]
 
+[[positions]]
+id = "nero-14"
+label = "Fourteenth year of Nero (Jerome)"
+tradition = "traditional"
+earliest = 67
+latest = 68
+summary = """
+Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero", \
+and that Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. \
+Jerome gives no calendar year. Nero's reign began on 13 October 54 and ended with his death on \
+9 June 68, so his fourteenth regnal year runs from October 67 to June 68; Eusebius's Chronicle \
+was not read."""
+citations = [
+  { source = "newadvent-jerome-de-viris", locator = "ch. 1 (Peter); ch. 5 (Paul)" },
+  { source = "wikipedia-nero", locator = "lead and reign sections: accession 13 October 54, death 9 June 68" },
+]
+
 [[attestations]]
 artifact = "one-clement-5"
 relation = "consistent"

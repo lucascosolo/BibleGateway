@@ -33,3 +33,14 @@ citations = [
   { source = "wood-2005", locator = "pp. 477, 488" },
   { source = "wikipedia-gideon" },
 ]
+
+[[positions]]
+id = "ussher-1245"
+label = "Ussher, Annals: Gideon called, 1245 BC"
+tradition = "traditional"
+earliest = -1245
+latest = -1245
+held_by = "James Ussher"
+summary = """
+Ussher dates Gideon's call after the fourth (Midianite) oppression to 2759d AM, 1245 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraph 356" }]

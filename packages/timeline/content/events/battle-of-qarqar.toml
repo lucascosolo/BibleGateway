@@ -18,7 +18,7 @@ earliest = -853
 latest = -853
 held_by = "Edwin R. Thiele"
 summary = "Thiele found his Hebrew-text chronology required Qarqar in 853."
-citations = [{ source = "young-2004-samaria", locator = "p. 593" }, { source = "young-2005", locator = "p. 232" }]
+citations = [{ source = "wikipedia-mysterious-numbers", locator = "Ahab ends 853 in the chronology table; second-hand" }, { source = "young-2004-samaria", locator = "p. 593" }, { source = "young-2005", locator = "p. 232" }]
 
 [[positions]]
 id = "854"

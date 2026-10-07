@@ -14,6 +14,14 @@ verses = [
   { ref = "Acts.25.1-Acts.26.32", link = "describes", note = "Festus; the appeal to Caesar; Agrippa II" },
 ]
 
+[[attestations]]
+artifact = "josephus-antiquities-20-182"
+relation = "corroborates"
+note = """
+Josephus says Nero sent Porcius Festus as successor to Felix, as Acts 24:27 has it. He gives no \
+year, so it does not settle the 55-61 CE range."""
+citations = [{ source = "lexundria-josephus-ant-20", locator = "20.182" }]
+
 [[positions]]
 id = "festus-59"
 label = "Festus succeeds Felix c. 59 CE"

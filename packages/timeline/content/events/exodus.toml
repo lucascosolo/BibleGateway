@@ -50,7 +50,7 @@ citations = [{ source = "wood-2005", locator = "pp. 475–489" }]
 [[positions]]
 id = "late"
 label = "Late date (13th century BCE, reign of Ramesses II)"
-tradition = "conservative-critical"
+tradition = "critical"
 earliest = -1279
 latest = -1213
 held_by = "K. A. Kitchen"

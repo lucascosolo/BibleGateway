@@ -21,7 +21,7 @@ earliest = -605
 latest = -605
 held_by = "Rodger C. Young"
 summary = "Dated 605n/605t, in the latter half of the year Jeremiah gives (606t)."
-citations = [{ source = "young-2004", locator = "pp. 35-36" }, { source = "young-2005", locator = "p. 232" }]
+citations = [{ source = "young-2004", locator = "pp. 33 (table), 36" }, { source = "young-2005", locator = "p. 232" }]
 
 [[attestations]]
 artifact = "babylonian-chronicle-abc5"

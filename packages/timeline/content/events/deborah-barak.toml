@@ -37,3 +37,14 @@ summary = """
 Seder Olam Rabbah places Deborah's 40 years of judging Israel from 1107 BC until her death in \
 1067 BC (as reported by Wikipedia)."""
 citations = [{ source = "wikipedia-deborah" }]
+
+[[positions]]
+id = "ussher-1285"
+label = "Ussher, Annals: Deborah judges, 1285 BC"
+tradition = "traditional"
+earliest = -1285
+latest = -1285
+held_by = "James Ussher"
+summary = """
+Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim stands under 2719d AM, 1285 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraph 351" }]

@@ -41,3 +41,14 @@ Albright and Wright believed the patriarchs were real individuals or believable 
 lived in the patriarchal age, the 2nd millennium BCE. The range is the whole millennium, not a \
 narrower claim."""
 citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
+
+[[positions]]
+id = "ussher-annals"
+label = "Ussher, Annals: Abraham called from Ur, 1922 BC (AM 2083)"
+tradition = "traditional"
+earliest = -1922
+latest = -1922
+held_by = "James Ussher"
+summary = """
+Ussher heads the call of Abraham out of Ur 2083a AM, 1922 BC; after Terah died at Haran he is called again in 2083 AM, 1921 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraphs 70-71" }]

@@ -928,3 +928,153 @@ kind = "edition"
 author = "Clement of Rome"
 title = "1 Clement, Hoole translation (Early Christian Writings)"
 url = "http://www.earlychristianwritings.com/text/1clement-roberts.html"
+
+[[source]]
+id = "ussher-annals"
+kind = "book"
+author = "James Ussher"
+title = "The Annals of the World (English text, paragraph-numbered; Internet Archive full text)"
+publisher = "Internet Archive (digitised from the 1658 English edition, London: E. Tyler for F. Crook and G. Bedell)"
+year = 1658
+url = "https://archive.org/details/AnnalsOfTheWorld"
+
+[[source]]
+id = "lexundria-josephus-ant-20"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, book 20, with Niese section numbers (Lexundria)"
+publisher = "Lexundria"
+url = "https://lexundria.com/j_aj/20.182/wst"
+
+[[source]]
+id = "lexundria-josephus-ant-18-116"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, book 18, sections 116-119 (Lexundria)"
+publisher = "Lexundria"
+url = "https://lexundria.com/j_aj/18.116/wst"
+
+[[source]]
+id = "newadvent-irenaeus-ah-5"
+kind = "edition"
+author = "Irenaeus of Lyons, trans. Alexander Roberts and William Rambaut"
+title = "Against Heresies, book 5, in Ante-Nicene Fathers vol. 1 (New Advent)"
+publisher = "Christian Literature Publishing Co. (Buffalo, NY); online at New Advent"
+year = 1885
+url = "https://www.newadvent.org/fathers/0103530.htm"
+
+[[source]]
+id = "newadvent-jerome-de-viris"
+kind = "edition"
+author = "Jerome"
+title = "De viris illustribus (Lives of Illustrious Men), chapters 1 and 5 (New Advent)"
+publisher = "New Advent"
+year = 2026
+url = "https://www.newadvent.org/fathers/2708.htm"
+
+[[source]]
+id = "wikipedia-gallio-inscription"
+kind = "web"
+author = "Wikipedia"
+title = "Gallio inscription"
+publisher = "Wikipedia"
+year = 2026
+url = "https://en.wikipedia.org/wiki/Gallio_inscription"
+
+[[source]]
+id = "lexundria-josephus-ant-14-66"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews 14.66 (Lexundria)"
+publisher = "Lexundria"
+url = "https://www.lexundria.com/j_aj/14.66/wst"
+
+[[source]]
+id = "biblegateway-1-maccabees-nrsvue"
+kind = "edition"
+author = "First Maccabees (author unnamed), NRSVUE"
+title = "1 Maccabees 1:54 and 4:52 (Bible Gateway, NRSVUE)"
+publisher = "Bible Gateway"
+url = "https://www.biblegateway.com/passage/?search=1+Maccabees+1%3A54%3B+1+Maccabees+4%3A52&version=NRSVUE"
+
+[[source]]
+id = "wikipedia-albin-van-hoonacker"
+kind = "web"
+author = "Wikipedia"
+title = "Albin van Hoonacker"
+publisher = "Wikipedia"
+url = "https://en.wikipedia.org/wiki/Albin_van_Hoonacker"
+
+[[source]]
+id = "wikipedia-daniel-8"
+kind = "web"
+author = "Wikipedia"
+title = "Daniel 8"
+publisher = "Wikipedia"
+url = "https://en.wikipedia.org/wiki/Daniel_8"
+
+[[source]]
+id = "wikipedia-daniel-11"
+kind = "web"
+author = "Wikipedia"
+title = "Daniel 11"
+publisher = "Wikipedia"
+url = "https://en.wikipedia.org/wiki/Daniel_11"
+
+[[source]]
+id = "wikipedia-nero"
+kind = "web"
+title = "Nero (Wikipedia)"
+publisher = "Wikimedia Foundation"
+url = "https://en.wikipedia.org/wiki/Nero"
+
+[[source]]
+id = "wikipedia-mysterious-numbers"
+kind = "web"
+author = "Wikipedia"
+title = "The Mysterious Numbers of the Hebrew Kings"
+publisher = "Wikimedia Foundation"
+year = 2026
+url = "https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings"
+
+[[source]]
+id = "cojs-nimrud-prism"
+kind = "web"
+author = "Center for Online Judaic Studies (citing K. Lawson Younger Jr., Israelites in Exile, BAR 29/6, Nov-Dec 2003)"
+title = "The Nimrud Prism, 720 BCE"
+publisher = "Center for Online Judaic Studies"
+year = 2003
+url = "https://cojs.org/the_nimrud_prism-_720_bce/"
+
+[[source]]
+id = "wikipedia-crucifixion-of-jesus"
+kind = "web"
+title = "Crucifixion of Jesus (Wikipedia)"
+publisher = "Wikimedia Foundation"
+url = "https://en.wikipedia.org/wiki/Crucifixion_of_Jesus"
+
+[[source]]
+id = "ezra-nehemiah-commentary-1988"
+kind = "book"
+title = "Ezra-Nehemiah: A Commentary (author not shown on the citing page)"
+publisher = "Westminster John Knox Press"
+year = 1988
+isbn = "978-0-664-22186-7"
+
+[[source]]
+id = "luckenbill-arab-1"
+kind = "book"
+author = "Daniel David Luckenbill"
+title = "Ancient Records of Assyria and Babylonia, Volume I: Historical Records of Assyria from the Earliest Times to Sargon"
+publisher = "University of Chicago Press"
+year = 1926
+url = "https://archive.org/details/ancient_records_assyria1"
+
+[[source]]
+id = "luckenbill-arab-2"
+kind = "book"
+author = "Daniel David Luckenbill"
+title = "Ancient Records of Assyria and Babylonia, Volume II: Historical Records of Assyria from Sargon to the End"
+publisher = "University of Chicago Press"
+year = 1927
+url = "https://archive.org/details/ancient_records_assyria2"

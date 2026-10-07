@@ -18,9 +18,11 @@ label = "167-164 BCE"
 tradition = "chronological"
 earliest = -167
 latest = -164
-summary = """
+held_by = "First Maccabees (author unnamed)"
+summary = """First Maccabees 1:54 (NRSVUE): "Now on the fifteenth day of Chislev, in the one hundred forty-fifth year, they erected a desolating sacrilege on the altar of burnt offering"; 4:52: "Early in the morning on the twenty-fifth day of the ninth month, which is the month of Chislev, in the one hundred forty-eighth year". Years 145 and 148 of the Seleucid count are 167 and 164 BCE; that conversion is the cataloguer's and Wikipedia's, no converting scholar was found. 
 The revolt ran 167-164 BCE as the main phase (with fighting to 141 BCE), with the temple rededicated on 25 Kislev 164 BCE; the abomination is dated to 167 BCE, when Antiochus ended the twice-daily sacrifice."""
 citations = [
+  { source = "biblegateway-1-maccabees-nrsvue", locator = "1:54; 4:52" },
   { source = "wikipedia-maccabean-revolt" },
   { source = "wikipedia-abomination-of-desolation" },
   { source = "wikipedia-antiochus-iv" },

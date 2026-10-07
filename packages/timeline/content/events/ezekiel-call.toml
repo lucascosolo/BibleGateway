@@ -18,9 +18,10 @@ label = "593 BCE (fifth year of Jehoiachin's exile)"
 tradition = "chronological"
 earliest = -593
 latest = -593
+held_by = "Walther Eichrodt (as cited by Wikipedia, footnote 6)"
 summary = """
 The fifth year of the exile of Jehoiachin is 593 BCE. The "thirtieth year" is read either as Ezekiel's age or, in rabbinic sources, as counted from the discovery of the Book of the Law in 622 BCE."""
 citations = [
-  { source = "wikipedia-ezekiel" },
+  { source = "wikipedia-ezekiel", locator = "Chronology section, footnote 6: Eichrodt, Ezekiel: A Commentary (2003), p. 407, not checked directly" },
   { source = "wikipedia-book-of-ezekiel" },
 ]

@@ -42,9 +42,17 @@ earliest = 30
 latest = 30
 summary = """
 Humphreys and Waddington find that the lunar Jewish calendar leaves two plausible Fridays, 7 \
-April 30 CE and 3 April 33 CE; they themselves prefer 33. The cited pages name no scholar who \
-prefers 30, so no holder is given."""
-citations = [{ source = "wikipedia-date-of-crucifixion" }]
+April 30 CE and 3 April 33 CE; they themselves prefer 33. Rainer Riesner holds that 14 Nisan (7 \
+April) of the year 30 is "far and away the most likely date of the crucifixion", and says this is \
+also the view of the majority of contemporary scholars. Wikipedia's Chronology of Jesus (section \
+"Astronomical analysis - Newton's method") says Humphreys rejects AD 27 and AD 34 and confirms \
+7 April AD 30 and 3 April AD 33 as the two feasible dates."""
+held_by = "Rainer Riesner"
+citations = [
+  { source = "wikipedia-crucifixion-of-jesus", locator = "Chronology section, quoting Riesner" },
+  { source = "wikipedia-date-of-crucifixion" },
+  { source = "wikipedia-chronology-of-jesus" },
+]
 
   [[positions.arguments]]
   stance = "for"

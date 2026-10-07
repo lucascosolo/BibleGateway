@@ -19,7 +19,7 @@ verses = [
 [[positions]]
 id = "consensus"
 label = "701 BCE"
-tradition = "consensus"
+tradition = "chronological"
 earliest = -701
 latest = -701
 summary = """

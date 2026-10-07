@@ -52,3 +52,14 @@ summary = """
 Wood says that with a 13th-century exodus Jacob would have had to enter Egypt much later, \
 c. 1700 BC, than the settlement he identifies."""
 citations = [{ source = "wood-2005", locator = "p. 488" }]
+
+[[positions]]
+id = "ussher-1706"
+label = "Ussher, Annals: Jacob goes down into Egypt, 1706 BC"
+tradition = "traditional"
+earliest = -1706
+latest = -1706
+held_by = "James Ussher"
+summary = """
+Ussher has Jacob, aged 130, go down into Egypt at the beginning of the third year of the famine, under 2298b AM, 1706 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraphs 135-138" }]

@@ -17,6 +17,15 @@ verses = [
   { ref = "Acts.13.24-Acts.13.25", link = "alludes", note = "Paul recalls John's baptism of repentance" },
 ]
 
+[[attestations]]
+artifact = "josephus-antiquities-18-116"
+relation = "consistent"
+note = """
+Josephus independently reports John the Baptist, his call to baptism and virtue, and his \
+execution by Herod at Machaerus. He does not date John to Tiberius's fifteenth year and names \
+no year or Pilate, so it neither confirms nor contradicts Luke 3:1-2."""
+citations = [{ source = "lexundria-josephus-ant-18-116", locator = "18.116-119" }]
+
 [[positions]]
 id = "28-29"
 label = "Late 28 or early 29 CE"

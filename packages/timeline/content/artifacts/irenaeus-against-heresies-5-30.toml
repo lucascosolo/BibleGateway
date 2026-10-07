@@ -1,0 +1,12 @@
+id = "irenaeus-against-heresies-5-30"
+name = "Irenaeus, Against Heresies 5.30.3 (date of the Apocalypse)"
+kind = "literary-text"
+status = "draft"
+language = "Greek (surviving in Latin)"
+summary = """
+Irenaeus, on the number of the beast, says of the Apocalypse: "For that was seen no very long \
+time since, but almost in our day, towards the end of Domitian's reign." Roberts and Rambaut \
+translation, read directly on New Advent."""
+citations = [
+  { source = "newadvent-irenaeus-ah-5", locator = "5.30.3" },
+]

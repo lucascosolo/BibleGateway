@@ -21,8 +21,8 @@ citations = [{ source = "preceptaustin-ezra-7" }, { source = "wikipedia-ezra" }]
 [[views]]
 label = "398 BCE (Artaxerxes II)"
 text = """
-Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II; proposed in 1890."""
-citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
+Nehemiah precedes Ezra, who came in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works)."""
+citations = [{ source = "wikipedia-albin-van-hoonacker" }, { source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
 
 [[views]]
 label = "428 BCE (thirty-seventh year of Artaxerxes I)"

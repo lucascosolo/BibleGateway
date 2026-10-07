@@ -13,9 +13,10 @@ label = "63 BCE"
 tradition = "chronological"
 earliest = -63
 latest = -63
+held_by = "Flavius Josephus"
 summary = """
-Pompey's siege of Jerusalem took place in 63 BCE and lasted three months before the Temple precinct was breached."""
-citations = [{ source = "wikipedia-siege-jerusalem-63bc" }]
+Josephus, Antiquities 14.66 (Whiston): "the city was taken on the third month, on the day of the fast, upon the hundred and seventy-ninth olympiad, when Caius Antonius and Marcus Tullius Cicero were consuls". Wikipedia gives the year as 63 BC (the consular year is the cataloguer's reading). Pompey's siege of Jerusalem took place in 63 BCE and lasted three months before the Temple precinct was breached."""
+citations = [{ source = "lexundria-josephus-ant-14-66", locator = "Ant. 14.66" }, { source = "wikipedia-siege-jerusalem-63bc" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-14-61"

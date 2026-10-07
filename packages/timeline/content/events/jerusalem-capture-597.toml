@@ -13,7 +13,7 @@ verses = [{ ref = "2Kgs.24.10-2Kgs.24.17", link = "describes" }]
 [[positions]]
 id = "chronicle"
 label = "February/March 597 BCE (2 Addaru, Nebuchadnezzar's 7th year)"
-tradition = "consensus"
+tradition = "chronological"
 earliest = -597
 latest = -597
 summary = """

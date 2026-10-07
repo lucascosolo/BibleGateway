@@ -31,3 +31,14 @@ summary = """
 Albright and Wright placed the patriarchs in the 2nd millennium BCE. The sources read give no \
 narrower date for the covenant itself, so the range is the whole millennium."""
 citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
+
+[[positions]]
+id = "ussher-1912"
+label = "Ussher, Annals: covenant of Genesis 15, 1912 BC"
+tradition = "traditional"
+earliest = -1912
+latest = -1912
+held_by = "James Ussher"
+summary = """
+Ussher places the Genesis 15 covenant under 2092 AM, 1912 BC, and the Genesis 17 covenant of circumcision (Abram aged 99) under 2107c AM, 1897 BC."""
+citations = [{ source = "ussher-annals", locator = "paragraphs 77, 81" }]

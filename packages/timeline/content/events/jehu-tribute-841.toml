@@ -19,7 +19,7 @@ earliest = -841
 latest = -841
 held_by = "Edwin R. Thiele"
 summary = "Thiele's chronology agrees with the tribute of Jehu in 841; Young's tables begin Jehu in 841n/841t."
-citations = [{ source = "young-2005", locator = "p. 232; Table 1, p. 245" }]
+citations = [{ source = "young-2005", locator = "p. 232; Table 1, p. 245" }, { source = "wikipedia-mysterious-numbers", locator = "Jehu 841 in the chronology table; second-hand" }]
 
 [[attestations]]
 artifact = "black-obelisk"

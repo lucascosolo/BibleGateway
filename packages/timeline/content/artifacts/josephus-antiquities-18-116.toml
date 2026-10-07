@@ -1,0 +1,16 @@
+id = "josephus-antiquities-18-116"
+name = "Josephus, Antiquities 18.116-119 (John called the Baptist)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+Josephus says some Jews held that the destruction of Herod's army was divine punishment for what \
+he did "against John, that was called the Baptist" (18.116). He calls John "a good man" who \
+commanded the Jews to practise virtue and come to baptism, "not in order to the putting away of \
+some sins, but for the purification of the body" (18.117); Herod, fearing John's influence might \
+raise a rebellion, sent him prisoner to Machaerus and had him put to death (18.118-119). Josephus \
+does not mention Tiberius's fifteenth year, Pilate, or any date for John's ministry. Quoted from \
+Whiston's translation."""
+citations = [
+  { source = "lexundria-josephus-ant-18-116", locator = "18.116-119" },
+]

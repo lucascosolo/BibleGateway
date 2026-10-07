@@ -3,6 +3,6 @@ name = "Bubastite Portal (Shoshenq I's Karnak campaign list)"
 kind = "inscription"
 status = "draft"
 language = "Egyptian (hieroglyphic)"
-summary = "At Karnak, a list of cities in the region comprising Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel conquered by Shoshenq I, conventionally identified with the Shishak of 1 Kings 14:25. Whether Jerusalem itself appears in the list is debated."
+summary = "At Karnak, a list of cities in the region comprising Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel conquered by Shoshenq I, conventionally identified with the Shishak of 1 Kings 14:25. Wikipedia's Shoshenq I article says the list \"does not include Jerusalem\" and lists proposed explanations (the mention was erased, Rehoboam's tribute spared the city, or Shoshenq claimed a conquest he did not carry out); Finkelstein is cited as treating the looting narrative as a theological construct. No verdict is taken here."
 citations = [{ source = "wikipedia-shoshenq-i" }, { source = "wikipedia-rehoboam" }]
 verses = [{ ref = "1Kgs.14.25-1Kgs.14.26", link = "background" }]

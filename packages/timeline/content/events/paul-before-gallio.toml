@@ -29,5 +29,6 @@ artifact = "gallio-inscription"
 relation = "corroborates"
 note = """
 Claudius calls Gallio "my friend and proconsul", confirming that he held the Achaean \
-proconsulship and when."""
-citations = [{ source = "wikipedia-gallio" }]
+proconsulship and when. Found at Delphi; published as Fouilles de Delphes III 4:286 and SIG II \
+801d; cites Claudius's 26th acclamation (Wikipedia, Gallio inscription)."""
+citations = [{ source = "wikipedia-gallio-inscription" }, { source = "wikipedia-gallio" }]

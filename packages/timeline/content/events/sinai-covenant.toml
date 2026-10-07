@@ -44,3 +44,14 @@ summary = """
 Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II; Sinai follows within \
 months. Kitchen also argues that the covenant texts match Hittite treaty forms of c. 1400-1200 BC."""
 citations = [{ source = "wood-2005", locator = "pp. 478–479" }]
+
+[[positions]]
+id = "ussher-1491"
+label = "Ussher, Annals: Israel at Sinai, 1491 BC"
+tradition = "traditional"
+earliest = -1491
+latest = -1491
+held_by = "James Ussher"
+summary = """
+Ussher dates the exodus to 2513b AM, 1491 BC, and the arrival at Sinai on the third day of the third month of that first year."""
+citations = [{ source = "ussher-annals", locator = "paragraph 192 and preceding exodus entries" }]
