@@ -16,6 +16,9 @@
   font-size: var(--text-md);
   line-height: var(--leading-normal);
   color: var(--color-ink-muted);
+}
+.toledot-axis__tick[data-edge="start"] .toledot-axis__label { transform: none; }
+.toledot-axis__tick[data-edge="end"] .toledot-axis__label { left: auto; right: 0; transform: none;
   max-width: 62ch;
   text-wrap: pretty;
 }

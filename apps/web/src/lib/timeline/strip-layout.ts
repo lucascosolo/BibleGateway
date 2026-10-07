@@ -66,14 +66,18 @@ export function yearTicks(from: number, to: number, step: number): number[] {
   return ticks;
 }
 
-/** A window around the events, widened to whole centuries with one century of margin. */
+/**
+ * A window around the events, widened to half-centuries with a half-century of margin. The
+ * margin is small on purpose: at phone width the strip shows about 140 years, and a century of
+ * lead-in put the first event just off-screen, so the lanes looked empty until scrolled.
+ */
 export function defaultWindow(events: readonly { earliest: number; latest: number }[]): { from: number; to: number } {
   const nonZero = (year: number, fallback: number) => (year === 0 ? fallback : year);
   if (events.length === 0) return { from: -2000, to: 100 };
   const earliest = Math.min(...events.map((event) => event.earliest));
   const latest = Math.max(...events.map((event) => event.latest));
   return {
-    from: nonZero(Math.floor(earliest / 100) * 100 - 100, 1),
-    to: nonZero(Math.ceil(latest / 100) * 100 + 100, -1),
+    from: nonZero(Math.floor(earliest / 50) * 50 - 50, 1),
+    to: nonZero(Math.ceil(latest / 50) * 50 + 50, -1),
   };
 }

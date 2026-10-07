@@ -10,7 +10,14 @@ export function YearAxis({ from, to, step }: { from: number; to: number; step?: 
   return (
     <ol className="toledot-axis" aria-label="Years">
       {yearTicks(from, to, step ?? tickStep(from, to)).map((year) => (
-        <li key={year} className="toledot-axis__tick" style={{ left: `${yearOffset(from, year, percentPerYear)}%` }}>
+        // A label centred on a tick at either edge of the ruler is half clipped by the strip's
+        // overflow; the edge ticks anchor their label inward instead.
+        <li
+          key={year}
+          className="toledot-axis__tick"
+          data-edge={year === from ? "start" : year === to ? "end" : undefined}
+          style={{ left: `${yearOffset(from, year, percentPerYear)}%` }}
+        >
           <span className="toledot-axis__label">{formatYear(year)}</span>
         </li>
       ))}
