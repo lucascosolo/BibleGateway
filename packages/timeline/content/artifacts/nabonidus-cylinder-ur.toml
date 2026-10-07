@@ -10,5 +10,8 @@ closing prayer asks the moon-god to instil reverence in "Belshazzar, the eldest 
 offspring" — naming Belshazzar as the son of Nabonidus."""
 discovered = { year = 1854, place = "Ur, southern Iraq (J. G. Taylor)" }
 held_by = { institution = "British Museum", accession = "BM 91125" }
-citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
+citations = [
+  { source = "livius-nabonidus-cylinder-ur", locator = "col. iii, lines 3–31 (the closing prayer)" },
+  { source = "wikipedia-cylinders-of-nabonidus" },
+]
 verses = [{ ref = "Dan.5.1-Dan.5.31", link = "background" }]

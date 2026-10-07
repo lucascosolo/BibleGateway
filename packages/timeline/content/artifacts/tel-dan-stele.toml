@@ -9,11 +9,13 @@ Fragments of a 9th-century BCE victory stele set up by an Aramean king at Dan in
 Israel. Line 9 is usually read bytdwd, "House of David" — the earliest known reference outside \
 the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels \
 Peter Lemche and Thomas Thompson) have read the word as a place or divine name instead. \
-Fragment A was found in 1993; fragments B1 and B2 followed (1994 or 1995 — sources differ)."""
+Fragment A was found in 1993; fragments B1 and B2 followed in June 1994 and were published in \
+1995."""
 discovered = { year = 1993, place = "Tel Dan, northern Israel (Avraham Biran's excavation)" }
 held_by = { institution = "Israel Museum, Jerusalem" }
 citations = [
   { source = "biran-naveh-1993", locator = "pp. 81–98" },
   { source = "biran-naveh-1995", locator = "pp. 1–18" },
+  { source = "hagelia-2010" },
   { source = "wikipedia-tel-dan-stele" },
 ]

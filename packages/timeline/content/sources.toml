@@ -54,7 +54,7 @@ author = "Rodger C. Young"
 title = "When Did Jerusalem Fall?"
 container = "Journal of the Evangelical Theological Society 47/1, pp. 21–38"
 year = 2004
-url = "https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_47_47-1_47-1-pp021-038_JETS.pdf"
+url = "https://www.rcyoung.org/articles/jerusalem.pdf"
 
 [[source]]
 id = "grayson-1975"
@@ -401,3 +401,44 @@ kind = "web"
 author = "Livius.org"
 title = "Pontius Pilate"
 url = "https://www.livius.org/articles/person/pontius-pilate/"
+
+[[source]]
+id = "young-2003"
+kind = "article"
+author = "Rodger C. Young"
+title = "When Did Solomon Die?"
+container = "Journal of the Evangelical Theological Society 46/4, pp. 589–603"
+year = 2003
+url = "https://www.rcyoung.org/articles/solomon.pdf"
+
+[[source]]
+id = "young-2005"
+kind = "article"
+author = "Rodger C. Young"
+title = "Tables of Reign Lengths from the Hebrew Court Recorders"
+container = "Journal of the Evangelical Theological Society 48/2, pp. 225–248"
+year = 2005
+url = "https://www.rcyoung.org/articles/rtables.pdf"
+
+[[source]]
+id = "hagelia-2010"
+kind = "web"
+author = "Hallvard Hagelia"
+title = "The Dan Debate"
+container = "Bible and Interpretation, September 2010"
+year = 2010
+url = "https://bibleinterp.arizona.edu/node/2490"
+
+[[source]]
+id = "livius-nabonidus-cylinder-ur"
+kind = "web"
+author = "Livius.org"
+title = "Nabonidus Cylinder from Ur"
+url = "https://www.livius.org/sources/content/nabonidus-cylinder-from-ur/"
+
+[[source]]
+id = "tacitus-annals-15-perseus"
+kind = "edition"
+author = "Tacitus"
+title = "Annales, book 15, chapter 44 (Latin text, Perseus Digital Library)"
+url = "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0077%3Abook%3D15%3Achapter%3D44"

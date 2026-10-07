@@ -23,8 +23,12 @@ earliest = -586
 latest = -586
 held_by = "Edwin R. Thiele"
 summary = """
-Dates the destruction to 586 BCE, reckoning from Nebuchadnezzar's nineteenth year."""
-citations = [{ source = "thiele-1983" }]
+Dates the destruction to 586 BCE, reckoning from Nebuchadnezzar's nineteenth year. Young records \
+that Thiele "was among those preferring 586"."""
+citations = [
+  { source = "thiele-1983", locator = "p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1" },
+  { source = "young-2004", locator = "p. 21" },
+]
 
   [[positions.arguments]]
   stance = "for"
@@ -46,7 +50,7 @@ latest = -587
 held_by = "Rodger C. Young"
 summary = """
 Dates the breach of the walls to the summer month of Tammuz in 587 BCE."""
-citations = [{ source = "young-2004", locator = "pp. 21–38" }]
+citations = [{ source = "young-2004", locator = "pp. 21–38; the conclusion at p. 27" }]
 
   [[positions.arguments]]
   stance = "for"

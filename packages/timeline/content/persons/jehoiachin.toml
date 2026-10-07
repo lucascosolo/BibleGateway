@@ -4,14 +4,18 @@ role = "king of Judah"
 summary = """
 King of Judah for three months before surrendering Jerusalem to Nebuchadnezzar in 597 BCE; \
 taken to Babylon, where 2 Kings ends with him released from prison and given a daily allowance. \
-Babylonian ration lists name him as king of Judah, receiving oil in Babylon."""
+Babylonian ration lists name him as king of Judah, receiving oil in Babylon. Young dates the \
+capture from the Babylonian Chronicle to 2 Adar 597 BCE."""
 status = "draft"
 verses = [
   { ref = "2Kgs.24.8-2Kgs.24.17", link = "describes" },
   { ref = "2Kgs.25.27-2Kgs.25.30", link = "describes" },
 ]
 events = ["jerusalem-capture-597"]
-citations = [{ source = "wikipedia-jehoiachin-tablets" }]
+citations = [
+  { source = "wikipedia-jehoiachin-tablets" },
+  { source = "young-2004", locator = "pp. 21, 25" },
+]
 
 [[attestations]]
 artifact = "jehoiachin-ration-tablet"

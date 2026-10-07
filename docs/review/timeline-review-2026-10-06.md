@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `2d9fbccd724ed1d9`, draft entries only. Check each claim against its cited source; when an
+Build `f483753791d31f64`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -62,8 +62,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Tacitus, Annals 15.44** — `artifacts/tacitus-annals-15-44.toml` (draft)
   - Kind: literary-text, Latin
   - Made: date not established
-  - Summary: The Roman historian Tacitus, describing Nero's persecution of Christians after the fire of Rome, explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat" — Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate.
+  - Summary: The Roman historian Tacitus, describing Nero's persecution of Christians after the fire of Rome, explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat" — Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate. The two online Latin texts cited differ in one word: the Latin Library prints "Tibero", Perseus "Tiberio".
   - Source: *Annales, book 15 (Latin text, The Latin Library)*, Tacitus, 15.44 <https://www.thelatinlibrary.com/tacitus/tac.ann15.shtml>
+  - Source: *Annales, book 15, chapter 44 (Latin text, Perseus Digital Library)*, Tacitus, 15.44 <http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0077%3Abook%3D15%3Achapter%3D44>
 
 - [ ] **Merneptah Stele** — `artifacts/merneptah-stele.toml` (draft)
   - Kind: inscription, Egyptian (hieroglyphic)
@@ -79,9 +80,10 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Made: 900 BCE – 801 BCE
   - Held by: Israel Museum, Jerusalem
   - Discovered: 1993, Tel Dan, northern Israel (Avraham Biran's excavation)
-  - Summary: Fragments of a 9th-century BCE victory stele set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David" — the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) have read the word as a place or divine name instead. Fragment A was found in 1993; fragments B1 and B2 followed (1994 or 1995 — sources differ).
+  - Summary: Fragments of a 9th-century BCE victory stele set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David" — the earliest known reference outside the Bible to a dynasty named for David. A minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) have read the word as a place or divine name instead. Fragment A was found in 1993; fragments B1 and B2 followed in June 1994 and were published in 1995.
   - Source: *An Aramaic Stele Fragment from Tel Dan*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 43 (2–3), pp. 81–98, 1993, pp. 81–98
   - Source: *The Tel Dan Inscription: A New Fragment*, Avraham Biran and Joseph Naveh, Israel Exploration Journal 45 (1), pp. 1–18, 1995, pp. 1–18
+  - Source: *The Dan Debate*, Hallvard Hagelia, Bible and Interpretation, September 2010, 2010 <https://bibleinterp.arizona.edu/node/2490>
   - Source: *Tel Dan stele*, Wikipedia <https://en.wikipedia.org/wiki/Tel_Dan_stele>
 
 - [ ] **Kurkh Monolith of Shalmaneser III** — `artifacts/kurkh-monolith.toml` (draft)
@@ -139,6 +141,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Held by: British Museum, BM 91125
   - Discovered: 1854, Ur, southern Iraq (J. G. Taylor)
   - Summary: A foundation cylinder of Nabonidus, the last king of Babylon, from the ziggurat at Ur. Its closing prayer asks the moon-god to instil reverence in "Belshazzar, the eldest son, my offspring" — naming Belshazzar as the son of Nabonidus.
+  - Source: *Nabonidus Cylinder from Ur*, Livius.org, col. iii, lines 3–31 (the closing prayer) <https://www.livius.org/sources/content/nabonidus-cylinder-from-ur/>
   - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
   - Verse (background): Dan 5:1 – Dan 5:31
 
@@ -175,8 +178,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (dates): Exod 12:40 – Exod 12:41 (430 years in Egypt)
   - Position **Early date (c. 1446 BCE)** (1450 BCE – 1440 BCE, held by Bryant G. Wood): Takes the 480 years of 1 Kings 6:1 as a straight count back from the fourth year of Solomon, which puts the Exodus in the mid-15th century BCE.
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 475–489 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
-    - Argument (for): 1 Kings 6:1 dates the temple's foundation to the 480th year after Israel came out of Egypt, in Solomon's fourth year; counted back from a fourth year of c. 966 BCE, that is c. 1446 BCE.
+    - Argument (for): 1 Kings 6:1 dates the temple's foundation to the 480th year after Israel came out of Egypt, in Solomon's fourth year; counted back from a fourth year of c. 967/966 BCE (Young: the spring of 967 or 966 depending on the reckoning rule), that is c. 1446 BCE.
       - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
+      - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, pp. 599, 601 <https://www.rcyoung.org/articles/solomon.pdf>
       - Verse (dates): 1Kgs 6:1
     - Argument (against): Exodus 1:11 has the Israelites building a store city called Raamses, a name associated with the Ramesside pharaohs of the 13th century.
       - Source: *On the Reliability of the Old Testament*, K. A. Kitchen, 2003
@@ -224,16 +228,17 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): 2Kgs 25:1 – 2Kgs 25:21
   - Verse (dates): Jer 52:12 (Nebuchadnezzar's nineteenth year)
   - Verse (background): Jer 52:29 (a deportation in the eighteenth year)
-  - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Dates the destruction to 586 BCE, reckoning from Nebuchadnezzar's nineteenth year.
-    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983
+  - Position **586 BCE** (586 BCE, held by Edwin R. Thiele): Dates the destruction to 586 BCE, reckoning from Nebuchadnezzar's nineteenth year. Young records that Thiele "was among those preferring 586".
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 186 (3rd ed.), as cited by Young 2004, p. 21 n. 1
+    - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, p. 21 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Argument (for): 2 Kings 25:8 and Jeremiah 52:12 date the burning of the temple to Nebuchadnezzar's nineteenth year.
       - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983
       - Verse (dates): 2Kgs 25:8
       - Verse (dates): Jer 52:12
   - Position **587 BCE** (587 BCE, held by Rodger C. Young): Dates the breach of the walls to the summer month of Tammuz in 587 BCE.
-    - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 21–38 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_47_47-1_47-1-pp021-038_JETS.pdf>
+    - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 21–38; the conclusion at p. 27 <https://www.rcyoung.org/articles/jerusalem.pdf>
     - Argument (for): Reconciling the Judean regnal data (Zedekiah's eleventh year, 2 Kings 25:2) with the Babylonian reckoning places the breach in Tammuz 587 BCE.
-      - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_47_47-1_47-1-pp021-038_JETS.pdf>
+      - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004 <https://www.rcyoung.org/articles/jerusalem.pdf>
       - Verse (dates): 2Kgs 25:2
   - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *silent*: ABC 5 ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the city; it fixes the earlier capture of 597 BCE instead.
     - Source: *ABC 5 (Jerusalem Chronicle)*, Livius.org <https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/>
@@ -243,10 +248,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
 ## People
 
 - [ ] **Ahab** — `persons/ahab.toml` (draft)
-  - Role: king of Israel
+  - Role: king of Israel (reigned c. 874–853 BCE)
   - Evidence grade (derived): corroborates
-  - Summary: Son of Omri, king of the northern kingdom of Israel from Samaria, remembered in Kings chiefly for his conflict with Elijah. An Assyrian inscription names him as a major member of the coalition that met Shalmaneser III at Qarqar in 853 BCE.
+  - Summary: Son of Omri, king of the northern kingdom of Israel from Samaria, remembered in Kings chiefly for his conflict with Elijah. An Assyrian inscription names him as a major member of the coalition that met Shalmaneser III at Qarqar in 853 BCE. Young's reconstruction of the regnal data gives his reign as 874–853 BCE.
   - Source: *The Kurkh Monolith of Shalmaneser III*, Center for Online Judaic Studies <https://cojs.org/?p=6525>
+  - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246 <https://www.rcyoung.org/articles/rtables.pdf>
   - Verse (describes): 1Kgs 16:29 – 1Kgs 22:40
   - Attestation — Kurkh Monolith of Shalmaneser III *corroborates*: Names "Ahab the Israelite" among Shalmaneser III's opponents at Qarqar (853 BCE), credited with 2,000 chariots and 10,000 foot soldiers.
     - Source: *The Kurkh Monolith of Shalmaneser III*, Center for Online Judaic Studies <https://cojs.org/?p=6525>
@@ -287,10 +293,12 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Tel Dan stele*, Wikipedia <https://en.wikipedia.org/wiki/Tel_Dan_stele>
 
 - [ ] **Hezekiah** — `persons/hezekiah.toml` (draft)
-  - Role: king of Judah
+  - Role: king of Judah (sole reign from 716/715 BCE)
   - Evidence grade (derived): corroborates
-  - Summary: King of Judah during Sennacherib's invasion of 701 BCE. Named in the Assyrian king's own annals and on a royal seal impression from Jerusalem.
+  - Summary: King of Judah during Sennacherib's invasion of 701 BCE. Named in the Assyrian king's own annals and on a royal seal impression from Jerusalem. His accession is a known chronological problem: Young reconstructs a coregency with Ahaz from 729/728 BCE, a sole reign from 716/715 and his death in 687, and notes that Thiele did not recognise the Ahaz–Hezekiah coregency.
   - Source: *Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms*, Center for Online Judaic Studies <https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/>
+  - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246; §3, p. 227 <https://www.rcyoung.org/articles/rtables.pdf>
+  - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 589 <https://www.rcyoung.org/articles/solomon.pdf>
   - Verse (describes): 2Kgs 18:1 – 2Kgs 20:21
   - Attestation — Royal bulla of Hezekiah (Ophel) *corroborates*: A seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah", matching the parentage given in 2 Kings 18:1.
     - Source: *King Hezekiah in the Bible: Royal Seal of Hezekiah Comes to Light*, Biblical Archaeology Society <https://www.biblicalarchaeology.org/daily/news/king-hezekiah-in-the-bible-royal-seal-of-hezekiah-comes-to-light/>
@@ -301,8 +309,9 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Jehoiachin** — `persons/jehoiachin.toml` (draft)
   - Role: king of Judah
   - Evidence grade (derived): corroborates
-  - Summary: King of Judah for three months before surrendering Jerusalem to Nebuchadnezzar in 597 BCE; taken to Babylon, where 2 Kings ends with him released from prison and given a daily allowance. Babylonian ration lists name him as king of Judah, receiving oil in Babylon.
+  - Summary: King of Judah for three months before surrendering Jerusalem to Nebuchadnezzar in 597 BCE; taken to Babylon, where 2 Kings ends with him released from prison and given a daily allowance. Babylonian ration lists name him as king of Judah, receiving oil in Babylon. Young dates the capture from the Babylonian Chronicle to 2 Adar 597 BCE.
   - Source: *Jehoiachin's Rations Tablets*, Wikipedia <https://en.wikipedia.org/wiki/Jehoiachin%27s_Rations_Tablets>
+  - Source: *When Did Jerusalem Fall?*, Rodger C. Young, Journal of the Evangelical Theological Society 47/1, pp. 21–38, 2004, pp. 21, 25 <https://www.rcyoung.org/articles/jerusalem.pdf>
   - Verse (describes): 2Kgs 24:8 – 2Kgs 24:17
   - Verse (describes): 2Kgs 25:27 – 2Kgs 25:30
   - Attestation — Babylonian Chronicle ABC 5 (the "Jerusalem Chronicle") *consistent*: Records that Nebuchadnezzar "captured the king" of Jerusalem in 597 BCE and appointed a king of his own choice, without naming either; it fits Jehoiachin's surrender and Zedekiah's installation but does not name him.

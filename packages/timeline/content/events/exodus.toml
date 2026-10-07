@@ -31,8 +31,12 @@ citations = [{ source = "wood-2005", locator = "pp. 475–489" }]
   stance = "for"
   text = """
   1 Kings 6:1 dates the temple's foundation to the 480th year after Israel came out of Egypt, \
-  in Solomon's fourth year; counted back from a fourth year of c. 966 BCE, that is c. 1446 BCE."""
-  citations = [{ source = "wood-2005" }]
+  in Solomon's fourth year; counted back from a fourth year of c. 967/966 BCE (Young: the spring \
+  of 967 or 966 depending on the reckoning rule), that is c. 1446 BCE."""
+  citations = [
+    { source = "wood-2005" },
+    { source = "young-2003", locator = "pp. 599, 601" },
+  ]
   verses = [{ ref = "1Kgs.6.1", link = "dates" }]
 
   [[positions.arguments]]

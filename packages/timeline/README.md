@@ -68,11 +68,17 @@ Library's `Tibero`; Josephus 18.35 and 18.95 for Caiaphas (Whiston on Lexundria)
 Account's "entrusted the kingship" wording (Oppenheim in ANET, via Livius); Caiaphas's
 appointment by Gratus and removal by Vitellius in 36 CE and Pilate's 26–36 (Encyclopaedia
 Judaica 2007 via JVL, Livius); and the title of the HNN article in `cline-2009` (the page shows
-no byline, so the author attribution is still the reviewer's to confirm). Still unconfirmed and
-left out: the Taylor Prism's, Tel Dan Stele's and Pilate Stone's museum numbers, where the
-Hezekiah bulla is held, the year of the Tel Dan B fragments (1994 or 1995), the dates of
-composition of Tacitus and Josephus, every person's life dates, and the regnal dates of the
-kings (Thiele could not be opened). Check first:
+no byline, so the author attribution is still the reviewer's to confirm). A third pass the same
+night read Rodger Young's three JETS papers as PDFs from rcyoung.org (reigns of Ahab and
+Hezekiah, the 2 Adar 597 capture, the 587 argument and Thiele's 586 as Young cites it, Solomon's
+fourth year), the June 1994 find of the Tel Dan B fragments (Hagelia 2010; Athas in JHS), the
+Livius text of the Nabonidus Cylinder, and that Perseus prints `Tiberio` where the Latin Library
+prints `Tibero` (both now cited). Young argues for 587 and for the Ahaz–Hezekiah coregency, so
+his tables are a position, not a consensus; Thiele's own pages are still unread. Still
+unconfirmed and left out: the Taylor Prism's, Nabonidus Cylinder's, Tel Dan Stele's and Pilate
+Stone's museum numbers (CDLI and ORACC were unreachable), where the Hezekiah bulla is held, the
+dates of composition of Tacitus and Josephus, every person's birth and death, and any
+scholarly explanation of the Belshazzar parentage. Check first:
 
 - `sources.toml`: `cline-2009` author attribution.
 - `persons/jesus-of-nazareth.toml` and `artifacts/josephus-testimonium-flavianum.toml`: the
