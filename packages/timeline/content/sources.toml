@@ -286,14 +286,6 @@ title = "Josephus on Jesus"
 url = "https://en.wikipedia.org/wiki/Josephus_on_Jesus"
 
 [[source]]
-id = "meier-1991"
-kind = "book"
-author = "John P. Meier"
-title = "A Marginal Jew: Rethinking the Historical Jesus, Volume 1"
-publisher = "Doubleday"
-year = 1991
-
-[[source]]
 id = "ehrman-2012"
 kind = "book"
 author = "Bart D. Ehrman"
@@ -1118,6 +1110,30 @@ author = "Bart D. Ehrman"
 title = "Paul: The Apostle. The Man and His Mission (chapters 18–24 of The New Testament: A Historical Introduction, 2nd edition; read from an OCR text at ~/.cache/jot/sources/ehrman-misc/paul.txt; page numbers recovered from the OCR and marked approx.)"
 publisher = "Oxford University Press"
 year = 2000
+
+[[source]]
+id = "meier-1991"
+kind = "book"
+author = "John P. Meier"
+title = "A Marginal Jew: Rethinking the Historical Jesus, vol. 1: The Roots of the Problem and the Person. Anchor Bible Reference Library (page numbers follow this printing, read from a PDF at ~/.cache/jot/sources/meier-1991-v1/; printed page = PDF page − 9)"
+publisher = "Doubleday, New York"
+year = 1991
+
+[[source]]
+id = "meier-1994"
+kind = "book"
+author = "John P. Meier"
+title = "A Marginal Jew: Rethinking the Historical Jesus, vol. 2: Mentor, Message, and Miracles. Anchor Bible Reference Library (page numbers follow this printing, read from a PDF at ~/.cache/jot/sources/meier-1994-v2/; printed page = PDF page − 14)"
+publisher = "Doubleday, New York"
+year = 1994
+
+[[source]]
+id = "meier-2001"
+kind = "book"
+author = "John P. Meier"
+title = "A Marginal Jew: Rethinking the Historical Jesus, vol. 3: Companions and Competitors. Anchor Bible Reference Library (page numbers follow this printing, read from a PDF at ~/.cache/jot/sources/meier-2001-v3/; printed page = PDF page − 13)"
+publisher = "Doubleday, New York"
+year = 2001
 
 [[source]]
 id = "arrian-chinnock-1884"

@@ -138,3 +138,30 @@ relation = "partially-corroborates"
 note = """
 The original text probably mentioned Jesus's crucifixion under Pilate. But the text we have contains Christian additions."""
 citations = [{ source = "wikipedia-josephus-on-jesus" }]
+
+[[positions]]
+id = "meier-30"
+label = "Friday 7 April 30 CE (Meier)"
+tradition = "critical"
+earliest = 30
+latest = 30
+held_by = "John P. Meier"
+summary = """
+Meier prefers Friday 7 April 30 CE, with the Last Supper on Thursday evening 6 April as the start of 14 Nisan, not a Passover meal. He treats the Johannine chronology as more likely than the Synoptic one and calls the date a "tentative conclusion". He finds 33 CE the only real alternative: "In my opinion, a.d. 30 is the more likely date." """
+citations = [
+  { source = "meier-1991", locator = "pp. 380–381, 399–400, 405" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  John has the Jewish authorities avoid the praetorium so they could still eat the Passover, and calls the day of Jesus's trial the Day of Preparation. Meier judges this the likelier chronology, since a night Sanhedrin trial and execution on Passover Day itself is improbable. The Last Supper then falls on the evening starting 14 Nisan."""
+  citations = [{ source = "meier-1991", locator = "pp. 387–388, 393–394" }]
+  verses = [{ ref = "John.18.28", link = "dates" }, { ref = "John.19.14", link = "dates" }, { ref = "Mark.15.42", link = "dates" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Of the years in Pilate's term, only 30 and 33 CE probably put 14 Nisan on a Friday. Starting in 28 CE, a death in 33 CE would mean a ministry of four to five years, more than either Synoptics or John suggest."""
+  citations = [{ source = "meier-1991", locator = "p. 400" }]
+  verses = [{ ref = "Luke.3.1-Luke.3.2", link = "dates" }]

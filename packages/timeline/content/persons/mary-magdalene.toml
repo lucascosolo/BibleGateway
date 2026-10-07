@@ -1,0 +1,19 @@
+id = "mary-magdalene"
+name = "Mary Magdalene"
+also_known_as = ["Mary from Magdala"]
+role = "woman follower of Jesus; witness at the cross, burial and empty tomb"
+summary = """
+Mary Magdalene was not one of the Twelve, and Meier discusses her in the chapter on disciples. She is the one name common to every Gospel list of the women at the crucifixion (Mark 15:40-41, Matt 27:55-56, John 19:25), and the Synoptics place her at the burial and the finding of the empty tomb (Mark 15:47; 16:1-8). Luke 8:2-3 says she was among women healed of evil spirits and illnesses who travelled with Jesus and the Twelve, and that seven demons had gone out of her.
+
+Meier argues that the report of her cure goes back to an exorcism during Jesus' ministry, and that the list of women in Luke 8:2-3 preserves a valuable historical memory of women who accompanied Jesus and supported him from their own means. He notes that the Gospels never call these women "disciples", although in practice they followed him; he explains this partly by the lack of a feminine Aramaic or Hebrew word for disciple, and suggests, as surmise, that her cure could have served as her call. The Gospel of Peter later applies the feminine term to her in an Easter appearance. Meier describes her as a perennial favorite of later apocryphal and gnostic writing, which he does not treat as historical evidence."""
+status = "draft"
+verses = [
+  { ref = "Luke.8.1-Luke.8.3", link = "describes", note = "healed of seven demons; supports Jesus out of her own means" },
+  { ref = "Mark.15.40-Mark.15.41", link = "describes", note = "among the women at the crucifixion who followed and served him in Galilee" },
+  { ref = "John.19.25", link = "describes", note = "at the cross in John's independent list" },
+  { ref = "Mark.16.1-Mark.16.8", link = "describes", note = "at the empty tomb" },
+  { ref = "John.20.11-John.20.18", link = "describes", note = "the Easter morning appearance to her in John" },
+]
+citations = [
+  { source = "meier-2001", locator = "pp. 74–79" },
+]

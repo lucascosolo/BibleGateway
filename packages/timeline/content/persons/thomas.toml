@@ -1,0 +1,22 @@
+id = "thomas"
+name = "Thomas"
+also_known_as = ["Didymus"]
+role = "one of the Twelve"
+summary = """
+Thomas is named in all four lists of the Twelve (Mark 3:18, Matt 10:3, Luke 6:15, Acts 1:13), and the lists agree on him. In the Synoptic Gospels and Acts he does nothing outside those lists. In John he speaks at the raising of Lazarus (11:16), at the Last Supper (14:5), and in the appearance story where he demands to touch the risen Jesus and then confesses "My Lord and my God" (20:24-29); he is also named in 21:2.
+
+Meier judges that all of Thomas's scenes in John look like the evangelist's own theological vehicles. John 11:16 is probably a later addition to the Lazarus story, 14:5 sets up Jesus' "I am the way", and 20:28 caps the Gospel's high christology. The one possible nugget is the name: John three times translates it as "Didymus", Greek for "twin", which suggests Thomas may be a nickname for a man whose real name we do not know. John never says whose twin he was. Gnosticizing groups later made him the twin brother of Jesus and identified him with Jude, and produced books about him that Meier calls devoid of historical data. Meier concludes that we know next to nothing about the historical Thomas."""
+status = "draft"
+verses = [
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "list of the Twelve in Mark" },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "list of the Twelve in Matthew" },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "list of the Twelve in Luke" },
+  { ref = "Acts.1.13", link = "describes", note = "list of the Eleven in Acts" },
+  { ref = "John.11.16", link = "describes", note = "'Let us also go that we may die with him'; a redactional addition in Meier's view" },
+  { ref = "John.14.5", link = "describes", note = "'we do not know where you are going'" },
+  { ref = "John.20.24-John.20.29", link = "describes", note = "the doubting Thomas story and his confession" },
+  { ref = "John.21.2", link = "describes", note = "named among the disciples at the lake; 'Didymus'" },
+]
+citations = [
+  { source = "meier-2001", locator = "pp. 203–205" },
+]

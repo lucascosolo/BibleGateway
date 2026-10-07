@@ -6,7 +6,7 @@ John appears in Mark as a fisherman called with his brother James, and again whe
 
 The tradition that he wrote the Fourth Gospel comes from Irenaeus around 180 CE. Irenaeus says John lived at Ephesus until the reign of Trajan. Brown notes that late second-century guesses about figures a century earlier were often simplified. He says most scholars doubt an eyewitness of the ministry wrote the Gospel.
 
-Brown himself thinks the unnamed Beloved Disciple was a minor figure in Jesus' ministry, probably the founder of the Johannine community, and that a later evangelist and redactor from that community wrote the Gospel. On his view the Beloved Disciple was not one of the Twelve, so he was not John. Brown still finds an Ephesus-area origin traditional and plausible, though some scholars prefer Syria."""
+Brown himself thinks the unnamed Beloved Disciple was a minor figure in Jesus' ministry, probably the founder of the Johannine community, and that a later evangelist and redactor from that community wrote the Gospel. On his view the Beloved Disciple was not one of the Twelve, so he was not John. Brown still finds an Ephesus-area origin traditional and plausible, though some scholars prefer Syria. Meier finds no firm evidence that John was martyred or persecuted alone, and says that after his role as a Jerusalem pillar around 49 CE we are ignorant of his life and fate."""
 status = "draft"
 verses = [
   { ref = "Mark.1.19-Mark.1.20", link = "describes", note = "called with his brother James" },
@@ -16,4 +16,5 @@ verses = [
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 11, section Authorship and the Beloved Disciple" },
+  { source = "meier-2001", locator = "pp. 213–221" },
 ]

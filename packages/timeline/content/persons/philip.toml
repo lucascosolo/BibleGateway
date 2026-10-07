@@ -1,0 +1,20 @@
+id = "philip"
+name = "Philip"
+role = "one of the Twelve"
+summary = """
+Philip is named in all four lists of the Twelve (Mark 3:18, Matt 10:3, Luke 6:14, Acts 1:13), always in the second group of four, and the lists agree on him. In Mark, Matthew, Luke and Acts he does nothing outside those lists. In the Gospel of John he is a prominent disciple, usually with Andrew: he is probably the unnamed companion of Andrew among the Baptist's disciples (John 1:35-44), he is from Bethsaida, "the city of Andrew and Peter", he appears in John's feeding story (6:6-9), he brings the Greek pilgrims to Jesus (12:20-22), and at the Last Supper he asks Jesus to show them the Father (14:8).
+
+Meier warns that Philip, like others in John, can serve as a spokesman for Johannine theology, and that his three appearances with Andrew at the start, middle and end of the ministry look like the evangelist's design. Two details may preserve real tradition because they score no theological point: Philip came from Bethsaida and was Andrew's companion. Meier says even if these are accepted, they tell us very little about him, and nothing is known of his activity in the early church. He is not the Philip among the seven Hellenist leaders of Acts 6:5, though Meier says the two were confused as early as Papias in the second century."""
+status = "draft"
+verses = [
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "list of the Twelve in Mark" },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "list of the Twelve in Matthew" },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "list of the Twelve in Luke" },
+  { ref = "Acts.1.13", link = "describes", note = "list of the Eleven in Acts" },
+  { ref = "John.1.43-John.1.44", link = "describes", note = "called; from Bethsaida" },
+  { ref = "John.12.20-John.12.22", link = "describes", note = "the Greek pilgrims approach him" },
+  { ref = "John.14.8-John.14.9", link = "describes", note = "asks to be shown the Father; a Johannine theological setup" },
+]
+citations = [
+  { source = "meier-2001", locator = "pp. 201–202" },
+]

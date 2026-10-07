@@ -1,0 +1,23 @@
+id = "judas-iscariot"
+name = "Judas Iscariot"
+role = "one of the Twelve who handed Jesus over to the authorities"
+summary = """
+Judas is named last in the lists of the Twelve (Mark 3:19, Matt 10:4, Luke 6:16), described as the one who handed Jesus over. Acts 1:13 lists the Eleven without him, and Acts 1:15-26 tells of Matthias taking his place. Meier says only two basic facts are known: Jesus chose him as one of the Twelve, and he handed Jesus over to the Jerusalem authorities. Both are supported by multiple attestation (Mark, John, and separate traditions behind Matthew's and Luke's accounts of his death) and by the criterion of embarrassment, since the church had no reason to invent a traitor among the Twelve. Meier argues this also supports the existence of the Twelve during the ministry. He notes the Greek verb means "hand over", and probably refers to telling the authorities where to arrest Jesus quietly.
+
+The motives and the death are expanded later. Mark gives no motive (14:10-11). Matthew adds money (26:15) and a suicide (27:3-5), Luke and John add Satan's entry into him (Luke 22:3, John 13:2, 27), John calls him a thief (12:4-6), and Acts has a different death account (1:16-20). Meier says these reflect theology and imagination, and that rehabilitating Judas is as imaginative as demonizing him. The name Iscariot is unexplained. Meier discusses the dagger-men (sicarii), "liar", "hand over", a trade, and a place such as Kerioth. He thinks the John tradition of "Judas, son of Simon Iscariot" slightly favours a place name, and concludes the nickname, like the man, remains an enigma."""
+status = "draft"
+verses = [
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "last in Mark's list; 'who handed him over'" },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "last in Matthew's list" },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "last in Luke's list; called the betrayer" },
+  { ref = "Acts.1.13", link = "describes", note = "absent from the list of the Eleven" },
+  { ref = "Mark.14.10-Mark.14.11", link = "describes", note = "offers to hand Jesus over; money follows the offer" },
+  { ref = "Matt.27.3-Matt.27.5", link = "describes", note = "Matthew's account of his remorse and death" },
+  { ref = "Acts.1.16-Acts.1.20", link = "describes", note = "Luke's different account of his death" },
+  { ref = "John.12.4-John.12.6", link = "describes", note = "John calls him a thief in charge of the money box" },
+  { ref = "Luke.22.3", link = "describes", note = "Satan entered Judas; a demonic motive" },
+]
+citations = [
+  { source = "meier-2001", locator = "pp. 142–145" },
+  { source = "meier-2001", locator = "pp. 208–211" },
+]

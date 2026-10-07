@@ -38,3 +38,31 @@ citations = [{ source = "wikipedia-chronology-of-jesus" }]
   Luke names Tiberius's fifteenth year, Pontius Pilate as governor, and Herod as tetrarch of Galilee as the setting of John's call."""
   citations = [{ source = "wikipedia-chronology-of-jesus" }]
   verses = [{ ref = "Luke.3.1", link = "dates" }]
+
+[[positions]]
+id = "meier-28"
+label = "End of 27 or early 28 CE (Meier)"
+tradition = "critical"
+earliest = 27
+latest = 28
+held_by = "John P. Meier"
+summary = """
+Meier takes the fifteenth year of Tiberius, counted from 14 CE, as most likely 28 CE, and has John begin around the end of 27 or the beginning of 28 CE, with Jesus baptized soon after. He calls this a "preliminary, not definitive, judgment", since Luke's reckoning could give 27 or 29. John's execution by Antipas fell in or before 30 or 33 on the Gospels' order, and in any case before the defeat by Aretas IV in 36 CE, which is where Josephus mentions it."""
+citations = [
+  { source = "meier-1991", locator = "pp. 383–384, 405" },
+  { source = "meier-1994", locator = "pp. 22, 174" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Luke most likely counted Tiberius's years from Augustus's death in 14 CE, and almost every way of counting puts at least part of 28 CE in the fifteenth year. Counting by the Julian calendar without an accession year, 28 CE coincides exactly with it."""
+  citations = [{ source = "meier-1991", locator = "pp. 383–384" }]
+  verses = [{ ref = "Luke.3.1-Luke.3.2", link = "dates" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Josephus links Antipas's execution of John at Machaerus to the war with Aretas IV, so Josephus is the main source for his death, and Mark's story has errors and folkloric traits. The execution is therefore dated only to before 36 CE at the latest."""
+  citations = [{ source = "meier-1994", locator = "pp. 22, 172–175" }]
+  verses = [{ ref = "Mark.6.17-Mark.6.29", link = "describes" }]

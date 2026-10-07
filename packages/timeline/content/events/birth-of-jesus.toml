@@ -82,3 +82,23 @@ citations = [{ source = "brown-1997", locator = "Table 1 (Chronology of People a
   verses = [
     { ref = "Matt.2.1", link = "dates" },
   ]
+
+[[positions]]
+id = "meier-ca-7-6-bce"
+label = "ca. 7 or 6 BCE (Meier)"
+tradition = "critical"
+earliest = -7
+latest = -6
+held_by = "John P. Meier"
+summary = """
+Meier places Jesus's birth ca. 7 or 6 BCE, a few years before Herod the Great died in 4 BCE, and thinks it most likely took place in Nazareth, not Bethlehem. He holds this as a probability only: the Magi and flight-into-Egypt stories are, in his view, highly questionable history. He calls the match of Matthew 2 with Luke 3:23 "likely—though not certain"."""
+citations = [
+  { source = "meier-1991", locator = "pp. 373–376, 405" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Matthew and Luke independently place the birth in Herod's reign, and Matthew's impression of a child one to two years old at the Magi's visit suggests the last years of that reign. Luke 3:23 ("about thirty") for a ministry beginning around 28 CE fits a birth a few, but only a few, years before 4 BCE."""
+  citations = [{ source = "meier-1991", locator = "pp. 373–375" }]
+  verses = [{ ref = "Matt.2.1", link = "dates" }, { ref = "Luke.3.23", link = "dates" }]

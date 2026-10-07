@@ -42,3 +42,9 @@ label = "Herod died in 1 BCE (Andrew Steinmann, Rodger Young; Filmer)"
 text = """
 Steinmann and Young argue from the coins of Herod's sons. Their reigns began in 5 BCE while Herod was alive, so Herod died in 1 BCE. They add that the eclipse of 13 March 4 BCE leaves too little time before the next Passover for the events Josephus records."""
 citations = [{ source = "wikipedia-herod-the-great" }]
+
+[[views]]
+label = "Luke 2:1–2 is historically unreliable (John P. Meier, 1991)"
+text = """
+Meier says that no ancient source documents a census under Augustus around 5 BCE, the time Luke's story would need. Quirinius became governor of Syria in 6 CE and conducted a census of Judea, not Galilee, in 6–7 CE. He calls attempts to reconcile Luke 2:1 with ancient history "hopelessly contrived". He sides with Raymond Brown that Luke is inaccurate, and doubts that the Infancy Narratives can fix the date of Jesus's birth."""
+citations = [{ source = "meier-1991", locator = "pp. 210–211, 233 n. 23" }]
