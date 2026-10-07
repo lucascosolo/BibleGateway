@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `aa24ec4be52b7295`, draft entries only. Check each claim against its cited source; when an
+Build `d90bf7a4b99d2f61`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -405,6 +405,50 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Argument (against): Ehrman on the earthquake: "Moreover, recent scholars such as Standhartinger have given good reason for doubting that the town was ever destroyed by earthquake."
       - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 251
 
+- [ ] **Composition of the letter to the Ephesians** — `events/ephesians-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 60 CE – 110 CE
+  - Summary: This asks who wrote Ephesians and when. The letter names Paul as author and has him say "I Paul, a prisoner of Christ Jesus". Ehrman holds it was forged by a later follower of Paul who copied Colossians, which he also takes to be a forgery. He gives no date. The year bounds of 60 and 110 are the editor's: 60 is just after Paul's lifetime ministry was ending, and 110 allows for the Pastoral Epistles, which Ehrman says know Ephesians.
+  - Verse (describes): Eph 1:1 (Paul is named as the author, with no coauthor.)
+  - Verse (background): Eph 2:1 – Eph 2:10 (Ehrman: believers already made alive and seated in the heavenly places.)
+  - Verse (background): Eph 2:15 (Ehrman: Christ abolished the law of the commandments, against Romans 3:31.)
+  - Verse (describes): Eph 3:1 (I Paul, a prisoner of Christ Jesus.)
+  - Verse (background): Eph 3:5 (Ehrman: the mystery revealed to the holy apostles and prophets, not to Paul alone.)
+  - Verse (describes): Eph 6:21 – Eph 6:22 (Twenty-nine words repeated from Colossians 4:7-8 on Tychicus.)
+  - Position **A pseudonymous letter in Paul's name, modelled on Colossians** (60 CE – 110 CE, held by Bart D. Ehrman): Ehrman holds that Paul did not write Ephesians and that a later follower forged it using Colossians as a model. He gives no date. Both year bounds are the editor's.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 238-246
+    - Argument (for): Ehrman on dependence on Colossians: "The passage that leaves no doubt is Eph. 6:21–22,"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 239
+      - Verse (describes): Eph 6:21 – Eph 6:22 (Repeats Colossians 4:7-8.)
+    - Argument (for): Ehrman on the consequence: "If Colossians was forged"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 238
+    - Argument (for): Ehrman on style: "nine out of a hundred sentences in the book comprise more than fifty words."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 240
+    - Argument (for): Ehrman on realized resurrection: "the real significance of the resurrection of the dead is that it is a spiritual event that has happened (in the past) to believers"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 241
+      - Verse (background): Eph 2:1 – Eph 2:10 (Made alive and raised with Christ.)
+    - Argument (for): Ehrman on the law: "including the claim—key to the teaching of the letter—that Christ had somehow"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 242
+      - Verse (background): Eph 2:15 (Abolished the law of the commandments.)
+    - Argument (for): Ehrman points to what he calls unintentional slips showing the author lived after Paul: "in 2:20, the author speaks of the "apostles" as a founding group for the church, without any recognition that Paul himself was one of the constituent members of the group." He adds that for Paul, Christ himself is the foundation (1 Corinthians 3:11), not the prophets and apostles.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 243
+      - Verse (background): Eph 2:20 (Apostles as a founding group, with Paul not named among them.)
+    - Argument (for): Ehrman on the mystery: "But is he not missing something rather crucial?"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 243
+      - Verse (background): Eph 3:5 (Revealed to his holy apostles and prophets.)
+    - Argument (for): Ehrman on the self-references: "the author makes an inordinate number of self-references"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 243
+      - Verse (describes): Eph 3:1 (I Paul, a prisoner.)
+    - Argument (for): Ehrman on the author's intent: "He was a follower of Paul, urging a non-Pauline set of theological views, writing later."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 244
+      - Verse (describes): Eph 6:21 – Eph 6:22 (I have sent Tychicus to you.)
+  - Position **Written by Paul himself, in a style of his own choosing** (50 CE – 62 CE, held by Markus Barth (named by Ehrman as a supporter of authenticity)): Ehrman names Markus Barth as a supporter of Pauline authorship but reports no date for that view. Both year bounds are the editor's, taken from the letter's picture of Paul as a prisoner within his lifetime.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 240, 238
+    - Argument (for): Ehrman reports Barth on style: "Paul himself is the man who could best afford to write in a non-Paulinistic way."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 240
+      - Verse (background): Eph 1:3 (One of the long sentences Ehrman cites.)
+    - Argument (against): Ehrman answers on the lack of setting: "But this scarcely speaks against Pauline authorship"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 238
+
 - [ ] **Composition of the letter of James** — `events/james-composition.toml` (draft)
   - Axis / confidence: composition / contested; range 60 CE – 100 CE
   - Summary: This asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem. Ehrman argues this James did not write it, and that it was written after his death, which he puts "presumably sometime in the 60s". He places its concerns in the post-Pauline church "at the end of the first century". Both year bounds are the editor's reading of those phrases. He calls it a counterforgery aimed at a later form of Pauline teaching.
@@ -509,6 +553,45 @@ A claim you cannot confirm should be cut or corrected, not left in.
       - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 391
     - Argument (against): Ehrman on Jude's family: "Nothing suggests that their progenitor, Jude, was any different."
       - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 394
+
+- [ ] **Composition of the Pastoral Epistles (1 Timothy, 2 Timothy, Titus)** — `events/pastoral-epistles-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 90 CE – 130 CE
+  - Summary: This asks who wrote 1 Timothy, 2 Timothy and Titus, and when. Each letter names Paul as author. Ehrman treats the three as one forged group by a later follower, and places them "at the end of the first century at the very earliest". He gives no latest date. The bounds of 90 and 130 are the editor's: 90 renders Ehrman's earliest, and 130 is a round limit before the middle of the second century.
+  - Verse (describes): 1Tim 1:1 (Paul is named as apostle, the letter's claim to authorship.)
+  - Verse (background): 1Tim 3:1 – 1Tim 3:13 (Ehrman: qualifications for overseers and deacons, a church order already in place.)
+  - Verse (describes): 1Tim 6:20 (Guard what has been entrusted, a phrase shared with 2 Timothy.)
+  - Verse (describes): 2Tim 4:9 – 2Tim 4:13 (Personal requests to Timothy, which Ehrman calls verisimilitudes.)
+  - Verse (describes): Titus 1:1 (Paul named as author, the opening Ehrman compares with 1 Timothy 1:1-4.)
+  - Position **Forged in Paul's name after his death, as a group** (90 CE – 130 CE, held by Bart D. Ehrman): Ehrman holds that all three letters were forged by a later follower of Paul and should be read together. He says only that they come from the end of the first century at the earliest. Both year bounds are the editor's.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 258-259, 262, 273-281
+    - Argument (for): Ehrman on the critical consensus: "the overwhelming preponderance of critical scholars maintaining that all three letters are clearly post-Pauline."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 258
+    - Argument (for): Ehrman on 1 Timothy and Titus: "There has been far less disagreement over the joint authorship of 1 Timothy and Titus"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 262
+      - Verse (describes): 1Tim 1:1 (Matched by Titus 1:3.)
+      - Verse (describes): Titus 1:1 (Opening compared with 1 Timothy 1:1.)
+    - Argument (for): Ehrman on shared phrases: "The injunction of 2 Tim. 1:12 has its counterpart in 1 Tim. 6:20"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 264
+      - Verse (describes): 1Tim 6:20 (Guard what is entrusted.)
+    - Argument (for): Ehrman on church offices: "They instead presuppose that a church hierarchy already is in place"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 272
+      - Verse (background): 1Tim 3:1 – 1Tim 3:13 (Overseers and deacons with set qualifications.)
+    - Argument (for): Ehrman on Scripture: "Here too we are in a period beyond Paul’s time, at the end of the first century at the very earliest"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 273
+    - Argument (for): Ehrman on the cumulative case: "It is important to stress that all of these various arguments are cumulative"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 273
+    - Argument (for): Ehrman on the personal notes of 2 Timothy: "where the author cites names, places, and events from his life, thereby assuring the reader that he really is Paul"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 278
+      - Verse (describes): 2Tim 4:9 – 2Tim 4:13 (Names, places and requests.)
+    - Argument (for): Ehrman on use of Ephesians: "There is some reason to suspect, on the other hand, that the author was intimately familiar with another Pauline letter, but this one too a forgery."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 281
+  - Position **Written by Paul himself near the end of his life** (60 CE – 67 CE, held by Luke Timothy Johnson (named by Ehrman as a supporter of authenticity)): Ehrman names Luke Timothy Johnson as a supporter of authenticity but reports no date. The letters' own claim is Paul writing late in life. Both year bounds are the editor's, a bracket before Paul's death.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 272, 281-282
+    - Argument (for): Ehrman reports the argument from verisimilitude: "Some scholars still find it difficult to believe that a forger would employ such extensive verisimilitudes"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 281
+      - Verse (describes): 2Tim 4:9 – 2Tim 4:13 (Personal requests in the closing.)
+    - Argument (against): Ehrman answers the coauthorship defence: "when it comes to the Deutero-Pauline letters, Johnson wants to argue that the key to their interpretation is a phenomenon for which he cannot—or at least does not—cite a single parallel or analogy from antiquity: joint composition of letters". He asks why that should be preferred to an explanation "for which there are abundant parallels and analogies scattered throughout all of antiquity, the use of literary forgery".
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 282
 
 - [ ] **John on Patmos and the composition of Revelation** — `events/revelation-composition-patmos.toml` (draft)
   - Axis / confidence: composition / contested; range 95 CE
