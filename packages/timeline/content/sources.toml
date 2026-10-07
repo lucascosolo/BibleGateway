@@ -1112,6 +1112,14 @@ container = "BYU Studies Quarterly 54/4, pp. 135–191"
 year = 2015
 
 [[source]]
+id = "galil-1996"
+kind = "book"
+author = "Gershon Galil"
+title = "The Chronology of the Kings of Israel and Judah. Studies in the History and Culture of the Ancient Near East 9 (only pp. 2–11 and 98–107 on disk, as page images supplied by the user, at ~/.cache/jot/sources/galil-1996/)"
+publisher = "Brill, Leiden"
+year = 1996
+
+[[source]]
 id = "grayson-1996"
 kind = "book"
 author = "A. Kirk Grayson"

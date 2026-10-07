@@ -49,3 +49,25 @@ citations = [{ source = "finkelstein-silberman-2002", locator = "p. 243" }]
 """
   citations = [{ source = "finkelstein-silberman-2002", locator = "p. 243" }]
   verses = [{ ref = "2Kgs.17.6", link = "describes" }]
+
+[[positions]]
+id = "galil-720"
+label = "720 BCE, Hezekiah's sixth year"
+tradition = "critical"
+earliest = -720
+latest = -720
+held_by = "Gershon Galil"
+summary = """
+Galil keeps the Bible's synchronism that Samaria fell in Hezekiah's sixth year (2 Kings 18:10) but dates that year to 720. He has Hezekiah crowned in 726, the last siege beginning in his fourth year (722) and the city falling in 720. He reaches this by treating the "fourteenth year" of 2 Kings 18:13 as a later editor's calculation rather than a record, which frees Hezekiah's accession from 715. On the state of the evidence generally he writes that "only a limited number of dates can be determined with any degree of confidence", and that his system reconciles about ninety percent of the biblical and external data."""
+citations = [{ source = "galil-1996", locator = "pp. 8–9; pp. 98–104, the dates on p. 104" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Putting Hezekiah's accession in 715 contradicts seven chronological data, Galil argues, among them Ahaz's sixteen years, the tribute of Ahaz to Tiglath-pileser III in 734, the synchronisms with Hoshea, and "the tradition that Samaria was conquered during the reign of Hezekiah"."""
+  citations = [{ source = "galil-1996", locator = "pp. 100–101" }]
+  verses = [
+    { ref = "2Kgs.18.1", link = "dates", note = "Hezekiah begins to reign in Hoshea's third year" },
+    { ref = "2Kgs.18.9-2Kgs.18.10", link = "dates", note = "The siege in his fourth year, the fall in his sixth" },
+    { ref = "2Kgs.17.1", link = "dates", note = "Hoshea in the twelfth year of Ahaz" },
+  ]

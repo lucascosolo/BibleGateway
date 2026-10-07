@@ -39,3 +39,25 @@ relation = "corroborates"
 note = """
 These carvings show the siege and fall of Lachish. 2 Kings 18:14 and 18:17 place Sennacherib there during the campaign."""
 citations = [{ source = "bm-lachish-reliefs" }]
+
+[[positions]]
+id = "galil-701-year-25"
+label = "701 BCE, Hezekiah's twenty-fifth year"
+tradition = "critical"
+earliest = -701
+latest = -701
+held_by = "Gershon Galil"
+summary = """
+Galil accepts 701 from the Assyrian records but holds that the "fourteenth year of Hezekiah" in 2 Kings 18:13 is not an original date. In his view the editor of Kings, who knew Hezekiah reigned twenty-nine years and that "in those days" he was granted fifteen more years of life (2 Kings 20:1-6), subtracted and assigned the campaign to year fourteen. On Galil's count Hezekiah was crowned in 726, so 701 was his twenty-fifth year, "ca. 4 years before he died"."""
+citations = [{ source = "galil-1996", locator = "pp. 102–104" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Galil lists the proposals for the "fourteenth year" (a corruption of 24; a reference to Sargon's campaign of 713–712; a new count from a reform in 715; a derived figure) and concludes that "the third campaign of Sennacherib most likely was not conducted in year 14 of Hezekiah". The date, he argues, "is not original" but the redactor's calculation."""
+  citations = [{ source = "galil-1996", locator = "pp. 102–103" }]
+  verses = [
+    { ref = "2Kgs.18.13", link = "dates", note = "The fourteenth year of Hezekiah" },
+    { ref = "2Kgs.20.1-2Kgs.20.6", link = "background", note = "Fifteen years added to Hezekiah's life" },
+    { ref = "2Kgs.18.2", link = "dates", note = "Twenty-nine years" },
+  ]
