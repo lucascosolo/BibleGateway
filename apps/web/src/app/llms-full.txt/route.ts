@@ -84,6 +84,15 @@ Returns translation codes, names, rights, license/attribution, scope, and copyri
 
 Returns UTF-8 TSV. Comment lines provide total/exported/truncated counts, followed by \`verse_id\`, \`reference\`, \`source_ref\`, \`position\`, \`surface\`, \`morphology\`, and \`language\`. Report truncation rather than implying completeness.
 
+## Historical scholarship
+
+- Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
+- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`.
+- Every date is a RANGE (\`earliest\`, \`latest\`; negative = BCE, no year 0) with a confidence (firm, contested, speculative) and the scholarly positions behind it, each with arguments for and against and their citations. Quote the range and the positions, never a single year.
+- Three axes are separate questions: \`narrative\` (when events happened), \`composition\` (when texts were written), \`canon\` (when collections were recognised as scripture). Do not merge them.
+- Evidence grades for people are derived from outside sources: corroborates (named by a source outside the Bible), partially-corroborates (partly confirmed; the reading is disputed), consistent (fits an outside source without naming them), silent (outside sources exist but say nothing), none (no outside evidence). A separate tension flag means an outside source contradicts a biblical detail about them.
+- Content with \`status: "draft"\` has not yet been reviewed against its sources. Say so when citing it.
+
 ## HTTP behavior
 
 - Successful corpus responses are public and cacheable. They include \`ETag\`, \`Cache-Control\`, and \`Access-Control-Allow-Origin: *\`.

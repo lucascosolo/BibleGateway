@@ -312,6 +312,23 @@ export function getTimelineWindow({ from, to, axis }: { from: number; to: number
   return { available: true, eras, events };
 }
 
+/** Every event id, earliest first: the crawlable entity pages. */
+export function listEventIds(): string[] {
+  return all<{ id: string }>(`SELECT event_id AS id FROM events ORDER BY earliest_year, event_id`).map((row) => row.id);
+}
+
+/** Every artifact id, undated ones last. */
+export function listArtifactIds(): string[] {
+  return all<{ id: string }>(
+    `SELECT artifact_id AS id FROM artifacts ORDER BY made_earliest IS NULL, made_earliest, artifact_id`
+  ).map((row) => row.id);
+}
+
+/** Every issue id, alphabetically. */
+export function listIssueIds(): string[] {
+  return all<{ id: string }>(`SELECT issue_id AS id FROM issues ORDER BY issue_id`).map((row) => row.id);
+}
+
 /** Summary rows for a list of event ids, without positions or citations, in one query. */
 export function getEventSummaries(ids: readonly string[]): EventSummary[] {
   if (ids.length === 0) return [];

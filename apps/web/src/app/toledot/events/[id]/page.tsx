@@ -1,0 +1,110 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import { shareMetadata } from "@/app/og/data";
+import { Citations } from "@/components/toledot/Citations";
+import { EntitySection, EntityShell, RangeTrack } from "@/components/toledot/EntityShell";
+import { IssueList } from "@/components/toledot/Lists";
+import { RelationGroup } from "@/components/toledot/RelationGroup";
+import { ToledotStructuredData } from "@/components/toledot/ToledotStructuredData";
+import { VerseLinks } from "@/components/toledot/VerseLinks";
+import { getEvent, getIssueSummaries } from "@/lib/db/timeline";
+import { bookNames, labelVerses } from "@/lib/db/timeline-present";
+import { excerpt } from "@/lib/seo";
+import { formatRange } from "@/lib/timeline/years";
+
+export const dynamic = "force-dynamic";
+
+interface Props {
+  params: Promise<{ id: string }>;
+}
+
+const AXIS_PHRASE = { narrative: "When it happened", composition: "When it was written", canon: "When it became scripture" } as const;
+
+export async function generateMetadata({ params }: Props) {
+  const event = getEvent((await params).id);
+  if (!event) notFound();
+  const range = formatRange(event.earliest, event.latest);
+  return shareMetadata(
+    `${event.title}: dated ${range} · Toledot · Jot`,
+    excerpt(`${event.title}, ${range} (${event.confidence}). ${event.positions.length} scholarly position${event.positions.length === 1 ? "" : "s"} with arguments and sources. ${event.summary}`, 200),
+    `/toledot/events/${event.id}`,
+    { card: { kind: "page", page: "toledot" } },
+  );
+}
+
+export default async function EventPage({ params }: Props) {
+  const event = getEvent((await params).id);
+  if (!event) notFound();
+  const books = bookNames(event.bookIds);
+  const issues = getIssueSummaries(event.issueIds);
+
+  return (
+    <EntityShell
+      title={event.title}
+      status={event.status}
+      meta={
+        <>
+          {AXIS_PHRASE[event.axis]}: <strong>{formatRange(event.earliest, event.latest)}</strong> · {event.confidence} dating
+          {books.length ? <> · {books.join(", ")}</> : null}
+        </>
+      }
+    >
+      <ToledotStructuredData kind="event" event={event} />
+      <p className="toledot-prose">{event.summary}</p>
+      <VerseLinks verses={labelVerses(event.verses)} />
+
+      <EntitySection title={event.positions.length === 1 ? "The position" : `${event.positions.length} positions on the date`}>
+        <ol className="toledot-positions">
+          {event.positions.map((position) => (
+            <li key={position.id} className="toledot-position">
+              <h3 className="toledot-position__label">{position.label}</h3>
+              <p className="toledot-position__meta">
+                <span className="toledot-position__range">{formatRange(position.earliest, position.latest)}</span>
+                {" · "}{position.tradition}
+                {position.heldBy ? <> · held by {position.heldBy}</> : null}
+              </p>
+              <RangeTrack from={event.earliest} to={event.latest} earliest={position.earliest} latest={position.latest} />
+              <p className="toledot-prose">{position.summary}</p>
+              <Citations citations={position.citations} />
+              {(["for", "against"] as const).map((stance) => {
+                const args = position.arguments.filter((argument) => argument.stance === stance);
+                if (args.length === 0) return null;
+                return (
+                  <div key={stance} className="toledot-arguments" data-stance={stance}>
+                    <h4 className="toledot-arguments__heading">{stance === "for" ? "For" : "Against"}</h4>
+                    <ul className="toledot-arguments__list">
+                      {args.map((argument) => (
+                        <li key={argument.id}>
+                          <p className="toledot-prose toledot-prose--small">{argument.text}</p>
+                          <VerseLinks verses={labelVerses(argument.verses)} />
+                          <Citations citations={argument.citations} />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </li>
+          ))}
+        </ol>
+      </EntitySection>
+
+      {event.attestations.length ? (
+        <EntitySection title="Outside evidence">
+          <RelationGroup attestations={event.attestations} />
+        </EntitySection>
+      ) : null}
+
+      {issues.length ? (
+        <EntitySection title="Open questions">
+          <IssueList issues={issues} />
+        </EntitySection>
+      ) : null}
+
+      <p className="toledot-entity__foot">
+        <Link href={`/api/timeline/events/${event.id}`} className="toledot-link">This event as JSON</Link>
+      </p>
+    </EntityShell>
+  );
+}

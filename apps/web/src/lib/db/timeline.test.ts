@@ -248,3 +248,20 @@ describe("persons", () => {
     expect(getTimelineForRange({ start: 66_001_001 as never, end: 66_001_002 as never }).persons).toEqual([]);
   });
 });
+
+describe("id listings", () => {
+  it("listEventIds returns every event id, earliest first", async () => {
+    const { listEventIds } = await import("./timeline");
+    expect(listEventIds()).toEqual(["ev-exodus", "ev-dan", "ev-fall", "ev-canon"]);
+  });
+
+  it("listArtifactIds returns every artifact id by date made", async () => {
+    const { listArtifactIds } = await import("./timeline");
+    expect(listArtifactIds()).toEqual(["art-stele", "art-far"]);
+  });
+
+  it("listIssueIds returns every issue id alphabetically", async () => {
+    const { listIssueIds } = await import("./timeline");
+    expect(listIssueIds()).toEqual(["iss-480", "iss-other"]);
+  });
+});

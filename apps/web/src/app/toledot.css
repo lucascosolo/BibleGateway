@@ -1,0 +1,413 @@
+/* Toledot: the timeline strip and its entity pages. Tokens only (globals.css); no raw colour. */
+
+.toledot-home {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  max-width: 76rem;
+  padding: var(--space-10) var(--space-4) var(--space-16);
+  min-width: 0;
+}
+.toledot-home__header { display: flex; flex-direction: column; gap: var(--space-3); max-width: 44rem; }
+.toledot-home__title { font-family: var(--font-serif); font-size: var(--text-3xl); line-height: var(--leading-tight); color: var(--color-ink); }
+.toledot-home__lede {
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--color-ink-muted);
+  max-width: 62ch;
+  text-wrap: pretty;
+}
+.toledot-home--empty { max-width: 44rem; gap: var(--space-4); }
+
+/* The draft disclosure: caption voice, never the alert palette. */
+.toledot-draft {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-style: italic;
+  line-height: var(--leading-snug);
+  color: var(--color-ink-faint);
+}
+.toledot-draft a { color: var(--color-ink-muted); text-decoration: underline; text-underline-offset: 3px; }
+
+/* --- The strip: a ruled chronographic chart ---------------------------------------------------- */
+
+.toledot-strip { margin: 0; min-width: 0; }
+.toledot-strip__hint {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-faint);
+  padding-bottom: var(--space-2);
+}
+.toledot-strip__frame {
+  position: relative;
+  border-block: 1px solid var(--color-border-strong);
+}
+.toledot-strip__frame::before,
+.toledot-strip__frame::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: var(--space-10);
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toledot-strip__frame::before { left: 0; background: linear-gradient(to left, transparent, var(--color-bg)); }
+.toledot-strip__frame::after { right: 0; background: linear-gradient(to right, transparent, var(--color-bg)); }
+.toledot-strip__frame[data-at-start="true"]::before,
+.toledot-strip__frame[data-at-end="true"]::after { opacity: 0; }
+
+.toledot-strip__viewport {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: none;
+  max-width: 100%;
+}
+.toledot-strip__viewport:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.toledot-strip__canvas { position: relative; padding-bottom: var(--space-3); }
+
+.toledot-strip__grid { position: absolute; inset: 0; pointer-events: none; }
+.toledot-strip__grid span { position: absolute; inset-block: 0; width: 1px; background: var(--color-border); }
+
+.toledot-axis {
+  position: relative;
+  height: var(--space-8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--color-border-strong);
+}
+.toledot-axis__tick { position: absolute; bottom: 0; }
+.toledot-axis__tick::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 6px;
+  background: var(--color-ink-muted);
+}
+.toledot-axis__label {
+  position: absolute;
+  bottom: 9px;
+  left: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--color-ink-muted);
+  background: var(--color-bg);
+  padding-inline: 4px;
+}
+
+.toledot-eras { position: relative; height: var(--space-8); list-style: none; margin: 0; padding: 0; }
+.toledot-eras__era {
+  position: absolute;
+  top: var(--space-1);
+  bottom: var(--space-1);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  overflow: hidden;
+  padding-inline: var(--space-2);
+  white-space: nowrap;
+  background: var(--color-bg-sunken);
+  border-inline: 1px solid var(--color-border-strong);
+  font-family: var(--font-serif);
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-ink-muted);
+}
+.toledot-eras__range { font-family: var(--font-sans); font-style: normal; color: var(--color-ink-faint); }
+
+.toledot-lane { position: relative; border-bottom: 1px solid var(--color-border); --lane-ink: var(--color-ink); }
+.toledot-lane:last-child { border-bottom: 0; }
+.toledot-lane[data-axis="composition"] { --lane-ink: var(--color-brand-strong); }
+.toledot-lane[data-axis="canon"] { --lane-ink: var(--color-rubric-strong); }
+
+.toledot-lane__name {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-2) var(--space-3) var(--space-1) var(--space-1);
+  background: var(--color-bg);
+  font-weight: 400;
+}
+.toledot-lane__axis {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lane-ink);
+}
+.toledot-lane__question { font-family: var(--font-serif); font-size: var(--text-xs); font-style: italic; color: var(--color-ink-muted); }
+.toledot-lane__empty {
+  position: sticky;
+  left: 0;
+  display: inline-block;
+  padding: var(--space-2) var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-style: italic;
+  color: var(--color-ink-faint);
+}
+.toledot-lane__bars { position: absolute; inset: 34px 0 0 0; list-style: none; margin: 0; padding: 0; }
+
+.toledot-bar { position: absolute; }
+.toledot-bar__link {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 6px 4px 0;
+  border-radius: var(--radius-sm);
+  color: var(--color-ink);
+  text-decoration: none;
+  outline-offset: 2px;
+}
+.toledot-bar__link:hover { background: var(--color-surface-hover); }
+.toledot-bar__link:hover .toledot-bar__title { text-decoration: underline; text-decoration-color: var(--lane-ink); text-underline-offset: 3px; }
+.toledot-bar__link:focus-visible { outline: 2px solid var(--color-focus-ring); }
+.toledot-bar__title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+}
+/* The range itself, ruled like an error bar: whiskers at both ends say "somewhere in here". */
+.toledot-bar__rule {
+  position: relative;
+  display: block;
+  min-width: 8px;
+  margin: 7px 0 6px;
+  border-top: 3px solid var(--lane-ink);
+}
+.toledot-bar__rule::before,
+.toledot-bar__rule::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 1.5px;
+  height: 11px;
+  background: var(--lane-ink);
+}
+.toledot-bar__rule::before { left: 0; }
+.toledot-bar__rule::after { right: 0; }
+.toledot-bar[data-confidence="contested"] .toledot-bar__rule { border-top-style: dashed; }
+.toledot-bar[data-confidence="speculative"] .toledot-bar__rule { border-top-style: dotted; }
+.toledot-bar__meta {
+  white-space: nowrap;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-muted);
+}
+.toledot-bar__confidence { font-style: italic; }
+
+/* --- The register under the strip ------------------------------------------------------------- */
+
+.toledot-register { display: grid; gap: var(--space-10); }
+@media (min-width: 56rem) {
+  .toledot-register { grid-template-columns: 1fr 1fr; gap: var(--space-12); }
+}
+.toledot-register__note {
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-3);
+  max-width: 52ch;
+}
+
+.toledot-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border-strong); }
+.toledot-index__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+.toledot-index__row > .toledot-link,
+.toledot-index__lead > .toledot-link { font-family: var(--font-serif); font-size: var(--text-md); }
+.toledot-index__lead { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.toledot-index__aside { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-muted); font-variant-numeric: tabular-nums; }
+
+.toledot-link {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-brand);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.toledot-link:hover { text-decoration-thickness: 2px; }
+
+/* --- Evidence grade ---------------------------------------------------------------------------- */
+
+.toledot-evidence { display: inline-flex; flex-direction: column; gap: var(--space-1); }
+.toledot-evidence__marks { display: inline-flex; gap: var(--space-1); flex-wrap: wrap; }
+.toledot-evidence__grade,
+.toledot-evidence__tension {
+  display: inline-block;
+  padding: 1px var(--space-2);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+.toledot-evidence__grade--corroborates { background: var(--color-highlight-moss); }
+.toledot-evidence__grade--partially-corroborates { background: var(--color-highlight-amber); }
+.toledot-evidence__grade--consistent { background: var(--color-highlight-sky); }
+.toledot-evidence__grade--silent { background: var(--color-bg-sunken); }
+.toledot-evidence__grade--none { background: transparent; border-style: dashed; }
+.toledot-evidence__tension { border-color: var(--color-rubric); color: var(--color-rubric-strong); font-style: italic; }
+.toledot-evidence__meaning { font-family: var(--font-serif); font-size: var(--text-sm); font-style: italic; color: var(--color-ink-muted); }
+
+/* --- Entity pages ------------------------------------------------------------------------------ */
+
+.toledot-entity {
+  margin-inline: auto;
+  max-width: 46rem;
+  padding: var(--space-6) var(--space-4) var(--space-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.toledot-entity__crumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  text-decoration: none;
+}
+.toledot-entity__crumb a:hover { color: var(--color-ink); }
+.toledot-entity__header { display: flex; flex-direction: column; gap: var(--space-2); padding-bottom: var(--space-2); }
+.toledot-entity__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  color: var(--color-ink);
+  text-wrap: balance;
+}
+.toledot-entity__meta { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); font-variant-numeric: tabular-nums; }
+.toledot-entity__meta strong { color: var(--color-ink); font-weight: 600; }
+.toledot-entity__foot { margin-top: var(--space-8); font-family: var(--font-sans); font-size: var(--text-xs); }
+
+.toledot-prose {
+  font-family: var(--font-serif);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--color-ink);
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+.toledot-prose--small { font-size: var(--text-base); margin-top: var(--space-1); }
+
+.toledot-section { margin-top: var(--space-8); }
+.toledot-section__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  line-height: var(--leading-tight);
+  color: var(--color-ink);
+  padding-bottom: var(--space-3);
+}
+
+.toledot-positions { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border-strong); }
+.toledot-position { padding-block: var(--space-5); border-bottom: 1px solid var(--color-border); display: flex; flex-direction: column; gap: var(--space-2); }
+.toledot-position__label { font-family: var(--font-serif); font-size: var(--text-lg); color: var(--color-ink); }
+.toledot-position__meta { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }
+.toledot-position__range { color: var(--color-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* A position's range inside the event's envelope, on a hairline. */
+.toledot-track {
+  position: relative;
+  display: block;
+  height: 10px;
+  max-width: 24rem;
+  background: linear-gradient(var(--color-border-strong), var(--color-border-strong)) center / 100% 1px no-repeat;
+}
+.toledot-track__range { position: absolute; top: 3px; height: 4px; min-width: 3px; background: var(--color-brand); border-radius: 2px; }
+
+.toledot-arguments { margin-top: var(--space-2); }
+.toledot-arguments__heading {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+.toledot-arguments__list { list-style: none; margin: var(--space-1) 0 0; padding: 0 0 0 var(--space-4); border-left: 1px solid var(--color-border-strong); }
+.toledot-arguments__list > li + li { margin-top: var(--space-3); }
+
+.toledot-cites {
+  list-style: none;
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-muted);
+}
+.toledot-cites li + li { margin-top: 2px; }
+.toledot-cites a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+
+.toledot-verses { display: flex; flex-wrap: wrap; gap: 0 var(--space-4); list-style: none; margin: 0; padding: 0; }
+.toledot-verses__link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-brand-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.toledot-verses__note { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-muted); }
+
+.toledot-grade { padding-block: var(--space-1); }
+
+.toledot-facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2) var(--space-6);
+  padding-block: var(--space-3);
+  border-block: 1px solid var(--color-border);
+}
+.toledot-facts > dt {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  padding-top: 3px;
+}
+.toledot-facts > :not(dt) { margin: 0; font-family: var(--font-serif); font-size: var(--text-base); color: var(--color-ink); }
+.toledot-facts__accession { font-family: var(--font-mono); font-size: var(--text-sm); }
+
+.toledot-relations { display: flex; flex-direction: column; gap: var(--space-5); }
+.toledot-relations__heading { font-family: var(--font-sans); font-size: var(--text-sm); font-weight: 600; color: var(--color-ink); padding-bottom: var(--space-1); }
+.toledot-relations__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-border); }
+.toledot-relations__item { padding-block: var(--space-3); border-bottom: 1px solid var(--color-border); }
+.toledot-relations__item > .toledot-link { font-family: var(--font-serif); font-size: var(--text-md); }
+.toledot-relations__kind { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .toledot-strip__frame::before,
+  .toledot-strip__frame::after { transition: none; }
+}

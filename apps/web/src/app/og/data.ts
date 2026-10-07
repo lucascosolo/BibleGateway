@@ -169,9 +169,10 @@ export function pageCardCopy(page: SharePage, query?: string): PageCardCopy {
       return { kicker: "Roadmap", title: "What Jot covers, and what is next", body: "The research tools and datasets that exist today, and the ones still planned." };
     case "notes":
       return { kicker: "Notes & highlights", title: "Your study notes", body: "Highlights and notes kept on your own device, exportable whenever you want them." };
+    case "toledot":
+      return { kicker: term("toledot"), title: "Dated as ranges, with the arguments", body: "When the events happened, when the texts were written, and when they became scripture, each with the scholarly positions and the outside evidence behind it." };
     case "geniza":
-    case "massaot":
-    case "toledot": {
+    case "massaot": {
       const entry = getLexiconEntry(page);
       return { kicker: `${term(page)} · Planned`, title: entry.plainLabel, body: plainGloss(page) };
     }

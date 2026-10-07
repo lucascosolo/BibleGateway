@@ -1,6 +1,7 @@
 import { getTranslationByCode } from "@/lib/db/corpus";
 import { getCanonicalDiscoveryRows, getConcordanceDiscoveryKeys, getEditionDiscoveryRows } from "@/lib/db/discovery";
 import { SITE_URL, escapeXml, xmlResponse } from "@/lib/seo";
+import { toledotSitemapPaths } from "@/app/toledot/sitemap";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +12,9 @@ export async function GET(_request: Request, { params }: { params: Promise<{ fil
   let paths: string[];
   if (key === "pages") {
     paths = ["/", "/read", "/derash", "/lashon", "/roadmap", "/api"];
+  } else if (key === "toledot") {
+    paths = await toledotSitemapPaths();
+    if (paths.length === 0) return new Response("Not found", { status: 404 });
   } else if (key === "concordance") {
     paths = getConcordanceDiscoveryKeys().map((key) => `/lashon/${encodeURIComponent(key)}?t=WEB`);
   } else if (key === "references" || key === "comparisons") {

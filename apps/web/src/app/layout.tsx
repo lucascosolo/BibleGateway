@@ -6,6 +6,7 @@ import "./crossrefs.css";
 import "./search.css";
 import "./lashon.css";
 import "./audio.css";
+import "./toledot.css";
 import { ThemeScript } from "@/components/ThemeScript";
 import { Providers } from "@/components/Providers";
 import { AppShell } from "@/components/shell/AppShell";
