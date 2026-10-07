@@ -1,6 +1,7 @@
 import type { IssueSummary, ToledotNote } from "@/lib/db/timeline";
 
 import { EVIDENCE_MEANING } from "./evidence";
+import { isTraditional } from "./lens";
 import { formatRange } from "./years";
 
 /**
@@ -26,11 +27,17 @@ function sentence(note: ToledotNote): ToledotSentence {
   switch (s.kind) {
     case "event": {
       const href = `/toledot/events/${s.id}`;
-      if (s.positions.length >= 2) {
-        return { lead: "Dating disputed", body: `${s.positions.map((p) => p.label).join(" or ")} — ${s.title}`, href, draft: s.status === "draft" };
+      const draft = s.status === "draft";
+      const scholarly = s.positions.filter((p) => !isTraditional(p.tradition));
+      const traditional = s.positions.filter((p) => isTraditional(p.tradition));
+      if (scholarly.length >= 2) {
+        return { lead: "Dating disputed", body: `${scholarly.map((p) => p.label).join(" or ")} — ${s.title}`, href, draft };
+      }
+      if (scholarly.length === 0 && traditional.length > 0) {
+        return { lead: "Traditional date", body: `${traditional.map((p) => p.label).join(" or ")} — ${s.title}`, href, draft };
       }
       const lead = s.confidence === "firm" ? "Dated" : `Dated, ${s.confidence}`;
-      return { lead, body: `${formatRange(s.earliest, s.latest)} — ${s.title}`, href, draft: s.status === "draft" };
+      return { lead, body: `${formatRange(s.earliest, s.latest)} — ${s.title}`, href, draft };
     }
     case "argument":
       return {

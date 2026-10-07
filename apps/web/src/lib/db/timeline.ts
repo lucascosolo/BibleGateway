@@ -124,6 +124,9 @@ export interface EventSummary {
   /** Composition axis only: the books dated (a source document can span several). */
   bookIds: number[];
   segment: string | null;
+  /** Envelope of the traditional-chronology positions, a lens drawn apart from the scholarly
+   *  range above; null when the event has none. */
+  traditional: { earliest: number; latest: number } | null;
 }
 
 export interface Argument {
@@ -268,12 +271,26 @@ function versesFor(kind: "event" | "argument" | "artifact" | "issue" | "person",
 
 const EVENT_SUMMARY_COLUMNS = `event_id AS id, title, axis, category, confidence, status,
   earliest_year AS earliest, latest_year AS latest, segment_label AS segment,
+  traditional_earliest AS tradEarliest, traditional_latest AS tradLatest,
   (SELECT group_concat(book_id) FROM event_books b WHERE b.event_id = events.event_id) AS bookIdList`;
 
-type EventSummaryRow = Omit<EventSummary, "bookIds"> & { bookIdList: string | null };
+type EventSummaryRow = Omit<EventSummary, "bookIds" | "traditional"> & {
+  bookIdList: string | null;
+  tradEarliest: number | null;
+  tradLatest: number | null;
+};
 
-function toSummary<T extends EventSummaryRow>({ bookIdList, ...row }: T): Omit<T, "bookIdList"> & { bookIds: number[] } {
-  return { ...row, bookIds: bookIdList ? bookIdList.split(",").map(Number) : [] };
+function toSummary<T extends EventSummaryRow>({
+  bookIdList,
+  tradEarliest,
+  tradLatest,
+  ...row
+}: T): Omit<T, "bookIdList" | "tradEarliest" | "tradLatest"> & Pick<EventSummary, "bookIds" | "traditional"> {
+  return {
+    ...row,
+    bookIds: bookIdList ? bookIdList.split(",").map(Number) : [],
+    traditional: tradEarliest === null || tradLatest === null ? null : { earliest: tradEarliest, latest: tradLatest },
+  };
 }
 
 // --- Accessors --------------------------------------------------------------------------------
@@ -573,7 +590,7 @@ export interface ToledotNote {
   end: VerseId;
   linkType: VerseLink["linkType"];
   subject:
-    | { kind: "event"; id: string; title: string; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; positions: { label: string }[] }
+    | { kind: "event"; id: string; title: string; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; positions: { label: string; tradition: string }[] }
     | { kind: "argument"; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }
     | { kind: "issue"; id: string; title: string; issueKind: IssueSummary["kind"]; status: ReviewStatus }
     | { kind: "person"; id: string; name: string; evidence: EvidenceGrade; hasTension: boolean; status: ReviewStatus }
@@ -623,14 +640,14 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
           ...eventIds
         )
       : []
-    ).map((e) => [e.id, { kind: "event" as const, ...e, positions: [] as { label: string }[] }])
+    ).map((e) => [e.id, { kind: "event" as const, ...e, positions: [] as { label: string; tradition: string }[] }])
   );
   if (eventIds.length) {
-    for (const p of all<{ eventId: string; label: string }>(
-      `SELECT event_id AS eventId, label FROM positions WHERE event_id IN (${placeholders(eventIds)}) ORDER BY event_id, ordinal`,
+    for (const p of all<{ eventId: string; label: string; tradition: string }>(
+      `SELECT event_id AS eventId, label, tradition FROM positions WHERE event_id IN (${placeholders(eventIds)}) ORDER BY event_id, ordinal`,
       ...eventIds
     )) {
-      events.get(p.eventId)?.positions.push({ label: p.label });
+      events.get(p.eventId)?.positions.push({ label: p.label, tradition: p.tradition });
     }
   }
 
