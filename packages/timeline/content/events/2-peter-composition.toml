@@ -1,0 +1,77 @@
+id = "2-peter-composition"
+title = "Composition of 2 Peter"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["2Pet"]
+summary = """
+This asks who wrote 2 Peter and when. The letter names Simon Peter as its author. Ehrman says 2 Peter is, more than any other New Testament writing, widely recognised as forged. The only date he gives in the passages read is "the end of the first century, at best" for the situation it assumes. So the range below is the editor's bracket."""
+verses = [
+  { ref = "2Pet.1.1", link = "describes", note = "The letter names Peter as its author." },
+  { ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "Ehrman: the author pretends to know his death is near, a testament written as fiction." },
+  { ref = "2Pet.3.1", link = "background", note = "Ehrman: the author refers to an earlier letter, which he takes to be 1 Peter." },
+  { ref = "2Pet.3.4", link = "background", note = "Ehrman: the fathers have died, so much time has passed." },
+  { ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Ehrman: the author knows a collection of Paul's letters treated as scripture." },
+]
+
+[[positions]]
+id = "end-of-first-century-or-later"
+label = "End of the first century or later"
+tradition = "critical"
+earliest = 100
+latest = 150
+held_by = "Bart D. Ehrman"
+summary = """
+Ehrman holds that 2 Peter came into existence long after Peter's death. The lower bound of 100 is his "end of the first century, at best". The upper bound of 150 is the editor's and is not from Ehrman."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 294, 295" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman: "By Elliott’s count, there are proportionally more hapax legomena in 2 Peter than in any other writing of the New Testament: 58 of its 402 words (14.4 percent).""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 294" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman: "we are told that “the fathers” have “fallen asleep” (i.e., died) since the original promises of the coming end (3:4).""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+  verses = [{ ref = "2Pet.3.4", link = "background", note = "The fathers have died." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman on 1:12–14: "As with all Testaments, this is a fiction put on the pen of someone already residing comfortably in his tomb.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+  verses = [{ ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "A feigned knowledge of his own death." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman on 3:15–16, where the author knows a collection of Paul's letters held as scripture: "It is hard to imagine any such situation before the end of the first century, at best.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Paul's letters as a collection and as scripture." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman: "By Elliott’s count, nineteen of Jude’s twenty-five verses reappear in modified form in 2 Peter." He thinks Jude is itself late, so 2 Peter is "later still"."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+
+[[positions]]
+id = "peter-wrote-it"
+label = "Written by Peter, before about 70 CE"
+tradition = "traditional"
+earliest = 30
+latest = 70
+held_by = "The letter's own claim (Ehrman names no modern holder in the passages read)"
+summary = """
+Ehrman names no modern scholar for this view in the passages read. The letter claims Peter as its author, and Ehrman places Peter's death before 70 CE. The lower bound of 30 is the editor's."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 293, 320" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Ehrman cites doubts from antiquity. Didymus the Blind: "We must therefore not be ignorant of the fact that the epistle at hand is forged". Eusebius: "the second Petrine epistle we have been taught to regard as uncanonical"."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 294" }]

@@ -1094,3 +1094,19 @@ title = "Introduction to Thiele, The Mysterious Numbers of the Hebrew Kings (198
 publisher = "Zondervan, Grand Rapids"
 year = 1983
 url = "https://archive.org/details/mysteriousnumber0000thie"
+
+[[source]]
+id = "finkelstein-silberman-2002"
+kind = "book"
+author = "Israel Finkelstein and Neil Asher Silberman"
+title = "The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts (First Touchstone Edition; page numbers follow this printing, read from a scan at ~/.cache/jot/sources/finkelstein-silberman-2001/)"
+publisher = "Touchstone (Simon & Schuster), New York"
+year = 2002
+
+[[source]]
+id = "ehrman-2013"
+kind = "book"
+author = "Bart D. Ehrman"
+title = "Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)"
+publisher = "Oxford University Press, New York"
+year = 2013

@@ -1,0 +1,20 @@
+id = "pauline-pseudepigrapha"
+kind = "historical"
+title = "Are the disputed letters of Paul forgeries?"
+status = "draft"
+summary = """
+Some letters that name Paul as their author may have been written by others. Ehrman argues that 2 Thessalonians is a deliberate forgery. Only 2 Thessalonians has been entered so far."""
+events = ["2-thessalonians-composition"]
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 211, 225" }]
+
+[[views]]
+label = "Forgeries, written in Paul's name to deceive"
+text = """
+Ehrman says 2 Thessalonians was "written by someone intent on authorizing a non-Pauline view in the name of the apostle himself". He argues it is a forgery and a counterforgery."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 211, 225" }]
+
+[[views]]
+label = "Paul wrote it (Jewett, Malherbe)"
+text = """
+Ehrman names Robert Jewett and Abraham Malherbe as holdouts for Pauline authorship. Malherbe claims a "majority" of scholars still hold to authenticity. Ehrman says that is only because many hold views that rule out forgeries in scripture."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 210" }]

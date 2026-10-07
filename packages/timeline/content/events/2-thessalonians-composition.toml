@@ -1,0 +1,80 @@
+id = "2-thessalonians-composition"
+title = "Composition of 2 Thessalonians"
+axis = "composition"
+category = "composition"
+confidence = "contested"
+status = "draft"
+books = ["2Thess"]
+summary = """
+This asks who wrote 2 Thessalonians and when. The letter names Paul as its author. Bart Ehrman argues it is a forgery: someone else wrote it in Paul's name. He gives no year for it in the passages read. The range below is the editor's bracket. It starts after 1 Thessalonians, which Ehrman dates "say, 49 CE", and stops at 100 CE, the limit in a claim by Robert Jewett that Ehrman answers. Jewett and Abraham Malherbe defend Paul as author."""
+verses = [
+  { ref = "2Thess.1.1", link = "describes", note = "The letter names Paul (with Silvanus and Timothy) as its author." },
+  { ref = "2Thess.2.2", link = "background", note = "Ehrman reads this as a warning about a letter falsely in Paul's name, a tell of forgery." },
+  { ref = "2Thess.3.17", link = "background", note = "The closing says the greeting is in Paul's own hand. Ehrman says a forger might add this to look genuine." },
+]
+
+[[positions]]
+id = "forgery-after-paul"
+label = "A forgery written after Paul (no year given)"
+tradition = "critical"
+earliest = 50
+latest = 100
+held_by = "Bart D. Ehrman"
+summary = """
+Ehrman holds that Paul did not write 2 Thessalonians. Someone used 1 Thessalonians as a model. He gives no date range in the passages read. The bounds are the editor's: 50 follows his "say, 49 CE" for 1 Thessalonians, and 100 is the limit in the Jewett claim he quotes."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 210, 221, 279" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman says "there is not a single major theme in 2 Thessalonians that is not also found in 1 Thessalonians." He thinks this is how a forger would work."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 213" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman: where the author borrowed from 1 Thessalonians, "of course he sounds like Paul". Where he adds his own views, he stands at odds with Paul."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 211" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman reads 2:2 as pointing to a letter "as if" by Paul. He writes: "The earlier reference is to a letter “as if” by us, and is by implication denigrated by the author". So the author forged a letter to answer a forgery: "He countered a forgery by producing a forgery.""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 223, 225" }]
+  verses = [{ ref = "2Thess.2.2", link = "background", note = "The author warns of a letter falsely in Paul's name." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman thinks the closing claim is suspicious: the author "did perhaps “protest too much”": “The greeting is in my own hand, the hand of Paul, which is the sign in all my letters. This is how I write”."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 226" }]
+  verses = [{ ref = "2Thess.3.17", link = "background", note = "A claim of authenticity inside the letter, a forger's tool." }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Ehrman quotes Jewett: "there is scarcely enough time between Paul’s death and C.E 100 for a forgery to gain credence." Ehrman rejects this, noting that ancient authors complained of forgeries in their own lifetimes."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 221" }]
+
+[[positions]]
+id = "paul-wrote-it"
+label = "Written by Paul soon after 1 Thessalonians"
+tradition = "traditional"
+earliest = 49
+latest = 50
+held_by = "Robert Jewett and Abraham Malherbe (named by Ehrman as holdouts for Pauline authorship)"
+summary = """
+Ehrman says defenders of authenticity typically place the letter "on the heels" of 1 Thessalonians, which he dates "say, 49 CE". The 49 to 50 range is the editor's reading of that. Ehrman gives no year for the second letter."""
+citations = [{ source = "ehrman-2013", locator = "PDF pp. 210, 220, 279" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ehrman reports Malherbe's claim that "the “majority” of biblical scholars continues to hold to authenticity." Ehrman answers that this is only because many scholars cannot accept forgeries in scripture."""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 210" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+  Ehrman objects to the early dating: "But how would Paul change his eschatological views so suddenly and decisively?""""
+  citations = [{ source = "ehrman-2013", locator = "PDF pp. 220" }]

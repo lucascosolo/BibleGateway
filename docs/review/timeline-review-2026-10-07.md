@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `bd102d6eeb49699a`, draft entries only. Check each claim against its cited source; when an
+Build `546676fbfbc4fa5e`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -326,6 +326,58 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Argument (for): Baldwin argues the visions need not be prophecy written after the event (the Latin term is vaticinia ex eventu). So they need not be dated by the latest events they describe.
       - Source: *Daniel (Tyndale Old Testament Commentaries)*, Joyce G. Baldwin, 1978
 
+- [ ] **Composition of 2 Thessalonians** — `events/2-thessalonians-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 50 CE – 100 CE
+  - Summary: This asks who wrote 2 Thessalonians and when. The letter names Paul as its author. Bart Ehrman argues it is a forgery: someone else wrote it in Paul's name. He gives no year for it in the passages read. The range below is the editor's bracket. It starts after 1 Thessalonians, which Ehrman dates "say, 49 CE", and stops at 100 CE, the limit in a claim by Robert Jewett that Ehrman answers. Jewett and Abraham Malherbe defend Paul as author.
+  - Verse (describes): 2Thess 1:1 (The letter names Paul (with Silvanus and Timothy) as its author.)
+  - Verse (background): 2Thess 2:2 (Ehrman reads this as a warning about a letter falsely in Paul's name, a tell of forgery.)
+  - Verse (background): 2Thess 3:17 (The closing says the greeting is in Paul's own hand. Ehrman says a forger might add this to look genuine.)
+  - Position **A forgery written after Paul (no year given)** (50 CE – 100 CE, held by Bart D. Ehrman): Ehrman holds that Paul did not write 2 Thessalonians. Someone used 1 Thessalonians as a model. He gives no date range in the passages read. The bounds are the editor's: 50 follows his "say, 49 CE" for 1 Thessalonians, and 100 is the limit in the Jewett claim he quotes.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 210, 221, 279
+    - Argument (for): Ehrman says "there is not a single major theme in 2 Thessalonians that is not also found in 1 Thessalonians." He thinks this is how a forger would work.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 213
+    - Argument (for): Ehrman: where the author borrowed from 1 Thessalonians, "of course he sounds like Paul". Where he adds his own views, he stands at odds with Paul.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 211
+    - Argument (for): Ehrman reads 2:2 as pointing to a letter "as if" by Paul. He writes: "The earlier reference is to a letter “as if” by us, and is by implication denigrated by the author". So the author forged a letter to answer a forgery: "He countered a forgery by producing a forgery."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 223, 225
+      - Verse (background): 2Thess 2:2 (The author warns of a letter falsely in Paul's name.)
+    - Argument (for): Ehrman thinks the closing claim is suspicious: the author "did perhaps “protest too much”": “The greeting is in my own hand, the hand of Paul, which is the sign in all my letters. This is how I write”.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 226
+      - Verse (background): 2Thess 3:17 (A claim of authenticity inside the letter, a forger's tool.)
+    - Argument (against): Ehrman quotes Jewett: "there is scarcely enough time between Paul’s death and C.E 100 for a forgery to gain credence." Ehrman rejects this, noting that ancient authors complained of forgeries in their own lifetimes.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 221
+  - Position **Written by Paul soon after 1 Thessalonians** (49 CE – 50 CE, held by Robert Jewett and Abraham Malherbe (named by Ehrman as holdouts for Pauline authorship)): Ehrman says defenders of authenticity typically place the letter "on the heels" of 1 Thessalonians, which he dates "say, 49 CE". The 49 to 50 range is the editor's reading of that. Ehrman gives no year for the second letter.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 210, 220, 279
+    - Argument (for): Ehrman reports Malherbe's claim that "the “majority” of biblical scholars continues to hold to authenticity." Ehrman answers that this is only because many scholars cannot accept forgeries in scripture.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 210
+    - Argument (against): Ehrman objects to the early dating: "But how would Paul change his eschatological views so suddenly and decisively?"
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 220
+
+- [ ] **Composition of 1 Peter** — `events/1-peter-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 70 CE – 112 CE
+  - Summary: This asks who wrote 1 Peter and when. The letter names Peter as its author. Bart Ehrman argues Peter did not write it, and says it is "best located" between Nero and Trajan. He cites a view that "Babylon", a code name for Rome, points to after 70 CE. He warns this does not put it at the time of Pliny's letter, around 112 CE. The year bounds are the editor's reading of that. The traditional date is in Peter's life, which Ehrman places before 70 CE.
+  - Verse (describes): 1Pet 1:1 (The letter names Peter as its author.)
+  - Verse (background): 1Pet 4:12 – 1Pet 4:17 (Ehrman: suffering simply for the name Christian points to a time after Peter.)
+  - Verse (background): 1Pet 4:16 (Ehrman: the author uses the word Christian as if it were in established use.)
+  - Verse (background): 1Pet 5:13 (Ehrman: Babylon is a veiled name for Rome, which he says makes sense only after 70 CE.)
+  - Position **Between Nero and Trajan (after 70 CE)** (70 CE – 112 CE, held by Bart D. Ehrman): Ehrman holds that Peter did not write 1 Peter. The bounds are the editor's: 70 is the CE year in the "Babylon" argument, and 112 is the Pliny correspondence that Ehrman says should not be used to pin the letter down.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 295, 320
+    - Argument (for): Ehrman: "By the time this letter was written, it had become commonplace for followers of Jesus to suffer persecution “as a Christian,” simply “for the name” (4:12–17)."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 320
+      - Verse (background): 1Pet 4:12 – 1Pet 4:17 (Persecution for the name Christian.)
+    - Argument (for): Ehrman follows C. Hunzinger: "the veiled reference to Rome in the epithet “Babylon,” named as the place from which the author writes (5:13), makes sense only after 70 CE, years after Peter’s death."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 320
+      - Verse (background): 1Pet 5:13 (Babylon as a name for Rome.)
+    - Argument (for): Ehrman: "the author uses the term Christian (4:16) as if it were in established usage".
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 319
+      - Verse (background): 1Pet 4:16 (The word Christian.)
+    - Argument (against): Ehrman concedes 1 Peter is "the one book scholars have been most inclined to consider authentic". He also says of the date: "When the recognition arose afterward is uncertain".
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 294, 320
+  - Position **Written by Peter, before about 70 CE** (30 CE – 70 CE, held by The letter's own claim (Ehrman names no modern holder in the passages read)): Ehrman names no modern scholar for this view in the passages read. The letter claims Peter as its author. Ehrman places Peter's death before 70 CE, the upper bound. The lower bound, 30, is the editor's and is not from Ehrman.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 320
+    - Argument (for): Ehrman reports that Nero's persecution is "traditionally" thought to have led to Peter's martyrdom, which sets Peter's life as the time. He argues the later persecution "for the name" does not fit it.
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 320
+
 - [ ] **John on Patmos and the composition of Revelation** — `events/revelation-composition-patmos.toml` (draft)
   - Axis / confidence: composition / contested; range 95 CE
   - Summary: Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Wikipedia reports that the usual date is about 95 CE.
@@ -341,6 +393,34 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Eusebius, Church History, book 3 (New Advent)*, Eusebius of Caesarea, 3.18.1, 3.18.3 <https://www.newadvent.org/fathers/250103.htm>
   - Attestation — Irenaeus, Against Heresies 5.30.3 (date of the Apocalypse) *consistent*: Irenaeus writes that the Apocalypse "was seen no very long time since, but almost in our day, towards the end of Domitian's reign". This sentence does not mention the author's exile on Patmos.
     - Source: *Against Heresies, book 5, in Ante-Nicene Fathers vol. 1 (New Advent)*, Irenaeus of Lyons, trans. Alexander Roberts and William Rambaut, 1885, 5.30.3 <https://www.newadvent.org/fathers/0103530.htm>
+
+- [ ] **Composition of 2 Peter** — `events/2-peter-composition.toml` (draft)
+  - Axis / confidence: composition / contested; range 100 CE – 150 CE
+  - Summary: This asks who wrote 2 Peter and when. The letter names Simon Peter as its author. Ehrman says 2 Peter is, more than any other New Testament writing, widely recognised as forged. The only date he gives in the passages read is "the end of the first century, at best" for the situation it assumes. So the range below is the editor's bracket.
+  - Verse (describes): 2Pet 1:1 (The letter names Peter as its author.)
+  - Verse (background): 2Pet 1:12 – 2Pet 1:14 (Ehrman: the author pretends to know his death is near, a testament written as fiction.)
+  - Verse (background): 2Pet 3:1 (Ehrman: the author refers to an earlier letter, which he takes to be 1 Peter.)
+  - Verse (background): 2Pet 3:4 (Ehrman: the fathers have died, so much time has passed.)
+  - Verse (background): 2Pet 3:15 – 2Pet 3:16 (Ehrman: the author knows a collection of Paul's letters treated as scripture.)
+  - Position **End of the first century or later** (100 CE – 150 CE, held by Bart D. Ehrman): Ehrman holds that 2 Peter came into existence long after Peter's death. The lower bound of 100 is his "end of the first century, at best". The upper bound of 150 is the editor's and is not from Ehrman.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 294, 295
+    - Argument (for): Ehrman: "By Elliott’s count, there are proportionally more hapax legomena in 2 Peter than in any other writing of the New Testament: 58 of its 402 words (14.4 percent)."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 294
+    - Argument (for): Ehrman: "we are told that “the fathers” have “fallen asleep” (i.e., died) since the original promises of the coming end (3:4)."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 295
+      - Verse (background): 2Pet 3:4 (The fathers have died.)
+    - Argument (for): Ehrman on 1:12–14: "As with all Testaments, this is a fiction put on the pen of someone already residing comfortably in his tomb."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 295
+      - Verse (background): 2Pet 1:12 – 2Pet 1:14 (A feigned knowledge of his own death.)
+    - Argument (for): Ehrman on 3:15–16, where the author knows a collection of Paul's letters held as scripture: "It is hard to imagine any such situation before the end of the first century, at best."
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 295
+      - Verse (background): 2Pet 3:15 – 2Pet 3:16 (Paul's letters as a collection and as scripture.)
+    - Argument (for): Ehrman: "By Elliott’s count, nineteen of Jude’s twenty-five verses reappear in modified form in 2 Peter." He thinks Jude is itself late, so 2 Peter is "later still".
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 295
+  - Position **Written by Peter, before about 70 CE** (30 CE – 70 CE, held by The letter's own claim (Ehrman names no modern holder in the passages read)): Ehrman names no modern scholar for this view in the passages read. The letter claims Peter as its author, and Ehrman places Peter's death before 70 CE. The lower bound of 30 is the editor's.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 293, 320
+    - Argument (against): Ehrman cites doubts from antiquity. Didymus the Blind: "We must therefore not be ignorant of the fact that the epistle at hand is forged". Eusebius: "the second Petrine epistle we have been taught to regard as uncanonical".
+      - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 294
 
 - [ ] **The covenant with Abraham** — `events/abraham-covenant.toml` (draft)
   - Axis / confidence: narrative / speculative; range 2000 BCE – 1001 BCE
@@ -1442,6 +1522,24 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Historicity of the Bible*, Wikipedia <https://en.wikipedia.org/wiki/Historicity_of_the_Bible>
   - View **Joseph: a story composed late**: Donald B. Redford dated the writing of the Joseph story to between the 7th century BCE and the third quarter of the 5th century BCE. By the early 1990s most scholars saw it as a wisdom novella by a single author. Thomas Römer argues for the late Persian period.
     - Source: *Joseph (Genesis)*, Wikipedia <https://en.wikipedia.org/wiki/Joseph_(Genesis)>
+
+- [ ] **Are the disputed letters of Paul forgeries?** — `issues/pauline-pseudepigrapha.toml` (draft)
+  - Kind: historical
+  - Summary: Some letters that name Paul as their author may have been written by others. Ehrman argues that 2 Thessalonians is a deliberate forgery. Only 2 Thessalonians has been entered so far.
+  - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 211, 225
+  - View **Forgeries, written in Paul's name to deceive**: Ehrman says 2 Thessalonians was "written by someone intent on authorizing a non-Pauline view in the name of the apostle himself". He argues it is a forgery and a counterforgery.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 211, 225
+  - View **Paul wrote it (Jewett, Malherbe)**: Ehrman names Robert Jewett and Abraham Malherbe as holdouts for Pauline authorship. Malherbe claims a "majority" of scholars still hold to authenticity. Ehrman says that is only because many hold views that rule out forgeries in scripture.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 210
+
+- [ ] **Did Peter write the letters in his name?** — `issues/petrine-letters-authorship.toml` (draft)
+  - Kind: historical
+  - Summary: Two New Testament letters name Peter as their author. Ehrman argues neither was written by Peter. Only 1 and 2 Peter are entered here. Jude has not been entered.
+  - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 293, 295
+  - View **Forgeries written after Peter's death**: Ehrman says 2 Peter is, "more than any other New Testament writing", widely recognised as forged. He argues 1 Peter is forged too, which "would necessarily make 2 Peter a forgery as well".
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 293, 295
+  - View **1 Peter is genuine (scholars not named)**: Ehrman calls 1 Peter "the one book scholars have been most inclined to consider authentic". He names no scholar for the view in the passages read.
+    - Source: *Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (read from a PDF at ~/.cache/jot/sources/ehrman-2013/ with an ebook layout and no printed page numbers; locators 'PDF pp. N' are page indices in that file, not the print edition)*, Bart D. Ehrman, 2013, PDF pp. 294
 
 - [ ] **When was Ruth written, and is it history?** — `issues/ruth-historicity.toml` (draft)
   - Kind: historical
