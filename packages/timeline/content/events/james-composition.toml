@@ -140,3 +140,39 @@ citations = [{ source = "brown-1997", locator = "ch. 34, Summary of Basic Inform
 Brown: the offices of teacher (3:1) and presbyters with a "quasiliturgical" role (5:14–15) "also suggests a late 1st-century date"."""
   citations = [{ source = "brown-1997", locator = "ch. 34, By and to whom, where, and when" }]
   verses = [{ ref = "Jas.5.14", link = "dates", note = "Presbyters with a liturgical role." }]
+
+[[positions]]
+id = "carson-moo-early-middle-40s"
+label = "The early or middle 40s, by James the Lord's brother, in Jerusalem"
+tradition = "critical"
+earliest = 40
+latest = 46
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to James the brother of the Lord, probably writing from Jerusalem while he led the church there. They date the letter before the Jerusalem Council of 48 or 49 CE, "sometime in the early or middle 40s". The year bounds are the editor's reading of that phrase."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 621–623, 627–628" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They argue that James 2:14-26 makes best sense if James had never heard Paul or read his letters, which puts the letter after Paul's teaching began to spread and before James and Paul met at the Jerusalem Council. They add that the letter shows no hint of conflict between Jewish and Gentile Christians, which they would expect after the Council."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 627–628" }]
+  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "dates", note = "Read as written before James met Paul, not as a reply to Paul's letters." }]
+
+[[positions]]
+id = "ehrman-intro-late-first-century"
+label = "Late first century or after; probably not by Jesus's brother"
+tradition = "critical"
+earliest = 80
+latest = 110
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says "there is little reason to think that the author is claiming to be that particular James", the brother of Jesus, since James was a common name. He gives no date in the chapter text; his timeline chart places the General Epistles at "80-110", and the bounds here are that range. Same view as his 2013 book, in textbook form."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 323 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman notes it is "somewhat strange" that the letter never refers to personal knowledge of its author's brother Jesus or of his teachings. He also reads the letter as arguing against a misreading of Paul's faith without works (James 2:24)."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 323 approx." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The author names himself James, with no claim to be the Lord's brother." }, { ref = "Jas.2.24", link = "background", note = "Read as aimed at a misreading of Paul." }]

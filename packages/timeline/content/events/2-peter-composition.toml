@@ -93,3 +93,39 @@ citations = [{ source = "brown-1997", locator = "ch. 36, Summary of Basic Inform
 Brown on the disappointed hope: the letter comes "after the apostolic generation was dead and expectations of the second coming during their lifetime had been disappointed"."""
   citations = [{ source = "brown-1997", locator = "ch. 36, By and to whom, where, and when" }]
   verses = [{ ref = "2Pet.3.4", link = "dates", note = "Scoffers ask where the promise of his coming is." }]
+
+[[positions]]
+id = "carson-moo-before-65"
+label = "By Peter shortly before his death, before about 65 CE, from Rome"
+tradition = "critical"
+earliest = 63
+latest = 65
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they argue for Peter as the author of 2 Peter as well as 1 Peter. If Peter wrote it, they say, the letter "must be dated before about A.D. 65", the year of his martyrdom under Nero, and he writes from Rome because he senses his death is near. The 63 start is the editor's, set by their dating of 1 Peter."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 659–663" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They argue that Peter's mention of Paul's letters in 2 Peter 3:15-16 does not require a fixed collection or a late date. They also hold that the weak attestation of the letter is exaggerated, and that forged letters were rejected by the early church, so a forgery would be unlikely to be accepted."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 659–662" }]
+  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Paul's letters are read as known to Peter, with no fixed collection implied." }]
+
+[[positions]]
+id = "ehrman-intro-after-jude"
+label = "After Jude, so after the first century began to close; pseudonymous"
+tradition = "critical"
+earliest = 100
+latest = 115
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says "the vast majority of critical scholars agree" that Simon Peter did not write 2 Peter, and counts it among pseudonymous writings in Peter's name. He says that if Jude is near the end of the first century, 2 Peter "must be somewhat later", and elsewhere puts 2 Peter "some thirty years after Matthew". The 100 to 115 bounds are the editor's reading of those two statements (Matthew at 80 to 85). Same view as his 2013 book, in textbook form."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 328, 337 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman argues 2 Peter takes much of chapter 2 from Jude, and that 2 Peter 3:15-16 speaks of Paul's letters as scripture ("as they do the other scriptures"). A letter written after Paul's collected letters were read this way cannot be by Peter, who died around 64."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 328-330 approx." }]
+  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "dates", note = "Paul's letters ranked with 'the other scriptures'." }, { ref = "2Pet.2.1", link = "background", note = "Chapter 2 is largely taken over from Jude." }]

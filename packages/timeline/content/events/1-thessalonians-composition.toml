@@ -30,3 +30,32 @@ citations = [{ source = "brown-1997", locator = "ch. 18, Summary of Basic Inform
 Brown places the writing at Corinth, soon after Paul's preaching at Thessalonica: Paul "was genuinely relieved when Timothy returned to him (at Corinth) with the good news that the Thessalonian Christians had not been unsettled by affliction.""""
   citations = [{ source = "brown-1997", locator = "ch. 18, General Analysis of the Message" }]
   verses = [{ ref = "1Thess.3.6", link = "dates", note = "Timothy's return with good news." }]
+
+[[positions]]
+id = "carson-moo-corinth-50"
+label = "Carson and Moo: from Corinth in A.D. 50"
+tradition = "critical"
+earliest = 50
+latest = 50
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Thessalonians, a letter whose authorship is not in doubt. They place it at Corinth in 50 CE, four to six months after his ministry in Thessalonica. In their words, "1 Thessalonians will have been written in A.D. 50"."""
+citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo argue that the letter's details fit Acts 17 and 18 closely, and that Acts 18:5 together with the mention of Achaia in 1 Thessalonians 1:8 are "conclusive reasons" to place the writing in Corinth rather than Athens."""
+  citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
+  verses = [{ ref = "1Thess.1.8", link = "dates", note = "Achaia mentioned, which points to Corinth." }]
+
+[[positions]]
+id = "ehrman-intro-49"
+label = "Ehrman (textbook): about 49, by Paul"
+tradition = "critical"
+earliest = 49
+latest = 49
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook calls 1 Thessalonians "the oldest book of the New Testament" and says it is usually dated to about the year 49 CE. He lists it among the letters that "virtually all scholars agree were written by Paul himself.""""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 204 approx." }]

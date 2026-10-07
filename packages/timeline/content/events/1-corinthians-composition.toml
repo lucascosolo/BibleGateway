@@ -30,3 +30,32 @@ citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Inform
 Brown reads the closing as fixing the setting: "Paul wants to stay at Ephesus at least till Pentecost (May/June AD 57?)" because an opportunity for evangelizing has opened, then plans to come to Corinth via Macedonia."""
   citations = [{ source = "brown-1997", locator = "ch. 22, General Analysis of the Message" }]
   verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying at Ephesus until Pentecost." }]
+
+[[positions]]
+id = "carson-moo-ephesus-55"
+label = "Carson and Moo: from Ephesus in early 55"
+tradition = "critical"
+earliest = 55
+latest = 55
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Corinthians. They date it by the Gallio inscription, which puts Gallio's proconsulship in 51 or 52, and conclude that Paul "wrote 1 Corinthians while he was in Ephesus, some time before Pentecost", early in 55. They add that all the dates could be moved one year earlier."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 447-448" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo work from the Delphi inscription of Claudius to Gallio's term, then count Paul's two and a half years in Ephesus to autumn 55. Paul's own note that he will stay in Ephesus until Pentecost puts the letter in his last year there."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 447-448" }]
+  verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying in Ephesus until Pentecost." }]
+
+[[positions]]
+id = "ehrman-intro-mid-50s"
+label = "Ehrman (textbook): mid-50s, from Ephesus"
+tradition = "critical"
+earliest = 54
+latest = 56
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says Paul wrote 1 Corinthians from Ephesus, and elsewhere that the Last Supper tradition in it "was written in the mid-50s" by Paul. The 54-56 bounds are the editor's reading of "mid-50s.""""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 232 approx." }]

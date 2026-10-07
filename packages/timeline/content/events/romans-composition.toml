@@ -30,3 +30,32 @@ citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Inform
 Brown on the place of writing: Phoebe, "a woman deacon of the church at Cenchreae a few miles from where Paul is writing", is going to Rome and perhaps carrying the letter."""
   citations = [{ source = "brown-1997", locator = "ch. 24, General Analysis of the Message" }]
   verses = [{ ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae." }]
+
+[[positions]]
+id = "carson-moo-corinth-57"
+label = "Carson and Moo: from Corinth, A.D. 57"
+tradition = "critical"
+earliest = 57
+latest = 57
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote Romans near the end of his third missionary journey, in Corinth during the three months of Acts 20:3. They say that "A.D. 57 is the best alternative", while admitting they cannot be certain within a year or two."""
+citations = [{ source = "carson-moo-2005", locator = "p. 394" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo point to Paul's plans to go to Jerusalem and then Rome (Acts 19:21; 20:16), to Phoebe of Cenchrea near Corinth (Romans 16:1-2), and to Gaius and Erastus (16:23), all of which fit Corinth."""
+  citations = [{ source = "carson-moo-2005", locator = "p. 394" }]
+  verses = [{ ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae, near Corinth." }, { ref = "Rom.15.19", link = "dates", note = "The eastern mission complete." }]
+
+[[positions]]
+id = "ehrman-intro-50s"
+label = "Ehrman (textbook): a Pauline letter of the 50s, from Corinth"
+tradition = "critical"
+earliest = 50
+latest = 59
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook counts Romans among the undisputed letters and says Paul wrote it from Corinth. It gives no year in the passages read; the 50-59 bounds are the editor's reading of his "50s of the Common Era.""""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 267 approx." }]

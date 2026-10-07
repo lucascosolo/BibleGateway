@@ -18,3 +18,9 @@ label = "Paul wrote it (Jewett, Malherbe)"
 text = """
 Ehrman names Robert Jewett and Abraham Malherbe as holdouts for Pauline authorship. Malherbe claims a "majority" of scholars still hold to authenticity. Ehrman says that is only because many hold views that rule out forgeries in scripture."""
 citations = [{ source = "ehrman-2013", locator = "PDF pp. 210" }]
+
+[[views]]
+label = "Carson and Moo: the disputed letters are Paul's"
+text = """
+Carson and Moo, the authors of a standard evangelical introduction, defend Pauline authorship of Ephesians, Colossians, 2 Thessalonians and the Pastoral Epistles. Their general argument is that the search for parallels showing readers would have understood a letter to be pseudonymous "has proved a failure". They conclude that either some documents are pseudonymous and their authors meant to deceive, or the authors meant to tell the truth and "pseudonymity is not attested in the New Testament". They also say no church father knowingly accepted a pseudonymous book into the canon, and that "school" theories fit the neo-Pythagoreans poorly."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 349-350" }]

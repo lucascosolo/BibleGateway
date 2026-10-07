@@ -96,3 +96,39 @@ citations = [{ source = "brown-1997", locator = "ch. 26, Summary of Basic Inform
 Brown on the copying between the two letters: "Why would Paul copy himself in this almost mechanical way?" He thinks it more likely the mark of another writer assuming Paul's mantle, since II Thess 3:8 repeats I Thess 2:9 almost verbatim."""
   citations = [{ source = "brown-1997", locator = "ch. 26, Did Paul Write II Thessalonians?" }]
   verses = [{ ref = "2Thess.3.8", link = "describes", note = "Repeats 1 Thessalonians 2:9 on labor and toil night and day." }]
+
+[[positions]]
+id = "carson-moo-corinth-50-51"
+label = "Carson and Moo: Paul wrote it from Corinth, late 50 or early 51"
+tradition = "critical"
+earliest = 50
+latest = 51
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, defend the traditional attribution to Paul and put 2 Thessalonians shortly after 1 Thessalonians, written from Corinth. They hold that it was written "either late in A.D. 50 or early in A.D. 51", and conclude that it "should be accepted as a genuine letter of the apostle Paul"."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 542-544" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo single out the autograph of 2 Thessalonians 3:17 as the hardest point for a pseudonymous reading. A forger who wrote "in my own hand" and referred to earlier teaching by Paul (2:2, 15) would, quoting Malherbe, have been "audacious to a degree beyond belief". They say Brown offers no evidence that such wording would be read symbolically."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 536-537, 542" }]
+  verses = [{ ref = "2Thess.3.17", link = "describes", note = "The closing greeting in Paul's own hand." }, { ref = "2Thess.2.2", link = "background", note = "Warning about a letter falsely in Paul's name." }]
+
+[[positions]]
+id = "ehrman-intro-late-first-century"
+label = "Ehrman (textbook): after Paul, possibly near the end of the first century"
+tradition = "critical"
+earliest = 65
+latest = 100
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook calls 2 Thessalonians the letter "whose authorship remains in greatest doubt," but argues that "difficulties make it hard to see how Paul could have written both letters." He supposes the author wrote "sometime after Paul had died, possibly near the end of the first century." The 65-100 bounds are the editor's."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+He contrasts the first letter, where the end comes "like a thief in the night," with a second letter in which the man of lawlessness must appear first, and notes the claim in 2 Thess 3:17 and the warning about a forged letter in 2:2 as the work of an imitator."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
+  verses = [{ ref = "2Thess.2.2", link = "background", note = "Warning about a letter forged in Paul's name." }, { ref = "2Thess.2.3-2Thess.2.4", link = "describes", note = "The antichrist figure who must appear before the end." }, { ref = "1Thess.5.2", link = "describes", note = "The day comes like a thief in the night." }]

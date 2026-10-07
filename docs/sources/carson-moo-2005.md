@@ -30,8 +30,10 @@ etc.
 | 606 | Hebrews |
 | 628 | James |
 | 647 | 1 Peter |
-| 677 | 2 Peter |
-| 708 | 1–3 John |
+| 663 | 2 Peter (authorship pp. 659–662 printed) |
+| 677 | 1–3 John |
+| 690–693 | Jude |
+| 708 | Revelation |
 
 Romans, 1 and 2 Corinthians, Philemon, the Pastorals, Jude and Revelation use a differently
 worded heading; search the text for the book name and "Date".

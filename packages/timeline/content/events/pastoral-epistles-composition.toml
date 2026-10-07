@@ -119,3 +119,39 @@ citations = [{ source = "brown-1997", locator = "ch. 29, Summary of Basic Inform
 Brown on church order: the two-part structure of presbyter/bishops and deacons in Titus and 1 Timothy "is not far from that of Didache 15:1" (ca. AD 100?) and 1 Clement (ca. AD 96), so he places the Pastorals between 80 and 100."""
   citations = [{ source = "brown-1997", locator = "ch. 29, Who Wrote Titus and I Timothy?" }]
   verses = [{ ref = "Titus.1.5", link = "background", note = "Presbyters appointed in every town." }, { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Overseers and deacons." }]
+
+[[positions]]
+id = "carson-moo-paul-after-first-imprisonment"
+label = "Carson and Moo: Paul's own, written after his release from Rome (c. 62-66)"
+tradition = "critical"
+earliest = 62
+latest = 66
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, defend Pauline authorship of all three Pastoral Epistles. They hold that Paul was released from the Roman imprisonment of Acts and wrote in the 60s: 1 Timothy "probably the early 60s", 2 Timothy in 64 or 65 as more likely, and Titus "not later than the middle 60s"."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 571-572, 578, 583" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo argue that "all the historical references in these letters ring true as statements coming from the life of Paul". They ask whether a later admirer would have had Paul call himself chief of sinners (1 Timothy 1:15) or recall that nobody stood by him (2 Timothy 4:16), and say no early church father knowingly accepted a pseudonymous book into the canon."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 567-568" }]
+  verses = [{ ref = "1Tim.1.15", link = "describes", note = "Paul as chief of sinners." }, { ref = "2Tim.4.16", link = "describes", note = "Nobody stood by him." }, { ref = "Titus.1.5", link = "dates", note = "Titus left in Crete." }]
+
+[[positions]]
+id = "ehrman-intro-end-first-century"
+label = "Ehrman (textbook): not Paul, possibly near the end of the first century"
+tradition = "critical"
+earliest = 85
+latest = 110
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook concludes the Pastorals "appear not to have been written by Paul" but "sometime later, possibly near the end of the first century," by an otherwise unknown member of one of Paul's churches. The 85-110 bounds are the editor's, allowing for his link to second-century church structure."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 283 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+He argues from church order: "The clerical structure of these letters appears far removed from what we find in the letters of Paul," and is closer to second-century authors."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 283 approx." }]
+  verses = [{ ref = "1Tim.3.1-1Tim.3.7", link = "describes", note = "Qualifications for the overseer." }, { ref = "Titus.1.5", link = "describes", note = "Appointing elders in every town." }]

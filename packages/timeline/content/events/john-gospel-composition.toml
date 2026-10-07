@@ -30,3 +30,45 @@ citations = [{ source = "brown-1997", locator = "ch. 11, Summary of Basic Inform
 Brown places the writing of III John and the redactor's addition of chapter 21 later than the Gospel proper: "The phase during which III John was written and the redactor added chap. 21 (AD 100–110?)"."""
   citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
   verses = [{ ref = "John.21.15-John.21.17", link = "dates", note = "Pastoral structure added in the redactor's phase." }]
+
+[[positions]]
+id = "carson-moo-80-85"
+label = "About 80 to 85 CE, by John the son of Zebedee"
+tradition = "critical"
+earliest = 80
+latest = 85
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution: "it is highly probable that John the son of Zebedee wrote the fourth gospel". On date they say almost any year between about 55 and 95 is possible, and "very tentatively" offer 80-85 CE. They give no firm place of writing, only that readers around Ephesus would follow if John lived there."""
+citations = [
+  { source = "carson-moo-2005", locator = "p. 253" },
+  { source = "carson-moo-2005", locator = "pp. 264–267" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They hold that John 21:24 does not clearly point to a school of writers, since it could as easily refer to a group of attesting elders. For the date, they judge the Jamnia-based argument from the 'put out of the synagogue' passages weakened, and they argue that the fall of the temple is not mentioned because the Gospel was written some years after it."""
+  citations = [
+    { source = "carson-moo-2005", locator = "p. 251" },
+    { source = "carson-moo-2005", locator = "pp. 264–267" },
+  ]
+  verses = [{ ref = "John.21.24", link = "describes", note = "The testifying disciple, read as the apostle or attesting elders rather than a school." }]
+
+[[positions]]
+id = "ehrman-intro-90-95"
+label = "Probably around 90 to 95 CE, anonymous and not by the son of Zebedee"
+tradition = "critical"
+earliest = 90
+latest = 95
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says John was "the last canonical Gospel to be written, probably around 90-95 c.e." He says it was written anonymously, that it is traditionally ascribed to John the son of Zebedee, and that "there are reasons to doubt that ascription". Some traditions may go back to a follower of Jesus, but that does not make him the writer. Bounds are the stated range."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 124-126 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman argues John 21:24 distinguishes the disciple who testified and wrote from the "we" who vouch for him, so the final author was someone other than that disciple. John 19:35 says only that the eyewitness spoke the truth, not who wrote it down."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 124 approx." }]
+  verses = [{ ref = "John.21.24", link = "describes", note = "The testifying disciple and the 'we' who vouch for him." }, { ref = "John.19.35", link = "describes", note = "The eyewitness's testimony, with no statement of who wrote it down." }]

@@ -106,3 +106,39 @@ citations = [{ source = "brown-1997", locator = "ch. 35, Summary of Basic Inform
 Brown: if Jude himself wrote it, he was one of the youngest brothers and "could have been alive as late as AD 90–100, which may be the most plausible date for the letter"."""
   citations = [{ source = "brown-1997", locator = "ch. 35, By and to whom, where, and when" }]
   verses = [{ ref = "Jude.1.17", link = "dates", note = "The apostles are spoken of as a past generation." }]
+
+[[positions]]
+id = "carson-moo-mid-to-late-60s"
+label = "The middle to late 60s, by Jude the Lord's brother"
+tradition = "critical"
+earliest = 64
+latest = 69
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to Jude, the brother of the Lord and of James. They say the letter cannot be later than about 90, and that if Jude used 2 Peter it comes after 64-65. They conclude: "We should probably date Jude also in the middle-to-late 60s". The year bounds are the editor's reading."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 690–692" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They answer the three usual objections to authorship: Galilean origin does not rule out good Greek, verse 17 points to predictions of the apostles and not to a fixed tradition, and a later forger would have stressed the family tie. They conclude there is no reason not to take the letter's claim at face value."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 691–692" }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "'Servant of Jesus Christ and brother of James', taken as Jude the Lord's brother." }]
+
+[[positions]]
+id = "ehrman-intro-late-first-century"
+label = "Late first century; probably pseudepigraphic"
+tradition = "critical"
+earliest = 80
+latest = 110
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says Jude "appears to be pseudonymous", that "many critical scholars" see early Christian pseudepigraphy, and that it "does not appear to be likely that Jesus' own brother wrote the book". He gives no firm year; his timeline chart places the General Epistles at "80-110", used here as bounds, and he speaks of dating Jude "near the end of the first century". Same view as his 2013 book, in textbook form."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 326, 328 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman argues Jude's brother would have been a lower-class, Aramaic-speaking peasant, whereas the author wrote good Greek and knew apocryphal Jewish books, quoting a lost account of the fight over Moses' body (v. 9) and citing 1 Enoch as Scripture (v. 14)."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 326 approx." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim: brother of James." }, { ref = "Jude.1.14", link = "background", note = "1 Enoch cited as Scripture." }]

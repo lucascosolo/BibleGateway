@@ -33,3 +33,45 @@ citations = [
 Brown: "if Mark is to be dated in the period 68–73, a date earlier than 80 for Luke is unlikely", since Luke used Mark."""
   citations = [{ source = "brown-1997", locator = "ch. 9, Date of Writing" }]
   verses = [{ ref = "Luke.1.1-Luke.1.4", link = "dates", note = "The author builds on earlier written accounts." }]
+
+[[positions]]
+id = "carson-moo-mid-60s"
+label = "The mid- to late 60s for Luke, the mid-60s for Acts"
+tradition = "critical"
+earliest = 62
+latest = 69
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament. They defend Luke, Paul's companion, as the author of Acts, and prefer the 60s for the Gospel over the 75-85 CE range most scholars hold. They conclude that "Acts should be dated in the mid–60s". They are uncertain where Luke wrote, and Achaia in Greece is a reasonable conjecture. The year bounds are the editor's reading."""
+citations = [
+  { source = "carson-moo-2005", locator = "pp. 207–210" },
+  { source = "carson-moo-2005", locator = "pp. 296–300" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They say Jesus' predictions of Jerusalem's fall in Luke are "remarkably vague", using standard siege language, so they need not be written after the event. They also note that Acts, which Luke wrote after the Gospel, reports no event later than 62, omits Nero's persecution, and shows no knowledge of Paul's letters, all of which they take as pointing to a date not long after 62."""
+  citations = [
+    { source = "carson-moo-2005", locator = "pp. 208–209" },
+    { source = "carson-moo-2005", locator = "p. 300" },
+  ]
+  verses = [{ ref = "Luke.21.20", link = "dates", note = "'Surrounded by armies' is read as stock siege language, not a report of 70 CE." }]
+
+[[positions]]
+id = "ehrman-intro-80-85"
+label = "Around 80 to 85 CE, by a Greek-speaking Christian not shown to be Paul's companion"
+tradition = "critical"
+earliest = 80
+latest = 85
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says Luke "was written around 80-85 ce, by a Greek-speaking Christian, probably outside Palestine", and that Acts was written in the same years. He says the traditional ascription to Luke, Paul's traveling companion, rests on a tradition with "reasons to suspect" it, and he calls the author "Luke" for convenience. Bounds are the stated range."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 110 approx.; Acts p. 182 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman reads the preface as saying the author had several predecessors in writing about Jesus (v. 1) and drew on stories from "eyewitnesses and ministers of the word" (v. 2). So the author concedes he was not himself an eyewitness, and he used earlier sources, including Mark."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 96 approx." }]
+  verses = [{ ref = "Luke.1.1-Luke.1.4", link = "describes", note = "The preface names earlier narratives and eyewitness sources." }]

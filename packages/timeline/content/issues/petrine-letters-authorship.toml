@@ -18,3 +18,18 @@ label = "1 Peter is genuine (scholars not named)"
 text = """
 Ehrman calls 1 Peter "the one book scholars have been most inclined to consider authentic". He names no scholar for the view in the passages read."""
 citations = [{ source = "ehrman-2013", locator = "PDF pp. 294" }]
+
+[[views]]
+label = "Carson and Moo: Peter wrote both letters"
+text = """
+Carson and Moo, authors of a standard evangelical introduction, defend Peter as the author of both. For 1 Peter they call the case against him "not at all a strong one" and suggest Silvanus (1 Peter 5:12) as a secretary who shaped the Greek. For 2 Peter they say the doubts about attestation are exaggerated and that forged letters were rejected by the early church."""
+citations = [
+  { source = "carson-moo-2005", locator = "pp. 645–646" },
+  { source = "carson-moo-2005", locator = "pp. 659–662" },
+]
+
+[[views]]
+label = "Ehrman (Brief Introduction): 1 Peter probably pseudepigraphic, 2 Peter certainly so"
+text = """
+In his textbook, Ehrman says many scholars doubt Peter wrote 1 Peter, and that "on balance" it is "probably best to regard 1 Peter as yet another example of Christian pseudepigraphy". For 2 Peter he says "the vast majority of critical scholars agree" Peter did not write it, citing its borrowing from Jude and the lack of any mention of it before about 220."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 320-328 approx." }]

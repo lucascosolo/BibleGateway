@@ -30,3 +30,32 @@ citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Inform
 Brown on the place of imprisonment: "imprisonment at Ephesus is a distinct possibility", given Paul's talk of "wild beasts" at Ephesus and many earlier imprisonments, and since Timothy was with Paul there."""
   citations = [{ source = "brown-1997", locator = "ch. 20, Place of writing" }]
   verses = [{ ref = "Phil.1.13", link = "describes", note = "The imprisonment in question." }]
+
+[[positions]]
+id = "carson-moo-mid-50s-to-early-60s"
+label = "Carson and Moo: between the mid-50s and the early 60s"
+tradition = "critical"
+earliest = 55
+latest = 62
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, take Philippians to be Paul's and do not settle where he was imprisoned. They give about 61-62 for Rome, a little earlier for Caesarea, and a few years earlier still for Ephesus, and say it "was written during the period from the mid–50s to the early 60s"."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 506-507" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo find the case for Ephesus strong but not conclusive, and think the evidence fits more than one city. Because the date depends on which imprisonment Paul means in Philippians 1:13, they decline to say more than the stated range."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 506-507" }]
+  verses = [{ ref = "Phil.1.13", link = "dates", note = "The imprisonment whose location fixes the date." }]
+
+[[positions]]
+id = "ehrman-intro-50s"
+label = "Ehrman (textbook): a Pauline letter of the 50s, from prison"
+tradition = "critical"
+earliest = 50
+latest = 59
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook counts Philippians among the undisputed letters, written by Paul himself from prison in an undisclosed location. It gives no year; the 50-59 bounds are the editor's reading of his "50s of the Common Era" for Paul's letters."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 246 approx." }]

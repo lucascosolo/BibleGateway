@@ -18,3 +18,18 @@ label = "James wrote it (Luke Timothy Johnson)"
 text = """
 Ehrman reports that Luke Johnson has made a strong case that there is no hard evidence of real animosity between James and Paul, and that Johnson is a supporter of authenticity. Ehrman disagrees. For Jude he notes that Richard Bauckham makes a spirited defense of authenticity."""
 citations = [{ source = "ehrman-2013", locator = "PDF pp. 379, 383, 384" }]
+
+[[views]]
+label = "Carson and Moo: James and Jude, the Lord's brothers, wrote them"
+text = """
+Carson and Moo, authors of a standard evangelical introduction, take James the brother of the Lord as the author of James, calling that case "quite strong" and noting the similar Greek of his speech in Acts 15. For Jude they answer the usual objections, on his Greek, the apostles in verse 17, and the unmentioned family tie, and find "no reason not to take the claim of the letter at face value"."""
+citations = [
+  { source = "carson-moo-2005", locator = "pp. 621–623" },
+  { source = "carson-moo-2005", locator = "pp. 691–692" },
+]
+
+[[views]]
+label = "Ehrman (Brief Introduction): doubtful that the brothers wrote either"
+text = """
+In his textbook, Ehrman says there is "little reason to think" the author of James means James the brother of Jesus. Of Jude he says "many critical scholars" regard it as pseudepigraphy and that Jesus' brother is unlikely to have written it, given the Greek and the learning."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 323, 326 approx." }]

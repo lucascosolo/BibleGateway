@@ -48,3 +48,39 @@ citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Informa
 Brown reports that, for this dating, the Gospel's failure "to show any knowledge of the details of the First Jewish Revolt against Rome in AD 66–70 and to mention the fall of Jerusalem" is taken as internal support."""
   citations = [{ source = "brown-1997", locator = "ch. 7, Date of Writing" }]
   verses = [{ ref = "Mark.13.2", link = "dates", note = "A prediction with no report of fulfilment." }]
+
+[[positions]]
+id = "carson-moo-late-50s-or-60s"
+label = "Late 50s or the 60s, probably in Rome"
+tradition = "critical"
+earliest = 57
+latest = 69
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament. They think a Roman origin is the best alternative, given the early tradition. They find the evidence cannot choose between the 50s and the 60s and conclude only that Mark was written "sometime in the late 50s or the 60s". The year bounds are the editor's reading of that phrase."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 179–182" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They argue that Mark 13 shows "very little evidence" of the actual events of 70 CE. In their view its warnings use stock Old Testament and Jewish imagery of a besieged city, so the chapter cannot be used to date the Gospel after the Temple fell."""
+  citations = [{ source = "carson-moo-2005", locator = "p. 182" }]
+  verses = [{ ref = "Mark.13.14", link = "dates", note = "The 'abomination of desolation' is read as stock imagery, not a report of 70 CE." }]
+
+[[positions]]
+id = "ehrman-intro-around-70"
+label = "Around 70 CE, by an anonymous Greek-speaking Christian"
+tradition = "critical"
+earliest = 65
+latest = 70
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says Mark "was written in Greek, around 70 c.e." and that "many scholars believe" it was written late in the Jewish War or soon after the Temple fell. Its author is anonymous, a Greek-speaking Christian probably living outside Palestine. The year bounds are his timeline chart's "65-70" for Mark."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman suggests current events shaped Mark: the war with Rome and the Temple's destruction would make the end seem near, as Jesus predicts in Mark 8:38 to 9:1 and chapter 13. He treats this as a suggestion ("many scholars believe"), not proof."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
+  verses = [{ ref = "Mark.13.2", link = "dates", note = "The Temple prediction, read against the war of 66-70 CE." }, { ref = "Mark.9.1", link = "background", note = "The end said to come within the lifetime of some hearers." }]

@@ -70,3 +70,42 @@ citations = [{ source = "brown-1997", locator = "ch. 37, Summary of Basic Inform
 Brown: for a long time the scholarly majority has held Revelation was written under Domitian, who "ruled after the destruction of the Jerusalem Temple" and "could be considered Nero come back again"."""
   citations = [{ source = "brown-1997", locator = "ch. 37, Date and Life-Situation: Persecution under Domitian?" }]
   verses = [{ ref = "Rev.13.3", link = "dates", note = "The wounded head that is healed, read as Nero returned." }]
+
+[[positions]]
+id = "carson-moo-late-domitian"
+label = "The last years of Domitian, about 95-96 CE"
+tradition = "critical"
+earliest = 93
+latest = 96
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament. They hold that John wrote from Patmos, the island of exile in the Aegean, probably sent there by a local Roman official. They weigh six lines of evidence and are "inclined, then, to follow the oldest tradition" and "date Revelation in the last years of Domitian". The 93 start is the editor's reading of "last years"; Domitian died in 96."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 707–711" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They grant that the seven kings of Revelation 17:9-11 could point to Galba and 68-69 CE, but call this indecisive, since it is unclear whether the kings are current or future and where the count begins. They put more weight on the emperor cult and the state of the seven churches, which fit the 90s better."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 709–711" }]
+  verses = [
+    { ref = "Rev.1.9", link = "describes", note = "John on Patmos 'because of the word of God and the testimony of Jesus'." },
+    { ref = "Rev.17.10", link = "dates", note = "The seven kings: five fallen, one is; read as not decisive for a date." },
+  ]
+
+[[positions]]
+id = "ehrman-intro-around-95"
+label = "Final form around 95 CE under Domitian, with earlier material from the 60s"
+tradition = "critical"
+earliest = 95
+latest = 100
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says "most investigators" think parts were written in the 60s after Nero's persecution, but the book was "probably around 95 c.e., during the reign of Domitian". His timeline chart lists it at "95-100", used here as bounds. The author was a Christian prophet named John, "not John the son of Zebedee", and the book is not pseudonymous."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 344, 350 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman says the code word "Babylon" for Rome came into use among Jews after the destruction of Jerusalem in 70, which points to a later stage of writing than the Nero-era material."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 344 approx." }]
+  verses = [{ ref = "Rev.14.8", link = "dates", note = "'Babylon' as a code name for Rome after 70 CE." }]

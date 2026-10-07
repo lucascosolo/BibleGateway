@@ -30,3 +30,39 @@ citations = [{ source = "brown-1997", locator = "ch. 8, Summary of Basic Informa
 Brown: "Probably the best argument for a post-70 date is the dependence of Matt on Mark, a Gospel commonly dated to the 68–73 period." He adds that the king burning the city in 22:7 may reflect the destruction of Jerusalem in AD 70."""
   citations = [{ source = "brown-1997", locator = "ch. 8, Date of Writing" }]
   verses = [{ ref = "Matt.22.7", link = "dates", note = "The king burns the city." }]
+
+[[positions]]
+id = "carson-moo-before-70"
+label = "Before 70 CE, but not long before; probably Syria"
+tradition = "critical"
+earliest = 60
+latest = 69
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they argue against the usual 80-100 CE dating. They place the Gospel in Syria, perhaps Antioch, without certainty. They tie the date to authorship: if the apostle Matthew is the evangelist, a date before 70 is more plausible. Their conclusion is that "Matthew was published before 70, but not long before". The year bounds are the editor's reading."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 152–156" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They say the burning of the city in Matthew 22:7 is the standard language for a punished rebel city, not knowledge of 70 CE. They add that the temple-tax story (17:24-27) would be hard to leave without comment after 70, when the tax went to the temple of Jupiter in Rome."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 153–156" }]
+  verses = [{ ref = "Matt.22.7", link = "dates", note = "Read as stock language for punishing a rebel city, so no proof of a date after 70." }]
+
+[[positions]]
+id = "ehrman-intro-80-85"
+label = "Around 80 to 85 CE, by an anonymous Greek-speaking Christian"
+tradition = "critical"
+earliest = 80
+latest = 85
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook gives the date as "around 80-85 c.e." and says the author "left his identity anonymous", a Greek-speaking Christian probably from outside Palestine. The bounds are the two ends of his stated range."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 92 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman says scholars now hold that "Matthew used Mark as one of its sources", and he lists Mark, Q and M among them. That puts Matthew after Mark, which he dates to about 70."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 92 approx." }]
+  verses = [{ ref = "Matt.1.1", link = "describes", note = "The Gospel itself names no author." }]

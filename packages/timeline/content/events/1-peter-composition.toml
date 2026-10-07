@@ -86,3 +86,39 @@ citations = [{ source = "brown-1997", locator = "ch. 33, Summary of Basic Inform
 Brown on "Babylon" as a name for Rome: it "makes better sense after 70, when the Romans had destroyed the second Temple"."""
   citations = [{ source = "brown-1997", locator = "ch. 33, From and to whom, where, and when" }]
   verses = [{ ref = "1Pet.5.13", link = "dates", note = "Babylon as a name for Rome." }]
+
+[[positions]]
+id = "carson-moo-62-63"
+label = "62-63 CE, by Peter, from Rome"
+tradition = "critical"
+earliest = 62
+latest = 63
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend Peter as the author. They read "Babylon" as Rome, so the letter was written there, and say that if Peter wrote it, it "almost surely was written in A.D. 62–63". They set the later limit by leaving time for 2 Peter before Peter's martyrdom."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 645–647" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They say the case against Peter is "not at all a strong one" and that the Greek can be explained if Peter used a secretary, perhaps Silvanus, named in 1 Peter 5:12. They add that the idea of a forged letter being written and accepted in the early church is a bigger problem than the Greek."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 645–646" }]
+  verses = [{ ref = "1Pet.5.12", link = "describes", note = "'Through Silvanus I have written': read as a secretary who could have shaped the Greek." }]
+
+[[positions]]
+id = "ehrman-intro-first-century-pseudonymous"
+label = "First century, possibly near its end; probably a pseudonymous letter"
+tradition = "critical"
+earliest = 65
+latest = 100
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says it is "probably best to regard 1 Peter as yet another example of Christian pseudepigraphy". He says the date is hard to fix but, if the letter belongs to Asia Minor, it "should probably be assigned to the first century, possibly near its end". The bounds are the editor's reading: 65 is just after Peter's death, around 64, as the textbook gives it elsewhere. This repeats his 2013 view in textbook form."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 320-322 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman reads "Babylon" in 1 Peter 5:13 as a code word for Rome. He also says the letter's polished Greek and use of the Greek Old Testament are hard to credit to a Galilean fisherman, since few in Roman Palestine could read and far fewer could write literary Greek."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 320 approx." }]
+  verses = [{ ref = "1Pet.5.13", link = "dates", note = "'Babylon' read as Rome." }]

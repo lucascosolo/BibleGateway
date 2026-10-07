@@ -30,3 +30,32 @@ citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Inform
 Brown on the North Galatian theory: Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56). Word could have reached him that teachers had come and “quickly” (Gal 1:6) won over the Galatians to “another gospel”", prompting the angry writing of Gal in 54 or 55."""
   citations = [{ source = "brown-1997", locator = "ch. 19, Dating" }]
   verses = [{ ref = "Gal.1.6", link = "describes", note = "Quickly won over to another gospel." }]
+
+[[positions]]
+id = "carson-moo-before-council-48"
+label = "Carson and Moo: just before the Jerusalem Council, about A.D. 48"
+tradition = "critical"
+earliest = 48
+latest = 48
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote Galatians, preferring the South Galatian theory and an early date. They conclude that "Paul wrote Galatians just prior to the Jerusalem Council", and if the council is rightly dated 48 CE, that is the date of the letter."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 462-464" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo link the Jerusalem visit of Galatians 2:1-10 with the famine visit of Acts 11:25-30, not Acts 15. Paul gives what looks like a complete list of his visits, and he never mentions the council's decree, so the letter is most probably earlier than the council."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 463-464" }]
+  verses = [{ ref = "Gal.2.1", link = "dates", note = "Paul's second Jerusalem visit, read as the famine visit of Acts 11." }]
+
+[[positions]]
+id = "ehrman-intro-50s"
+label = "Ehrman (textbook): a Pauline letter of the 50s"
+tradition = "critical"
+earliest = 50
+latest = 59
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook counts Galatians among the seven undisputed letters, which "virtually all scholars agree were written by Paul himself," situated in the 40s and 50s. He gives no single year; the 50-59 bounds are the editor's reading of "the 50s.""""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 188 approx." }]

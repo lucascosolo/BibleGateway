@@ -141,3 +141,39 @@ citations = [{ source = "brown-1997", locator = "ch. 27, Summary of Basic Inform
 Brown: "The developed christology, ecclesiology, and eschatology of Col has become the principal argument against Paul as the writer." He notes Paul never calls Christ the head of the church as his body, a major theme here."""
   citations = [{ source = "brown-1997", locator = "ch. 27, Did Paul Write Colossians?" }]
   verses = [{ ref = "Col.1.18", link = "background", note = "Christ as head of the body, the church." }]
+
+[[positions]]
+id = "carson-moo-rome-61"
+label = "Carson and Moo: Paul wrote it from Rome, probably A.D. 61"
+tradition = "critical"
+earliest = 60
+latest = 62
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, defend the traditional attribution of Colossians to Paul and prefer Rome as the place of his imprisonment. They write that "we will have a date in the early 60s, probably 61", because the earthquake that devastated Colosse after that is not mentioned. They add that if Paul wrote elsewhere, it could be as early as the late 50s."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 518-522" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Carson and Moo hold that the case against Pauline authorship is not decisive. The vocabulary, theology and eschatology of Colossians are within Paul's range, and the autograph greeting of Colossians 4:18 stands in the text. They also say a forger would not have chosen the unimportant town of Colosse, and conclude that "the arguments against Pauline authorship are not decisive"."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 518-520" }]
+  verses = [{ ref = "Col.4.18", link = "describes", note = "The signature in Paul's own hand." }, { ref = "Col.2.12-Col.2.13", link = "background", note = "The raised-with-Christ passage read against Romans 6." }]
+
+[[positions]]
+id = "ehrman-intro-after-paul"
+label = "Ehrman (textbook): probably not Paul, after his death"
+tradition = "critical"
+earliest = 65
+latest = 100
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says "Paul may well have written this letter" on its Pauline features but concludes "it is hard to accept that he wrote the letter to the Colossians," ascribing it to an unknown member of one of Paul's churches. He gives no date beyond after Paul's death; the 65-100 bounds are the editor's."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+He argues that Colossians is emphatic that "believers have already been raised with Christ," whereas in the undisputed letters Paul insists the resurrection with Christ is still future."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
+  verses = [{ ref = "Col.2.12", link = "describes", note = "Raised with Christ in baptism." }, { ref = "Col.3.1", link = "describes", note = "Already raised with Christ." }]

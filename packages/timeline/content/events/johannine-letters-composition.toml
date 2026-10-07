@@ -34,3 +34,39 @@ citations = [
 Brown: "The phase during which the Johannine Epistles, I and II John, were written (ca. AD 100). The community split in two", and many seceded, in the view of the author of 1 John 2:18–19."""
   citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
   verses = [{ ref = "1John.2.18-1John.2.19", link = "dates", note = "The secession." }]
+
+[[positions]]
+id = "carson-moo-early-90s"
+label = "The early 90s, by the apostle John, probably at Ephesus"
+tradition = "critical"
+earliest = 90
+latest = 93
+held_by = "D. A. Carson and Douglas J. Moo"
+summary = """
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the apostle John as the author of the three letters, probably writing from Ephesus. They place the letters after the Gospel, which they date at 80-85 CE, because the letters answer an early form of Gnosticism. They conclude it "appears best to date the Johannine epistles to the early 90s". The upper bound is the editor's reading."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 674–676" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+They argue that the writer's authority over several congregations, seen in the way he brands opponents as liars and antichrists and in 3 John 9, is most simply explained if he was an apostle. They say the main reasons for rejecting John come from reconstructions of a Johannine community, not from hard evidence."""
+  citations = [{ source = "carson-moo-2005", locator = "pp. 674–675" }]
+  verses = [{ ref = "3John.1.9", link = "describes", note = "Diotrephes, who loves to be first; read as a power play against an apostle's authority." }]
+
+[[positions]]
+id = "ehrman-intro-end-first-century"
+label = "Near the end of the first century, by a member of the Johannine community"
+tradition = "critical"
+earliest = 90
+latest = 100
+held_by = "Bart D. Ehrman (Brief Introduction)"
+summary = """
+Ehrman's textbook says 1, 2 and 3 John "were written by a member of the Johannine community, near the end of the first century", and that the author was not the person who wrote the Gospel of John, though his views were very similar. He gives no year; the 90 to 100 bounds are the editor's reading of "near the end of the first century"."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 336 approx." }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Ehrman points to themes the letters share with the Fourth Gospel, often in the same words (light and darkness, the commandment to love one another). He takes this to show that all four books come from one community."""
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 330 approx." }]
+  verses = [{ ref = "1John.2.7", link = "describes", note = "The old and new commandment, as in John 13:34." }, { ref = "John.13.34", link = "describes", note = "The new commandment shared with 1 John." }]
