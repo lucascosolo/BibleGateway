@@ -33,6 +33,34 @@ citations = [
 ]
 
 [[positions]]
+id = "scholars-516"
+label = "516/515 BCE, the sixth year of Darius I"
+tradition = "archaeological"
+earliest = -516
+latest = -515
+held_by = "Israel Finkelstein and Neil Asher Silberman; K. A. Kitchen"
+summary = """
+The date is one that scholars across the spectrum accept, because it rests on a synchronism with a Persian king whose reign is fixed from Babylonian and Persian records. Finkelstein and Silberman write that the construction of the Temple "was then finished in the year 516 BCE. Thus began the era of Second Temple Judaism." Kitchen, from the other end of the debate, summarizes Ezra 1-6 as running from Cyrus's accession in 539 "down to completion of rebuilding the temple at Jerusalem in the sixth year of Darius I (516)", and elsewhere speaks of "the opening of the Second Temple in 515"; the difference is only whether Adar of Darius's sixth year is placed in early 516 or early 515."""
+citations = [
+  { source = "finkelstein-silberman-2002", locator = "p. 300" },
+  { source = "kitchen-2003", locator = "p. 71; p. 107" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Ezra 6:15 dates the completion to the third of Adar in Darius's sixth year, and Haggai 1:1 and Zechariah 1:1 date the resumption of work to his second year. Darius I came to the throne in 522 BCE, so his second year is 520 and his sixth year runs 516/515."""
+  citations = [
+    { source = "kitchen-2003", locator = "p. 71" },
+    { source = "finkelstein-silberman-2002", locator = "p. 300" },
+  ]
+  verses = [
+    { ref = "Ezra.6.15", link = "dates" },
+    { ref = "Hag.1.1", link = "dates" },
+    { ref = "Ezra.5.1-Ezra.5.2", link = "describes", note = "Haggai and Zechariah, and the work resumes" },
+  ]
+
+[[positions]]
 id = "later-building"
 label = "Built between 450 and 400 BCE"
 tradition = "critical"
