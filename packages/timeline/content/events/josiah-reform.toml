@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it."""
+In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it. Thiele uses the episode to show how Judah counted years: everything from the repair funds to the Passover (2 Kings 22:3 to 23:23) falls in the eighteenth year, and the Passover is on 14 Nisan, so the year "must have commenced before 1 Nisan and been carried over beyond 1 Nisan", which means Judah's regnal year began in Tishri."""
 verses = [
   { ref = "2Kgs.22.3-2Kgs.23.25", link = "describes", note = "The book is found, the covenant renewed and the cult purged" },
   { ref = "2Chr.34.8-2Chr.35.19", link = "describes", note = "The parallel in Chronicles, with the Passover" },

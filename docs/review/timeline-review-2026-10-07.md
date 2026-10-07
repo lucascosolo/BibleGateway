@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `2254c68e1cf88967`, draft entries only. Check each claim against its cited source; when an
+Build `bd102d6eeb49699a`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -654,6 +654,10 @@ A claim you cannot confirm should be cut or corrected, not left in.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, p. 228 n. 4 <https://www.rcyoung.org/articles/rtables.pdf>
   - Position **966 BCE** (966 BCE, held by Edwin R. Thiele): According to Young, the chronologist Edwin Thiele's dates place the foundation in 966 BCE.
     - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, pp. 228-229 <https://www.rcyoung.org/articles/rtables.pdf>
+    - Argument (for): Thiele's own reasoning about the calendar behind the date: the temple was begun in the second month of Solomon's fourth year and finished in the eighth month of his eleventh (1 Kings 6:1, 37–38), and the Bible counts that as seven years of building. Months are numbered from Nisan, and counting is inclusive. On a Nisan-to-Nisan regnal year that span is eight years. Only Tishri-to-Tishri regnal years give seven, so Judah reckoned its kings from the autumn, and Solomon's regnal years are placed accordingly. The absolute year is not given on these pages.
+      - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, pp. 51–52 and Diagram 5 (page images supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
+      - Verse (dates): 1Kgs 6:1
+      - Verse (dates): 1Kgs 6:37 – 1Kgs 6:38
 
 - [ ] **The division of the kingdom** — `events/kingdom-division.toml` (draft)
   - Axis / confidence: narrative / contested; range 932 BCE – 930 BCE
@@ -760,7 +764,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **Josiah's reform** — `events/josiah-reform.toml` (draft)
   - Axis / confidence: narrative / contested; range 623 BCE – 622 BCE
-  - Summary: In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it.
+  - Summary: In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it. Thiele uses the episode to show how Judah counted years: everything from the repair funds to the Passover (2 Kings 22:3 to 23:23) falls in the eighteenth year, and the Passover is on 14 Nisan, so the year "must have commenced before 1 Nisan and been carried over beyond 1 Nisan", which means Judah's regnal year began in Tishri.
   - Verse (describes): 2Kgs 22:3 – 2Kgs 23:25 (The book is found, the covenant renewed and the cult purged)
   - Verse (describes): 2Chr 34:8 – 2Chr 35:19 (The parallel in Chronicles, with the Passover)
   - Verse (alludes): Jer 1:2 (Jeremiah is called in Josiah's thirteenth year)
@@ -907,10 +911,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): Neh 2:10 (Sanballat the Horonite and Tobiah are upset)
   - Verse (describes): Neh 6:15 (the wall is finished in fifty-two days)
   - Verse (alludes): Neh 13:28 (a son of Joiada is son-in-law to Sanballat)
-  - Position **445 or 444 BCE (Artaxerxes I, twentieth year)** (445 BCE – 444 BCE): Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name.
+  - Position **445 or 444 BCE (Artaxerxes I, twentieth year)** (445 BCE – 444 BCE): Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name. Thiele reads Nehemiah 1:1 and 2:1 as counting Artaxerxes' years from Tishri: Kislev fell in the twentieth year and the following Nisan "was still in the same twentieth year", which Persia's own Nisan reckoning would not allow. He notes the double-dated Aramaic papyri from Elephantine also date Persian kings by Judean Tishri years (Horn and Wood, JNES 13, 1954).
     - Source: *Nehemiah*, Wikipedia, n. 5 <https://en.wikipedia.org/wiki/Nehemiah>
     - Source: *Ezra-Nehemiah: A Commentary (author not shown on the citing page)*, 1988, p. 140, as cited by Wikipedia 'Nehemiah' n. 5
     - Source: *Artaxerxes I of Persia*, Wikipedia <https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia>
+    - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 53 (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
   - Attestation — Elephantine petition to rebuild the Yahu temple (407 BCE) *partially-corroborates*: A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall.
     - Source: *Elephantine papyri*, Wikipedia <https://en.wikipedia.org/wiki/Elephantine_papyri>
     - Source: *Sanballat the Horonite*, Wikipedia <https://en.wikipedia.org/wiki/Sanballat_the_Horonite>
@@ -1206,7 +1211,8 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Hezekiah** — `persons/hezekiah.toml` (draft)
   - Role: king of Judah (sole reign from 716/715 BCE)
   - Evidence grade (derived): corroborates
-  - Summary: Hezekiah was king of Judah when Sennacherib invaded in 701 BCE. The Assyrian king's own annals name him, and so does a royal seal impression from Jerusalem. The start of his reign is a known problem in the dates. Young reconstructs a joint reign with Ahaz from 729/728 BCE, a reign on his own from 716/715, and his death in 687. He notes that Thiele did not recognise the Ahaz–Hezekiah joint reign.
+  - Summary: Hezekiah was king of Judah when Sennacherib invaded in 701 BCE. The Assyrian king's own annals name him, and so does a royal seal impression from Jerusalem. The start of his reign is a known problem in the dates. Young reconstructs a joint reign with Ahaz from 729/728 BCE, a reign on his own from 716/715, and his death in 687. He notes that Thiele did not recognise the Ahaz–Hezekiah joint reign. Thiele's own table of the ages of Judah's kings has Hezekiah beginning his sole reign at 25, fathering his successor at 33, making Manasseh coregent at 44, and dying at 54.
+  - Source: *The Mysterious Numbers of the Hebrew Kings (new revised edition)*, Edwin R. Thiele, 1983, p. 218, Appendix C (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
   - Source: *Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms*, Center for Online Judaic Studies <https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/>
   - Source: *Tables of Reign Lengths from the Hebrew Court Recorders*, Rodger C. Young, Journal of the Evangelical Theological Society 48/2, pp. 225–248, 2005, Table 2, p. 246; §3, p. 227 <https://www.rcyoung.org/articles/rtables.pdf>
   - Source: *When Did Solomon Die?*, Rodger C. Young, Journal of the Evangelical Theological Society 46/4, pp. 589–603, 2003, p. 589 <https://www.rcyoung.org/articles/solomon.pdf>

@@ -118,3 +118,11 @@ is reusable beyond `packages/timeline/content` (reader notes, person pages, futu
   Months numbered from Nisan; inclusive counting. Diagram 5: seven Tishri years versus eight Nisan
   years. Josiah's eighteenth year (2 Kings 22:3; 23:23) as further proof of Tishri reckoning late
   in Judah's history. No absolute year for Solomon's accession on these pages.
+- **p. 53.** Josiah's eighteenth year: the events of 2 Kings 22:3–23:23 cannot fit "the short period
+  of two weeks between 1 and 14 Nisan", so the year "must have commenced before 1 Nisan and been
+  carried over beyond 1 Nisan", hence Tishri. Nehemiah 1:1 and 2:1: Kislev and the following Nisan
+  both in Artaxerxes' twentieth year, so Nehemiah used Tishri years for a Persian king; the
+  double-dated Elephantine papyri do the same (S. H. Horn and L. H. Wood, "The Fifth-Century Jewish
+  Calendar at Elephantine", JNES 13 (1954): 1–20). "Perhaps the strongest argument … is that this
+  method works." Israel: no direct evidence; Nisan year inferred, and Jeroboam's Egyptian exile
+  (1 Kings 11:40; 12:2–3, 20) offered as a reason he adopted a spring new year.
