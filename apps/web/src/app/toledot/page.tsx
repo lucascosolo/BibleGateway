@@ -41,10 +41,9 @@ export default function ToledotPage() {
           <GlossLabel id="toledot" as="strong" />
         </h1>
         <p className="toledot-home__lede">
-          Every date here is a range, never a point: the envelope of what serious scholars argue, with each
-          position, its reasons and its sources one click away. Three questions are kept apart on three
-          rules — when the events happened, when the texts were written, and when they were recognised as
-          scripture.
+          Scholars often disagree about dates, so each date here is a span of years, not a single year. Click
+          any date to see who argues what, and why. Three questions get their own line: when things
+          happened, when the books were written, and when people began treating them as scripture.
         </p>
         <DraftNotice scope="the timeline" />
       </header>
@@ -55,8 +54,8 @@ export default function ToledotPage() {
         <section className="toledot-register__column" aria-labelledby="toledot-people">
           <h2 id="toledot-people" className="toledot-section__title">People</h2>
           <p className="toledot-register__note">
-            Ordered by when they lived. The grade says how far sources outside the Bible bear on whether
-            they existed; it is derived from the evidence listed on each page.
+            In the order they lived. The grade shows how much writing or evidence from outside the Bible
+            backs up that the person existed. Each page lists that evidence.
           </p>
           <ul className="toledot-index">
             {persons.map((person) => (
@@ -76,7 +75,7 @@ export default function ToledotPage() {
         <section className="toledot-register__column" aria-labelledby="toledot-issues">
           <h2 id="toledot-issues" className="toledot-section__title">Open questions</h2>
           <p className="toledot-register__note">
-            Where the sources, or the Bible&rsquo;s own numbers, do not agree — set out view by view.
+            Places where the sources, or the Bible&rsquo;s own numbers, do not agree. Each view is laid out side by side.
           </p>
           <IssueList issues={issues} />
         </section>
@@ -92,8 +91,8 @@ function Unavailable() {
         <GlossLabel id="toledot" as="strong" />
       </h1>
       <p className="toledot-home__lede">
-        The timeline&rsquo;s data is not deployed on this server, so there is nothing to chart here yet. The
-        reader, search and cross-references are unaffected.
+        The timeline is not available on this server yet, so there is nothing to show here. The reader, search
+        and cross-references still work.
       </p>
       <Link href="/#browse" className="toledot-link">Browse the books of the Bible</Link>
     </div>

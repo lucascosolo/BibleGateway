@@ -69,20 +69,20 @@ export function layerRows(plainLabels: boolean): LayerRowSpec[] {
     {
       key: "insights",
       label: "Insights",
-      description: "Small windows into the original text — a wordplay, a custom, a connection you might not have seen.",
+      description: "Short notes on the original text: a wordplay, a custom, a link you might have missed.",
     },
     {
       key: "toledot",
       label: `${toledot.plainLabel}${term(toledot.term)}`,
       description:
-        "Dating disputes, outside evidence and open questions under the verses they concern, linked to the timeline.",
+        "Short comments under a verse when its date is disputed, when sources outside the Bible weigh in, or when a question is still open. Each links to the timeline.",
     },
     {
       key: "crossRefs",
       label: "Cross-references",
-      description: "The panel of linked passages beside the text.",
+      description: "A panel of related passages next to the text.",
     },
-    { key: "heat", label: "Reference heat", description: "Tint showing how often a verse is quoted elsewhere." },
+    { key: "heat", label: "Reference heat", description: "Shades a verse darker the more it is quoted elsewhere." },
     {
       // One switch, two genuinely different kinds of evidence — so the sentence names both, and
       // the Hebrew term is attached ONLY to the half it actually describes. Qere/Kethiv is a
@@ -90,9 +90,9 @@ export function layerRows(plainLabels: boolean): LayerRowSpec[] {
       // clause about Greek New Testament verses, which is a category error.
       key: "variants",
       label: "Variant readings",
-      description: `The readings the Hebrew scribes marked in the margin${term(
+      description: `Places where Hebrew scribes noted a different wording${term(
         "Qere/Kethiv",
-      )}, and why a verse other Bibles print is missing from this one.`,
+      )}, and why a verse in other Bibles may be missing here.`,
     },
     {
       // The interlinear had a preference, a renderer and a default, and no switch — so the one
@@ -100,7 +100,7 @@ export function layerRows(plainLabels: boolean): LayerRowSpec[] {
       // last in the list because it is the heaviest thing on the page by a distance.
       key: "interlinear",
       label: "Original language",
-      description: `Hebrew or Greek under each verse, word by word${term("Lashon")}.`,
+      description: `The Hebrew or Greek under each verse, word by word${term("Lashon")}.`,
     },
   ];
 }

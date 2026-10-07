@@ -8,8 +8,7 @@ const REVIEW_NOTES_URL = "https://github.com/lucascosolo/BibleGateway/tree/HEAD/
 export function DraftNotice({ scope = "this page" }: { scope?: string }) {
   return (
     <p className="toledot-draft">
-      Draft — not yet reviewed against its sources. Everything on {scope} is cited, but no reviewer has checked
-      the citations yet.{" "}
+      Draft, not yet reviewed. Everything on {scope} cites a source, but no one has checked those sources yet.{" "}
       <a href={REVIEW_NOTES_URL} rel="noopener noreferrer" target="_blank">
         Review notes
       </a>
