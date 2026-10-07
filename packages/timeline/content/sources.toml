@@ -1086,3 +1086,11 @@ kind = "web"
 title = "Wikidata (structured data; inventory number P217, collection P195), queried 2026-10-07"
 publisher = "Wikimedia Foundation"
 url = "https://www.wikidata.org/"
+
+[[source]]
+id = "thiele-1983-introduction"
+kind = "chapter"
+title = "Introduction to Thiele, The Mysterious Numbers of the Hebrew Kings (1983); the author's name is not on the page images read"
+publisher = "Zondervan, Grand Rapids"
+year = 1983
+url = "https://archive.org/details/mysteriousnumber0000thie"

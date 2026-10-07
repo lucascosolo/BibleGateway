@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue)."""
+Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue). The Introduction to Thiele's book offers one anchor: the incidents behind the Samson stories "must have occurred, it is apparent, subsequent to the settlement of the Philistines on the coastal plain in the first decade of the twelfth century"."""
 verses = [
   { ref = "Judg.13.1-Judg.13.25", link = "describes", note = "his birth is announced, and the Nazirite vow" },
   { ref = "Judg.14.1-Judg.15.20", link = "describes", note = "the Timnah wedding, the riddle, the foxes, the jawbone" },
@@ -22,7 +22,7 @@ earliest = -1200
 latest = -1001
 summary = """
 This range comes from one object. It is not a date for Samson. A round seal about 15 mm across, found at Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion. That suggests hero stories like Samson's were told then. Scholars say plainly that it does not prove Samson was a real person."""
-citations = [{ source = "wikipedia-samson" }]
+citations = [{ source = "thiele-1983-introduction", locator = "p. 26 (page image supplied by the user, 2026-10-07)" }, { source = "wikipedia-samson" }]
 
 [[positions]]
 id = "ussher-1155"

@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `57a8dcfc56f6fa10`, draft entries only. Check each claim against its cited source; when an
+Build `a9c33b45e458055a`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -432,7 +432,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **The period of the judges** — `events/judges-period.toml` (draft)
   - Axis / confidence: narrative / contested; range 1300 BCE – 1073 BCE
-  - Summary: These are the generations between Joshua and the kings. Tribal leaders, the judges, rescue Israel from its oppressors, again and again. The cycle runs from turning away from God, to oppression, to a cry for help, to rescue. The datable anchors sit inside a disputed range. How far the book can be trusted as history is itself debated (see the linked issues).
+  - Summary: These are the generations between Joshua and the kings. Tribal leaders, the judges, rescue Israel from its oppressors, again and again. The cycle runs from turning away from God, to oppression, to a cry for help, to rescue. The datable anchors sit inside a disputed range. How far the book can be trusted as history is itself debated (see the linked issues). The Introduction to Thiele's book puts the critical view bluntly: the Hebrew stories of the judges "can be dated only in wide and sweeping generalizations", archaeological dating without written finds "can do more than indicate a period, a half or quarter century, or happily a decade" only seldom, and "efforts to demonstrate an accurate chronology simply do not merit serious consideration".
   - Verse (describes): Judg 2:6 – Judg 3:6 (The introduction: the repeating cycle, and the nations left in the land)
   - Verse (describes): Judg 3:7 – Judg 16:31 (The stories of the judges, from Othniel to Samson)
   - Verse (dates): Judg 11:26 (Jephthah says Israel has held the Arnon region for 300 years)
@@ -445,6 +445,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (alludes): Acts 13:20 (Paul says that after that God gave them judges until Samuel)
   - Verse (alludes): Heb 11:32 – Heb 11:34 (Gideon, Barak, Samson and Jephthah are named among the faithful)
   - Position **Early-date framework (c. 1300-1073 BCE anchors)** (1300 BCE – 1073 BCE, held by Bryant G. Wood): In Wood's early-date scheme, Eglon's palace at Jericho dates to about 1300 BC (Judges 3:12-30) and Deborah and Barak to about 1230 BC. Estimates for the start of Jephthah's time as judge run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range runs from the first of these anchors to the last estimate. It is not a claim about where the period ends.
+    - Source: *Introduction to Thiele, The Mysterious Numbers of the Hebrew Kings (1983); the author's name is not on the page images read*, 1983, p. 26 (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *The Rise and Fall of the 13th-Century Exodus-Conquest Theory*, Bryant G. Wood, Journal of the Evangelical Theological Society 48/3, pp. 475–489, 2005, pp. 477, 488 <https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf>
 
 - [ ] **Deborah and Barak** — `events/deborah-barak.toml` (draft)
@@ -568,13 +569,14 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **Samson** — `events/samson.toml` (draft)
   - Axis / confidence: narrative / speculative; range 1200 BCE – 1001 BCE
-  - Summary: Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue).
+  - Summary: Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue). The Introduction to Thiele's book offers one anchor: the incidents behind the Samson stories "must have occurred, it is apparent, subsequent to the settlement of the Philistines on the coastal plain in the first decade of the twelfth century".
   - Verse (describes): Judg 13:1 – Judg 13:25 (his birth is announced, and the Nazirite vow)
   - Verse (describes): Judg 14:1 – Judg 15:20 (the Timnah wedding, the riddle, the foxes, the jawbone)
   - Verse (describes): Judg 16:1 – Judg 16:31 (Gaza, Delilah, his capture and his death)
   - Verse (alludes): 1Sam 12:11 (Samuel lists the rescuers the Lord sent)
   - Verse (alludes): Heb 11:32 (Samson is named among the people of faith)
   - Position **Iron Age I horizon (12th-11th century BCE)** (1200 BCE – 1001 BCE): This range comes from one object. It is not a date for Samson. A round seal about 15 mm across, found at Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion. That suggests hero stories like Samson's were told then. Scholars say plainly that it does not prove Samson was a real person.
+    - Source: *Introduction to Thiele, The Mysterious Numbers of the Hebrew Kings (1983); the author's name is not on the page images read*, 1983, p. 26 (page image supplied by the user, 2026-10-07) <https://archive.org/details/mysteriousnumber0000thie>
     - Source: *Samson*, Wikipedia <https://en.wikipedia.org/wiki/Samson>
   - Position **Ussher, Annals: Samson born, 1155 BC** (1155 BCE, held by James Ussher): The chronologist James Ussher has the angel appear to Manoah's wife in 2848d AM (year of the world), which is 1156 BC. He has Samson born in 2849b AM, which is 1155 BC.
     - Source: *The Annals of the World (English text, paragraph-numbered; Internet Archive full text)*, James Ussher, 1658, paragraphs 379-380 <https://archive.org/details/AnnalsOfTheWorld>
