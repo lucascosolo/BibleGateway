@@ -1104,6 +1104,14 @@ publisher = "Touchstone (Simon & Schuster), New York"
 year = 2002
 
 [[source]]
+id = "arabzadeh-2023"
+kind = "article"
+author = "Morteza Arabzadeh Sarbanani"
+title = "Revisiting the Book of Esther: Assessing the Historical Significance of the Masoretic Version for the Achaemenian History (open access, doi 10.22034/PA.2022.344449.1009; PDF at ~/.cache/jot/sources/arabzadeh-2023/)"
+container = "Persica Antiqua 3/4, pp. 19–32"
+year = 2023
+
+[[source]]
 id = "humphreys-waddington-1992"
 kind = "article"
 author = "Colin J. Humphreys and W. G. Waddington"

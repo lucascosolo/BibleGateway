@@ -1,0 +1,37 @@
+id = "esther-historicity"
+kind = "historical"
+title = "Is the Book of Esther history, and when was it written?"
+status = "draft"
+summary = """
+Esther is set at the Persian court of Ahasuerus, usually identified with Xerxes I (486-465 BCE). Most scholars today read the book as a historical novel rather than a record: it knows the Persian court well but contains errors no court insider would make. The Hebrew text is the oldest version we have, and its language and vocabulary point to a date after Xerxes and probably before Greek influence reached the Jews."""
+verses = [
+  { ref = "Esth.1.1", link = "describes", note = "Ahasuerus, who reigned from India to Ethiopia over 127 provinces" },
+  { ref = "Esth.1.3", link = "describes", note = "The army of Persia and Media" },
+  { ref = "Esth.1.19", link = "describes", note = "The laws of the Persians and the Medes" },
+  { ref = "Esth.10.2", link = "describes", note = "The chronicles of the kings of Media and Persia" },
+]
+citations = [{ source = "arabzadeh-2023", locator = "pp. 19–21, 30–31" }]
+
+[[views]]
+label = "A historical novel, on the mainstream view"
+text = """
+Arabzadeh Sarbanani, writing as a historian of Persia, reports that "today almost all Biblical scholars consider the Book of Esther, not a historical work, but a novel", citing Levenson (1997), Berlin (2001) and Koller (2014), and that commentaries since the twentieth century have discussed its historicity and moved on to its theology and literary art. His own study, he says, "does not intend to defend the historicity of the book"."""
+citations = [{ source = "arabzadeh-2023", locator = "pp. 19–20" }]
+
+[[views]]
+label = "Persian details that fit, errors that do not"
+text = """
+Testing the book against Achaemenid inscriptions and administrative documents rather than Greek authors, the article finds that much of its Persian material is independent of the Greek sources: the satrapal system, the royal scepter shown in the Persepolis audience reliefs, and the pairing of "Persia and Media" that Darius's own inscriptions use. The conclusion cuts both ways: the author knew the Persian court well, which makes the book's "gross historical errors" harder to excuse, so "it seems that the author of the Masoretic Esther has deliberately sacrificed history for the story"."""
+citations = [{ source = "arabzadeh-2023", locator = "pp. 22–31; conclusion p. 31" }]
+
+[[views]]
+label = "Written after Xerxes, probably before the Hellenistic period"
+text = """
+The Hebrew is Late Biblical Hebrew, so the book was "definitely written after the Babylonian captivity" and, from its opening tone, "certainly written after the reign of Xerxes". It has no Greek words but does have Persian and Aramaic ones, which may put it before the Hellenistic period; Fox (1991) places it in the Hellenistic period because of its historical errors. The article settles on "the late Achaemenian period or the early Hellenistic period"."""
+citations = [{ source = "arabzadeh-2023", locator = "p. 21; p. 31" }]
+
+[[views]]
+label = "The Hebrew text is the oldest version"
+text = """
+Three early versions survive: the Hebrew (Masoretic), the Septuagint, and the Greek "Alpha" text. Torrey (1944) argued the Greek texts went back to a lost Aramaic original older than the Hebrew, and Milik (1992) read Qumran fragments as a prototype of the story; but, the article notes, scholars have found no direct link between those fragments and Esther, so "the Masoretic text of the book of Esther is still the oldest extant version"."""
+citations = [{ source = "arabzadeh-2023", locator = "pp. 20–21" }]
