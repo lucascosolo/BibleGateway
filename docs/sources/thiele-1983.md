@@ -88,3 +88,24 @@ is reusable beyond `packages/timeline/content` (reader notes, person pages, futu
   given in the Hebrew".
 - **p. 194.** Prophets, not court scribes, as the authors of Kings; Nathan and Zadok anointed Solomon
   (1 Kings 1:34).
+
+## Index and appendix
+
+- **p. 218, Appendix C, "The Ages of the Kings of Judah".** Columns: age at accession as coregent;
+  age at beginning of sole reign; age at birth of successor; age at association of son as
+  coregent; age at death. Rows: Rehoboam (father Solomon) 41 sole, died 59; Jehoshaphat 35
+  coregent, 38 sole, 23 at son's birth, 54 at son's association, died 59; Jehoram 32, 37, 23, died
+  44; Ahaziah sole 22(42), 22, died 22; Joash sole 7, 22 at son's birth, died 46; Amaziah sole 25,
+  15, 30, died 54; Azariah 16, 39, 33, 57, died 68; Jotham 25, 36, 21, died 44; Ahaz sole 20, 16,
+  died 40; Hezekiah sole 25, 33 at son's birth, 44 at son's association, died 54; Manasseh 12
+  coregent, 22 sole, 45, died 66; Amon sole 22, 17, died 24; Josiah sole 8, 17 (Jehoahaz), 16
+  (Jehoiakim), 31 (Zedekiah), died 39; Jehoahaz sole 23; Jehoiakim sole 25, 19, died 36;
+  Jehoiachin sole 18(8); Zedekiah sole 21. Abijah, Asa, Athaliah and Amon's coregency cells blank.
+- **p. 246, Subject and Person Index (extract).** Solomon 51–52, 53. Shishak: attacks Jerusalem
+  35, 80. Shalmaneser III: accession date 74; battle of Qarqar 50, 73, 76–77, 104, 121, 122, 162;
+  Monolith Inscription 144; tribute from Jehu 37, 50, 76–77, 95, 103–4, 112, 162. Shalmaneser V:
+  date of siege of Samaria 162, 163, 164; Khorsabad List 70. Solar eclipse in 763: 69, 72, 74,
+  141. Tiglath-Pileser III: accession 74, 140, 141; contact with Ahaz 125, 152; with Azariah 108,
+  120, 125, 139–62; with Menahem 108, 120, 121, 125–28, 139–62; with Pekah 108; receives tribute
+  from Israel 125–28. Tishri-to-Tishri regnal year 44–46, 51–53. Zedekiah: accession 187, 206;
+  dates of reign 190. Hezekiah synchronisms 38, 168, 174.

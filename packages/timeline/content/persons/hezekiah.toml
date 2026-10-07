@@ -2,11 +2,12 @@ id = "hezekiah"
 name = "Hezekiah"
 role = "king of Judah (sole reign from 716/715 BCE)"
 summary = """
-Hezekiah was king of Judah when Sennacherib invaded in 701 BCE. The Assyrian king's own annals name him, and so does a royal seal impression from Jerusalem. The start of his reign is a known problem in the dates. Young reconstructs a joint reign with Ahaz from 729/728 BCE, a reign on his own from 716/715, and his death in 687. He notes that Thiele did not recognise the Ahaz–Hezekiah joint reign."""
+Hezekiah was king of Judah when Sennacherib invaded in 701 BCE. The Assyrian king's own annals name him, and so does a royal seal impression from Jerusalem. The start of his reign is a known problem in the dates. Young reconstructs a joint reign with Ahaz from 729/728 BCE, a reign on his own from 716/715, and his death in 687. He notes that Thiele did not recognise the Ahaz–Hezekiah joint reign. Thiele's own table of the ages of Judah's kings has Hezekiah beginning his sole reign at 25, fathering his successor at 33, making Manasseh coregent at 44, and dying at 54."""
 status = "draft"
 verses = [{ ref = "2Kgs.18.1-2Kgs.20.21", link = "describes" }]
 events = ["sennacherib-campaign-judah"]
 citations = [
+  { source = "thiele-1983", locator = "p. 218, Appendix C (page image supplied by the user, 2026-10-07)" },
   { source = "cojs-sennacherib-prisms" },
   { source = "young-2005", locator = "Table 2, p. 246; §3, p. 227" },
   { source = "young-2003", locator = "p. 589" },
