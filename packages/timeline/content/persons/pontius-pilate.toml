@@ -1,6 +1,6 @@
 id = "pontius-pilate"
 name = "Pontius Pilate"
-role = "Roman prefect of Judaea (26/27–36/37 CE)"
+role = "Roman prefect of Judaea (26–36 CE)"
 summary = """
 The Roman governor who sentenced Jesus to crucifixion. Attested by an inscription bearing his \
 name and title, and by two Roman-era historians."""
@@ -9,7 +9,11 @@ verses = [
   { ref = "Luke.3.1", link = "describes" },
   { ref = "Mark.15.1-Mark.15.15", link = "describes" },
 ]
-citations = [{ source = "wikipedia-pontius-pilate" }]
+citations = [
+  { source = "livius-pontius-pilate" },
+  { source = "ej-2007-caiaphas", locator = "Pilate (26–36)" },
+  { source = "wikipedia-pontius-pilate" },
+]
 
 [[attestations]]
 artifact = "pilate-stone"

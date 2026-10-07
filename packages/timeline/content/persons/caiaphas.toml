@@ -10,13 +10,21 @@ verses = [
   { ref = "Matt.26.3", link = "describes" },
   { ref = "John.18.13", link = "describes" },
 ]
-citations = [{ source = "wikipedia-caiaphas" }]
+citations = [
+  { source = "ej-2007-caiaphas" },
+  { source = "wikipedia-caiaphas" },
+]
 
 [[attestations]]
 artifact = "josephus-antiquities-18-caiaphas"
 relation = "corroborates"
-note = "Josephus names Joseph called Caiaphas as high priest, appointed by Gratus and removed by Vitellius."
-citations = [{ source = "wikipedia-caiaphas" }]
+note = """
+Josephus names Joseph called Caiaphas as high priest: made Gratus's appointee's successor \
+(18.35) and deprived of the office by Vitellius, who appointed Jonathan son of Ananus (18.95)."""
+citations = [
+  { source = "lexundria-josephus-ant-18", locator = "18.35; 18.95" },
+  { source = "ej-2007-caiaphas" },
+]
 
 [[attestations]]
 artifact = "caiaphas-ossuary"

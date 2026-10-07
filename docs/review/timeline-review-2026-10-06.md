@@ -1,6 +1,6 @@
 # Timeline review sheet
 
-Build `086cd164147928e1`, draft entries only. Check each claim against its cited source; when an
+Build `2d9fbccd724ed1d9`, draft entries only. Check each claim against its cited source; when an
 entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.
 A claim you cannot confirm should be cut or corrected, not left in.
 
@@ -41,6 +41,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Kind: literary-text, Greek
   - Made: date not established
   - Summary: Josephus records that the Roman prefect Valerius Gratus appointed Joseph, called Caiaphas, high priest, and that the Syrian legate Vitellius later removed him.
+  - Source: *Antiquities of the Jews, book 18, with Niese section numbers (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.35 (appointed by Gratus); 18.95 (removed by Vitellius) <https://lexundria.com/j_aj/18.26-18.95/wst>
   - Source: *Caiaphas*, Wikipedia, Antiquities, book 18 <https://en.wikipedia.org/wiki/Caiaphas>
 
 - [ ] **Josephus, Antiquities 20.9.1 (James, brother of Jesus)** — `artifacts/josephus-antiquities-20-200.toml` (draft)
@@ -61,7 +62,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Tacitus, Annals 15.44** — `artifacts/tacitus-annals-15-44.toml` (draft)
   - Kind: literary-text, Latin
   - Made: date not established
-  - Summary: The Roman historian Tacitus, describing Nero's persecution of Christians after the fire of Rome, explains the name: "auctor nominis eius Christus Tiberio imperitante per procuratorem Pontium Pilatum supplicio adfectus erat" — Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate.
+  - Summary: The Roman historian Tacitus, describing Nero's persecution of Christians after the fire of Rome, explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat" — Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate.
   - Source: *Annales, book 15 (Latin text, The Latin Library)*, Tacitus, 15.44 <https://www.thelatinlibrary.com/tacitus/tac.ann15.shtml>
 
 - [ ] **Merneptah Stele** — `artifacts/merneptah-stele.toml` (draft)
@@ -265,13 +266,15 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Role: high priest in Jerusalem
   - Evidence grade (derived): corroborates
   - Summary: The high priest at the trial of Jesus in the Gospels. Josephus names him as high priest, and a family ossuary found in Jerusalem in 1990 is widely, though not universally, identified as his.
+  - Source: *Caiaphas, Joseph*, Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library, 2007 <https://www.jewishvirtuallibrary.org/caiaphas-joseph>
   - Source: *Caiaphas*, Wikipedia <https://en.wikipedia.org/wiki/Caiaphas>
   - Verse (describes): Matt 26:3
   - Verse (describes): John 18:13
   - Attestation — Caiaphas ossuary *partially-corroborates*: Inscribed "Joseph son of Caiaphas". The identification with the high priest is widely accepted but disputed on the spelling, the lack of a title and the plainness of the tomb.
     - Source: *Caiaphas ossuary*, Wikipedia <https://en.wikipedia.org/wiki/Caiaphas_ossuary>
-  - Attestation — Josephus, Antiquities book 18 (Joseph Caiaphas) *corroborates*: Josephus names Joseph called Caiaphas as high priest, appointed by Gratus and removed by Vitellius.
-    - Source: *Caiaphas*, Wikipedia <https://en.wikipedia.org/wiki/Caiaphas>
+  - Attestation — Josephus, Antiquities book 18 (Joseph Caiaphas) *corroborates*: Josephus names Joseph called Caiaphas as high priest: made Gratus's appointee's successor (18.35) and deprived of the office by Vitellius, who appointed Jonathan son of Ananus (18.95).
+    - Source: *Antiquities of the Jews, book 18, with Niese section numbers (Lexundria)*, Flavius Josephus, trans. William Whiston, 18.35; 18.95 <https://lexundria.com/j_aj/18.26-18.95/wst>
+    - Source: *Caiaphas, Joseph*, Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library, 2007 <https://www.jewishvirtuallibrary.org/caiaphas-joseph>
 
 - [ ] **David** — `persons/david.toml` (draft)
   - Role: king of Judah and Israel
@@ -331,9 +334,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Verse (describes): Exod 2:10 (named by Pharaoh's daughter)
 
 - [ ] **Pontius Pilate** — `persons/pontius-pilate.toml` (draft)
-  - Role: Roman prefect of Judaea (26/27–36/37 CE)
+  - Role: Roman prefect of Judaea (26–36 CE)
   - Evidence grade (derived): corroborates
   - Summary: The Roman governor who sentenced Jesus to crucifixion. Attested by an inscription bearing his name and title, and by two Roman-era historians.
+  - Source: *Pontius Pilate*, Livius.org <https://www.livius.org/articles/person/pontius-pilate/>
+  - Source: *Caiaphas, Joseph*, Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library, 2007, Pilate (26–36) <https://www.jewishvirtuallibrary.org/caiaphas-joseph>
   - Source: *Pontius Pilate*, Wikipedia <https://en.wikipedia.org/wiki/Pontius_Pilate>
   - Verse (describes): Mark 15:1 – Mark 15:15
   - Verse (describes): Luke 3:1
@@ -349,7 +354,7 @@ A claim you cannot confirm should be cut or corrected, not left in.
   - Role: king of Judah and Israel
   - Evidence grade (derived): none
   - Summary: David's son, builder of the First Temple, remembered as the wealthiest and wisest king of a united Israel. No contemporary or near-contemporary inscription names him. Whether 10th-century Jerusalem was the capital of a substantial kingdom or a modest highland centre is one of the central debates of biblical archaeology (see the linked issue).
-  - Source: *Untitled here: History News Network article 120094, 16 November 2009 (title to be confirmed by the reviewer)*, Eric H. Cline <https://www.historynewsnetwork.org/article/120094>
+  - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
   - Verse (describes): 1Kgs 1:1 – 1Kgs 11:43
 
 ## Issues
@@ -378,12 +383,14 @@ A claim you cannot confirm should be cut or corrected, not left in.
 
 - [ ] **Belshazzar: king, and son of Nebuchadnezzar?** — `issues/belshazzar-king-and-father.toml` (draft)
   - Kind: historical
-  - Summary: Daniel 5 calls Belshazzar king, and has him spoken of as Nebuchadnezzar's son (5:2, 5:22). The Babylonian sources name him as the eldest son of Nabonidus, the last king of Babylon; on the cylinder he is the king's son rather than king. Explanations offered for the difference are not yet documented in this entry.
+  - Summary: Daniel 5 calls Belshazzar king, and has him spoken of as Nebuchadnezzar's son (5:2, 5:22). The Babylonian sources name him as the eldest son of Nabonidus, the last king of Babylon; on the cylinder he is the king's son rather than king. A Babylonian text records Nabonidus handing the kingship to his eldest son before leaving Babylon, which bears on the title; the parentage remains a discrepancy.
   - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
   - Verse (describes): Dan 5:2 (Nebuchadnezzar his father)
   - Verse (describes): Dan 5:22 (you, his son)
   - View **The Babylonian record**: The Nabonidus Cylinder from Ur names Belshazzar as "the eldest son, my offspring" of Nabonidus.
     - Source: *Cylinders of Nabonidus*, Wikipedia <https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus>
+  - View **Kingship entrusted to the eldest son**: The Verse Account of Nabonidus, in Oppenheim's translation, says that as the third year was about to begin Nabonidus "entrusted the army [?] to his oldest son, his first born", and "let everything go, entrusted the kingship to him, and, himself, he started out for a long journey". Read with the cylinder, this has Belshazzar exercising royal authority in Babylon under his father, which bears on Daniel's calling him king; it says nothing about Nebuchadnezzar.
+    - Source: *Verse Account of Nabonidus (Livius.org reproduction of the ANET translation)*, A. Leo Oppenheim (trans.), in James B. Pritchard, Ancient Near Eastern Texts relating to the Old Testament, 1950, column ii, lines 5–6 <https://www.livius.org/sources/content/anet/verse-account-of-nabonidus/>
 
 - [ ] **Did the Exodus happen as described?** — `issues/exodus-historicity.toml` (draft)
   - Kind: historical
@@ -413,11 +420,11 @@ A claim you cannot confirm should be cut or corrected, not left in.
 - [ ] **Solomon's kingdom: an empire or a highland chiefdom?** — `issues/solomon-united-monarchy.toml` (draft)
   - Kind: historical
   - Summary: The Bible describes Solomon ruling a wealthy united kingdom from Jerusalem. No inscription names him, so the debate turns on archaeology — above all on the date of monumental gates and buildings once attributed to him.
-  - Source: *Untitled here: History News Network article 120094, 16 November 2009 (title to be confirmed by the reviewer)*, Eric H. Cline <https://www.historynewsnetwork.org/article/120094>
+  - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
   - Source: *Solomon*, Wikipedia <https://en.wikipedia.org/wiki/Solomon>
   - Verse (describes): 1Kgs 9:15 (Solomon builds Hazor, Megiddo and Gezer)
   - View **No inscription names him**: Eric Cline: there is still not a single contemporary or near-contemporary inscription that mentions Solomon.
-    - Source: *Untitled here: History News Network article 120094, 16 November 2009 (title to be confirmed by the reviewer)*, Eric H. Cline <https://www.historynewsnetwork.org/article/120094>
+    - Source: *Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)*, Eric H. Cline, 2009 <https://www.historynewsnetwork.org/article/120094>
   - View **Solomonic gates**: Yigael Yadin attributed the monumental gates and structures he excavated at Hazor, Megiddo and Gezer to Solomon's building programme, reading them alongside 1 Kings 9:15.
     - Source: *Solomon*, Wikipedia <https://en.wikipedia.org/wiki/Solomon>
   - View **A modest chiefdom; the gates are later**: Finkelstein and Silberman redate those structures to the Omride kings of the 9th century BCE and see 10th-century Jerusalem as the rough hilltop stronghold of a local dynasty of tribal chiefs, not the capital of an empire.

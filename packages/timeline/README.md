@@ -62,16 +62,19 @@ this state is `docs/review/timeline-review-2026-10-06.md`; regenerate it after e
 
 Much of this batch rests on reference works (Wikipedia, Livius, COJS) because museum and
 publisher pages refused automated access. Those citations are the first thing to replace with
-the primary publication. Specifically unconfirmed and left out: the Tel Dan Stele's and the
-Pilate Stone's museum numbers, where the Hezekiah bulla is held, the year of the Tel Dan B
-fragments (1994 or 1995), the Caiaphas passages' section numbers in Josephus, the dates of
-composition of Tacitus and Josephus, every person's life dates, and any explanation of the
-Belshazzar discrepancy (the Verse Account's "entrusted the kingship" was seen only in a snippet).
-Check first:
+the primary publication. A second pass on 2026-10-06 (WebFetch; the British Museum, Israel
+Museum and Perseus still refused or returned empty pages) confirmed and applied: the Latin
+Library's `Tibero`; Josephus 18.35 and 18.95 for Caiaphas (Whiston on Lexundria); the Verse
+Account's "entrusted the kingship" wording (Oppenheim in ANET, via Livius); Caiaphas's
+appointment by Gratus and removal by Vitellius in 36 CE and Pilate's 26–36 (Encyclopaedia
+Judaica 2007 via JVL, Livius); and the title of the HNN article in `cline-2009` (the page shows
+no byline, so the author attribution is still the reviewer's to confirm). Still unconfirmed and
+left out: the Taylor Prism's, Tel Dan Stele's and Pilate Stone's museum numbers, where the
+Hezekiah bulla is held, the year of the Tel Dan B fragments (1994 or 1995), the dates of
+composition of Tacitus and Josephus, every person's life dates, and the regnal dates of the
+kings (Thiele could not be opened). Check first:
 
-- `sources.toml`: `cline-2009` has no confirmed title.
-- `artifacts/tacitus-annals-15-44.toml`: the quoted Latin uses the standard `Tiberio`; the
-  Latin Library page cited prints `Tibero`.
+- `sources.toml`: `cline-2009` author attribution.
 - `persons/jesus-of-nazareth.toml` and `artifacts/josephus-testimonium-flavianum.toml`: the
   "majority view" wording and Meier's chapter locator.
 - `issues/moses-historicity.toml`: Dever's view is summarised from a review and a reference work,

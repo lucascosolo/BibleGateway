@@ -337,7 +337,8 @@ year = 1953
 id = "cline-2009"
 kind = "web"
 author = "Eric H. Cline"
-title = "Untitled here: History News Network article 120094, 16 November 2009 (title to be confirmed by the reviewer)"
+title = "Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)"
+year = 2009
 url = "https://www.historynewsnetwork.org/article/120094"
 
 [[source]]
@@ -370,3 +371,33 @@ kind = "museum"
 author = "British Museum"
 title = "Taylor Prism (collection record, registration 1855,1003.1)"
 url = "https://www.britishmuseum.org/collection/object/W_1855-1003-1"
+
+[[source]]
+id = "lexundria-josephus-ant-18"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, book 18, with Niese section numbers (Lexundria)"
+url = "https://lexundria.com/j_aj/18.26-18.95/wst"
+
+[[source]]
+id = "livius-verse-account"
+kind = "edition"
+author = "A. Leo Oppenheim (trans.), in James B. Pritchard, Ancient Near Eastern Texts relating to the Old Testament"
+title = "Verse Account of Nabonidus (Livius.org reproduction of the ANET translation)"
+year = 1950
+url = "https://www.livius.org/sources/content/anet/verse-account-of-nabonidus/"
+
+[[source]]
+id = "ej-2007-caiaphas"
+kind = "web"
+author = "Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library"
+title = "Caiaphas, Joseph"
+year = 2007
+url = "https://www.jewishvirtuallibrary.org/caiaphas-joseph"
+
+[[source]]
+id = "livius-pontius-pilate"
+kind = "web"
+author = "Livius.org"
+title = "Pontius Pilate"
+url = "https://www.livius.org/articles/person/pontius-pilate/"
