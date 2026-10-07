@@ -1,0 +1,33 @@
+id = "paul-before-gallio"
+title = "Paul before Gallio at Corinth"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+Paul's opponents bring him before Gallio, proconsul of Achaia, at Corinth, and Gallio refuses to \
+judge. The Delphi inscription of Claudius dates Gallio's tenure to about 51–52 CE, the most \
+accurately known date in Paul's life."""
+verses = [
+  { ref = "Acts.18.12-Acts.18.17", link = "describes", note = "the Jews bring Paul before Gallio's tribunal" },
+  { ref = "Acts.18.1-Acts.18.11", link = "background", note = "Paul's eighteen months at Corinth" },
+]
+
+[[positions]]
+id = "51-52"
+label = "51–52 CE"
+tradition = "chronological"
+earliest = 51
+latest = 52
+summary = """
+Gallio's tenure as proconsul can be dated fairly accurately to 51–52 CE through the Delphi \
+inscription, whose reference to Claudius's twenty-sixth acclamation corresponds to 52 CE."""
+citations = [{ source = "wikipedia-gallio" }]
+
+[[attestations]]
+artifact = "gallio-inscription"
+relation = "corroborates"
+note = """
+Claudius calls Gallio "my friend and proconsul", confirming that he held the Achaean \
+proconsulship and when."""
+citations = [{ source = "wikipedia-gallio" }]

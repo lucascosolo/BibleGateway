@@ -1,0 +1,28 @@
+id = "jehu-tribute-841"
+title = "Jehu's tribute to Shalmaneser III"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = "Jehu, called 'son of Omri' by the Assyrians, pays tribute to Shalmaneser III c. 841 BCE. The Bible does not mention the tribute."
+verses = [
+  { ref = "2Kgs.9.1-2Kgs.10.36", link = "background", note = "Jehu's revolt; the tribute is not mentioned" },
+  { ref = "2Kgs.10.32-2Kgs.10.33", link = "background", note = "Hazael cuts off Israel's borders in his reign" },
+  { ref = "Hos.1.4", link = "alludes", note = "'the house of Jehu'" },
+]
+
+[[positions]]
+id = "841"
+label = "841 BCE"
+tradition = "chronological"
+earliest = -841
+latest = -841
+held_by = "Edwin R. Thiele"
+summary = "Thiele's chronology agrees with the tribute of Jehu in 841; Young's tables begin Jehu in 841n/841t."
+citations = [{ source = "young-2005", locator = "p. 232; Table 1, p. 245" }]
+
+[[attestations]]
+artifact = "black-obelisk"
+relation = "corroborates"
+note = "Inscription reads: 'I received the tribute of Iaua (Jehu) son of (the people of the land of) Omri'; dated in or around 841."
+citations = [{ source = "wikipedia-black-obelisk" }]

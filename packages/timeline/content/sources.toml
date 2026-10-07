@@ -722,3 +722,209 @@ kind = "edition"
 author = "Flavius Josephus, trans. William Whiston"
 title = "Antiquities of the Jews 14.61 (Lexundria)"
 url = "https://lexundria.com/j_aj/14.61/wst"
+
+
+[[source]]
+id = "young-2004-samaria"
+kind = "article"
+author = "Rodger C. Young"
+title = "When Was Samaria Captured? The Need for Precision in Biblical Chronologies"
+container = "Journal of the Evangelical Theological Society 47/4, pp. 577–595"
+year = 2004
+url = "https://www.rcyoung.org/articles/samaria.pdf"
+
+[[source]]
+id = "wikipedia-shoshenq-i"
+kind = "web"
+author = "Wikipedia"
+title = "Shoshenq I"
+url = "https://en.wikipedia.org/wiki/Shoshenq_I"
+
+[[source]]
+id = "wikipedia-black-obelisk"
+kind = "web"
+author = "Wikipedia"
+title = "Black Obelisk of Shalmaneser III"
+url = "https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III"
+
+[[source]]
+id = "wikipedia-mesha-stele"
+kind = "web"
+author = "Wikipedia"
+title = "Mesha Stele"
+url = "https://en.wikipedia.org/wiki/Mesha_Stele"
+
+[[source]]
+id = "wikipedia-battle-of-qarqar"
+kind = "web"
+author = "Wikipedia"
+title = "Battle of Qarqar"
+url = "https://en.wikipedia.org/wiki/Battle_of_Qarqar"
+
+[[source]]
+id = "wikipedia-sargon-ii"
+kind = "web"
+author = "Wikipedia"
+title = "Sargon II"
+url = "https://en.wikipedia.org/wiki/Sargon_II"
+
+[[source]]
+id = "wikipedia-battle-of-carchemish"
+kind = "web"
+author = "Wikipedia"
+title = "Battle of Carchemish"
+url = "https://en.wikipedia.org/wiki/Battle_of_Carchemish"
+
+[[source]]
+id = "wikipedia-rehoboam"
+kind = "web"
+author = "Wikipedia"
+title = "Rehoboam"
+url = "https://en.wikipedia.org/wiki/Rehoboam"
+
+[[source]]
+id = "wikipedia-battle-of-megiddo-609"
+kind = "web"
+author = "Wikipedia"
+title = "Battle of Megiddo (609 BC)"
+url = "https://en.wikipedia.org/wiki/Battle_of_Megiddo_(609_BC)"
+
+[[source]]
+id = "wikipedia-census-of-quirinius"
+kind = "web"
+author = "Wikipedia"
+title = "Census of Quirinius"
+url = "https://en.wikipedia.org/wiki/Census_of_Quirinius"
+
+[[source]]
+id = "wikipedia-date-of-crucifixion"
+kind = "web"
+author = "Wikipedia"
+title = "Date of the crucifixion of Jesus"
+url = "https://en.wikipedia.org/wiki/Date_of_the_crucifixion"
+
+[[source]]
+id = "wikipedia-chronology-of-jesus"
+kind = "web"
+author = "Wikipedia"
+title = "Chronology of Jesus"
+url = "https://en.wikipedia.org/wiki/Chronology_of_Jesus"
+
+[[source]]
+id = "wikipedia-herod-agrippa"
+kind = "web"
+author = "Wikipedia"
+title = "Herod Agrippa"
+url = "https://en.wikipedia.org/wiki/Herod_Agrippa"
+
+[[source]]
+id = "wikipedia-gallio"
+kind = "web"
+author = "Wikipedia"
+title = "Lucius Junius Gallio Annaeanus"
+url = "https://en.wikipedia.org/wiki/Lucius_Junius_Gallio_Annaeanus"
+
+[[source]]
+id = "wikipedia-arch-of-titus"
+kind = "web"
+author = "Wikipedia"
+title = "Arch of Titus"
+url = "https://en.wikipedia.org/wiki/Arch_of_Titus"
+
+[[source]]
+id = "wikipedia-council-of-jerusalem"
+kind = "web"
+author = "Wikipedia"
+title = "Council of Jerusalem"
+url = "https://en.wikipedia.org/wiki/Council_of_Jerusalem"
+
+[[source]]
+id = "wikipedia-paul-the-apostle"
+kind = "web"
+author = "Wikipedia"
+title = "Paul the Apostle"
+url = "https://en.wikipedia.org/wiki/Paul_the_Apostle"
+
+[[source]]
+id = "wikipedia-conversion-of-paul"
+kind = "web"
+author = "Wikipedia"
+title = "Conversion of Paul the Apostle"
+url = "https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle"
+
+[[source]]
+id = "wikipedia-porcius-festus"
+kind = "web"
+author = "Wikipedia"
+title = "Porcius Festus"
+url = "https://en.wikipedia.org/wiki/Porcius_Festus"
+
+[[source]]
+id = "wikipedia-siege-of-jerusalem-70"
+kind = "web"
+author = "Wikipedia"
+title = "Siege of Jerusalem (70 CE)"
+url = "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(70_CE)"
+
+[[source]]
+id = "wikipedia-book-of-revelation"
+kind = "web"
+author = "Wikipedia"
+title = "Book of Revelation"
+url = "https://en.wikipedia.org/wiki/Book_of_Revelation"
+
+[[source]]
+id = "lexundria-josephus-ant-17-342"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, 17.342-17.355 (Lexundria)"
+url = "https://lexundria.com/j_aj/17.339-17.355/wst"
+
+[[source]]
+id = "lexundria-josephus-ant-18-1"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, 18.1-18.25 (Lexundria)"
+url = "https://lexundria.com/j_aj/18.1-18.25/wst"
+
+[[source]]
+id = "lexundria-josephus-ant-19-343"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "Antiquities of the Jews, 19.343-19.352 (Lexundria)"
+url = "https://lexundria.com/j_aj/19.343-19.352/wst"
+
+[[source]]
+id = "lexundria-josephus-war-6-249"
+kind = "edition"
+author = "Flavius Josephus, trans. William Whiston"
+title = "The Jewish War, 6.249-6.270 (Lexundria)"
+url = "https://lexundria.com/j_bj/6.249-6.270/wst"
+
+[[source]]
+id = "newadvent-eusebius-he-2"
+kind = "edition"
+author = "Eusebius of Caesarea"
+title = "Eusebius, Church History, book 2 (New Advent)"
+url = "https://www.newadvent.org/fathers/250102.htm"
+
+[[source]]
+id = "newadvent-eusebius-he-3"
+kind = "edition"
+author = "Eusebius of Caesarea"
+title = "Eusebius, Church History, book 3 (New Advent)"
+url = "https://www.newadvent.org/fathers/250103.htm"
+
+[[source]]
+id = "newadvent-eusebius-he-5"
+kind = "edition"
+author = "Eusebius of Caesarea"
+title = "Eusebius, Church History, book 5 (New Advent)"
+url = "https://www.newadvent.org/fathers/250105.htm"
+
+[[source]]
+id = "ecw-1-clement-hoole"
+kind = "edition"
+author = "Clement of Rome"
+title = "1 Clement, Hoole translation (Early Christian Writings)"
+url = "http://www.earlychristianwritings.com/text/1clement-roberts.html"

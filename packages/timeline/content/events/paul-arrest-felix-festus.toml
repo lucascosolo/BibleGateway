@@ -1,0 +1,37 @@
+id = "paul-arrest-felix-festus"
+title = "Paul's arrest and trials before Felix and Festus"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+Paul is arrested in Jerusalem, held at Caesarea under the governor Felix, and after two years is \
+heard by his successor Festus, to whom he appeals to Caesar. The year of Festus's accession is \
+disputed, between c. 55 and 61 CE, with 59 favored by F. F. Bruce."""
+verses = [
+  { ref = "Acts.21.27-Acts.21.36", link = "describes", note = "the arrest in the temple" },
+  { ref = "Acts.23.23-Acts.24.27", link = "describes", note = "Caesarea; Felix; two years' detention" },
+  { ref = "Acts.25.1-Acts.26.32", link = "describes", note = "Festus; the appeal to Caesar; Agrippa II" },
+]
+
+[[positions]]
+id = "festus-59"
+label = "Festus succeeds Felix c. 59 CE"
+tradition = "chronological"
+earliest = 59
+latest = 59
+held_by = "F. F. Bruce"
+summary = """
+Wikipedia says Bruce cites 59 CE for Festus's accession, based on provincial coinage of Nero's \
+fifth year, and that most scholars favor 58–60."""
+citations = [{ source = "wikipedia-porcius-festus" }]
+
+[[positions]]
+id = "festus-55-61"
+label = "Festus's accession between c. 55 and 61 CE"
+tradition = "critical"
+earliest = 55
+latest = 61
+summary = """
+The earliest proposed start of Festus's term is c. 55–56 and the latest is 61 CE."""
+citations = [{ source = "wikipedia-porcius-festus" }]

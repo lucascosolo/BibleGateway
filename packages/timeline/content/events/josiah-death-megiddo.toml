@@ -1,0 +1,33 @@
+id = "josiah-death-megiddo"
+title = "Josiah's death at Megiddo"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = "Josiah goes out against Pharaoh Neco and dies at Megiddo."
+verses = [
+  { ref = "2Kgs.23.28-2Kgs.23.30", link = "describes", note = "killed at Megiddo" },
+  { ref = "2Chr.35.20-2Chr.35.27", link = "describes", note = "Chronicles: wounded by archers; mourning" },
+  { ref = "2Kgs.23.29", link = "dates", note = "Neco going up to the Euphrates" },
+  { ref = "Zech.12.11", link = "alludes", note = "mourning at Hadadrimmon in the valley of Megiddon (traditional link)" },
+  { ref = "Jer.22.10-Jer.22.12", link = "alludes", note = "Jeremiah on Shallum, who succeeded Josiah" },
+]
+
+[[positions]]
+id = "609"
+label = "609 BCE (Tammuz)"
+tradition = "chronological"
+earliest = -609
+latest = -609
+held_by = "Rodger C. Young"
+summary = "Young derives the death from the Babylonian Chronicles as the fourth month of 609."
+citations = [{ source = "young-2004", locator = "p. 35" }, { source = "young-2005", locator = "Table 2, p. 246" }]
+
+[[positions]]
+id = "june-july-609"
+label = "June or July 609 BCE"
+tradition = "critical"
+earliest = -609
+latest = -609
+summary = "Wikipedia gives June or July 609."
+citations = [{ source = "wikipedia-battle-of-megiddo-609" }]

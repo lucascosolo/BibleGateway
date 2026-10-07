@@ -1,0 +1,42 @@
+id = "conversion-of-paul"
+title = "The conversion of Paul"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+Paul the persecutor encounters the risen Jesus near Damascus and becomes an apostle. Acts tells \
+it three times; Paul alludes to it in Galatians and 1 Corinthians. Scholars date it to 31–36 CE."""
+verses = [
+  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Luke's narrative on the road to Damascus" },
+  { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "Paul's account to the crowd in Jerusalem" },
+  { ref = "Acts.26.9-Acts.26.18", link = "describes", note = "Paul's account before Agrippa" },
+  { ref = "Gal.1.13-Gal.1.17", link = "alludes", note = "God was pleased to reveal his Son to me" },
+  { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "last of all he appeared also to me" },
+  { ref = "1Cor.9.1", link = "alludes", note = "have I not seen Jesus our Lord" },
+  { ref = "1Tim.1.12-1Tim.1.16", link = "alludes", note = "formerly a blasphemer and persecutor" },
+]
+
+[[positions]]
+id = "31-36"
+label = "31–36 CE"
+tradition = "chronological"
+earliest = 31
+latest = 36
+held_by = "Bromley (1979), Barnett (2002), Niswonger (1992)"
+summary = """
+Wikipedia reports that Paul's conversion has been dated to 31–36 CE by Bromley (1979), Barnett \
+(2002) and Niswonger (1992); the page gives surnames only and does not name the works."""
+citations = [{ source = "wikipedia-paul-the-apostle" }]
+
+[[positions]]
+id = "4-7-years-after"
+label = "Four to seven years after the crucifixion"
+tradition = "critical"
+earliest = 34
+latest = 40
+summary = """
+Wikipedia says Acts suggests the conversion occurred four to seven years after the crucifixion; \
+the years here are that interval applied to a 30 CE or 33 CE crucifixion (34–40), my computation, \
+not a cited scholar's."""
+citations = [{ source = "wikipedia-conversion-of-paul" }]

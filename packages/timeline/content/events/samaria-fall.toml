@@ -1,0 +1,30 @@
+id = "samaria-fall"
+title = "The fall of Samaria"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = "Assyria takes Samaria after a siege and deports Israel. Young, following Olmstead, Thiele and Tadmor, holds that Shalmaneser V captured it, not Sargon II, whose inscriptions claim it."
+verses = [
+  { ref = "2Kgs.17.1-2Kgs.17.41", link = "describes", note = "Hoshea's reign, the siege and the exile" },
+  { ref = "2Kgs.18.9-2Kgs.18.12", link = "describes", note = "sixth year of Hezekiah, ninth of Hoshea" },
+  { ref = "Isa.20.1", link = "background", note = "names Sargon king of Assyria" },
+  { ref = "Hos.13.16", link = "alludes", note = "'Samaria will bear her guilt'" },
+  { ref = "Mic.1.6", link = "alludes", note = "Samaria made a rubble heap" },
+]
+
+[[positions]]
+id = "723"
+label = "723 BCE (first half)"
+tradition = "chronological"
+earliest = -723
+latest = -723
+held_by = "Rodger C. Young"
+summary = "Samaria fell before Tishri 1, 723, over fifteen months before Sargon's accession in Tebeth 722n."
+citations = [{ source = "young-2004-samaria", locator = "p. 583" }, { source = "young-2005", locator = "Table 1, p. 245" }]
+
+[[attestations]]
+artifact = "sargon-ii-inscriptions"
+relation = "partially-corroborates"
+note = "Claims the conquest and 27,280 resettled Israelites; attribution of the capture to Sargon is doubted."
+citations = [{ source = "wikipedia-sargon-ii" }]

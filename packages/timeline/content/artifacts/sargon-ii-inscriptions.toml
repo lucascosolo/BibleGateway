@@ -1,0 +1,8 @@
+id = "sargon-ii-inscriptions"
+name = "Inscriptions of Sargon II (Samaria claim)"
+kind = "inscription"
+status = "draft"
+language = "Akkadian (cuneiform)"
+summary = "Sargon II's royal inscriptions claim he conquered Samaria and resettled 27,280 Israelites (Wikipedia's wording). Wikipedia judges it more likely that Shalmaneser V captured the city, since the Babylonian Chronicles and the Hebrew Bible treat the fall of Israel as that reign's signature event. Which inscription carries which figure was not confirmed."
+citations = [{ source = "wikipedia-sargon-ii" }]
+verses = [{ ref = "2Kgs.17.6", link = "background" }]

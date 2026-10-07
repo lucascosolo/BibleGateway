@@ -1,0 +1,29 @@
+id = "moabite-revolt"
+title = "The Moabite revolt"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = "Moab under Mesha rebels against Israel and Jehoram campaigns against it. The Mesha Stele gives Moab's side."
+verses = [
+  { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Mesha's revolt and the campaign" },
+  { ref = "2Kgs.1.1", link = "background", note = "revolt after Ahab's death" },
+  { ref = "Isa.15.1-Isa.16.14", link = "alludes", note = "oracle on Moab" },
+  { ref = "Jer.48.1-Jer.48.47", link = "alludes", note = "oracle on Moab" },
+]
+
+[[positions]]
+id = "joram-reign"
+label = "852-841 BCE (bounds)"
+tradition = "chronological"
+earliest = -852
+latest = -841
+held_by = "Rodger C. Young"
+summary = "Bounds only: Joram's reign in Table 1. The Mesha Stele itself is dated c. 840."
+citations = [{ source = "young-2005", locator = "Table 1, p. 245" }]
+
+[[attestations]]
+artifact = "mesha-stele"
+relation = "partially-corroborates"
+note = "Says Omri oppressed Moab and credits Chemosh with Mesha's victories; Wikipedia says it parallels 2 Kings 3:4-27 but the accounts differ."
+citations = [{ source = "wikipedia-mesha-stele" }]

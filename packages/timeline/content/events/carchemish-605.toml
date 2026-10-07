@@ -1,0 +1,30 @@
+id = "carchemish-605"
+title = "The battle of Carchemish"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = "Nebuchadnezzar defeats the Egyptian army at Carchemish in 605 BCE."
+verses = [
+  { ref = "Jer.46.2-Jer.46.12", link = "describes", note = "oracle on Egypt at Carchemish" },
+  { ref = "Jer.46.2", link = "dates", note = "fourth year of Jehoiakim" },
+  { ref = "Jer.25.1", link = "dates", note = "fourth year of Jehoiakim" },
+  { ref = "2Chr.35.20", link = "background", note = "Neco goes to fight at Carchemish" },
+  { ref = "2Kgs.24.7", link = "alludes", note = "Egypt does not come out of its land again" },
+]
+
+[[positions]]
+id = "605"
+label = "605 BCE"
+tradition = "chronological"
+earliest = -605
+latest = -605
+held_by = "Rodger C. Young"
+summary = "Dated 605n/605t, in the latter half of the year Jeremiah gives (606t)."
+citations = [{ source = "young-2004", locator = "pp. 35-36" }, { source = "young-2005", locator = "p. 232" }]
+
+[[attestations]]
+artifact = "babylonian-chronicle-abc5"
+relation = "corroborates"
+note = "Obv. 2-4: marched to Carchemish, crossed the river against the Egyptian army, which withdrew; year 21 of Nabopolassar."
+citations = [{ source = "livius-abc5" }]

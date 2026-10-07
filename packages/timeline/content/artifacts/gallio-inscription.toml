@@ -1,0 +1,12 @@
+id = "gallio-inscription"
+name = "Delphi inscription of Claudius naming Gallio"
+kind = "inscription"
+status = "draft"
+language = "Greek"
+summary = """
+An inscription from Delphi in which the emperor Claudius refers to Gallio as "my friend and \
+proconsul". It mentions Claudius's twenty-sixth acclamation as imperator, which corresponds to \
+52 CE, and so fixes Gallio's proconsulship of Achaea (Acts 18:12) at about 51–52 CE. Language, \
+find-spot details and museum are not confirmed here."""
+citations = [{ source = "wikipedia-gallio" }]
+verses = [{ ref = "Acts.18.12", link = "dates", note = "Gallio proconsul of Achaia" }]

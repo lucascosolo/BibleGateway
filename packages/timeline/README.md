@@ -86,3 +86,30 @@ scholarly explanation of the Belshazzar parentage. Check first:
 - `issues/moses-historicity.toml`: Dever's view is summarised from a review and a reference work,
   not from his text.
 - `issues/solomon-united-monarchy.toml`: Yadin's attribution is cited only to a reference work.
+
+## Review notes for the events batches (2026-10-07)
+
+Four research batches added 48 narrative events, 17 artifacts and 8 issues, all `draft`, in
+parallel scratch copies validated by the builder and merged the same afternoon. Review sheet:
+`docs/review/timeline-review-2026-10-07.md`. What a reviewer should know before trusting any of it:
+
+- **Wikipedia is the reference for most of it**, cited as a reference work to be replaced with the
+  primary publication. Pages were read through a fetch tool that summarises, so Wikipedia locators
+  are section-level at best and some are absent.
+- **Several positions are brackets, not a scholar's dating**, and say so in their summary: Gideon,
+  Samson, Ruth and the judges period (book order between dated anchors); Joseph and Jacob's descent
+  (a reading of Wood 2005's "mid-19th century"); David anointed and David takes Jerusalem (the
+  editor's derivation from Young's conjectural reign dates); Pentecost and the 34–40 CE conversion
+  interval (derived from other cited figures); the Cyrus "no single decree" bounds.
+- **Thiele is still cited only through Young** (Solomon's accession, Qarqar, the temple
+  foundation). Young's JETS page locators in batch B were mapped from PDF page order, not checked
+  against printed headers.
+- **No named holder** for: the 30 CE crucifixion, Ezekiel's 593 call, Babylon 539, the temple's
+  516 and 450–400 datings, Ezra 398, Nehemiah 445/444, Alexander, Antiochus, Pompey.
+- **Verses linked on the text alone**, with no source tying them to the event: Daniel 8:5–8 and
+  11:3 to Alexander. Pompey has no verse links because no corpus passage narrates it.
+- **Irenaeus on Revelation** is cited as quoted in Eusebius (HE 5.8.6, 3.18.3), not read directly.
+- Still unconfirmed: Ussher's and Seder Olam's dates beyond Abraham's 1922; Kitchen's own pages;
+  which Sargon inscription carries the Samaria claim; whether the Bubastite Portal names
+  Jerusalem; Shalmaneser III's regnal year for Jehu's tribute; the Delphi inscription's find-spot
+  and editor; Peter's death year; Josephus on the Baptist and on Festus (not read).

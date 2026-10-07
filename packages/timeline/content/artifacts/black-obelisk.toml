@@ -1,0 +1,11 @@
+id = "black-obelisk"
+name = "Black Obelisk of Shalmaneser III"
+kind = "inscription"
+status = "draft"
+made = { earliest = -827, latest = -824 }
+language = "Akkadian (cuneiform)"
+summary = "A black limestone obelisk about 1.98 m high from Nimrud. It records the tribute of 'Iaua (Jehu) son of (the people of the land of) Omri' and pictures a tribute-bearer, the only portrayal in ancient Near Eastern art of an Israelite or Judaean monarch (Wikipedia's wording)."
+discovered = { year = 1846, place = "Nimrud (ancient Kalhu), northern Iraq (A. H. Layard)" }
+held_by = { institution = "British Museum", accession = "ME 118885" }
+citations = [{ source = "wikipedia-black-obelisk" }]
+verses = [{ ref = "2Kgs.9.1-2Kgs.9.13", link = "background" }]

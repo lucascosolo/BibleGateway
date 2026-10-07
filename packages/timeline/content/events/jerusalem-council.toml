@@ -1,0 +1,38 @@
+id = "jerusalem-council"
+title = "The Jerusalem council"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = """
+Apostles and elders meet in Jerusalem on whether Gentile converts must be circumcised and keep the \
+law, and issue a decree. It is dated about 48–50 CE; an overwhelming majority of scholars identify \
+Acts 15 with Paul's account in Galatians 2:1–10."""
+verses = [
+  { ref = "Acts.15.1-Acts.15.35", link = "describes", note = "the debate, Peter and James, the apostolic decree" },
+  { ref = "Gal.2.1-Gal.2.10", link = "describes", note = "Paul's own account; most identify it with Acts 15" },
+  { ref = "Acts.16.4", link = "alludes", note = "the decrees delivered to the churches" },
+  { ref = "Acts.21.25", link = "alludes", note = "James recalls the decree for Gentile believers" },
+]
+
+[[positions]]
+id = "49"
+label = "49 CE"
+tradition = "traditional"
+earliest = 49
+latest = 49
+held_by = "Brown (1997)"
+summary = """
+Wikipedia, citing Brown's An Introduction to the New Testament (1997), gives 49 CE as the \
+traditional dating and 47 or 51 as a revisionist minority dating."""
+citations = [{ source = "wikipedia-paul-the-apostle" }]
+
+[[positions]]
+id = "48-50"
+label = "c. 48–50 CE"
+tradition = "chronological"
+earliest = 48
+latest = 50
+summary = """
+The Council of Jerusalem is dated to c. 48–50 CE in Wikipedia's article."""
+citations = [{ source = "wikipedia-council-of-jerusalem" }]

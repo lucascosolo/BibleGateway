@@ -1,0 +1,40 @@
+id = "death-of-agrippa-i"
+title = "The death of Herod Agrippa I"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+Acts and Josephus both report that Herod Agrippa I died suddenly after being acclaimed as a god \
+at Caesarea. Josephus gives the circumstances and the length of his reign; the death is dated \
+44 CE."""
+verses = [
+  { ref = "Acts.12.19-Acts.12.23", link = "describes", note = "Tyre and Sidon; struck down for not giving glory to God" },
+  { ref = "Acts.12.1-Acts.12.4", link = "background", note = "Herod's earlier persecution of the church" },
+]
+
+[[positions]]
+id = "44"
+label = "44 CE"
+tradition = "chronological"
+earliest = 44
+latest = 44
+summary = """
+Dated to 44 CE in the Wikipedia article on Herod Agrippa. Josephus counts four years of reign \
+under Caius and three under Claudius."""
+citations = [
+  { source = "wikipedia-herod-agrippa" },
+  { source = "lexundria-josephus-ant-19-343", locator = "19.351" },
+]
+
+[[attestations]]
+artifact = "josephus-antiquities-19-343"
+relation = "partially-corroborates"
+note = """
+Both accounts have a public acclamation of Agrippa as a god at Caesarea and a fatal illness \
+following at once; Josephus has a silver garment, an owl omen and five days of belly pain where \
+Acts has an angel and worms."""
+citations = [
+  { source = "lexundria-josephus-ant-19-343", locator = "19.344–350" },
+  { source = "wikipedia-herod-agrippa" },
+]

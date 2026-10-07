@@ -1,0 +1,8 @@
+id = "bubastite-portal"
+name = "Bubastite Portal (Shoshenq I's Karnak campaign list)"
+kind = "inscription"
+status = "draft"
+language = "Egyptian (hieroglyphic)"
+summary = "At Karnak, a list of cities in the region comprising Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel conquered by Shoshenq I, conventionally identified with the Shishak of 1 Kings 14:25. Whether Jerusalem itself appears in the list is debated."
+citations = [{ source = "wikipedia-shoshenq-i" }, { source = "wikipedia-rehoboam" }]
+verses = [{ ref = "1Kgs.14.25-1Kgs.14.26", link = "background" }]

@@ -1,0 +1,42 @@
+id = "kingdom-division"
+title = "The division of the kingdom"
+axis = "narrative"
+category = "biblical-narrative"
+confidence = "contested"
+status = "draft"
+summary = "After Solomon's death the northern tribes break from Rehoboam and make Jeroboam king."
+verses = [
+  { ref = "1Kgs.11.26-1Kgs.11.40", link = "background", note = "Ahijah's prophecy and Jeroboam's flight" },
+  { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "the assembly at Shechem and the split" },
+  { ref = "2Chr.10.1-2Chr.11.4", link = "describes", note = "Chronicles parallel" },
+  { ref = "Isa.7.17", link = "alludes", note = "'from the day that Ephraim departed from Judah'" },
+]
+
+[[positions]]
+id = "young-932-931"
+label = "932-931 BCE"
+tradition = "chronological"
+earliest = -932
+latest = -931
+held_by = "Rodger C. Young"
+summary = "Solomon died before Tishri 931, so Rehoboam began in 932t; Jeroboam began some time in 931n."
+citations = [{ source = "young-2003", locator = "pp. 590-591" }, { source = "young-2005", locator = "p. 227 n. 3" }]
+
+[[positions]]
+id = "thiele-931-930"
+label = "931-930 BCE"
+tradition = "chronological"
+earliest = -931
+latest = -930
+held_by = "Edwin R. Thiele"
+summary = "Thiele assumed Solomon died in the latter half of 931n (931t/930n)."
+citations = [{ source = "young-2003", locator = "p. 591" }]
+
+[[positions]]
+id = "wiki-932-931"
+label = "932/931 BCE"
+tradition = "critical"
+earliest = -932
+latest = -931
+summary = "Wikipedia gives the revolt as in 932/931 BCE."
+citations = [{ source = "wikipedia-rehoboam" }]

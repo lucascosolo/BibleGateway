@@ -1,0 +1,69 @@
+id = "crucifixion-of-jesus"
+title = "The crucifixion of Jesus"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+All four Gospels place the crucifixion at Passover, on a Friday, under Pontius Pilate. Scholars \
+generally agree on a date between 30 and 36 CE; the Friday-Passover requirement leaves 30 CE and \
+33 CE as the two astronomically plausible years, and the choice between them is open."""
+verses = [
+  { ref = "Matt.27.11-Matt.27.56", link = "describes", note = "trial before Pilate, crucifixion and death" },
+  { ref = "Mark.15.1-Mark.15.41", link = "describes", note = "handed over to Pilate; crucified at Golgotha" },
+  { ref = "Luke.23.1-Luke.23.49", link = "describes", note = "before Pilate and Herod; crucifixion" },
+  { ref = "John.18.28-John.19.37", link = "describes", note = "Pilate's judgment hall to the piercing" },
+  { ref = "Acts.2.23", link = "alludes", note = "Peter on the crucifixion at Pentecost" },
+  { ref = "1Cor.15.3-1Cor.15.4", link = "alludes", note = "Christ died for our sins, buried, raised" },
+  { ref = "1Tim.6.13", link = "alludes", note = "the good confession before Pontius Pilate" },
+]
+
+[[positions]]
+id = "33"
+label = "Friday 3 April 33 CE"
+tradition = "chronological"
+earliest = 33
+latest = 33
+held_by = "Colin Humphreys"
+summary = """
+Humphreys (2011) argues for Wednesday 1 April 33 CE for the Last Supper and Friday 3 April 33 CE \
+for the crucifixion from a double-calendar analysis; Wikipedia also reports Newton and \
+Fotheringham (1910) favoring 3 April 33 CE."""
+citations = [
+  { source = "wikipedia-date-of-crucifixion" },
+  { source = "wikipedia-chronology-of-jesus" },
+]
+
+[[positions]]
+id = "30"
+label = "Friday 7 April 30 CE"
+tradition = "chronological"
+earliest = 30
+latest = 30
+summary = """
+Humphreys and Waddington find that the lunar Jewish calendar leaves two plausible Fridays, 7 \
+April 30 CE and 3 April 33 CE; they themselves prefer 33. The cited pages name no scholar who \
+prefers 30, so no holder is given."""
+citations = [{ source = "wikipedia-date-of-crucifixion" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  The Friday-Passover requirement alone is met by 7 April 30 CE as well as 3 April 33 CE."""
+  citations = [{ source = "wikipedia-date-of-crucifixion" }]
+
+[[attestations]]
+artifact = "tacitus-annals-15-44"
+relation = "corroborates"
+note = """
+Says Christus suffered the extreme penalty in Tiberius's reign at the hands of the procurator \
+Pontius Pilate; it fixes the window of 26–37 CE, not the year."""
+citations = [{ source = "tacitus-annals-15-latin", locator = "15.44" }]
+
+[[attestations]]
+artifact = "josephus-testimonium-flavianum"
+relation = "partially-corroborates"
+note = """
+Probably mentions Jesus's crucifixion under Pilate in its original form, but the transmitted \
+text contains Christian additions."""
+citations = [{ source = "wikipedia-josephus-on-jesus" }]

@@ -1,0 +1,10 @@
+id = "one-clement-5"
+name = "1 Clement 5–6"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+summary = """
+A letter to Corinth that names Peter, who "endured not one or two, but numerous labours" and \
+suffered martyrdom, and Paul, who preached in east and west and "suffered martyrdom under the \
+prefects" (Hoole translation). It gives no place or year."""
+citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]

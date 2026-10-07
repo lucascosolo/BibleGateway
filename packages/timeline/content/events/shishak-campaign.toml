@@ -1,0 +1,37 @@
+id = "shishak-campaign"
+title = "Shishak's campaign against Judah"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = "In Rehoboam's fifth year Shishak of Egypt takes Judah's fortified cities and the temple treasures. Shishak is conventionally identified with Shoshenq I, whose Karnak list records a campaign. Young cautions that the Egyptian date rests on the biblical chronology."
+verses = [
+  { ref = "1Kgs.14.25-1Kgs.14.28", link = "describes", note = "Rehoboam's fifth year; treasures taken" },
+  { ref = "2Chr.12.2-2Chr.12.12", link = "describes", note = "Chronicles parallel; Shemaiah's prophecy" },
+  { ref = "1Kgs.11.40", link = "background", note = "Jeroboam had earlier fled to Shishak" },
+]
+
+[[positions]]
+id = "c-925"
+label = "c. 925 BCE"
+tradition = "archaeological"
+earliest = -925
+latest = -925
+summary = "Conventional date of the campaign. Shoshenq I's reign is 945-924 (Kitchen), 943 start (Krauss) or 962-941 (Schneider 2010)."
+citations = [{ source = "wikipedia-shoshenq-i" }]
+
+[[positions]]
+id = "young-926"
+label = "c. 926 BCE (derived)"
+tradition = "chronological"
+earliest = -926
+latest = -926
+held_by = "Rodger C. Young"
+summary = "Derived from the arithmetic of Young's footnote (spring 925 pairs with Rehoboam's accession 931t, so accession 932t gives spring 926). Young says Sheshonq's dates are taken from the scriptural chronology and cannot establish biblical dates."
+citations = [{ source = "young-2003", locator = "p. 598 n. 8" }]
+
+[[attestations]]
+artifact = "bubastite-portal"
+relation = "partially-corroborates"
+note = "Records a Shoshenq campaign in Israel and Judah's region; whether Jerusalem is listed is debated."
+citations = [{ source = "wikipedia-shoshenq-i" }, { source = "wikipedia-rehoboam" }]

@@ -1,0 +1,47 @@
+id = "second-temple-destruction"
+title = "The destruction of the Second Temple"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+Titus's army besieged Jerusalem from 13 April to 8 September 70 CE and the Second Temple burned \
+on 10 Av. Jesus's words about the temple in the Synoptic Gospels allude to the event; Josephus \
+narrates it from the Roman side, and the Arch of Titus shows the spoils."""
+verses = [
+  { ref = "Mark.13.1-Mark.13.2", link = "alludes", note = "not one stone left upon another" },
+  { ref = "Matt.24.1-Matt.24.2", link = "alludes", note = "parallel: the temple buildings thrown down" },
+  { ref = "Luke.21.5-Luke.21.6", link = "alludes", note = "parallel: the days will come when not one stone" },
+  { ref = "Luke.21.20-Luke.21.24", link = "alludes", note = "Jerusalem surrounded by armies" },
+  { ref = "Luke.19.43-Luke.19.44", link = "alludes", note = "enemies will not leave one stone on another" },
+]
+
+[[positions]]
+id = "70"
+label = "70 CE (10 Av)"
+tradition = "chronological"
+earliest = 70
+latest = 70
+summary = """
+The siege lasted from 13 April to 8 September 70 CE; the Second Temple was destroyed on 10 Av. \
+Josephus says it burned on the tenth of Lous, the day on which the king of Babylon had burned the \
+first temple."""
+citations = [
+  { source = "wikipedia-siege-of-jerusalem-70" },
+  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
+]
+
+[[attestations]]
+artifact = "josephus-war-6-249"
+relation = "corroborates"
+note = """
+The eyewitness account of the burning of the temple on the tenth of Lous."""
+citations = [{ source = "lexundria-josephus-war-6-249", locator = "6.249–250" }]
+
+[[attestations]]
+artifact = "arch-of-titus"
+relation = "corroborates"
+note = """
+One relief panel shows the spoils taken from the Temple in Jerusalem, with the menorah as its \
+main focus."""
+citations = [{ source = "wikipedia-arch-of-titus" }]

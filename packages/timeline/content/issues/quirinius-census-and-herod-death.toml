@@ -1,0 +1,55 @@
+id = "quirinius-census-and-herod-death"
+kind = "chronology"
+title = "Herod's death and Quirinius's census"
+status = "draft"
+summary = """
+Matthew places Jesus's birth in the days of Herod the king; Luke 2:1–2 ties it to a registration \
+"while Quirinius was governor of Syria". Josephus dates Quirinius's census to the removal of \
+Archelaus, 6 CE, while the usual date for Herod's death is 4 BCE, so the two Gospel anchors are \
+about a decade apart."""
+events = ["birth-of-jesus"]
+verses = [
+  { ref = "Luke.2.1-Luke.2.2", link = "dates" },
+  { ref = "Matt.2.1", link = "dates" },
+]
+citations = [
+  { source = "wikipedia-census-of-quirinius" },
+  { source = "wikipedia-herod-the-great" },
+  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
+]
+
+[[views]]
+label = "The two anchors conflict"
+text = """
+Josephus has Quirinius sent to Syria to assess Judea after Archelaus's removal, which he places \
+in the tenth year of Archelaus's rule, 6 CE; Schürer's chronology puts Herod's death in 4 BCE by \
+working back from that same date. Read plainly, Luke's census comes after Herod's death."""
+citations = [
+  { source = "lexundria-josephus-ant-17-342", locator = "17.342–355" },
+  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
+  { source = "wikipedia-herod-the-great" },
+]
+
+[[views]]
+label = "Luke says 'before', not 'first' (I. Howard Marshall, 1978; Brook W. R. Pearson, 1999)"
+text = """
+Marshall argued that the Greek of Luke 2:2 should be read "before" rather than "first", so that \
+the verse speaks of a registration before Quirinius's governorship; Pearson made a similar \
+translation argument."""
+citations = [{ source = "wikipedia-census-of-quirinius" }]
+
+[[views]]
+label = "A census in Herod's last years (Colin Humphreys, 1995; Wayne Brindle, 1984; James Nollet, 2012)"
+text = """
+Humphreys proposed a non-taxing census dated to Herod's final years; Brindle theorized a census \
+under Herod with a dual governorship; Nollet asserted that Quirinius held two governorships, \
+with a census in 2 BCE."""
+citations = [{ source = "wikipedia-census-of-quirinius" }]
+
+[[views]]
+label = "Herod died in 1 BCE (Andrew Steinmann, Rodger Young; Filmer)"
+text = """
+Steinmann and Young argue from the coins of Herod's sons that their regnal years began in 5 BCE \
+while Herod lived, and so that he died in 1 BCE; the eclipse of 13 March 4 BCE leaves too little \
+time before the following Passover for the events Josephus records."""
+citations = [{ source = "wikipedia-herod-the-great" }]
