@@ -4,7 +4,7 @@ title = "Solomon's kingdom: an empire or a highland chiefdom?"
 status = "draft"
 summary = """
 The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem, but no inscription names him. The debate therefore turns on archaeology, above all on the date of the large gates and buildings once credited to him."""
-persons = ["solomon", "david"]
+persons = ["solomon", "david", "rehoboam"]
 verses = [{ ref = "1Kgs.9.15", link = "describes", note = "1 Kings 9:15 says Solomon built Hazor, Megiddo and Gezer, the building works this issue weighs against the archaeology of those sites." }]
 citations = [
   { source = "cline-2009" },

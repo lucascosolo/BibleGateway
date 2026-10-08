@@ -1,0 +1,40 @@
+id = "titus"
+name = "Titus"
+also_known_as = ["Titus Caesar"]
+role = "son of the emperor Vespasian; Roman commander at the siege of Jerusalem (70 CE)"
+summary = """
+Titus was the son of Vespasian, the first Flavian emperor. When the legions proclaimed his father emperor in 69 CE, Titus was left to finish the war in Judea; Jerusalem was taken and the temple destroyed in 70, and the arch of Titus in the Roman forum shows the temple vessels and captives carried in his triumph of 71. Josephus, who watched the siege from the Roman camp and wrote under Flavian patronage, calls him "Titus Caesar, who destroyed it", yet says the fire began without orders and that Titus ran to have it put out. The account comes from a client of the family it praises. The Gospels never name him, but Jesus's sayings about the temple and the city surrounded by armies are read against his siege, and they bear on the dating of Mark and Luke."""
+status = "draft"
+verses = [
+  { ref = "Luke.21.20-Luke.21.24", link = "alludes", note = "Luke 21:20–24 speaks of Jerusalem surrounded by armies, which Streeter reads as written after the siege and Carson and Moo as stock siege language." },
+  { ref = "Luke.19.43-Luke.19.44", link = "alludes", note = "Luke 19:43–44 says enemies will build a siege work and leave no stone on another." },
+  { ref = "Mark.13.1-Mark.13.2", link = "alludes", note = "Mark 13:1–2 has Jesus say not one stone of the temple will be left on another." },
+]
+events = ["second-temple-destruction"]
+# Brown ch. 4 read at ~/.cache/jot/sources/brown-1997/text.txt PDF p. 110.
+# Whiston read at josephus-whiston/embedded.txt: War, Preface 4 ("Titus Caesar, who destroyed it"); War 6.4.5–6.
+# Streeter p. 540 and Carson and Moo pp. 208–209 carried over from events/luke-acts-composition.toml.
+citations = [
+  { source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD and the Beginning of the 2d" },
+  { source = "josephus-whiston", locator = "Jewish War, Preface 4; 6.4.5–6" },
+  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
+  { source = "streeter-1924", locator = "p. 540" },
+  { source = "carson-moo-2005", locator = "pp. 208–209" },
+]
+
+[[attestations]]
+artifact = "arch-of-titus"
+relation = "corroborates"
+note = """
+The arch was raised in his honour, and its panels show the spoils of the Jerusalem temple and Titus in his triumph. Brown dates the triumph it commemorates to 71 CE."""
+citations = [{ source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD and the Beginning of the 2d" }]
+
+[[attestations]]
+artifact = "josephus-war-6-249"
+relation = "corroborates"
+note = """
+Josephus's account of the temple's last day names Titus throughout: retiring to the Antonia fortress, resolving to storm the temple, and running to stop the fire."""
+citations = [
+  { source = "josephus-whiston", locator = "Jewish War 6.4.5–6" },
+  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
+]

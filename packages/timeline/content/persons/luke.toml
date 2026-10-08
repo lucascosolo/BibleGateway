@@ -1,0 +1,47 @@
+id = "luke"
+name = "Luke"
+also_known_as = ["Luke the Evangelist"]
+role = "traditionally the author of the Gospel of Luke and Acts; companion of Paul"
+summary = """
+The Gospel of Luke and Acts are one anonymous work in two volumes. By the late second century (Irenaeus, the Muratorian Fragment, the title in P75) it was credited to Luke, the "beloved physician" and fellow worker whom three letters name beside Paul. Brown reports scholars about evenly divided on whether the attribution is historical. The case for it rests on the "we" passages of Acts, which Brown thinks most simply read as the author's own diary; the case against rests on discrepancies between Acts and Paul's letters and on Acts' silence about them. Ehrman, the firmer critical voice, sees "reasons to suspect" the tradition and calls the author "Luke" only for convenience. Carson and Moo, the evangelical position, hold that the evidence points strongly to Luke. Brown dates the work about 85 CE, give or take five to ten years."""
+status = "draft"
+verses = [
+  { ref = "Luke.1.1-Luke.1.4", link = "describes", note = "Luke 1:1–4 is the preface in which the author says he followed earlier accounts and eyewitnesses, so he was not one himself." },
+  { ref = "Acts.1.1", link = "describes", note = "Acts 1:1 refers back to 'the first book', joining Acts to the Gospel." },
+  { ref = "Acts.16.10-Acts.16.17", link = "describes", note = "Acts 16:10–17 is the first 'we' passage, on which the case for a companion of Paul as author rests." },
+  { ref = "Col.4.14", link = "describes", note = "Colossians 4:14 sends greetings from 'Luke, the beloved physician'." },
+  { ref = "Col.4.10-Col.4.11", link = "background", note = "Colossians 4:10–11 lists Paul's Jewish co-workers before Luke is named, which both Brown and Carson and Moo read as making Luke a Gentile." },
+  { ref = "Phlm.1.24", link = "describes", note = "Philemon 24 names Luke among Paul's fellow workers." },
+  { ref = "2Tim.4.11", link = "describes", note = "2 Timothy 4:11 says only Luke is with Paul." },
+]
+events = ["luke-acts-composition"]
+# Brown ch. 9 and ch. 10 Authorship read in ~/.cache/jot/sources/brown-1997/text.txt, PDF pp. 271, 314, 368–371.
+# Carson and Moo AUTHOR section read at PDF pp. 204–207 = printed pp. 203–206.
+# Ehrman's "reasons to suspect" and the 80–85 date carried over from events/luke-acts-composition.toml (p. 110 approx.).
+citations = [
+  { source = "brown-1997", locator = "ch. 9, Summary of Basic Information; Authorship" },
+  { source = "brown-1997", locator = "ch. 10, Authorship" },
+  { source = "ehrman-brief-intro-2017", locator = "pp. 56–57 approx." },
+  { source = "ehrman-brief-intro-2017", locator = "p. 110 approx." },
+  { source = "carson-moo-2005", locator = "pp. 203–206" },
+]
+
+[[attestations]]
+artifact = "muratorian-fragment"
+relation = "consistent"
+note = """
+The fragment says "the well-known physician Luke" wrote the third Gospel in his own name after the ascension. It records the attribution as a church holds it; Carson and Moo date the fragment c. 180–200 with a question mark, and it is not independent evidence of who wrote the book."""
+citations = [
+  { source = "anf05-salmond-muratorian", locator = "Fragments of Caius, Canon Muratorianus" },
+  { source = "carson-moo-2005", locator = "p. 205" },
+]
+
+[[attestations]]
+artifact = "irenaeus-four-gospels"
+relation = "consistent"
+note = """
+Irenaeus, about 180 CE, counts Luke among exactly four Gospels and notes that Marcion used Luke alone. Brown names Irenaeus among the late-second-century witnesses to the attribution."""
+citations = [
+  { source = "anf01-ccel", locator = "Against Heresies 3.11.8" },
+  { source = "brown-1997", locator = "ch. 9, Authorship" },
+]

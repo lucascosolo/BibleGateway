@@ -1,0 +1,36 @@
+id = "mark"
+name = "Mark"
+also_known_as = ["John Mark", "Mark the Evangelist"]
+role = "traditionally the author of the Gospel of Mark"
+summary = """
+The Gospel of Mark is anonymous; the title was added later. From the early second century Papias, as Eusebius quotes him, called its author Mark, Peter's "interpreter", and later writers identified him with the John Mark of Acts and the letters. Critical scholarship leads with the Gospel itself: Brown finds its author a Greek-speaker who was not an eyewitness and was unsure of Palestinian geography, which is hard to square with a Jerusalem Jew, and he notes that many dismiss the Papias tradition entirely; Ehrman calls the author anonymous. Carson and Moo, the evangelical position, accept the tradition, finding nothing in the Gospel that stands in its way. The Gospel is dated about 70 CE by most critical scholars, Brown most likely 68–73."""
+status = "draft"
+verses = [
+  { ref = "Mark.1.1", link = "background", note = "Mark 1:1 opens the Gospel whose authorship is the question here; the text names no author." },
+  { ref = "Acts.12.12", link = "describes", note = "Acts 12:12 introduces John called Mark, whose mother's house in Jerusalem was a meeting place." },
+  { ref = "Acts.13.13", link = "describes", note = "Acts 13:13 has John leave Paul and Barnabas at Perga and return to Jerusalem." },
+  { ref = "Acts.15.37-Acts.15.39", link = "describes", note = "Acts 15:37–39 tells how Paul and Barnabas split over taking Mark with them." },
+  { ref = "Col.4.10", link = "describes", note = "Colossians 4:10 names Mark, Barnabas's cousin, among Paul's companions." },
+  { ref = "Phlm.1.24", link = "describes", note = "Philemon 24 names Mark among Paul's fellow workers." },
+  { ref = "1Pet.5.13", link = "describes", note = "1 Peter 5:13 sends greetings from 'my son Mark' in 'Babylon', the verse behind the tradition linking Mark with Peter at Rome." },
+  { ref = "Mark.14.51-Mark.14.52", link = "alludes", note = "Mark 14:51–52 tells of a young man who fled naked; some have read him as the author, which Carson and Moo note would sit badly with Papias's claim that Mark was not an eyewitness." },
+]
+events = ["mark-composition"]
+# Brown ch. 7 read in ~/.cache/jot/sources/brown-1997/text.txt, PDF pp. 177, 206–208.
+# Carson and Moo AUTHOR section read in the PDF text, PDF pp. 173–177 = printed pp. 172–176.
+# Ehrman Brief Introduction: "anonymous" read at ehrman-misc/brief-intro-nt.txt (printed pp. 56–57 approx.);
+# the Box 5.7 locator (p. 74 approx.) is carried over from events/mark-composition.toml for the same claim.
+citations = [
+  { source = "brown-1997", locator = "ch. 7, Summary of Basic Information; Authorship" },
+  { source = "brown-1997", locator = "ch. 7, Date of Writing" },
+  { source = "ehrman-brief-intro-2017", locator = "pp. 56–57 approx." },
+  { source = "ehrman-brief-intro-2017", locator = "p. 74 approx." },
+  { source = "carson-moo-2005", locator = "pp. 172–176" },
+]
+
+[[attestations]]
+artifact = "irenaeus-four-gospels"
+relation = "consistent"
+note = """
+Irenaeus, about 180 CE, already treats the Gospel according to Mark as one of exactly four. This shows the attribution to Mark was settled in Gaul by then; it is evidence for the tradition, not independent evidence of who wrote the book."""
+citations = [{ source = "anf01-ccel", locator = "Against Heresies 3.11.8" }]

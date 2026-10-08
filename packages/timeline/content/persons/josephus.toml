@@ -1,0 +1,36 @@
+id = "josephus"
+name = "Josephus"
+also_known_as = ["Flavius Josephus", "Joseph son of Matthias"]
+role = "Jewish priest, commander in the revolt against Rome, and historian"
+summary = """
+Josephus describes himself as Joseph son of Matthias, a priest by birth, who "at first fought against the Romans" and was then "forced to be present at what was done afterwards", the siege and fall of Jerusalem in 70 CE. In his Life he says he was born in the first year of Gaius Caesar. Under the patronage of the Flavian emperors, whose family name he took, he wrote the Jewish War at Rome and, in the early 90s on Brown's dating, the Antiquities, which he says he finished in the thirteenth year of Domitian and the fifty-sixth year of his life. He is the main outside source for the period of the New Testament: Herod's temple, John the Baptist, Pilate, Caiaphas, James the brother of Jesus, Quirinius's census and the burning of the temple. His passage on Jesus survives in a form most scholars hold Christian scribes expanded."""
+status = "draft"
+events = ["second-temple-destruction"]
+# Whiston (josephus-whiston) read at ~/.cache/jot/sources/josephus-whiston/embedded.txt:
+# Life 1; War, Preface 1; Antiquities 20.11.3. Brown ch. 4 read at brown-1997/text.txt PDF p. 110.
+# The Testimonium wording is carried over from artifacts/josephus-testimonium-flavianum.toml and
+# persons/jesus-of-nazareth.toml, which cite Meier for it.
+citations = [
+  { source = "josephus-whiston", locator = "Life 1" },
+  { source = "josephus-whiston", locator = "Jewish War, Preface 1" },
+  { source = "josephus-whiston", locator = "Antiquities 20.11.3" },
+  { source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD" },
+  { source = "meier-1991", locator = "ch. 3" },
+]
+
+[[attestations]]
+artifact = "josephus-war-6-249"
+relation = "corroborates"
+note = """
+The Jewish War is Josephus's own account of the war in which he served, first on the Jewish side and then in the Roman camp. Its narrative of the temple's burning is that of a witness, written from the Roman side."""
+citations = [
+  { source = "josephus-whiston", locator = "Jewish War, Preface 1; 6.4.5" },
+  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
+]
+
+[[attestations]]
+artifact = "josephus-against-apion-1-38"
+relation = "corroborates"
+note = """
+Against Apion is Josephus's defence of the antiquity of the Jews. Its count of twenty-two sacred books is the earliest statement of a closed Jewish canon."""
+citations = [{ source = "josephus-whiston", locator = "Against Apion 1.8 (sections 37-43 in Niese's numbering)" }]

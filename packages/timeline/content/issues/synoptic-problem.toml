@@ -13,6 +13,7 @@ verses = [
   { ref = "Luke.9.51", link = "background", note = "Luke 9:51 begins the Lukan travel narrative, the long journey section where much of the material shared with Matthew appears." },
 ]
 citations = [{ source = "streeter-1924", locator = "pp. 151–292" }, { source = "brown-1997", locator = "ch. 6, The Synoptic Problem" }]
+persons = ["mark", "luke"]
 
 [[views]]
 label = "Markan priority and Q (Streeter)"

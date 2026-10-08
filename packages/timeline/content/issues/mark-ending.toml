@@ -6,6 +6,7 @@ summary = """
 Mark's Gospel ends in some manuscripts with the women afraid and silent at the empty tomb (16:8). Others add the Longer Ending of 16:9-20, which describes appearances of the risen Jesus and an ascension, and two alternative endings exist. Brown says copyists apparently added the endings to soften the abrupt close."""
 verses = [{ ref = "Mark.16.8-Mark.16.9", link = "describes" }]
 citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Information; ch. 3, Issues and Problems for Reflection" }]
+persons = ["mark"]
 
 [[views]]
 label = "Three endings added by copyists"

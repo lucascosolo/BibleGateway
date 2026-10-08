@@ -1,0 +1,26 @@
+id = "rehoboam"
+name = "Rehoboam"
+role = "king of Judah (930–913 BCE in Thiele)"
+summary = """
+Kings makes Rehoboam, Solomon's son, the king under whom the north broke away: he refused to lighten his father's burdens and the northern tribes made Jeroboam king. Thiele dates his reign 930–913 BCE; Young starts it in the autumn-reckoned year 932t. In his fifth year Shishak of Egypt took the treasures of the temple, the earliest point at which the biblical text can be matched with an outside record, Shoshenq I's list at Karnak; Kitchen puts the campaign in 927 or 926. Finkelstein and Silberman read the same evidence against the story's frame: there is no archaeological sign that north and south grew out of one kingdom, Jerusalem in Rehoboam's time was no more than a modest highland village, and Shoshenq's list shows that Jerusalem was hardly his main target."""
+status = "draft"
+verses = [
+  { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "1 Kings 12:1–24 tells of the assembly at Shechem, Rehoboam's answer and the secession of the north." },
+  { ref = "1Kgs.14.21-1Kgs.14.31", link = "describes", note = "1 Kings 14:21–31 gives the summary of Rehoboam's reign." },
+  { ref = "1Kgs.14.25-1Kgs.14.26", link = "dates", note = "1 Kings 14:25–26 dates Shishak's attack to Rehoboam's fifth year." },
+  { ref = "2Chr.11.5-2Chr.11.12", link = "describes", note = "2 Chronicles 11:5–12 lists the cities Rehoboam fortified, which Kings does not mention." },
+  { ref = "2Chr.12.2-2Chr.12.12", link = "describes", note = "2 Chronicles 12:2–12 retells Shishak's campaign with Shemaiah's prophecy." },
+]
+events = ["kingdom-division", "shishak-campaign"]
+# Locators carried over from events/kingdom-division.toml (Young, Thiele 1984, F&S pp. 149, 158) and
+# events/shishak-campaign.toml (Kitchen pp. 32–34). F&S pp. 151, 158 and 161 read in the OCR at
+# ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-164.txt, page-171.txt, page-174.txt (printed = PDF − 13).
+citations = [
+  { source = "thiele-1984", locator = "p. 5, table 'Reigns of the Hebrew kings'" },
+  { source = "young-2003", locator = "pp. 590-591" },
+  { source = "young-2005", locator = "p. 227 n. 3" },
+  { source = "kitchen-2003", locator = "pp. 32–34" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 149, 151" },
+  { source = "finkelstein-silberman-2002", locator = "p. 158" },
+  { source = "finkelstein-silberman-2002", locator = "p. 161" },
+]

@@ -1,0 +1,40 @@
+id = "isaiah"
+name = "Isaiah"
+also_known_as = ["Isaiah son of Amoz"]
+role = "prophet in Jerusalem in the late eighth century BCE; traditionally the author of the book of Isaiah"
+summary = """
+The book opens by dating Isaiah son of Amoz to the reigns of Uzziah, Jotham, Ahaz and Hezekiah, and Kings and Isaiah 36–37 make him Hezekiah's counsellor during Sennacherib's siege, dated 701 BCE by Thiele. Finkelstein and Silberman treat him as a contemporary witness who was in Jerusalem at the time of the siege. Critical scholarship separates the prophet from most of the book. Friedman says most of chapters 1–39 can fit the eighth-century prophet but chapters 40–66 appear to be by someone about two centuries later; Barton and Finkelstein and Silberman place chapters 40–55, "Second Isaiah", among the exiles of the sixth century, and Barton adds that the eighth-century prophets' words have been overlaid with later additions. The traditional rabbinic attribution, in Bava Batra, does not credit Isaiah with writing the book down but Hezekiah and his colleagues."""
+status = "draft"
+verses = [
+  { ref = "Isa.1.1", link = "dates", note = "Isaiah 1:1 dates the prophet's visions to the reigns of Uzziah, Jotham, Ahaz and Hezekiah." },
+  { ref = "Isa.6.1", link = "dates", note = "Isaiah 6:1 dates his call vision to the year King Uzziah died." },
+  { ref = "Isa.10.28-Isa.10.32", link = "describes", note = "Isaiah 10:28–32 describes an advance on Jerusalem from the north, which Finkelstein and Silberman read as an eyewitness picture of the Assyrian campaign." },
+  { ref = "Isa.22.10", link = "describes", note = "Isaiah 22:10 speaks of houses broken down to fortify the wall, which Finkelstein and Silberman connect with Jerusalem's broad wall." },
+  { ref = "2Kgs.19.1-2Kgs.19.7", link = "describes", note = "2 Kings 19:1–7 has Hezekiah send to Isaiah, who answers with an oracle against Sennacherib." },
+  { ref = "2Kgs.20.1-2Kgs.20.11", link = "describes", note = "2 Kings 20:1–11 has Isaiah announce Hezekiah's illness and recovery." },
+  { ref = "Isa.40.1-Isa.40.2", link = "background", note = "Isaiah 40:1–2 opens the chapters critical scholars attribute to an exilic 'Second Isaiah'." },
+  { ref = "Isa.45.1", link = "background", note = "Isaiah 45:1 names Cyrus, the Persian king of the sixth century, as the Lord's anointed." },
+]
+events = ["sennacherib-campaign-judah"]
+# Thiele pp. 23–24 carried over from events/sennacherib-campaign-judah.toml.
+# F&S pp. 256, 263 and 298 read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-269.txt,
+# page-276.txt, page-311.txt (printed = PDF − 13). Friedman p. 29 read at friedman-1987/text.txt;
+# Barton pp. 21 and 29 at barton-2019/text.txt (printed numbers from the page footers).
+# Bava Batra 15a read at ~/.cache/jot/sources/primary-canon-texts/bava-batra-15a.txt.
+citations = [
+  { source = "thiele-1983", locator = "Preface to the Third Edition, pp. 23–24" },
+  { source = "finkelstein-silberman-2002", locator = "p. 256" },
+  { source = "finkelstein-silberman-2002", locator = "p. 263" },
+  { source = "finkelstein-silberman-2002", locator = "p. 298" },
+  { source = "friedman-1987", locator = "p. 29" },
+  { source = "barton-2019", locator = "p. 21" },
+  { source = "barton-2019", locator = "p. 29" },
+  { source = "sefaria-davidson-talmud", locator = "Bava Batra 15a" },
+]
+
+[[attestations]]
+artifact = "bava-batra-14b-order-of-the-books"
+relation = "consistent"
+note = """
+The baraita places Isaiah among the Prophets and says "Hezekiah and his colleagues wrote" Isaiah, together with Proverbs, the Song of Songs and Ecclesiastes. It is the traditional Jewish attribution, not evidence from Isaiah's time."""
+citations = [{ source = "sefaria-davidson-talmud", locator = "Bava Batra 15a" }]

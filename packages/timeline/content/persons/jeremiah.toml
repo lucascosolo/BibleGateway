@@ -1,0 +1,38 @@
+id = "jeremiah"
+name = "Jeremiah"
+also_known_as = ["Jeremiah son of Hilkiah"]
+role = "prophet in Judah from Josiah's reign to the fall of Jerusalem"
+summary = """
+The book dates Jeremiah's call to the thirteenth year of Josiah and his work through the reigns of Jehoiakim and Zedekiah to the fall of Jerusalem, 586 BCE on Thiele's count and 587 on Young's. He urged submission to Babylon, stayed with the governor Gedaliah at Mizpah, and was taken to Egypt after Gedaliah's murder. Barton says many scholars think the book's narrative sections reliable and that they tally well with Assyrian and Babylonian records, and he links its Deuteronomistic style to the time of Josiah's reform, which Jeremiah probably experienced. Finkelstein and Silberman treat his count of 4,600 deportees as basically plausible. On authorship, the book itself has Baruch write at his dictation; the rabbinic tradition in Bava Batra credits Jeremiah with his own book, Kings and Lamentations, while Barton thinks Lamentations probably not his."""
+status = "draft"
+verses = [
+  { ref = "Jer.1.1-Jer.1.3", link = "dates", note = "Jeremiah 1:1–3 dates his prophecy from Josiah's thirteenth year to the exile of Jerusalem." },
+  { ref = "Jer.36.1-Jer.36.4", link = "describes", note = "Jeremiah 36:1–4 has Baruch write Jeremiah's words on a scroll at his dictation." },
+  { ref = "Jer.46.2", link = "dates", note = "Jeremiah 46:2 dates the oracle on Egypt to the battle of Carchemish in Jehoiakim's fourth year." },
+  { ref = "Jer.34.7", link = "background", note = "Jeremiah 34:7 names Lachish and Azekah as the last fortified cities holding out, as the Lachish letters also show." },
+  { ref = "Jer.40.1-Jer.40.6", link = "describes", note = "Jeremiah 40:1–6 has Jeremiah released and staying with Gedaliah at Mizpah." },
+  { ref = "Jer.43.4-Jer.43.7", link = "describes", note = "Jeremiah 43:4–7 tells how the survivors, Jeremiah with them, went down to Egypt." },
+  { ref = "Jer.52.28-Jer.52.30", link = "describes", note = "Jeremiah 52:28–30 counts 4,600 deportees in three deportations." },
+]
+events = ["josiah-reform", "carchemish-605", "jerusalem-fall"]
+# Thiele p. 184 and Young p. 21 carried over from events/jerusalem-fall.toml.
+# Barton pp. 29, 30 and 42 read at ~/.cache/jot/sources/barton-2019/text.txt (printed numbers from page footers).
+# F&S pp. 298 and 306 read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-311.txt,
+# page-319.txt (printed = PDF − 13). Bava Batra 15a read at primary-canon-texts/bava-batra-15a.txt.
+citations = [
+  { source = "thiele-1983", locator = "p. 184, Chart 31" },
+  { source = "young-2004", locator = "pp. 21–38; the conclusion at p. 27" },
+  { source = "barton-2019", locator = "p. 29" },
+  { source = "barton-2019", locator = "p. 30" },
+  { source = "barton-2019", locator = "p. 42" },
+  { source = "finkelstein-silberman-2002", locator = "p. 298" },
+  { source = "finkelstein-silberman-2002", locator = "p. 306" },
+  { source = "sefaria-davidson-talmud", locator = "Bava Batra 15a" },
+]
+
+[[attestations]]
+artifact = "bava-batra-14b-order-of-the-books"
+relation = "consistent"
+note = """
+The baraita says "Jeremiah wrote his own book, and the book of Kings, and Lamentations". It is the traditional Jewish attribution, not evidence from Jeremiah's time."""
+citations = [{ source = "sefaria-davidson-talmud", locator = "Bava Batra 15a" }]

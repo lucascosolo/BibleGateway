@@ -13,6 +13,7 @@ verses = [
   { ref = "Acts.28.31", link = "describes" },
 ]
 citations = [{ source = "brown-1997", locator = "ch. 10, Summary of Basic Information (Integrity) and Issues and Problems for Reflection (1)" }]
+persons = ["luke"]
 
 [[views]]
 label = "What the manuscripts show"

@@ -1,0 +1,48 @@
+id = "jehu"
+name = "Jehu"
+also_known_as = ["Jehu son of Nimshi"]
+role = "king of Israel (841–814 BCE in Thiele)"
+summary = """
+Kings tells how Jehu, an army commander anointed at Elisha's word, killed Jehoram of Israel and Ahaziah of Judah, had Jezebel thrown down, wiped out the house of Ahab and purged Baal worship, while leaving Jeroboam's calves at Bethel and Dan. Outside the Bible, the Black Obelisk shows a figure bowing before Shalmaneser III and records the tribute of "Jehu, son of Omri", which Thiele and Grayson date to Shalmaneser III's eighteenth year, 841 BCE. Thiele dates his reign 841–814, Finkelstein and Silberman 842–814. They read "son of Omri" as naming a vassal of the kingdom Omri founded, not a descendant. The Tel Dan stele, as usually restored, has Hazael of Damascus claim to have killed both kings himself; Finkelstein and Silberman leave open whether it was Hazael or Jehu."""
+status = "draft"
+verses = [
+  { ref = "1Kgs.19.16-1Kgs.19.17", link = "background", note = "1 Kings 19:16–17 has Elijah commanded to anoint Jehu king of Israel." },
+  { ref = "2Kgs.9.1-2Kgs.10.36", link = "describes", note = "2 Kings 9–10 tells of Jehu's anointing, his coup and his reign." },
+  { ref = "2Kgs.9.24-2Kgs.9.27", link = "describes", note = "2 Kings 9:24–27 has Jehu kill Jehoram of Israel and Ahaziah of Judah, the deaths the Tel Dan stele credits to Hazael." },
+  { ref = "2Kgs.10.29-2Kgs.10.33", link = "describes", note = "2 Kings 10:29–33 says Jehu kept Jeroboam's calves and that Hazael took Israel's land east of the Jordan in his days." },
+  { ref = "2Kgs.10.36", link = "dates", note = "2 Kings 10:36 gives Jehu a reign of twenty-eight years in Samaria." },
+  { ref = "Hos.1.4", link = "alludes", note = "Hosea 1:4 speaks of punishing the house of Jehu for the blood of Jezreel." },
+]
+events = ["jehu-tribute-841"]
+# Thiele p. 37 and Young pp. 232, 245, and Grayson p. 149, carried over from events/jehu-tribute-841.toml and
+# artifacts/black-obelisk.toml. Thiele 1984 p. 5 read at ~/.cache/jot/sources/thiele-1984/text.txt (Jehu 841-814).
+# F&S pp. 175, 197, 201-202, 206 read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/
+# page-188.txt, page-210.txt, page-214.txt, page-215.txt, page-219.txt (printed = PDF − 13).
+citations = [
+  { source = "thiele-1983", locator = "p. 37" },
+  { source = "thiele-1984", locator = "p. 5, table 'Reigns of the Hebrew kings'" },
+  { source = "young-2005", locator = "p. 232; Table 1, p. 245" },
+  { source = "grayson-1996", locator = "p. 149, A.0.102.88" },
+  { source = "finkelstein-silberman-2002", locator = "p. 175" },
+  { source = "finkelstein-silberman-2002", locator = "p. 197" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 201-202" },
+  { source = "finkelstein-silberman-2002", locator = "p. 206" },
+]
+
+[[attestations]]
+artifact = "black-obelisk"
+relation = "corroborates"
+note = """
+The second epigraph names "Jehu (Iaua), son of Omri" and lists his tribute; the relief above it shows a figure bowing before Shalmaneser III. Grayson assigns it to the eighteenth regnal year, 841 BCE."""
+citations = [
+  { source = "pritchard-1969", locator = "p. 281 (epigraph II, the tribute of Jehu); trans. A. Leo Oppenheim" },
+  { source = "grayson-1996", locator = "p. 149, A.0.102.88" },
+  { source = "finkelstein-silberman-2002", locator = "p. 206" },
+]
+
+[[attestations]]
+artifact = "tel-dan-stele"
+relation = "in-tension"
+note = """
+The stele does not name Jehu. As restored, Hazael claims to have killed "[Jeho]ram son of [Ahab] king of Israel" and "[Ahaz]iahu son of [Jehoram kin]g of the House of David", the two kings 2 Kings 9 has Jehu kill. Finkelstein and Silberman suggest Hazael may have seen Jehu as his instrument, or that the two events blurred in memory before Kings was compiled."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 201-202" }]
