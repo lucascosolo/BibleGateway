@@ -512,8 +512,18 @@
  * the ordinary pattern on a phone anyway. `width: 100%` on the container is load-bearing — the
  * container is `fit-content`, so without it the in-flow panel would be sized to the summary. */
 @media (max-width: 30rem) {
+  /* `width: 100%` is not enough when the switcher is a flex item: the reader's header row
+     puts it after Listen, Notes and Compare, and a flex item shrinks to whatever is left on
+     the line. On a 390px phone that was a 480px column starting at x=430, the in-flow panel
+     inherited it, and the names and audio marks ran off the right edge again. A 100% basis
+     that may not shrink forces the switcher onto its own line of the wrapped row. */
   .translation-switcher {
     width: 100%;
+    flex: 0 0 100%;
+  }
+  .reader__header-actions {
+    flex-wrap: wrap;
+    row-gap: var(--space-3);
   }
   .translation-switcher__panel {
     position: static;
