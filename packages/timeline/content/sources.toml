@@ -1362,3 +1362,104 @@ kind = "article"
 author = "J. M. Diener"
 title = "When the Books of the Bible Were Written: Two Tables"
 container = "Handout; dates from The Expositor's Bible Commentary, ed. Frank E. Gaebelein (Zondervan)"
+
+[[source]]
+id = "josephus-whiston"
+kind = "edition"
+author = "Flavius Josephus, translated by William Whiston"
+title = "The Complete Works of Josephus (Christian Classics Ethereal Library edition of the 1737 translation)"
+url = "https://www.ccel.org/ccel/josephus/complete"
+
+[[source]]
+id = "dss-nag-hammadi-codices"
+kind = "book"
+author = "Dylan M. Burns and Matthew Goff, eds."
+title = "The Dead Sea Scrolls and the Nag Hammadi Codices: Selected Papers from the Conference in Berlin, 2018"
+publisher = "Brill, Leiden (open access, CC BY-NC-ND 4.0)"
+year = 2022
+
+[[source]]
+id = "kruger-2012-summary"
+kind = "web"
+author = "Michael J. Kruger (as summarised)"
+title = "Canon Revisited: Exploring the Theological Foundations of the New Testament Canon (chapter summaries, not the book)"
+url = "https://www.crossway.org/books/canon-revisited-hcj/"
+
+[[source]]
+id = "carr-2011-bibliography"
+kind = "book"
+author = "David M. Carr"
+title = "The Formation of the Hebrew Bible: A New Reconstruction (bibliography only, pp. 864–923)"
+publisher = "Oxford University Press"
+year = 2011
+
+[[source]]
+id = "baden-2012"
+kind = "book"
+author = "Joel S. Baden"
+title = "The Composition of the Pentateuch: Renewing the Documentary Hypothesis"
+publisher = "Yale University Press, New Haven"
+year = 2012
+
+[[source]]
+id = "metzger-1987-canon"
+kind = "book"
+author = "Bruce M. Metzger"
+title = "The Canon of the New Testament: Its Origin, Development, and Significance"
+publisher = "Clarendon Press, Oxford"
+year = 1987
+
+[[source]]
+id = "swjt-2010-dss"
+kind = "article"
+author = "Eric Mitchell, Peter W. Flint, Herbert W. Bateman IV, Ryan E. Stokes and Steven M. Ortiz"
+title = "Dead Sea Scrolls issue"
+container = "Southwestern Journal of Theology 53/1 (Fall 2010)"
+year = 2010
+
+[[source]]
+id = "satlow-2014"
+kind = "book"
+author = "Michael L. Satlow"
+title = "How the Bible Became Holy"
+publisher = "Yale University Press, New Haven"
+year = 2014
+
+[[source]]
+id = "mcdonald-2017-vol2-preview"
+kind = "book"
+author = "Lee Martin McDonald"
+title = "The Formation of the Biblical Canon, Volume 2: The New Testament: Its Authority and Canonicity (publisher's preview)"
+publisher = "Bloomsbury T&T Clark, London"
+year = 2017
+
+[[source]]
+id = "price-2020"
+kind = "web"
+author = "Jason Ryan Price"
+title = "Bureaucracy in the Bible: Attitudes toward Document-mediated Interaction in the Deuteronomistic History and Ancient Israel (Ph.D. dissertation, UCLA, 2020)"
+url = "https://escholarship.org/uc/item/7xj3b51h"
+
+[[source]]
+id = "lim-2013"
+kind = "book"
+author = "Timothy H. Lim"
+title = "The Formation of the Jewish Canon"
+publisher = "Yale University Press, New Haven"
+year = 2013
+
+[[source]]
+id = "vanderkam-2012"
+kind = "book"
+author = "James C. VanderKam"
+title = "The Dead Sea Scrolls and the Bible"
+publisher = "Eerdmans, Grand Rapids"
+year = 2012
+
+[[source]]
+id = "van-der-toorn-2007"
+kind = "book"
+author = "Karel van der Toorn"
+title = "Scribal Culture and the Making of the Hebrew Bible"
+publisher = "Harvard University Press, Cambridge, MA"
+year = 2007
