@@ -41,6 +41,10 @@ INITIAL_RATE = {"eng": 13.0, "hbo": 11.0}  # normalized chars per second, refine
 WINDOW_PAD_SECONDS = 60.0
 WINDOW_FACTOR = 1.8
 MAX_RETRIES = 5
+# A chapter whose remaining audio is under this fraction of its expected speaking time is not in
+# this file: LibriVox's titles are off by one here and there ("Exodus Ch. 11 - 22" ends at 21), so
+# the chapter is carried over to the next file rather than forced into fifteen seconds of tail.
+MIN_REMAINING_FRACTION = 0.5
 
 HEBREW_CANTILLATION = re.compile(r"[֑-ֽֿ֯׀׃-ׇ]")
 
@@ -215,26 +219,46 @@ def align_chapter(aligner, audio, t0, t_end, words, owners, rate, log) -> tuple[
     return verses, t0 + last_end, win, est
 
 
-def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] | None, device, log):
+def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] | None, device, log,
+             carried: list[dict] | None = None) -> list[dict]:
+    """Align the unit's chapters (after any `carried` in from the previous file); returns the
+    chapters whose audio ran out before they began, for the next file to take."""
     language = edition["language"]
     state_path = work_dir / (Path(unit["file"]).stem + ".state.json")
     state = json.loads(state_path.read_text()) if state_path.exists() else {"t0": 0.0, "rate": INITIAL_RATE[language], "done": []}
-    pending = [c for c in unit["chapters"] if [c["book_id"], c["chapter"]] not in state["done"]]
+    pending = [c for c in (carried or []) + unit["chapters"] if [c["book_id"], c["chapter"]] not in state["done"]]
     if only:
         pending = [c for c in pending if (c["book_id"], c["chapter"]) in only]
     if not pending:
-        return
+        return []
     t_load = time.time()
     audio = load_audio(unit["file"])
     t_end = len(audio) / SAMPLE_RATE
     log(f"  {Path(unit['file']).name}: {t_end/60:.1f} min, decoded in {time.time()-t_load:.1f}s")
 
+    leftover: list[dict] = []
     for ch in pending:
         t_ch = time.time()
         words, owners = chapter_words(ch, language, aligner)
         if not words:
             continue
-        verses, end_t, win, est = align_chapter(aligner, audio, state["t0"], t_end, words, owners, state["rate"], log)
+        if leftover:
+            leftover.append(ch)
+            continue
+        est = sum(len(w) + 1 for w in words) / state["rate"]
+        if t_end - state["t0"] < est * MIN_REMAINING_FRACTION:
+            log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: only {t_end - state['t0']:.0f}s of audio left for "
+                f"about {est:.0f}s of text; carrying it to the next file")
+            leftover.append(ch)
+            continue
+        try:
+            verses, end_t, win, est = align_chapter(aligner, audio, state["t0"], t_end, words, owners, state["rate"], log)
+        except RuntimeError as exc:
+            if "too long for CTC" not in str(exc):
+                raise
+            log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: audio shorter than its text ({exc}); carrying it to the next file")
+            leftover.append(ch)
+            continue
         out = {
             "edition": edition["code"],
             "book_id": ch["book_id"],
@@ -279,6 +303,7 @@ def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] 
             f"{first/60:.1f}-{last/60:.1f} min, score {out['mean_score']:.2f} (min {out['min_score']:.2f}), "
             f"rate {measured_rate:.1f} c/s, window {win:.0f}s, {time.time()-t_ch:.1f}s"
         )
+    return leftover
 
 
 def main() -> None:
@@ -307,10 +332,13 @@ def main() -> None:
 
     log(f"== {edition['code']} on {args.device}, {len(payload['units'])} files")
     aligner = Aligner(args.device, log)
+    carried: list[dict] = []
     for unit in payload["units"]:
-        if only and not any((c["book_id"], c["chapter"]) in only for c in unit["chapters"]):
+        if only and not carried and not any((c["book_id"], c["chapter"]) in only for c in unit["chapters"]):
             continue
-        run_unit(aligner, edition, unit, out_dir, only, args.device, log)
+        carried = run_unit(aligner, edition, unit, out_dir, only, args.device, log, carried)
+    for ch in carried:
+        log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: no file left to carry it to; not aligned")
 
 
 if __name__ == "__main__":
