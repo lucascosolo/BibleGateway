@@ -47,6 +47,23 @@ export function availableChoices(
   return out;
 }
 
+/**
+ * The translation codes that have a recording somewhere in this passage, for the translation
+ * picker's speaker marks. A translation counts only when one of its own editions covers a
+ * chapter here; the Hebrew recording does not make the KJV "have audio".
+ */
+export function translationsWithAudio(
+  audio: PassageAudio | null | undefined,
+  codes: readonly string[],
+): Set<string> {
+  const out = new Set<string>();
+  if (!audio) return out;
+  for (const code of codes) {
+    if (audio.chapters.some((c) => pickEdition(c, audio.editions, code, "translation"))) out.add(code);
+  }
+  return out;
+}
+
 export function editionByCode(editions: readonly AudioEdition[], code: string): AudioEdition | undefined {
   return editions.find((e) => e.code === code);
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
 
+import { SpeakerIcon } from "@/components/audio/icons";
 import type { Translation } from "@/lib/db/corpus";
 
 export interface TranslationSwitcherProps {
@@ -11,6 +12,19 @@ export interface TranslationSwitcherProps {
    * which keeps the scroll position and history entry stable across a translation switch.
    * Callers that navigate imperatively (derash) don't use this component at all; see below. */
   linkProps?: Omit<ComponentProps<typeof Link>, "href" | "className" | "aria-current" | "title" | "children">;
+  /** Translation codes with a recording of the passage on screen; those entries carry a
+   * speaker mark so a reader can pick a translation they can listen to. */
+  withAudio?: ReadonlySet<string>;
+}
+
+/** The speaker mark beside a translation that has audio here; its text is for screen readers. */
+export function AudioMark() {
+  return (
+    <span className="translation-switcher__option-audio">
+      <SpeakerIcon className="translation-switcher__option-audio-icon" />
+      <span className="sr-only">, audio available</span>
+    </span>
+  );
 }
 
 /**
@@ -35,7 +49,7 @@ export interface TranslationSwitcherProps {
  * (or, via `linkProps`, whatever the caller wants a link to do), so it works with JS disabled
  * and costs nothing on the client bundle.
  */
-export function TranslationSwitcher({ translations, active, hrefFor, linkProps }: TranslationSwitcherProps) {
+export function TranslationSwitcher({ translations, active, hrefFor, linkProps, withAudio }: TranslationSwitcherProps) {
   return (
     <details className="translation-switcher">
       {/* The accessible name has to say what the control DOES. "KJV King James Version" alone
@@ -62,6 +76,7 @@ export function TranslationSwitcher({ translations, active, hrefFor, linkProps }
           >
             <span className="translation-switcher__option-code">{option.code}</span>
             <span className="translation-switcher__option-name">{option.name}</span>
+            {withAudio?.has(option.code) && <AudioMark />}
           </Link>
         ))}
       </nav>

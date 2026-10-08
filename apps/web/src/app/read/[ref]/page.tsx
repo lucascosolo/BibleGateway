@@ -57,7 +57,7 @@ import {
 import { ReaderInteractions } from "./ReaderInteractions";
 import { ListenButton } from "@/components/audio/ListenButton";
 import { ReaderAudio } from "@/components/audio/ReaderAudio";
-import { availableChoices } from "@/lib/audio/select";
+import { availableChoices, translationsWithAudio } from "@/lib/audio/select";
 import { getPassageAudio, getWordClips } from "@/lib/db/audio";
 
 /**
@@ -398,6 +398,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   // queries it.
   const passageAudio = getPassageAudio(renderRange);
   const audioChoices = availableChoices(passageAudio, translation.code);
+  const audioTranslations = translationsWithAudio(passageAudio, translations.map((t) => t.code));
   const wordClips = passageAudio ? getWordClips(renderRange) : undefined;
   const renderedVerseIds = verses.map((v) => v.verseId);
   const { notes: toledotNotes, spans: toledotSpans } = buildToledotNotes(renderRange, renderedVerseIds);
@@ -439,6 +440,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             // Same path, different query — the reader keeps its exact place.
             hrefFor={(code) => `/read/${canonicalReferenceSlug(range, books)}?t=${code}`}
             linkProps={{ replace: true, scroll: false }}
+            withAudio={audioTranslations}
           />
         </div>
       </header>

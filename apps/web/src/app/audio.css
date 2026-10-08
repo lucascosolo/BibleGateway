@@ -183,6 +183,28 @@ html[data-audio-bar] .reader {
   color: var(--color-ink-faint);
   cursor: default;
 }
+.reader__listen--none:hover { text-decoration: none; }
+.reader__listen-group {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.reader__listen--alt {
+  padding-inline-start: var(--space-2);
+  border-inline-start: 1px solid var(--color-border);
+}
+
+/* The speaker mark beside a translation that has a recording of the passage on screen. */
+.translation-switcher__option-audio {
+  display: inline-flex;
+  align-items: center;
+  margin-inline-start: auto;
+  color: var(--color-brand-strong);
+}
+.translation-switcher__option-audio-icon {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
 .reader__listen-icon {
   inline-size: 1rem;
   block-size: 1rem;

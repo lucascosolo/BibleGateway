@@ -2,10 +2,14 @@
 
 import type { Translation } from "@/lib/db/corpus";
 
+import { AudioMark } from "./TranslationSwitcher";
+
 export interface TranslationSwitcherClientProps {
   translations: Translation[];
   active: Translation;
   onSelect: (code: string) => void;
+  /** Same as `TranslationSwitcher`'s: codes with a recording of the passage on screen. */
+  withAudio?: ReadonlySet<string>;
 }
 
 /**
@@ -19,7 +23,7 @@ export interface TranslationSwitcherClientProps {
  * thing that differs — `<button onClick>` instead of `<Link href>` — so the two controls cannot
  * drift apart in appearance or interaction. See `TranslationSwitcher` for why `<details>` at all.
  */
-export function TranslationSwitcherClient({ translations, active, onSelect }: TranslationSwitcherClientProps) {
+export function TranslationSwitcherClient({ translations, active, onSelect, withAudio }: TranslationSwitcherClientProps) {
   return (
     <details className="translation-switcher">
       <summary className="translation-switcher__summary">
@@ -41,6 +45,7 @@ export function TranslationSwitcherClient({ translations, active, onSelect }: Tr
           >
             <span className="translation-switcher__option-code">{option.code}</span>
             <span className="translation-switcher__option-name">{option.name}</span>
+            {withAudio?.has(option.code) && <AudioMark />}
           </button>
         ))}
       </nav>
