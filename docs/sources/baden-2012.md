@@ -17,4 +17,5 @@ and the technical complement to Friedman.
 
 ## Used by
 
-- `pentateuch-authorship` should gain Baden as the current statement of the documentary case.
+- `pentateuch-authorship` (pp. 40–44, 246–249), cited 2026-10-08 as the current statement of the
+  documentary case.

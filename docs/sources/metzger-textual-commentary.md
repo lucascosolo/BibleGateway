@@ -24,6 +24,7 @@ Located so far:
 
 ## Used by
 
-- Textual issues already on the site (`mark-ending`, `john-7-53-8-11`, `johannine-comma`,
-  `western-text-of-acts`): their views should gain Metzger citations with these page numbers.
+- `mark-ending` (pp. 102–107), `john-7-53-8-11` (pp. 187–189), `johannine-comma` (pp. 647–649),
+  `western-text-of-acts` (pp. 222–236): cited 2026-10-08. The inline `Page N` markers sit in a
+  two-column reflow and do not always fall in page order, so locators are section ranges.
 - Future investigations on New Testament passages.

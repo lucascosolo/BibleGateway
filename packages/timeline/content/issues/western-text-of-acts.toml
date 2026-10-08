@@ -31,3 +31,21 @@ label = "Two editions of Acts"
 text = """
 Dissenters point out that the extra Western material matches the style of the rest of Acts, is often neutral, and sometimes seems to show accurate added knowledge (Brown cites 12:10, 19:9, 20:15 and 28:16). Most of them propose two editions of Acts rather than copyists' tinkering, and Brown lists versions: Luke made both, a second scribe glossed Luke's notes, the Western is the original, or an original now lost can be reconstructed from the Western text."""
 citations = [{ source = "brown-1997", locator = "ch. 10, Issues and Problems for Reflection (1)" }]
+
+[[views]]
+label = "Metzger: no theory has won assent, so the committee chose reading by reading"
+text = """
+Metzger says the Western text of Acts is nearly one-tenth longer than the Alexandrian and generally more picturesque and circumstantial. He surveys the main theories: Blass's two editions by Luke, which he says many scholars are now reluctant to adopt; expansion of an earlier text, by Luke or by later hands; uncontrolled growth through copyists' interpolations, held by Westcott and Hort, Hatch and Kenyon; Clark's view that the Western text is primary and the Alexandrian a deliberate abridgement; and Latin or Semitic influence on Codex Bezae. Following Haenchen and Barbara Aland, he distinguishes minor clarifying variants, substantive additions by a reviser, and the idiosyncrasies of Bezae itself, and prefers to speak of Western texts rather than one Western text. Because no hypothesis has gained general assent, the committee proceeded eclectically, more often than not preferring the shorter Alexandrian text, while allowing that some Western additions may be factually accurate without coming from the author of Acts."""
+citations = [
+  { source = "metzger-textual-commentary", locator = "pp. 222–234 (Acts, Introduction)" },
+  { source = "metzger-textual-commentary", locator = "pp. 235–236" },
+]
+
+[[views]]
+label = "Hixson and Gurry's contributors: longer by small additions, with a measurable bias"
+text = """
+Writing from an evangelical standpoint, Cole says the Western text of Acts is a bit longer than the received form not because of added scenes or stories but because of minor additions within existing verses, and he reports Gurry's calculation that Codex Bezae is just short of 8 percent longer than Codex Sinaiticus in Acts. Marcello, answering claims of widespread orthodox corruption, nevertheless accepts Epp's study of Bezae in Acts as a clear case of scribal change for theological reasons: Epp found an anti-Judaic tendency in 40 percent of the variants he examined."""
+citations = [
+  { source = "hixson-gurry-2019", locator = "pp. 148–149 and n. 44 (Cole)" },
+  { source = "hixson-gurry-2019", locator = "pp. 220–221 (Marcello)" },
+]

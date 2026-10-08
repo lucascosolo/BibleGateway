@@ -17,4 +17,5 @@ authoritative from composition.
 
 ## Used by
 
-- Canon axis; `pentateuch-authorship`.
+- `pentateuch-authorship` (pp. 3–5, 74–78, 84), cited 2026-10-08.
+- Still to use: canon axis.

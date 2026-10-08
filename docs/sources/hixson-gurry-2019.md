@@ -26,6 +26,7 @@ Fifteen chapters by evangelical text critics correcting popular claims on both s
 
 ## Used by
 
-- The textual issues on the site, as the counterweight to Ehrman on orthodox corruption (ch. 11)
-  and on how much the variants matter (ch. 10).
+- `mark-ending`, `john-7-53-8-11`, `johannine-comma`, `western-text-of-acts` (cited 2026-10-08:
+  Gurry ch. 10 pp. 206–209, Cole pp. 148–149, Lanier pp. 126–128, Malik p. 158, Marcello
+  pp. 220–221), as the counterweight on how much the variants matter.
 - The planned canon view (ch. 13) and translation profiles (ch. 15).

@@ -14,14 +14,14 @@ verses = [
   { ref = "Exod.6.2-Exod.6.3", link = "describes", note = "God says the name Yahweh was not made known to the patriarchs, which sits oddly with Genesis stories that use it." },
   { ref = "Gen.12.6", link = "alludes", note = "\"The Canaanite was then in the land\", a remark that reads as written when the Canaanites were gone." },
   { ref = "Num.12.3", link = "alludes", note = "Moses called the humblest man on earth, a statement critics doubt he wrote of himself." },
+  { ref = "Gen.37.18-Gen.37.36", link = "describes", note = "The sale of Joseph: Ishmaelites in one thread, Midianites in the other; Baden's first case study." },
+  { ref = "2Kgs.23.1-2Kgs.23.3", link = "describes", note = "Josiah reads the scroll of the covenant, which van der Toorn takes as the first edition of Deuteronomy." },
+  { ref = "Neh.8.1-Neh.8.18", link = "describes", note = "Ezra reads the book of the law of Moses; Satlow argues the scroll held only part of the Pentateuch." },
 ]
-citations = [{ source = "friedman-1987", locator = "pp. 18–27, 50–60, 86–87" }]
-
-[[views]]
-label = "Tradition: Moses wrote it"
-text = """
-Friedman says the long-standing tradition was that Moses wrote the Five Books, and that rabbis from antiquity explained apparent contradictions as only apparent. Readers still saw problems: the text gives an account of Moses' death, and calls him the humblest man on earth. Medieval doubt began cautiously. Isaac ibn Yashush noted that a list of Edomite kings in Genesis 36 named kings who lived long after Moses, and Abraham ibn Ezra called him "the blunderer" yet hinted at doubts himself, writing "he who understands will keep silent". Bonfils said explicitly that Moses did not write such verses. Friedman does not name the particular verses ibn Ezra had in mind, only the kinds of passage: Moses in the third person, places Moses never visited, and language of a later time."""
-citations = [{ source = "friedman-1987", locator = "pp. 18–19" }]
+citations = [
+  { source = "friedman-1987", locator = "pp. 18–27, 50–60, 86–87" },
+  { source = "satlow-2014", locator = "pp. 74–75" },
+]
 
 [[views]]
 label = "Four sources combined (the Documentary Hypothesis)"
@@ -36,10 +36,45 @@ Friedman dates the two narrative sources to the two kingdoms. He says the J stor
 citations = [{ source = "friedman-1987", locator = "pp. 86–87" }]
 
 [[views]]
+label = "Baden: the documentary case renewed"
+text = """
+Baden defends the Documentary Hypothesis as the simplest and best answer to why the Pentateuch is incoherent: four originally independent documents, J, E, D and P, combined by a single compiler whose work was purely literary. He departs from Wellhausen in several ways. Sources are identified first by the historical claims a narrative makes (who did what, when, where and how), with style, vocabulary and the divine names only in support. The sources tell different stories, not the same story four times. The question is literary only, so disproving Wellhausen's history of Israelite religion does not touch it. And the absolute dates of the sources are not part of the theory: the only relative date the text supports is that D was written after J and E. In his case study of Joseph's sale (Genesis 37) he separates two complete, continuous stories, one with Judah and the Ishmaelites, one with Reuben and the Midianites, and argues that this continuity is the sharpest rebuttal to theories of gradual supplementation."""
+citations = [
+  { source = "baden-2012", locator = "pp. 246–249" },
+  { source = "baden-2012", locator = "pp. 40–44" },
+]
+
+[[views]]
 label = "Finkelstein and Silberman: the seventh-century horizon"
 text = """
 Finkelstein and Silberman argue that archaeology supports a "new contention" that the historical core of the Pentateuch and the Deuteronomistic History "was substantially shaped in the seventh century BCE". They side with scholars who say the Deuteronomistic History was compiled mainly under King Josiah, and they say much of the Pentateuch is a late monarchic creation serving Judah's ideology. They conclude that both the Pentateuch and the Deuteronomistic History were written in the seventh century BCE in Jerusalem, after the northern kingdom was gone, though they note the Priestly source and the final redaction are usually dated to the post-exilic period."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 14, 45–46" }]
+
+[[views]]
+label = "Van der Toorn: anonymous temple scribes, not authors"
+text = """
+Van der Toorn argues that the Hebrew Bible was made by professional scribes attached to the Jerusalem temple, mostly in the Second Temple period between about 500 and 200 BCE, who wrote, edited, copied and interpreted it; the search for individual authors is in most cases pointless, because ancient texts were anonymous co-productions built up through successive scribal redactions. Genesis, Exodus, Leviticus and Numbers name no author at all. He calls Deuteronomy the Bible's earliest pseudonymous book, a farewell speech put in Moses' mouth to legitimize Josiah's reform of 622 BCE: "The fraud may have been pious, but a fraud it was." Reading its openings and closings, he reconstructs four editions of Deuteronomy, the first being the scroll of the covenant of Josiah's reform, revised over about two centuries by Levite scribes whose families had come south after 722, with the book reaching its final shape in the early Persian period."""
+citations = [
+  { source = "van-der-toorn-2007", locator = "pp. 1–7" },
+  { source = "van-der-toorn-2007", locator = "pp. 33–34" },
+  { source = "van-der-toorn-2007", locator = "pp. 152–153, 171" },
+]
+
+[[views]]
+label = "Satlow: an enduring hypothesis, and authority came later than the text"
+text = """
+Satlow summarizes the standard Documentary Hypothesis as Judahites in Babylonia in the sixth and fifth centuries combining older sources (E from the northern kingdom before 722, J from Judah, joined as JE before 586, then D and P, with H debated). He stresses that it is a hypothesis with no direct evidence outside Deuteronomy for the sources existing before redaction, notes that some scholars now prefer models of continual growth, and still calls it enduring and productive. His own question is when these texts gained authority. Reading Nehemiah 8, he argues that Ezra's "book of the law of Moses" probably held some subset of P and D material, not the whole Pentateuch, which would have been too large for one scroll, and that Ezra's attempt to make the written text binding law in Jerusalem largely failed. In his account, from the monarchy through the Persian period these texts were produced by and for scribes and their authority was mainly literary, and Jews and Christians gave the biblical texts only limited and specific kinds of authority until well into the third century CE."""
+citations = [
+  { source = "satlow-2014", locator = "pp. 74–78" },
+  { source = "satlow-2014", locator = "p. 84" },
+  { source = "satlow-2014", locator = "pp. 3–5" },
+]
+
+[[views]]
+label = "Tradition: Moses wrote it"
+text = """
+Friedman says the long-standing tradition was that Moses wrote the Five Books, and that rabbis from antiquity explained apparent contradictions as only apparent. Readers still saw problems: the text gives an account of Moses' death, and calls him the humblest man on earth. Medieval doubt began cautiously. Isaac ibn Yashush noted that a list of Edomite kings in Genesis 36 named kings who lived long after Moses, and Abraham ibn Ezra called him "the blunderer" yet hinted at doubts himself, writing "he who understands will keep silent". Bonfils said explicitly that Moses did not write such verses. Friedman does not name the particular verses ibn Ezra had in mind, only the kinds of passage: Moses in the third person, places Moses never visited, and language of a later time."""
+citations = [{ source = "friedman-1987", locator = "pp. 18–19" }]
 
 [[views]]
 label = "Kitchen: against late dating"

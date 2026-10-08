@@ -24,3 +24,28 @@ label = "Canonical status is a separate question"
 text = """
 For many Christians, including Roman Catholics, the story is canonical, inspired Scripture. Brown notes Trent designated it as Scripture on the basis of long liturgical use, while Catholics may still accept scholars' judgment that it was not part of the original Gospel."""
 citations = [{ source = "brown-1997", locator = "ch. 3, section on canonicity and textual criticism; ch. 11, Issues and Problems for Reflection (1)" }]
+
+[[views]]
+label = "Metzger: overwhelming evidence against Johannine origin"
+text = """
+Metzger calls the evidence for the non-Johannine origin of the passage overwhelming. It is absent from early and diverse manuscripts including P66, P75, Sinaiticus and Vaticanus, from the oldest Syriac, the Sahidic and older Bohairic Coptic, the Gothic and several Old Latin manuscripts, and no Greek Church Father before Euthymius Zigabenus in the twelfth century comments on it. Its style and vocabulary differ from the rest of John and it interrupts the sequence of 7:52 and 8:12. Copyists placed it in several spots: after 7:52, 7:36, 7:44 or 21:25, or after Luke 21:38. He rejects the theory that it was cut from John out of moral prudence. Yet he says the account has the earmarks of historical veracity, a piece of oral tradition that circulated in parts of the Western church. The committee was unanimous that it was no part of the original Gospel and printed it in double square brackets."""
+citations = [{ source = "metzger-textual-commentary", locator = "pp. 187–189 (7.53–8.11, Pericope of the Adulteress)" }]
+
+[[views]]
+label = "Ehrman: two older stories, conflated before the fourth century"
+text = """
+Ehrman says scholars agree on only two points: the passage was not originally part of John, and it closely resembles Synoptic, especially Lukan, tradition. He draws on a newly found commentary on Ecclesiastes by Didymus the Blind of fourth-century Alexandria, who tells the story as found "in certain gospels"; if Didymus knew it in his copies of John he would be the earliest Greek patristic witness by eight centuries. Ehrman argues that by the fourth century three versions existed: an entrapment story in which Jesus freely pardons a sinful woman, known to Papias and the Didascalia; a story of Jesus intervening in an execution, retold by Didymus from the Gospel according to the Hebrews; and the familiar version in John, a conflation of the two. He thinks the entrapment story very ancient, with as good a claim to authenticity as its Synoptic parallels, because free pardon without penance is hard to imagine as a late invention."""
+citations = [
+  { source = "ehrman-2006-studies", locator = "pp. 196–200 (ch. 11, Jesus and the Adulteress)" },
+  { source = "ehrman-2006-studies", locator = "pp. 217–220" },
+]
+
+[[views]]
+label = "Hixson and Gurry's contributors: in doubt, but disclosed and not decisive"
+text = """
+Writing from an evangelical standpoint, Cole names John 7:53-8:11 with Mark 16:9-20 as the two twelve-verse units in doubt, exceptions to a record in which variation mostly affects a verse or less. Lanier cites notes in medieval manuscripts saying the passage was missing from most copies and uncommented on by the fathers, as evidence that later scribes knew its status. Gurry lists it among the few important and difficult variants, all of them flagged in modern Bibles, and argues that it affects teaching and practice somewhat although Jesus' mercy does not rest on it alone."""
+citations = [
+  { source = "hixson-gurry-2019", locator = "pp. 148–149 (Cole)" },
+  { source = "hixson-gurry-2019", locator = "pp. 126–127 (Lanier)" },
+  { source = "hixson-gurry-2019", locator = "pp. 206, 209 (Gurry)" },
+]

@@ -23,5 +23,6 @@ Collected articles. Chapters of direct use:
 
 ## Used by
 
-- `john-7-53-8-11` (chapter 11) and `mark-ending` (chapter 8) should gain citations.
+- `john-7-53-8-11` (ch. 11, pp. 196–200, 217–220) and `mark-ending` (p. 3), cited 2026-10-08.
+  Chapter 8 does not discuss the ending of Mark; p. 3 is the book's only treatment of 16:9-20.
 - Any future investigation on Luke 22:43-44 or Mark 1:41.

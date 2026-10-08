@@ -17,4 +17,5 @@ division and Carr's reconstruction both presuppose.
 
 ## Used by
 
-- `pentateuch-authorship`; composition events for Deuteronomy and Jeremiah.
+- `pentateuch-authorship` (pp. 1–7, 33–34, 152–153, 171), cited 2026-10-08.
+- Still to use: composition events for Deuteronomy and Jeremiah.

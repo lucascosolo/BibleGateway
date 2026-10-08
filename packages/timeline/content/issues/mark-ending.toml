@@ -30,3 +30,25 @@ label = "Streeter: the lost end of Mark"
 text = """
 Streeter's The Four Gospels (1924) is the landmark study that treats Mark as the earliest Gospel. He holds that Mark's original ending was lost very early, either because the Gospel was never finished or because the earliest copy was accidentally damaged. He rejects deliberate suppression, and argues that the copies Matthew and Luke used already stopped at the same abrupt point as our oldest manuscripts. He sees the Longer Ending (16:9-20) as a later addition, probably from Rome, and ventures a tentative guess that the appearance to Mary Magdalene and the lakeside appearance to Peter in John represent the lost ending. He says the evidence is quite insufficient for an assured result."""
 citations = [{ source = "streeter-1924", locator = "pp. 333–360" }]
+
+[[views]]
+label = "Metzger: the earliest recoverable Mark ended at 16:8"
+text = """
+Metzger, writing for the committee of the United Bible Societies' Greek New Testament, counts four endings in the manuscripts. Verses 9-20 are absent from the two oldest Greek manuscripts (Sinaiticus and Vaticanus), from Old Latin codex Bobiensis, the Sinaitic Syriac, about a hundred Armenian and the two oldest Georgian manuscripts; Clement and Origen show no knowledge of them, and Eusebius and Jerome say almost all Greek copies they knew lacked them. He judges the Longer Ending secondary on vocabulary and style and on its awkward join to verse 8, and thinks it was probably excerpted from another document, perhaps of the first half of the second century. The committee concluded that the earliest ascertainable form of Mark ended with 16:8, but printed 9-20 in double square brackets out of deference to its antiquity and its place in the tradition."""
+citations = [{ source = "metzger-textual-commentary", locator = "pp. 102–107 (16.9-20, The Ending(s) of Mark)" }]
+
+[[views]]
+label = "Ehrman: added by later scribes, and widely agreed to be"
+text = """
+Ehrman, introducing the field, gives Mark 16:9-20 as one of the variants of supreme importance and says there is widespread agreement that the final twelve verses were not part of Mark but were added by later scribes, as with the story of the woman taken in adultery in John."""
+citations = [{ source = "ehrman-2006-studies", locator = "p. 3" }]
+
+[[views]]
+label = "Hixson and Gurry's contributors: a real exception, openly disclosed"
+text = """
+Writing from an evangelical standpoint, the contributors to Hixson and Gurry treat Mark 16:9-20 as one of the rare exceptions in the transmission of the New Testament. Cole says the manuscript record mostly shows variation of a verse or less, and names this twelve-verse unit and John 7:53-8:11 as the units in doubt. Lanier lists medieval scribes' notes beside the passage saying that some copies end at verse 8, as evidence that later copyists knew of the competing endings. Gurry lists the passage among the few variants that are both important and hard to decide, notes that modern Bibles flag it in their footnotes, and argues that it has some effect on teaching and practice even though no doctrine rests on it."""
+citations = [
+  { source = "hixson-gurry-2019", locator = "pp. 148–149 (Cole)" },
+  { source = "hixson-gurry-2019", locator = "pp. 127–128 (Lanier)" },
+  { source = "hixson-gurry-2019", locator = "pp. 206, 209 (Gurry)" },
+]

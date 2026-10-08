@@ -16,5 +16,20 @@ citations = [{ source = "brown-1997", locator = "ch. 12, n. 14" }]
 [[views]]
 label = "A Latin theological gloss, not John's text"
 text = """
-Brown's judgment is that the Comma is a "3d–4th-century Latin theological gloss", the product of dogmatic trinitarian reflection on the shorter original text. The passage is therefore read without it, and the rest of 1 John has no additions."""
-citations = [{ source = "brown-1997", locator = "ch. 12, Summary of Basic Information (Integrity) and n. 14" }]
+Brown's judgment is that the Comma is a "3d–4th-century Latin theological gloss", the product of dogmatic trinitarian reflection on the shorter original text. The passage is therefore read without it. The Comma is the best known but not the only intrusion into the Latin text of 1 John: Metzger points to further Latin-only additions at 2:17, 4:3, 5:6 and 5:20."""
+citations = [{ source = "brown-1997", locator = "ch. 12, Summary of Basic Information (Integrity) and n. 14" }, { source = "metzger-textual-commentary", locator = "pp. 647–649, note on 5:7–8" }]
+
+[[views]]
+label = "Metzger: certainly spurious"
+text = """
+Metzger says it is certain that the words are spurious. The passage is absent from every known Greek manuscript except eight, which give it in what appears to be a translation from a late recension of the Latin Vulgate, four of them only as a later marginal addition; it is not quoted by any Greek Father, who would have used it in the Trinitarian controversies; and its first appearance in Greek is in a Greek version of the Acts of the Lateran Council of 1215. Among the ancient versions only the Latin has it, and not in the early Old Latin, Jerome's Vulgate or Alcuin's revision. The earliest quotation of it as part of the letter is in the fourth-century Latin Liber Apologeticus, attributed to Priscillian or his follower Instantius. He thinks the gloss began as a marginal note reading the Spirit, water and blood as a symbol of the Trinity, and was quoted as text by Latin Fathers in North Africa and Italy from the fifth century."""
+citations = [{ source = "metzger-textual-commentary", locator = "pp. 647–649 (5.7-8)" }]
+
+[[views]]
+label = "Hixson and Gurry's contributors: no doctrine depends on it"
+text = """
+Writing from an evangelical standpoint, Gurry agrees that no serious textual critic today accepts the reading, and says evangelical theologians make the case for the Trinity without it. He uses it as his example that a variant can touch a core doctrine without that doctrine depending on it, noting that the Nicene Creed was formulated before the words existed in any Greek manuscript. Malik notes that Erasmus took the Comma into the third edition of his Greek New Testament from minuscule 61, an early sixteenth-century manuscript, which is how it entered the Textus Receptus and the translations made from it."""
+citations = [
+  { source = "hixson-gurry-2019", locator = "pp. 207–208 (Gurry)" },
+  { source = "hixson-gurry-2019", locator = "p. 158 (Malik)" },
+]
