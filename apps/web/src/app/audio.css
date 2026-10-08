@@ -122,6 +122,15 @@ html[data-audio-bar] .reader {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+/* The recording's licence, always visible: the Hebrew reading is share-alike and the notice is part of using it. */
+.audio-bar__license {
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+}
+.audio-bar__license:hover { color: var(--color-ink); }
 
 .audio-bar__error { color: var(--color-rubric-strong); white-space: normal; }
 

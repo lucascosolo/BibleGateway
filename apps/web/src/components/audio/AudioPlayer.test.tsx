@@ -185,3 +185,13 @@ describe("AudioPlayer lifecycle", () => {
     expect(main.src).toContain("43-005.m4a");
   });
 });
+
+describe("AudioPlayer attribution", () => {
+  it("shows the recording's licence as a link to its source while a verse is playing", async () => {
+    await mountPlaying();
+    await act(async () => useAudioStore.setState({ currentVerseId: verse }));
+    const link = screen.getByRole("link", { name: /Licence: Public domain/ });
+    expect(link.getAttribute("href")).toBe("https://example.com");
+    expect(link.textContent).toBe("Public domain");
+  });
+});

@@ -9,9 +9,10 @@ vi.mock("node:fs", () => ({ default: { existsSync: () => true } }));
 vi.mock("@/lib/db/client", () => ({ prepared: (sql: string) => fixture.db!.prepare(sql) }));
 
 beforeAll(async () => {
-  const { default: Database } = await vi.importActual<typeof import("better-sqlite3")>("better-sqlite3");
-  fixture.db = new Database(":memory:");
-  fixture.db.exec(`
+  const { default: Database } = await vi.importActual<{ default: typeof import("better-sqlite3") }>("better-sqlite3");
+  const db = new Database(":memory:");
+  fixture.db = db;
+  db.exec(`
     CREATE TABLE books(book_id INTEGER, osis_id TEXT, name TEXT);
     INSERT INTO books VALUES(65, 'Jude', 'Jude'), (66, 'Rev', 'Revelation');
     CREATE TABLE verses(verse_id INTEGER, book_id INTEGER, chapter INTEGER, verse INTEGER);

@@ -465,6 +465,17 @@ export function AudioPlayer() {
                   {passage.bookName} {chapterOf(currentVerseId)}:{verseOf(currentVerseId)}
                 </span>
                 <span className="audio-bar__reader">{edition?.reader ?? ""}</span>
+                {edition ? (
+                  <a
+                    className="audio-bar__license"
+                    href={edition.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer license"
+                    aria-label={`Recording: ${edition.attribution}. Licence: ${edition.license}. Opens the source in a new tab`}
+                  >
+                    {edition.license}
+                  </a>
+                ) : null}
               </>
             ) : !hasTranslation && !hasOriginal ? (
               <span className="audio-bar__error">
