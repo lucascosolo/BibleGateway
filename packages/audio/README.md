@@ -18,10 +18,17 @@ resume.sh         sequential resumable alignment, one GPU worker at a time
 
 ```
 CACHE=~/.cache/jot-audio            # raw downloads, venv, working files
+./download.sh all                   # the four editions into $CACHE/raw/ (resumable; ~8 GB)
 ./run.sh fragments                  # seconds
-./run.sh align WEB-williams         # hours; resumable, re-run to continue
+./launch-alignment.sh               # all four editions, as a user service with the GPU (hours)
+./run.sh align WEB-williams         # or one edition in the foreground; resumable, re-run to continue
 ./run.sh build                      # minutes; writes ../../data/audio.db and data/audio/
 ```
+
+`download.sh` fetches WEB chapter by chapter from the AudioTreasure index (its zip bundles are
+gone), BSB as two zips from openbible.com, the KJV as LibriVox's 64 kb/s variants stored under the
+base names `kjv-files.json` uses, and the Hebrew book files from archive.org. The alignment needs
+the GPU, which a sandboxed shell cannot see, so `launch-alignment.sh` is run from a normal shell.
 
 Environment (one-off): `uv venv --python 3.12 $CACHE/venv`, then torch 2.4.1 + torchaudio
 2.4.1 from the `cu118` index (the GTX 980 Ti is sm_52; CUDA 12.8+ builds dropped Maxwell),
