@@ -1,0 +1,43 @@
+id = "canon-josephus-twenty-two-books"
+title = "Josephus counts twenty-two sacred books (Against Apion 1.37-43)"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+In Rome, after finishing the Jewish War and the Antiquities, Josephus wrote Against Apion, a defence of the Jewish people. In it he says the Jews have only twenty-two trusted books: five of Moses, thirteen by the prophets after Moses down to Artaxerxes, and four of hymns and counsel for living. He names no individual book, so Lim treats the passage as a summary of a canon rather than a list. It is the earliest surviving statement that the Jewish scriptures were a fixed, counted collection. Critical scholars date it toward the end of the first century CE; the date itself is not in dispute, but what it proves is: Lim reads it as the count most Jews of Josephus's own day would recognise, not as proof of a canon officially closed in his time."""
+verses = [
+  { ref = "Deut.34.5-Deut.34.8", link = "background", note = "The death of Moses, where Josephus ends the five books of Moses." },
+  { ref = "Ezra.7.1", link = "background", note = "Artaxerxes, the king with whom Josephus says the exact succession of prophets ended." },
+  { ref = "Luke.24.44", link = "background", note = "The law, the prophets and the psalms: a grouping comparable to Josephus's three classes." },
+]
+
+[[positions]]
+id = "end-of-first-century"
+label = "Toward the end of the first century CE"
+tradition = "critical"
+earliest = 90
+latest = 100
+held_by = "Lee Martin McDonald; Timothy H. Lim"
+summary = """
+McDonald places Against Apion toward the end of the first century, after the War and the Antiquities and shortly before Josephus's death about 100 CE. Lim groups it with passages from around the end of the first century or the start of the second. The span 90-100 is the editor's rendering of those phrases."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 344" }, { source = "lim-2013", locator = "pp. 43-44" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Lim argues the twenty-two count was ordinary, not esoteric: at the time Josephus wrote, it was the way most Jews counted the books, one that his readers could check. He adds that this majority canon was not officially closed at the end of the first century."""
+  citations = [{ source = "lim-2013", locator = "p. 47; p. 180" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Lim notes that Josephus did not say which books he meant, so the passage falls short of a canonical list; the five books of Moses are almost certainly the Pentateuch, but the other seventeen are inferred."""
+  citations = [{ source = "lim-2013", locator = "p. 44" }]
+
+[[attestations]]
+artifact = "josephus-against-apion-1-38"
+relation = "corroborates"
+note = """
+The passage itself, in Whiston's public-domain translation."""
+citations = [{ source = "josephus-whiston", locator = "Against Apion 1.8 (sections 37-43 in Niese's numbering)" }]

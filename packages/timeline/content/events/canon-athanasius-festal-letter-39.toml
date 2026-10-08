@@ -1,0 +1,32 @@
+id = "canon-athanasius-festal-letter-39"
+title = "Athanasius's Festal Letter 39 lists the twenty-seven books"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+Each year the bishop of Alexandria sent a letter announcing the date of Easter. In the letter for 367 Athanasius listed the canonical books. His Old Testament has twenty-two books, matching the Hebrew letters, with Baruch and the Letter counted with Jeremiah and Esther left out. His New Testament is the four Gospels, Acts, seven general letters, fourteen letters of Paul and Revelation: the twenty-seven books in use today, listed exactly for the first time. Wisdom, Sirach, Esther, Judith, Tobit, the Didache and the Shepherd may be read by new converts but are not canonical. The date is given by the letter series itself and is not in dispute; Metzger also notes that not everyone in the church was ready to follow it."""
+verses = [
+  { ref = "Esth.1.1", link = "background", note = "Esther, placed among the books to be read but outside the canon." },
+  { ref = "Matt.22.29", link = "background", note = "Ye do err, not knowing the Scriptures, quoted by Athanasius to close his list." },
+  { ref = "John.5.39", link = "background", note = "Search the Scriptures, quoted by Athanasius as warrant for the list." },
+  { ref = "Rev.1.1", link = "describes", note = "Revelation, the last book of his New Testament." },
+]
+
+[[positions]]
+id = "easter-367"
+label = "367 CE (the Easter letter for that year)"
+tradition = "critical"
+earliest = 367
+latest = 367
+held_by = "Bruce M. Metzger"
+summary = """
+Metzger dates the letter to 367, the thirty-ninth of the festal letters Athanasius wrote from 329 onwards, and calls 367 the first time the New Testament is declared to be exactly the twenty-seven books."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 210-212" }]
+
+[[attestations]]
+artifact = "athanasius-festal-letter-39"
+relation = "corroborates"
+note = """
+The letter itself, in Robertson's translation."""
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, sections 4-7" }]

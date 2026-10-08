@@ -6,7 +6,7 @@ with no text layer (160 MB), filed at `~/.cache/jot/sources/metzger-1987-canon/`
 tesseract at 300 dpi (done 2026-10-08) is in `ocr/page-NNN.txt` and `ocr/book.txt`, about 132,000
 words.
 
-**Printed page = PDF page − 6** (PDF 40 carries the running head "34 Literature on the Canon";
+**Printed page = PDF page − 6, but − 8 around printed pp. 133–155** (the offset drifts, found 2026-10-08; cite the page in the running head) (PDF 40 carries the running head "34 Literature on the Canon";
 PDF 200 is p. 194, "Two Early Lists"). Copyrighted; the
 PDF stays out of the repository.
 
@@ -20,3 +20,4 @@ criteria and on the problems of canonicity today.
 ## Used by
 
 - Canon axis and canon view, once the OCR lands.
+- Canon events (2026-10-08): `canon-josephus-twenty-two-books`, `canon-sirach-prologue`, `canon-4-ezra-twenty-four-books`, `canon-bava-batra-order-of-books`, `canon-muratorian-fragment`, `canon-irenaeus-four-gospels`, `canon-melito-old-testament-list`, `canon-origen-lists`, `canon-eusebius-accepted-disputed`, `canon-athanasius-festal-letter-39`, `canon-jerome-prologus-galeatus`.

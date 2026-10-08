@@ -1,0 +1,61 @@
+id = "canon-muratorian-fragment"
+title = "The Muratorian Fragment lists the New Testament writings"
+axis = "canon"
+category = "canon"
+confidence = "contested"
+status = "draft"
+summary = """
+An anonymous Latin list of the Christian books one church received, copied carelessly into an eighth-century manuscript at Milan and published by Muratori in 1740. It begins mid-sentence, names four Gospels, Acts, thirteen letters of Paul, Jude, two letters of John, Wisdom and the apocalypses of John and Peter, and says the Shepherd of Hermas may be read but not in church. Hebrews, James and the letters of Peter are absent. Its remark that Hermas wrote very recently, while his brother Pius was bishop of Rome, is why most scholars, with Metzger, date it to the late second century in or near Rome. A minority, following Sundberg, place it in the fourth century in the East; Metzger counts that view refuted."""
+verses = [
+  { ref = "Luke.1.1-Luke.1.4", link = "background", note = "Luke's preface, which the fragment paraphrases when it describes Luke's Gospel." },
+  { ref = "John.21.24", link = "background", note = "The claim that the disciple wrote the Gospel, repeated by the fragment." },
+  { ref = "Jude.1.1", link = "describes", note = "Jude, one of the letters the fragment receives." },
+  { ref = "Heb.1.1", link = "background", note = "Hebrews, which the fragment does not mention." },
+]
+
+[[positions]]
+id = "late-second-century-rome"
+label = "Late second century, in or near Rome"
+tradition = "critical"
+earliest = 170
+latest = 200
+held_by = "Bruce M. Metzger"
+summary = """
+Metzger holds that a member of the Roman church, or one near Rome, drew up the list in Greek toward the close of the second century, certainly not later than 200. The earliest year, 170, is the editor's rendering of 'the latter part of the second century'."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 193-194" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+The fragment says the Shepherd was written very recently, while Pius occupied the bishop's chair at Rome, which Metzger takes to point to the latter part of the second century."""
+  citations = [{ source = "metzger-1987-canon", locator = "pp. 193-194" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Metzger argues for a western origin: Rome is called simply 'the city', and James and Hebrews are not even mentioned."""
+  citations = [{ source = "metzger-1987-canon", locator = "p. 193" }]
+
+[[positions]]
+id = "fourth-century-east"
+label = "Mid-fourth century, Syria or Palestine (minority view)"
+tradition = "critical"
+earliest = 330
+latest = 375
+held_by = "Albert C. Sundberg Jr. (as reported by Bruce M. Metzger)"
+summary = """
+Sundberg argued in 1973 that the list is eastern and from the mid-fourth century. Metzger reports the view only to say Everett Ferguson refuted it. The span 330-375 is the editor's rendering of 'mid-fourth century'."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 193 and n. 11" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Metzger calls Sundberg's arguments sufficiently refuted by Ferguson, and cites Brevard Childs calling the fourth-century dating tendentious and unproven."""
+  citations = [{ source = "metzger-1987-canon", locator = "p. 193 and n. 12" }]
+
+[[attestations]]
+artifact = "muratorian-fragment"
+relation = "corroborates"
+note = """
+The fragment itself, in Salmond's translation."""
+citations = [{ source = "anf05-salmond-muratorian", locator = "Fragments of Caius, Canon Muratorianus" }]

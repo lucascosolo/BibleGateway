@@ -1,0 +1,49 @@
+id = "canon-eusebius-accepted-disputed"
+title = "Eusebius sorts the Christian writings into accepted, disputed and spurious"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+In the Church History, Eusebius of Caesarea counts the votes of the writers he had read. The accepted books are the four Gospels, Acts, Paul's letters, 1 Peter and 1 John, and, if it seems proper, Revelation. The disputed but widely known books are James, Jude, 2 Peter and 2 and 3 John. The spurious include the Acts of Paul, the Shepherd, the Apocalypse of Peter, Barnabas and the Didache, and Revelation appears here too. Metzger reads the muddle as the uncertainty of a historian working before any synod had issued a canon. Eusebius issued the History in several editions, so the passage is dated to a span, not a year."""
+verses = [
+  { ref = "Jas.1.1", link = "background", note = "James, first of the disputed letters." },
+  { ref = "Jude.1.1", link = "background", note = "Jude, among the disputed letters." },
+  { ref = "2Pet.1.1", link = "background", note = "2 Peter, among the disputed letters." },
+  { ref = "Rev.1.1", link = "background", note = "Revelation, placed both among the accepted and among the spurious." },
+]
+
+[[positions]]
+id = "first-quarter-fourth-century"
+label = "The first quarter of the fourth century"
+tradition = "critical"
+earliest = 300
+latest = 325
+held_by = "Bruce M. Metzger"
+summary = """
+Metzger says Eusebius issued the History, with revisions and additions, several times during the first quarter of the fourth century, and refers to the classification as Eusebius's in 325."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 202; p. 140" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Metzger reports T. D. Barnes's case for at least five editions, the first before 296 and the last after 326, which is why no single year fits the work."""
+  citations = [{ source = "metzger-1987-canon", locator = "p. 202 n. 29" }]
+
+[[positions]]
+id = "around-325-330"
+label = "Around 325-330"
+tradition = "critical"
+earliest = 325
+latest = 330
+held_by = "Lee Martin McDonald"
+summary = """
+McDonald dates Eusebius's preservation of Melito's list in the Church History to around 325-330."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 33" }]
+
+[[attestations]]
+artifact = "eusebius-church-history-3-25"
+relation = "corroborates"
+note = """
+The passage itself, in McGiffert's translation."""
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.1-7" }]

@@ -1,0 +1,38 @@
+id = "canon-jerome-prologus-galeatus"
+title = "Jerome's Helmeted Prologue sets the Hebrew books apart from the apocrypha"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+Introducing his Latin translation of Samuel and Kings from the Hebrew, Jerome surveyed the Hebrew scriptures. He counts twenty-two books to match the Hebrew alphabet, or twenty-four if Ruth and Lamentations are counted separately, a number he compares with the twenty-four elders of Revelation. Whatever is not in his list, he says, is apocryphal: Wisdom, Sirach, Judith, Tobit and the Shepherd are not in the canon. The Latin church kept the Greek books, but the prologue became the main patristic authority for the shorter Old Testament. McDonald notes that Jerome's list broadly follows the Hebrew order of the books, as few Christian lists do."""
+verses = [
+  { ref = "Rev.4.4", link = "background", note = "The twenty-four elders, whom Jerome compares with the twenty-four books." },
+  { ref = "1Sam.1.1", link = "background", note = "Samuel, the first book of the translation the prologue introduces." },
+  { ref = "Ruth.1.1", link = "background", note = "Ruth, which Jerome says some count separately among the Writings." },
+  { ref = "Lam.1.1", link = "background", note = "Lamentations, the other book some count separately." },
+]
+
+[[positions]]
+id = "about-390-400"
+label = "About 390-400 CE"
+tradition = "critical"
+earliest = 390
+latest = 400
+held_by = "Lee Martin McDonald"
+summary = """
+McDonald dates the prologue to about 390-400. The translation used for the artifact dates it to about 391."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 223" }, { source = "npnf2-06-ccel", locator = "Prefaces to the Books of the Vulgate: Kings (the Prologus Galeatus), with the editor's date of about 391" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+McDonald observes that Jerome's lists, apart from two codices, are the only Christian examples that broadly follow the Hebrew sequence of books."""
+  citations = [{ source = "mcdonald-2017-vol1", locator = "p. 322" }]
+
+[[attestations]]
+artifact = "jerome-prologus-galeatus"
+relation = "corroborates"
+note = """
+The prologue itself, in Fremantle's translation."""
+citations = [{ source = "npnf2-06-ccel", locator = "Prefaces to the Books of the Vulgate: Kings (the Prologus Galeatus)" }]

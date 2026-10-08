@@ -1,0 +1,42 @@
+id = "canon-sirach-prologue"
+title = "Ben Sira's grandson names the law, the prophets and the other books"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+The grandson of Jesus ben Sira translated his grandfather's Hebrew book into Greek in Egypt and wrote a preface to it. He speaks three times of the law, the prophets and a third, unnamed group of other books. He dates his arrival in Egypt to the thirty-eighth year of King Euergetes; only the second Ptolemy called Euergetes reigned that long, which gives 132 BCE, and the prologue is commonly placed after that king's death in 117. Arie van der Kooij reads the three groups as an official, closed canon matching Josephus's; Lim finds that case unproven."""
+verses = [
+  { ref = "Neh.8.8", link = "background", note = "The law read aloud and explained, the practice of reading and interpretation the prologue describes." },
+  { ref = "Luke.24.44", link = "background", note = "A later naming of the three groups, with the psalms in the third place." },
+]
+
+[[positions]]
+id = "after-132-bce"
+label = "After 132 BCE, probably after 117 BCE"
+tradition = "critical"
+earliest = -132
+latest = -110
+held_by = "Timothy H. Lim (reporting the usual reckoning)"
+summary = """
+Lim sets out the usual reckoning: the grandson reached Egypt in 132 BCE, and it has been conjectured that he spent about fifteen years translating and published the prologue after 117 BCE. The latest year, 110, is the editor's round limit; the sources give no end date."""
+citations = [{ source = "lim-2013", locator = "p. 95" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Of the two Ptolemies called Euergetes, only the second reigned thirty-eight years or more, so the grandson's arrival falls in 132 BCE."""
+  citations = [{ source = "lim-2013", locator = "p. 95" }]
+
+  [[positions.arguments]]
+  stance = "against"
+  text = """
+Against reading the prologue as an official, closed canon, Lim answers van der Kooij that neither the prologue nor Josephus says anything about books kept in the Temple, and that depositing a book there would not by itself make it canonical."""
+  citations = [{ source = "lim-2013", locator = "pp. 29-30" }]
+
+[[attestations]]
+artifact = "sirach-prologue"
+relation = "corroborates"
+note = """
+The prologue itself, in the King James Apocrypha."""
+citations = [{ source = "kjv-apocrypha-sacred-texts", locator = "Sirach, prologue" }]

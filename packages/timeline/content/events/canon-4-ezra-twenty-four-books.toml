@@ -1,0 +1,36 @@
+id = "canon-4-ezra-twenty-four-books"
+title = "4 Ezra 14: twenty-four public books and seventy hidden ones"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+4 Ezra, preserved in English Bibles as 2 Esdras 3-14, is a Jewish apocalypse that tries to make sense of Rome's destruction of the Temple. In its seventh vision the burnt law is given again: Ezra dictates for forty days to five scribes, and God tells him to publish the first twenty-four books for everyone and keep the last seventy for the wise. It is the earliest explicit count of twenty-four, the number the rabbis also use, and the source of the later tradition that Ezra restored the scriptures after the exile. Lim dates the book between 70 and 100 CE and treats the passage as one of three notices on the canon from around the end of the first century."""
+verses = [
+  { ref = "Ezra.7.6", link = "background", note = "Ezra the scribe skilled in the law of Moses, the figure 4 Ezra makes the restorer of scripture." },
+  { ref = "Neh.8.1-Neh.8.3", link = "background", note = "Ezra reads the law to the people, the public reading behind the apocalypse's public books." },
+]
+
+[[positions]]
+id = "after-the-temple"
+label = "70-100 CE, after the destruction of the Temple"
+tradition = "critical"
+earliest = 70
+latest = 100
+held_by = "Timothy H. Lim"
+summary = """
+Lim dates 4 Ezra between 70 and 100 CE: it answers the Roman destruction of the Temple, so it cannot be earlier than 70."""
+citations = [{ source = "lim-2013", locator = "p. 49" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Lim reads the book as a theodicy written to make sense, theologically and emotionally, of the Temple's destruction by Rome, which fixes its earliest date."""
+  citations = [{ source = "lim-2013", locator = "p. 49" }]
+
+[[attestations]]
+artifact = "2-esdras-14-ezra-rewrites-the-books"
+relation = "corroborates"
+note = """
+The passage itself, 2 Esdras 14:23-48 in the King James Apocrypha, where the scribes' total reads two hundred and four."""
+citations = [{ source = "kjv-apocrypha-sacred-texts", locator = "2 Esdras 14:23-48" }]

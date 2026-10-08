@@ -1,0 +1,38 @@
+id = "canon-irenaeus-four-gospels"
+title = "Irenaeus argues the Gospels are four, neither more nor fewer"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+Irenaeus, bishop of Lyons, wrote Against Heresies to refute the Gnostics. In book 3 he argues that there cannot be more or fewer than four Gospels, as there are four regions of the world, four principal winds and four living creatures, which he matches to the four evangelists. Metzger takes this as the moment the Gospel canon is closed for him, while the rest of his New Testament stays open. Irenaeus quotes over a thousand New Testament passages, and Metzger concludes that by about 180 a three-part New Testament of about twenty-two books was known in southern Gaul. The work's date is not seriously disputed."""
+verses = [
+  { ref = "Rev.4.6-Rev.4.8", link = "describes", note = "The four living creatures that Irenaeus matches to the four Gospels." },
+  { ref = "Ezek.1.10", link = "background", note = "The four faces of the living creatures, the older image behind his argument." },
+  { ref = "Matt.1.1", link = "background", note = "Matthew, one of the four." },
+  { ref = "John.1.1", link = "background", note = "John, one of the four." },
+]
+
+[[positions]]
+id = "about-180"
+label = "About 180 CE, when Irenaeus was bishop of Lyons"
+tradition = "critical"
+earliest = 178
+latest = 190
+held_by = "Bruce M. Metzger"
+summary = """
+Metzger has Irenaeus succeed Pothinus as bishop of Lyons in 178 and dates his evidence for the four Gospels by the year 180. McDonald gives Irenaeus as about 170-180. The latest year, 190, is the editor's margin; neither source gives one."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 153-155" }, { source = "mcdonald-2017-vol1", locator = "p. 32" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Metzger quotes Against Heresies 3.11.8 on the four directions of the world and four principal winds, and concludes that for Irenaeus the Gospel canon is closed and its text holy."""
+  citations = [{ source = "metzger-1987-canon", locator = "pp. 154-155" }]
+
+[[attestations]]
+artifact = "irenaeus-four-gospels"
+relation = "corroborates"
+note = """
+The passage itself, in the Ante-Nicene Fathers translation."""
+citations = [{ source = "anf01-ccel", locator = "Against Heresies 3.11.8" }]

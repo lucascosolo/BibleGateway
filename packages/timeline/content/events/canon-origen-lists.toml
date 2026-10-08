@@ -1,0 +1,38 @@
+id = "canon-origen-lists"
+title = "Origen counts twenty-two Hebrew books and only four Gospels"
+axis = "canon"
+category = "canon"
+confidence = "firm"
+status = "draft"
+summary = """
+Eusebius quotes several passages of Origen, the Alexandrian scholar who later taught at Caesarea. From his commentary on the first Psalm comes the statement that the canonical books, as the Hebrews hand them down, are twenty-two, the number of letters in their alphabet, with a list of Hebrew titles. From the commentary on Matthew comes his judgement that only four Gospels are undisputed in the church; from the commentary on John, that Peter's second letter and John's second and third are disputed; from the homilies on Hebrews, that only God knows who wrote it. Origen died in 253 or 254, and Metzger dates the John commentary to about 230-231 and the Matthew commentary after 244. Lim argues that by 'the Hebrews' Origen could mean the Jews of his own day."""
+verses = [
+  { ref = "Gen.1.1", link = "background", note = "In the beginning, the Hebrew title Origen transliterates for Genesis." },
+  { ref = "Heb.1.1", link = "background", note = "Hebrews, whose author Origen leaves to God." },
+  { ref = "2Pet.1.1", link = "background", note = "2 Peter, which Origen calls disputed." },
+  { ref = "Matt.1.1", link = "background", note = "Matthew, the Gospel Origen places first." },
+]
+
+[[positions]]
+id = "230-254"
+label = "About 230-254 CE, across Origen's later works"
+tradition = "critical"
+earliest = 230
+latest = 254
+held_by = "Bruce M. Metzger"
+summary = """
+Metzger dates the commentary on John perhaps to 230-231, the commentary on Matthew after 244 and the homilies on Hebrews after 245, and gives Origen's death as 253 or 254. The pages read give no date for the commentary on the Psalms, so the earliest year rests on the John commentary."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 135-136, 138" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+Lim argues that Origen's 'as the Hebrews have handed them down' can refer to contemporary Jews, since Origen knew the rabbis' institutions and consulted Jews, and that the alphabetic count reflects Jewish thought."""
+  citations = [{ source = "lim-2013", locator = "p. 47" }]
+
+[[attestations]]
+artifact = "origen-list-of-the-books"
+relation = "corroborates"
+note = """
+The passages as Eusebius quotes them, in McGiffert's translation."""
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 6.25.1-14" }]
