@@ -45,6 +45,11 @@ MAX_RETRIES = 5
 # this file: LibriVox's titles are off by one here and there ("Exodus Ch. 11 - 22" ends at 21), so
 # the chapter is carried over to the next file rather than forced into fifteen seconds of tail.
 MIN_REMAINING_FRACTION = 0.5
+# A carried-over chapter that scores below this at the start of the next file is not there either:
+# the recording skipped it. It is recorded as missing and the file starts over with its own
+# chapters, because forcing its text onto the next chapter's audio shifts every chapter after it,
+# and that shift cascades from file to file (KJV Exodus 22, 2026-10-08).
+CARRIED_MIN_SCORE = 0.5
 
 HEBREW_CANTILLATION = re.compile(r"[֑-ֽֿ֯׀׃-ׇ]")
 
@@ -237,6 +242,7 @@ def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] 
     log(f"  {Path(unit['file']).name}: {t_end/60:.1f} min, decoded in {time.time()-t_load:.1f}s")
 
     leftover: list[dict] = []
+    carried_keys = {(c["book_id"], c["chapter"]) for c in (carried or [])}
     for ch in pending:
         t_ch = time.time()
         words, owners = chapter_words(ch, language, aligner)
@@ -290,6 +296,13 @@ def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] 
         out["mean_score"] = round(float(np.mean(scores)), 4) if scores else 0.0
         out["min_score"] = round(float(np.min(scores)), 4) if scores else 0.0
         out["rate"] = round(measured_rate, 2)
+        if (ch["book_id"], ch["chapter"]) in carried_keys and out["mean_score"] < CARRIED_MIN_SCORE:
+            log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: carried in but scores {out['mean_score']:.2f} here; "
+                f"the recording skips it. Not aligned; this file starts over at {state['t0']:.0f}s")
+            state.setdefault("missing", []).append([ch["book_id"], ch["chapter"]])
+            state["done"].append([ch["book_id"], ch["chapter"]])
+            state_path.write_text(json.dumps(state))
+            continue
         (work_dir / f"{ch['book_id']:02d}-{ch['chapter']:03d}.json").write_text(json.dumps(out, ensure_ascii=False))
 
         # Only trust the measured rate to steer the next window if this chapter looked sane.
