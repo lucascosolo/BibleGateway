@@ -1307,3 +1307,58 @@ kind = "web"
 author = "Kevin J. Vanhoozer"
 title = "Inerrancy of Scripture (Knowing & Doing, Spring 2010)"
 url = "https://www.cslewisinstitute.org/resources/inerrancy-of-scripture/"
+
+[[source]]
+id = "mcdonald-2017-vol1"
+kind = "book"
+author = "Lee Martin McDonald"
+title = "The Formation of the Biblical Canon, Volume 1: The Old Testament: Its Authority and Canonicity"
+publisher = "Bloomsbury T&T Clark, London"
+year = 2017
+
+[[source]]
+id = "gallagher-meade-2017"
+kind = "book"
+author = "Edmon L. Gallagher and John D. Meade"
+title = "The Biblical Canon Lists from Early Christianity: Texts and Analysis"
+publisher = "Oxford University Press"
+year = 2017
+
+[[source]]
+id = "okoye-2013"
+kind = "chapter"
+author = "James Chukwuma Okoye"
+title = "The Formation of the Bible"
+container = "Anselm Companion to the Bible, ed. Corrine L. Carvalho (Anselm Academic, Winona), pp. 13–27"
+year = 2013
+
+[[source]]
+id = "podhajski-2017"
+kind = "article"
+author = "Maksym Podhajski"
+title = "Biblical Canon: Formation and Variations in Different Christian Traditions"
+container = "Rocznik Teologii Katolickiej 16/3, pp. 37–53"
+year = 2017
+
+[[source]]
+id = "becerra-2023"
+kind = "article"
+author = "Daniel Becerra"
+title = "The Canonization of the New Testament"
+container = "Religious Educator 24/1 (Brigham Young University), article 5"
+year = 2023
+
+[[source]]
+id = "kelley-2020"
+kind = "article"
+author = "Kelley"
+title = "The Canon of Scripture (Principles, Process and Purpose)"
+container = "Diligence: Journal of the Liberty University Online Religion Capstone in Research and Scholarship 5/1, article 4"
+year = 2020
+
+[[source]]
+id = "diener-bible-dates"
+kind = "article"
+author = "J. M. Diener"
+title = "When the Books of the Bible Were Written: Two Tables"
+container = "Handout; dates from The Expositor's Bible Commentary, ed. Frank E. Gaebelein (Zondervan)"
