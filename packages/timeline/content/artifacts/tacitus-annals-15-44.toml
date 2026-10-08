@@ -4,7 +4,7 @@ kind = "literary-text"
 status = "draft"
 language = "Latin"
 summary = """
-The Roman historian Tacitus is describing Nero's persecution of Christians after the fire of Rome. He explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat". In English: Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate. The two online Latin texts cited differ in one word. The Latin Library prints "Tibero" and Perseus prints "Tiberio"."""
+The Roman historian Tacitus is describing Nero's persecution of Christians after the fire of Rome when he explains the name: "auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat". In English, Christus, the founder of the name, suffered the extreme penalty in the reign of Tiberius at the hands of the procurator Pontius Pilate. The two online Latin texts cited differ in one word: the Latin Library prints "Tibero" and Perseus prints "Tiberio"."""
 citations = [
   { source = "tacitus-annals-15-latin", locator = "15.44" },
   { source = "tacitus-annals-15-perseus", locator = "15.44" },

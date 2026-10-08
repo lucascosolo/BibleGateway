@@ -4,7 +4,7 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-Eusebius says John was condemned to live on Patmos during Domitian's persecution (3.18.1). He quotes Irenaeus that the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian" (3.18.3; also 5.8.6)."""
+Eusebius says John was condemned to live on Patmos during Domitian's persecution (3.18.1), and he quotes Irenaeus that the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian" (3.18.3; also 5.8.6)."""
 citations = [
   { source = "newadvent-eusebius-he-3", locator = "3.18.1, 3.18.3" },
   { source = "newadvent-eusebius-he-5", locator = "5.8.6" },

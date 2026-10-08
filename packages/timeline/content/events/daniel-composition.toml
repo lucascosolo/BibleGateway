@@ -7,7 +7,7 @@ status = "draft"
 books = ["Dan"]
 segment = "Daniel 7–12 (the visions)"
 summary = """
-This asks when the visions of Daniel were written. The book is set in the 6th century BCE, in the Babylonian and Persian courts. Most critical scholars date the visions to the persecution under the Seleucid king Antiochus IV in the 160s BCE. Conservative scholars hold that part or all of them may go back to the 6th century."""
+This asks when the visions of Daniel were written. The book is set in the 6th century BCE, in the Babylonian and Persian courts. Most critical scholars date the visions to the persecution under the Seleucid king Antiochus IV in the 160s BCE, while conservative scholars hold that part or all of them may go back to the 6th century."""
 verses = [{ ref = "Dan.7.1-Dan.12.13", link = "describes" }]
 
 [[positions]]
@@ -18,13 +18,13 @@ earliest = -167
 latest = -164
 held_by = "John J. Collins"
 summary = """
-Collins holds that chapters 7-12 were written during the persecution of the Jews under Antiochus IV Epiphanes, before the temple was rededicated. Critical here means the mainstream scholarly view."""
+John Collins holds that chapters 7-12 were written during the persecution of the Jews under Antiochus IV Epiphanes, before the temple was rededicated. Critical here means the mainstream scholarly view."""
 citations = [{ source = "collins-1993" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Collins reads the visions as prophecy written after the events they describe, up to the reign of Antiochus IV. That fixes their writing within his persecution."""
+Collins reads the visions as prophecy written after the events they describe, up to the reign of Antiochus IV. That fixes their writing within his persecution."""
   citations = [{ source = "collins-1993" }]
 
 [[positions]]
@@ -35,11 +35,11 @@ earliest = -600
 latest = -501
 held_by = "Joyce G. Baldwin"
 summary = """
-Baldwin holds that part or all of chapters 7-12 may go back to the 6th century BCE, the time in which the book is set. Traditional here means the older view that the book was written when it says it was."""
+Joyce Baldwin holds that part or all of chapters 7-12 may go back to the 6th century BCE, the time in which the book is set. Traditional here means the older view that the book was written when it says it was."""
 citations = [{ source = "baldwin-1978" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Baldwin argues the visions need not be prophecy written after the event (the Latin term is vaticinia ex eventu). So they need not be dated by the latest events they describe."""
+Baldwin argues the visions need not be prophecy written after the event (the Latin term is vaticinia ex eventu), so they need not be dated by the latest events they describe."""
   citations = [{ source = "baldwin-1978" }]

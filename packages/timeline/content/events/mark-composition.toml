@@ -21,13 +21,13 @@ earliest = 60
 latest = 75
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "60–75, most likely between 68 and 73." He says there is wide scholarly agreement on the late 60s or just after 70, and that the author was a Greek-speaker who was not an eyewitness of Jesus' ministry."""
+Brown, a critical scholar, gives his dating in one line: "60–75, most likely between 68 and 73." He says there is wide scholarly agreement on the late 60s or just after 70, and that the author was a Greek-speaker who was not an eyewitness of Jesus' ministry."""
 citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: because Matthew and Luke each used Mark, "a date beyond 75 seems unlikely", and the developed Greek Jesus tradition in Mark implies that several decades have passed since Jesus; "there is wide scholarly agreement that Mark was written in the late 60s or just after 70"."""
+Brown argues that because Matthew and Luke each used Mark, "a date beyond 75 seems unlikely", and the developed Greek Jesus tradition in Mark implies that several decades have passed since Jesus; "there is wide scholarly agreement that Mark was written in the late 60s or just after 70"."""
   citations = [{ source = "brown-1997", locator = "ch. 7, Date of Writing" }]
   verses = [{ ref = "Mark.13.2", link = "dates", note = "The Temple prediction, read against the Temple's fall in 70 CE." }]
 
@@ -39,13 +39,13 @@ earliest = 64
 latest = 69
 held_by = "The Papias tradition, as reported by Raymond E. Brown"
 summary = """
-Brown's traditional attribution line: "Mark, the follower and “interpreter” of Peter". Of those who credit the Papias tradition he writes that "the usual understanding is that Mark wrote just before or after Peter’s death and thus in the mid- or late 60s". Both year bounds are the editor's reading of "mid- or late 60s"."""
+Brown states the traditional attribution as "Mark, the follower and “interpreter” of Peter". Of those who credit the Papias tradition he writes that "the usual understanding is that Mark wrote just before or after Peter’s death and thus in the mid- or late 60s". The span shown here is the editor's reading of "mid- or late 60s"."""
 citations = [{ source = "brown-1997", locator = "ch. 7, Summary of Basic Information; Date of Writing" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown reports that, for this dating, the Gospel's failure "to show any knowledge of the details of the First Jewish Revolt against Rome in AD 66–70 and to mention the fall of Jerusalem" is taken as internal support."""
+Brown reports that, for this dating, the Gospel's silence counts as internal support, since it fails "to show any knowledge of the details of the First Jewish Revolt against Rome in AD 66–70 and to mention the fall of Jerusalem" is taken as internal support."""
   citations = [{ source = "brown-1997", locator = "ch. 7, Date of Writing" }]
   verses = [{ ref = "Mark.13.2", link = "dates", note = "A prediction with no report of fulfilment." }]
 
@@ -57,7 +57,7 @@ earliest = 57
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament. They think a Roman origin is the best alternative, given the early tradition. They find the evidence cannot choose between the 50s and the 60s and conclude only that Mark was written "sometime in the late 50s or the 60s". The year bounds are the editor's reading of that phrase."""
+Carson and Moo write the standard evangelical introduction to the New Testament. They think a Roman origin is the best alternative, given the early tradition. They find the evidence cannot choose between the 50s and the 60s and conclude only that Mark was written "sometime in the late 50s or the 60s". The year span shown here is the editor's reading of that phrase."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 179–182" }]
 
   [[positions.arguments]]
@@ -75,7 +75,7 @@ earliest = 65
 latest = 70
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says Mark "was written in Greek, around 70 c.e." and that "many scholars believe" it was written late in the Jewish War or soon after the Temple fell. Its author is anonymous, a Greek-speaking Christian probably living outside Palestine. The year bounds are his timeline chart's "65-70" for Mark."""
+Ehrman's textbook says Mark "was written in Greek, around 70 c.e." and that "many scholars believe" it was written late in the Jewish War or soon after the Temple fell. Its author is anonymous, a Greek-speaking Christian probably living outside Palestine. The span shown here is the range on his timeline chart, "65-70", for Mark."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
 
   [[positions.arguments]]
@@ -93,7 +93,7 @@ earliest = 62
 latest = 68
 held_by = "B. H. Streeter (1924)"
 summary = """
-Streeter's The Four Gospels (1924) is the landmark study that made Mark the earliest Gospel and the base of Matthew and Luke. He holds that Mark was written at Rome, in the lifetime of Peter's circle, and says it "was probably written about 65". Because he gives only "about" a year, the range here is plus or minus three years, the editor's reading."""
+Streeter's The Four Gospels (1924) is the landmark study that made Mark the earliest Gospel and the base of Matthew and Luke. He holds that Mark was written at Rome, in the lifetime of Peter's circle, and says it "was probably written about 65". Because he gives only "about" a year, the span shown here is plus or minus three years, which is the editor's reading."""
 citations = [{ source = "streeter-1924", locator = "pp. 489–495, 524" }]
 
   [[positions.arguments]]

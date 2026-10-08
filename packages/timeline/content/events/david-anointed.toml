@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-Samuel secretly anoints Jesse's youngest son during Saul's reign. The Bible gives no year. The only limits available are those of Saul's reign."""
+Samuel secretly anoints Jesse's youngest son during Saul's reign. The Bible gives no year, so the only limits available are those of Saul's reign."""
 verses = [
   { ref = "1Sam.16.1-1Sam.16.13", link = "describes", note = "A private anointing at Bethlehem" },
   { ref = "2Sam.2.1-2Sam.2.4", link = "describes", note = "Later anointed king over Judah at Hebron" },
@@ -23,5 +23,5 @@ earliest = -1051
 latest = -1009
 held_by = "Rodger C. Young"
 summary = """
-Young gives no date for the anointing. These bounds are the editor's. They are Saul's reign as Young's Table 2 conjectures it (1051t?-1009t?), the period in which 1 Samuel 16 places the anointing."""
+Rodger Young gives no date for the anointing, so the bounds shown are the editor's. They are Saul's reign as Young's Table 2 conjectures it (1051t?-1009t?), the period in which 1 Samuel 16 places the anointing."""
 citations = [{ source = "young-2005", locator = "Table 2, p. 246" }]

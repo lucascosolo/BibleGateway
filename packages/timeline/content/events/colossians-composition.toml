@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["Col"]
 summary = """
-This asks who wrote Colossians and when. The letter names Paul as author and twice has him say "I, Paul". Ehrman argues it is a forgery by someone "wanting his readers to think he is Paul", but says "there is really no way to date its appearance precisely". He allows that forgeries in Paul's name could appear in his lifetime. The year bounds of 55 and 100 are therefore the editor's: 55 is a point inside Paul's ministry, and 100 is set because Ephesians, which Ehrman says copies Colossians, is the later letter."""
+This asks who wrote Colossians and when. The letter names Paul as author and twice has him say "I, Paul". Ehrman argues it is a forgery by someone "wanting his readers to think he is Paul", but says "there is really no way to date its appearance precisely", and he allows that forgeries in Paul's name could appear in Paul's own lifetime. The year bounds of 55 and 100 are therefore the editor's: 55 is a point inside Paul's ministry, and 100 is set because Ephesians, which Ehrman says copies Colossians, is the later letter."""
 verses = [
   { ref = "Col.1.1", link = "describes", note = "Paul is named as the author, with Timothy." },
   { ref = "Col.1.23", link = "describes", note = "The author speaks of himself as I, Paul." },
@@ -25,67 +25,67 @@ earliest = 55
 latest = 100
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that Paul did not write Colossians and that it was forged. He declines to date it precisely. Both year bounds are the editor's."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 228, 234, 246" }]
+Ehrman holds that Paul did not write Colossians and that it was forged in his name. He declines to date it precisely, so both year bounds are the editor's."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 228, 234, 246" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the signature: "Whoever wrote these books wanted their readers to think they really were Paul.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 228" }]
+Ehrman starts with the signature. The author's insistence on being Paul is what a forger would do: "Whoever wrote these books wanted their readers to think they really were Paul.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 228" }]
   verses = [{ ref = "Col.1.23", link = "describes", note = "I, Paul." }, { ref = "Col.4.18", link = "describes", note = "The signature with my own hand." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on a coauthor: "attributing the letter to a close co-worker appears to be a counsel of despair.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 227" }]
+Ehrman rejects the idea that a close co-worker wrote the letter for Paul, calling that suggestion hopeless: "attributing the letter to a close co-worker appears to be a counsel of despair.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 227" }]
   verses = [{ ref = "Col.1.1", link = "describes", note = "Paul named first, with Timothy." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on style: "In case after case, Colossians stands apart from Paul’s letters.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 230" }]
+Ehrman finds the style unlike Paul's. He writes: "In case after case, Colossians stands apart from Paul’s letters.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 230" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on style: "The average in all the undisputed letters is 10.4 percent; in Colossians it is 4 percent.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 230" }]
+He backs the point about style with a count: "The average in all the undisputed letters is 10.4 percent; in Colossians it is 4 percent.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 230" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on realized resurrection: "Believers have not only died with Christ but they have also been raised with him.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 232" }]
+Ehrman finds a difference in teaching about the resurrection, which Colossians treats as already realized: "Believers have not only died with Christ but they have also been raised with him.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 232" }]
   verses = [{ ref = "Col.2.12-Col.2.13", link = "background", note = "Raised with Christ." }, { ref = "Col.3.1", link = "background", note = "Have been raised up with Christ." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on forgiveness: "Unlike Paul, this author understands redemption as the “forgiveness of sins”""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 232" }]
+Ehrman finds a difference in how salvation is described: "Unlike Paul, this author understands redemption as the “forgiveness of sins”""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 232" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the household code: "In short, this is written by someone who knows the church has been here and will be here for the long run.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 234" }]
+Ehrman reads the household code as a sign of a later church that expects to last: "In short, this is written by someone who knows the church has been here and will be here for the long run.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 234" }]
   verses = [{ ref = "Col.3.18-Col.4.1", link = "background", note = "The Haustafel." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman concludes: "it is clear that with Colossians we are not dealing with a letter of Paul, but a letter of someone wanting his readers to think he is Paul.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 234" }]
+Ehrman concludes from all this that the letter is not Paul's: "it is clear that with Colossians we are not dealing with a letter of Paul, but a letter of someone wanting his readers to think he is Paul.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 234" }]
   verses = [{ ref = "Col.1.1", link = "describes", note = "The authorial claim." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the Philemon ties: "or Colossians is written by someone wanting to imitate Paul with the letter of Philemon to hand.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 230" }]
+Ehrman explains the ties to Philemon as imitation: "or Colossians is written by someone wanting to imitate Paul with the letter of Philemon to hand.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 230" }]
 
 [[positions]]
 id = "paul-prisoner-letter"
@@ -95,34 +95,34 @@ earliest = 52
 latest = 62
 held_by = "Markus Barth and Helmut Blanke (named by Ehrman as arguing the letter is not forged)"
 summary = """
-Ehrman reports Barth and Blanke arguing that the letter is not forged. Both year bounds are the editor's, from the letter's own picture of Paul as a prisoner and Ehrman's mention of the earthquake of 61 CE as a supposed marker."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 227, 250, 251" }]
+Ehrman reports Barth and Blanke arguing that the letter is not forged. The year bounds are the editor's, taken from the letter's own picture of Paul as a prisoner and from Ehrman's mention of the earthquake of 61 CE as a supposed marker."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 227, 250, 251" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman reports the argument of Barth and Blanke: "Col. 1:1–2 and 4:18 differ so widely from Paul’s epistolary style, they cannot be forged, as a forger would be sure to follow the style""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 250" }]
+Ehrman reports the argument of Barth and Blanke that the letter's opening and closing differ too much from Paul's style to be forged: "Col. 1:1–2 and 4:18 differ so widely from Paul’s epistolary style, they cannot be forged, as a forger would be sure to follow the style""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 250" }]
   verses = [{ ref = "Col.4.18", link = "describes", note = "The closing signature." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman answers them: "Once again, Neutestamentlers would be well served to learn more about the practices of ancient forgery.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 250" }]
+Ehrman answers that this misunderstands how ancient forgers worked: "Once again, Neutestamentlers would be well served to learn more about the practices of ancient forgery.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 250" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the Timothy hypothesis, a variant of the traditional view: "even if, to stretch the imagination, one of Paul’s colleagues wrote the letter""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 227" }]
+Ehrman also dismisses the Timothy hypothesis, a variant of the traditional view, saying that "even if, to stretch the imagination, one of Paul’s colleagues wrote the letter""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 227" }]
   verses = [{ ref = "Col.1.1", link = "describes", note = "Timothy as cosender." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman on the earthquake: "Moreover, recent scholars such as Standhartinger have given good reason for doubting that the town was ever destroyed by earthquake.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 251" }]
+Ehrman doubts the earthquake marker as well: "Moreover, recent scholars such as Standhartinger have given good reason for doubting that the town was ever destroyed by earthquake.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 251" }]
 
 [[positions]]
 id = "brown-pseudonymous-80s"
@@ -132,13 +132,13 @@ earliest = 80
 latest = 89
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "If by Paul (or by Timothy while Paul was still alive or had just died), 61–63 (or slightly later) from Rome, or 54–56 from Ephesus. If pseudonymous (about 60 percent of critical scholarship), in the 80s from Ephesus.""""
+Raymond Brown holds that Colossians is more likely pseudonymous, which he says about 60 percent of critical scholarship accepts, and dates it to the 80s from Ephesus. His summary line reads: "If by Paul (or by Timothy while Paul was still alive or had just died), 61–63 (or slightly later) from Rome, or 54–56 from Ephesus. If pseudonymous (about 60 percent of critical scholarship), in the 80s from Ephesus.""""
 citations = [{ source = "brown-1997", locator = "ch. 27, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: "The developed christology, ecclesiology, and eschatology of Col has become the principal argument against Paul as the writer." He notes Paul never calls Christ the head of the church as his body, a major theme here."""
+Brown sees the letter's developed theology as the main reason to doubt Paul: "The developed christology, ecclesiology, and eschatology of Col has become the principal argument against Paul as the writer." He notes Paul never calls Christ the head of the church as his body, a major theme here."""
   citations = [{ source = "brown-1997", locator = "ch. 27, Did Paul Write Colossians?" }]
   verses = [{ ref = "Col.1.18", link = "background", note = "Christ as head of the body, the church." }]
 
@@ -168,12 +168,12 @@ earliest = 65
 latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says "Paul may well have written this letter" on its Pauline features but concludes "it is hard to accept that he wrote the letter to the Colossians," ascribing it to an unknown member of one of Paul's churches. He gives no date beyond after Paul's death; the 65-100 bounds are the editor's."""
+Ehrman's textbook says "Paul may well have written this letter" on its Pauline features but concludes "it is hard to accept that he wrote the letter to the Colossians," ascribing it to an unknown member of one of Paul's churches. He gives no date beyond after Paul's death, so the span shown, 65 to 100, is the editor's."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-He argues that Colossians is emphatic that "believers have already been raised with Christ," whereas in the undisputed letters Paul insists the resurrection with Christ is still future."""
+Ehrman argues that Colossians is emphatic that "believers have already been raised with Christ," whereas in the undisputed letters Paul insists the resurrection with Christ is still future."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
   verses = [{ ref = "Col.2.12", link = "describes", note = "Raised with Christ in baptism." }, { ref = "Col.3.1", link = "describes", note = "Already raised with Christ." }]

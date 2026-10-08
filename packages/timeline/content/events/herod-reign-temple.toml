@@ -5,7 +5,7 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-On the older count, Herod reigns from 37 BCE until his death in 4 BCE. On Steinmann's count, he reigns from 36 to 1 BCE. In his eighteenth year (20-19 BCE) he sets out to rebuild the temple. John 2:20 says the work had taken forty-six years, so it was still going."""
+On the older count, Herod reigns from 37 BCE until his death in 4 BCE, whereas on Steinmann's count he reigns from 36 to 1 BCE. In his eighteenth year (20-19 BCE) he sets out to rebuild the temple, and John 2:20 says the work had taken forty-six years, so it was still going."""
 verses = [
   { ref = "Matt.2.1", link = "alludes", note = "Jesus is born in the days of King Herod" },
   { ref = "Luke.1.5", link = "alludes", note = "In the days of Herod, king of Judea" },
@@ -20,7 +20,7 @@ earliest = -37
 latest = -4
 held_by = "Emil Schürer"
 summary = """
-Most 20th-century scholarship followed Schürer's 1896 chronology, which put Herod's death in 4 BCE."""
+Most 20th-century scholarship followed Emil Schürer's 1896 chronology, which put Herod's death in 4 BCE and so his reign at 37-4 BCE."""
 citations = [{ source = "wikipedia-herod-the-great", locator = "section on the dates of his reign" }]
 
 [[positions]]
@@ -31,7 +31,7 @@ earliest = -36
 latest = -1
 held_by = "Steinmann"
 summary = """
-Wikipedia gives Steinmann's chronology of the reign as 36-1 BCE. The page read does not show his first name."""
+Wikipedia gives Steinmann's chronology of the reign as 36-1 BCE, a later death than the older count allows. The page read does not show his first name."""
 citations = [{ source = "wikipedia-herod-the-great", locator = "section on the dates of his reign" }]
 
 [[positions]]
@@ -41,7 +41,7 @@ tradition = "chronological"
 earliest = -20
 latest = -19
 summary = """
-Josephus dates the start of the rebuilding to Herod's eighteenth year, 20-19 BCE. Building the Temple itself took about a year and a half. The porches and outer walls took another eight years."""
+Josephus dates the start of the rebuilding to Herod's eighteenth year, 20-19 BCE. Building the Temple itself took about a year and a half, and the porches and outer walls took another eight years."""
 citations = [
   { source = "lexundria-josephus-ant-15-380" },
   { source = "wikipedia-herods-temple" },
@@ -56,12 +56,12 @@ earliest = -25
 latest = -19
 held_by = "Bieke Mahieu"
 summary = """
-Mahieu dates work on the Temple enclosures from 25 BCE and work on the Temple building itself to 19 BCE."""
+Bieke Mahieu dates work on the Temple enclosures from 25 BCE and work on the Temple building itself to 19 BCE."""
 citations = [{ source = "wikipedia-herods-temple" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-15-380"
 relation = "corroborates"
 note = """
-Josephus places the start of the rebuilding in the eighteenth year of Herod's reign."""
+Josephus places the start of the rebuilding in the eighteenth year of Herod's reign, which agrees with the 20-19 BCE start."""
 citations = [{ source = "lexundria-josephus-ant-15-380" }]

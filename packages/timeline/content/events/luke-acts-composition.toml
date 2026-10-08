@@ -21,7 +21,7 @@ earliest = 75
 latest = 95
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "85, give or take five to ten years." For Acts he gives the same date and author. He holds that a date no later than 100 is indicated. The bounds are the editor's reading of the line."""
+Brown, a critical scholar, dates Luke with a margin: "85, give or take five to ten years." For Acts he gives the same date and author, and he holds that a date no later than 100 is indicated. The span shown here is the editor's reading of that margin."""
 citations = [
   { source = "brown-1997", locator = "ch. 9, Summary of Basic Information" },
   { source = "brown-1997", locator = "ch. 10, Summary of Basic Information" },
@@ -30,7 +30,7 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: "if Mark is to be dated in the period 68–73, a date earlier than 80 for Luke is unlikely", since Luke used Mark."""
+Brown reasons from Luke's use of Mark: "if Mark is to be dated in the period 68–73, a date earlier than 80 for Luke is unlikely"."""
   citations = [{ source = "brown-1997", locator = "ch. 9, Date of Writing" }]
   verses = [{ ref = "Luke.1.1-Luke.1.4", link = "dates", note = "The author builds on earlier written accounts." }]
 
@@ -42,7 +42,7 @@ earliest = 62
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament. They defend Luke, Paul's companion, as the author of Acts, and prefer the 60s for the Gospel over the 75-85 CE range most scholars hold. They conclude that "Acts should be dated in the mid–60s". They are uncertain where Luke wrote, and Achaia in Greece is a reasonable conjecture. The year bounds are the editor's reading."""
+Carson and Moo write the standard evangelical introduction to the New Testament. They defend Luke, Paul's companion, as the author of Acts, and prefer the 60s for the Gospel over the 75-85 CE range most scholars hold. They conclude that "Acts should be dated in the mid–60s". They are uncertain where Luke wrote, and Achaia in Greece is a reasonable conjecture. The year span shown here is the editor's reading of their dates."""
 citations = [
   { source = "carson-moo-2005", locator = "pp. 207–210" },
   { source = "carson-moo-2005", locator = "pp. 296–300" },
@@ -66,7 +66,7 @@ earliest = 80
 latest = 85
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says Luke "was written around 80-85 ce, by a Greek-speaking Christian, probably outside Palestine", and that Acts was written in the same years. He says the traditional ascription to Luke, Paul's traveling companion, rests on a tradition with "reasons to suspect" it, and he calls the author "Luke" for convenience. Bounds are the stated range."""
+Ehrman's textbook says Luke "was written around 80-85 ce, by a Greek-speaking Christian, probably outside Palestine", and that Acts was written in the same years. He says the traditional ascription to Luke, Paul's traveling companion, rests on a tradition with "reasons to suspect" it, and he calls the author "Luke" for convenience. The span shown here is the range he states."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 110 approx.; Acts p. 182 approx." }]
 
   [[positions.arguments]]

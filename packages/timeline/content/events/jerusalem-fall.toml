@@ -22,7 +22,7 @@ held_by = "Edwin R. Thiele"
 summary = """
 Thiele dates the destruction to 586 BCE, counting from Nebuchadnezzar's nineteenth year. His Chart 31 reads: "586—19 July—Jerusalem taken on 4/9/11—2 Kings 25:2–3" and "586—15 Aug.—19th of Nebuchadnezzar—temple burned on 5/7/19—2 Kings 25:8–9", with the siege begun "588—15 Jan." (2 Kings 25:1). Young records that Thiele "was among those preferring 586"."""
 citations = [
-  { source = "thiele-1983", locator = "p. 184, Chart 31; the season discussed from p. 186 (page images supplied by the user, 2026-10-07)" },
+  { source = "thiele-1983", locator = "p. 184, Chart 31; the season discussed from p. 186" },
   { source = "young-2004", locator = "p. 21" },
 ]
 

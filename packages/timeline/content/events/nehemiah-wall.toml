@@ -25,7 +25,7 @@ citations = [
   { source = "wikipedia-nehemiah", locator = "n. 5" },
   { source = "ezra-nehemiah-commentary-1988", locator = "p. 140, as cited by Wikipedia 'Nehemiah' n. 5" },
   { source = "wikipedia-artaxerxes-i" },
-  { source = "thiele-1983", locator = "p. 53 (page image supplied by the user, 2026-10-07)" },
+  { source = "thiele-1983", locator = "p. 53" },
 ]
 
 [[attestations]]

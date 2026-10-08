@@ -5,7 +5,7 @@ category = "political"
 confidence = "firm"
 status = "draft"
 summary = """
-Acts and Josephus both report that Herod Agrippa I died suddenly after the crowd hailed him as a god at Caesarea. Josephus adds the circumstances and the length of his reign. The death is dated to 44 CE."""
+Acts and Josephus both report that Herod Agrippa I died suddenly after the crowd hailed him as a god at Caesarea. Josephus adds the circumstances and the length of his reign, and the death is dated to 44 CE."""
 verses = [
   { ref = "Acts.12.19-Acts.12.23", link = "describes", note = "Tyre and Sidon. Herod is struck down for not giving glory to God" },
   { ref = "Acts.12.1-Acts.12.4", link = "background", note = "Herod's earlier persecution of the church" },
@@ -18,7 +18,7 @@ tradition = "chronological"
 earliest = 44
 latest = 44
 summary = """
-The Wikipedia article on Herod Agrippa dates the death to 44 CE. Josephus counts four years of reign under Caius and three under Claudius."""
+The Wikipedia article on Herod Agrippa dates the death to 44 CE. That fits Josephus, who counts four years of reign under Caius and three under Claudius."""
 citations = [
   { source = "wikipedia-herod-agrippa" },
   { source = "lexundria-josephus-ant-19-343", locator = "19.351" },
@@ -28,7 +28,7 @@ citations = [
 artifact = "josephus-antiquities-19-343"
 relation = "partially-corroborates"
 note = """
-Both accounts have a crowd hailing Agrippa as a god at Caesarea, followed at once by a fatal illness. Josephus describes a silver garment, an owl as an omen, and five days of stomach pain. Acts has an angel and worms."""
+Both accounts have a crowd hailing Agrippa as a god at Caesarea, followed at once by a fatal illness, though they differ on the details. Josephus describes a silver garment, an owl as an omen, and five days of stomach pain, whereas Acts has an angel and worms."""
 citations = [
   { source = "lexundria-josephus-ant-19-343", locator = "19.344–350" },
   { source = "wikipedia-herod-agrippa" },

@@ -3,7 +3,7 @@ kind = "chronology"
 title = "Nebuchadnezzar's seventh or eighth year?"
 status = "draft"
 summary = """
-2 Kings 24:12 dates the capture of Jehoiachin to Nebuchadnezzar's eighth year. The Babylonian Chronicle puts it in his seventh. Jeremiah 52:28 also dates the deportation to the seventh. The gap is usually put down to different ways of counting a king's years. This entry does not yet document those explanations."""
+2 Kings 24:12 dates the capture of Jehoiachin to Nebuchadnezzar's eighth year, while the Babylonian Chronicle puts it in his seventh and Jeremiah 52:28 also dates the deportation to the seventh. The gap is usually put down to different ways of counting a king's years, but this entry does not yet document those explanations."""
 events = ["jerusalem-capture-597"]
 verses = [
   { ref = "2Kgs.24.12", link = "dates" },
@@ -14,7 +14,7 @@ citations = [{ source = "livius-abc5" }]
 [[views]]
 label = "Seventh year"
 text = """
-The Babylonian Chronicle dates the capture of Jerusalem to Nebuchadnezzar's seventh year. This agrees with Jeremiah 52:28."""
+The Babylonian Chronicle dates the capture of Jerusalem to Nebuchadnezzar's seventh year, which agrees with Jeremiah 52:28."""
 citations = [{ source = "livius-abc5" }]
 
 [[views]]
@@ -27,4 +27,4 @@ citations = [{ source = "livius-abc5" }]
 label = "Both are right: Nisan years in Babylon, Tishri years in Kings"
 text = """
 Thiele resolves the two numbers by the two calendars. Babylon counted regnal years from Nisan in spring; the book of Kings counted Nebuchadnezzar's years from Tishri in autumn. "The last half of the Babylonian Nisan year overlaps the first half of the Hebrew Tishri year. Thus Jerusalem fell to Nebuchadnezzar in his seventh year according to his own reckoning but in his eighth year according to the reckoning in Kings. The overlap was from Tishri in the fall of 598 to Nisan in the spring of 597. Since Jerusalem fell in Adar, the last month of the Babylonian year, this was in the spring of 597.\""""
-citations = [{ source = "thiele-1983", locator = "p. 186 (page images supplied by the user, 2026-10-07)" }]
+citations = [{ source = "thiele-1983", locator = "p. 186" }]

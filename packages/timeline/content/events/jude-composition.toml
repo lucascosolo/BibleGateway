@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["Jude"]
 summary = """
-This asks who wrote the letter of Jude and when. The letter names Jude, brother of James, whom Ehrman takes to be the brother of Jesus. Ehrman holds that it is a forgery, written "relatively late in the first century, after the age of the apostles" by a highly educated Greek-speaking Christian. The year bounds of 70 and 100 are the editor's reading of that phrase; Ehrman gives no years."""
+This entry asks who wrote the letter of Jude and when. The letter names Jude, brother of James, whom Ehrman takes to be the brother of Jesus. Ehrman holds that it is a forgery, written "relatively late in the first century, after the age of the apostles" by a highly educated Greek-speaking Christian. He gives no years, so the span of 70 to 100 shown here is an editorial reading of that phrase."""
 verses = [
   { ref = "Jude.1.1", link = "describes", note = "The letter names Jude, brother of James, as its author." },
   { ref = "Jude.1.3", link = "background", note = "Ehrman: the faith as a body of belief delivered long ago." },
@@ -22,41 +22,41 @@ earliest = 70
 latest = 100
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that Jude the brother of Jesus did not write the letter. Both year bounds are the editor's: 70 for "after the age of the apostles" and 100 for the end of "the first century"."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 393, 394" }]
+Ehrman holds that Jude the brother of Jesus did not write the letter. He gives no exact years; the span shown here, 70 to 100, follows his phrases, with 70 standing for "after the age of the apostles" and 100 for the end of "the first century"."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 393, 394" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the date: "the book gives every indication of being produced relatively late in the first century, after the “age of the apostles.”""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 393" }]
+Ehrman dates the letter from its own outlook, which he sees as that of a later generation: "the book gives every indication of being produced relatively late in the first century, after the “age of the apostles.”""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 393" }]
   verses = [{ ref = "Jude.1.17-Jude.1.18", link = "background", note = "The apostles are in the past." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on terminology: "The author speaks of “the faith” as the content of the body of knowledge that makes up the Christian religion""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 393" }]
+Ehrman reads the author's use of the phrase "the faith" as a mark of that later period: "The author speaks of “the faith” as the content of the body of knowledge that makes up the Christian religion""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 393" }]
   verses = [{ ref = "Jude.1.3", link = "background", note = "The faith delivered once for all." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on language: "he writes very good Greek, not the sort of skill one can acquire simply by spending time on the mission field without years of serious literary training.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 393" }]
+Ehrman argues from the quality of the Greek that the author was not a peasant missionary: "he writes very good Greek, not the sort of skill one can acquire simply by spending time on the mission field without years of serious literary training.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 393" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman concludes: "he was not the Aramaicspeaking peasant of Nazareth, the brother of Jesus and James.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 395" }]
+Ehrman therefore concludes about the author's identity: "he was not the Aramaicspeaking peasant of Nazareth, the brother of Jesus and James.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 395" }]
   verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the polemic: "the charge makes even better sense against later forms of Paulinism, such as that represented in the book of Ephesians""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 396" }]
+Ehrman finds that the letter's attack on its opponents fits the Pauline tradition after Paul: "the charge makes even better sense against later forms of Paulinism, such as that represented in the book of Ephesians""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 396" }]
   verses = [{ ref = "Jude.1.4", link = "background", note = "Grace altered into licentiousness." }]
 
 [[positions]]
@@ -67,27 +67,27 @@ earliest = 40
 latest = 70
 held_by = "Richard Bauckham (named by Ehrman as defending authenticity)"
 summary = """
-Ehrman notes that Bauckham makes a spirited defense of authenticity. Both year bounds are the editor's; Ehrman gives none for this view."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 393, 422" }]
+Ehrman notes that Bauckham makes a spirited defense of authenticity, meaning that Jude himself wrote the letter. Ehrman gives no years for this view, so the span shown here is the editor's."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 393, 422" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the claim: "The author of this short text, therefore, is almost certainly claiming to be a brother of both James and Jesus""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 391" }]
+Ehrman first grants what the letter claims for itself: "The author of this short text, therefore, is almost certainly claiming to be a brother of both James and Jesus""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 391" }]
   verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman rejects the obscurity objection: "The objection has more rhetorical than substantive force, however.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 391" }]
+Ehrman is not persuaded by the objection that Jude was too obscure a figure to be chosen as a false author: "The objection has more rhetorical than substantive force, however.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 391" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman on Jude's family: "Nothing suggests that their progenitor, Jude, was any different.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 394" }]
+Ehrman extends the point to Jude's family, arguing that nothing sets Jude apart from them: "Nothing suggests that their progenitor, Jude, was any different.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 394" }]
 
 [[positions]]
 id = "brown-90-100"
@@ -97,13 +97,13 @@ earliest = 90
 latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "Virtually impossible to tell. A few scholars place it in the 50s; many in 90–100." On authenticity he says: "Very difficult to decide." Dating, he says, may slightly favor pseudonymity."""
+Brown, a critical scholar, is cautious about the date: "Virtually impossible to tell. A few scholars place it in the 50s; many in 90–100." On authenticity he says: "Very difficult to decide." He adds that dating may slightly favor pseudonymity."""
 citations = [{ source = "brown-1997", locator = "ch. 35, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: if Jude himself wrote it, he was one of the youngest brothers and "could have been alive as late as AD 90–100, which may be the most plausible date for the letter"."""
+Brown argues that if Jude himself wrote it, he was one of the youngest brothers and "could have been alive as late as AD 90–100, which may be the most plausible date for the letter"."""
   citations = [{ source = "brown-1997", locator = "ch. 35, By and to whom, where, and when" }]
   verses = [{ ref = "Jude.1.17", link = "dates", note = "The apostles are spoken of as a past generation." }]
 
@@ -115,7 +115,7 @@ earliest = 64
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to Jude, the brother of the Lord and of James. They say the letter cannot be later than about 90, and that if Jude used 2 Peter it comes after 64-65. They conclude: "We should probably date Jude also in the middle-to-late 60s". The year bounds are the editor's reading."""
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to Jude, the brother of the Lord and of James. They say the letter cannot be later than about 90, and that if Jude used 2 Peter it comes after 64-65. They conclude: "We should probably date Jude also in the middle-to-late 60s". The year span shown here is the editor's reading of those dates."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 690–692" }]
 
   [[positions.arguments]]
@@ -133,7 +133,7 @@ earliest = 80
 latest = 110
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says Jude "appears to be pseudonymous", that "many critical scholars" see early Christian pseudepigraphy, and that it "does not appear to be likely that Jesus' own brother wrote the book". He gives no firm year; his timeline chart places the General Epistles at "80-110", used here as bounds, and he speaks of dating Jude "near the end of the first century". Same view as his 2013 book, in textbook form."""
+Ehrman's textbook repeats the view of his 2013 book: Jude "appears to be pseudonymous", "many critical scholars" see early Christian pseudepigraphy, and it "does not appear to be likely that Jesus' own brother wrote the book". He gives no firm year, so the span shown here follows his timeline chart, which places the General Epistles at "80-110", together with his remark that Jude may date "near the end of the first century"."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 326, 328 approx." }]
 
   [[positions.arguments]]

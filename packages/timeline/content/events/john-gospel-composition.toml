@@ -21,13 +21,13 @@ earliest = 80
 latest = 110
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "80–110." If the Gospel was edited by another hand, he places the body in the 90s and the editor's additions ca. 100–110. The author is one who regards himself in the tradition of the Beloved Disciple."""
+Brown, a critical scholar, gives his dating in one line: "80–110." If the Gospel was edited by another hand, he places the body in the 90s and the editor's additions ca. 100–110. He sees the author as one who regards himself in the tradition of the Beloved Disciple."""
 citations = [{ source = "brown-1997", locator = "ch. 11, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown places the writing of III John and the redactor's addition of chapter 21 later than the Gospel proper: "The phase during which III John was written and the redactor added chap. 21 (AD 100–110?)"."""
+Brown places the writing of III John and the redactor's addition of chapter 21 later than the Gospel proper, in the last phase of the community's history: "The phase during which III John was written and the redactor added chap. 21 (AD 100–110?)"."""
   citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
   verses = [{ ref = "John.21.15-John.21.17", link = "dates", note = "Pastoral structure added in the redactor's phase." }]
 
@@ -63,7 +63,7 @@ earliest = 90
 latest = 95
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says John was "the last canonical Gospel to be written, probably around 90-95 c.e." He says it was written anonymously, that it is traditionally ascribed to John the son of Zebedee, and that "there are reasons to doubt that ascription". Some traditions may go back to a follower of Jesus, but that does not make him the writer. Bounds are the stated range."""
+Ehrman's textbook says John was "the last canonical Gospel to be written, probably around 90-95 c.e." He says it was written anonymously, that it is traditionally ascribed to John the son of Zebedee, and that "there are reasons to doubt that ascription". Some traditions may go back to a follower of Jesus, but that does not make him the writer. The span shown here is the range he states."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 124-126 approx." }]
 
   [[positions.arguments]]

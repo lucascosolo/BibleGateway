@@ -3,7 +3,7 @@ kind = "historical"
 title = "Solomon's kingdom: an empire or a highland chiefdom?"
 status = "draft"
 summary = """
-The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem. No inscription names him. So the debate turns on archaeology, above all on the date of the large gates and buildings once credited to him."""
+The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem, but no inscription names him. The debate therefore turns on archaeology, above all on the date of the large gates and buildings once credited to him."""
 persons = ["solomon", "david"]
 verses = [{ ref = "1Kgs.9.15", link = "describes", note = "Solomon builds Hazor, Megiddo and Gezer" }]
 citations = [
@@ -14,13 +14,13 @@ citations = [
 [[views]]
 label = "No inscription names him"
 text = """
-Eric Cline: there is still not a single contemporary or near-contemporary inscription that mentions Solomon."""
+Eric Cline points out that there is still not a single contemporary or near-contemporary inscription that mentions Solomon."""
 citations = [{ source = "cline-2009" }]
 
 [[views]]
 label = "Solomonic gates"
 text = """
-Yigael Yadin dug up large gates and buildings at Hazor, Megiddo and Gezer. He credited them to Solomon's building programme, reading them alongside 1 Kings 9:15."""
+Yigael Yadin dug up large gates and buildings at Hazor, Megiddo and Gezer and credited them to Solomon's building programme, reading them alongside 1 Kings 9:15."""
 citations = [{ source = "wikipedia-solomon" }]
 
 [[views]]

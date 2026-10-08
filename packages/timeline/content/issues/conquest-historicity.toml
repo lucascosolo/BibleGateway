@@ -3,7 +3,7 @@ kind = "historical"
 title = "Did Israel conquer Canaan as Joshua describes?"
 status = "draft"
 summary = """
-Did Israel conquer Canaan by force, and did Jericho fall as the story says? That is a separate question from when it would have happened. Evangelical defenders of a conquest argue about its date. Most archaeologists no longer defend the conquest model at all."""
+Did Israel conquer Canaan by force, and did Jericho fall as the story says? That is a separate question from when a conquest would have happened, which evangelical defenders of a conquest argue about among themselves. Most archaeologists no longer defend the conquest model at all."""
 events = ["conquest-of-canaan", "judges-period"]
 verses = [{ ref = "Josh.6.20", link = "describes" }]
 citations = [
@@ -14,7 +14,7 @@ citations = [
 [[views]]
 label = "No conquest model"
 text = """
-William G. Dever: "No mainstream biblicist or archaeologist any longer espouses the conquest model." Kathleen Kenyon showed that Jericho was destroyed at the end of the Middle Bronze Age, not the Late Bronze Age. Radiocarbon testing in 1995 dated the destruction layer to the late 17th or 16th centuries BCE."""
+William G. Dever states the mainstream position plainly: "No mainstream biblicist or archaeologist any longer espouses the conquest model." The archaeology behind it is that Kathleen Kenyon showed Jericho was destroyed at the end of the Middle Bronze Age, not the Late Bronze Age, and radiocarbon testing in 1995 dated the destruction layer to the late 17th or 16th centuries BCE."""
 citations = [
   { source = "wikipedia-battle-of-jericho", locator = "section on academic consensus and radiocarbon testing" },
   { source = "wikipedia-joshua" },
@@ -23,13 +23,13 @@ citations = [
 [[views]]
 label = "A conquest at the end of the Late Bronze Age"
 text = """
-Albright studied Tell Beit Mirsim, Beitin and Lachish. He argued for a conquest in the late 13th century BCE. Wood reports that after Albright died in 1971 the evidence for this faded, and most Palestinian archaeologists dropped the idea. Kitchen still defends it."""
+Albright studied Tell Beit Mirsim, Beitin and Lachish and argued from them for a conquest in the late 13th century BCE. Wood reports that after Albright died in 1971 the evidence for this faded and most Palestinian archaeologists dropped the idea, although Kitchen still defends it."""
 citations = [{ source = "wood-2005", locator = "pp. 475–476" }]
 
 [[views]]
 label = "A conquest c. 1400 BCE"
 text = """
-Wood argues that the biblical data put the exodus and conquest in the 15th century BCE. He says Jericho was destroyed c. 1400 BCE. He thinks the 13th-century theory should be dropped."""
+Wood argues that the biblical data put the exodus and conquest in the 15th century BCE, and that Jericho was destroyed c. 1400 BCE. On that basis he thinks the 13th-century theory should be dropped."""
 citations = [{ source = "wood-2005", locator = "pp. 488–489" }]
 
 [[views]]

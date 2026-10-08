@@ -5,7 +5,7 @@ category = "political"
 confidence = "firm"
 status = "draft"
 summary = """
-Nebuchadnezzar defeats the Egyptian army at Carchemish in 605 BCE."""
+Nebuchadnezzar defeats the Egyptian army at Carchemish in 605 BCE, a victory that fixes a key point in the chronology of Judah's last decades."""
 verses = [
   { ref = "Jer.46.2-Jer.46.12", link = "describes", note = "A message from God about Egypt at Carchemish" },
   { ref = "Jer.46.2", link = "dates", note = "fourth year of Jehoiakim" },
@@ -21,13 +21,13 @@ tradition = "chronological"
 earliest = -605
 latest = -605
 summary = """
-Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count. It falls in the second half of the year Jeremiah gives (606t). Thiele agrees: the battle "is now definitely dated by Babylonian evidence (B.M. 21946) in the twenty-first year of Nabopolassar, 605 B.C."; Nabopolassar died on 8 Av (16 August) 605 and Nebuchadnezzar took the throne on 7 September."""
+Rodger Young dates the battle to 605 BCE. His notation 605n/605t gives the year on the Nisan count and on the Tishri count, and the battle falls in the second half of the year Jeremiah gives (606t). Edwin Thiele agrees: the battle "is now definitely dated by Babylonian evidence (B.M. 21946) in the twenty-first year of Nabopolassar, 605 B.C."; Nabopolassar died on 8 Av (16 August) 605 and Nebuchadnezzar took the throne on 7 September."""
 held_by = "Rodger C. Young; Edwin R. Thiele"
-citations = [{ source = "thiele-1983", locator = "p. 184; p. 185; p. 180, table of fixed dates (page images supplied by the user, 2026-10-07)" }, { source = "young-2004", locator = "pp. 33 (table), 36" }, { source = "young-2005", locator = "p. 232" }]
+citations = [{ source = "thiele-1983", locator = "p. 184; p. 185; p. 180, table of fixed dates" }, { source = "young-2004", locator = "pp. 33 (table), 36" }, { source = "young-2005", locator = "p. 232" }]
 
 [[attestations]]
 artifact = "babylonian-chronicle-abc5"
 relation = "corroborates"
 note = """
-On the tablet, lines 2-4 say the Babylonian army marched to Carchemish and crossed the river against the Egyptian army, which withdrew. This was year 21 of Nabopolassar."""
+The tablet records the battle in year 21 of Nabopolassar. Lines 2-4 say the Babylonian army marched to Carchemish and crossed the river against the Egyptian army, which withdrew."""
 citations = [{ source = "livius-abc5" }]

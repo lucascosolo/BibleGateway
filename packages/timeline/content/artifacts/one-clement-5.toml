@@ -4,5 +4,5 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-A letter to the church at Corinth. It names Peter, who "endured not one or two, but numerous labours" and died as a martyr. It also names Paul, who preached in east and west and "suffered martyrdom under the prefects" (Hoole translation). It gives no place or year."""
+A letter to the church at Corinth names Peter, who "endured not one or two, but numerous labours" and died as a martyr, and Paul, who preached in east and west and "suffered martyrdom under the prefects" (Hoole translation). It gives no place or year."""
 citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]

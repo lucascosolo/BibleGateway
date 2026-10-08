@@ -2,7 +2,7 @@ id = "david"
 name = "David"
 role = "king of Judah and Israel"
 summary = """
-David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him. The strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David". That means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate). Finkelstein and Silberman think David existed: the Tel Dan inscription shows the "reputation of David was not a literary invention of a much later period", but his Jerusalem was a modest village and no empire."""
+David was the shepherd who became king and founded the dynasty that ruled Judah from Jerusalem. No inscription from his own time names him; the strongest evidence outside the Bible is a 9th-century BCE Aramaic inscription that mentions the "House of David", which means the dynasty, not the man. Most scholars accept this reading and a minority dispute it. Finkelstein and Silberman think David existed, since the Tel Dan inscription shows the "reputation of David was not a literary invention of a much later period", but they hold that his Jerusalem was a modest village and no empire. What kind of kingdom he ruled is argued separately (see the Solomon entry and the United Monarchy debate)."""
 status = "draft"
 verses = [{ ref = "2Sam.5.1-2Sam.5.5", link = "describes", note = "David made king over Israel" }]
 citations = [{ source = "wikipedia-tel-dan-stele" }, { source = "finkelstein-silberman-2002", locator = "pp. 129, 142" }]
@@ -11,7 +11,7 @@ citations = [{ source = "wikipedia-tel-dan-stele" }, { source = "finkelstein-sil
 artifact = "tel-dan-stele"
 relation = "partially-corroborates"
 note = """
-Names the "House of David" (bytdwd, line 9) in the 9th century BCE. That is generations after David's traditional reign. It shows a dynasty was known by his name. It is not a witness from his own time. Most scholars accept the reading and a minority dispute it."""
+The Tel Dan stele names the "House of David" (bytdwd, line 9) in the 9th century BCE, generations after David's traditional reign. It shows that a dynasty was known by his name, but it is not a witness from his own time. Most scholars accept the reading and a minority dispute it."""
 citations = [
   { source = "biran-naveh-1993", locator = "pp. 81–98" },
   { source = "wikipedia-tel-dan-stele" },

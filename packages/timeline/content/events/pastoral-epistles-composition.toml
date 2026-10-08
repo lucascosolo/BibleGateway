@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["1Tim", "2Tim", "Titus"]
 summary = """
-This asks who wrote 1 Timothy, 2 Timothy and Titus, and when. Each letter names Paul as author. Ehrman treats the three as one forged group by a later follower, and places them "at the end of the first century at the very earliest". He gives no latest date. The bounds of 90 and 130 are the editor's: 90 renders Ehrman's earliest, and 130 is a round limit before the middle of the second century."""
+This entry asks who wrote 1 Timothy, 2 Timothy and Titus, and when. Each letter names Paul as author, but Ehrman treats the three as one group forged by a later follower, and places them "at the end of the first century at the very earliest". He gives no latest date, so the span of 90 to 130 shown here is editorial: 90 renders his earliest date, and 130 is a round limit before the middle of the second century."""
 verses = [
   { ref = "1Tim.1.1", link = "describes", note = "Paul is named as apostle, the letter's claim to authorship." },
   { ref = "Titus.1.1", link = "describes", note = "Paul named as author, the opening Ehrman compares with 1 Timothy 1:1-4." },
@@ -23,60 +23,60 @@ earliest = 90
 latest = 130
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that all three letters were forged by a later follower of Paul and should be read together. He says only that they come from the end of the first century at the earliest. Both year bounds are the editor's."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 258-259, 262, 273-281" }]
+Ehrman holds that all three letters were forged by a later follower of Paul and should be read together. He says only that they come from the end of the first century at the earliest, so the years shown here are the editor's rendering of that phrase."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 258-259, 262, 273-281" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the critical consensus: "the overwhelming preponderance of critical scholars maintaining that all three letters are clearly post-Pauline.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 258" }]
+Ehrman starts from the state of scholarship, where he finds little dispute: "the overwhelming preponderance of critical scholars maintaining that all three letters are clearly post-Pauline.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 258" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on 1 Timothy and Titus: "There has been far less disagreement over the joint authorship of 1 Timothy and Titus""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 262" }]
+Ehrman adds that the three letters are not usually separated, since their authorship is closely linked: "There has been far less disagreement over the joint authorship of 1 Timothy and Titus""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 262" }]
   verses = [{ ref = "1Tim.1.1", link = "describes", note = "Matched by Titus 1:3." }, { ref = "Titus.1.1", link = "describes", note = "Opening compared with 1 Timothy 1:1." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on shared phrases: "The injunction of 2 Tim. 1:12 has its counterpart in 1 Tim. 6:20""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 264" }]
+Ehrman points to wording that ties the letters together: "The injunction of 2 Tim. 1:12 has its counterpart in 1 Tim. 6:20""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 264" }]
   verses = [{ ref = "1Tim.6.20", link = "describes", note = "Guard what is entrusted." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on church offices: "They instead presuppose that a church hierarchy already is in place""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 272" }]
+Ehrman argues that the letters assume a church organization Paul's own letters do not: "They instead presuppose that a church hierarchy already is in place""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 272" }]
   verses = [{ ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Overseers and deacons with set qualifications." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on Scripture: "Here too we are in a period beyond Paul’s time, at the end of the first century at the very earliest""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 273" }]
+Ehrman finds the same later setting in the way the letters treat Scripture: "Here too we are in a period beyond Paul’s time, at the end of the first century at the very earliest""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 273" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the cumulative case: "It is important to stress that all of these various arguments are cumulative""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 273" }]
+Ehrman insists that these points work together and should not be weighed one at a time: "It is important to stress that all of these various arguments are cumulative""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 273" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the personal notes of 2 Timothy: "where the author cites names, places, and events from his life, thereby assuring the reader that he really is Paul""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 278" }]
+Ehrman reads the personal details in 2 Timothy as part of the forger's method: "where the author cites names, places, and events from his life, thereby assuring the reader that he really is Paul""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 278" }]
   verses = [{ ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Names, places and requests." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on use of Ephesians: "There is some reason to suspect, on the other hand, that the author was intimately familiar with another Pauline letter, but this one too a forgery.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 281" }]
+Ehrman suggests the forger drew on another letter that he also counts as a forgery: "There is some reason to suspect, on the other hand, that the author was intimately familiar with another Pauline letter, but this one too a forgery.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 281" }]
 
 [[positions]]
 id = "paul-wrote-them"
@@ -86,21 +86,21 @@ earliest = 60
 latest = 67
 held_by = "Luke Timothy Johnson (named by Ehrman as a supporter of authenticity)"
 summary = """
-Ehrman names Luke Timothy Johnson as a supporter of authenticity but reports no date. The letters' own claim is Paul writing late in life. Both year bounds are the editor's, a bracket before Paul's death."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 272, 281-282" }]
+Ehrman names Luke Timothy Johnson as a supporter of authenticity but reports no date for this view. The letters' own claim is that Paul wrote late in life, so the span shown here is the editor's bracket before Paul's death."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 272, 281-282" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman reports the argument from verisimilitude: "Some scholars still find it difficult to believe that a forger would employ such extensive verisimilitudes""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 281" }]
+Ehrman reports the defenders' argument that the letters' lifelike detail speaks for Paul: "Some scholars still find it difficult to believe that a forger would employ such extensive verisimilitudes""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 281" }]
   verses = [{ ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Personal requests in the closing." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman answers the coauthorship defence: "when it comes to the Deutero-Pauline letters, Johnson wants to argue that the key to their interpretation is a phenomenon for which he cannot—or at least does not—cite a single parallel or analogy from antiquity: joint composition of letters". He asks why that should be preferred to an explanation "for which there are abundant parallels and analogies scattered throughout all of antiquity, the use of literary forgery"."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 282" }]
+Ehrman answers Johnson's defence by joint composition: "when it comes to the Deutero-Pauline letters, Johnson wants to argue that the key to their interpretation is a phenomenon for which he cannot—or at least does not—cite a single parallel or analogy from antiquity: joint composition of letters". He asks why that should be preferred to an explanation "for which there are abundant parallels and analogies scattered throughout all of antiquity, the use of literary forgery"."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 282" }]
 
 [[positions]]
 id = "brown-pseudonymous-end-first-century"
@@ -110,13 +110,13 @@ earliest = 80
 latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line for Titus and 1 Timothy: "If by Paul, ca. AD 65. If pseudonymous (80 to 90 percent of critical scholarship), toward the end of the 1st century, or (less probably) early 2d century." For 2 Timothy he allows the late 60s if written first."""
+Brown, a critical scholar, dates Titus and 1 Timothy this way: "If by Paul, ca. AD 65. If pseudonymous (80 to 90 percent of critical scholarship), toward the end of the 1st century, or (less probably) early 2d century." For 2 Timothy he allows the late 60s if it was written first."""
 citations = [{ source = "brown-1997", locator = "ch. 29, Summary of Basic Information about Titus" }, { source = "brown-1997", locator = "ch. 30, Summary of Basic Information" }, { source = "brown-1997", locator = "ch. 31, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on church order: the two-part structure of presbyter/bishops and deacons in Titus and 1 Timothy "is not far from that of Didache 15:1" (ca. AD 100?) and 1 Clement (ca. AD 96), so he places the Pastorals between 80 and 100."""
+Brown argues from church order: the two-part structure of presbyter/bishops and deacons in Titus and 1 Timothy "is not far from that of Didache 15:1" (ca. AD 100?) and 1 Clement (ca. AD 96), so he places the Pastorals between 80 and 100."""
   citations = [{ source = "brown-1997", locator = "ch. 29, Who Wrote Titus and I Timothy?" }]
   verses = [{ ref = "Titus.1.5", link = "background", note = "Presbyters appointed in every town." }, { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Overseers and deacons." }]
 
@@ -146,12 +146,12 @@ earliest = 85
 latest = 110
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook concludes the Pastorals "appear not to have been written by Paul" but "sometime later, possibly near the end of the first century," by an otherwise unknown member of one of Paul's churches. The 85-110 bounds are the editor's, allowing for his link to second-century church structure."""
+Ehrman's textbook concludes that the Pastorals "appear not to have been written by Paul" but "sometime later, possibly near the end of the first century," by an otherwise unknown member of one of Paul's churches. The span of 85 to 110 shown here is the editor's, chosen to allow for his link to second-century church structure."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 283 approx." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-He argues from church order: "The clerical structure of these letters appears far removed from what we find in the letters of Paul," and is closer to second-century authors."""
+He supports this from church order, which he finds already developed: "The clerical structure of these letters appears far removed from what we find in the letters of Paul," and is closer to second-century authors."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 283 approx." }]
   verses = [{ ref = "1Tim.3.1-1Tim.3.7", link = "describes", note = "Qualifications for the overseer." }, { ref = "Titus.1.5", link = "describes", note = "Appointing elders in every town." }]

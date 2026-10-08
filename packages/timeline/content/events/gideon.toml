@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal. With 300 men he routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself."""
+Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal and, with 300 men, routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself."""
 verses = [
   { ref = "Judg.6.1-Judg.6.40", link = "describes", note = "Midianite oppression, the call, the altar of Baal and the fleece" },
   { ref = "Judg.7.1-Judg.7.25", link = "describes", note = "The 300 men and the night attack" },
@@ -25,7 +25,7 @@ tradition = "chronological"
 earliest = -1230
 latest = -1073
 summary = """
-This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and before Jephthah. Jephthah's time as judge is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment is reported that seems to show the name Jerubbaal. It shows only that the name is ancient."""
+This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and before Jephthah, whose time as judge is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment is reported that seems to show the name Jerubbaal, but it shows only that the name is ancient."""
 citations = [
   { source = "wood-2005", locator = "pp. 477, 488" },
   { source = "wikipedia-gideon" },
@@ -39,5 +39,5 @@ earliest = -1245
 latest = -1245
 held_by = "James Ussher"
 summary = """
-Ussher dates Gideon's call to 1245 BC, after the fourth oppression, by the Midianites. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
+Ussher dates Gideon's call to 1245 BC, after the fourth oppression, by the Midianites. His 1650s count adds up the Bible's own life-spans and reign-lengths, so it is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraph 356" }]

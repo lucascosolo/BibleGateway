@@ -4,5 +4,5 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-A fragment of Josephus's account of Pompey's siege of the Temple Mount. The defenders had great towers and a ditch, a deep valley and steep drops. The bridge Pompey had used to get in was broken down (Whiston's translation). Only section 61 was read."""
+A fragment of Josephus's account of Pompey's siege of the Temple Mount describes defenders with great towers and a ditch, a deep valley and steep drops, and says the bridge Pompey had used to get in was broken down (Whiston's translation). Only section 61 was read."""
 citations = [{ source = "lexundria-josephus-ant-14-61" }]

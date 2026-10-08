@@ -3,7 +3,7 @@ kind = "historical"
 title = "How historical is the Book of Judges?"
 status = "draft"
 summary = """
-Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree. The book was edited long after the events. No judge is named in an inscription from their own time. The dating views on the individual events only record the date ranges offered by those who accept the setting."""
+Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree, and the book was edited long after the events; no judge is named in an inscription from their own time. The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
 events = ["judges-period", "deborah-barak", "gideon", "samson"]
 verses = [{ ref = "Judg.2.16-Judg.2.19", link = "describes" }]
 citations = [{ source = "wikipedia-book-of-judges", locator = "sections on dating and historicity" }]
@@ -17,13 +17,13 @@ citations = [{ source = "wikipedia-book-of-judges", locator = "section on histor
 [[views]]
 label = "Cannot be assessed"
 text = """
-Israel Finkelstein: it is impossible to know how far the tales rest on real memories. Lester Grabbe calls the book too problematic to use as a historical source. He allows that a real historical core cannot be ruled out."""
+Israel Finkelstein holds that it is impossible to know how far the tales rest on real memories. Lester Grabbe likewise calls the book too problematic to use as a historical source, although he allows that a real historical core cannot be ruled out."""
 citations = [{ source = "wikipedia-book-of-judges", locator = "section on historicity" }]
 
 [[views]]
 label = "Samson as a folk hero"
 text = """
-Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu, and with Heracles. Conservative scholars regard him as a real historical person."""
+Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu, and with Heracles, while conservative scholars regard him as a real historical person."""
 citations = [{ source = "wikipedia-samson" }]
 
 [[views]]

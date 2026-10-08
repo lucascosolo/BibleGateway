@@ -6,7 +6,7 @@ confidence = "firm"
 status = "draft"
 books = ["1Thess"]
 summary = """
-Paul wrote 1 Thessalonians from Corinth to the new Christian community at Thessalonica, a few months after he first preached there. It is the oldest preserved Christian document. Its authorship is not seriously doubted, and Raymond Brown dates it to 50 or 51 on the traditional chronology of Paul's career. A revisionist chronology that puts Paul's work before the Jerusalem meeting would move it to 41-43."""
+Paul wrote 1 Thessalonians from Corinth to the new Christian community at Thessalonica, only a few months after he first preached there. It is the oldest preserved Christian document, and its authorship is not seriously doubted. Raymond Brown dates it to 50 or 51 on the traditional chronology of Paul's career, whereas a revisionist chronology that puts Paul's work before the Jerusalem meeting would move it to 41-43."""
 verses = [
   { ref = "1Thess.1.1", link = "describes", note = "Paul, Silvanus and Timothy write to the church of the Thessalonians." },
   { ref = "1Thess.3.6", link = "dates", note = "Timothy has just returned with good news about the Thessalonians, the point from which Paul writes." },
@@ -21,13 +21,13 @@ earliest = 50
 latest = 51
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "The oldest preserved Christian document: 50 or 51 in the Traditional Chronology, during Paul's (Second Missionary) journey, undertaken after the meeting in Jerusalem (or 41–43 in the Revisionist Chronology,* before the Jerusalem meeting)." On authenticity: "Not seriously doubted today.""""
+Raymond Brown dates the letter to 50 or 51, during Paul's second missionary journey, and treats it as unquestionably Paul's. His summary line reads: "The oldest preserved Christian document: 50 or 51 in the Traditional Chronology, during Paul's (Second Missionary) journey, undertaken after the meeting in Jerusalem (or 41–43 in the Revisionist Chronology,* before the Jerusalem meeting)." On authenticity he writes: "Not seriously doubted today.""""
 citations = [{ source = "brown-1997", locator = "ch. 18, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown places the writing at Corinth, soon after Paul's preaching at Thessalonica: Paul "was genuinely relieved when Timothy returned to him (at Corinth) with the good news that the Thessalonian Christians had not been unsettled by affliction.""""
+Brown places the writing at Corinth, soon after Paul's preaching at Thessalonica, because the letter answers news that Timothy brought back. Paul "was genuinely relieved when Timothy returned to him (at Corinth) with the good news that the Thessalonian Christians had not been unsettled by affliction.""""
   citations = [{ source = "brown-1997", locator = "ch. 18, General Analysis of the Message" }]
   verses = [{ ref = "1Thess.3.6", link = "dates", note = "Timothy's return with good news." }]
 
@@ -39,13 +39,13 @@ earliest = 50
 latest = 50
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Thessalonians, a letter whose authorship is not in doubt. They place it at Corinth in 50 CE, four to six months after his ministry in Thessalonica. In their words, "1 Thessalonians will have been written in A.D. 50"."""
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Thessalonians, a letter whose authorship is not in doubt. They place it at Corinth in 50 CE, four to six months after his ministry in Thessalonica, concluding that "1 Thessalonians will have been written in A.D. 50"."""
 citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Carson and Moo argue that the letter's details fit Acts 17 and 18 closely, and that Acts 18:5 together with the mention of Achaia in 1 Thessalonians 1:8 are "conclusive reasons" to place the writing in Corinth rather than Athens."""
+Carson and Moo argue that the letter's details fit Acts 17 and 18 closely. Acts 18:5 together with the mention of Achaia in 1 Thessalonians 1:8 give what they call "conclusive reasons" to place the writing in Corinth rather than Athens."""
   citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
   verses = [{ ref = "1Thess.1.8", link = "dates", note = "Achaia mentioned, which points to Corinth." }]
 

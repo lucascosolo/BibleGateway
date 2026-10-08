@@ -3,7 +3,7 @@ kind = "textual"
 title = "Did Paul write the command that women be silent in the churches?"
 status = "draft"
 summary = """
-In 1 Corinthians 14:34-35 women are told to keep silent in the churches. The passage seems to clash with 11:5, where women pray and prophesy. Brown notes that some debate whether it is an addition, but there is no widely agreed major interpolation in the letter."""
+In 1 Corinthians 14:34-35 women are told to keep silent in the churches, which seems to clash with 11:5, where women pray and prophesy. Brown notes that some debate whether the passage is an addition, but there is no widely agreed major interpolation in the letter."""
 verses = [
   { ref = "1Cor.14.34-1Cor.14.35", link = "describes" },
   { ref = "1Cor.11.5", link = "background" },
@@ -19,5 +19,5 @@ citations = [{ source = "brown-1997", locator = "ch. 22, discussion of apostles,
 [[views]]
 label = "Possibly a later addition"
 text = """
-Brown records that there is "some debate about 14:34–35" being an addition, alongside chapter 13. He does not treat it as established. He says there are no widely agreed-on major interpolations in 1 Corinthians."""
+Brown records that there is "some debate about 14:34–35" being an addition, alongside chapter 13, but he does not treat it as established. He says there are no widely agreed-on major interpolations in 1 Corinthians."""
 citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information (Integrity)" }]

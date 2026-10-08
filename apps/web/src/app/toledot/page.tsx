@@ -4,7 +4,6 @@ import { shareMetadata } from "@/app/og/data";
 import { GlossLabel } from "@/components/GlossLabel";
 import { CatalogueRow } from "@/components/toledot/CatalogueRow";
 import { Citations } from "@/components/toledot/Citations";
-import { DraftNotice } from "@/components/toledot/DraftNotice";
 import { EraChips } from "@/components/toledot/EraChips";
 import { ISSUE_KIND } from "@/components/toledot/Lists";
 import { TimelineStrip } from "@/components/toledot/TimelineStrip";
@@ -70,7 +69,6 @@ export default async function ToledotPage({ searchParams }: { searchParams: Prom
           any date to see who argues what, and why. Three questions get their own line: when things
           happened, when the books were written, and when people began treating them as scripture.
         </p>
-        <DraftNotice scope="the timeline" />
       </header>
 
       <EraChips eras={eras} selected={era?.id ?? null} />

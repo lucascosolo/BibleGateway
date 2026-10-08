@@ -21,7 +21,7 @@ earliest = -701
 latest = -701
 summary = """
 The Assyrian records date the campaign to 701 BCE. Scholars do not seriously dispute this."""
-citations = [{ source = "wikipedia-sennacherib-levant" }, { source = "thiele-1983", locator = "Preface to the Third Edition, pp. 23–24 (page images supplied by the user, 2026-10-07): \"The year 701, when Sennacherib came against Jerusalem in the fourteenth year of Hezekiah, is a major anchor point in my pattern.\"" }]
+citations = [{ source = "wikipedia-sennacherib-levant" }, { source = "thiele-1983", locator = "Preface to the Third Edition, pp. 23–24: \"The year 701, when Sennacherib came against Jerusalem in the fourteenth year of Hezekiah, is a major anchor point in my pattern.\"" }]
 
 [[attestations]]
 artifact = "sennacherib-taylor-prism"

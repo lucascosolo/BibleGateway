@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["2Pet"]
 summary = """
-This asks who wrote 2 Peter and when. The letter names Simon Peter as its author. Ehrman says 2 Peter is, more than any other New Testament writing, widely recognised as forged. The only date he gives in the passages read is "the end of the first century, at best" for the situation it assumes. So the range below is the editor's bracket."""
+This asks who wrote 2 Peter and when. The letter names Simon Peter as its author, but Ehrman says 2 Peter is, more than any other New Testament writing, widely recognised as forged. The only date he gives in the passages read is "the end of the first century, at best" for the situation it assumes, so the range shown below is the editor's bracket around that remark."""
 verses = [
   { ref = "2Pet.1.1", link = "describes", note = "The letter names Peter as its author." },
   { ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "Ehrman: the author pretends to know his death is near, a testament written as fiction." },
@@ -23,41 +23,41 @@ earliest = 100
 latest = 150
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that 2 Peter came into existence long after Peter's death. The lower bound of 100 is his "end of the first century, at best". The upper bound of 150 is the editor's and is not from Ehrman."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 294, 295" }]
+Ehrman holds that 2 Peter came into existence long after Peter's death. The lower bound of the span, 100, follows his phrase "end of the first century, at best". The upper bound of 150 is the editor's and is not from Ehrman."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 294, 295" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman: "By Elliott’s count, there are proportionally more hapax legomena in 2 Peter than in any other writing of the New Testament: 58 of its 402 words (14.4 percent).""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 294" }]
+Ehrman points first to the letter's unusual vocabulary, which sets it apart from the rest of the New Testament: "By Elliott’s count, there are proportionally more hapax legomena in 2 Peter than in any other writing of the New Testament: 58 of its 402 words (14.4 percent).""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 294" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman: "we are told that “the fathers” have “fallen asleep” (i.e., died) since the original promises of the coming end (3:4).""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+Ehrman reads the letter's complaint about the delay of the end as evidence that a generation had passed: "we are told that “the fathers” have “fallen asleep” (i.e., died) since the original promises of the coming end (3:4).""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
   verses = [{ ref = "2Pet.3.4", link = "background", note = "The fathers have died." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman on 1:12–14: "As with all Testaments, this is a fiction put on the pen of someone already residing comfortably in his tomb.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+Ehrman treats Peter's farewell speech in 1:12–14 as a literary device rather than a real deathbed word: "As with all Testaments, this is a fiction put on the pen of someone already residing comfortably in his tomb.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
   verses = [{ ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "A feigned knowledge of his own death." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman on 3:15–16, where the author knows a collection of Paul's letters held as scripture: "It is hard to imagine any such situation before the end of the first century, at best.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+In 3:15–16 the author knows a collection of Paul's letters held as scripture, and Ehrman sees that as a late marker: "It is hard to imagine any such situation before the end of the first century, at best.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
   verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Paul's letters as a collection and as scripture." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman: "By Elliott’s count, nineteen of Jude’s twenty-five verses reappear in modified form in 2 Peter." He thinks Jude is itself late, so 2 Peter is "later still"."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 295" }]
+Ehrman argues 2 Peter leans heavily on Jude, which pushes it later still: "By Elliott’s count, nineteen of Jude’s twenty-five verses reappear in modified form in 2 Peter." He thinks Jude is itself late, so 2 Peter is "later still"."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
 
 [[positions]]
 id = "peter-wrote-it"
@@ -67,14 +67,14 @@ earliest = 30
 latest = 70
 held_by = "The letter's own claim (Ehrman names no modern holder in the passages read)"
 summary = """
-Ehrman names no modern scholar for this view in the passages read. The letter claims Peter as its author, and Ehrman places Peter's death before 70 CE. The lower bound of 30 is the editor's."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 293, 320" }]
+Ehrman names no modern scholar for this view in the passages read; the claim comes from the letter itself, which presents Peter as its author. Ehrman places Peter's death before 70 CE, and that is the upper bound of the span. The lower bound of 30 is the editor's."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 293, 320" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Ehrman cites doubts from antiquity. Didymus the Blind: "We must therefore not be ignorant of the fact that the epistle at hand is forged". Eusebius: "the second Petrine epistle we have been taught to regard as uncanonical"."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 294" }]
+Ehrman does not endorse this view, but he shows that doubt about it is ancient. Didymus the Blind wrote: "We must therefore not be ignorant of the fact that the epistle at hand is forged". Eusebius said: "the second Petrine epistle we have been taught to regard as uncanonical"."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 294" }]
 
 [[positions]]
 id = "brown-130"
@@ -84,13 +84,13 @@ earliest = 120
 latest = 140
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "After Pauline letters; after I Pet and Jude; most likely AD 130, give or take a decade." He calls it pseudonymous, written to present a final message with advice from Peter."""
+Raymond Brown dates 2 Peter late and calls it pseudonymous, written to present a final message with advice from Peter. His summary line reads: "After Pauline letters; after I Pet and Jude; most likely AD 130, give or take a decade.""""
 citations = [{ source = "brown-1997", locator = "ch. 36, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on the disappointed hope: the letter comes "after the apostolic generation was dead and expectations of the second coming during their lifetime had been disappointed"."""
+Brown sees the letter as a response to disappointed hope, written "after the apostolic generation was dead and expectations of the second coming during their lifetime had been disappointed"."""
   citations = [{ source = "brown-1997", locator = "ch. 36, By and to whom, where, and when" }]
   verses = [{ ref = "2Pet.3.4", link = "dates", note = "Scoffers ask where the promise of his coming is." }]
 
@@ -102,13 +102,13 @@ earliest = 63
 latest = 65
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament, and they argue for Peter as the author of 2 Peter as well as 1 Peter. If Peter wrote it, they say, the letter "must be dated before about A.D. 65", the year of his martyrdom under Nero, and he writes from Rome because he senses his death is near. The 63 start is the editor's, set by their dating of 1 Peter."""
+Carson and Moo write the standard evangelical introduction to the New Testament, and they argue for Peter as the author of 2 Peter as well as 1 Peter. If Peter wrote it, they say, the letter "must be dated before about A.D. 65", the year of his martyrdom under Nero, and he writes from Rome because he senses his death is near. The start of the span, 63, is the editor's, set by their dating of 1 Peter."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 659–663" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-They argue that Peter's mention of Paul's letters in 2 Peter 3:15-16 does not require a fixed collection or a late date. They also hold that the weak attestation of the letter is exaggerated, and that forged letters were rejected by the early church, so a forgery would be unlikely to be accepted."""
+Carson and Moo answer the case for a late date on several fronts. They argue that Peter's mention of Paul's letters in 2 Peter 3:15-16 does not require a fixed collection or a late date. They also hold that the weak attestation of the letter is exaggerated, and that forged letters were rejected by the early church, so a forgery would be unlikely to be accepted."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 659–662" }]
   verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Paul's letters are read as known to Peter, with no fixed collection implied." }]
 
@@ -120,7 +120,7 @@ earliest = 100
 latest = 115
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says "the vast majority of critical scholars agree" that Simon Peter did not write 2 Peter, and counts it among pseudonymous writings in Peter's name. He says that if Jude is near the end of the first century, 2 Peter "must be somewhat later", and elsewhere puts 2 Peter "some thirty years after Matthew". The 100 to 115 bounds are the editor's reading of those two statements (Matthew at 80 to 85). Same view as his 2013 book, in textbook form."""
+Ehrman's textbook says "the vast majority of critical scholars agree" that Simon Peter did not write 2 Peter, and counts it among pseudonymous writings in Peter's name. He says that if Jude is near the end of the first century, 2 Peter "must be somewhat later", and elsewhere puts 2 Peter "some thirty years after Matthew". The span of 100 to 115 is the editor's reading of those two statements, taking Matthew at 80 to 85; the view is the same as in his 2013 book."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 328, 337 approx." }]
 
   [[positions.arguments]]

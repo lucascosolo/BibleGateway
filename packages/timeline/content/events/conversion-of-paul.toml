@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times. Paul refers to it in Galatians and 1 Corinthians. Scholars date it to 31-36 CE."""
+Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times, and Paul refers to it in Galatians and 1 Corinthians. Scholars date it to 31-36 CE."""
 verses = [
   { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Luke's story of the road to Damascus" },
   { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "Paul tells the crowd in Jerusalem" },
@@ -24,7 +24,7 @@ earliest = 31
 latest = 36
 held_by = "Bromley (1979), Barnett (2002), Niswonger (1992)"
 summary = """
-Wikipedia reports that Bromley (1979), Barnett (2002) and Niswonger (1992) have dated Paul's conversion to 31-36 CE. The page gives surnames only and does not name their works."""
+Wikipedia reports that Bromley (1979), Barnett (2002) and Niswonger (1992) have dated Paul's conversion to 31-36 CE. The page gives surnames only and does not name their works, so the scholarship behind the range could not be checked further."""
 citations = [{ source = "wikipedia-paul-the-apostle" }]
 
 [[positions]]
@@ -34,7 +34,7 @@ tradition = "critical"
 earliest = 34
 latest = 40
 summary = """
-Wikipedia says Acts suggests the conversion came four to seven years after the crucifixion. The years here (34-40) are that gap added to a crucifixion in 30 CE or 33 CE. That sum is the cataloguer's own, not a cited scholar's."""
+Wikipedia says Acts suggests the conversion came four to seven years after the crucifixion. The years shown here (34-40) are that gap added to a crucifixion in 30 CE or 33 CE; the sum is the cataloguer's own, not a cited scholar's."""
 citations = [{ source = "wikipedia-conversion-of-paul" }]
 
 [[positions]]
@@ -44,7 +44,7 @@ tradition = "chronological"
 earliest = 33
 latest = 36
 summary = """
-Wikipedia's Chronology of Jesus (section "Conversion of Paul") says: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page. Riesner, Jewett and Luedemann were not found on the pages read."""
+Wikipedia's Chronology of Jesus (section "Conversion of Paul") gives a general estimate and places it relative to the crucifixion: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page, and Riesner, Jewett and Luedemann were not found on the pages read."""
 citations = [{ source = "wikipedia-chronology-of-jesus", locator = "section Conversion of Paul" }]
 
 [[positions]]
@@ -55,13 +55,13 @@ earliest = 36
 latest = 36
 held_by = "Raymond E. Brown (Traditional Chronology)"
 summary = """
-Brown: "many would date Paul's conversion ca. 36, and his escape from Damascus and going to Jerusalem ca. 39." His Table 6 gives 36 (escape and Jerusalem visit 39)."""
+Raymond Brown follows the Traditional Chronology and puts the conversion at ca. 36. He writes: "many would date Paul's conversion ca. 36, and his escape from Damascus and going to Jerusalem ca. 39." His Table 6 gives 36 (escape and Jerusalem visit 39)."""
 citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Gal 1:17-18 implies about three years between the conversion and the Jerusalem visit. 2 Cor 11:32-33 has Aretas trying to seize Paul at Damascus, and Brown notes Caligula (37-41) gave Aretas control of the city. Hence the visit ca. 39 and the conversion ca. 36."""
+Brown reasons from two details in Paul's letters. Gal 1:17-18 implies about three years between the conversion and the Jerusalem visit, and 2 Cor 11:32-33 has Aretas trying to seize Paul at Damascus, where Brown notes Caligula (37-41) gave Aretas control of the city. Hence the visit ca. 39 and the conversion ca. 36."""
   citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
   verses = [
     { ref = "Gal.1.17-Gal.1.18", link = "dates" },
@@ -76,13 +76,13 @@ earliest = 30
 latest = 34
 held_by = "Revisionist chronology (Knox, Lüdemann, Jewett, Murphy-O'Connor, Donfried, as summarized by Brown)"
 summary = """
-Brown's Table 6 gives the Revisionist conversion as 30/34. Individual dates: Buck/Taylor 32, Knox 34 or 37, Lüdemann 30 (33), Jewett Oct. 34, Murphy-O'Connor ca. 33, Donfried 33. Brown himself follows the Traditional column "because it seems more reasonable to me"."""
+Brown's Table 6 gives the Revisionist conversion as 30/34, and the individual scholars differ: Buck/Taylor 32, Knox 34 or 37, Lüdemann 30 (33), Jewett Oct. 34, Murphy-O'Connor ca. 33, Donfried 33. Brown himself follows the Traditional column "because it seems more reasonable to me"."""
 citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Brown says these dates depend on the crucifixion date (Lüdemann 27 or 30, Jewett 33 or 30, Donfried 30) and on how far Acts is trusted. The Revisionist column puts the Jerusalem visit at 33/37."""
+Brown says these dates depend on the crucifixion date (Lüdemann 27 or 30, Jewett 33 or 30, Donfried 30) and on how far Acts is trusted. The Revisionist column puts the Jerusalem visit at 33/37."""
   citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
   verses = [
     { ref = "Gal.1.17-Gal.1.18", link = "dates" },

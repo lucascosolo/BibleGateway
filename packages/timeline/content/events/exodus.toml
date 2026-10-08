@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates. One is in the 15th century BCE, read from 1 Kings 6:1. The other is in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan."""
+This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates: one in the 15th century BCE, read from 1 Kings 6:1, and the other in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan."""
 verses = [
   { ref = "Exod.12.40-Exod.12.41", link = "dates", note = "430 years in Egypt" },
   { ref = "Exod.1.11", link = "background", note = "The store cities Pithom and Raamses" },
@@ -19,13 +19,13 @@ earliest = -1450
 latest = -1440
 held_by = "Bryant G. Wood"
 summary = """
-Wood takes the 480 years of 1 Kings 6:1 as a plain count back from the fourth year of Solomon. That puts the Exodus in the middle of the 15th century BCE. Traditional here means the date that follows the Bible's own numbers."""
+Bryant Wood takes the 480 years of 1 Kings 6:1 as a plain count back from the fourth year of Solomon, which puts the Exodus in the middle of the 15th century BCE. Traditional here means the date that follows the Bible's own numbers."""
 citations = [{ source = "wood-2005", locator = "pp. 475–489" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  1 Kings 6:1 dates the start of the temple to the 480th year after Israel came out of Egypt. That year is Solomon's fourth. Counting back from a fourth year of about 967/966 BCE gives about 1446 BCE. Young says the fourth year is the spring of 967 or 966, depending on the counting rule."""
+The argument starts from the text itself. 1 Kings 6:1 dates the start of the temple to the 480th year after Israel came out of Egypt, and that year is Solomon's fourth. Counting back from a fourth year of about 967/966 BCE gives about 1446 BCE. Young says the fourth year is the spring of 967 or 966, depending on the counting rule."""
   citations = [
     { source = "wood-2005" },
     { source = "young-2003", locator = "pp. 599, 601" },
@@ -35,7 +35,7 @@ citations = [{ source = "wood-2005", locator = "pp. 475–489" }]
   [[positions.arguments]]
   stance = "against"
   text = """
-  Exodus 1:11 has the Israelites building a store city called Raamses. That name is linked with the Ramesside pharaohs of the 13th century. Kitchen adds that "an exodus before 1320 would have no Delta capital to march from", since Avaris stayed a backwater until Horemhab."""
+Exodus 1:11 has the Israelites building a store city called Raamses, a name linked with the Ramesside pharaohs of the 13th century. Kitchen adds that "an exodus before 1320 would have no Delta capital to march from", since Avaris stayed a backwater until Horemhab."""
   citations = [{ source = "kitchen-2003", locator = "p. 255; p. 310" }]
   verses = [{ ref = "Exod.1.11", link = "dates" }]
 
@@ -47,7 +47,7 @@ earliest = -1279
 latest = -1213
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen places the Exodus in the 13th century BCE under Ramesses II. Ramesses reigned about 1279-1213 BCE on the dating most Egyptologists follow. Kitchen's own figure is an exodus "about 1260/1250 (minimum)", with the oppression running "circa 1320-1260/1250", and he calls a thirteenth-century exodus "at present the least objectionable dating". Critical here means the date that leans on Egyptian evidence."""
+Kitchen places the Exodus in the 13th century BCE under Ramesses II, who reigned about 1279-1213 BCE on the dating most Egyptologists follow. Kitchen's own figure is an exodus "about 1260/1250 (minimum)", with the oppression running "circa 1320-1260/1250", and he calls a thirteenth-century exodus "at present the least objectionable dating". Critical here means the date that leans on Egyptian evidence."""
 citations = [
   { source = "kitchen-2003", locator = "pp. 255–259; the date on pp. 307 and 310" },
   { source = "wikipedia-ramesses-ii" },
@@ -56,21 +56,21 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  The store city "Raamses" of Exodus 1:11 fits the building program of the Ramesside kings in the eastern Nile Delta."""
+The store city "Raamses" of Exodus 1:11 fits the building program of the Ramesside kings in the eastern Nile Delta, which is the first point for a 13th-century date."""
   citations = [{ source = "kitchen-2003", locator = "pp. 255–256" }]
   verses = [{ ref = "Exod.1.11", link = "dates" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen, an Egyptologist who defends the Bible's reliability, argues that Raamses is Pi-Ramesse at Qantir, the vast city Ramesses II built. It was largely abandoned about 1130, and its stonework was moved to Tanis without its name. Since later Hebrew writers could not have known the name, he calls Raamses "an early (thirteenth/twelfth century) marker in the exodus tradition." He puts Pithom at Tell er-Retaba and Succoth at Tell el-Maskhuta (pp. 257-258), giving a Late Bronze route for the start of the exodus."""
+Kitchen, an Egyptologist who defends the Bible's reliability, argues that Raamses is Pi-Ramesse at Qantir, the vast city Ramesses II built. It was largely abandoned about 1130, and its stonework was moved to Tanis without its name. Since later Hebrew writers could not have known the name, he calls Raamses "an early (thirteenth/twelfth century) marker in the exodus tradition." He puts Pithom at Tell er-Retaba and Succoth at Tell el-Maskhuta (pp. 257-258), giving a Late Bronze route for the start of the exodus."""
   citations = [{ source = "kitchen-2003", locator = "pp. 255–259" }]
   verses = [{ ref = "Exod.1.11", link = "dates" }, { ref = "Exod.12.37", link = "describes" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th. A late date has to treat the figure as something other than a plain count."""
+The late date has to answer the biblical count. Read literally, the 480 years of 1 Kings 6:1 point to the 15th century, not the 13th, so a late date has to treat the figure as something other than a plain count."""
   citations = [{ source = "wood-2005" }]
   verses = [{ ref = "1Kgs.6.1", link = "dates" }]
 
@@ -78,7 +78,7 @@ citations = [
 artifact = "merneptah-stele"
 relation = "consistent"
 note = """
-The Stele does not mention an exodus. It shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that. This fits either date above."""
+The Stele does not mention an exodus, but it shows Israel already living in Canaan as a people by Merneptah's fifth year, about 1208 BCE. So any exodus came before that, which fits either date above."""
 citations = [{ source = "cos-2", locator = "pp. 40–41" }]
 
 [[positions]]
@@ -95,13 +95,13 @@ citations = [{ source = "finkelstein-silberman-2002", locator = "p. 57" }, { sou
   [[positions.arguments]]
   stance = "for"
   text = """
-  Pithom (Tell Maskhuta) was settled only in the Twenty-sixth Dynasty, and a Migdol in the eastern delta is known from the seventh century. Jeremiah names Judahites living there."""
+Their dating rests on place names. Pithom (Tell Maskhuta) was settled only in the Twenty-sixth Dynasty, and a Migdol in the eastern delta is known from the seventh century, and Jeremiah names Judahites living there."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "p. 66" }]
   verses = [{ ref = "Exod.1.11", link = "alludes" }, { ref = "Exod.14.2", link = "alludes" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Many scholars saw the name Raamses and Pi-Ramesses of Ramesses II as authentic memory of a 13th-century exodus (p. 57). Finkelstein and Silberman say Egyptian forts and records show no escape and no Israel in Egypt (pp. 60-61)."""
+Many scholars saw the name Raamses and Pi-Ramesses of Ramesses II as authentic memory of a 13th-century exodus (p. 57). Finkelstein and Silberman reply that Egyptian forts and records show no escape and no Israel in Egypt (pp. 60-61)."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 57-61" }]
   verses = [{ ref = "Exod.1.11", link = "dates" }]

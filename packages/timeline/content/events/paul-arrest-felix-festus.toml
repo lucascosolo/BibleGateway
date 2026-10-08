@@ -37,7 +37,7 @@ tradition = "critical"
 earliest = 55
 latest = 61
 summary = """
-The earliest suggested start for Festus's term is about 55 to 56 CE. The latest is 61 CE."""
+Scholars disagree widely on when Festus took office. The earliest suggested start for his term is about 55 to 56 CE, and the latest is 61 CE, which gives the range shown here."""
 citations = [{ source = "wikipedia-porcius-festus" }]
 
 [[positions]]

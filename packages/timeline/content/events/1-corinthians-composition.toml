@@ -6,7 +6,7 @@ confidence = "firm"
 status = "draft"
 books = ["1Cor"]
 summary = """
-Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church at Corinth that he had founded, answering a letter and reports from there. It was written late in 56 or very early in 57, since Paul says he will stay at Ephesus until Pentecost. Its authorship is not seriously disputed. A revisionist chronology would put it in 54-55."""
+Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church he had founded at Corinth, answering a letter and reports that had reached him from there. He says he will stay at Ephesus until Pentecost, which puts the writing in late 56 or very early 57. Its authorship is not seriously disputed, though a revisionist chronology would move it to 54-55."""
 verses = [
   { ref = "1Cor.1.1", link = "describes", note = "Paul and Sosthenes write to the church of God at Corinth." },
   { ref = "1Cor.5.9", link = "background", note = "An earlier, lost letter to the Corinthians." },
@@ -21,13 +21,13 @@ earliest = 56
 latest = 57
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "Late 56 or very early 57 from Ephesus (or 54/55 in the Revisionist Chronology)." On authenticity: "Not seriously disputed." He adds that unity is favoured by an increasing majority, though some see two or more letters interwoven."""
+Raymond Brown dates the letter to late 56 or very early 57, written from Ephesus, and notes the revisionist alternative of 54/55. His summary line reads: "Late 56 or very early 57 from Ephesus (or 54/55 in the Revisionist Chronology)." He treats Pauline authorship as settled ("Not seriously disputed.") and adds that an increasing majority favours the letter's unity, though some see two or more letters interwoven."""
 citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown reads the closing as fixing the setting: "Paul wants to stay at Ephesus at least till Pentecost (May/June AD 57?)" because an opportunity for evangelizing has opened, then plans to come to Corinth via Macedonia."""
+Brown takes the setting from the end of the letter. Paul wants to stay at Ephesus because an opportunity for evangelizing has opened, then plans to come to Corinth via Macedonia: "Paul wants to stay at Ephesus at least till Pentecost (May/June AD 57?)"."""
   citations = [{ source = "brown-1997", locator = "ch. 22, General Analysis of the Message" }]
   verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying at Ephesus until Pentecost." }]
 
@@ -39,13 +39,13 @@ earliest = 55
 latest = 55
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Corinthians. They date it by the Gallio inscription, which puts Gallio's proconsulship in 51 or 52, and conclude that Paul "wrote 1 Corinthians while he was in Ephesus, some time before Pentecost", early in 55. They add that all the dates could be moved one year earlier."""
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Corinthians and date it from the Gallio inscription, which puts Gallio's proconsulship in 51 or 52. From that they conclude that Paul "wrote 1 Corinthians while he was in Ephesus, some time before Pentecost", early in 55. They add that all the dates could be moved one year earlier."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 447-448" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Carson and Moo work from the Delphi inscription of Claudius to Gallio's term, then count Paul's two and a half years in Ephesus to autumn 55. Paul's own note that he will stay in Ephesus until Pentecost puts the letter in his last year there."""
+Carson and Moo start from the Delphi inscription of Claudius, which fixes Gallio's term, and then count Paul's two and a half years in Ephesus to autumn 55. Paul's own note that he will stay in Ephesus until Pentecost places the letter in his last year there."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 447-448" }]
   verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying in Ephesus until Pentecost." }]
 
@@ -57,5 +57,5 @@ earliest = 54
 latest = 56
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says Paul wrote 1 Corinthians from Ephesus, and elsewhere that the Last Supper tradition in it "was written in the mid-50s" by Paul. The 54-56 bounds are the editor's reading of "mid-50s.""""
+Ehrman's textbook says Paul wrote 1 Corinthians from Ephesus, and elsewhere describes the Last Supper tradition in it as something that "was written in the mid-50s" by Paul. He gives no exact years, so the span shown here, 54 to 56, is the editor's reading of the phrase "mid-50s." """
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 232 approx." }]

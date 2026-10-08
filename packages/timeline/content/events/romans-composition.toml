@@ -21,13 +21,13 @@ earliest = 57
 latest = 58
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "In the winter of 57/58 from Corinth (55/56 in the Revisionist Chronology)." On authenticity: "Not seriously disputed." He notes a larger minority holds that chapter 16 was added later."""
+Brown, a critical scholar, gives his dating in one line: "In the winter of 57/58 from Corinth (55/56 in the Revisionist Chronology)." On authenticity he writes: "Not seriously disputed." He notes that a larger minority holds that chapter 16 was added later."""
 citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on the place of writing: Phoebe, "a woman deacon of the church at Cenchreae a few miles from where Paul is writing", is going to Rome and perhaps carrying the letter."""
+Brown takes the place of writing from the letter's own details: Phoebe, "a woman deacon of the church at Cenchreae a few miles from where Paul is writing", is going to Rome and perhaps carrying the letter."""
   citations = [{ source = "brown-1997", locator = "ch. 24, General Analysis of the Message" }]
   verses = [{ ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae." }]
 
@@ -57,5 +57,5 @@ earliest = 50
 latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook counts Romans among the undisputed letters and says Paul wrote it from Corinth. It gives no year in the passages read; the 50-59 bounds are the editor's reading of his "50s of the Common Era.""""
+Ehrman's textbook counts Romans among the undisputed letters and says Paul wrote it from Corinth. It gives no year in the passages read, so the span of 50 to 59 shown here is the editor's reading of his "50s of the Common Era.""""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 267 approx." }]

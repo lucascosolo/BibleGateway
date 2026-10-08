@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["Heb"]
 summary = """
-This asks who wrote the letter to the Hebrews and when. The letter does not name its author, and the older church view that Paul wrote it is now abandoned by critical scholars. Its date is debated between the 60s, before the Temple fell, and the 80s, after it; the writer never mentions the Temple's destruction either way."""
+This asks who wrote the letter to the Hebrews and when. The letter does not name its author, and the older church view that Paul wrote it is now abandoned by critical scholars. Its date is debated between the 60s, before the Temple fell, and the 80s, after it, and the writer never mentions the Temple's destruction either way."""
 verses = [
   { ref = "Heb.13.24", link = "describes", note = "Greetings from those from Italy." },
   { ref = "Heb.13.23", link = "describes", note = "Timothy has been released." },
@@ -22,13 +22,13 @@ earliest = 60
 latest = 89
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "60s or more likely 80s." Of authorship he writes: "Author not identified; later church attribution to Paul now abandoned." The upper bound is the editor's reading of "80s"."""
+Raymond Brown dates Hebrews to the 60s or, more likely, the 80s, and he does not name an author. His summary line reads: "60s or more likely 80s." Of authorship he writes: "Author not identified; later church attribution to Paul now abandoned." The upper bound of the span is the editor's reading of "80s"."""
 citations = [{ source = "brown-1997", locator = "ch. 32, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: "A supporting factor for a writing date in the 80s is the strong emphasis on the replacement of the Jewish feasts, sacrifices, priesthood, and earthly place of worship"."""
+Brown finds the strongest support for the later date in the letter's theme: "A supporting factor for a writing date in the 80s is the strong emphasis on the replacement of the Jewish feasts, sacrifices, priesthood, and earthly place of worship""""
   citations = [{ source = "brown-1997", locator = "ch. 32, From and to whom, where, and when" }]
   verses = [{ ref = "Heb.8.7-Heb.8.13", link = "dates", note = "The old covenant is being replaced by the new." }]
 
@@ -40,7 +40,7 @@ earliest = 60
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament. They call the date hard to fix and cannot rule out any year from about 60 to 100, and they say most would insist on not before 60. They conclude that "the preponderance of evidence favors a date before 70". They give no place of writing and say a place cannot be settled even if the author were known. The bounds are the editor's reading."""
+Carson and Moo write the standard evangelical introduction to the New Testament. They call the date hard to fix and cannot rule out any year from about 60 to 100, though they say most would insist on not before 60. They conclude that "the preponderance of evidence favors a date before 70". They give no place of writing and say a place cannot be settled even if the author were known. The bounds shown are the editor's reading."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 605–608" }]
 
   [[positions.arguments]]
@@ -58,12 +58,12 @@ earliest = 75
 latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says Hebrews is anonymous and that modern scholars are "unified in thinking that he did not" write it, meaning Paul. He weighs a pre-70 date, and then says the community's history "suggest a somewhat later date, possibly during the final quarter of the first century." The 75 to 100 bounds are the editor's reading of "final quarter"; his summary box says only "near the end of the first century"."""
+Ehrman's textbook says Hebrews is anonymous and that modern scholars are "unified in thinking that he did not" write it, meaning Paul. He weighs a pre-70 date, and then says the community's history "suggest a somewhat later date, possibly during the final quarter of the first century." The span of 75 to 100 is the editor's reading of "final quarter", since his summary box says only "near the end of the first century"."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 310 approx." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman says present-tense talk of Temple sacrifice does not prove a date before 70: later Jewish writers did the same, and the sacrifices described come from the Old Testament, not current practice. He adds that the readers had earlier suffered persecution but were now complacent, which suggests a later date."""
+Ehrman says present-tense talk of Temple sacrifice does not prove a date before 70, because later Jewish writers did the same and the sacrifices described come from the Old Testament, not current practice. He adds that the readers had earlier suffered persecution but were now complacent, which suggests a later date."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 310 approx." }]
   verses = [{ ref = "Heb.10.32-Heb.10.34", link = "background", note = "The readers' earlier suffering, which Ehrman reads as a past episode in the community's history." }]

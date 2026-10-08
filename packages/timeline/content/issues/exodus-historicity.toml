@@ -3,7 +3,7 @@ kind = "historical"
 title = "Did the Exodus happen as described?"
 status = "draft"
 summary = """
-This question comes before the date. No Egyptian record mentions an Israelite exodus. Scholars disagree about what that silence and the archaeology mean. This entry is kept apart from the dating views. If the event did not happen as described, there is no date to offer."""
+This question comes before the date: no Egyptian record mentions an Israelite exodus, and scholars disagree about what that silence and the archaeology mean. The entry is kept apart from the dating views because, if the event did not happen as described, there is no date to offer."""
 events = ["exodus"]
 persons = ["moses"]
 verses = [{ ref = "Exod.12.40-Exod.12.41", link = "describes" }]
@@ -15,7 +15,7 @@ citations = [
 [[views]]
 label = "Not as described"
 text = """
-Finkelstein and Silberman find no convincing archaeological evidence for an exodus as told. They see perhaps a distant memory of the Hyksos being driven out of Egypt. They think the story took its present form in the late 7th century BCE, in Josiah's time, as a reply to Egyptian rule. On their reading, the early Israelites came from within Canaan."""
+Finkelstein and Silberman find no convincing archaeological evidence for an exodus as told. They see perhaps a distant memory of the Hyksos being driven out of Egypt, and they think the story took its present form in the late 7th century BCE, in Josiah's time, as a reply to Egyptian rule. On their reading, the early Israelites came from within Canaan."""
 citations = [{ source = "finkelstein-silberman-2001" }]
 
 [[views]]

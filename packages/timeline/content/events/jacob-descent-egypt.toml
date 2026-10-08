@@ -36,7 +36,7 @@ earliest = -1860
 latest = -1840
 held_by = "Bryant G. Wood"
 summary = """
-Wood links an Asiatic settlement at Pi-Ramesse from the mid-19th century BC with a 15th-century exodus. He says it "could well be that of Jacob and his family shortly after their arrival in Egypt". The range here is a reading of "mid-19th century". It is not Wood's own figures."""
+Wood links an Asiatic settlement at Pi-Ramesse from the mid-19th century BC with a 15th-century exodus. He says it "could well be that of Jacob and his family shortly after their arrival in Egypt". Wood gives no exact years, so the span shown here is the editor's reading of "mid-19th century"."""
 citations = [{ source = "wood-2005", locator = "p. 488" }]
 
 [[positions]]

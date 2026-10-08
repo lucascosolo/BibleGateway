@@ -21,13 +21,13 @@ earliest = 70
 latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "80–90, give or take a decade." He says the author was a Greek-speaker, probably a Jewish Christian, who was not an eyewitness of Jesus' ministry and drew on Mark and Q. The bounds of 70 and 100 are the editor's, from "give or take a decade"."""
+Brown, a critical scholar, gives his dating in one line: "80–90, give or take a decade." He says the author was a Greek-speaker, probably a Jewish Christian, who was not an eyewitness of Jesus' ministry and drew on Mark and Q. The span of 70 to 100 shown here is the editor's, from "give or take a decade"."""
 citations = [{ source = "brown-1997", locator = "ch. 8, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: "Probably the best argument for a post-70 date is the dependence of Matt on Mark, a Gospel commonly dated to the 68–73 period." He adds that the king burning the city in 22:7 may reflect the destruction of Jerusalem in AD 70."""
+Brown's main argument is that Matthew depends on Mark: "Probably the best argument for a post-70 date is the dependence of Matt on Mark, a Gospel commonly dated to the 68–73 period." He adds that the king burning the city in 22:7 may reflect the destruction of Jerusalem in AD 70."""
   citations = [{ source = "brown-1997", locator = "ch. 8, Date of Writing" }]
   verses = [{ ref = "Matt.22.7", link = "dates", note = "The king burns the city." }]
 
@@ -39,7 +39,7 @@ earliest = 60
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament, and they argue against the usual 80-100 CE dating. They place the Gospel in Syria, perhaps Antioch, without certainty. They tie the date to authorship: if the apostle Matthew is the evangelist, a date before 70 is more plausible. Their conclusion is that "Matthew was published before 70, but not long before". The year bounds are the editor's reading."""
+Carson and Moo write the standard evangelical introduction to the New Testament, and they argue against the usual 80-100 CE dating. They place the Gospel in Syria, perhaps Antioch, without certainty. They tie the date to authorship: if the apostle Matthew is the evangelist, a date before 70 is more plausible. Their conclusion is that "Matthew was published before 70, but not long before". The year span shown here is the editor's reading of their dates."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 152–156" }]
 
   [[positions.arguments]]
@@ -57,7 +57,7 @@ earliest = 80
 latest = 85
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook gives the date as "around 80-85 c.e." and says the author "left his identity anonymous", a Greek-speaking Christian probably from outside Palestine. The bounds are the two ends of his stated range."""
+Ehrman's textbook gives the date as "around 80-85 c.e." and says the author "left his identity anonymous", a Greek-speaking Christian probably from outside Palestine. The span shown here is the two ends of his stated range."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 92 approx." }]
 
   [[positions.arguments]]
@@ -75,7 +75,7 @@ earliest = 82
 latest = 88
 held_by = "B. H. Streeter (1924)"
 summary = """
-Streeter's The Four Gospels (1924) is the landmark 1924 study of how the Gospels relate. He places Matthew at Antioch in Syria and dates it to 85, "not as a date mathematically demonstrated" but as one that fits all the evidence. Because 85 is offered as an approximate fixed year, the range here is plus or minus three years, the editor's reading. He treats the author as an unnamed compiler who reworked Mark and the sayings source Q, not the apostle."""
+Streeter's The Four Gospels (1924) is the landmark 1924 study of how the Gospels relate. He places Matthew at Antioch in Syria and dates it to 85, "not as a date mathematically demonstrated" but as one that fits all the evidence. Because 85 is offered as an approximate fixed year, the span shown here is plus or minus three years, which is the editor's reading. He treats the author as an unnamed compiler who reworked Mark and the sayings source Q, not the apostle."""
 citations = [{ source = "streeter-1924", locator = "pp. 516–524" }]
 
   [[positions.arguments]]

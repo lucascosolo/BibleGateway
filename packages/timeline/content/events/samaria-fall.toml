@@ -22,7 +22,7 @@ latest = -723
 held_by = "Edwin R. Thiele; Rodger C. Young"
 summary = """
 Samaria fell before Tishri 1, 723, which is over fifteen months before Sargon became king in Tebeth 722n. Thiele held the same year first: he writes of "my date of 853 for the battle of Qarqar and 723 for Samaria's fall", noting that "the accepted date for the fall of Samaria was 722, a year later than my date". He places "the accession of Sargon in 722/21, when the latter claimed to have captured Samaria". His final pattern gives "the date 723/22 for the last year of Hoshea and Samaria's fall"."""
-citations = [{ source = "thiele-1984", locator = "p. 5, table 'Reigns of the Hebrew kings' (open-access popular restatement of his dates)" }, { source = "thiele-1983", locator = "pp. 17–18, Preface to the Third Edition pp. 23–24, and p. 37 (page images supplied by the user, 2026-10-07)" }, { source = "young-2004-samaria", locator = "p. 583" }, { source = "young-2005", locator = "Table 1, p. 245" }]
+citations = [{ source = "thiele-1984", locator = "p. 5, table 'Reigns of the Hebrew kings' (open-access popular restatement of his dates)" }, { source = "thiele-1983", locator = "pp. 17–18, Preface to the Third Edition pp. 23–24, and p. 37" }, { source = "young-2004-samaria", locator = "p. 583" }, { source = "young-2005", locator = "Table 1, p. 245" }]
 
 [[attestations]]
 artifact = "sargon-ii-inscriptions"

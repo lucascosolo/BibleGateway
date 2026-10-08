@@ -61,13 +61,13 @@ earliest = 92
 latest = 96
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "Probably between AD 92 and 96 at the end of the Emperor Domitian's reign." He says the author was a Jewish Christian prophet named John, neither the son of Zebedee nor the writer of the Gospel or Epistles."""
+Brown, a critical scholar, gives his dating in one line: "Probably between AD 92 and 96 at the end of the Emperor Domitian's reign." He says the author was a Jewish Christian prophet named John, neither the son of Zebedee nor the writer of the Gospel or Epistles."""
 citations = [{ source = "brown-1997", locator = "ch. 37, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: for a long time the scholarly majority has held Revelation was written under Domitian, who "ruled after the destruction of the Jerusalem Temple" and "could be considered Nero come back again"."""
+Brown explains why the Domitian date has long been the scholarly majority view: Domitian "ruled after the destruction of the Jerusalem Temple" and "could be considered Nero come back again"."""
   citations = [{ source = "brown-1997", locator = "ch. 37, Date and Life-Situation: Persecution under Domitian?" }]
   verses = [{ ref = "Rev.13.3", link = "dates", note = "The wounded head that is healed, read as Nero returned." }]
 
@@ -79,7 +79,7 @@ earliest = 93
 latest = 96
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament. They hold that John wrote from Patmos, the island of exile in the Aegean, probably sent there by a local Roman official. They weigh six lines of evidence and are "inclined, then, to follow the oldest tradition" and "date Revelation in the last years of Domitian". The 93 start is the editor's reading of "last years"; Domitian died in 96."""
+Carson and Moo write the standard evangelical introduction to the New Testament. They hold that John wrote from Patmos, the island of exile in the Aegean, probably sent there by a local Roman official. They weigh six lines of evidence and are "inclined, then, to follow the oldest tradition" and "date Revelation in the last years of Domitian". Because they give no exact start, the span shown here begins in 93, the editor's reading of "last years"; Domitian died in 96."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 707–711" }]
 
   [[positions.arguments]]
@@ -100,7 +100,7 @@ earliest = 95
 latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says "most investigators" think parts were written in the 60s after Nero's persecution, but the book was "probably around 95 c.e., during the reign of Domitian". His timeline chart lists it at "95-100", used here as bounds. The author was a Christian prophet named John, "not John the son of Zebedee", and the book is not pseudonymous."""
+Ehrman's textbook says "most investigators" think parts were written in the 60s after Nero's persecution, but the book was "probably around 95 c.e., during the reign of Domitian". His timeline chart lists it at "95-100", which is the span shown here. The author was a Christian prophet named John, "not John the son of Zebedee", and the book is not pseudonymous."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 344, 350 approx." }]
 
   [[positions.arguments]]

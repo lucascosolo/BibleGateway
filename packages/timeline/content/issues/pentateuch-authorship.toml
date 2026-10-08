@@ -20,19 +20,19 @@ citations = [{ source = "friedman-1987", locator = "pp. 18–27, 50–60, 86–8
 [[views]]
 label = "Tradition: Moses wrote it"
 text = """
-Friedman says the long-standing tradition was that Moses wrote the Five Books, and that rabbis from antiquity explained apparent contradictions as only apparent. He notes readers still saw problems: the text gives an account of Moses' death, and calls him the humblest man on earth. Medieval doubt began cautiously. Isaac ibn Yashush noted that a list of Edomite kings in Genesis 36 named kings who lived long after Moses. Abraham ibn Ezra called him "the blunderer" yet hinted at doubts himself, writing "he who understands will keep silent". Bonfils said explicitly that Moses did not write such verses. Friedman does not name the particular verses ibn Ezra had in mind, only the kinds of passage: Moses in the third person, places Moses never visited, and language of a later time."""
+Friedman says the long-standing tradition was that Moses wrote the Five Books, and that rabbis from antiquity explained apparent contradictions as only apparent. Readers still saw problems: the text gives an account of Moses' death, and calls him the humblest man on earth. Medieval doubt began cautiously. Isaac ibn Yashush noted that a list of Edomite kings in Genesis 36 named kings who lived long after Moses, and Abraham ibn Ezra called him "the blunderer" yet hinted at doubts himself, writing "he who understands will keep silent". Bonfils said explicitly that Moses did not write such verses. Friedman does not name the particular verses ibn Ezra had in mind, only the kinds of passage: Moses in the third person, places Moses never visited, and language of a later time."""
 citations = [{ source = "friedman-1987", locator = "pp. 18–19" }]
 
 [[views]]
 label = "Four sources combined (the Documentary Hypothesis)"
 text = """
-Friedman traces the field's history through Hobbes, Spinoza, Simon and Astruc to Wellhausen. Spinoza argued the problems were pervasive and that the Pentateuch was written "by someone who lived long after Moses". Investigators saw two versions of many stories (the two creations, two flood accounts) and noticed that the versions often use different names for God. From this came the idea of four documents: J, E, P and D. Wellhausen's contribution, in Friedman's words, was that he "tied the source documents to history", matching each to a stage in Israel's religion. Friedman says that to this day, anyone who disagrees must argue with Wellhausen's model. On the flood he shows two complete, separable accounts: one has a single pair of each animal, the other seven pairs of clean animals."""
+Friedman traces the field's history through Hobbes, Spinoza, Simon and Astruc to Wellhausen. Spinoza argued the problems were pervasive and that the Pentateuch was written "by someone who lived long after Moses". Investigators saw two versions of many stories (the two creations, two flood accounts) and noticed that the versions often use different names for God, which led to the idea of four documents: J, E, P and D. Wellhausen's contribution, in Friedman's words, was that he "tied the source documents to history", matching each to a stage in Israel's religion, and Friedman says that to this day anyone who disagrees must argue with Wellhausen's model. On the flood he shows two complete, separable accounts: one has a single pair of each animal, the other seven pairs of clean animals."""
 citations = [{ source = "friedman-1987", locator = "pp. 20–21, 24–27, 51, 53, 59" }]
 
 [[views]]
 label = "J from Judah, E from Israel, after the kingdom split"
 text = """
-Friedman dates the two narrative sources to the two kingdoms. He says the J stories of Jacob and Esau reflect Edom's independence from Judah under King Jehoram, 848–842 BCE, which puts J between 848 and 722. E was composed in the northern kingdom of Israel, which stood from 922 to 722 BCE, and he finds it hard to narrow that further. He argues that polemic against molten gods in E reads as aimed at the northern kingdom, placing composition after the division. Both sources, he says, were written before the Assyrians destroyed Israel in 722. He pictures the E text reaching Judah with refugees and the two documents then being combined."""
+Friedman dates the two narrative sources to the two kingdoms. He says the J stories of Jacob and Esau reflect Edom's independence from Judah under King Jehoram, 848–842 BCE, which puts J between 848 and 722. E was composed in the northern kingdom of Israel, which stood from 922 to 722 BCE, and he finds it hard to narrow that further; polemic against molten gods in E reads as aimed at the northern kingdom, which places composition after the division. Both sources, he says, were written before the Assyrians destroyed Israel in 722. He pictures the E text reaching Judah with refugees and the two documents then being combined."""
 citations = [{ source = "friedman-1987", locator = "pp. 86–87" }]
 
 [[views]]
@@ -44,11 +44,11 @@ citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 14, 45–46
 [[views]]
 label = "Kitchen: against late dating"
 text = """
-Kitchen attacks the Wellhausen tradition as a nineteenth-century method worked out without ancient Near Eastern evidence. He says claims that texts are "heavily edited" need objective evidence of the kind found in ancient texts. Editing that is "merely the product of clever guesswork" or rests on an a priori scheme of religious development does not qualify. He accuses Wellhausen of resenting data from Egypt and Mesopotamia, and gives four sample cases, beginning with the patriarchs, where he says the ancient Near East knew better."""
+Kitchen attacks the Wellhausen tradition as a nineteenth-century method worked out without ancient Near Eastern evidence. He says claims that texts are "heavily edited" need objective evidence of the kind found in ancient texts, and that editing which is "merely the product of clever guesswork" or rests on an a priori scheme of religious development does not qualify. He accuses Wellhausen of resenting data from Egypt and Mesopotamia, and gives four sample cases, beginning with the patriarchs, where he says the ancient Near East knew better."""
 citations = [{ source = "kitchen-2003", locator = "p. 494" }]
 
 [[views]]
 label = "Barton: where the field stands"
 text = """
 Barton's publisher's sample does not discuss the Documentary Hypothesis by name. In his introduction he says few biblical books if any are the work of one author: most are "highly composite", and some depend on others. He says a majority of biblical specialists think the first significant writings date to the eighth century BCE, when both kingdoms are clearly attested, and that earlier stories and folk memories were probably collected and edited then. He also places the rise of deuteronomistic style in the seventh century, around Josiah's reforms."""
-citations = [{ source = "barton-2019", locator = "PDF pp. 21, 48, 61 (sample; printed page numbers not shown)" }]
+citations = [{ source = "barton-2019", locator = "ebook pp. 21, 48, 61 (sample; printed page numbers not shown)" }]

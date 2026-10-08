@@ -5,7 +5,7 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-Matthew sets Jesus's birth in the reign of Herod the king. Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death. Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved."""
+Matthew sets Jesus's birth in the reign of Herod the king, while Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death, but Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved."""
 verses = [
   { ref = "Matt.1.18-Matt.2.23", link = "describes", note = "The birth at Bethlehem in the days of Herod" },
   { ref = "Luke.2.1-Luke.2.2", link = "dates", note = "A decree of Augustus, while Quirinius is governor of Syria" },
@@ -22,7 +22,7 @@ earliest = -6
 latest = -4
 held_by = "Emil Schürer"
 summary = """
-Schürer dated Herod's death to 4 BCE, working back from Archelaus's removal in 6 CE. That is the latest point for a birth in Herod's days. Wikipedia reports that most scholars assume a birth between 6 and 4 BCE on this basis. Schürer's own date is for Herod's death. The birth range is an inference from it."""
+Emil Schürer dated Herod's death to 4 BCE, working back from Archelaus's removal in 6 CE, and that is the latest point for a birth in Herod's days. Wikipedia reports that most scholars assume a birth between 6 and 4 BCE on this basis. Schürer's own date is for Herod's death; the birth range is an inference from it."""
 citations = [
   { source = "wikipedia-herod-the-great" },
   { source = "wikipedia-chronology-of-jesus" },
@@ -31,14 +31,14 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  Matthew 2 places the birth in the days of Herod the king, so it cannot fall after his death."""
+The Gospel of Matthew sets the limit. Matthew 2 places the birth in the days of Herod the king, so it cannot fall after his death."""
   citations = [{ source = "wikipedia-chronology-of-jesus" }]
   verses = [{ ref = "Matt.2.1", link = "dates" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Luke 2:2 links the birth to a registration under Quirinius. Josephus dates that to the removal of Archelaus in 6 CE, about ten years later."""
+The census in Luke pulls the other way. Luke 2:2 links the birth to a registration under Quirinius, which Josephus dates to the removal of Archelaus in 6 CE, about ten years later."""
   citations = [{ source = "wikipedia-census-of-quirinius" }, { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" }]
   verses = [{ ref = "Luke.2.2", link = "dates" }]
 
@@ -57,7 +57,7 @@ citations = [{ source = "wikipedia-chronology-of-jesus" }]
 artifact = "josephus-antiquities-18-1"
 relation = "in-tension"
 note = """
-Josephus says Cyrenius came to Syria to assess Judea after Archelaus's removal. He places that census in 6 CE. That is after the death of Herod, the king under whom Matthew sets the birth."""
+Josephus says Cyrenius came to Syria to assess Judea after Archelaus's removal, and he places that census in 6 CE. That is after the death of Herod, the king under whom Matthew sets the birth, which is why the two accounts are in tension."""
 citations = [
   { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
   { source = "wikipedia-census-of-quirinius" },
@@ -71,13 +71,13 @@ earliest = -6
 latest = -6
 held_by = "Raymond E. Brown (Table 1)"
 summary = """
-Brown's Table 1, "Chronology of People and Events Pertinent to the New Testament", lists "Jesus born ca. 6 BC", in the reign of Herod the Great (37-4 BC)."""
+Raymond Brown's Table 1, "Chronology of People and Events Pertinent to the New Testament", lists "Jesus born ca. 6 BC", in the reign of Herod the Great (37-4 BC)."""
 citations = [{ source = "brown-1997", locator = "Table 1 (Chronology of People and Events)" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Brown's table sets Herod the Great's reign at 37-4 BC and the birth ca. 6 BC, inside it, as Matthew 2 requires."""
+Brown's table sets Herod the Great's reign at 37-4 BC and the birth ca. 6 BC, inside that reign, as Matthew 2 requires."""
   citations = [{ source = "brown-1997", locator = "Table 1 (Chronology of People and Events)" }]
   verses = [
     { ref = "Matt.2.1", link = "dates" },
@@ -91,7 +91,7 @@ earliest = -7
 latest = -6
 held_by = "John P. Meier"
 summary = """
-Meier places Jesus's birth ca. 7 or 6 BCE, a few years before Herod the Great died in 4 BCE, and thinks it most likely took place in Nazareth, not Bethlehem. He holds this as a probability only: the Magi and flight-into-Egypt stories are, in his view, highly questionable history. He calls the match of Matthew 2 with Luke 3:23 "likely—though not certain"."""
+John Meier places Jesus's birth ca. 7 or 6 BCE, a few years before Herod the Great died in 4 BCE, and thinks it most likely took place in Nazareth, not Bethlehem. He holds this as a probability only: the Magi and flight-into-Egypt stories are, in his view, highly questionable history. He calls the match of Matthew 2 with Luke 3:23 "likely—though not certain"."""
 citations = [
   { source = "meier-1991", locator = "pp. 373–376, 405" },
 ]
@@ -99,6 +99,6 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  Matthew and Luke independently place the birth in Herod's reign, and Matthew's impression of a child one to two years old at the Magi's visit suggests the last years of that reign. Luke 3:23 ("about thirty") for a ministry beginning around 28 CE fits a birth a few, but only a few, years before 4 BCE."""
+Meier argues that Matthew and Luke independently place the birth in Herod's reign, and that Matthew's impression of a child one to two years old at the Magi's visit suggests the last years of that reign. Luke 3:23 ("about thirty") for a ministry beginning around 28 CE fits a birth a few, but only a few, years before 4 BCE."""
   citations = [{ source = "meier-1991", locator = "pp. 373–375" }]
   verses = [{ ref = "Matt.2.1", link = "dates" }, { ref = "Luke.3.23", link = "dates" }]

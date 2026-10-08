@@ -33,7 +33,7 @@ earliest = -639
 latest = -609
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman place the Deuteronomistic History, and parts of the Pentateuch, in the reign of Josiah, which began in 639 BCE. They think the epic served his plan to take over the old northern territories. The 609 end date is the editor's, not read from these pages. They add that archaeology gives little evidence for Josiah's specific acts.
+Finkelstein and Silberman place the Deuteronomistic History, and parts of the Pentateuch, in the reign of Josiah, which began in 639 BCE. They think the epic served his plan to take over the old northern territories. The span shown here ends in 609, a date the editor chose and did not read from these pages. They add that archaeology gives little evidence for Josiah's specific acts.
 """
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 283-284" }, { source = "finkelstein-silberman-2002", locator = "p. 287" }]
 

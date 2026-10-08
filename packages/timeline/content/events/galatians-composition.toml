@@ -21,13 +21,13 @@ earliest = 54
 latest = 55
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "54–55 from Ephesus is more likely than 57 from Macedonia (Traditional Chronology; see Table 6 in Chapter 16 above for Revisionist Chronology)." On authenticity, unity and integrity: "Not seriously disputed.""""
+Raymond Brown prefers 54-55 from Ephesus to 57 from Macedonia, and he treats the letter's authenticity, unity and integrity as settled. His summary line reads: "54–55 from Ephesus is more likely than 57 from Macedonia (Traditional Chronology; see Table 6 in Chapter 16 above for Revisionist Chronology)." On authenticity, unity and integrity he writes: "Not seriously disputed.""""
 citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on the North Galatian theory: Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56). Word could have reached him that teachers had come and “quickly” (Gal 1:6) won over the Galatians to “another gospel”", prompting the angry writing of Gal in 54 or 55."""
+Brown reasons from the North Galatian theory. Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56). Word could have reached him that teachers had come and “quickly” (Gal 1:6) won over the Galatians to “another gospel”", prompting the angry writing of Gal in 54 or 55."""
   citations = [{ source = "brown-1997", locator = "ch. 19, Dating" }]
   verses = [{ ref = "Gal.1.6", link = "describes", note = "Quickly won over to another gospel." }]
 
@@ -45,7 +45,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 462-464" }]
   [[positions.arguments]]
   stance = "for"
   text = """
-Carson and Moo link the Jerusalem visit of Galatians 2:1-10 with the famine visit of Acts 11:25-30, not Acts 15. Paul gives what looks like a complete list of his visits, and he never mentions the council's decree, so the letter is most probably earlier than the council."""
+Carson and Moo link the Jerusalem visit of Galatians 2:1-10 with the famine visit of Acts 11:25-30, not Acts 15. Paul gives what looks like a complete list of his visits and never mentions the council's decree, so the letter is most probably earlier than the council."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 463-464" }]
   verses = [{ ref = "Gal.2.1", link = "dates", note = "Paul's second Jerusalem visit, read as the famine visit of Acts 11." }]
 
@@ -57,5 +57,5 @@ earliest = 50
 latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook counts Galatians among the seven undisputed letters, which "virtually all scholars agree were written by Paul himself," situated in the 40s and 50s. He gives no single year; the 50-59 bounds are the editor's reading of "the 50s.""""
+Ehrman's textbook counts Galatians among the seven undisputed letters, which "virtually all scholars agree were written by Paul himself," situated in the 40s and 50s. He gives no single year, so the span shown, 50 to 59, is the editor's reading of "the 50s.""""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 188 approx." }]

@@ -4,5 +4,5 @@ kind = "literary-text"
 status = "draft"
 language = "Greek"
 summary = """
-Josephus tells of Pilate's time as governor of Judaea. He begins with Pilate bringing the army's standards, which bore Caesar's image, from Caesarea into Jerusalem: "BUT now Pilate, the procurator of Judea, removed the army from Cesarea to Jerusalem…" (Whiston's translation)."""
+Josephus tells of Pilate's time as governor of Judaea, beginning with Pilate bringing the army's standards, which bore Caesar's image, from Caesarea into Jerusalem: "BUT now Pilate, the procurator of Judea, removed the army from Cesarea to Jerusalem…" (Whiston's translation)."""
 citations = [{ source = "perseus-josephus-ant-18", locator = "18.55" }]

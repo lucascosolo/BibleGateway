@@ -5,7 +5,7 @@ category = "political"
 confidence = "contested"
 status = "draft"
 summary = """
-In his first year Cyrus announces that Yahweh has told him to build a house in Jerusalem. Exiles may go up (Ezra 1; 2 Chronicles 36). The usual chronology dates the return to 538 BCE. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples, but it names no Jews. Some scholars deny the decree is genuine."""
+In his first year Cyrus announces that Yahweh has told him to build a house in Jerusalem, and exiles may go up (Ezra 1; 2 Chronicles 36). The usual chronology dates the return to 538 BCE. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples, but it names no Jews, and some scholars deny the decree is genuine."""
 verses = [
   { ref = "Ezra.1.1-Ezra.1.4", link = "describes", note = "Cyrus's announcement in his first year" },
   { ref = "2Chr.36.22-2Chr.36.23", link = "describes", note = "The same announcement, which closes Chronicles" },
@@ -20,7 +20,7 @@ tradition = "traditional"
 earliest = -539
 latest = -538
 summary = """
-The decree comes after the conquest of Babylon in 539 BCE, and the usual dating puts the return under Cyrus in 538 BCE. Here traditional means the usual dating, which follows the biblical accounts."""
+The decree comes after the conquest of Babylon in 539 BCE, and the usual dating puts the return under Cyrus in 538 BCE. Here traditional means that usual dating, which follows the biblical accounts."""
 citations = [
   { source = "wikipedia-edict-of-cyrus" },
   { source = "wikipedia-ezra-nehemiah" },
@@ -34,20 +34,20 @@ earliest = -539
 latest = -520
 held_by = "Lester L. Grabbe"
 summary = """
-Grabbe holds that the reported decree, which lets or even orders the Jews to rebuild the temple, cannot be considered genuine. Other scholars suggest the return was gradual. The years run from the conquest to Haggai's 520 BCE. They are the cataloguer's bounds, not Grabbe's."""
+Lester Grabbe holds that the reported decree, which lets or even orders the Jews to rebuild the temple, cannot be considered genuine. Other scholars suggest the return was gradual. The years shown run from the conquest to Haggai's 520 BCE, and they are the cataloguer's bounds, not Grabbe's."""
 citations = [{ source = "wikipedia-edict-of-cyrus" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  The Cyrus Cylinder focuses on Babylon and Mesopotamia. It mentions neither Judah nor Jerusalem. Kuhrt calls its passage on restoring peoples a literary device. She says its purely Babylonian setting gives no proof for Jewish exiles."""
+Grabbe and Kuhrt find nothing in the Cyrus Cylinder that supports the biblical decree. It focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem. Kuhrt calls its passage on restoring peoples a literary device, and she says its purely Babylonian setting gives no proof for Jewish exiles."""
   citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "wikipedia-edict-of-cyrus" }]
 
 [[attestations]]
 artifact = "cyrus-cylinder"
 relation = "partially-corroborates"
 note = """
-The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia. Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea."""
+The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia, and Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea, so it supports the policy but not the decree."""
 citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "livius-cyrus-cylinder" }]
 
 [[positions]]
@@ -58,14 +58,12 @@ earliest = -539
 latest = -538
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman say Persia conquered Babylon in 539 BCE and Cyrus issued his decree in his first year; they also write of the proclamation in 538. They read it as Persian policy, not sympathy, and hold the biblical figure of about 50,000 returnees to be exaggerated.
-"""
+Finkelstein and Silberman say Persia conquered Babylon in 539 BCE and Cyrus issued his decree in his first year; they also write of the proclamation in 538. They read it as Persian policy, not sympathy, and hold the biblical figure of about 50,000 returnees to be exaggerated."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "p. 298" }, { source = "finkelstein-silberman-2002", locator = "p. 307" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Survey data from Yehud in the fifth-fourth centuries BCE gives about thirty thousand people, against nearly fifty thousand in Ezra 2 and Nehemiah 7. Cyrus supported temples elsewhere too.
-"""
+Survey data from Yehud in the fifth-fourth centuries BCE gives about thirty thousand people, against nearly fifty thousand in Ezra 2 and Nehemiah 7. That gap is why they treat the biblical figure as inflated, and they note that Cyrus supported temples elsewhere too."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "p. 308" }]
   verses = [{ ref = "Ezra.1.2-Ezra.1.3", link = "describes" }]

@@ -4,12 +4,12 @@ kind = "chronicle"
 status = "draft"
 language = "Akkadian (cuneiform)"
 summary = """
-A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the 11th year of Nebuchadnezzar II. For Nebuchadnezzar's seventh year it records that "on the second day of the month Addaru he seized the city and captured the king". That means Jerusalem and Jehoiachin, in February/March 597 BCE. The date the tablet itself was written is not recorded here. It is the events it records that are dated."""
+A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the 11th year of Nebuchadnezzar II. For Nebuchadnezzar's seventh year it records that "on the second day of the month Addaru he seized the city and captured the king", which means Jerusalem and Jehoiachin, in February/March 597 BCE. The date the tablet itself was written is not recorded here; it is the events it records that are dated."""
 discovered = { year = 1896, place = "Purchased by the British Museum" }
 held_by = { institution = "British Museum", accession = "BM 21946" }
 citations = [
   { source = "grayson-1975", locator = "Chronicle 5" },
-  { source = "thiele-1983", locator = "p. 180, table of tablets: B.M. 21946 covers Nabopolassar year 21 and Nebuchadnezzar accession to year 11 (page images supplied by the user, 2026-10-07)" },
+  { source = "thiele-1983", locator = "p. 180, table of tablets: B.M. 21946 covers Nabopolassar year 21 and Nebuchadnezzar accession to year 11" },
   { source = "livius-abc5" },
 ]
 verses = [{ ref = "2Kgs.24.10-2Kgs.24.12", link = "background" }]

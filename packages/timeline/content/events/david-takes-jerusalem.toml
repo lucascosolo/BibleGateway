@@ -22,7 +22,7 @@ earliest = -1002
 latest = -1001
 held_by = "Rodger C. Young"
 summary = """
-This date is worked out by the editor and is not stated by Young. It takes Young's conjectural start of David's reign (1009t?) and subtracts the 7.5 years at Hebron from 2 Samuel 5:5. Treat it as approximate."""
+Young does not state this date; the editor worked it out. It takes Young's conjectural start of David's reign (1009t?) and subtracts the 7.5 years at Hebron from 2 Samuel 5:5, so it should be treated as approximate."""
 citations = [{ source = "young-2005", locator = "Table 2, p. 246" }]
 
 [[positions]]
@@ -33,14 +33,12 @@ earliest = -1005
 latest = -970
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman use David's reign of c. 1005-970 BCE (Galil's dates) and think he did take Jerusalem. They find no evidence that it was more than a typical hill-country village, and no sign of a great empire.
-"""
+Finkelstein and Silberman use David's reign of c. 1005-970 BCE (Galil's dates) and think he did take Jerusalem. They find no evidence that it was more than a typical hill-country village, and no sign of a great empire."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131" }, { source = "finkelstein-silberman-2002", locator = "p. 142" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Excavations in the City of David found Middle Bronze and later Iron Age remains but little tenth-century pottery and no monumental building. The "most optimistic assessment" is a limited village.
-"""
+Excavations in the City of David found Middle Bronze and later Iron Age remains but little tenth-century pottery and no monumental building, so the "most optimistic assessment" is a limited village."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "p. 133" }]
   verses = [{ ref = "2Sam.5.6", link = "describes" }]

@@ -22,7 +22,7 @@ earliest = -539
 latest = -539
 held_by = "A. K. Grayson (editor and translator of ABC 7, per Livius)"
 summary = """
-Babylon was captured on the 16th of Tashritu, which is 12 October 539 BCE on the Julian calendar. This was in Nabonidus's seventeenth year. The main source is the Nabonidus Chronicle, in Grayson's translation as reproduced by Livius: "On the sixteenth day, Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon". Cyrus himself entered "on the third day of the month Arahsamna". On the Livius page, the entry into Babylon is at iii.15-16 and Cyrus's own entry at iii.18. The month of the sixteenth day falls in a damaged line (iii.12) and cannot be read in the translation as printed. So the match with 12 October 539 rests on the modern reconstruction cited below."""
+Babylon was captured on the 16th of Tashritu, which is 12 October 539 BCE on the Julian calendar, in Nabonidus's seventeenth year. The main source is the Nabonidus Chronicle, in Grayson's translation as reproduced by Livius: "On the sixteenth day, Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon". Cyrus himself entered "on the third day of the month Arahsamna". On the Livius page, the entry into Babylon is at iii.15-16 and Cyrus's own entry at iii.18. The month of the sixteenth day falls in a damaged line (iii.12) and cannot be read in the translation as printed, so the match with 12 October 539 rests on the modern reconstruction cited below."""
 citations = [
   { source = "livius-abc7", locator = "col. iii 15–16 (sixteenth day); iii 18 (Cyrus enters, 3 Arahsamna)" },
   { source = "wikipedia-fall-of-babylon" },
@@ -32,12 +32,12 @@ citations = [
 artifact = "nabonidus-chronicle-abc7"
 relation = "partially-corroborates"
 note = """
-The Chronicle records Cyrus entering Babylon without a battle in Nabonidus's seventeenth year. That matches the fall of Babylon in Daniel 5. It does not mention Belshazzar's death on the page read."""
+The Chronicle records Cyrus entering Babylon without a battle in Nabonidus's seventeenth year, which matches the fall of Babylon in Daniel 5. It does not mention Belshazzar's death on the page read, so it supports the event but not that detail."""
 citations = [{ source = "livius-abc7" }]
 
 [[attestations]]
 artifact = "cyrus-cylinder"
 relation = "consistent"
 note = """
-The Cylinder describes the conquest as happening "without battle". Modern scholars treat that as propaganda (Wikipedia's summary). Herodotus and Xenophon give differing accounts of how the city was taken."""
+The Cylinder describes the conquest as happening "without battle", but modern scholars treat that as propaganda (Wikipedia's summary). Herodotus and Xenophon give differing accounts of how the city was taken, so the Cylinder fits the outcome without settling the manner."""
 citations = [{ source = "wikipedia-fall-of-babylon" }, { source = "wikipedia-cyrus-cylinder" }]

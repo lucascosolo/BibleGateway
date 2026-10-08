@@ -2,7 +2,7 @@ id = "moses"
 name = "Moses"
 role = "prophet and lawgiver"
 summary = """
-Moses led the Exodus and gave the Law at Sinai. No source outside the Bible from his own time names him, and no Egyptian record does. Whether a real person lies behind the tradition is debated (see the linked issue)."""
+Moses led the Exodus and gave the Law at Sinai. No source outside the Bible from his own time names him, and no Egyptian record does, so whether a real person lies behind the tradition is debated (see the linked issue)."""
 status = "draft"
 verses = [{ ref = "Exod.2.10", link = "describes", note = "named by Pharaoh's daughter" }]
 events = ["exodus"]

@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "draft"
 summary = """
-Israel crosses the Jordan under Joshua. Jericho falls, and then Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE. Most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date."""
+Israel crosses the Jordan under Joshua, and Jericho falls, followed by Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE, while most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date here."""
 verses = [
   { ref = "Josh.3.1-Josh.4.24", link = "describes", note = "The crossing of the Jordan" },
   { ref = "Josh.5.13-Josh.6.27", link = "describes", note = "The fall of Jericho" },
@@ -31,20 +31,20 @@ earliest = -1406
 latest = -1400
 held_by = "Bryant G. Wood"
 summary = """
-Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400. The Jubilee count (Israel's cycle of 50-year release years) is worked backward to 1406."""
+Bryant Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400, and he works the Jubilee count (Israel's cycle of 50-year release years) backward to 1406."""
 citations = [{ source = "wood-2005", locator = "pp. 488–489" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen's own account of Jericho admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery. He says this suits a destruction around 1400 better than a 13th-century one."""
+Wood builds on the Jericho evidence, including Kitchen's own account of the site, which admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery, which he says suits a destruction around 1400 better than a 13th-century one."""
   citations = [{ source = "wood-2005", locator = "p. 487" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Kathleen Kenyon dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE."""
+A problem for any conquest date comes from Kathleen Kenyon, who dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE."""
   citations = [{ source = "wikipedia-battle-of-jericho", locator = "sections on Kenyon and radiocarbon testing" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
@@ -56,7 +56,7 @@ earliest = -1220
 latest = -1210
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476). So the conquest must come before that."""
+Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476), so the conquest must come before that."""
 citations = [
   { source = "wood-2005", locator = "pp. 476, 478" },
   { source = "kitchen-2003", locator = "pp. 187–188" },
@@ -65,21 +65,21 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen blames erosion for the lack of 13th-century remains at Jericho. There may have been a Jericho between 1275 and 1220. But above the tiny remains of 1400-1275, all of it has long since gone."""
+Kitchen explains the missing 13th-century remains at Jericho by erosion. There may have been a Jericho between 1275 and 1220, but above the tiny remains of 1400-1275, all of it has long since gone."""
   citations = [{ source = "wood-2005", locator = "p. 487" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen, an Egyptologist who defends the Bible's reliability, says Middle Bronze Jericho was destroyed about 1550 and its ruins lay empty for some 200 years. Erosion then removed nearly all of the Late Bronze town, so "We will never find 'Joshua's Jericho'" on the mound."""
+Kitchen, an Egyptologist who defends the Bible's reliability, says Middle Bronze Jericho was destroyed about 1550 and its ruins lay empty for some 200 years. Erosion then removed nearly all of the Late Bronze town, so "We will never find 'Joshua's Jericho'" on the mound."""
   citations = [{ source = "kitchen-2003", locator = "pp. 187–188" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Kitchen reads Joshua as describing "disabling raids", not occupation. After the southern battles the strike force twice returns to its base at Gilgal (Josh. 10:15, 43), and in the north Hazor alone is burned (11:13), as Jericho and Ai were."""
+Kitchen reads Joshua as describing "disabling raids", not occupation. After the southern battles the strike force twice returns to its base at Gilgal (Josh. 10:15, 43), and in the north Hazor alone is burned (11:13), as Jericho and Ai were."""
   citations = [{ source = "kitchen-2003", locator = "pp. 160–162" }]
   verses = [
     { ref = "Josh.6.24", link = "describes" },
@@ -91,7 +91,7 @@ citations = [
   [[positions.arguments]]
   stance = "against"
   text = """
-  Wood says no evidence has been found at Jericho and Ai for settlement in the late 13th century. He adds that a destruction of Hazor around 1230 BC would leave no city for the Jabin of Judges 4 to rule."""
+Wood presses the case for the earlier date from the other side. He says no evidence has been found at Jericho and Ai for settlement in the late 13th century, and that a destruction of Hazor around 1230 BC would leave no city for the Jabin of Judges 4 to rule."""
   citations = [{ source = "wood-2005", locator = "pp. 476–477" }]
   verses = [{ ref = "Josh.11.10-Josh.11.11", link = "describes" }, { ref = "Judg.4.2", link = "describes" }]
 
@@ -103,7 +103,7 @@ earliest = -1451
 latest = -1451
 held_by = "James Ussher"
 summary = """
-Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
+Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths, so it is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraph 312" }]
 
 [[positions]]
@@ -114,27 +114,27 @@ earliest = -1250
 latest = -1130
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman say excavations show no Late Bronze Jericho or Ai to conquer and no single campaign. Hazor, Aphek, Lachish and Megiddo were destroyed at different times across more than a century, with Lachish after Ramesses III and Megiddo in the second half of the twelfth century. The range covers those destructions."""
+Finkelstein and Silberman say excavations show no Late Bronze Jericho or Ai to conquer and no single campaign. Hazor, Aphek, Lachish and Megiddo were destroyed at different times across more than a century, with Lachish after Ramesses III and Megiddo in the second half of the twelfth century, and the span shown covers those destructions."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 81-82" }, { source = "finkelstein-silberman-2002", locator = "p. 90" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Jericho had no settlement of any kind in the thirteenth century BCE, and no destruction. Calling the fallen walls a "romantic mirage", they say there were no walls to fall."""
+Their first point is Jericho. It had no settlement of any kind in the thirteenth century BCE, and no destruction, so the fallen walls were a "romantic mirage" with no walls to fall."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 81-82" }]
   verses = [{ ref = "Josh.6.1-Josh.6.27", link = "describes" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ai (et-Tell) was a huge Early Bronze Age city with no Late Bronze settlement."""
+Their second point is Ai. Ai (et-Tell) was a huge Early Bronze Age city with no Late Bronze settlement."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "p. 82" }]
   verses = [{ ref = "Josh.8.1-Josh.8.29", link = "describes" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  For much of the twentieth century excavations at Tell Beit Mirsim, Bethel, Lachish and Hazor seemed to confirm the conquest (pp. 79-81). Albright's fix for Ai was to move the story to Bethel (p. 82)."""
+They also explain why the conquest once seemed proven. For much of the twentieth century excavations at Tell Beit Mirsim, Bethel, Lachish and Hazor seemed to confirm it (pp. 79-81), and Albright's fix for Ai was to move the story to Bethel (p. 82)."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 79-82" }]
 
 [[positions]]
@@ -145,12 +145,12 @@ earliest = -640
 latest = -609
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman say the conquest story was shaped in the reign of Josiah, who began to reign in 639 BCE. They say its Judah town list, its battle plan and its Joshua-as-Josiah portrait fit that background. The range is Josiah's reign as the Bible dates it, which is the editor's reading of their argument."""
+Finkelstein and Silberman say the conquest story was shaped in the reign of Josiah, who began to reign in 639 BCE. They say its Judah town list, its battle plan and its Joshua-as-Josiah portrait fit that background. The span shown is Josiah's reign as the Bible dates it, which is the editor's reading of their argument."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 92-95" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  The list of Judah's towns matches Josiah's borders. The first battles, at Jericho and Ai (the Bethel area), were in the first target of Josianic expansion."""
+Their first match is the list of Judah's towns, which matches Josiah's borders. The first battles, at Jericho and Ai (the Bethel area), were in the first target of Josianic expansion."""
   citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 92-93" }]
   verses = [{ ref = "Josh.15.21-Josh.15.62", link = "background" }]

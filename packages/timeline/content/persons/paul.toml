@@ -34,14 +34,14 @@ events = [
 artifact = "gallio-inscription"
 relation = "consistent"
 note = """
-The inscription dates Gallio's time as proconsul of Achaia to about 51–52 CE. Acts 18 has Paul brought before him at Corinth. That fixes a date in Paul's career, but the inscription does not mention Paul."""
+The inscription dates Gallio's time as proconsul of Achaia to about 51–52 CE, and Acts 18 has Paul brought before him at Corinth. That fixes a date in Paul's career, even though the inscription does not mention Paul."""
 citations = [{ source = "brown-1997", locator = "ch. 16, section The Life of Paul" }]
 
 [[attestations]]
 artifact = "one-clement-5"
 relation = "partially-corroborates"
 note = """
-Written at Rome about thirty years after Paul's death. It says he suffered much, reached the western limit and bore witness before the rulers. It gives no place or date for his death."""
+This letter was written at Rome about thirty years after Paul's death. It says he suffered much, reached the western limit and bore witness before the rulers, but it gives no place or date for his death."""
 citations = [
   { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },
   { source = "ehrman-paul-2000", locator = "p. 173 approx." },
@@ -51,5 +51,5 @@ citations = [
 artifact = "eusebius-he-2-25"
 relation = "partially-corroborates"
 note = """
-Eusebius repeats the tradition that Paul was martyred at Rome under Nero. It is a late source for an event no earlier narrative describes."""
+Eusebius repeats the tradition that Paul was martyred at Rome under Nero. It is a late source for an event that no earlier narrative describes."""
 citations = [{ source = "brown-1997", locator = "ch. 16, section The Life of Paul" }]

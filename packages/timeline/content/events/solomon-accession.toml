@@ -29,5 +29,5 @@ tradition = "chronological"
 earliest = -970
 latest = -968
 held_by = "Edwin R. Thiele"
-summary = "This date is worked out indirectly. Young says that moving Solomon's death earlier also moved his start one year earlier than in the chronologist Edwin Thiele's count. Thiele's own figures were not read."
+summary = "This date is worked out indirectly, because Thiele's own figures were not read. Young says that moving Solomon's death earlier also moved his start one year earlier than in the chronologist Edwin Thiele's count, which gives the span shown here."
 citations = [{ source = "young-2005", locator = "p. 227" }]

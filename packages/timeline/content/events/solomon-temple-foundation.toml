@@ -38,8 +38,8 @@ citations = [{ source = "young-2005", locator = "pp. 228-229" }]
   [[positions.arguments]]
   stance = "for"
   text = """
-  Thiele's own reasoning about the calendar behind the date: the temple was begun in the second month of Solomon's fourth year and finished in the eighth month of his eleventh (1 Kings 6:1, 37–38), and the Bible counts that as seven years of building. Months are numbered from Nisan, and counting is inclusive. On a Nisan-to-Nisan regnal year that span is eight years. Only Tishri-to-Tishri regnal years give seven, so Judah reckoned its kings from the autumn, and Solomon's regnal years are placed accordingly. The absolute year is not given on these pages."""
-  citations = [{ source = "thiele-1983", locator = "pp. 51–52 and Diagram 5 (page images supplied by the user, 2026-10-07)" }]
+  Thiele reasons from the calendar behind the date. The temple was begun in the second month of Solomon's fourth year and finished in the eighth month of his eleventh (1 Kings 6:1, 37–38), and the Bible counts that as seven years of building. Months are numbered from Nisan, and counting is inclusive. On a Nisan-to-Nisan regnal year that span is eight years. Only Tishri-to-Tishri regnal years give seven, so Judah reckoned its kings from the autumn, and Solomon's regnal years are placed accordingly. The absolute year is not given on these pages."""
+  citations = [{ source = "thiele-1983", locator = "pp. 51–52 and Diagram 5" }]
   verses = [
     { ref = "1Kgs.6.1", link = "dates" },
     { ref = "1Kgs.6.37-1Kgs.6.38", link = "dates" },

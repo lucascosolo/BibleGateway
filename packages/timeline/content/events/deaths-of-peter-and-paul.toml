@@ -5,7 +5,7 @@ category = "political"
 confidence = "speculative"
 status = "draft"
 summary = """
-This rests on tradition only. 1 Clement says both men were martyred. Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE. The New Testament does not tell of either death."""
+This rests on tradition only. 1 Clement says both men were martyred, and Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE, but the New Testament does not tell of either death."""
 verses = [
   { ref = "John.21.18-John.21.19", link = "alludes", note = "Peter will stretch out his hands, a sign of how he would die" },
   { ref = "2Tim.4.6-2Tim.4.8", link = "alludes", note = "Paul expects to die soon" },
@@ -20,7 +20,7 @@ tradition = "traditional"
 earliest = 64
 latest = 65
 summary = """
-Wikipedia dates Paul's death to about 64-65 CE, in Rome under Nero, citing 1 Clement 5 and Eusebius. Eusebius places Peter's crucifixion under Nero as well. Neither source gives a year. Traditional here means the early church accounts."""
+Wikipedia dates Paul's death to about 64-65 CE, in Rome under Nero, citing 1 Clement 5 and Eusebius, and Eusebius places Peter's crucifixion under Nero as well. Neither source gives a year, so the dating is an inference from the tradition. Traditional here means the early church accounts."""
 citations = [
   { source = "wikipedia-paul-the-apostle" },
   { source = "newadvent-eusebius-he-2", locator = "2.25.5" },
@@ -33,7 +33,7 @@ tradition = "traditional"
 earliest = 67
 latest = 68
 summary = """
-Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero". He says Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year. Nero's reign began on 13 October 54 and ended with his death on 9 June 68. So his fourteenth year runs from October 67 to June 68. Eusebius's Chronicle was not read."""
+Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero". He says Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year, but Nero's reign began on 13 October 54 and ended with his death on 9 June 68, so his fourteenth year runs from October 67 to June 68. Eusebius's Chronicle was not read."""
 citations = [
   { source = "newadvent-jerome-de-viris", locator = "ch. 1 (Peter); ch. 5 (Paul)" },
   { source = "wikipedia-nero", locator = "lead and reign sections: accession 13 October 54, death 9 June 68" },
@@ -43,14 +43,14 @@ citations = [
 artifact = "one-clement-5"
 relation = "consistent"
 note = """
-1 Clement says both men were martyred, Paul "under the prefects". It gives no place or date."""
+1 Clement says both men were martyred, Paul "under the prefects", but it gives no place or date."""
 citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]
 
 [[attestations]]
 artifact = "eusebius-he-2-25"
 relation = "consistent"
 note = """
-This is a late tradition. Paul was beheaded at Rome and Peter was crucified under Nero."""
+This is a late tradition: Paul was beheaded at Rome and Peter was crucified under Nero."""
 citations = [{ source = "newadvent-eusebius-he-2", locator = "2.25.5–8" }]
 
 [[positions]]
@@ -61,13 +61,13 @@ earliest = 64
 latest = 68
 held_by = "Raymond E. Brown (Traditional Chronology)"
 summary = """
-Brown's Table 6 ends: "after summer 64 Death in Rome under Nero." The upper year 68, the end of Nero's reign, is the cataloguer's bound, not Brown's."""
+Raymond Brown's Table 6 ends: "after summer 64 Death in Rome under Nero." The upper year of 68, the end of Nero's reign, is the cataloguer's bound, not Brown's."""
 citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Brown's Traditional column has Paul a prisoner in Rome for two years, 61-63 (Acts 28:30), and then dies under Nero after the summer of 64. The table gives no firmer date."""
+Brown's Traditional column has Paul a prisoner in Rome for two years, 61-63 (Acts 28:30), and then has him die under Nero after the summer of 64. The table gives no firmer date."""
   citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
   verses = [
     { ref = "Acts.28.30", link = "dates" },

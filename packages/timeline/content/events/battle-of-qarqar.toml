@@ -5,7 +5,7 @@ category = "political"
 confidence = "firm"
 status = "draft"
 summary = """
-Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention it."""
+Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention the battle, so its date comes from Assyrian records."""
 verses = [
   { ref = "1Kgs.16.29-1Kgs.16.34", link = "background", note = "Ahab becomes king. The Bible does not mention Qarqar" },
   { ref = "1Kgs.22.1-1Kgs.22.4", link = "background", note = "three years without war between Syria and Israel" },
@@ -19,8 +19,8 @@ earliest = -853
 latest = -853
 held_by = "Edwin R. Thiele"
 summary = """
-Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853. In his own words: "As I first completed my pattern of reigns, I faced problems of a single year with my date of 853 for the battle of Qarqar and 723 for Samaria's fall. The accepted date for Qarqar then was 854, a year earlier than my date." He adds that "Assyrian chronology likewise calls for precisely 152 years from the battle of Qarqar in 853 to Sennacherib's attack on Hezekiah in 701", and he builds the whole pattern of the divided kingdom "with 853 fixed as the last year of Ahab". He recounts that a study of Assyrian dates "revealed the unexpected evidence that 853 rather than 854 was the correct date for Qarqar"."""
-citations = [{ source = "thiele-1983", locator = "pp. 17–18; Preface to the Third Edition, pp. 23–24; chapter 'The Chronology of Judah and Israel (930–841 B.C.)', opening pages (page images supplied by the user, 2026-10-07; page numbers not visible on the images)" }, { source = "wikipedia-mysterious-numbers", locator = "Ahab ends 853 in the chronology table; second-hand" }, { source = "young-2004-samaria", locator = "p. 593" }, { source = "young-2005", locator = "p. 232" }]
+Edwin Thiele found that his chronology of the Hebrew Bible's reigns required Qarqar to fall in 853. In his own words: "As I first completed my pattern of reigns, I faced problems of a single year with my date of 853 for the battle of Qarqar and 723 for Samaria's fall. The accepted date for Qarqar then was 854, a year earlier than my date." He adds that "Assyrian chronology likewise calls for precisely 152 years from the battle of Qarqar in 853 to Sennacherib's attack on Hezekiah in 701", and he builds the whole pattern of the divided kingdom "with 853 fixed as the last year of Ahab". He recounts that a study of Assyrian dates "revealed the unexpected evidence that 853 rather than 854 was the correct date for Qarqar"."""
+citations = [{ source = "thiele-1983", locator = "pp. 17–18; Preface to the Third Edition, pp. 23–24; chapter 'The Chronology of Judah and Israel (930–841 B.C.)', opening pages" }, { source = "wikipedia-mysterious-numbers", locator = "Ahab ends 853 in the chronology table; second-hand" }, { source = "young-2004-samaria", locator = "p. 593" }, { source = "young-2005", locator = "p. 232" }]
 
 [[positions]]
 id = "854"
@@ -29,12 +29,12 @@ tradition = "archaeological"
 earliest = -854
 latest = -854
 summary = """
-Wikipedia says the date is 853, or 854, depending on which version of the Assyrian Eponym List is used. That list names one official for each year."""
+Wikipedia says the date is 853, or 854, depending on which version of the Assyrian Eponym List is used. That list names one official for each year, so the one-year difference comes from how the list is read."""
 citations = [{ source = "wikipedia-battle-of-qarqar" }]
 
 [[attestations]]
 artifact = "kurkh-monolith"
 relation = "corroborates"
 note = """
-The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite. Grayson's translation: "2,000 chariots (and) 10,000 troops of Ahab (Ahabbu) the Israelite (Sir'alaia)"."""
+The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite. Grayson's translation reads: "2,000 chariots (and) 10,000 troops of Ahab (Ahabbu) the Israelite (Sir'alaia)"."""
 citations = [{ source = "wikipedia-kurkh-monoliths" }, { source = "wikipedia-battle-of-qarqar" }, { source = "grayson-1996", locator = "pp. 23–24, A.0.102.2 ii 89b–102 (Ahab at ii 91–92); introduction p. 11 dates the battle to 853 BC" }]

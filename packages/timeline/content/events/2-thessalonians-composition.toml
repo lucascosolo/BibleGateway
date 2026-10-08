@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["2Thess"]
 summary = """
-This asks who wrote 2 Thessalonians and when. The letter names Paul as its author. Bart Ehrman argues it is a forgery: someone else wrote it in Paul's name. He gives no year for it in the passages read. The range below is the editor's bracket. It starts after 1 Thessalonians, which Ehrman dates "say, 49 CE", and stops at 100 CE, the limit in a claim by Robert Jewett that Ehrman answers. Jewett and Abraham Malherbe defend Paul as author."""
+This asks who wrote 2 Thessalonians and when. The letter names Paul as its author, but Bart Ehrman argues it is a forgery written by someone else in Paul's name, and he gives no year for it in the passages read. The range shown below is therefore the editor's bracket: it starts after 1 Thessalonians, which Ehrman dates "say, 49 CE", and stops at 100 CE, the limit in a claim by Robert Jewett that Ehrman answers. Jewett and Abraham Malherbe defend Paul as author."""
 verses = [
   { ref = "2Thess.1.1", link = "describes", note = "The letter names Paul (with Silvanus and Timothy) as its author." },
   { ref = "2Thess.2.2", link = "background", note = "Ehrman reads this as a warning about a letter falsely in Paul's name, a tell of forgery." },
@@ -21,40 +21,40 @@ earliest = 50
 latest = 100
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that Paul did not write 2 Thessalonians. Someone used 1 Thessalonians as a model. He gives no date range in the passages read. The bounds are the editor's: 50 follows his "say, 49 CE" for 1 Thessalonians, and 100 is the limit in the Jewett claim he quotes."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 210, 221, 279" }]
+Ehrman holds that Paul did not write 2 Thessalonians and that someone else used 1 Thessalonians as a model. He gives no date range in the passages read, so the bounds are the editor's: 50 follows his "say, 49 CE" for 1 Thessalonians, and 100 is the limit in the Jewett claim he quotes."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 210, 221, 279" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman says "there is not a single major theme in 2 Thessalonians that is not also found in 1 Thessalonians." He thinks this is how a forger would work."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 213" }]
+Ehrman's first argument is that the second letter has nothing of its own to say, which he takes to be how a forger works: "there is not a single major theme in 2 Thessalonians that is not also found in 1 Thessalonians.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 213" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman: where the author borrowed from 1 Thessalonians, "of course he sounds like Paul". Where he adds his own views, he stands at odds with Paul."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 211" }]
+Ehrman finds that the letter sounds like Paul only where it copies. Where the author borrowed from 1 Thessalonians, "of course he sounds like Paul", but where he adds his own views, he stands at odds with Paul."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 211" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman reads 2:2 as pointing to a letter "as if" by Paul. He writes: "The earlier reference is to a letter “as if” by us, and is by implication denigrated by the author". So the author forged a letter to answer a forgery: "He countered a forgery by producing a forgery.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 223, 225" }]
+Ehrman reads 2:2 as pointing to a letter "as if" by Paul, and he concludes that the author forged a letter to answer a forgery. He writes: "The earlier reference is to a letter “as if” by us, and is by implication denigrated by the author". The result, in his words: "He countered a forgery by producing a forgery.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 223, 225" }]
   verses = [{ ref = "2Thess.2.2", link = "background", note = "The author warns of a letter falsely in Paul's name." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman thinks the closing claim is suspicious: the author "did perhaps “protest too much”": “The greeting is in my own hand, the hand of Paul, which is the sign in all my letters. This is how I write”."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 226" }]
+Ehrman thinks the closing claim is suspicious, because the author "did perhaps “protest too much”": “The greeting is in my own hand, the hand of Paul, which is the sign in all my letters. This is how I write”."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 226" }]
   verses = [{ ref = "2Thess.3.17", link = "background", note = "A claim of authenticity inside the letter, a forger's tool." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Ehrman quotes Jewett: "there is scarcely enough time between Paul’s death and C.E 100 for a forgery to gain credence." Ehrman rejects this, noting that ancient authors complained of forgeries in their own lifetimes."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 221" }]
+Ehrman answers an objection from Jewett, who quotes: "there is scarcely enough time between Paul’s death and C.E 100 for a forgery to gain credence." Ehrman rejects this, noting that ancient authors complained of forgeries in their own lifetimes."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 221" }]
 
 [[positions]]
 id = "paul-wrote-it"
@@ -64,20 +64,20 @@ earliest = 49
 latest = 50
 held_by = "Robert Jewett and Abraham Malherbe (named by Ehrman as holdouts for Pauline authorship)"
 summary = """
-Ehrman says defenders of authenticity typically place the letter "on the heels" of 1 Thessalonians, which he dates "say, 49 CE". The 49 to 50 range is the editor's reading of that. Ehrman gives no year for the second letter."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 210, 220, 279" }]
+Ehrman says defenders of authenticity typically place the letter "on the heels" of 1 Thessalonians, which he dates "say, 49 CE". The span of 49 to 50 is the editor's reading of that, since Ehrman gives no year for the second letter."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 210, 220, 279" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ehrman reports Malherbe's claim that "the “majority” of biblical scholars continues to hold to authenticity." Ehrman answers that this is only because many scholars cannot accept forgeries in scripture."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 210" }]
+Defenders of Paul's authorship can point to numbers. Ehrman reports Malherbe's claim that "the “majority” of biblical scholars continues to hold to authenticity." Ehrman answers that this is only because many scholars cannot accept forgeries in scripture."""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 210" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-  Ehrman objects to the early dating: "But how would Paul change his eschatological views so suddenly and decisively?""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 220" }]
+Ehrman objects that an early date makes the letter's teaching hard to explain: "But how would Paul change his eschatological views so suddenly and decisively?""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 220" }]
 
 [[positions]]
 id = "brown-pseudonymous-late-first-century"
@@ -87,13 +87,13 @@ earliest = 80
 latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "If by Paul, probably ca. AD 51/52, shortly after I Thess. If pseudonymous, probably late 1st century, when increased apocalyptic fervor was manifest." He calls scholars "almost evenly divided" on authorship. Year bounds 80-100 are the editor's reading of "late 1st century"."""
+Raymond Brown calls scholars "almost evenly divided" on authorship, but leans toward a pseudonymous letter. His summary line reads: "If by Paul, probably ca. AD 51/52, shortly after I Thess. If pseudonymous, probably late 1st century, when increased apocalyptic fervor was manifest." He gives no years for the later option, so the span shown, 80 to 100, is the editor's reading of "late 1st century"."""
 citations = [{ source = "brown-1997", locator = "ch. 26, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on the copying between the two letters: "Why would Paul copy himself in this almost mechanical way?" He thinks it more likely the mark of another writer assuming Paul's mantle, since II Thess 3:8 repeats I Thess 2:9 almost verbatim."""
+Brown points to the close copying between the two letters. II Thess 3:8 repeats I Thess 2:9 almost verbatim, and he asks: "Why would Paul copy himself in this almost mechanical way?" He thinks it more likely the mark of another writer assuming Paul's mantle."""
   citations = [{ source = "brown-1997", locator = "ch. 26, Did Paul Write II Thessalonians?" }]
   verses = [{ ref = "2Thess.3.8", link = "describes", note = "Repeats 1 Thessalonians 2:9 on labor and toil night and day." }]
 
@@ -123,12 +123,12 @@ earliest = 65
 latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook calls 2 Thessalonians the letter "whose authorship remains in greatest doubt," but argues that "difficulties make it hard to see how Paul could have written both letters." He supposes the author wrote "sometime after Paul had died, possibly near the end of the first century." The 65-100 bounds are the editor's."""
+Ehrman's textbook calls 2 Thessalonians the letter "whose authorship remains in greatest doubt," but argues that "difficulties make it hard to see how Paul could have written both letters." He supposes the author wrote "sometime after Paul had died, possibly near the end of the first century." He names no years, so the span shown, 65 to 100, is the editor's."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-He contrasts the first letter, where the end comes "like a thief in the night," with a second letter in which the man of lawlessness must appear first, and notes the claim in 2 Thess 3:17 and the warning about a forged letter in 2:2 as the work of an imitator."""
+Ehrman contrasts the two letters on the end of the age. In the first, the end comes "like a thief in the night," while in the second the man of lawlessness must appear first. He also reads the claim in 2 Thess 3:17 and the warning about a forged letter in 2:2 as the work of an imitator."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
   verses = [{ ref = "2Thess.2.2", link = "background", note = "Warning about a letter forged in Paul's name." }, { ref = "2Thess.2.3-2Thess.2.4", link = "describes", note = "The antichrist figure who must appear before the end." }, { ref = "1Thess.5.2", link = "describes", note = "The day comes like a thief in the night." }]

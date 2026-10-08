@@ -5,7 +5,7 @@ status = "draft"
 made = { earliest = -1208, latest = -1208 }
 language = "Egyptian (hieroglyphic)"
 summary = """
-A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c. 1208 BCE). Near the end (line 27) it lists peoples of Canaan he claims to have defeated. One entry reads "Israel is laid waste, its seed is no more". This is the earliest known mention of Israel outside the Bible. Israel is written with the sign for a people, not for a city-state or a land."""
+A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c. 1208 BCE), lists near its end (line 27) peoples of Canaan he claims to have defeated. One entry reads "Israel is laid waste, its seed is no more", which is the earliest known mention of Israel outside the Bible. Israel is written with the sign for a people, not for a city-state or a land."""
 discovered = { year = 1896, place = "Thebes (Flinders Petrie)" }
 held_by = { institution = "Egyptian Museum, Cairo", accession = "JE 31408" }
 citations = [

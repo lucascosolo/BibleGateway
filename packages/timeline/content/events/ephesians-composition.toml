@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["Eph"]
 summary = """
-This asks who wrote Ephesians and when. The letter names Paul as author and has him say "I Paul, a prisoner of Christ Jesus". Ehrman holds it was forged by a later follower of Paul who copied Colossians, which he also takes to be a forgery. He gives no date. The year bounds of 60 and 110 are the editor's: 60 is just after Paul's lifetime ministry was ending, and 110 allows for the Pastoral Epistles, which Ehrman says know Ephesians."""
+This asks who wrote Ephesians and when. The letter names Paul as author and has him say "I Paul, a prisoner of Christ Jesus". Ehrman holds it was forged by a later follower of Paul who copied Colossians, which he also takes to be a forgery, and he gives no date. The year bounds of 60 and 110 are therefore the editor's: 60 is just after Paul's lifetime ministry was ending, and 110 allows for the Pastoral Epistles, which Ehrman says know Ephesians."""
 verses = [
   { ref = "Eph.1.1", link = "describes", note = "Paul is named as the author, with no coauthor." },
   { ref = "Eph.3.1", link = "describes", note = "I Paul, a prisoner of Christ Jesus." },
@@ -24,68 +24,68 @@ earliest = 60
 latest = 110
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that Paul did not write Ephesians and that a later follower forged it using Colossians as a model. He gives no date. Both year bounds are the editor's."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 238-246" }]
+Ehrman holds that Paul did not write Ephesians and that a later follower forged it using Colossians as a model. He gives no date, so both year bounds are the editor's."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 238-246" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on dependence on Colossians: "The passage that leaves no doubt is Eph. 6:21–22,""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 239" }]
+Ehrman argues that the author copied Colossians directly, and he finds the clearest sign in the closing greetings: "The passage that leaves no doubt is Eph. 6:21–22,""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 239" }]
   verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "Repeats Colossians 4:7-8." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the consequence: "If Colossians was forged""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 238" }]
+Ehrman draws the consequence of that dependence for Ephesians itself, starting from the premise "If Colossians was forged""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 238" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on style: "nine out of a hundred sentences in the book comprise more than fifty words.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 240" }]
+Ehrman finds the style unlike Paul's, with sentences far longer than he wrote: "nine out of a hundred sentences in the book comprise more than fifty words.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 240" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on realized resurrection: "the real significance of the resurrection of the dead is that it is a spiritual event that has happened (in the past) to believers""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 241" }]
+Ehrman finds that Ephesians treats the resurrection as something already realized, which he sets against Paul's own teaching: "the real significance of the resurrection of the dead is that it is a spiritual event that has happened (in the past) to believers""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 241" }]
   verses = [{ ref = "Eph.2.1-Eph.2.10", link = "background", note = "Made alive and raised with Christ." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the law: "including the claim—key to the teaching of the letter—that Christ had somehow""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 242" }]
+Ehrman finds a difference over the law as well, noting what the letter claims is key to its own teaching: "including the claim—key to the teaching of the letter—that Christ had somehow""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 242" }]
   verses = [{ ref = "Eph.2.15", link = "background", note = "Abolished the law of the commandments." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman points to what he calls unintentional slips showing the author lived after Paul: "in 2:20, the author speaks of the \"apostles\" as a founding group for the church, without any recognition that Paul himself was one of the constituent members of the group." He adds that for Paul, Christ himself is the foundation (1 Corinthians 3:11), not the prophets and apostles."""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 243" }]
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 243" }]
   verses = [{ ref = "Eph.2.20", link = "background", note = "Apostles as a founding group, with Paul not named among them." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the mystery: "But is he not missing something rather crucial?""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 243" }]
+Ehrman presses the same point about the letter's account of the mystery of the gospel, asking: "But is he not missing something rather crucial?""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 243" }]
   verses = [{ ref = "Eph.3.5", link = "background", note = "Revealed to his holy apostles and prophets." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the self-references: "the author makes an inordinate number of self-references""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 243" }]
+Ehrman reads the letter's repeated references to its author as a forger's habit: "the author makes an inordinate number of self-references""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 243" }]
   verses = [{ ref = "Eph.3.1", link = "describes", note = "I Paul, a prisoner." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the author's intent: "He was a follower of Paul, urging a non-Pauline set of theological views, writing later.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 244" }]
+Ehrman sums up what the author was doing: "He was a follower of Paul, urging a non-Pauline set of theological views, writing later.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 244" }]
   verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "I have sent Tychicus to you." }]
 
 [[positions]]
@@ -97,20 +97,20 @@ latest = 62
 held_by = "Markus Barth (named by Ehrman as a supporter of authenticity)"
 summary = """
 Ehrman names Markus Barth as a supporter of Pauline authorship but reports no date for that view. Both year bounds are the editor's, taken from the letter's picture of Paul as a prisoner within his lifetime."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 240, 238" }]
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 240, 238" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman reports Barth on style: "Paul himself is the man who could best afford to write in a non-Paulinistic way.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 240" }]
+Ehrman reports Barth's answer on style, that a different style is no argument against Paul: "Paul himself is the man who could best afford to write in a non-Paulinistic way.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 240" }]
   verses = [{ ref = "Eph.1.3", link = "background", note = "One of the long sentences Ehrman cites." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman answers on the lack of setting: "But this scarcely speaks against Pauline authorship""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 238" }]
+Ehrman answers Barth on the letter's lack of a specific setting, which he says does not count against Paul: "But this scarcely speaks against Pauline authorship""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 238" }]
 
 [[positions]]
 id = "brown-pseudonymous-90s"
@@ -120,13 +120,13 @@ earliest = 90
 latest = 99
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "If by Paul, in the 60s. If pseudonymous (about 80 percent of critical scholarship), in the 90s." He judges it probably by a disciple of Paul who drew on Colossians and some undisputed letters."""
+Raymond Brown judges Ephesians probably the work of a disciple of Paul who drew on Colossians and some undisputed letters. His summary line reads: "If by Paul, in the 60s. If pseudonymous (about 80 percent of critical scholarship), in the 90s.""""
 citations = [{ source = "brown-1997", locator = "ch. 28, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on Ephesians' use of the other letters: "Most scholars would interpret the reuse of Pauline letters in Eph as a more secondary procedure" than Paul refining his own ideas. He dates it to the 90s partly by an echo of Eph 5:25 in Ignatius, ca. 110."""
+Brown reads the way Ephesians uses the other letters as a sign of a later writer. He quotes the view that "Most scholars would interpret the reuse of Pauline letters in Eph as a more secondary procedure" than Paul refining his own ideas. He dates it to the 90s partly by an echo of Eph 5:25 in Ignatius, ca. 110."""
   citations = [{ source = "brown-1997", locator = "ch. 28, Ephesians and Colossians, by whom" }]
   verses = [{ ref = "Eph.5.25", link = "background", note = "Echoed in Ignatius to Polycarp, the control Brown names for a 90s date." }]
 
@@ -156,12 +156,12 @@ earliest = 80
 latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says "the majority of critical scholars are convinced that Paul did not write this letter," and that its author "lived at a later time, perhaps near the end of the first century." The 80-100 bounds are the editor's."""
+Ehrman's textbook says "the majority of critical scholars are convinced that Paul did not write this letter," and that its author "lived at a later time, perhaps near the end of the first century." He gives no exact years, so the span shown, 80 to 100, is the editor's."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 278 approx." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-He notes that the author has believers "not only died with Christ, they have also been raised up with him to enjoy the benefits of a heavenly existence," unlike Paul's undisputed letters."""
+Ehrman notes that the author has believers "not only died with Christ, they have also been raised up with him to enjoy the benefits of a heavenly existence," unlike Paul's undisputed letters."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 278 approx." }]
   verses = [{ ref = "Eph.2.5-Eph.2.6", link = "describes", note = "Made alive and raised up with Christ." }]

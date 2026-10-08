@@ -29,7 +29,7 @@ latest = -1073
 held_by = "Bryant G. Wood"
 summary = """
 In Wood's early-date scheme, Eglon's palace at Jericho dates to about 1300 BC (Judges 3:12-30) and Deborah and Barak to about 1230 BC. Estimates for the start of Jephthah's time as judge run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range runs from the first of these anchors to the last estimate. It is not a claim about where the period ends."""
-citations = [{ source = "thiele-1983-introduction", locator = "p. 26 (page image supplied by the user, 2026-10-07)" }, { source = "wood-2005", locator = "pp. 477, 488" }]
+citations = [{ source = "thiele-1983-introduction", locator = "p. 26" }, { source = "wood-2005", locator = "pp. 477, 488" }]
 
 [[positions]]
 id = "fs-highland-settlement"

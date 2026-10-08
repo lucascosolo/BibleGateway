@@ -21,13 +21,13 @@ earliest = 55
 latest = 63
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "ca. 55 if from Ephesus; 58–60 if from Caesarea (unlikely); 61–63 if from Rome." On authenticity, unity and integrity: "Not seriously disputed." Years 55-63 span his three options, with 55 as his lead date."""
+Brown, a critical scholar, dates the letter by where Paul was held: "ca. 55 if from Ephesus; 58–60 if from Caesarea (unlikely); 61–63 if from Rome." On authenticity, unity and integrity he writes: "Not seriously disputed." The span of 55 to 63 shown here covers his three options, with 55 as his lead date."""
 citations = [{ source = "brown-1997", locator = "ch. 21, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown notes that several of the factors favouring Ephesus for Philippians are met here too: "if Ephesus was the more probable candidate there, it might be considered that here as well.""""
+Brown argues that Ephesus deserves a hearing here as it does for Philippians, since several of the factors favouring Ephesus for Philippians are met here too: "if Ephesus was the more probable candidate there, it might be considered that here as well.""""
   citations = [{ source = "brown-1997", locator = "ch. 21, Place of writing" }]
   verses = [{ ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul in prison." }]
 
@@ -57,5 +57,5 @@ earliest = 50
 latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook counts Philemon among the undisputed letters, written by Paul from prison, location unknown. It gives no year; the 50-59 bounds are the editor's reading of his "50s of the Common Era.""""
+Ehrman's textbook counts Philemon among the undisputed letters, written by Paul from prison, location unknown. It gives no year, so the span of 50 to 59 shown here is the editor's reading of his "50s of the Common Era.""""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 250 approx." }]

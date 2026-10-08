@@ -42,7 +42,7 @@ earliest = 49
 latest = 49
 held_by = "Raymond E. Brown (Traditional Chronology)"
 summary = """
-Brown: "a meeting was held in Jerusalem ca. 49" (Acts 15:1-29 and Gal 2:1-10). His Table 6 lists the Jerusalem conference under 49."""
+Brown, following the traditional chronology of Paul's career, dates the council to the year 49: "a meeting was held in Jerusalem ca. 49" (Acts 15:1-29 and Gal 2:1-10). His Table 6 lists the Jerusalem conference under that year."""
 citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
 
   [[positions.arguments]]

@@ -4,7 +4,7 @@ kind = "literary-text"
 status = "draft"
 language = "Greek (surviving in Latin)"
 summary = """
-Irenaeus is writing about the number of the beast. He says of the Apocalypse: "For that was seen no very long time since, but almost in our day, towards the end of Domitian's reign." This is the Roberts and Rambaut translation, read directly on New Advent."""
+Irenaeus is writing about the number of the beast when he says of the Apocalypse: "For that was seen no very long time since, but almost in our day, towards the end of Domitian's reign." This is the Roberts and Rambaut translation, read directly on New Advent."""
 citations = [
   { source = "newadvent-irenaeus-ah-5", locator = "5.30.3" },
 ]

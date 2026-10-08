@@ -18,7 +18,7 @@ summary = """
 The Babylonian Chronicle dates the seizure of the city and the capture of its king to the second day of Addaru, in Nebuchadnezzar's seventh year. Thiele converts the date: Nebuchadnezzar "besieged Jerusalem and captured the city on 2 Adar (Saturday, 16 March) 597", after an expedition begun in Kislev (17 December 598 to 15 January 597)."""
 held_by = "Edwin R. Thiele"
 citations = [
-  { source = "thiele-1983", locator = "p. 186; p. 180, table of fixed dates (page images supplied by the user, 2026-10-07)" },
+  { source = "thiele-1983", locator = "p. 186; p. 180, table of fixed dates" },
   { source = "grayson-1975", locator = "Chronicle 5" },
   { source = "livius-abc5" },
 ]

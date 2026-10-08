@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-David counts the people and a plague follows. David then buys the threshing-floor and builds an altar there. The place is later linked with the temple site. The Bible gives no year of his reign."""
+David counts the people and a plague follows. David then buys the threshing-floor and builds an altar there, and the place is later linked with the temple site. The Bible gives no year of his reign for the census."""
 verses = [
   { ref = "2Sam.24.1-2Sam.24.25", link = "describes", note = "The census, the plague and the purchase of the threshing-floor" },
   { ref = "1Chr.21.1-1Chr.22.1", link = "describes", note = "The parallel in Chronicles. Chapter 22:1 names it the site of the house" },
@@ -20,5 +20,5 @@ earliest = -1009
 latest = -969
 held_by = "Rodger C. Young"
 summary = """
-These bounds are only the limits of David's reign. The reign is Young's conjecture of forty years in Table 2 (1009t?-969t?). No source consulted dates the census within it."""
+Rodger Young gives no date for the census, so these bounds are only the limits of David's reign. That reign is Young's conjecture of forty years in Table 2 (1009t?-969t?), and no source consulted dates the census within it."""
 citations = [{ source = "young-2005", locator = "Table 2, p. 246" }]

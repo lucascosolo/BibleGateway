@@ -32,12 +32,12 @@ events = [
 artifact = "one-clement-5"
 relation = "partially-corroborates"
 note = """
-Written from Rome, it names Peter and Paul as righteous pillars who were persecuted to death. It gives no place or date for his death."""
+Written from Rome, the letter names Peter and Paul as righteous pillars who were persecuted to death, but it gives no place or date for his death."""
 citations = [{ source = "brown-1997", locator = "ch. 33, The Background" }]
 
 [[attestations]]
 artifact = "eusebius-he-2-25"
 relation = "partially-corroborates"
 note = """
-Eusebius records the tradition that Peter and Paul both died at Rome under Nero. It is a late summary of earlier tradition."""
+Eusebius records the tradition that Peter and Paul both died at Rome under Nero, as a late summary of earlier tradition."""
 citations = [{ source = "brown-1997", locator = "ch. 33, The Background" }]

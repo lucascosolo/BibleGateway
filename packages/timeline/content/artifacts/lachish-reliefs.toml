@@ -5,7 +5,7 @@ status = "draft"
 made = { earliest = -700, latest = -692 }
 language = "Akkadian (captions)"
 summary = """
-Carved wall panels from Room XXXVI of Sennacherib's South-West Palace at Nineveh. They show the Assyrian siege and capture of the Judahite city of Lachish. You can see siege ramps and engines, the fall of the city, and its people led away as captives."""
+These carved wall panels from Room XXXVI of Sennacherib's South-West Palace at Nineveh show the Assyrian siege and capture of the Judahite city of Lachish: siege ramps and engines, the fall of the city, and its people led away as captives."""
 discovered = { place = "South-West Palace, Nineveh (excavated by Austen Henry Layard)" }
 held_by = { institution = "British Museum", accession = "ME 124904–124915" }
 citations = [{ source = "bm-lachish-reliefs" }]

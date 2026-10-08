@@ -3,7 +3,7 @@ kind = "chronology"
 title = "Ezra's seventh year: 458 or 398 BCE?"
 status = "draft"
 summary = """
-Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The sources read give three views. It was the seventh year of Artaxerxes I (458/457 BCE). It was the seventh year of Artaxerxes II (398 BCE). Or the number was copied wrongly."""
+Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes, and the sources read give three views: the seventh year of Artaxerxes I (458/457 BCE), the seventh year of Artaxerxes II (398 BCE), or a copyist's wrong number."""
 events = ["ezra-mission"]
 verses = [
   { ref = "Ezra.7.7", link = "dates" },
@@ -15,13 +15,13 @@ citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
 [[views]]
 label = "458/457 BCE (Artaxerxes I)"
 text = """
-Yamauchi holds that Artaxerxes I, "the traditional view", is correct. Ezra arrived in 458 (457). Wikipedia calls this the most widely accepted view."""
+Yamauchi holds that Artaxerxes I, "the traditional view", is correct, so Ezra arrived in 458 (457). Wikipedia calls this the most widely accepted view."""
 citations = [{ source = "preceptaustin-ezra-7" }, { source = "wikipedia-ezra" }]
 
 [[views]]
 label = "398 BCE (Artaxerxes II)"
 text = """
-On this view Nehemiah came before Ezra. Ezra arrived in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works)."""
+On this view Nehemiah came before Ezra, and Ezra arrived in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works)."""
 citations = [{ source = "wikipedia-albin-van-hoonacker" }, { source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
 
 [[views]]
@@ -33,5 +33,5 @@ citations = [{ source = "preceptaustin-ezra-7" }]
 [[views]]
 label = "Scribal error; Ezra and Nehemiah contemporaries"
 text = """
-A last group of scholars thinks "the seventh year" is a copyist's mistake. They treat Ezra and Nehemiah as men who lived at the same time."""
+A last group of scholars thinks "the seventh year" is a copyist's mistake, and so treats Ezra and Nehemiah as men who lived at the same time."""
 citations = [{ source = "wikipedia-ezra" }]

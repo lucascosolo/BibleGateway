@@ -22,7 +22,7 @@ earliest = -1200
 latest = -1001
 summary = """
 This range comes from one object. It is not a date for Samson. A round seal about 15 mm across, found at Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion. That suggests hero stories like Samson's were told then. Scholars say plainly that it does not prove Samson was a real person."""
-citations = [{ source = "thiele-1983-introduction", locator = "p. 26 (page image supplied by the user, 2026-10-07)" }, { source = "wikipedia-samson" }]
+citations = [{ source = "thiele-1983-introduction", locator = "p. 26" }, { source = "wikipedia-samson" }]
 
 [[positions]]
 id = "ussher-1155"

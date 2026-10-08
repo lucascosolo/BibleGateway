@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "draft"
 summary = """
-The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera at the Kishon. Sisera served Jabin, king of Hazor. Jael kills Sisera, and Judges 5 celebrates the victory in verse. The date is disputed, from the late 13th century to the 11th."""
+The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera at the Kishon. Sisera served Jabin, king of Hazor; Jael kills him, and Judges 5 celebrates the victory in verse. The date is disputed, from the late 13th century to the 11th."""
 verses = [
   { ref = "Judg.4.1-Judg.4.24", link = "describes", note = "Deborah, Barak, Sisera and Jael: the story in prose" },
   { ref = "Judg.5.1-Judg.5.31", link = "describes", note = "The Song of Deborah: the story in poetry" },
@@ -22,7 +22,7 @@ earliest = -1230
 latest = -1230
 held_by = "Bryant G. Wood"
 summary = """
-Wood has Joshua destroying an earlier Hazor about 1400 BC. He has Deborah and Barak finishing the job about 1230 BC, the date when the Late Bronze Age city of Hazor was destroyed."""
+Bryant Wood has Joshua destroying an earlier Hazor about 1400 BC, with Deborah and Barak finishing the job about 1230 BC, the date when the Late Bronze Age city of Hazor was destroyed."""
 citations = [{ source = "wood-2005", locator = "pp. 476–477, 488" }]
 
 [[positions]]
@@ -44,5 +44,5 @@ earliest = -1285
 latest = -1285
 held_by = "James Ussher"
 summary = """
-Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim is under 1285 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
+Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim is under 1285 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths, so it is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "paragraph 351" }]

@@ -6,7 +6,7 @@ confidence = "contested"
 status = "draft"
 books = ["Jas"]
 summary = """
-This asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem. Ehrman argues this James did not write it, and that it was written after his death, which he puts "presumably sometime in the 60s". He places its concerns in the post-Pauline church "at the end of the first century". Both year bounds are the editor's reading of those phrases. He calls it a counterforgery aimed at a later form of Pauline teaching."""
+This entry asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem, but Ehrman argues that this James did not write it. On his view it was written after James's death, which he puts "presumably sometime in the 60s", by someone addressing the post-Pauline church "at the end of the first century". The year span shown here follows those two phrases, and Ehrman calls the result a counterforgery aimed at a later form of Pauline teaching."""
 verses = [
   { ref = "Jas.1.1", link = "describes", note = "The letter names James as its author." },
   { ref = "Jas.2.14-Jas.2.26", link = "background", note = "Ehrman: the principal polemic against a Pauline position on faith and works." },
@@ -23,69 +23,69 @@ earliest = 60
 latest = 100
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that James the brother of Jesus neither wrote nor commissioned the letter. The lower bound of 60 is the editor's, from "presumably sometime in the 60s". The upper bound of 100 is the editor's, from "end of the first century"."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 382, 383, 390" }]
+Ehrman holds that James the brother of Jesus neither wrote nor commissioned the letter. He gives no exact years, so the span shown here, 60 to 100, follows his phrases "presumably sometime in the 60s" for the earliest possible date and "end of the first century" for the latest."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 382, 383, 390" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the language: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 379" }]
+Ehrman argues from the letter's Greek that it is not the work of the James the Gospels describe: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 379" }]
   verses = [{ ref = "Jas.1.1", link = "describes", note = "The named author." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman concludes: "it is virtually impossible to imagine this book coming from the pen of James""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 380" }]
+Ehrman draws the conclusion that follows from this: "it is virtually impossible to imagine this book coming from the pen of James""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 380" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on what is missing: "There is nothing about ritual. Or cult. Or kosher food laws. Or Sabbath or feast days. Or circumcision.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 381" }]
+Ehrman points to what the letter leaves out, which he finds odd for the leader of a Law-observant church: "There is nothing about ritual. Or cult. Or kosher food laws. Or Sabbath or feast days. Or circumcision.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 381" }]
   verses = [{ ref = "Jas.2.8-Jas.2.12", link = "background", note = "The Law here is love and the Decalogue." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on wealth: "Another indication of a late date is the concern over ostentatious wealth in the community.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+Ehrman reads the letter's alarm about ostentatious wealth as a sign of a later community: "Another indication of a late date is the concern over ostentatious wealth in the community.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
   verses = [{ ref = "Jas.5.1-Jas.5.6", link = "background", note = "Charge against the rich." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on delay: "This seems to indicate that a good deal of time has passed in the expectation of the parousia""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+Ehrman takes the letter's call to wait patiently for the Lord's coming as evidence that years have gone by: "This seems to indicate that a good deal of time has passed in the expectation of the parousia""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
   verses = [{ ref = "Jas.5.8-Jas.5.9", link = "background", note = "The Lord's coming is at hand." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on church order: "“elders” appear to be in charge of the community (5:14)""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+Ehrman notes that the letter's church order looks later than the Jerusalem of James's day: "“elders” appear to be in charge of the community (5:14)""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
   verses = [{ ref = "Jas.5.14", link = "background", note = "Elders." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the claim: "This book, in short, claims to be written by someone who did not write it.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+Ehrman sums up the problem of authorship plainly: "This book, in short, claims to be written by someone who did not write it.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
   verses = [{ ref = "Jas.1.1", link = "describes", note = "The authorial claim." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on dependence on Paul: "The book of James, in other words, is a counterforgery.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 385" }]
+Ehrman reads the argument about faith and works as a reply to Paul, and so as a forgery written in James's name: "The book of James, in other words, is a counterforgery.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 385" }]
   verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "Faith and works." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman on the setting: "the views the book counters are easily situated in the post-Pauline situation of the church at the end of the first century.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 390" }]
+Ehrman concludes that the opponents the letter answers belong to a later time: "the views the book counters are easily situated in the post-Pauline situation of the church at the end of the first century.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 390" }]
 
 [[positions]]
 id = "james-brother-of-jesus"
@@ -95,33 +95,33 @@ earliest = 45
 latest = 69
 held_by = "Luke Timothy Johnson (named by Ehrman as a supporter of authenticity)"
 summary = """
-Ehrman names Luke Timothy Johnson as a supporter of authenticity. Both year bounds are the editor's: the upper follows Ehrman's "sometime in the 60s" for James's death, the lower is arbitrary."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 379, 384" }]
+Ehrman names Luke Timothy Johnson as a supporter of authenticity, meaning that James himself wrote the letter. The span shown here is the editor's: the upper end follows Ehrman's "sometime in the 60s" for James's death, and the lower end is an arbitrary early limit."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 379, 384" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman reports Johnson: "Luke Johnson has made a strong case that there is no hard evidence of real animosity between the historical James and the historical Paul""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 383" }]
+Ehrman reports that Johnson sees no real quarrel between James and Paul, which would make a reply to Paul unnecessary: "Luke Johnson has made a strong case that there is no hard evidence of real animosity between the historical James and the historical Paul""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman rejects Johnson on Paul: "Johnson is wrong to argue that “there is absolutely no reason to read this section [i.e., 2:14–26] as particularly responsive to Paul.”""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 384" }]
+Ehrman rejects Johnson's reading of the passage on faith and works: "Johnson is wrong to argue that “there is absolutely no reason to read this section [i.e., 2:14–26] as particularly responsive to Paul.”""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 384" }]
   verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "The passage at issue." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman on literacy: "The first, as already mentioned, is that James of Nazareth could almost certainly not write.""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 379" }]
+Ehrman adds a second objection, about whether James could have written at all: "The first, as already mentioned, is that James of Nazareth could almost certainly not write.""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 379" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Eusebius on James, quoted by Ehrman: "Admittedly its authenticity is doubted""""
-  citations = [{ source = "ehrman-2013", locator = "PDF pp. 117" }]
+Ehrman also cites the church historian Eusebius, who shows that the early church itself doubted the letter: "Admittedly its authenticity is doubted""""
+  citations = [{ source = "ehrman-2013", locator = "ebook pp. 117" }]
 
 [[positions]]
 id = "brown-70-110"
@@ -131,13 +131,13 @@ earliest = 70
 latest = 110
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "If pseudonymous, after the death of James ca. 62, in the range 70–110; most likely in the 80s or 90s." Most think a disciple wrote it, admiring James as the authority loyal to Judaism."""
+Brown, a critical scholar, states his dating in one line: "If pseudonymous, after the death of James ca. 62, in the range 70–110; most likely in the 80s or 90s." He adds that most scholars think a disciple wrote it, admiring James as the authority loyal to Judaism."""
 citations = [{ source = "brown-1997", locator = "ch. 34, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown: the offices of teacher (3:1) and presbyters with a "quasiliturgical" role (5:14–15) "also suggests a late 1st-century date"."""
+Brown argues that the offices of teacher (3:1) and of presbyters with a "quasiliturgical" role (5:14–15) belong to a later church, since this "also suggests a late 1st-century date"."""
   citations = [{ source = "brown-1997", locator = "ch. 34, By and to whom, where, and when" }]
   verses = [{ ref = "Jas.5.14", link = "dates", note = "Presbyters with a liturgical role." }]
 
@@ -149,7 +149,7 @@ earliest = 40
 latest = 46
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to James the brother of the Lord, probably writing from Jerusalem while he led the church there. They date the letter before the Jerusalem Council of 48 or 49 CE, "sometime in the early or middle 40s". The year bounds are the editor's reading of that phrase."""
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to James the brother of the Lord, probably writing from Jerusalem while he led the church there. They date the letter before the Jerusalem Council of 48 or 49 CE, "sometime in the early or middle 40s". The year span shown here is the editor's reading of that phrase."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 621–623, 627–628" }]
 
   [[positions.arguments]]
@@ -167,7 +167,7 @@ earliest = 80
 latest = 110
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook says "there is little reason to think that the author is claiming to be that particular James", the brother of Jesus, since James was a common name. He gives no date in the chapter text; his timeline chart places the General Epistles at "80-110", and the bounds here are that range. Same view as his 2013 book, in textbook form."""
+Ehrman's textbook argues that the author did not mean to be the brother of Jesus, since James was a common name: "there is little reason to think that the author is claiming to be that particular James". He gives no date in the chapter text, so the span shown here follows his timeline chart, which places the General Epistles at "80-110". This is the same view as his 2013 book, in textbook form."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 323 approx." }]
 
   [[positions.arguments]]

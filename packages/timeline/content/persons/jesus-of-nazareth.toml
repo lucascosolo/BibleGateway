@@ -3,7 +3,7 @@ name = "Jesus of Nazareth"
 also_known_as = ["Jesus Christ"]
 role = "Jewish teacher from Galilee, crucified under Pontius Pilate"
 summary = """
-Most historians of antiquity, Bart Ehrman among them, conclude that Jesus existed and was crucified under Pontius Pilate. They say this whatever they make of the Gospels' other claims. Two Roman-era writers outside the Christian tradition mention him. Tacitus does so directly. Josephus does so in two passages, and later Christian copyists expanded one of them."""
+Most historians of antiquity, Bart Ehrman among them, conclude that Jesus existed and was crucified under Pontius Pilate, whatever they make of the Gospels' other claims. Two Roman-era writers outside the Christian tradition mention him: Tacitus does so directly, and Josephus does so in two passages, one of which later Christian copyists expanded."""
 status = "draft"
 verses = [{ ref = "Mark.15.1-Mark.15.15", link = "describes", note = "handed over by Pilate" }]
 citations = [{ source = "ehrman-2012" }]
@@ -12,14 +12,14 @@ citations = [{ source = "ehrman-2012" }]
 artifact = "tacitus-annals-15-44"
 relation = "corroborates"
 note = """
-Names "Christus" as executed by the procurator Pontius Pilate in the reign of Tiberius. Tacitus was a hostile Roman source, writing about Christians, not for them."""
+Tacitus names "Christus" as executed by the procurator Pontius Pilate in the reign of Tiberius. He was a hostile Roman source, writing about Christians, not for them."""
 citations = [{ source = "tacitus-annals-15-latin", locator = "15.44" }]
 
 [[attestations]]
 artifact = "josephus-testimonium-flavianum"
 relation = "partially-corroborates"
 note = """
-In its original form it probably mentions Jesus and his crucifixion under Pilate. But the passage as handed down has Christian additions. So how much of it Josephus wrote is disputed. Most scholars keep a rebuilt core."""
+In its original form the passage probably mentions Jesus and his crucifixion under Pilate, but the text as handed down has Christian additions, so how much of it Josephus wrote is disputed. Most scholars keep a rebuilt core."""
 citations = [
   { source = "meier-1991", locator = "ch. 3" },
   { source = "wikipedia-josephus-on-jesus" },
@@ -29,5 +29,5 @@ citations = [
 artifact = "josephus-antiquities-20-200"
 relation = "corroborates"
 note = """
-Mentions in passing James as "the brother of Jesus who was called Christ". Almost all scholars accept this passage as genuine."""
+Josephus mentions in passing James as "the brother of Jesus who was called Christ", and almost all scholars accept this passage as genuine."""
 citations = [{ source = "wikipedia-josephus-on-jesus" }]

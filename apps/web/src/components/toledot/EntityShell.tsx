@@ -5,10 +5,9 @@ import type { ReviewStatus } from "@/lib/db/timeline";
 import { yearOffset } from "@/lib/timeline/strip-layout";
 import { formatRange, spanYears } from "@/lib/timeline/years";
 
-import { DraftNotice } from "./DraftNotice";
 
 /** The frame every Toledot entity page shares: the way back, the title, its facts line, the draft disclosure. */
-export function EntityShell({ title, meta, status, children }: { title: string; meta: ReactNode; status: ReviewStatus; children: ReactNode }) {
+export function EntityShell({ title, meta, children }: { title: string; meta: ReactNode; status?: ReviewStatus; children: ReactNode }) {
   return (
     <article className="toledot-entity">
       <nav aria-label="Breadcrumb" className="toledot-entity__crumb">
@@ -17,7 +16,6 @@ export function EntityShell({ title, meta, status, children }: { title: string; 
       <header className="toledot-entity__header">
         <h1 className="toledot-entity__title">{title}</h1>
         <p className="toledot-entity__meta">{meta}</p>
-        {status === "draft" ? <DraftNotice /> : null}
       </header>
       {children}
     </article>

@@ -3,7 +3,7 @@ kind = "historical"
 title = "When was Ruth written, and is it history?"
 status = "draft"
 summary = """
-Ruth is set in the time of the judges. The book itself is generally dated to the Persian period. When it was written is a different question from when its events took place."""
+Ruth is set in the time of the judges, but the book itself is generally dated to the Persian period. When it was written is a different question from when its events took place."""
 events = ["ruth"]
 verses = [{ ref = "Ruth.1.1", link = "describes" }]
 citations = [{ source = "wikipedia-book-of-ruth" }]
@@ -11,13 +11,13 @@ citations = [{ source = "wikipedia-book-of-ruth" }]
 [[views]]
 label = "Written in the Persian period"
 text = """
-The book was likely written in Biblical Hebrew during the Persian period (c. 550–330 BCE). Some scholars propose the 5th century BCE. They read Ruth's non-Israelite background, and the stress on welcoming foreigners, as signs of that setting."""
+The book was likely written in Biblical Hebrew during the Persian period (c. 550–330 BCE). Some scholars propose the 5th century BCE, reading Ruth's non-Israelite background and the stress on welcoming foreigners as signs of that setting."""
 citations = [{ source = "wikipedia-book-of-ruth" }]
 
 [[views]]
 label = "Set in the days of the judges"
 text = """
-The story places itself in the time of the judges and ends with the family tree of David. According to Josephus, Boaz lived at the time of Eli. Some rabbis identify Boaz with the judge Ibzan of Bethlehem."""
+The story places itself in the time of the judges and ends with the family tree of David. According to Josephus, Boaz lived at the time of Eli, and some rabbis identify Boaz with the judge Ibzan of Bethlehem."""
 citations = [
   { source = "wikipedia-book-of-ruth" },
   { source = "wikipedia-boaz" },

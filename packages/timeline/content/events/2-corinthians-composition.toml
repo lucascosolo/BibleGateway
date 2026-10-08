@@ -6,7 +6,7 @@ confidence = "firm"
 status = "draft"
 books = ["2Cor"]
 summary = """
-Paul wrote 2 Corinthians from Macedonia to the Corinthian church, after Titus brought word of how it had received Paul's earlier tearful letter. Raymond Brown dates it to late summer or early autumn 57. Its authorship is not seriously disputed, though most scholars think it joins two to five separate letters. A revisionist chronology would put it in 55-56."""
+Paul wrote 2 Corinthians from Macedonia to the Corinthian church, after Titus brought word of how it had received Paul's earlier tearful letter. Raymond Brown dates it to late summer or early autumn 57. Its authorship is not seriously disputed, though most scholars think the book joins two to five separate letters, and a revisionist chronology would put it in 55-56."""
 verses = [
   { ref = "2Cor.1.1", link = "describes", note = "Paul and Timothy write to the church of God at Corinth." },
   { ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Paul leaves Troas for Macedonia to meet Titus, the journey that places the writing in Macedonia." },
@@ -21,13 +21,13 @@ earliest = 57
 latest = 57
 held_by = "Raymond E. Brown"
 summary = """
-Brown's DATE line: "Late summer/early autumn 57 from Macedonia (55/56 in the Revisionist Chronology)." On authenticity: "Not seriously disputed." On unity: "Most scholars think that several (two to five) letters have been combined.""""
+Raymond Brown dates 2 Corinthians to late summer or early autumn 57, written in Macedonia, and gives the revisionist alternative of 55/56. His summary line reads: "Late summer/early autumn 57 from Macedonia (55/56 in the Revisionist Chronology)." He accepts Paul as author ("Not seriously disputed.") but notes that scholars doubt the book is a single letter: "Most scholars think that several (two to five) letters have been combined.""""
 citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown on the journey behind the letter: Paul "interrupted his preaching ministry at Troas in order to cross over to Macedonia to hear from Titus the effect of the tearful letter.""""
+Brown takes the setting from the journey behind the letter. Paul "interrupted his preaching ministry at Troas in order to cross over to Macedonia to hear from Titus the effect of the tearful letter.""""
   citations = [{ source = "brown-1997", locator = "ch. 23, General Analysis of the Message" }]
   verses = [{ ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Troas to Macedonia." }]
 
@@ -39,13 +39,13 @@ earliest = 55
 latest = 56
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that 2 Corinthians is Paul's and reject partition theories. They say it was "complete within the next year or so" after 1 Corinthians, with Paul by then in Macedonia, and note that the dates could be moved a year earlier."""
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that 2 Corinthians is Paul's own and reject partition theories. They say it was "complete within the next year or so" after 1 Corinthians, with Paul by then in Macedonia, and note that all the dates could be moved a year earlier."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 448-449" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Carson and Moo place the writing in Macedonia from Paul's own itinerary, in 2 Corinthians 2:12-13, 7:5, 8:1-5 and 9:2."""
+Carson and Moo place the writing in Macedonia from Paul's own itinerary, which they find in 2 Corinthians 2:12-13, 7:5, 8:1-5 and 9:2."""
   citations = [{ source = "carson-moo-2005", locator = "p. 448" }]
   verses = [{ ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Troas to Macedonia." }, { ref = "2Cor.7.5", link = "dates", note = "In Macedonia." }]
 
@@ -57,5 +57,5 @@ earliest = 50
 latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook counts 2 Corinthians among the undisputed letters, written by Paul himself in the 40s-50s period of his activity, and treats it as possibly a combination of letters (chapters 10-13 partly the "painful" letter). It gives no single year; the 50-59 bounds are the editor's."""
+Ehrman's textbook counts 2 Corinthians among the undisputed letters, written by Paul himself in the 40s-50s period of his activity, and treats it as possibly a combination of letters, with chapters 10-13 partly the "painful" letter. It gives no single year; the span shown here, 50 to 59, is the editor's."""
 citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 234 approx." }]

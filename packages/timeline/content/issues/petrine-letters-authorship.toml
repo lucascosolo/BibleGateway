@@ -3,21 +3,21 @@ kind = "historical"
 title = "Did Peter write the letters in his name?"
 status = "draft"
 summary = """
-Two New Testament letters name Peter as their author. Ehrman argues neither was written by Peter. Only 1 and 2 Peter are entered here. Jude has not been entered."""
+Two New Testament letters name Peter as their author, and Ehrman argues that neither was written by Peter. Only 1 and 2 Peter are entered here; Jude has not been entered."""
 events = ["1-peter-composition", "2-peter-composition"]
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 293, 295" }]
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 293, 295" }]
 
 [[views]]
 label = "Forgeries written after Peter's death"
 text = """
 Ehrman says 2 Peter is, "more than any other New Testament writing", widely recognised as forged. He argues 1 Peter is forged too, which "would necessarily make 2 Peter a forgery as well"."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 293, 295" }]
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 293, 295" }]
 
 [[views]]
 label = "1 Peter is genuine (scholars not named)"
 text = """
-Ehrman calls 1 Peter "the one book scholars have been most inclined to consider authentic". He names no scholar for the view in the passages read."""
-citations = [{ source = "ehrman-2013", locator = "PDF pp. 294" }]
+Ehrman calls 1 Peter "the one book scholars have been most inclined to consider authentic", although in the passages read he names no scholar for that view."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 294" }]
 
 [[views]]
 label = "Carson and Moo: Peter wrote both letters"

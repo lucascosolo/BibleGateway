@@ -2,7 +2,7 @@ id = "jehoiachin"
 name = "Jehoiachin"
 role = "king of Judah"
 summary = """
-Jehoiachin was king of Judah for three months. He surrendered Jerusalem to Nebuchadnezzar in 597 BCE and was taken to Babylon. 2 Kings ends with him released from prison and given a daily allowance. Babylonian ration lists name him as king of Judah, receiving oil in Babylon. Young dates the capture, using the Babylonian Chronicle, to 2 Adar 597 BCE."""
+Jehoiachin was king of Judah for three months. He surrendered Jerusalem to Nebuchadnezzar in 597 BCE and was taken to Babylon, and 2 Kings ends with him released from prison and given a daily allowance. Babylonian ration lists name him as king of Judah, receiving oil in Babylon. Young dates the capture, using the Babylonian Chronicle, to 2 Adar 597 BCE."""
 status = "draft"
 verses = [
   { ref = "2Kgs.24.8-2Kgs.24.17", link = "describes" },
@@ -18,7 +18,7 @@ citations = [
 artifact = "jehoiachin-ration-tablet"
 relation = "corroborates"
 note = """
-Lists oil rations for "Ya'u-kinu, king of the land of Yahudu" and his five sons in Babylon. This is the captive king of 2 Kings 24:15 and 25:27–30, still called king."""
+The tablet lists oil rations for "Ya'u-kinu, king of the land of Yahudu" and his five sons in Babylon. This is the captive king of 2 Kings 24:15 and 25:27–30, still called king."""
 citations = [
   { source = "smb-vat-16378" },
   { source = "weidner-1939", locator = "pp. 923–935" },
@@ -28,5 +28,5 @@ citations = [
 artifact = "babylonian-chronicle-abc5"
 relation = "consistent"
 note = """
-Records that Nebuchadnezzar "captured the king" of Jerusalem in 597 BCE and appointed a king of his own choice. It names neither man. It fits Jehoiachin's surrender and Zedekiah's installation, but does not name him."""
+The Chronicle records that Nebuchadnezzar "captured the king" of Jerusalem in 597 BCE and appointed a king of his own choice. It names neither man, but it fits Jehoiachin's surrender and Zedekiah's installation."""
 citations = [{ source = "livius-abc5" }]

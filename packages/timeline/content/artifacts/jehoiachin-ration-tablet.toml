@@ -5,7 +5,7 @@ status = "draft"
 made = { earliest = -595, latest = -570 }
 language = "Akkadian (cuneiform)"
 summary = """
-A clay tablet from Babylon, written in cuneiform, listing oil rations given to foreign captives. One entry is "Ya'u-kinu, king of the land of Yahudu". That is Jehoiachin, king of Judah. Five of his sons are listed too. Ernst Weidner published it in 1939."""
+A clay tablet from Babylon, written in cuneiform, lists oil rations given to foreign captives. One entry is "Ya'u-kinu, king of the land of Yahudu", that is Jehoiachin, king of Judah, and five of his sons are listed too. Ernst Weidner published it in 1939."""
 discovered = { place = "Babylon" }
 held_by = { institution = "Vorderasiatisches Museum, Berlin", accession = "VAT 16378" }
 citations = [

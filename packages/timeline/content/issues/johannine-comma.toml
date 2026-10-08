@@ -16,5 +16,5 @@ citations = [{ source = "brown-1997", locator = "ch. 12, n. 14" }]
 [[views]]
 label = "A Latin theological gloss, not John's text"
 text = """
-Brown's judgment is that the Comma is a "3d–4th-century Latin theological gloss". He says it represents dogmatic trinitarian reflection on the shorter original text. So the passage is read without it, and the rest of 1 John has no additions."""
+Brown's judgment is that the Comma is a "3d–4th-century Latin theological gloss", the product of dogmatic trinitarian reflection on the shorter original text. The passage is therefore read without it, and the rest of 1 John has no additions."""
 citations = [{ source = "brown-1997", locator = "ch. 12, Summary of Basic Information (Integrity) and n. 14" }]
