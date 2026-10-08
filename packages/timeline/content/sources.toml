@@ -1276,3 +1276,34 @@ kind = "web"
 author = "Raanan Eichler"
 title = "Gender Equality at Creation: Was Eve Made from Adam's Rib or Side?"
 url = "https://www.thetorah.com/article/gender-equality-at-creation"
+
+[[source]]
+id = "metzger-textual-commentary"
+kind = "book"
+author = "Bruce M. Metzger"
+title = "A Textual Commentary on the Greek New Testament, second edition"
+publisher = "Deutsche Bibelgesellschaft, Stuttgart"
+year = 1994
+
+[[source]]
+id = "ehrman-2006-studies"
+kind = "book"
+author = "Bart D. Ehrman"
+title = "Studies in the Textual Criticism of the New Testament (New Testament Tools and Studies 33)"
+publisher = "Brill, Leiden"
+year = 2006
+
+[[source]]
+id = "hixson-gurry-2019"
+kind = "book"
+author = "Elijah Hixson and Peter J. Gurry, eds."
+title = "Myths and Mistakes in New Testament Textual Criticism"
+publisher = "IVP Academic, Downers Grove"
+year = 2019
+
+[[source]]
+id = "vanhoozer-2010-inerrancy"
+kind = "web"
+author = "Kevin J. Vanhoozer"
+title = "Inerrancy of Scripture (Knowing & Doing, Spring 2010)"
+url = "https://www.cslewisinstitute.org/resources/inerrancy-of-scripture/"
