@@ -7,18 +7,18 @@ status = "draft"
 summary = """
 Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue)."""
 verses = [
-  { ref = "Exod.19.1-Exod.19.25", link = "describes", note = "arrival at Sinai in the third month; God appears on the mountain" },
-  { ref = "Exod.20.1-Exod.20.21", link = "describes", note = "the Ten Commandments" },
-  { ref = "Exod.21.1-Exod.23.33", link = "describes", note = "the Book of the Covenant, a set of laws" },
-  { ref = "Exod.24.1-Exod.24.18", link = "describes", note = "the covenant is sealed; Moses goes up the mountain" },
-  { ref = "Exod.31.18", link = "describes", note = "the two stone tablets" },
-  { ref = "Exod.32.1-Exod.34.35", link = "describes", note = "the golden calf, and the tablets made again" },
-  { ref = "Deut.5.1-Deut.5.22", link = "alludes", note = "Moses recalls the covenant at Horeb, and the Ten Commandments" },
-  { ref = "Neh.9.13-Neh.9.14", link = "alludes", note = "You came down on Mount Sinai and gave them right rules and the Sabbath" },
-  { ref = "Ps.68.7-Ps.68.8", link = "alludes", note = "the earth shook at God's presence, and Sinai itself before God" },
-  { ref = "Acts.7.37-Acts.7.44", link = "alludes", note = "Stephen: Moses received living words at Sinai" },
-  { ref = "Gal.3.17-Gal.3.19", link = "alludes", note = "the law came 430 years after the promise to Abraham" },
-  { ref = "Heb.12.18-Heb.12.21", link = "alludes", note = "You have not come to a mountain that can be touched" },
+  { ref = "Exod.19.1-Exod.19.25", link = "describes", note = "Exodus describes the arrival at Sinai in the third month, where God appears on the mountain." },
+  { ref = "Exod.20.1-Exod.20.21", link = "describes", note = "Exodus gives the Ten Commandments at Sinai." },
+  { ref = "Exod.21.1-Exod.23.33", link = "describes", note = "Exodus sets out the Book of the Covenant, a set of laws." },
+  { ref = "Exod.24.1-Exod.24.18", link = "describes", note = "Exodus tells how the covenant is sealed and Moses goes up the mountain." },
+  { ref = "Exod.31.18", link = "describes", note = "Exodus speaks of the two stone tablets." },
+  { ref = "Exod.32.1-Exod.34.35", link = "describes", note = "Exodus tells of the golden calf and of the tablets made again." },
+  { ref = "Deut.5.1-Deut.5.22", link = "alludes", note = "Moses recalls the covenant at Horeb and the Ten Commandments, which refers back to Sinai." },
+  { ref = "Neh.9.13-Neh.9.14", link = "alludes", note = "Nehemiah's prayer says God came down on Mount Sinai and gave right rules and the Sabbath, which refers back to the covenant." },
+  { ref = "Ps.68.7-Ps.68.8", link = "alludes", note = "Psalm 68 says the earth shook at God's presence, and Sinai itself before God, which alludes to the Sinai scene." },
+  { ref = "Acts.7.37-Acts.7.44", link = "alludes", note = "Stephen says Moses received living words at Sinai, which refers back to the covenant." },
+  { ref = "Gal.3.17-Gal.3.19", link = "alludes", note = "Paul says the law came 430 years after the promise to Abraham, a number used to date the covenant." },
+  { ref = "Heb.12.18-Heb.12.21", link = "alludes", note = "Hebrews says 'You have not come to a mountain that can be touched,' which alludes to the scene at Sinai." },
 ]
 
 [[positions]]

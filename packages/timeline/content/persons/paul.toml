@@ -11,11 +11,11 @@ No letter and no part of Acts narrates Paul's death. A tradition says he was exe
 status = "draft"
 lived = { earliest = 5, latest = 67 }
 verses = [
-  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "the Damascus road, as told in Acts" },
-  { ref = "Gal.1.13-Gal.1.17", link = "describes", note = "Paul's own account of persecuting and being called" },
-  { ref = "Phil.3.5-Phil.3.6", link = "describes", note = "Paul on his Jewish background" },
-  { ref = "2Cor.11.32-2Cor.11.33", link = "dates", note = "the escape from Damascus under King Aretas" },
-  { ref = "Acts.22.3", link = "describes", note = "Tarsus and Gamaliel, in Acts only" },
+  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Acts 9:1–19 tells the story of Paul's encounter on the Damascus road." },
+  { ref = "Gal.1.13-Gal.1.17", link = "describes", note = "Galatians 1:13–17 is Paul's own account of persecuting the church and then being called." },
+  { ref = "Phil.3.5-Phil.3.6", link = "describes", note = "Philippians 3:5–6 is Paul's own statement of his Jewish background." },
+  { ref = "2Cor.11.32-2Cor.11.33", link = "dates", note = "2 Corinthians 11:32–33 tells of Paul's escape from Damascus while King Aretas ruled there, which gives a datable anchor for his career." },
+  { ref = "Acts.22.3", link = "describes", note = "Acts 22:3 names Tarsus as Paul's home and Gamaliel as his teacher, details found in Acts only." },
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },

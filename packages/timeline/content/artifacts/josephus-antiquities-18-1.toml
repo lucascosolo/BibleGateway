@@ -9,4 +9,4 @@ citations = [
   { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
   { source = "lexundria-josephus-ant-17-342", locator = "17.342–355" },
 ]
-verses = [{ ref = "Luke.2.1-Luke.2.2", link = "background", note = "Quirinius as governor of Syria" }]
+verses = [{ ref = "Luke.2.1-Luke.2.2", link = "background", note = "Luke 2:1–2 places the census when Quirinius was governor of Syria, the point this passage of Josephus is set beside." }]

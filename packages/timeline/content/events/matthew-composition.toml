@@ -10,7 +10,7 @@ This asks who wrote the Gospel of Matthew and when. It was written after Mark, w
 verses = [
   { ref = "Matt.22.7", link = "dates", note = "The king burns the murderers' city, which may reflect the destruction of Jerusalem." },
   { ref = "Matt.23.36", link = "dates", note = "'All these things will come upon this generation', seen as fulfilled in 70 CE." },
-  { ref = "Matt.1.1", link = "describes", note = "The opening of the Gospel." },
+  { ref = "Matt.1.1", link = "describes", note = "This is the opening of the Gospel, the text whose composition is discussed here." },
 ]
 
 [[positions]]
@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 8, Summary of Basic Informa
   text = """
 Brown's main argument is that Matthew depends on Mark: "Probably the best argument for a post-70 date is the dependence of Matt on Mark, a Gospel commonly dated to the 68–73 period." He adds that the king burning the city in 22:7 may reflect the destruction of Jerusalem in AD 70."""
   citations = [{ source = "brown-1997", locator = "ch. 8, Date of Writing" }]
-  verses = [{ ref = "Matt.22.7", link = "dates", note = "The king burns the city." }]
+  verses = [{ ref = "Matt.22.7", link = "dates", note = "In the parable the king burns the city, which is linked here as a possible reflection of 70 CE." }]
 
 [[positions]]
 id = "carson-moo-before-70"

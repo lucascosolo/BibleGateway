@@ -6,10 +6,10 @@ confidence = "contested"
 status = "draft"
 summary = "After Solomon dies, the northern tribes break away from his son Rehoboam and make Jeroboam their king."
 verses = [
-  { ref = "1Kgs.11.26-1Kgs.11.40", link = "background", note = "Ahijah's prophecy and Jeroboam's flight" },
-  { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "the meeting at Shechem, where the kingdom splits" },
-  { ref = "2Chr.10.1-2Chr.11.4", link = "describes", note = "the same story told in Chronicles" },
-  { ref = "Isa.7.17", link = "alludes", note = "'from the day that Ephraim departed from Judah'" },
+  { ref = "1Kgs.11.26-1Kgs.11.40", link = "background", note = "Kings reports Ahijah's prophecy and Jeroboam's flight, which gives background to the division." },
+  { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "Kings describes the meeting at Shechem, where the kingdom splits." },
+  { ref = "2Chr.10.1-2Chr.11.4", link = "describes", note = "Chronicles tells the same story of the division." },
+  { ref = "Isa.7.17", link = "alludes", note = "Isaiah speaks of 'from the day that Ephraim departed from Judah,' which refers back to the division." },
 ]
 
 [[positions]]
@@ -39,7 +39,7 @@ label = "932/931 BCE"
 tradition = "critical"
 earliest = -932
 latest = -931
-summary = "Wikipedia gives the revolt as in 932/931 BCE."
+summary = "This position follows Wikipedia's article on Rehoboam. It gives the revolt of the northern tribes as taking place in 932/931 BCE."
 citations = [{ source = "wikipedia-rehoboam" }]
 
 [[positions]]

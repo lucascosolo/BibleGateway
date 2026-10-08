@@ -6,9 +6,9 @@ confidence = "contested"
 status = "draft"
 summary = "In Rehoboam's fifth year, Shishak of Egypt takes Judah's walled cities and the temple treasures. Shishak is usually identified with the pharaoh Shoshenq I, whose list of conquests at Karnak records a campaign. Rodger C. Young cautions that the Egyptian date itself rests on the Bible's chronology."
 verses = [
-  { ref = "1Kgs.14.25-1Kgs.14.28", link = "describes", note = "Rehoboam's fifth year; the treasures are taken" },
-  { ref = "2Chr.12.2-2Chr.12.12", link = "describes", note = "the same story in Chronicles, with Shemaiah's prophecy" },
-  { ref = "1Kgs.11.40", link = "background", note = "Jeroboam had earlier fled to Shishak for safety" },
+  { ref = "1Kgs.14.25-1Kgs.14.28", link = "describes", note = "Kings dates the campaign to Rehoboam's fifth year and says the treasures are taken." },
+  { ref = "2Chr.12.2-2Chr.12.12", link = "describes", note = "Chronicles tells the same story, with Shemaiah's prophecy." },
+  { ref = "1Kgs.11.40", link = "background", note = "Kings says Jeroboam had earlier fled to Shishak for safety, which gives background to the campaign." },
 ]
 
 [[positions]]

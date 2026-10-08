@@ -7,13 +7,13 @@ status = "draft"
 summary = """
 Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times, and Paul refers to it in Galatians and 1 Corinthians. Scholars date it to 31-36 CE."""
 verses = [
-  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Luke's story of the road to Damascus" },
-  { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "Paul tells the crowd in Jerusalem" },
-  { ref = "Acts.26.9-Acts.26.18", link = "describes", note = "Paul tells the story before Agrippa" },
-  { ref = "Gal.1.13-Gal.1.17", link = "alludes", note = "God was pleased to reveal his Son to me" },
-  { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "last of all he appeared also to me" },
-  { ref = "1Cor.9.1", link = "alludes", note = "have I not seen Jesus our Lord" },
-  { ref = "1Tim.1.12-1Tim.1.16", link = "alludes", note = "formerly a blasphemer and persecutor" },
+  { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Acts 9:1-19 is Luke's account of Paul's conversion on the road to Damascus." },
+  { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "In Acts 22:3-16 Paul tells the story to the crowd in Jerusalem." },
+  { ref = "Acts.26.9-Acts.26.18", link = "describes", note = "In Acts 26:9-18 Paul tells the story again before Agrippa." },
+  { ref = "Gal.1.13-Gal.1.17", link = "alludes", note = "In Galatians 1:13-17 Paul says God was pleased to reveal his Son to him." },
+  { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "In 1 Corinthians 15:8-10 Paul says the risen Christ appeared last of all to him." },
+  { ref = "1Cor.9.1", link = "alludes", note = "In 1 Corinthians 9:1 Paul asks whether he has not seen Jesus our Lord." },
+  { ref = "1Tim.1.12-1Tim.1.16", link = "alludes", note = "1 Timothy 1:12-16 describes Paul as formerly a blasphemer and persecutor." },
 ]
 
 [[positions]]

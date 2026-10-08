@@ -14,4 +14,4 @@ citations = [
   { source = "livius-cyrus-cylinder" },
   { source = "pritchard-1969", locator = "pp. 315–316, trans. A. Leo Oppenheim" },
 ]
-verses = [{ ref = "Ezra.1.1-Ezra.1.4", link = "background", note = "Cyrus's proclamation" }]
+verses = [{ ref = "Ezra.1.1-Ezra.1.4", link = "background", note = "Ezra 1:1–4 records Cyrus's proclamation letting the exiles return, the decree this cylinder is often compared with." }]

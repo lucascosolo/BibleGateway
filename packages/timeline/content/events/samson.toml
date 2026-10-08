@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue). The Introduction to Thiele's book offers one anchor: the incidents behind the Samson stories "must have occurred, it is apparent, subsequent to the settlement of the Philistines on the coastal plain in the first decade of the twelfth century"."""
 verses = [
-  { ref = "Judg.13.1-Judg.13.25", link = "describes", note = "his birth is announced, and the Nazirite vow" },
-  { ref = "Judg.14.1-Judg.15.20", link = "describes", note = "the Timnah wedding, the riddle, the foxes, the jawbone" },
-  { ref = "Judg.16.1-Judg.16.31", link = "describes", note = "Gaza, Delilah, his capture and his death" },
-  { ref = "Heb.11.32", link = "alludes", note = "Samson is named among the people of faith" },
-  { ref = "1Sam.12.11", link = "alludes", note = "Samuel lists the rescuers the Lord sent" },
+  { ref = "Judg.13.1-Judg.13.25", link = "describes", note = "Judges tells how Samson's birth is announced and describes the Nazirite vow." },
+  { ref = "Judg.14.1-Judg.15.20", link = "describes", note = "Judges describes the Timnah wedding, the riddle, the foxes and the jawbone." },
+  { ref = "Judg.16.1-Judg.16.31", link = "describes", note = "Judges describes Gaza, Delilah, and Samson's capture and death." },
+  { ref = "Heb.11.32", link = "alludes", note = "Hebrews names Samson among the people of faith." },
+  { ref = "1Sam.12.11", link = "alludes", note = "Samuel lists the rescuers the Lord sent, which alludes to Samson among them." },
 ]
 
 [[positions]]

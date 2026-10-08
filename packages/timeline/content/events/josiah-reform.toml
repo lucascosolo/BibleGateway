@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 In his eighteenth year Josiah repairs the temple. The book of the law is found, and he clears out the forbidden worship. Whether this really happened is debated. This file only dates it. Thiele uses the episode to show how Judah counted years: everything from the repair funds to the Passover (2 Kings 22:3 to 23:23) falls in the eighteenth year, and the Passover is on 14 Nisan, so the year "must have commenced before 1 Nisan and been carried over beyond 1 Nisan", which means Judah's regnal year began in Tishri."""
 verses = [
-  { ref = "2Kgs.22.3-2Kgs.23.25", link = "describes", note = "The book is found, the covenant renewed and the cult purged" },
-  { ref = "2Chr.34.8-2Chr.35.19", link = "describes", note = "The parallel in Chronicles, with the Passover" },
-  { ref = "Jer.1.2", link = "alludes", note = "Jeremiah is called in Josiah's thirteenth year" },
-  { ref = "Zeph.1.1", link = "alludes", note = "Zephaniah in Josiah's days" },
-  { ref = "Zeph.1.4-Zeph.1.6", link = "alludes", note = "A message against Baal worship" },
+  { ref = "2Kgs.22.3-2Kgs.23.25", link = "describes", note = "Kings describes how the book is found, the covenant renewed and the cult purged." },
+  { ref = "2Chr.34.8-2Chr.35.19", link = "describes", note = "Chronicles gives the parallel account of the reform, including the Passover." },
+  { ref = "Jer.1.2", link = "alludes", note = "Jeremiah 1:2 says Jeremiah is called in Josiah's thirteenth year, which places a date within Josiah's reign." },
+  { ref = "Zeph.1.1", link = "alludes", note = "Zephaniah's opening places the prophet in Josiah's days." },
+  { ref = "Zeph.1.4-Zeph.1.6", link = "alludes", note = "Zephaniah delivers a message against Baal worship, which alludes to the abuses the reform addressed." },
 ]
 
 [[positions]]

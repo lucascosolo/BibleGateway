@@ -13,4 +13,4 @@ citations = [
   { source = "wikipedia-pilate-stone" },
   { source = "wikipedia-pontius-pilate" },
 ]
-verses = [{ ref = "Luke.3.1", link = "background", note = "Pilate governor of Judea" }]
+verses = [{ ref = "Luke.3.1", link = "background", note = "Luke 3:1 names Pontius Pilate as governor of Judea, the office the Pilate Stone shows him holding." }]

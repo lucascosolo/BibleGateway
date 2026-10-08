@@ -10,6 +10,6 @@ discovered = { place = "South-West Palace, Nineveh (excavated by Austen Henry La
 held_by = { institution = "British Museum", accession = "ME 124904–124915" }
 citations = [{ source = "bm-lachish-reliefs" }]
 verses = [
-  { ref = "2Kgs.18.14", link = "background", note = "Sennacherib at Lachish" },
+  { ref = "2Kgs.18.14", link = "background", note = "2 Kings 18:14 places Sennacherib at Lachish when Hezekiah sends word to him, the siege the reliefs depict." },
   { ref = "2Kgs.18.17", link = "background" },
 ]

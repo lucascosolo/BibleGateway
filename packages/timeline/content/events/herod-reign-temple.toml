@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 On the older count, Herod reigns from 37 BCE until his death in 4 BCE, whereas on Steinmann's count he reigns from 36 to 1 BCE. In his eighteenth year (20-19 BCE) he sets out to rebuild the temple, and John 2:20 says the work had taken forty-six years, so it was still going."""
 verses = [
-  { ref = "Matt.2.1", link = "alludes", note = "Jesus is born in the days of King Herod" },
-  { ref = "Luke.1.5", link = "alludes", note = "In the days of Herod, king of Judea" },
-  { ref = "John.2.20", link = "alludes", note = "It took forty-six years to build this temple" },
+  { ref = "Matt.2.1", link = "alludes", note = "Matthew 2:1 says Jesus is born in the days of King Herod." },
+  { ref = "Luke.1.5", link = "alludes", note = "Luke 1:5 places its story in the days of Herod, king of Judea." },
+  { ref = "John.2.20", link = "alludes", note = "John 2:20 says it took forty-six years to build this temple, a number used to date Herod's temple work." },
 ]
 
 [[positions]]

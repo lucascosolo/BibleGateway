@@ -8,7 +8,7 @@ status = "draft"
 summary = """
 Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Wikipedia reports that the usual date is about 95 CE."""
 verses = [
-  { ref = "Rev.1.9-Rev.1.11", link = "describes", note = "John is on Patmos 'on account of the word of God'" },
+  { ref = "Rev.1.9-Rev.1.11", link = "describes", note = "John says he is on Patmos 'on account of the word of God,' which places the writing on Patmos." },
 ]
 
 [[positions]]
@@ -69,7 +69,7 @@ citations = [{ source = "brown-1997", locator = "ch. 37, Summary of Basic Inform
   text = """
 Brown explains why the Domitian date has long been the scholarly majority view: Domitian "ruled after the destruction of the Jerusalem Temple" and "could be considered Nero come back again"."""
   citations = [{ source = "brown-1997", locator = "ch. 37, Date and Life-Situation: Persecution under Domitian?" }]
-  verses = [{ ref = "Rev.13.3", link = "dates", note = "The wounded head that is healed, read as Nero returned." }]
+  verses = [{ ref = "Rev.13.3", link = "dates", note = "Revelation's wounded head that is healed is read as Nero returned." }]
 
 [[positions]]
 id = "carson-moo-late-domitian"
@@ -88,8 +88,8 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 707–711" }]
 They grant that the seven kings of Revelation 17:9-11 could point to Galba and 68-69 CE, but call this indecisive, since it is unclear whether the kings are current or future and where the count begins. They put more weight on the emperor cult and the state of the seven churches, which fit the 90s better."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 709–711" }]
   verses = [
-    { ref = "Rev.1.9", link = "describes", note = "John on Patmos 'because of the word of God and the testimony of Jesus'." },
-    { ref = "Rev.17.10", link = "dates", note = "The seven kings: five fallen, one is; read as not decisive for a date." },
+    { ref = "Rev.1.9", link = "describes", note = "John says he was on Patmos 'because of the word of God and the testimony of Jesus.'" },
+    { ref = "Rev.17.10", link = "dates", note = "The seven kings, of whom five have fallen and one is, are read as not decisive for a date." },
   ]
 
 [[positions]]
@@ -108,4 +108,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 344, 350 a
   text = """
 Ehrman says the code word "Babylon" for Rome came into use among Jews after the destruction of Jerusalem in 70, which points to a later stage of writing than the Nero-era material."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 344 approx." }]
-  verses = [{ ref = "Rev.14.8", link = "dates", note = "'Babylon' as a code name for Rome after 70 CE." }]
+  verses = [{ ref = "Rev.14.8", link = "dates", note = "'Babylon' is read as a code name for Rome after 70 CE." }]

@@ -9,9 +9,9 @@ summary = """
 This asks who wrote 1 Peter and when. The letter names Peter as its author, but Bart Ehrman argues Peter did not write it and says it is "best located" between Nero and Trajan. He cites the view that "Babylon", a code name for Rome, points to a date after 70 CE, while warning that this does not tie the letter to the time of Pliny's letter, around 112 CE. The year bounds shown are the editor's reading of that argument; the traditional date falls in Peter's own life, which Ehrman places before 70 CE."""
 verses = [
   { ref = "1Pet.1.1", link = "describes", note = "The letter names Peter as its author." },
-  { ref = "1Pet.4.16", link = "background", note = "Ehrman: the author uses the word Christian as if it were in established use." },
-  { ref = "1Pet.4.12-1Pet.4.17", link = "background", note = "Ehrman: suffering simply for the name Christian points to a time after Peter." },
-  { ref = "1Pet.5.13", link = "background", note = "Ehrman: Babylon is a veiled name for Rome, which he says makes sense only after 70 CE." },
+  { ref = "1Pet.4.16", link = "background", note = "Ehrman notes that the author uses the word Christian as if it were already in established use." },
+  { ref = "1Pet.4.12-1Pet.4.17", link = "background", note = "Ehrman reads suffering simply for the name Christian as pointing to a time after Peter." },
+  { ref = "1Pet.5.13", link = "background", note = "Ehrman reads Babylon as a veiled name for Rome, which he says makes sense only after 70 CE." },
 ]
 
 [[positions]]
@@ -30,21 +30,21 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 295, 320" }]
   text = """
 Ehrman argues from the kind of persecution the letter describes. Believers are suffering simply for bearing the name of Christ, which he sees as later than Peter's day: "By the time this letter was written, it had become commonplace for followers of Jesus to suffer persecution “as a Christian,” simply “for the name” (4:12–17).""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 320" }]
-  verses = [{ ref = "1Pet.4.12-1Pet.4.17", link = "background", note = "Persecution for the name Christian." }]
+  verses = [{ ref = "1Pet.4.12-1Pet.4.17", link = "background", note = "1 Peter 4:12-17 speaks of suffering because one bears the name Christian, the persecution this argument uses to date the letter." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman follows C. Hunzinger in reading the letter's place of writing as a code name for Rome, and he treats that as a dating clue. In his words, "the veiled reference to Rome in the epithet “Babylon,” named as the place from which the author writes (5:13), makes sense only after 70 CE, years after Peter’s death.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 320" }]
-  verses = [{ ref = "1Pet.5.13", link = "background", note = "Babylon as a name for Rome." }]
+  verses = [{ ref = "1Pet.5.13", link = "background", note = "1 Peter 5:13 sends greetings from Babylon, which this argument reads as a name for Rome and so as a clue to the letter's date." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman also points to the author's vocabulary as a sign of settled usage, noting that "the author uses the term Christian (4:16) as if it were in established usage"."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 319" }]
-  verses = [{ ref = "1Pet.4.16", link = "background", note = "The word Christian." }]
+  verses = [{ ref = "1Pet.4.16", link = "background", note = "1 Peter 4:16 speaks of suffering as a Christian, a use of the name that this argument weighs in dating the letter." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -85,7 +85,7 @@ citations = [{ source = "brown-1997", locator = "ch. 33, Summary of Basic Inform
   text = """
 Brown, too, reads "Babylon" as a name for Rome and treats it as a clue to the date. He says it "makes better sense after 70, when the Romans had destroyed the second Temple"."""
   citations = [{ source = "brown-1997", locator = "ch. 33, From and to whom, where, and when" }]
-  verses = [{ ref = "1Pet.5.13", link = "dates", note = "Babylon as a name for Rome." }]
+  verses = [{ ref = "1Pet.5.13", link = "dates", note = "1 Peter 5:13 sends greetings from Babylon, which this argument reads as a name for Rome and so as a clue to the letter's date." }]
 
 [[positions]]
 id = "carson-moo-62-63"
@@ -103,7 +103,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 645–647" }]
   text = """
 Carson and Moo answer the objection from the letter's Greek by saying the case against Peter is "not at all a strong one". The Greek can be explained if Peter used a secretary, perhaps Silvanus, named in 1 Peter 5:12. They add that the idea of a forged letter being written and accepted in the early church is a bigger problem than the Greek."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 645–646" }]
-  verses = [{ ref = "1Pet.5.12", link = "describes", note = "'Through Silvanus I have written': read as a secretary who could have shaped the Greek." }]
+  verses = [{ ref = "1Pet.5.12", link = "describes", note = "1 Peter 5:12 says the letter was written through Silvanus, which this argument reads as a secretary who could have shaped the Greek." }]
 
 [[positions]]
 id = "ehrman-intro-first-century-pseudonymous"
@@ -121,4 +121,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 320-322 approx
   text = """
 Ehrman reads "Babylon" in 1 Peter 5:13 as a code word for Rome. He also argues that the letter's polished Greek and its use of the Greek Old Testament are hard to credit to a Galilean fisherman, since few in Roman Palestine could read and far fewer could write literary Greek."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 320 approx." }]
-  verses = [{ ref = "1Pet.5.13", link = "dates", note = "'Babylon' read as Rome." }]
+  verses = [{ ref = "1Pet.5.13", link = "dates", note = "1 Peter 5:13 sends greetings from 'Babylon', which this argument reads as a name for Rome and so as a clue to the letter's date." }]

@@ -7,12 +7,12 @@ status = "draft"
 summary = """
 Samuel secretly anoints Jesse's youngest son during Saul's reign. The Bible gives no year, so the only limits available are those of Saul's reign."""
 verses = [
-  { ref = "1Sam.16.1-1Sam.16.13", link = "describes", note = "A private anointing at Bethlehem" },
-  { ref = "2Sam.2.1-2Sam.2.4", link = "describes", note = "Later anointed king over Judah at Hebron" },
-  { ref = "2Sam.5.1-2Sam.5.5", link = "describes", note = "Anointed king over all Israel" },
-  { ref = "1Chr.11.1-1Chr.11.3", link = "describes", note = "The parallel in Chronicles: anointed at Hebron" },
-  { ref = "Ps.89.20", link = "alludes", note = "'I have anointed him with my holy oil'" },
-  { ref = "Acts.13.22", link = "alludes", note = "In Paul's sermon, God raised up David as king" },
+  { ref = "1Sam.16.1-1Sam.16.13", link = "describes", note = "1 Samuel 16:1-13 tells David's private anointing at Bethlehem." },
+  { ref = "2Sam.2.1-2Sam.2.4", link = "describes", note = "2 Samuel 2:1-4 tells how David is later anointed king over Judah at Hebron." },
+  { ref = "2Sam.5.1-2Sam.5.5", link = "describes", note = "2 Samuel 5:1-5 tells how David is anointed king over all Israel." },
+  { ref = "1Chr.11.1-1Chr.11.3", link = "describes", note = "1 Chronicles 11:1-3 is the parallel account, in which David is anointed at Hebron." },
+  { ref = "Ps.89.20", link = "alludes", note = "Psalm 89:20 has God say, 'I have anointed him with my holy oil', speaking of David." },
+  { ref = "Acts.13.22", link = "alludes", note = "In Acts 13:22, Paul's sermon says God raised up David as king." },
 ]
 
 [[positions]]

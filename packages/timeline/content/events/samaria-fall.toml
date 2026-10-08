@@ -6,11 +6,11 @@ confidence = "contested"
 status = "draft"
 summary = "Assyria takes Samaria after a siege and carries the people of Israel away. Rodger C. Young, following Olmstead, Thiele and Tadmor, holds that King Shalmaneser V captured it. Sargon II, whose inscriptions claim the conquest, did not."
 verses = [
-  { ref = "2Kgs.17.1-2Kgs.17.41", link = "describes", note = "Hoshea's reign, the siege, and the exile" },
-  { ref = "2Kgs.18.9-2Kgs.18.12", link = "describes", note = "the sixth year of Hezekiah and the ninth of Hoshea" },
-  { ref = "Isa.20.1", link = "background", note = "names Sargon as king of Assyria" },
-  { ref = "Hos.13.16", link = "alludes", note = "'Samaria will bear her guilt'" },
-  { ref = "Mic.1.6", link = "alludes", note = "Samaria turned into a heap of rubble" },
+  { ref = "2Kgs.17.1-2Kgs.17.41", link = "describes", note = "Kings describes Hoshea's reign, the siege of Samaria, and the exile." },
+  { ref = "2Kgs.18.9-2Kgs.18.12", link = "describes", note = "Kings dates the fall to the sixth year of Hezekiah and the ninth of Hoshea." },
+  { ref = "Isa.20.1", link = "background", note = "Isaiah names Sargon as king of Assyria, which gives background for who ruled Assyria then." },
+  { ref = "Hos.13.16", link = "alludes", note = "Hosea says 'Samaria will bear her guilt,' which alludes to the city's fall." },
+  { ref = "Mic.1.6", link = "alludes", note = "Micah describes Samaria turned into a heap of rubble, which alludes to the city's fall." },
 ]
 
 [[positions]]
@@ -67,7 +67,7 @@ citations = [{ source = "galil-1996", locator = "pp. 8–9; pp. 98–104, the da
   Putting Hezekiah's accession in 715 contradicts seven chronological data, Galil argues, among them Ahaz's sixteen years, the tribute of Ahaz to Tiglath-pileser III in 734, the synchronisms with Hoshea, and "the tradition that Samaria was conquered during the reign of Hezekiah"."""
   citations = [{ source = "galil-1996", locator = "pp. 100–101" }]
   verses = [
-    { ref = "2Kgs.18.1", link = "dates", note = "Hezekiah begins to reign in Hoshea's third year" },
-    { ref = "2Kgs.18.9-2Kgs.18.10", link = "dates", note = "The siege in his fourth year, the fall in his sixth" },
-    { ref = "2Kgs.17.1", link = "dates", note = "Hoshea in the twelfth year of Ahaz" },
+    { ref = "2Kgs.18.1", link = "dates", note = "Kings says Hezekiah begins to reign in Hoshea's third year, a synchronism used to date the fall." },
+    { ref = "2Kgs.18.9-2Kgs.18.10", link = "dates", note = "Kings dates the siege to Hezekiah's fourth year and the fall to his sixth, a synchronism used to date the event." },
+    { ref = "2Kgs.17.1", link = "dates", note = "Kings places Hoshea's reign in the twelfth year of Ahaz, a synchronism used to date the fall." },
   ]

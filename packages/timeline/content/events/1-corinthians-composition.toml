@@ -9,7 +9,7 @@ summary = """
 Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church he had founded at Corinth, answering a letter and reports that had reached him from there. He says he will stay at Ephesus until Pentecost, which puts the writing in late 56 or very early 57. Its authorship is not seriously disputed, though a revisionist chronology would move it to 54-55."""
 verses = [
   { ref = "1Cor.1.1", link = "describes", note = "Paul and Sosthenes write to the church of God at Corinth." },
-  { ref = "1Cor.5.9", link = "background", note = "An earlier, lost letter to the Corinthians." },
+  { ref = "1Cor.5.9", link = "background", note = "1 Corinthians 5:9 mentions an earlier letter to the Corinthians that is now lost, so this is not Paul's first letter to them." },
   { ref = "1Cor.16.8", link = "dates", note = "I will stay in Ephesus until Pentecost, placing the writing in Ephesus before that feast." },
 ]
 
@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Inform
   text = """
 Brown takes the setting from the end of the letter. Paul wants to stay at Ephesus because an opportunity for evangelizing has opened, then plans to come to Corinth via Macedonia: "Paul wants to stay at Ephesus at least till Pentecost (May/June AD 57?)"."""
   citations = [{ source = "brown-1997", locator = "ch. 22, General Analysis of the Message" }]
-  verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying at Ephesus until Pentecost." }]
+  verses = [{ ref = "1Cor.16.8", link = "dates", note = "Here Paul says he will stay at Ephesus until Pentecost, the statement Brown uses to set the letter's date and place." }]
 
 [[positions]]
 id = "carson-moo-ephesus-55"
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 447-448" }]
   text = """
 Carson and Moo start from the Delphi inscription of Claudius, which fixes Gallio's term, and then count Paul's two and a half years in Ephesus to autumn 55. Paul's own note that he will stay in Ephesus until Pentecost places the letter in his last year there."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 447-448" }]
-  verses = [{ ref = "1Cor.16.8", link = "dates", note = "Staying in Ephesus until Pentecost." }]
+  verses = [{ ref = "1Cor.16.8", link = "dates", note = "Here Paul says he will stay in Ephesus until Pentecost, which Carson and Moo take to place the letter in his last year there." }]
 
 [[positions]]
 id = "ehrman-intro-mid-50s"

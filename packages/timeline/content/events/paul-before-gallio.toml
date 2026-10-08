@@ -7,8 +7,8 @@ status = "draft"
 summary = """
 Paul's opponents bring him before Gallio, the Roman governor of Achaia, at Corinth. Gallio refuses to judge the case. A stone inscription from Delphi, carrying a letter of Emperor Claudius, dates Gallio's time in office to about 51 to 52 CE. That is the best-known date in Paul's life."""
 verses = [
-  { ref = "Acts.18.12-Acts.18.17", link = "describes", note = "the Jews bring Paul before Gallio's judgment seat" },
-  { ref = "Acts.18.1-Acts.18.11", link = "background", note = "Paul's eighteen months in Corinth" },
+  { ref = "Acts.18.12-Acts.18.17", link = "describes", note = "Acts says the Jews bring Paul before Gallio's judgment seat, which is the event dated here." },
+  { ref = "Acts.18.1-Acts.18.11", link = "background", note = "Acts says Paul stayed eighteen months in Corinth, which gives background to the hearing before Gallio." },
 ]
 
 [[positions]]

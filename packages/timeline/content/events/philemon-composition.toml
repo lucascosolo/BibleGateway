@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 21, Summary of Basic Inform
   text = """
 Brown argues that Ephesus deserves a hearing here as it does for Philippians, since several of the factors favouring Ephesus for Philippians are met here too: "if Ephesus was the more probable candidate there, it might be considered that here as well.""""
   citations = [{ source = "brown-1997", locator = "ch. 21, Place of writing" }]
-  verses = [{ ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul in prison." }]
+  verses = [{ ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul writes as a prisoner, which is the imprisonment under discussion." }]
 
 [[positions]]
 id = "carson-moo-rome-early-60s"
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 591-592" }]
   text = """
 Carson and Moo answer the Ephesus case point by point. Onesimus could have fled to Rome to hide, and Paul's request for a guest room in Philemon 22 is not decisive, since he could reach Colosse in about five weeks from Rome."""
   citations = [{ source = "carson-moo-2005", locator = "p. 592" }]
-  verses = [{ ref = "Phlm.1.22", link = "dates", note = "The guest room request, the strongest argument for Ephesus." }]
+  verses = [{ ref = "Phlm.1.22", link = "dates", note = "Paul's request for a guest room is treated as the strongest argument for Ephesus." }]
 
 [[positions]]
 id = "ehrman-intro-50s"

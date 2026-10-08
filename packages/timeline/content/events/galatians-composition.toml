@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Inform
   text = """
 Brown reasons from the North Galatian theory. Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56). Word could have reached him that teachers had come and “quickly” (Gal 1:6) won over the Galatians to “another gospel”", prompting the angry writing of Gal in 54 or 55."""
   citations = [{ source = "brown-1997", locator = "ch. 19, Dating" }]
-  verses = [{ ref = "Gal.1.6", link = "describes", note = "Quickly won over to another gospel." }]
+  verses = [{ ref = "Gal.1.6", link = "describes", note = "Galatians 1:6 says the Galatians were quickly won over to another gospel." }]
 
 [[positions]]
 id = "carson-moo-before-council-48"
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 462-464" }]
   text = """
 Carson and Moo link the Jerusalem visit of Galatians 2:1-10 with the famine visit of Acts 11:25-30, not Acts 15. Paul gives what looks like a complete list of his visits and never mentions the council's decree, so the letter is most probably earlier than the council."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 463-464" }]
-  verses = [{ ref = "Gal.2.1", link = "dates", note = "Paul's second Jerusalem visit, read as the famine visit of Acts 11." }]
+  verses = [{ ref = "Gal.2.1", link = "dates", note = "Galatians 2:1 describes Paul's second Jerusalem visit, which this argument reads as the famine visit of Acts 11." }]
 
 [[positions]]
 id = "ehrman-intro-50s"

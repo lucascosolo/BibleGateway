@@ -8,8 +8,8 @@ Mark 6:3 names Judas as the third of Jesus' brothers. The letter of Jude opens w
 Almost nothing is known about him personally. Later writers say the family of Jesus was prominent in Palestine, and Hegesippus, quoted by Eusebius, says Jude's grandsons led churches there until the time of Trajan. Brown says it is very difficult to decide whether Jude himself wrote the letter or a later disciple used his name. He dates the letter anywhere from the 50s to 90-100 CE, with many scholars favoring the later range."""
 status = "draft"
 verses = [
-  { ref = "Jude.1.1", link = "describes", note = "the author names himself and his brother James" },
-  { ref = "Mark.6.3", link = "describes", note = "Judas among Jesus' four named brothers" },
+  { ref = "Jude.1.1", link = "describes", note = "Jude 1:1 has the author name himself and his brother James, the basis for linking the letter to Jesus' brother." },
+  { ref = "Mark.6.3", link = "describes", note = "Mark 6:3 names Judas among Jesus' four named brothers." },
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 35, The Background" },

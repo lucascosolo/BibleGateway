@@ -9,10 +9,10 @@ summary = """
 This asks who wrote 2 Peter and when. The letter names Simon Peter as its author, but Ehrman says 2 Peter is, more than any other New Testament writing, widely recognised as forged. The only date he gives in the passages read is "the end of the first century, at best" for the situation it assumes, so the range shown below is the editor's bracket around that remark."""
 verses = [
   { ref = "2Pet.1.1", link = "describes", note = "The letter names Peter as its author." },
-  { ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "Ehrman: the author pretends to know his death is near, a testament written as fiction." },
-  { ref = "2Pet.3.1", link = "background", note = "Ehrman: the author refers to an earlier letter, which he takes to be 1 Peter." },
-  { ref = "2Pet.3.4", link = "background", note = "Ehrman: the fathers have died, so much time has passed." },
-  { ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Ehrman: the author knows a collection of Paul's letters treated as scripture." },
+  { ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "Ehrman reads the author's claim to know his death is near as a testament written as fiction." },
+  { ref = "2Pet.3.1", link = "background", note = "Ehrman takes the author's reference to an earlier letter to mean 1 Peter." },
+  { ref = "2Pet.3.4", link = "background", note = "Ehrman takes the remark that the fathers have died as a sign that much time has passed." },
+  { ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Ehrman notes that the author knows a collection of Paul's letters already treated as scripture." },
 ]
 
 [[positions]]
@@ -37,21 +37,21 @@ Ehrman points first to the letter's unusual vocabulary, which sets it apart from
   text = """
 Ehrman reads the letter's complaint about the delay of the end as evidence that a generation had passed: "we are told that “the fathers” have “fallen asleep” (i.e., died) since the original promises of the coming end (3:4).""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
-  verses = [{ ref = "2Pet.3.4", link = "background", note = "The fathers have died." }]
+  verses = [{ ref = "2Pet.3.4", link = "background", note = "2 Peter 3:4 has scoffers say that the fathers have died, which this argument reads as a sign that much time has passed." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman treats Peter's farewell speech in 1:12–14 as a literary device rather than a real deathbed word: "As with all Testaments, this is a fiction put on the pen of someone already residing comfortably in his tomb.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
-  verses = [{ ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "A feigned knowledge of his own death." }]
+  verses = [{ ref = "2Pet.1.12-2Pet.1.14", link = "background", note = "2 Peter 1:12-14 has the author claim to know his death is near, which this argument reads as a feigned testament." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 In 3:15–16 the author knows a collection of Paul's letters held as scripture, and Ehrman sees that as a late marker: "It is hard to imagine any such situation before the end of the first century, at best.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 295" }]
-  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "Paul's letters as a collection and as scripture." }]
+  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "background", note = "2 Peter 3:15-16 refers to Paul's letters alongside the other scriptures, which this argument takes as a sign of a collection already in use." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -92,7 +92,7 @@ citations = [{ source = "brown-1997", locator = "ch. 36, Summary of Basic Inform
   text = """
 Brown sees the letter as a response to disappointed hope, written "after the apostolic generation was dead and expectations of the second coming during their lifetime had been disappointed"."""
   citations = [{ source = "brown-1997", locator = "ch. 36, By and to whom, where, and when" }]
-  verses = [{ ref = "2Pet.3.4", link = "dates", note = "Scoffers ask where the promise of his coming is." }]
+  verses = [{ ref = "2Pet.3.4", link = "dates", note = "2 Peter 3:4 has scoffers asking where the promise of his coming is, a delay this argument uses to date the letter." }]
 
 [[positions]]
 id = "carson-moo-before-65"
@@ -128,4 +128,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 328, 337 appro
   text = """
 Ehrman argues 2 Peter takes much of chapter 2 from Jude, and that 2 Peter 3:15-16 speaks of Paul's letters as scripture ("as they do the other scriptures"). A letter written after Paul's collected letters were read this way cannot be by Peter, who died around 64."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 328-330 approx." }]
-  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "dates", note = "Paul's letters ranked with 'the other scriptures'." }, { ref = "2Pet.2.1", link = "background", note = "Chapter 2 is largely taken over from Jude." }]
+  verses = [{ ref = "2Pet.3.15-2Pet.3.16", link = "dates", note = "2 Peter 3:15-16 ranks Paul's letters with 'the other scriptures', which this argument uses to date the letter." }, { ref = "2Pet.2.1", link = "background", note = "Chapter 2 is largely taken over from Jude." }]

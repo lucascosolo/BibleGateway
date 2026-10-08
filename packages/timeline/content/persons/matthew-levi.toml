@@ -8,13 +8,13 @@ Meier separates two figures that the First Gospel merges. In Mark and Luke, Jesu
 Meier treats that as an editorial change by the First Evangelist near the end of the first century, and says it tells us nothing about an original member of the Twelve named Matthew. Levi is therefore a real disciple, probably a toll collector at Capernaum, whose call shows that Jesus accepted people from despised occupations; whether Levi was one of the Twelve is not known. Meier adds that Levi and James "of Alphaeus" may have been brothers, though that cannot be proved."""
 status = "draft"
 verses = [
-  { ref = "Mark.2.14", link = "describes", note = "Jesus calls Levi son of Alphaeus, a toll collector" },
-  { ref = "Luke.5.27", link = "describes", note = "Luke's version of the call of Levi" },
-  { ref = "Matt.9.9", link = "describes", note = "Matthew changes the name to Matthew" },
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "list of the Twelve in Mark; Matthew without description" },
-  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew's list adds 'the toll collector'" },
-  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "list of the Twelve in Luke" },
-  { ref = "Acts.1.13", link = "describes", note = "list of the Eleven in Acts" },
+  { ref = "Mark.2.14", link = "describes", note = "Mark 2:14 tells how Jesus called Levi son of Alphaeus, a toll collector." },
+  { ref = "Luke.5.27", link = "describes", note = "Luke 5:27 gives Luke's version of the call of Levi." },
+  { ref = "Matt.9.9", link = "describes", note = "Matthew 9:9 tells the same call story but changes the name to Matthew." },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve, and Matthew is among them without further description." },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve and adds 'the toll collector' to Matthew's name." },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists the Twelve, and Matthew is among them." },
+  { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven after Judas is gone, and Matthew is among them." },
 ]
 citations = [
   { source = "meier-2001", locator = "pp. 201, 207" },

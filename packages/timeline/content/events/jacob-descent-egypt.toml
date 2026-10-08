@@ -7,14 +7,14 @@ status = "draft"
 summary = """
 Jacob and his household, seventy people in all, move to Egypt at Joseph's invitation during the famine. They settle in Goshen. The date depends on how the exodus is dated. Whether this happened historically is a separate question (see the patriarchs issue)."""
 verses = [
-  { ref = "Gen.45.9-Gen.45.28", link = "describes", note = "Joseph invites his father, and Jacob decides to go" },
-  { ref = "Gen.46.1-Gen.46.34", link = "describes", note = "God reassures Jacob at Beersheba. The list of those who went down. Arrival in Goshen" },
-  { ref = "Gen.47.1-Gen.47.12", link = "describes", note = "Jacob is presented to Pharaoh and settled in the land of Rameses" },
-  { ref = "Exod.1.1-Exod.1.7", link = "describes", note = "The sons of Israel who came to Egypt with Jacob, and how they multiplied" },
-  { ref = "Deut.26.5", link = "alludes", note = "A wandering Aramean was my father. He went down to Egypt with few people" },
-  { ref = "Josh.24.4", link = "alludes", note = "Jacob and his children went down to Egypt" },
-  { ref = "Ps.105.23", link = "alludes", note = "Israel came to Egypt. Jacob lived as a foreigner in the land of Ham" },
-  { ref = "Acts.7.14-Acts.7.15", link = "alludes", note = "Stephen says Joseph sent for Jacob and seventy-five persons, and Jacob went down to Egypt" },
+  { ref = "Gen.45.9-Gen.45.28", link = "describes", note = "Genesis tells how Joseph invites his father to Egypt and Jacob decides to go, which begins the descent dated here." },
+  { ref = "Gen.46.1-Gen.46.34", link = "describes", note = "Genesis records God reassuring Jacob at Beersheba, lists those who went down with him, and reports their arrival in Goshen." },
+  { ref = "Gen.47.1-Gen.47.12", link = "describes", note = "Genesis tells how Jacob is presented to Pharaoh and settled in the land of Rameses, which describes the family's arrival in Egypt." },
+  { ref = "Exod.1.1-Exod.1.7", link = "describes", note = "Exodus names the sons of Israel who came to Egypt with Jacob and says how they multiplied, linking the descent to the later story." },
+  { ref = "Deut.26.5", link = "alludes", note = "Deuteronomy's confession, 'A wandering Aramean was my father,' says he went down to Egypt with few people, and so refers back to the descent." },
+  { ref = "Josh.24.4", link = "alludes", note = "Joshua's speech recalls that Jacob and his children went down to Egypt, so it refers back to this event." },
+  { ref = "Ps.105.23", link = "alludes", note = "Psalm 105 says Israel came to Egypt and Jacob lived as a foreigner in the land of Ham, which refers back to the descent." },
+  { ref = "Acts.7.14-Acts.7.15", link = "alludes", note = "Stephen's speech says Joseph sent for Jacob and seventy-five persons and that Jacob went down to Egypt, which refers back to this event." },
 ]
 
 [[positions]]

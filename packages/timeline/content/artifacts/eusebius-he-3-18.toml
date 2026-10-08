@@ -9,4 +9,4 @@ citations = [
   { source = "newadvent-eusebius-he-3", locator = "3.18.1, 3.18.3" },
   { source = "newadvent-eusebius-he-5", locator = "5.8.6" },
 ]
-verses = [{ ref = "Rev.1.9", link = "background", note = "John on Patmos" }]
+verses = [{ ref = "Rev.1.9", link = "background", note = "Revelation 1:9 has John say he was on the island of Patmos, the exile that Eusebius places under Domitian." }]

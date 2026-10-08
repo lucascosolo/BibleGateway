@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 Josiah goes out against Pharaoh Neco and dies at Megiddo."""
 verses = [
-  { ref = "2Kgs.23.28-2Kgs.23.30", link = "describes", note = "Killed at Megiddo" },
-  { ref = "2Chr.35.20-2Chr.35.27", link = "describes", note = "Chronicles says he was wounded by archers. The nation mourns" },
-  { ref = "2Kgs.23.29", link = "dates", note = "Neco goes up to the Euphrates" },
-  { ref = "Zech.12.11", link = "alludes", note = "Mourning at Hadadrimmon in the valley of Megiddon (a link made by tradition)" },
-  { ref = "Jer.22.10-Jer.22.12", link = "alludes", note = "Jeremiah speaks of Shallum, who succeeded Josiah" },
+  { ref = "2Kgs.23.28-2Kgs.23.30", link = "describes", note = "Kings reports that Josiah was killed at Megiddo when he went out to meet Pharaoh Neco, which is the event dated here." },
+  { ref = "2Chr.35.20-2Chr.35.27", link = "describes", note = "Chronicles tells the same event, saying Josiah was wounded by archers, and records that the nation mourns." },
+  { ref = "2Kgs.23.29", link = "dates", note = "Kings says Pharaoh Neco went up to the Euphrates, which gives the campaign that dates Josiah's death." },
+  { ref = "Zech.12.11", link = "alludes", note = "Zechariah speaks of mourning at Hadadrimmon in the valley of Megiddon, which tradition links to the mourning for Josiah." },
+  { ref = "Jer.22.10-Jer.22.12", link = "alludes", note = "Jeremiah speaks of Shallum, who succeeded Josiah, and so refers back to the king's death." },
 ]
 
 [[positions]]

@@ -7,13 +7,13 @@ status = "draft"
 summary = """
 Ruth, a Moabite widow, returns to Bethlehem with her mother-in-law Naomi. She gathers leftover grain in Boaz's field and marries him. Their son Obed becomes King David's grandfather. The story is set 'when the judges ruled'. The book itself is generally dated much later (see the linked issue)."""
 verses = [
-  { ref = "Ruth.1.1-Ruth.1.22", link = "describes", note = "famine, Moab, and Naomi and Ruth's return to Bethlehem" },
-  { ref = "Ruth.2.1-Ruth.2.23", link = "describes", note = "Ruth gathers leftover grain in Boaz's field" },
-  { ref = "Ruth.3.1-Ruth.3.18", link = "describes", note = "the night on the threshing floor" },
-  { ref = "Ruth.4.1-Ruth.4.17", link = "describes", note = "Boaz settles the claim at the town gate, marries Ruth, and Obed is born" },
-  { ref = "Ruth.4.18-Ruth.4.22", link = "describes", note = "the family line from Perez to David" },
-  { ref = "Matt.1.5-Matt.1.6", link = "alludes", note = "Boaz, Ruth and Obed in the family line of Jesus" },
-  { ref = "1Chr.2.11-1Chr.2.15", link = "alludes", note = "Salmon, Boaz, Obed, Jesse, David" },
+  { ref = "Ruth.1.1-Ruth.1.22", link = "describes", note = "The book tells of famine, Moab, and Naomi and Ruth's return to Bethlehem." },
+  { ref = "Ruth.2.1-Ruth.2.23", link = "describes", note = "The book tells how Ruth gathers leftover grain in Boaz's field." },
+  { ref = "Ruth.3.1-Ruth.3.18", link = "describes", note = "The book describes the night on the threshing floor." },
+  { ref = "Ruth.4.1-Ruth.4.17", link = "describes", note = "The book tells how Boaz settles the claim at the town gate, marries Ruth, and Obed is born." },
+  { ref = "Ruth.4.18-Ruth.4.22", link = "describes", note = "The book closes with the family line from Perez to David." },
+  { ref = "Matt.1.5-Matt.1.6", link = "alludes", note = "Matthew's genealogy places Boaz, Ruth and Obed in the family line of Jesus." },
+  { ref = "1Chr.2.11-1Chr.2.15", link = "alludes", note = "Chronicles lists Salmon, Boaz, Obed, Jesse and David in the family line." },
 ]
 
 [[positions]]

@@ -10,11 +10,11 @@ The sources disagree on the Jerusalem meeting and its aftermath. Acts and Galati
 Peter's death is not narrated in any New Testament book. John 21 hints at a death by stretching out his hands, which Brown reads as martyrdom. Brown dates the martyrdom at Rome between 64 and 68 under Nero, and he cites 1 Clement 5. The Matthew 16 passage that calls him the rock of the church and gives him the keys is a later Gospel tradition, written after 70 according to Brown. First Peter names "Babylon" as its place of writing, and Brown reads that as Rome. Meier judges the Matthew 16 saying about the church probably comes from the early church and not the historical Jesus, while the denial after the arrest is solidly historical."""
 status = "draft"
 verses = [
-  { ref = "Matt.16.17-Matt.16.19", link = "describes", note = "Peter as the rock; Matthew only" },
-  { ref = "Gal.2.11-Gal.2.14", link = "describes", note = "Paul's account of the Antioch dispute" },
-  { ref = "Gal.1.18", link = "describes", note = "Paul's first visit with Cephas" },
-  { ref = "John.21.18-John.21.19", link = "alludes", note = "read as a hint of his martyrdom" },
-  { ref = "1Pet.5.13", link = "alludes", note = "'Babylon' read as Rome" },
+  { ref = "Matt.16.17-Matt.16.19", link = "describes", note = "Matthew 16:17–19 has Jesus call Peter the rock, a passage found in Matthew only." },
+  { ref = "Gal.2.11-Gal.2.14", link = "describes", note = "Galatians 2:11–14 is Paul's account of his dispute with Peter at Antioch." },
+  { ref = "Gal.1.18", link = "describes", note = "Galatians 1:18 records Paul's first visit with Cephas, that is Peter." },
+  { ref = "John.21.18-John.21.19", link = "alludes", note = "John 21:18–19 is read as a hint of Peter's martyrdom." },
+  { ref = "1Pet.5.13", link = "alludes", note = "1 Peter 5:13 sends greetings from 'Babylon', which is read as a name for Rome." },
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 33, The Background" },

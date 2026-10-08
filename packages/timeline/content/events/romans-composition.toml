@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Inform
   text = """
 Brown takes the place of writing from the letter's own details: Phoebe, "a woman deacon of the church at Cenchreae a few miles from where Paul is writing", is going to Rome and perhaps carrying the letter."""
   citations = [{ source = "brown-1997", locator = "ch. 24, General Analysis of the Message" }]
-  verses = [{ ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae." }]
+  verses = [{ ref = "Rom.16.1", link = "describes", note = "Paul commends Phoebe of Cenchreae, a town near Corinth." }]
 
 [[positions]]
 id = "carson-moo-corinth-57"
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "p. 394" }]
   text = """
 Carson and Moo point to Paul's plans to go to Jerusalem and then Rome (Acts 19:21; 20:16), to Phoebe of Cenchrea near Corinth (Romans 16:1-2), and to Gaius and Erastus (16:23), all of which fit Corinth."""
   citations = [{ source = "carson-moo-2005", locator = "p. 394" }]
-  verses = [{ ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae, near Corinth." }, { ref = "Rom.15.19", link = "dates", note = "The eastern mission complete." }]
+  verses = [{ ref = "Rom.16.1", link = "describes", note = "Paul commends Phoebe of Cenchreae, near Corinth." }, { ref = "Rom.15.19", link = "dates", note = "Paul says in Romans 15:19 that his eastern mission is complete." }]
 
 [[positions]]
 id = "ehrman-intro-50s"

@@ -7,8 +7,8 @@ status = "draft"
 summary = """
 Acts and Josephus both report that Herod Agrippa I died suddenly after the crowd hailed him as a god at Caesarea. Josephus adds the circumstances and the length of his reign, and the death is dated to 44 CE."""
 verses = [
-  { ref = "Acts.12.19-Acts.12.23", link = "describes", note = "Tyre and Sidon. Herod is struck down for not giving glory to God" },
-  { ref = "Acts.12.1-Acts.12.4", link = "background", note = "Herod's earlier persecution of the church" },
+  { ref = "Acts.12.19-Acts.12.23", link = "describes", note = "Acts 12:19-23 tells of Herod at Tyre and Sidon, where he is struck down for not giving glory to God." },
+  { ref = "Acts.12.1-Acts.12.4", link = "background", note = "Acts 12:1-4 gives background in Herod's earlier persecution of the church." },
 ]
 
 [[positions]]

@@ -7,8 +7,8 @@ status = "draft"
 summary = """
 Alexander besieges and takes Tyre from January to July 332 BCE, then moves south against Gaza in October 332 BCE. Scholars usually read Daniel 8 and 11 as describing the Greek conquest. Wikipedia's Daniel 8 article gives Collins (1984): "Scholars agree that the goat's first horn, which is broken, is Alexander the Great, and the four horns ... the four generals who divided his empire". Its Daniel 11 article says verses 2-4 cover Alexander's conquests and the breakup of his empire, with no scholar cited. No visit to Jerusalem was confirmed in the sources read."""
 verses = [
-  { ref = "Dan.8.5-Dan.8.8", link = "alludes", note = "A goat from the west has one notable horn. It breaks and is replaced by four. Collins (1984), quoted by Wikipedia, identifies the horn as Alexander" },
-  { ref = "Dan.11.3", link = "alludes", note = "A mighty king rules with great power. Daniel 11:2-4 is read as Alexander and the breakup of his empire (Wikipedia, no scholar cited)" },
+  { ref = "Dan.8.5-Dan.8.8", link = "alludes", note = "Daniel 8:5-8 shows a goat with one notable horn, broken and replaced by four, which Collins (1984), quoted by Wikipedia, identifies as Alexander." },
+  { ref = "Dan.11.3", link = "alludes", note = "Daniel 11:3 speaks of a mighty king who rules with great power; Daniel 11:2-4 is read as Alexander and the breakup of his empire (Wikipedia, no scholar cited)." },
 ]
 
 [[positions]]

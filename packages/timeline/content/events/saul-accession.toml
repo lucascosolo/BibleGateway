@@ -6,12 +6,12 @@ confidence = "contested"
 status = "draft"
 summary = "Samuel anoints Saul in private. Saul is then chosen by lot at Mizpah and acclaimed king at Gilgal. The Bible gives no calendar date. The Hebrew of 1 Samuel 13:1 is hard to read, so even the length of his reign is disputed."
 verses = [
-  { ref = "1Sam.9.1-1Sam.10.16", link = "describes", note = "Samuel anoints Saul in private" },
-  { ref = "1Sam.10.17-1Sam.10.27", link = "describes", note = "Saul is chosen by lot at Mizpah" },
-  { ref = "1Sam.11.12-1Sam.11.15", link = "describes", note = "Saul is acclaimed king at Gilgal" },
-  { ref = "1Sam.13.1", link = "dates", note = "the verse giving the length of his reign; the Hebrew text is hard to read" },
-  { ref = "Acts.13.21", link = "alludes", note = "Paul's sermon: God gave them Saul, who ruled forty years" },
-  { ref = "Hos.13.11", link = "alludes", note = "'I have given you a king in my anger'" },
+  { ref = "1Sam.9.1-1Sam.10.16", link = "describes", note = "This passage tells how Samuel anoints Saul in private." },
+  { ref = "1Sam.10.17-1Sam.10.27", link = "describes", note = "This passage tells how Saul is chosen by lot at Mizpah." },
+  { ref = "1Sam.11.12-1Sam.11.15", link = "describes", note = "This passage tells how Saul is acclaimed king at Gilgal." },
+  { ref = "1Sam.13.1", link = "dates", note = "This verse gives the length of Saul's reign, though the Hebrew text is hard to read." },
+  { ref = "Acts.13.21", link = "alludes", note = "In Paul's sermon God gave them Saul, who ruled forty years, which refers back to his reign." },
+  { ref = "Hos.13.11", link = "alludes", note = "Hosea has God say 'I have given you a king in my anger,' which alludes to the giving of a king." },
 ]
 
 [[positions]]

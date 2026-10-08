@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 18, Summary of Basic Inform
   text = """
 Brown places the writing at Corinth, soon after Paul's preaching at Thessalonica, because the letter answers news that Timothy brought back. Paul "was genuinely relieved when Timothy returned to him (at Corinth) with the good news that the Thessalonian Christians had not been unsettled by affliction.""""
   citations = [{ source = "brown-1997", locator = "ch. 18, General Analysis of the Message" }]
-  verses = [{ ref = "1Thess.3.6", link = "dates", note = "Timothy's return with good news." }]
+  verses = [{ ref = "1Thess.3.6", link = "dates", note = "Here Timothy returns to Paul with good news about the Thessalonians, the event that fixes when the letter was written." }]
 
 [[positions]]
 id = "carson-moo-corinth-50"
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
   text = """
 Carson and Moo argue that the letter's details fit Acts 17 and 18 closely. Acts 18:5 together with the mention of Achaia in 1 Thessalonians 1:8 give what they call "conclusive reasons" to place the writing in Corinth rather than Athens."""
   citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
-  verses = [{ ref = "1Thess.1.8", link = "dates", note = "Achaia mentioned, which points to Corinth." }]
+  verses = [{ ref = "1Thess.1.8", link = "dates", note = "Here Paul mentions Achaia, a reference taken to point to Corinth as the place of writing." }]
 
 [[positions]]
 id = "ehrman-intro-49"

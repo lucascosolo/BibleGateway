@@ -7,12 +7,12 @@ status = "draft"
 summary = """
 Luke dates the moment God's word came to John to the fifteenth year of Tiberius. Counting from Augustus's death in September 14 CE, scholars place the start of John's ministry in late 28 or early 29 CE."""
 verses = [
-  { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "The fifteenth year of Tiberius, with Pilate governor of Judea" },
-  { ref = "Luke.3.3-Luke.3.20", link = "describes", note = "His preaching, his baptizing and his imprisonment" },
-  { ref = "Matt.3.1-Matt.3.12", link = "describes", note = "John in the wilderness of Judea" },
-  { ref = "Mark.1.2-Mark.1.8", link = "describes", note = "The forerunner, baptizing" },
-  { ref = "John.1.19-John.1.28", link = "describes", note = "His testimony at Bethany beyond the Jordan" },
-  { ref = "Acts.13.24-Acts.13.25", link = "alludes", note = "Paul recalls John's baptism of repentance" },
+  { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "Luke dates the start of John's ministry to the fifteenth year of Tiberius, with Pilate governor of Judea." },
+  { ref = "Luke.3.3-Luke.3.20", link = "describes", note = "Luke describes John's preaching, his baptizing and his imprisonment." },
+  { ref = "Matt.3.1-Matt.3.12", link = "describes", note = "Matthew describes John preaching in the wilderness of Judea." },
+  { ref = "Mark.1.2-Mark.1.8", link = "describes", note = "Mark describes John as the forerunner who baptizes." },
+  { ref = "John.1.19-John.1.28", link = "describes", note = "John's Gospel describes his testimony at Bethany beyond the Jordan." },
+  { ref = "Acts.13.24-Acts.13.25", link = "alludes", note = "In Acts, Paul recalls John's baptism of repentance, which refers back to this ministry." },
 ]
 
 [[attestations]]

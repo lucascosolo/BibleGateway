@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 Paul is arrested in Jerusalem and held at Caesarea under the governor Felix. After two years he is heard by Felix's successor, Festus, and appeals to Caesar. Scholars disagree on the year Festus took office, anywhere from about 55 to 61 CE. The scholar F. F. Bruce favors 59."""
 verses = [
-  { ref = "Acts.21.27-Acts.21.36", link = "describes", note = "Paul is arrested in the temple" },
-  { ref = "Acts.23.23-Acts.24.27", link = "describes", note = "Caesarea, Felix, and two years in custody" },
-  { ref = "Acts.25.1-Acts.26.32", link = "describes", note = "Festus, the appeal to Caesar, and King Agrippa II" },
+  { ref = "Acts.21.27-Acts.21.36", link = "describes", note = "Acts describes how Paul is arrested in the temple." },
+  { ref = "Acts.23.23-Acts.24.27", link = "describes", note = "Acts describes Paul at Caesarea before Felix and two years in custody." },
+  { ref = "Acts.25.1-Acts.26.32", link = "describes", note = "Acts describes Festus, Paul's appeal to Caesar, and the hearing before King Agrippa II." },
 ]
 
 [[attestations]]

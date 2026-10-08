@@ -7,15 +7,15 @@ status = "draft"
 summary = """
 Gideon of Manasseh, also called Jerubbaal, tears down his father's altar to Baal and, with 300 men, routs the Midianite and Amalekite raiders. He refuses to be king, but his son Abimelech later seizes the kingship. The sources read give no date for Gideon himself."""
 verses = [
-  { ref = "Judg.6.1-Judg.6.40", link = "describes", note = "Midianite oppression, the call, the altar of Baal and the fleece" },
-  { ref = "Judg.7.1-Judg.7.25", link = "describes", note = "The 300 men and the night attack" },
-  { ref = "Judg.8.1-Judg.8.35", link = "describes", note = "The chase after the kings, the ephod, the kingship refused and Gideon's death" },
-  { ref = "Judg.9.1-Judg.9.57", link = "describes", note = "Abimelech, Jerubbaal's son" },
-  { ref = "1Sam.12.11", link = "alludes", note = "The Lord sent Jerubbaal and Barak, Jephthah and Samuel" },
-  { ref = "Isa.9.4", link = "alludes", note = "As on the day of Midian" },
-  { ref = "Isa.10.26", link = "alludes", note = "The slaughter of Midian at the rock of Oreb" },
-  { ref = "Ps.83.9-Ps.83.12", link = "alludes", note = "Do to them as you did to Midian, and to Oreb, Zeeb, Zebah and Zalmunna" },
-  { ref = "Heb.11.32", link = "alludes", note = "Gideon is named among the faithful" },
+  { ref = "Judg.6.1-Judg.6.40", link = "describes", note = "Judges 6 tells of Midianite oppression, Gideon's call, the altar of Baal and the fleece." },
+  { ref = "Judg.7.1-Judg.7.25", link = "describes", note = "Judges 7 tells how 300 men make the night attack." },
+  { ref = "Judg.8.1-Judg.8.35", link = "describes", note = "Judges 8 tells of the chase after the kings, the ephod, the refused kingship and Gideon's death." },
+  { ref = "Judg.9.1-Judg.9.57", link = "describes", note = "Judges 9 continues with Abimelech, Jerubbaal's son." },
+  { ref = "1Sam.12.11", link = "alludes", note = "1 Samuel 12:11 recalls that the Lord sent Jerubbaal and Barak, Jephthah and Samuel." },
+  { ref = "Isa.9.4", link = "alludes", note = "Isaiah 9:4 refers to the day of Midian." },
+  { ref = "Isa.10.26", link = "alludes", note = "Isaiah 10:26 recalls the slaughter of Midian at the rock of Oreb." },
+  { ref = "Ps.83.9-Ps.83.12", link = "alludes", note = "Psalm 83:9-12 asks God to do to them as he did to Midian, and to Oreb, Zeeb, Zebah and Zalmunna." },
+  { ref = "Heb.11.32", link = "alludes", note = "Hebrews 11:32 names Gideon among the faithful." },
 ]
 
 [[positions]]

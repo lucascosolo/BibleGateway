@@ -7,15 +7,15 @@ status = "draft"
 summary = """
 Abraham travels from Haran to Canaan, stopping first at Shechem, then goes down to Egypt during a famine and returns. Whether there was a historical age of the patriarchs at all is a separate question (see the linked issue). The positions here give the dates offered by people who accept that setting, along with one that dates the stories' writing instead."""
 verses = [
-  { ref = "Gen.11.31-Gen.11.32", link = "describes", note = "Terah's family leaves Ur for Haran" },
-  { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "The call, and the journey to Shechem, Bethel and the Negeb" },
-  { ref = "Gen.12.10-Gen.12.20", link = "describes", note = "Famine and the stay in Egypt" },
-  { ref = "Gen.13.1-Gen.13.4", link = "describes", note = "Return from Egypt to the Negeb and Bethel" },
-  { ref = "Josh.24.2-Josh.24.3", link = "alludes", note = "Joshua recalls that God took Abraham from beyond the River and led him through Canaan" },
-  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "A prayer recalls that God chose Abram and brought him out of Ur of the Chaldeans" },
-  { ref = "Acts.7.2-Acts.7.5", link = "alludes", note = "Stephen says the God of glory appeared to Abraham in Mesopotamia. Abraham then moved to Haran, then Canaan" },
-  { ref = "Heb.11.8-Heb.11.10", link = "alludes", note = "By faith Abraham obeyed and set out, not knowing where he was going" },
-  { ref = "Ps.105.9-Ps.105.15", link = "alludes", note = "The covenant with Abraham, and God's protection of the wandering patriarchs" },
+  { ref = "Gen.11.31-Gen.11.32", link = "describes", note = "Genesis 11:31-32 tells how Terah's family leaves Ur for Haran." },
+  { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "Genesis 12:1-9 tells the call of Abram and his journey to Shechem, Bethel and the Negeb." },
+  { ref = "Gen.12.10-Gen.12.20", link = "describes", note = "Genesis 12:10-20 tells of a famine and the stay in Egypt." },
+  { ref = "Gen.13.1-Gen.13.4", link = "describes", note = "Genesis 13:1-4 tells the return from Egypt to the Negeb and Bethel." },
+  { ref = "Josh.24.2-Josh.24.3", link = "alludes", note = "In Joshua 24:2-3 Joshua recalls that God took Abraham from beyond the River and led him through Canaan." },
+  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "Nehemiah 9:7-8 is a prayer recalling that God chose Abram and brought him out of Ur of the Chaldeans." },
+  { ref = "Acts.7.2-Acts.7.5", link = "alludes", note = "Stephen says the God of glory appeared to Abraham in Mesopotamia. Abraham then moved to Haran, then Canaan." },
+  { ref = "Heb.11.8-Heb.11.10", link = "alludes", note = "Hebrews 11:8-10 says that by faith Abraham obeyed and set out, not knowing where he was going." },
+  { ref = "Ps.105.9-Ps.105.15", link = "alludes", note = "Psalm 105:9-15 recalls the covenant with Abraham and God's protection of the wandering patriarchs." },
 ]
 
 [[positions]]

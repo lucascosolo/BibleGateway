@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 Matthew sets Jesus's birth in the reign of Herod the king, while Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death, but Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved."""
 verses = [
-  { ref = "Matt.1.18-Matt.2.23", link = "describes", note = "The birth at Bethlehem in the days of Herod" },
-  { ref = "Luke.2.1-Luke.2.2", link = "dates", note = "A decree of Augustus, while Quirinius is governor of Syria" },
-  { ref = "Luke.2.3-Luke.2.20", link = "describes", note = "The registration, the birth and the shepherds" },
-  { ref = "Luke.3.23", link = "alludes", note = "Jesus is about thirty years old when his ministry begins" },
-  { ref = "Gal.4.4", link = "alludes", note = "Born of a woman, born under the law" },
+  { ref = "Matt.1.18-Matt.2.23", link = "describes", note = "Matthew 1:18-2:23 tells the birth of Jesus at Bethlehem in the days of Herod." },
+  { ref = "Luke.2.1-Luke.2.2", link = "dates", note = "Luke 2:1-2 mentions a decree of Augustus while Quirinius is governor of Syria, a synchronism used to date the birth." },
+  { ref = "Luke.2.3-Luke.2.20", link = "describes", note = "Luke 2:3-20 tells the registration, the birth and the shepherds." },
+  { ref = "Luke.3.23", link = "alludes", note = "Luke 3:23 says Jesus is about thirty years old when his ministry begins, which gives a way to estimate the birth." },
+  { ref = "Gal.4.4", link = "alludes", note = "Galatians 4:4 says Jesus was born of a woman, born under the law." },
 ]
 
 [[positions]]

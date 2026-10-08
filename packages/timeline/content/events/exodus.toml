@@ -7,8 +7,8 @@ status = "draft"
 summary = """
 This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates: one in the 15th century BCE, read from 1 Kings 6:1, and the other in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan."""
 verses = [
-  { ref = "Exod.12.40-Exod.12.41", link = "dates", note = "430 years in Egypt" },
-  { ref = "Exod.1.11", link = "background", note = "The store cities Pithom and Raamses" },
+  { ref = "Exod.12.40-Exod.12.41", link = "dates", note = "Exodus 12:40-41 gives the time in Egypt as 430 years, a number used to date the exodus." },
+  { ref = "Exod.1.11", link = "background", note = "Exodus 1:11 names the store cities Pithom and Raamses, which Israel is made to build." },
 ]
 
 [[positions]]

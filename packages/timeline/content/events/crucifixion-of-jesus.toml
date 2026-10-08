@@ -7,13 +7,13 @@ status = "draft"
 summary = """
 All four Gospels place the crucifixion at Passover, on a Friday, under Pontius Pilate, and scholars generally agree on a date between 30 and 36 CE. The Friday-Passover rule leaves two plausible years by the astronomy, 30 CE and 33 CE, and which of the two is right is still open."""
 verses = [
-  { ref = "Matt.27.11-Matt.27.56", link = "describes", note = "The trial before Pilate, the crucifixion and the death" },
-  { ref = "Mark.15.1-Mark.15.41", link = "describes", note = "Jesus is handed over to Pilate and crucified at Golgotha" },
-  { ref = "Luke.23.1-Luke.23.49", link = "describes", note = "Jesus appears before Pilate and Herod, then is crucified" },
-  { ref = "John.18.28-John.19.37", link = "describes", note = "From Pilate's judgment hall to the spear in his side" },
-  { ref = "Acts.2.23", link = "alludes", note = "Peter speaks of the crucifixion at Pentecost" },
-  { ref = "1Cor.15.3-1Cor.15.4", link = "alludes", note = "Christ died for our sins, was buried and was raised" },
-  { ref = "1Tim.6.13", link = "alludes", note = "The good confession before Pontius Pilate" },
+  { ref = "Matt.27.11-Matt.27.56", link = "describes", note = "Matthew 27:11-56 tells the trial before Pilate, the crucifixion and the death of Jesus." },
+  { ref = "Mark.15.1-Mark.15.41", link = "describes", note = "Jesus is handed over to Pilate and crucified at Golgotha." },
+  { ref = "Luke.23.1-Luke.23.49", link = "describes", note = "Jesus appears before Pilate and Herod, then is crucified." },
+  { ref = "John.18.28-John.19.37", link = "describes", note = "John 18:28-19:37 runs from Pilate's judgment hall to the spear in Jesus's side." },
+  { ref = "Acts.2.23", link = "alludes", note = "In Acts 2:23 Peter speaks of the crucifixion at Pentecost." },
+  { ref = "1Cor.15.3-1Cor.15.4", link = "alludes", note = "1 Corinthians 15:3-4 says Christ died for our sins, was buried and was raised." },
+  { ref = "1Tim.6.13", link = "alludes", note = "1 Timothy 6:13 refers to the good confession Christ made before Pontius Pilate." },
 ]
 
 [[positions]]
@@ -37,11 +37,11 @@ citations = [
 Humphreys and Waddington argue that with 27 and 34 eliminated, the crucifixion must fall on 14 Nisan, so the Last Supper "cannot have been a Passover meal held at the official Passover meal time". John's three Passovers and a ministry beginning no earlier than autumn 28 then exclude 30 CE; John 2:20's forty-six years puts the first Passover of the ministry in 30 or 31; and the Gospels' weak Pilate fits the period after Sejanus's fall in October 31."""
   citations = [{ source = "humphreys-waddington-1992", locator = "pp. 338–340" }]
   verses = [
-    { ref = "John.18.28", link = "dates", note = "The day before Passover" },
+    { ref = "John.18.28", link = "dates", note = "John 18:28 is read as placing the crucifixion on the day before Passover." },
     { ref = "John.19.31", link = "dates" },
-    { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "The fifteenth year of Tiberius" },
-    { ref = "John.2.20", link = "dates", note = "Forty-six years to build the temple" },
-    { ref = "1Cor.5.7", link = "alludes", note = "Christ our Passover" },
+    { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "Luke 3:1-2 gives the fifteenth year of Tiberius, a synchronism used to date Jesus's ministry and so his death." },
+    { ref = "John.2.20", link = "dates", note = "John 2:20 says the temple took forty-six years to build, a number used to date the start of Jesus's ministry." },
+    { ref = "1Cor.5.7", link = "alludes", note = "1 Corinthians 5:7 calls Christ our Passover, linking his death to the Passover." },
   ]
 
   [[positions.arguments]]
@@ -50,8 +50,8 @@ Humphreys and Waddington argue that with 27 and 34 eliminated, the crucifixion m
 The eclipse is their second argument. Their calculations show a lunar eclipse visible from Jerusalem at moonrise on 3 April 33, with most of the rising moon "turned to blood". Jews waiting for moonrise to begin the Passover meal would have seen it, and Peter's audience seven weeks later would have understood Joel's "moon to blood" as that eclipse. They also cite the apocryphal "Report of Pilate" and Cyril of Alexandria as textual echoes."""
   citations = [{ source = "humphreys-waddington-1992", locator = "pp. 340–347, 350" }]
   verses = [
-    { ref = "Acts.2.19-Acts.2.21", link = "alludes", note = "The sun to darkness and the moon to blood" },
-    { ref = "Matt.27.45", link = "background", note = "Darkness from the sixth to the ninth hour" },
+    { ref = "Acts.2.19-Acts.2.21", link = "alludes", note = "Acts 2:19-21 speaks of the sun turned to darkness and the moon to blood, language linked here to the darkness at the crucifixion." },
+    { ref = "Matt.27.45", link = "background", note = "Matthew 27:45 reports darkness from the sixth to the ninth hour during the crucifixion." },
   ]
 
   [[positions.arguments]]
@@ -116,14 +116,14 @@ Chadwick reads Tiberius's fifteenth year (Luke 3:1) as autumn 27 to autumn 28, w
   text = """
 Chadwick accepts Humphreys and Waddington's new-moon calculations but not their extra day for 30 CE. He argues the new moon of 22 March 30 at 19:55 was visible that evening in Jerusalem, so 14 Nisan fell on Thursday 6 April, not Friday 7 April. Only 27, 30 and 33 CE put 14 Nisan within three days before a Sunday under Pilate, and he rules out 27 as too early for the ministry and 33 as too late."""
   citations = [{ source = "chadwick-2015", locator = "pp. 154–157, Figure 3 on p. 157" }]
-  verses = [{ ref = "John.19.14", link = "dates", note = "The preparation of the Passover" }]
+  verses = [{ ref = "John.19.14", link = "dates", note = "John 19:14 calls the day the preparation of the Passover, a phrase that bears on when the crucifixion fell." }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
 The Thursday rests on reading the Gospels' three days as three full days and on his new-moon visibility claim. The Friday of all four Gospel accounts (the day before the Sabbath) is the reading other scholars keep, and the lifespan argument from the Book of Mormon is not evidence outside Latter-day Saint tradition."""
   citations = [{ source = "chadwick-2015", locator = "pp. 156–159, 190" }]
-  verses = [{ ref = "Mark.15.42", link = "dates", note = "The day before the Sabbath" }]
+  verses = [{ ref = "Mark.15.42", link = "dates", note = "Mark 15:42 calls the day the day before the Sabbath, a phrase that bears on when the crucifixion fell." }]
 
 [[attestations]]
 artifact = "tacitus-annals-15-44"

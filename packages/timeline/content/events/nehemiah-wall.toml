@@ -7,10 +7,10 @@ status = "draft"
 summary = """
 In the twentieth year of King Artaxerxes (445 or 444 BCE), Nehemiah, the king's cupbearer, is sent to Jerusalem. The wall is finished in fifty-two days, despite opposition from Sanballat the Horonite. Letters found at Elephantine in Egypt, from 407 BCE, name Sanballat's sons and the high priest Johanan. That ties the Nehemiah story to a world we can check outside the Bible."""
 verses = [
-  { ref = "Neh.2.1", link = "describes", note = "the month of Nisan, in the twentieth year of Artaxerxes" },
-  { ref = "Neh.2.10", link = "describes", note = "Sanballat the Horonite and Tobiah are upset" },
-  { ref = "Neh.6.15", link = "describes", note = "the wall is finished in fifty-two days" },
-  { ref = "Neh.13.28", link = "alludes", note = "a son of Joiada is son-in-law to Sanballat" },
+  { ref = "Neh.2.1", link = "describes", note = "Nehemiah dates his request to the month of Nisan, in the twentieth year of Artaxerxes." },
+  { ref = "Neh.2.10", link = "describes", note = "Nehemiah reports that Sanballat the Horonite and Tobiah are upset, which describes the opposition to the project." },
+  { ref = "Neh.6.15", link = "describes", note = "Nehemiah reports that the wall is finished in fifty-two days." },
+  { ref = "Neh.13.28", link = "alludes", note = "Nehemiah notes that a son of Joiada is son-in-law to Sanballat, which refers back to the opponent met in this story." },
 ]
 
 [[positions]]

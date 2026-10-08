@@ -6,13 +6,13 @@ confidence = "contested"
 status = "draft"
 summary = "Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). Which calendar year that is depends on where you start counting Solomon's reign."
 verses = [
-  { ref = "1Kgs.6.1", link = "dates", note = "Solomon's fourth year, in the month of Ziv" },
-  { ref = "1Kgs.5.1-1Kgs.5.18", link = "describes", note = "the preparations, with King Hiram" },
-  { ref = "1Kgs.6.2-1Kgs.6.38", link = "describes", note = "the building work" },
-  { ref = "2Chr.2.1-2Chr.2.18", link = "describes", note = "the preparations, as told in Chronicles" },
-  { ref = "2Chr.3.1-2Chr.3.2", link = "describes", note = "Chronicles: work begins in the second month of the fourth year" },
-  { ref = "Acts.7.47", link = "alludes", note = "Stephen: Solomon built him a house" },
-  { ref = "Ezra.5.11", link = "alludes", note = "the house built many years earlier" },
+  { ref = "1Kgs.6.1", link = "dates", note = "Kings dates the start of the temple to Solomon's fourth year, in the month of Ziv." },
+  { ref = "1Kgs.5.1-1Kgs.5.18", link = "describes", note = "Kings describes the preparations, with King Hiram." },
+  { ref = "1Kgs.6.2-1Kgs.6.38", link = "describes", note = "Kings describes the building work." },
+  { ref = "2Chr.2.1-2Chr.2.18", link = "describes", note = "Chronicles describes the preparations as well." },
+  { ref = "2Chr.3.1-2Chr.3.2", link = "describes", note = "Chronicles says the work begins in the second month of the fourth year." },
+  { ref = "Acts.7.47", link = "alludes", note = "Stephen says Solomon built God a house, which refers back to the temple." },
+  { ref = "Ezra.5.11", link = "alludes", note = "Ezra 5:11 speaks of the house built many years earlier, which refers back to Solomon's temple." },
 ]
 
 [[positions]]

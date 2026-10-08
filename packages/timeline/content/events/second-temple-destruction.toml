@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 The Roman army under Titus besieged Jerusalem from 13 April to 8 September 70 CE. The Second Temple burned on 10 Av. Jesus's words about the temple, in Matthew, Mark and Luke, point to this event. Josephus tells it from the Roman side, and the Arch of Titus in Rome shows the loot."""
 verses = [
-  { ref = "Mark.13.1-Mark.13.2", link = "alludes", note = "not one stone will be left on another" },
-  { ref = "Matt.24.1-Matt.24.2", link = "alludes", note = "the same saying: the temple buildings thrown down" },
-  { ref = "Luke.21.5-Luke.21.6", link = "alludes", note = "the same saying: the days will come when not one stone is left" },
-  { ref = "Luke.21.20-Luke.21.24", link = "alludes", note = "Jerusalem surrounded by armies" },
-  { ref = "Luke.19.43-Luke.19.44", link = "alludes", note = "enemies will not leave one stone on another" },
+  { ref = "Mark.13.1-Mark.13.2", link = "alludes", note = "Mark records the saying that not one stone will be left on another, which alludes to the destruction." },
+  { ref = "Matt.24.1-Matt.24.2", link = "alludes", note = "Matthew gives the same saying, that the temple buildings will be thrown down." },
+  { ref = "Luke.21.5-Luke.21.6", link = "alludes", note = "Luke gives the same saying, that the days will come when not one stone is left." },
+  { ref = "Luke.21.20-Luke.21.24", link = "alludes", note = "Luke speaks of Jerusalem surrounded by armies, which alludes to the siege." },
+  { ref = "Luke.19.43-Luke.19.44", link = "alludes", note = "Luke says enemies will not leave one stone on another, which alludes to the destruction." },
 ]
 
 [[positions]]
@@ -31,7 +31,7 @@ citations = [
 artifact = "josephus-war-6-249"
 relation = "corroborates"
 note = """
-Josephus, who saw it, describes the burning of the temple on the tenth of Lous."""
+In the Jewish War, Josephus, who saw it, describes the burning of the temple on the tenth of Lous. This corroborates the destruction dated here."""
 citations = [{ source = "lexundria-josephus-war-6-249", locator = "6.249–250" }]
 
 [[attestations]]

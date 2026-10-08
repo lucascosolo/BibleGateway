@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 Acts 2 tells of the first Pentecost after the resurrection. The apostles speak in other languages, and Peter preaches in Jerusalem. Its year depends on the year given to the crucifixion, which is unsettled. Both positions below simply take the crucifixion year and have the same holders. No scholar read dates Pentecost on its own."""
 verses = [
-  { ref = "Acts.2.1-Acts.2.41", link = "describes", note = "the day of Pentecost, the speaking in other languages, Peter's sermon" },
-  { ref = "Joel.2.28-Joel.2.32", link = "background", note = "the prophecy Peter quotes" },
-  { ref = "Acts.11.15-Acts.11.16", link = "alludes", note = "Peter recalls the Spirit coming down at the start" },
+  { ref = "Acts.2.1-Acts.2.41", link = "describes", note = "Acts describes the day of Pentecost, the speaking in other languages, and Peter's sermon." },
+  { ref = "Joel.2.28-Joel.2.32", link = "background", note = "Joel contains the prophecy that Peter quotes in his sermon, which gives background to the event." },
+  { ref = "Acts.11.15-Acts.11.16", link = "alludes", note = "Peter recalls the Spirit coming down at the start, which refers back to Pentecost." },
 ]
 
 [[positions]]
@@ -32,8 +32,8 @@ citations = [
   Acts 2:1 sets the event on "the day of Pentecost", the fiftieth day of the count that begins at Passover. Whatever year the crucifixion took place, that year's Pentecost followed about seven weeks later."""
   citations = [{ source = "humphreys-waddington-1992", locator = "p. 337" }]
   verses = [
-    { ref = "Acts.2.1", link = "dates", note = "When the day of Pentecost had come" },
-    { ref = "Lev.23.15-Lev.23.16", link = "background", note = "Fifty days counted from the day after the Sabbath" },
+    { ref = "Acts.2.1", link = "dates", note = "Acts opens the scene with 'When the day of Pentecost had come,' which ties the event to the festival's date." },
+    { ref = "Lev.23.15-Lev.23.16", link = "background", note = "Leviticus counts fifty days from the day after the Sabbath, which is the basis of the festival's date." },
   ]
 
 [[positions]]

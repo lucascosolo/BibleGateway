@@ -92,4 +92,4 @@ citations = [{ source = "streeter-1924", locator = "pp. 532–535, 540, 548–55
   text = """
 Streeter argues that Luke, who follows Mark closely, suddenly rewrites Mark 13's Anti-Christ prophecy into one of Jerusalem's destruction and enslavement. He reads this as knowledge of the events of 70, so the Gospel cannot be earlier. The Fourth Gospel's use of Luke then keeps it from running much past 85."""
   citations = [{ source = "streeter-1924", locator = "p. 540" }]
-  verses = [{ ref = "Luke.21.20", link = "dates", note = "Armies surrounding Jerusalem, taken as reworking Mark 13 after the event." }]
+  verses = [{ ref = "Luke.21.20", link = "dates", note = "Luke speaks of armies surrounding Jerusalem, which is taken as a reworking of Mark 13 after the event." }]

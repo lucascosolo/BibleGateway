@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 Ezekiel is among the exiles by the river Chebar, where he sees visions of God in the fifth year of Jehoiachin's captivity. The standard modern date is 593 BCE (July, by one commentary summary). What the "thirtieth year" in Ezekiel 1:1 is counting is unsettled."""
 verses = [
-  { ref = "Ezek.1.1", link = "describes", note = "The thirtieth year, fourth month, fifth day, by the river Chebar" },
-  { ref = "Ezek.1.2", link = "describes", note = "The fifth year of King Jehoiachin's captivity" },
-  { ref = "Ezek.1.3", link = "describes", note = "The word of Yahweh comes to Ezekiel the priest" },
+  { ref = "Ezek.1.1", link = "describes", note = "Ezekiel 1:1 dates the vision to the thirtieth year, fourth month, fifth day, by the river Chebar." },
+  { ref = "Ezek.1.2", link = "describes", note = "Ezekiel 1:2 gives the fifth year of King Jehoiachin's captivity as the date." },
+  { ref = "Ezek.1.3", link = "describes", note = "Ezekiel 1:3 says the word of Yahweh came to Ezekiel the priest." },
 ]
 
 [[positions]]

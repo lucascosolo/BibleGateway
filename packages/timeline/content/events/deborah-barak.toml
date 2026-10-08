@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera at the Kishon. Sisera served Jabin, king of Hazor; Jael kills him, and Judges 5 celebrates the victory in verse. The date is disputed, from the late 13th century to the 11th."""
 verses = [
-  { ref = "Judg.4.1-Judg.4.24", link = "describes", note = "Deborah, Barak, Sisera and Jael: the story in prose" },
-  { ref = "Judg.5.1-Judg.5.31", link = "describes", note = "The Song of Deborah: the story in poetry" },
-  { ref = "1Sam.12.9-1Sam.12.11", link = "alludes", note = "Samuel says the Lord sent Jerubbaal, Barak and Jephthah. Sisera is named as the earlier oppressor" },
-  { ref = "Ps.83.9-Ps.83.10", link = "alludes", note = "Do to them as to Sisera and Jabin at the river Kishon" },
-  { ref = "Heb.11.32", link = "alludes", note = "Barak is named among those the writer has no time to tell about" },
+  { ref = "Judg.4.1-Judg.4.24", link = "describes", note = "Judges 4 tells the story of Deborah, Barak, Sisera and Jael in prose." },
+  { ref = "Judg.5.1-Judg.5.31", link = "describes", note = "Judges 5, the Song of Deborah, tells the same story in poetry." },
+  { ref = "1Sam.12.9-1Sam.12.11", link = "alludes", note = "In 1 Samuel 12:9-11 Samuel says the Lord sent Jerubbaal, Barak and Jephthah, and names Sisera as the earlier oppressor." },
+  { ref = "Ps.83.9-Ps.83.10", link = "alludes", note = "Psalm 83:9-10 asks God to do to them as was done to Sisera and Jabin at the river Kishon." },
+  { ref = "Heb.11.32", link = "alludes", note = "Hebrews 11:32 names Barak among those the writer has no time to tell about." },
 ]
 
 [[positions]]

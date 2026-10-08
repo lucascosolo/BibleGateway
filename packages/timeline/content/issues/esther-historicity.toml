@@ -5,10 +5,10 @@ status = "draft"
 summary = """
 Esther is set at the Persian court of Ahasuerus, usually identified with Xerxes I (486-465 BCE). Most scholars today read the book as a historical novel rather than a record: it knows the Persian court well but contains errors no court insider would make. The Hebrew text is the oldest version we have, and its language and vocabulary point to a date after Xerxes and probably before Greek influence reached the Jews."""
 verses = [
-  { ref = "Esth.1.1", link = "describes", note = "Ahasuerus, who reigned from India to Ethiopia over 127 provinces" },
-  { ref = "Esth.1.3", link = "describes", note = "The army of Persia and Media" },
-  { ref = "Esth.1.19", link = "describes", note = "The laws of the Persians and the Medes" },
-  { ref = "Esth.10.2", link = "describes", note = "The chronicles of the kings of Media and Persia" },
+  { ref = "Esth.1.1", link = "describes", note = "Esther 1:1 introduces Ahasuerus as a king who reigned from India to Ethiopia over 127 provinces, a Persian setting whose fit with history is debated." },
+  { ref = "Esth.1.3", link = "describes", note = "Esther 1:3 mentions the army of Persia and Media, part of the Persian court setting whose historical fit is debated." },
+  { ref = "Esth.1.19", link = "describes", note = "Esther 1:19 refers to the laws of the Persians and the Medes, part of the Persian court setting whose historical fit is debated." },
+  { ref = "Esth.10.2", link = "describes", note = "Esther 10:2 points readers to the chronicles of the kings of Media and Persia, records the book cites for its story." },
 ]
 citations = [{ source = "arabzadeh-2023", locator = "pp. 19–21, 30–31" }]
 

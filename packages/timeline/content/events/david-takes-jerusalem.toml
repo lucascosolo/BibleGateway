@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 David captures the Jebusite stronghold of Zion and makes it the city of David. Before that he had ruled over Judah from Hebron for seven years and six months."""
 verses = [
-  { ref = "2Sam.5.6-2Sam.5.10", link = "describes", note = "The capture of the stronghold of Zion" },
-  { ref = "1Chr.11.4-1Chr.11.9", link = "describes", note = "The parallel in Chronicles" },
-  { ref = "2Sam.5.5", link = "dates", note = "Seven years and six months at Hebron, then thirty-three in Jerusalem" },
-  { ref = "Ps.132.13", link = "alludes", note = "'Yahweh has chosen Zion'" },
-  { ref = "Ps.78.70", link = "alludes", note = "God chose David his servant" },
+  { ref = "2Sam.5.6-2Sam.5.10", link = "describes", note = "2 Samuel 5:6-10 tells the capture of the stronghold of Zion." },
+  { ref = "1Chr.11.4-1Chr.11.9", link = "describes", note = "1 Chronicles 11:4-9 is the parallel account of the capture." },
+  { ref = "2Sam.5.5", link = "dates", note = "2 Samuel 5:5 gives David seven years and six months at Hebron and thirty-three in Jerusalem, numbers used to date the capture." },
+  { ref = "Ps.132.13", link = "alludes", note = "Psalm 132:13 declares that 'Yahweh has chosen Zion'." },
+  { ref = "Ps.78.70", link = "alludes", note = "Psalm 78:70 says God chose David his servant." },
 ]
 
 [[positions]]

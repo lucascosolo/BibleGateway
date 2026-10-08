@@ -27,11 +27,11 @@ citations = [
 [[attestations]]
 artifact = "tacitus-annals-15-44"
 relation = "corroborates"
-note = "Tacitus names Pontius Pilate as the procurator under whom Christus was executed."
+note = "Tacitus names Pontius Pilate as the procurator under whom Christus was executed. This is a Roman writer's statement, made independently of the Gospels, that Pilate held office in Judaea in the reign of Tiberius."
 citations = [{ source = "tacitus-annals-15-latin", locator = "15.44" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-18-55"
 relation = "corroborates"
-note = "Josephus narrates episodes from Pilate's governorship of Judaea."
+note = "Josephus narrates several episodes from Pilate's governorship of Judaea. These accounts are outside evidence for the office he held and for how he governed."
 citations = [{ source = "perseus-josephus-ant-18", locator = "18.55" }]

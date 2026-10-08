@@ -7,13 +7,13 @@ James and his brother John are called sons of Zebedee in Mark, and Meier sees no
 Meier treats the request for seats at Jesus' right and left (Mark 10:35-40) as having a historical core, partly because it shows the brothers in a poor light and Jesus without knowledge or power to grant it. James is the only one of the Twelve whose death the New Testament narrates: Herod Agrippa I had him killed around 44 CE (Acts 12:1-2). Apart from James and Peter, Meier says there is no solid proof that any of the Twelve were martyred. The title "the Great" and the link to Spain are later tradition, the Spain link not before the sixth or seventh century."""
 status = "draft"
 verses = [
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "list of the Twelve in Mark; Boanerges at 3:17" },
-  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "list of the Twelve in Matthew" },
-  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "list of the Twelve in Luke" },
-  { ref = "Acts.1.13", link = "describes", note = "list of the Eleven in Acts" },
-  { ref = "Mark.1.19-Mark.1.20", link = "describes", note = "called with John while mending nets" },
-  { ref = "Mark.10.35-Mark.10.40", link = "describes", note = "the request for places beside Jesus; Meier finds a historical core" },
-  { ref = "Acts.12.1-Acts.12.2", link = "describes", note = "killed by Herod Agrippa I, c. 44 CE" },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve, and James son of Zebedee is among them; verse 17 gives the nickname Boanerges." },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve, and James son of Zebedee is among them." },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists the Twelve, and James son of Zebedee is among them." },
+  { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven after Judas is gone, and James son of Zebedee is among them." },
+  { ref = "Mark.1.19-Mark.1.20", link = "describes", note = "Mark 1:19–20 tells how Jesus called James together with his brother John while they were mending nets." },
+  { ref = "Mark.10.35-Mark.10.40", link = "describes", note = "Mark 10:35–40 records the request for places beside Jesus, in which Meier finds a historical core." },
+  { ref = "Acts.12.1-Acts.12.2", link = "describes", note = "Acts 12:1–2 reports that Herod Agrippa I had James killed, around 44 CE." },
 ]
 citations = [
   { source = "meier-2001", locator = "pp. 212–221" },

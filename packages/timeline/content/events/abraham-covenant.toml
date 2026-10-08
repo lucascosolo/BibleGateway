@@ -7,17 +7,17 @@ status = "draft"
 summary = """
 God promises Abram land and descendants, and the promise is sealed in a ritual in Genesis 15. It is renewed in Genesis 17, where circumcision becomes its sign. Whether Abraham was a historical figure is a separate question (see the linked issue), so the positions here only offer dates for people who accept the setting."""
 verses = [
-  { ref = "Gen.12.1-Gen.12.3", link = "describes", note = "The first promise: a great nation, and blessing for all families" },
-  { ref = "Gen.15.1-Gen.15.21", link = "describes", note = "The covenant between the pieces. The land is promised from the river of Egypt to the Euphrates" },
-  { ref = "Gen.17.1-Gen.17.27", link = "describes", note = "The covenant is renewed. Abram becomes Abraham. Circumcision is the sign" },
-  { ref = "Gen.22.15-Gen.22.18", link = "describes", note = "The promise is repeated after Abraham is stopped from sacrificing Isaac" },
-  { ref = "Exod.2.24", link = "alludes", note = "God remembered his covenant with Abraham, Isaac and Jacob" },
-  { ref = "Ps.105.8-Ps.105.11", link = "alludes", note = "He remembers his covenant forever, the covenant made with Abraham" },
-  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "God made a covenant with Abraham to give his descendants the land" },
-  { ref = "Acts.7.8", link = "alludes", note = "Stephen: God gave him the covenant of circumcision" },
-  { ref = "Rom.4.1-Rom.4.13", link = "alludes", note = "Paul: Abraham was counted righteous by faith, before circumcision" },
-  { ref = "Gal.3.15-Gal.3.18", link = "alludes", note = "Paul: the promise to Abraham and his offspring precedes the law" },
-  { ref = "Heb.11.17-Heb.11.19", link = "alludes", note = "Abraham had received the promises, yet offered Isaac" },
+  { ref = "Gen.12.1-Gen.12.3", link = "describes", note = "Genesis 12:1-3 gives the first promise to Abraham: a great nation, and blessing for all families." },
+  { ref = "Gen.15.1-Gen.15.21", link = "describes", note = "Genesis 15 tells the covenant between the pieces, in which the land is promised from the river of Egypt to the Euphrates." },
+  { ref = "Gen.17.1-Gen.17.27", link = "describes", note = "Genesis 17 renews the covenant, changes Abram's name to Abraham and makes circumcision its sign." },
+  { ref = "Gen.22.15-Gen.22.18", link = "describes", note = "Genesis 22:15-18 repeats the promise after Abraham is stopped from sacrificing Isaac." },
+  { ref = "Exod.2.24", link = "alludes", note = "Exodus 2:24 says God remembered his covenant with Abraham, Isaac and Jacob, looking back to the covenant told here." },
+  { ref = "Ps.105.8-Ps.105.11", link = "alludes", note = "Psalm 105:8-11 says God remembers his covenant forever, the covenant made with Abraham." },
+  { ref = "Neh.9.7-Neh.9.8", link = "alludes", note = "Nehemiah 9:7-8 recalls that God made a covenant with Abraham to give his descendants the land." },
+  { ref = "Acts.7.8", link = "alludes", note = "In Acts 7:8 Stephen says God gave Abraham the covenant of circumcision." },
+  { ref = "Rom.4.1-Rom.4.13", link = "alludes", note = "In Romans 4:1-13 Paul argues that Abraham was counted righteous by faith, before he was circumcised." },
+  { ref = "Gal.3.15-Gal.3.18", link = "alludes", note = "In Galatians 3:15-18 Paul argues that the promise to Abraham and his offspring comes before the law." },
+  { ref = "Heb.11.17-Heb.11.19", link = "alludes", note = "Hebrews 11:17-19 says Abraham had received the promises, yet was willing to offer Isaac." },
 ]
 
 [[positions]]

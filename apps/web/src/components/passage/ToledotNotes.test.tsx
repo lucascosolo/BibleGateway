@@ -39,8 +39,14 @@ describe("<ToledotNotes>", () => {
     });
     render(<ToledotNotes notes={[issueNote(), second]} />);
     expect(screen.getAllByRole("listitem")).toHaveLength(2);
-    expect(screen.getByRole("link", { name: "Named by a source outside the Bible: Hezekiah — open on the timeline" })
+    expect(screen.getByRole("link", { name: "Named by a source outside the Bible: Hezekiah appears here; named by a source outside the Bible. — open on the timeline" })
       .getAttribute("href")).toBe("/toledot/people/per-h");
+  });
+
+  it("prints the verse-link note as its own sentence, outside the link's accessible name", () => {
+    const { container } = render(<ToledotNotes notes={[issueNote({ note: "Asked of Exodus 3" })]} />);
+    expect(container.querySelector(".toledot-note__text")!.textContent).toContain("Moses? Asked of Exodus 3.");
+    expect(screen.getByRole("link", { name: "Historical question: Is there a historical Moses? — open on the timeline" })).toBeTruthy();
   });
 
   it("shows a 'draft' caption only for draft subjects", () => {

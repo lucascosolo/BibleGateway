@@ -8,8 +8,8 @@ summary = """
 Babylon breaks through Jerusalem's walls after a long siege, burns the temple and deports much of the population. Scholars agree on the order of events. They differ by one year on the date, 587 or 586 BCE. The Bible gives the dates in the years of each king's reign, and the rules for counting those years are themselves debated."""
 verses = [
   { ref = "2Kgs.25.1-2Kgs.25.21", link = "describes" },
-  { ref = "Jer.52.12", link = "dates", note = "Nebuchadnezzar's nineteenth year" },
-  { ref = "Jer.52.29", link = "background", note = "A deportation in the eighteenth year" },
+  { ref = "Jer.52.12", link = "dates", note = "Jeremiah 52 dates the events in Jerusalem to Nebuchadnezzar's nineteenth year, which supplies a regnal date used for the fall." },
+  { ref = "Jer.52.29", link = "background", note = "Jeremiah 52 reports a deportation in the eighteenth year, which gives background for dating the fall." },
 ]
 
 [[positions]]
@@ -44,7 +44,7 @@ earliest = -587
 latest = -587
 held_by = "Rodger C. Young"
 summary = """
-Young dates the breach of the walls to the summer month of Tammuz in 587 BCE."""
+This position is Rodger C. Young's. He dates the breach of the walls of Jerusalem to the summer month of Tammuz in 587 BCE."""
 citations = [{ source = "young-2004", locator = "pp. 21–38; the conclusion at p. 27" }]
 
   [[positions.arguments]]

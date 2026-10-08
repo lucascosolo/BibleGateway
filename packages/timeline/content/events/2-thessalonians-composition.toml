@@ -48,7 +48,7 @@ Ehrman reads 2:2 as pointing to a letter "as if" by Paul, and he concludes that 
   text = """
 Ehrman thinks the closing claim is suspicious, because the author "did perhaps “protest too much”": “The greeting is in my own hand, the hand of Paul, which is the sign in all my letters. This is how I write”."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 226" }]
-  verses = [{ ref = "2Thess.3.17", link = "background", note = "A claim of authenticity inside the letter, a forger's tool." }]
+  verses = [{ ref = "2Thess.3.17", link = "background", note = "2 Thessalonians 3:17 claims the greeting is in Paul's own hand, which this argument treats as a forger's device." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -95,7 +95,7 @@ citations = [{ source = "brown-1997", locator = "ch. 26, Summary of Basic Inform
   text = """
 Brown points to the close copying between the two letters. II Thess 3:8 repeats I Thess 2:9 almost verbatim, and he asks: "Why would Paul copy himself in this almost mechanical way?" He thinks it more likely the mark of another writer assuming Paul's mantle."""
   citations = [{ source = "brown-1997", locator = "ch. 26, Did Paul Write II Thessalonians?" }]
-  verses = [{ ref = "2Thess.3.8", link = "describes", note = "Repeats 1 Thessalonians 2:9 on labor and toil night and day." }]
+  verses = [{ ref = "2Thess.3.8", link = "describes", note = "This verse repeats the wording of 1 Thessalonians 2:9 on labor and toil night and day." }]
 
 [[positions]]
 id = "carson-moo-corinth-50-51"
@@ -113,7 +113,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 542-544" }]
   text = """
 Carson and Moo single out the autograph of 2 Thessalonians 3:17 as the hardest point for a pseudonymous reading. A forger who wrote "in my own hand" and referred to earlier teaching by Paul (2:2, 15) would, quoting Malherbe, have been "audacious to a degree beyond belief". They say Brown offers no evidence that such wording would be read symbolically."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 536-537, 542" }]
-  verses = [{ ref = "2Thess.3.17", link = "describes", note = "The closing greeting in Paul's own hand." }, { ref = "2Thess.2.2", link = "background", note = "Warning about a letter falsely in Paul's name." }]
+  verses = [{ ref = "2Thess.3.17", link = "describes", note = "The letter closes by saying the greeting is in Paul's own hand." }, { ref = "2Thess.2.2", link = "background", note = "2 Thessalonians 2:2 warns against a letter falsely claimed to come from Paul." }]
 
 [[positions]]
 id = "ehrman-intro-late-first-century"
@@ -131,4 +131,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
   text = """
 Ehrman contrasts the two letters on the end of the age. In the first, the end comes "like a thief in the night," while in the second the man of lawlessness must appear first. He also reads the claim in 2 Thess 3:17 and the warning about a forged letter in 2:2 as the work of an imitator."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
-  verses = [{ ref = "2Thess.2.2", link = "background", note = "Warning about a letter forged in Paul's name." }, { ref = "2Thess.2.3-2Thess.2.4", link = "describes", note = "The antichrist figure who must appear before the end." }, { ref = "1Thess.5.2", link = "describes", note = "The day comes like a thief in the night." }]
+  verses = [{ ref = "2Thess.2.2", link = "background", note = "2 Thessalonians 2:2 warns against a letter forged in Paul's name." }, { ref = "2Thess.2.3-2Thess.2.4", link = "describes", note = "2 Thessalonians 2:3-4 describes the antichrist figure who must appear before the end." }, { ref = "1Thess.5.2", link = "describes", note = "1 Thessalonians 5:2 says the day comes like a thief in the night." }]

@@ -8,10 +8,10 @@ books = ["Heb"]
 summary = """
 This asks who wrote the letter to the Hebrews and when. The letter does not name its author, and the older church view that Paul wrote it is now abandoned by critical scholars. Its date is debated between the 60s, before the Temple fell, and the 80s, after it, and the writer never mentions the Temple's destruction either way."""
 verses = [
-  { ref = "Heb.13.24", link = "describes", note = "Greetings from those from Italy." },
-  { ref = "Heb.13.23", link = "describes", note = "Timothy has been released." },
+  { ref = "Heb.13.24", link = "describes", note = "Hebrews 13:24 sends greetings from those from Italy, a clue to the letter's setting." },
+  { ref = "Heb.13.23", link = "describes", note = "Hebrews 13:23 says Timothy has been released, a detail used to place the letter." },
   { ref = "Heb.8.13", link = "dates", note = "The first covenant is obsolete, which Brown reads as a replacement theme of the 80s." },
-  { ref = "Heb.12.4", link = "background", note = "Readers have not yet resisted to the point of shedding blood." },
+  { ref = "Heb.12.4", link = "background", note = "Hebrews 12:4 tells the readers they have not yet resisted to the point of shedding blood." },
 ]
 
 [[positions]]

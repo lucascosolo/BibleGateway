@@ -9,11 +9,11 @@ summary = """
 This asks who wrote Ephesians and when. The letter names Paul as author and has him say "I Paul, a prisoner of Christ Jesus". Ehrman holds it was forged by a later follower of Paul who copied Colossians, which he also takes to be a forgery, and he gives no date. The year bounds of 60 and 110 are therefore the editor's: 60 is just after Paul's lifetime ministry was ending, and 110 allows for the Pastoral Epistles, which Ehrman says know Ephesians."""
 verses = [
   { ref = "Eph.1.1", link = "describes", note = "Paul is named as the author, with no coauthor." },
-  { ref = "Eph.3.1", link = "describes", note = "I Paul, a prisoner of Christ Jesus." },
-  { ref = "Eph.6.21-Eph.6.22", link = "describes", note = "Twenty-nine words repeated from Colossians 4:7-8 on Tychicus." },
-  { ref = "Eph.2.1-Eph.2.10", link = "background", note = "Ehrman: believers already made alive and seated in the heavenly places." },
-  { ref = "Eph.2.15", link = "background", note = "Ehrman: Christ abolished the law of the commandments, against Romans 3:31." },
-  { ref = "Eph.3.5", link = "background", note = "Ehrman: the mystery revealed to the holy apostles and prophets, not to Paul alone." },
+  { ref = "Eph.3.1", link = "describes", note = "Ephesians 3:1 has the author introduce himself as I Paul, a prisoner of Christ Jesus." },
+  { ref = "Eph.6.21-Eph.6.22", link = "describes", note = "Ephesians 6:21-22 repeats twenty-nine words from Colossians 4:7-8 about Tychicus." },
+  { ref = "Eph.2.1-Eph.2.10", link = "background", note = "Ehrman notes that believers are said to be already made alive and seated in the heavenly places." },
+  { ref = "Eph.2.15", link = "background", note = "Ehrman reads the statement that Christ abolished the law of the commandments as against Romans 3:31." },
+  { ref = "Eph.3.5", link = "background", note = "Ehrman notes that the mystery is said to be revealed to the holy apostles and prophets, not to Paul alone." },
 ]
 
 [[positions]]
@@ -32,7 +32,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 238-246" }]
   text = """
 Ehrman argues that the author copied Colossians directly, and he finds the clearest sign in the closing greetings: "The passage that leaves no doubt is Eph. 6:21–22,""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 239" }]
-  verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "Repeats Colossians 4:7-8." }]
+  verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "Ephesians 6:21-22 repeats the wording of Colossians 4:7-8." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -51,42 +51,42 @@ Ehrman finds the style unlike Paul's, with sentences far longer than he wrote: "
   text = """
 Ehrman finds that Ephesians treats the resurrection as something already realized, which he sets against Paul's own teaching: "the real significance of the resurrection of the dead is that it is a spiritual event that has happened (in the past) to believers""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 241" }]
-  verses = [{ ref = "Eph.2.1-Eph.2.10", link = "background", note = "Made alive and raised with Christ." }]
+  verses = [{ ref = "Eph.2.1-Eph.2.10", link = "background", note = "Ephesians 2:1-10 says believers have been made alive and raised with Christ." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman finds a difference over the law as well, noting what the letter claims is key to its own teaching: "including the claim—key to the teaching of the letter—that Christ had somehow""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 242" }]
-  verses = [{ ref = "Eph.2.15", link = "background", note = "Abolished the law of the commandments." }]
+  verses = [{ ref = "Eph.2.15", link = "background", note = "Ephesians 2:15 says Christ abolished the law of the commandments." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman points to what he calls unintentional slips showing the author lived after Paul: "in 2:20, the author speaks of the \"apostles\" as a founding group for the church, without any recognition that Paul himself was one of the constituent members of the group." He adds that for Paul, Christ himself is the foundation (1 Corinthians 3:11), not the prophets and apostles."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 243" }]
-  verses = [{ ref = "Eph.2.20", link = "background", note = "Apostles as a founding group, with Paul not named among them." }]
+  verses = [{ ref = "Eph.2.20", link = "background", note = "Ephesians 2:20 treats the apostles as a founding group, and Paul is not named among them." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman presses the same point about the letter's account of the mystery of the gospel, asking: "But is he not missing something rather crucial?""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 243" }]
-  verses = [{ ref = "Eph.3.5", link = "background", note = "Revealed to his holy apostles and prophets." }]
+  verses = [{ ref = "Eph.3.5", link = "background", note = "Ephesians 3:5 says the mystery was revealed to his holy apostles and prophets." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman reads the letter's repeated references to its author as a forger's habit: "the author makes an inordinate number of self-references""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 243" }]
-  verses = [{ ref = "Eph.3.1", link = "describes", note = "I Paul, a prisoner." }]
+  verses = [{ ref = "Eph.3.1", link = "describes", note = "Ephesians 3:1 has the author introduce himself as I Paul, a prisoner." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman sums up what the author was doing: "He was a follower of Paul, urging a non-Pauline set of theological views, writing later.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 244" }]
-  verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "I have sent Tychicus to you." }]
+  verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "In Ephesians 6:21-22 the author says he has sent Tychicus to the readers." }]
 
 [[positions]]
 id = "paul-prisoner-letter"
@@ -104,7 +104,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 240, 238" }]
   text = """
 Ehrman reports Barth's answer on style, that a different style is no argument against Paul: "Paul himself is the man who could best afford to write in a non-Paulinistic way.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 240" }]
-  verses = [{ ref = "Eph.1.3", link = "background", note = "One of the long sentences Ehrman cites." }]
+  verses = [{ ref = "Eph.1.3", link = "background", note = "Ephesians 1:3 begins one of the long sentences Ehrman cites as evidence." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -128,7 +128,7 @@ citations = [{ source = "brown-1997", locator = "ch. 28, Summary of Basic Inform
   text = """
 Brown reads the way Ephesians uses the other letters as a sign of a later writer. He quotes the view that "Most scholars would interpret the reuse of Pauline letters in Eph as a more secondary procedure" than Paul refining his own ideas. He dates it to the 90s partly by an echo of Eph 5:25 in Ignatius, ca. 110."""
   citations = [{ source = "brown-1997", locator = "ch. 28, Ephesians and Colossians, by whom" }]
-  verses = [{ ref = "Eph.5.25", link = "background", note = "Echoed in Ignatius to Polycarp, the control Brown names for a 90s date." }]
+  verses = [{ ref = "Eph.5.25", link = "background", note = "Ephesians 5:25 is echoed in Ignatius to Polycarp, the control Brown names for a date in the 90s." }]
 
 [[positions]]
 id = "carson-moo-rome-early-60s"
@@ -146,7 +146,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 480-487" }]
   text = """
 Carson and Moo argue that Ephesians is a development of Colossians and not a copy. Apart from the Tychicus passage, which shares 29 words, there is little exact parallel, and they quote Reicke: "No theory of imitation offers a suitable explanation of this incongruity." They also cite Hoehner's work against the claim that most scholars reject Pauline authorship."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 480-485" }]
-  verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "The Tychicus passage shared with Colossians 4:7-8." }, { ref = "Eph.3.1", link = "describes", note = "Paul as prisoner." }]
+  verses = [{ ref = "Eph.6.21-Eph.6.22", link = "describes", note = "Ephesians 6:21-22 is the Tychicus passage shared with Colossians 4:7-8." }, { ref = "Eph.3.1", link = "describes", note = "Ephesians 3:1 presents Paul as a prisoner." }]
 
 [[positions]]
 id = "ehrman-intro-end-first-century"
@@ -164,4 +164,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 278 approx." }]
   text = """
 Ehrman notes that the author has believers "not only died with Christ, they have also been raised up with him to enjoy the benefits of a heavenly existence," unlike Paul's undisputed letters."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 278 approx." }]
-  verses = [{ ref = "Eph.2.5-Eph.2.6", link = "describes", note = "Made alive and raised up with Christ." }]
+  verses = [{ ref = "Eph.2.5-Eph.2.6", link = "describes", note = "Ephesians 2:5-6 says believers were made alive and raised up with Christ." }]

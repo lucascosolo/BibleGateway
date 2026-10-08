@@ -6,11 +6,11 @@ summary = """
 Matthew, Mark and Luke share so much wording and so much of the same order that they must be related, yet they also differ. The most common solution is Markan priority: Mark was written first and Matthew and Luke each used it. The material Matthew and Luke share that is not in Mark is explained by a lost sayings source called Q. In 1924 B. H. Streeter widened this into a four-document hypothesis (Mark, Q, M and L) and proposed a Proto-Luke; Brown notes that other solutions, such as the Griesbach hypothesis, remain on offer."""
 events = ["mark-composition", "matthew-composition", "luke-acts-composition"]
 verses = [
-  { ref = "Mark.1.1", link = "background", note = "The opening of the Gospel that Markan priority treats as the earliest." },
-  { ref = "Luke.1.1-Luke.1.4", link = "describes", note = "The author says many have undertaken to compile a narrative." },
-  { ref = "Matt.3.7-Matt.3.10", link = "describes", note = "John the Baptist's warning, a near-verbatim passage shared with Luke and attributed to Q." },
-  { ref = "Luke.3.7-Luke.3.9", link = "describes", note = "The parallel to Matthew's passage, near-verbatim." },
-  { ref = "Luke.9.51", link = "background", note = "The start of the Lukan travel narrative." },
+  { ref = "Mark.1.1", link = "background", note = "Mark 1:1 opens the Gospel that Markan priority treats as the earliest of the three." },
+  { ref = "Luke.1.1-Luke.1.4", link = "describes", note = "Luke 1:1–4 has the author say that many have undertaken to compile a narrative, which shows earlier written accounts were known to him." },
+  { ref = "Matt.3.7-Matt.3.10", link = "describes", note = "Matthew 3:7–10 gives John the Baptist's warning in wording almost identical to Luke, a passage attributed to Q." },
+  { ref = "Luke.3.7-Luke.3.9", link = "describes", note = "Luke 3:7–9 gives John the Baptist's warning in wording almost identical to Matthew 3:7–10." },
+  { ref = "Luke.9.51", link = "background", note = "Luke 9:51 begins the Lukan travel narrative, the long journey section where much of the material shared with Matthew appears." },
 ]
 citations = [{ source = "streeter-1924", locator = "pp. 151–292" }, { source = "brown-1997", locator = "ch. 6, The Synoptic Problem" }]
 

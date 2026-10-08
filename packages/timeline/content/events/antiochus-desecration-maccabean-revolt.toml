@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 Antiochus IV bans Jewish practice, and the Jerusalem temple is turned over to the worship of Zeus (167 BCE). The Maccabees resist and cleanse the temple on 25 Kislev 164 BCE, which is the origin of Hanukkah. First Maccabees, the main account, is not in this corpus. Scholars take the King of the North in Daniel to be Antiochus IV."""
 verses = [
-  { ref = "Dan.8.9-Dan.8.14", link = "describes", note = "The little horn attacks the sanctuary and the daily burnt offering" },
-  { ref = "Dan.11.31", link = "describes", note = "The sanctuary is profaned, the daily offering is taken away, and the abomination is set up" },
-  { ref = "John.10.22", link = "alludes", note = "The Feast of the Dedication at Jerusalem (Hanukkah)" },
+  { ref = "Dan.8.9-Dan.8.14", link = "describes", note = "Daniel 8:9-14 describes a little horn that attacks the sanctuary and the daily burnt offering." },
+  { ref = "Dan.11.31", link = "describes", note = "Daniel 11:31 says the sanctuary is profaned, the daily offering is taken away and the abomination is set up." },
+  { ref = "John.10.22", link = "alludes", note = "John 10:22 mentions the Feast of the Dedication at Jerusalem (Hanukkah), which looks back to the rededication of the temple." },
 ]
 
 [[positions]]

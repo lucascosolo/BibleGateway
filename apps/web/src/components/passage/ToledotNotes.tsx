@@ -36,6 +36,7 @@ export function ToledotNotes({ notes, spans }: ToledotNotesProps) {
               <strong className="toledot-note__lead">{s.lead}</strong>
               {" — "}
               {s.body}
+              {s.note && ` ${s.note}`}
               {span && <span className="toledot-note__span"> ({span})</span>}
               {s.draft && <span className="toledot-note__draft">draft</span>}
               {" "}

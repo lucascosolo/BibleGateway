@@ -23,7 +23,7 @@ describe("toledotSentence: events", () => {
   it("two or more positions: disputed, labels verbatim joined by 'or'", () => {
     expect(toledotSentence(note(event()))).toEqual({
       lead: "Dating disputed",
-      body: "Early date (c. 1446 BCE) or Late date (13th century BCE) — The Exodus",
+      body: "Scholars give Early date (c. 1446 BCE) or Late date (13th century BCE) for the Exodus.",
       href: "/toledot/events/ev-exodus",
       draft: false,
     });
@@ -31,12 +31,24 @@ describe("toledotSentence: events", () => {
 
   it("one position, firm: 'Dated' with the formatted range", () => {
     const s = toledotSentence(note(event({ confidence: "firm", earliest: -587, latest: -586, title: "Fall of Jerusalem", positions: [{ label: "Only", tradition: "critical" }] })));
-    expect(s).toMatchObject({ lead: "Dated", body: "587–586 BCE — Fall of Jerusalem", href: "/toledot/events/ev-exodus" });
+    expect(s).toMatchObject({ lead: "Dated", body: "Scholars place Fall of Jerusalem in 587–586 BCE.", href: "/toledot/events/ev-exodus" });
   });
 
   it("one position, not firm: names the confidence", () => {
     const s = toledotSentence(note(event({ confidence: "speculative", earliest: -450, latest: -450, title: "Torah closed", positions: [{ label: "Only", tradition: "critical" }] })));
-    expect(s).toMatchObject({ lead: "Dated, speculative", body: "450 BCE — Torah closed" });
+    expect(s).toMatchObject({ lead: "Dated, speculative", body: "Scholars place Torah closed in 450 BCE." });
+  });
+});
+
+describe("toledotSentence: new shapes", () => {
+  it("event title not starting with 'The' keeps its case; 'The' is lower-cased", () => {
+    const one = (title: string) => event({ confidence: "firm", title, earliest: -587, latest: -586, positions: [{ label: "Only", tradition: "critical" }] });
+    expect(toledotSentence(note(one("The Exile"))).body).toBe("Scholars place the Exile in 587–586 BCE.");
+    expect(toledotSentence(note(one("Composition of James"))).body).toBe("Scholars place Composition of James in 587–586 BCE.");
+  });
+  it("issue title already a question is used as is", () => {
+    const s = toledotSentence(note({ kind: "issue", id: "i", title: "Is there a historical Moses?", issueKind: "historical", status: "reviewed" }));
+    expect(s.body).toBe("Is there a historical Moses?");
   });
 });
 
@@ -58,7 +70,7 @@ describe("toledotSentence: traditional lens", () => {
       positions: [{ label: "Ussher's count", tradition: "traditional" }],
     })));
     expect(s.lead).toBe("Traditional date");
-    expect(s.body).toContain("Ussher's count");
+    expect(s.body).toBe("Only a traditional count dates the Exodus, to Ussher's count; no outside evidence fixes it.");
   });
 });
 
@@ -68,11 +80,11 @@ describe("toledotSentence: arguments", () => {
   });
   it("for: label then event title", () => {
     expect(toledotSentence(note(arg("for")))).toEqual({
-      lead: "Cited in dating", body: "Early date — The Exodus", href: "/toledot/events/ev-exodus", draft: false,
+      lead: "Cited in dating", body: "This passage is cited for dating the Exodus to Early date.", href: "/toledot/events/ev-exodus", draft: false,
     });
   });
   it("against: adds ', against'", () => {
-    expect(toledotSentence(note(arg("against"))).body).toBe("Early date, against — The Exodus");
+    expect(toledotSentence(note(arg("against"))).body).toBe("This passage is cited against dating the Exodus to Early date.");
   });
 });
 
@@ -84,7 +96,7 @@ describe("toledotSentence: issues", () => {
     ["internal", "Internal question"],
   ] as const)("%s issue leads with %s", (issueKind, lead) => {
     const s = toledotSentence(note({ kind: "issue", id: "iss-1", title: "The 480 years", issueKind, status: "reviewed" }));
-    expect(s).toEqual({ lead, body: "The 480 years", href: "/toledot/issues/iss-1", draft: false });
+    expect(s).toEqual({ lead, body: "An open question: The 480 years.", href: "/toledot/issues/iss-1", draft: false });
   });
 });
 
@@ -97,7 +109,7 @@ describe("toledotSentence: persons", () => {
   it.each(grades)("lead for %s equals the shared EVIDENCE_MEANING", (grade) => {
     const s = toledotSentence(note(person(grade)));
     expect(s.lead).toBe(EVIDENCE_MEANING[grade]);
-    expect(s).toMatchObject({ body: "Hezekiah", href: "/toledot/people/per-h" });
+    expect(s).toMatchObject({ body: "Hezekiah appears here; " + EVIDENCE_MEANING[grade].replace(/^N/, "n").replace(/^P/, "p").replace(/^F/, "f").replace(/^O/, "o") + ".", href: "/toledot/people/per-h" });
   });
 
   it("uses the contract's wording for each grade", () => {
@@ -121,23 +133,27 @@ describe("toledotSentence: artifacts", () => {
     kind: "artifact", id: "art-nab", name: "Nabonidus Cylinder", status: "reviewed", relation,
   });
   it.each([
-    ["in-tension", "Outside source in tension with this passage"],
-    ["corroborates", "Outside source corroborates this passage"],
-    ["partially-corroborates", "Outside source corroborates this passage"],
-    ["consistent", "Outside source"],
-    ["silent", "Outside source"],
-    [null, "Outside source"],
-  ] as const)("relation %s leads with '%s'", (relation, lead) => {
+    ["in-tension", "Outside source in tension with this passage", "contradicts"],
+    ["corroborates", "Outside source corroborates this passage", "corroborates"],
+    ["partially-corroborates", "Outside source corroborates this passage", "partly corroborates"],
+    ["consistent", "Outside source", "is consistent with"],
+    ["silent", "Outside source", "is silent on"],
+    [null, "Outside source", "is silent on"],
+  ] as const)("relation %s leads with '%s'", (relation, lead, verb) => {
     expect(toledotSentence(note(artifact(relation)))).toEqual({
-      lead, body: "Nabonidus Cylinder", href: "/toledot/artifacts/art-nab", draft: false,
+      lead, body: `Nabonidus Cylinder is an outside source that ${verb} this passage.`, href: "/toledot/artifacts/art-nab", draft: false,
     });
   });
 });
 
 describe("toledotSentence: link note and draft", () => {
-  it("appends the link's own note to the body in parentheses", () => {
-    const s = toledotSentence(note({ kind: "person", id: "per-b", name: "Belshazzar", evidence: "none", hasTension: false, status: "reviewed" }, { note: "Nebuchadnezzar his father" }));
-    expect(s.body).toBe("Belshazzar (Nebuchadnezzar his father)");
+  it("carries the link's own note as a separate sentence, not in the body", () => {
+    const p = { kind: "person", id: "per-b", name: "Belshazzar", evidence: "none", hasTension: false, status: "reviewed" } as const;
+    const s = toledotSentence(note(p, { note: "Nebuchadnezzar his father" }));
+    expect(s.body).toBe("Belshazzar appears here; no outside evidence.");
+    expect(s.note).toBe("Nebuchadnezzar his father.");
+    expect(toledotSentence(note(p, { note: "Already ends." })).note).toBe("Already ends.");
+    expect(toledotSentence(note(p)).note).toBeUndefined();
   });
 
   it("flags draft for every subject kind that is draft", () => {

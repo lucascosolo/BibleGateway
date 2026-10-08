@@ -9,4 +9,4 @@ These are messages written in ink on pieces of broken pottery, found in the gate
 discovered = { year = 1935, place = "Tell ed-Duweir (Lachish), excavated by James Leslie Starkey" }
 held_by = { institution = "British Museum (most); Israel Museum (Letter 6 and others)", accession = "ME 125701–125707, 125715a" }
 citations = [{ source = "wikipedia-lachish-letters" }, { source = "pritchard-1969", locator = "pp. 321–322 (introduction p. 321; Ostracon IV p. 322), trans. W. F. Albright" }]
-verses = [{ ref = "Jer.34.7", link = "background", note = "Lachish and Azekah remain" }]
+verses = [{ ref = "Jer.34.7", link = "background", note = "Jeremiah 34:7 says Lachish and Azekah were the fortified cities of Judah still holding out against Babylon, the situation the Lachish letters reflect." }]

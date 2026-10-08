@@ -8,11 +8,11 @@ The lists of the Twelve differ here. Mark 3:18 and Matt 10:3 name Thaddaeus in t
 Jude of James may be the "Judas, not the Iscariot" who asks Jesus a question at the Last Supper (John 14:22), but that is possible and not certain. Christian imagination harmonized the lists into a single "Jude Thaddaeus", which Meier says has no basis in reality; if the two are not the same, there is nothing to be said about Thaddaeus. Meier rejects identifying Jude of James with Jude the brother of Jesus, who is probably the author named in the Epistle of Jude: John 7:5 and Mark 3:21-35 say Jesus' brothers did not believe in him during the ministry. Later tradition also merged Jude with Thomas, and "Jude Thaddaeus" became the saint of the impossible. Meier's answer is "We do not know"."""
 status = "draft"
 verses = [
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark's list names Thaddaeus" },
-  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew's list names Thaddaeus" },
-  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke's list names Jude of James in the same slot" },
-  { ref = "Acts.1.13", link = "describes", note = "Acts names Jude of James" },
-  { ref = "John.14.22", link = "alludes", note = "'Judas, not the Iscariot'; possibly the same man" },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve and names Thaddaeus in this place." },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve and names Thaddaeus in this place." },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists the Twelve and names Jude of James in the same place in the list." },
+  { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven and names Jude of James." },
+  { ref = "John.14.22", link = "alludes", note = "John 14:22 names 'Judas, not the Iscariot', who is possibly the same man." },
 ]
 citations = [
   { source = "meier-2001", locator = "p. 200" },

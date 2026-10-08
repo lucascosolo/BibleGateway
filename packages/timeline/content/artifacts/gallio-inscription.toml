@@ -6,4 +6,4 @@ language = "Greek"
 summary = """
 An inscription from Delphi in which the emperor Claudius calls Gallio "my friend and proconsul" mentions Claudius's twenty-sixth acclamation as imperator, which matches 52 CE. That fixes Gallio's term as proconsul of Achaea (Acts 18:12) at about 51–52 CE. Wikipedia gives the find-spot as the temple of Apollo at Delphi, and the text is nine fragments of a letter from Claudius. The standard publication is Fouilles de Delphes III 4:286 and SIG II 801d, the museum is the Delphi Archaeological Museum, and the date of discovery (early 20th century) is as reported there. The editor's name was not read."""
 citations = [{ source = "wikipedia-gallio-inscription" }, { source = "wikipedia-gallio" }]
-verses = [{ ref = "Acts.18.12", link = "dates", note = "Gallio proconsul of Achaia" }]
+verses = [{ ref = "Acts.18.12", link = "dates", note = "Acts 18:12 names Gallio as proconsul of Achaia when Paul is brought before him, which lets the inscription date that scene." }]

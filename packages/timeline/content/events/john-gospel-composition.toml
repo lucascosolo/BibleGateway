@@ -8,9 +8,9 @@ books = ["John"]
 summary = """
 This asks who wrote the Gospel of John and when. Church tradition from the second century names John, son of Zebedee. Many critical scholars instead see a writer in the tradition of the Beloved Disciple, possibly with a later editor, and date it anywhere from the 80s to about 110. Both authorship and date are open."""
 verses = [
-  { ref = "John.21.24", link = "describes", note = "The disciple who testifies to these things and wrote them." },
+  { ref = "John.21.24", link = "describes", note = "This verse names the disciple who testifies to these things and wrote them, which is the claim of authorship under discussion." },
   { ref = "John.21.15-John.21.17", link = "background", note = "Peter is given the task of feeding the sheep, read as a later pastoral development." },
-  { ref = "John.1.1", link = "describes", note = "The opening of the Gospel." },
+  { ref = "John.1.1", link = "describes", note = "This is the opening of the Gospel, the text whose composition is discussed here." },
 ]
 
 [[positions]]
@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 11, Summary of Basic Inform
   text = """
 Brown places the writing of III John and the redactor's addition of chapter 21 later than the Gospel proper, in the last phase of the community's history: "The phase during which III John was written and the redactor added chap. 21 (AD 100–110?)"."""
   citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
-  verses = [{ ref = "John.21.15-John.21.17", link = "dates", note = "Pastoral structure added in the redactor's phase." }]
+  verses = [{ ref = "John.21.15-John.21.17", link = "dates", note = "The commission to Peter to feed the sheep is read as pastoral structure added in the redactor's phase." }]
 
 [[positions]]
 id = "carson-moo-80-85"
@@ -53,7 +53,7 @@ They hold that John 21:24 does not clearly point to a school of writers, since i
     { source = "carson-moo-2005", locator = "p. 251" },
     { source = "carson-moo-2005", locator = "pp. 264–267" },
   ]
-  verses = [{ ref = "John.21.24", link = "describes", note = "The testifying disciple, read as the apostle or attesting elders rather than a school." }]
+  verses = [{ ref = "John.21.24", link = "describes", note = "John 21:24 names a testifying disciple, who is read as the apostle or attesting elders rather than a school." }]
 
 [[positions]]
 id = "ehrman-intro-90-95"
@@ -71,7 +71,7 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 124-126 approx
   text = """
 Ehrman argues John 21:24 distinguishes the disciple who testified and wrote from the "we" who vouch for him, so the final author was someone other than that disciple. John 19:35 says only that the eyewitness spoke the truth, not who wrote it down."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 124 approx." }]
-  verses = [{ ref = "John.21.24", link = "describes", note = "The testifying disciple and the 'we' who vouch for him." }, { ref = "John.19.35", link = "describes", note = "The eyewitness's testimony, with no statement of who wrote it down." }]
+  verses = [{ ref = "John.21.24", link = "describes", note = "John 21:24 names the testifying disciple and the 'we' who vouch for him." }, { ref = "John.19.35", link = "describes", note = "John 19:35 gives an eyewitness's testimony without stating who wrote it down." }]
 
 [[positions]]
 id = "streeter-elder-90-95"
@@ -89,4 +89,4 @@ citations = [{ source = "streeter-1924", locator = "pp. 427–429, 456" }]
   text = """
 Streeter argues that Papias speaks of an "Elder John, a disciple of the Lord", and that the writer of 2 and 3 John calls himself the Elder, so these two letters act as the author's signature. He says John 21:24, which names the Beloved Disciple as author, is by a later hand and probably misidentifies him."""
   citations = [{ source = "streeter-1924", locator = "pp. 427–429" }]
-  verses = [{ ref = "John.21.24", link = "describes", note = "The verse naming the Beloved Disciple as the writer, which Streeter attributes to a later hand." }]
+  verses = [{ ref = "John.21.24", link = "describes", note = "This verse names the Beloved Disciple as the writer, a statement Streeter attributes to a later hand." }]

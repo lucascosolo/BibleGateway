@@ -8,10 +8,10 @@ Simon appears only in the lists of the Twelve. Mark 3:18 and Matt 10:4 call him 
 Meier rejects the claim that Simon belonged to the Zealots, the organized rebel faction that Josephus describes, since that group arose only in the winter of 67-68 CE during the First Jewish War, so the idea is anachronistic. The label instead reflects an older and broader use: a Jew intensely zealous for the Mosaic Law, as Paul was before his call (Gal 1:13-14; Phil 3:6). Meier says we cannot know how Simon showed his zeal or whether it involved violence. His point is that Simon's place in the Twelve beside the toll collector Levi shows Jesus calling people from opposite ends of Israel, not recruiting revolutionaries. Nothing else is known of Simon, and later legends add nothing."""
 status = "draft"
 verses = [
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "'the Cananean' in Mark's list" },
-  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "'the Cananean' in Matthew's list" },
-  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "'the Zealot' in Luke's list" },
-  { ref = "Acts.1.13", link = "describes", note = "'the Zealot' in Acts" },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve and calls Simon 'the Cananean'." },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve and calls Simon 'the Cananean'." },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists the Twelve and calls Simon 'the Zealot'." },
+  { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven and calls Simon 'the Zealot'." },
 ]
 citations = [
   { source = "meier-2001", locator = "pp. 205–208" },

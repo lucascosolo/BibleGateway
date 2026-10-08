@@ -7,10 +7,10 @@ status = "draft"
 summary = """
 This rests on tradition only. 1 Clement says both men were martyred, and Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE, but the New Testament does not tell of either death."""
 verses = [
-  { ref = "John.21.18-John.21.19", link = "alludes", note = "Peter will stretch out his hands, a sign of how he would die" },
-  { ref = "2Tim.4.6-2Tim.4.8", link = "alludes", note = "Paul expects to die soon" },
-  { ref = "2Pet.1.14", link = "alludes", note = "Peter knows his body, his tent, will soon be put off" },
-  { ref = "Acts.28.30-Acts.28.31", link = "background", note = "Paul at Rome, waiting for his trial" },
+  { ref = "John.21.18-John.21.19", link = "alludes", note = "John 21:18-19 says Peter will stretch out his hands, a sign of how he would die." },
+  { ref = "2Tim.4.6-2Tim.4.8", link = "alludes", note = "In 2 Timothy 4:6-8 Paul expects to die soon." },
+  { ref = "2Pet.1.14", link = "alludes", note = "In 2 Peter 1:14 Peter says he knows his body, his tent, will soon be put off." },
+  { ref = "Acts.28.30-Acts.28.31", link = "background", note = "Acts 28:30-31 leaves Paul at Rome, waiting for his trial." },
 ]
 
 [[positions]]
@@ -50,7 +50,7 @@ citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]
 artifact = "eusebius-he-2-25"
 relation = "consistent"
 note = """
-This is a late tradition: Paul was beheaded at Rome and Peter was crucified under Nero."""
+Eusebius reports the tradition that Paul was beheaded at Rome and Peter was crucified under Nero. The account is late, so it is treated as a tradition rather than as an early witness."""
 citations = [{ source = "newadvent-eusebius-he-2", locator = "2.25.5–8" }]
 
 [[positions]]

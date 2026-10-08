@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Inform
   text = """
 Brown argues that Paul may well have been imprisoned at Ephesus: "imprisonment at Ephesus is a distinct possibility", given Paul's talk of "wild beasts" at Ephesus and many earlier imprisonments, and since Timothy was with Paul there."""
   citations = [{ source = "brown-1997", locator = "ch. 20, Place of writing" }]
-  verses = [{ ref = "Phil.1.13", link = "describes", note = "The imprisonment in question." }]
+  verses = [{ ref = "Phil.1.13", link = "describes", note = "Paul's chains are the imprisonment whose location is in question." }]
 
 [[positions]]
 id = "carson-moo-mid-50s-to-early-60s"
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 506-507" }]
   text = """
 Carson and Moo find the case for Ephesus strong but not conclusive, and think the evidence fits more than one city. Because the date depends on which imprisonment Paul means in Philippians 1:13, they decline to say more than the stated range."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 506-507" }]
-  verses = [{ ref = "Phil.1.13", link = "dates", note = "The imprisonment whose location fixes the date." }]
+  verses = [{ ref = "Phil.1.13", link = "dates", note = "Paul's chains refer to an imprisonment whose location fixes the date." }]
 
 [[positions]]
 id = "ehrman-intro-50s"

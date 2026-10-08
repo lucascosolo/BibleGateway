@@ -7,16 +7,16 @@ status = "draft"
 summary = """
 Joseph is sold by his brothers to traders. He rises from slavery and prison to become Pharaoh's vizier, and he saves Egypt and his own family from famine. Many scholars read the story as a late wisdom novella (see the patriarchs issue). The one dating position here sets limits only on when his family arrived."""
 verses = [
-  { ref = "Gen.37.1-Gen.37.36", link = "describes", note = "Sold into Egypt" },
-  { ref = "Gen.39.1-Gen.39.23", link = "describes", note = "Potiphar's house and prison" },
-  { ref = "Gen.40.1-Gen.41.57", link = "describes", note = "Dreams interpreted, Joseph raised up under Pharaoh, and the years of plenty and famine" },
-  { ref = "Gen.42.1-Gen.45.28", link = "describes", note = "The brothers come for grain, and Joseph reveals himself" },
-  { ref = "Gen.50.15-Gen.50.26", link = "describes", note = "Joseph forgives his brothers. He dies at 110 after making them swear about his bones" },
-  { ref = "Exod.13.19", link = "alludes", note = "Moses takes Joseph's bones, as Joseph had made Israel swear" },
-  { ref = "Josh.24.32", link = "alludes", note = "Joseph's bones buried at Shechem" },
-  { ref = "Ps.105.16-Ps.105.22", link = "alludes", note = "God sent a man ahead. Joseph was sold as a slave and made lord of Pharaoh's house" },
-  { ref = "Acts.7.9-Acts.7.16", link = "alludes", note = "Stephen says the jealous patriarchs sold Joseph, but God was with him" },
-  { ref = "Heb.11.22", link = "alludes", note = "By faith Joseph spoke of the exodus and gave orders about his bones" },
+  { ref = "Gen.37.1-Gen.37.36", link = "describes", note = "Genesis tells how Joseph is sold into Egypt." },
+  { ref = "Gen.39.1-Gen.39.23", link = "describes", note = "Genesis describes Joseph in Potiphar's house and in prison." },
+  { ref = "Gen.40.1-Gen.41.57", link = "describes", note = "Genesis describes how Joseph interprets dreams, is raised up under Pharaoh, and serves through the years of plenty and famine." },
+  { ref = "Gen.42.1-Gen.45.28", link = "describes", note = "Genesis tells how the brothers come to Egypt for grain and Joseph reveals himself." },
+  { ref = "Gen.50.15-Gen.50.26", link = "describes", note = "Genesis tells how Joseph forgives his brothers and dies at 110 after making them swear about his bones." },
+  { ref = "Exod.13.19", link = "alludes", note = "Exodus says Moses takes Joseph's bones, as Joseph had made Israel swear, which refers back to Joseph's death in Egypt." },
+  { ref = "Josh.24.32", link = "alludes", note = "Joshua records that Joseph's bones were buried at Shechem, which refers back to his time in Egypt." },
+  { ref = "Ps.105.16-Ps.105.22", link = "alludes", note = "Psalm 105 says God sent a man ahead and that Joseph was sold as a slave and made lord of Pharaoh's house." },
+  { ref = "Acts.7.9-Acts.7.16", link = "alludes", note = "Stephen's speech says the jealous patriarchs sold Joseph, but God was with him." },
+  { ref = "Heb.11.22", link = "alludes", note = "Hebrews says that by faith Joseph spoke of the exodus and gave orders about his bones." },
 ]
 
 [[positions]]

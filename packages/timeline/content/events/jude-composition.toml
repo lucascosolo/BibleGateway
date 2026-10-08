@@ -9,9 +9,9 @@ summary = """
 This entry asks who wrote the letter of Jude and when. The letter names Jude, brother of James, whom Ehrman takes to be the brother of Jesus. Ehrman holds that it is a forgery, written "relatively late in the first century, after the age of the apostles" by a highly educated Greek-speaking Christian. He gives no years, so the span of 70 to 100 shown here is an editorial reading of that phrase."""
 verses = [
   { ref = "Jude.1.1", link = "describes", note = "The letter names Jude, brother of James, as its author." },
-  { ref = "Jude.1.3", link = "background", note = "Ehrman: the faith as a body of belief delivered long ago." },
-  { ref = "Jude.1.17-Jude.1.18", link = "background", note = "Ehrman: the apostles are spoken of as figures of the past." },
-  { ref = "Jude.1.4", link = "background", note = "Ehrman: charge that opponents turn grace into licentiousness, read as aimed at a later Paulinism." },
+  { ref = "Jude.1.3", link = "background", note = "Ehrman reads the faith here as a body of belief delivered long ago." },
+  { ref = "Jude.1.17-Jude.1.18", link = "background", note = "Ehrman notes that the apostles are spoken of as figures of the past." },
+  { ref = "Jude.1.4", link = "background", note = "Ehrman reads the charge that opponents turn grace into licentiousness as aimed at a later Paulinism." },
 ]
 
 [[positions]]
@@ -30,14 +30,14 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 393, 394" }]
   text = """
 Ehrman dates the letter from its own outlook, which he sees as that of a later generation: "the book gives every indication of being produced relatively late in the first century, after the “age of the apostles.”""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 393" }]
-  verses = [{ ref = "Jude.1.17-Jude.1.18", link = "background", note = "The apostles are in the past." }]
+  verses = [{ ref = "Jude.1.17-Jude.1.18", link = "background", note = "Jude speaks of the apostles as belonging to the past." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman reads the author's use of the phrase "the faith" as a mark of that later period: "The author speaks of “the faith” as the content of the body of knowledge that makes up the Christian religion""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 393" }]
-  verses = [{ ref = "Jude.1.3", link = "background", note = "The faith delivered once for all." }]
+  verses = [{ ref = "Jude.1.3", link = "background", note = "Jude speaks of the faith as delivered once for all." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -50,14 +50,14 @@ Ehrman argues from the quality of the Greek that the author was not a peasant mi
   text = """
 Ehrman therefore concludes about the author's identity: "he was not the Aramaicspeaking peasant of Nazareth, the brother of Jesus and James.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 395" }]
-  verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter names Jude as its author, which is the claim discussed here." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman finds that the letter's attack on its opponents fits the Pauline tradition after Paul: "the charge makes even better sense against later forms of Paulinism, such as that represented in the book of Ephesians""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 396" }]
-  verses = [{ ref = "Jude.1.4", link = "background", note = "Grace altered into licentiousness." }]
+  verses = [{ ref = "Jude.1.4", link = "background", note = "Jude charges that opponents have turned grace into licentiousness." }]
 
 [[positions]]
 id = "jude-brother-of-jesus"
@@ -75,7 +75,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 393, 422" }]
   text = """
 Ehrman first grants what the letter claims for itself: "The author of this short text, therefore, is almost certainly claiming to be a brother of both James and Jesus""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 391" }]
-  verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter names Jude as its author, which is the claim discussed here." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -105,7 +105,7 @@ citations = [{ source = "brown-1997", locator = "ch. 35, Summary of Basic Inform
   text = """
 Brown argues that if Jude himself wrote it, he was one of the youngest brothers and "could have been alive as late as AD 90–100, which may be the most plausible date for the letter"."""
   citations = [{ source = "brown-1997", locator = "ch. 35, By and to whom, where, and when" }]
-  verses = [{ ref = "Jude.1.17", link = "dates", note = "The apostles are spoken of as a past generation." }]
+  verses = [{ ref = "Jude.1.17", link = "dates", note = "Jude speaks of the apostles as a past generation, which is used to date the letter." }]
 
 [[positions]]
 id = "carson-moo-mid-to-late-60s"
@@ -123,7 +123,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 690–692" }]
   text = """
 They answer the three usual objections to authorship: Galilean origin does not rule out good Greek, verse 17 points to predictions of the apostles and not to a fixed tradition, and a later forger would have stressed the family tie. They conclude there is no reason not to take the letter's claim at face value."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 691–692" }]
-  verses = [{ ref = "Jude.1.1", link = "describes", note = "'Servant of Jesus Christ and brother of James', taken as Jude the Lord's brother." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "Jude calls himself 'Servant of Jesus Christ and brother of James', which is taken to mean Jude the Lord's brother." }]
 
 [[positions]]
 id = "ehrman-intro-late-first-century"
@@ -141,4 +141,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 326, 328 a
   text = """
 Ehrman argues Jude's brother would have been a lower-class, Aramaic-speaking peasant, whereas the author wrote good Greek and knew apocryphal Jewish books, quoting a lost account of the fight over Moses' body (v. 9) and citing 1 Enoch as Scripture (v. 14)."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 326 approx." }]
-  verses = [{ ref = "Jude.1.1", link = "describes", note = "The authorial claim: brother of James." }, { ref = "Jude.1.14", link = "background", note = "1 Enoch cited as Scripture." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter claims Jude, the brother of James, as its author." }, { ref = "Jude.1.14", link = "background", note = "Jude cites 1 Enoch as Scripture." }]

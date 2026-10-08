@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 David counts the people and a plague follows. David then buys the threshing-floor and builds an altar there, and the place is later linked with the temple site. The Bible gives no year of his reign for the census."""
 verses = [
-  { ref = "2Sam.24.1-2Sam.24.25", link = "describes", note = "The census, the plague and the purchase of the threshing-floor" },
-  { ref = "1Chr.21.1-1Chr.22.1", link = "describes", note = "The parallel in Chronicles. Chapter 22:1 names it the site of the house" },
-  { ref = "2Chr.3.1", link = "alludes", note = "Solomon builds on Mount Moriah, where Yahweh appeared to David at the threshing-floor" },
+  { ref = "2Sam.24.1-2Sam.24.25", link = "describes", note = "2 Samuel 24 tells of the census, the plague and the purchase of the threshing-floor." },
+  { ref = "1Chr.21.1-1Chr.22.1", link = "describes", note = "1 Chronicles 21:1-22:1 is the parallel account, and 22:1 names the threshing-floor as the site of the house." },
+  { ref = "2Chr.3.1", link = "alludes", note = "2 Chronicles 3:1 says Solomon builds on Mount Moriah, where Yahweh appeared to David at the threshing-floor." },
 ]
 
 [[positions]]

@@ -9,10 +9,10 @@ summary = """
 This entry asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem, but Ehrman argues that this James did not write it. On his view it was written after James's death, which he puts "presumably sometime in the 60s", by someone addressing the post-Pauline church "at the end of the first century". The year span shown here follows those two phrases, and Ehrman calls the result a counterforgery aimed at a later form of Pauline teaching."""
 verses = [
   { ref = "Jas.1.1", link = "describes", note = "The letter names James as its author." },
-  { ref = "Jas.2.14-Jas.2.26", link = "background", note = "Ehrman: the principal polemic against a Pauline position on faith and works." },
-  { ref = "Jas.5.1-Jas.5.6", link = "background", note = "Ehrman: wealthy members point to a later date." },
-  { ref = "Jas.5.8-Jas.5.9", link = "background", note = "Ehrman: patience in waiting suggests much time has passed." },
-  { ref = "Jas.5.14", link = "background", note = "Ehrman: elders in charge, closer to the Pastorals than to Paul." },
+  { ref = "Jas.2.14-Jas.2.26", link = "background", note = "Ehrman reads this passage as the letter's principal polemic against a Pauline position on faith and works." },
+  { ref = "Jas.5.1-Jas.5.6", link = "background", note = "Ehrman takes the presence of wealthy members here as pointing to a later date." },
+  { ref = "Jas.5.8-Jas.5.9", link = "background", note = "Ehrman reads the call to patience in waiting as a sign that much time has passed." },
+  { ref = "Jas.5.14", link = "background", note = "Ehrman notes that elders are in charge here, which is closer to the Pastoral letters than to Paul." },
 ]
 
 [[positions]]
@@ -31,7 +31,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 382, 383, 390" }]
   text = """
 Ehrman argues from the letter's Greek that it is not the work of the James the Gospels describe: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 379" }]
-  verses = [{ ref = "Jas.1.1", link = "describes", note = "The named author." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter names James as its author, which is the claim under discussion here." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -44,42 +44,42 @@ Ehrman draws the conclusion that follows from this: "it is virtually impossible 
   text = """
 Ehrman points to what the letter leaves out, which he finds odd for the leader of a Law-observant church: "There is nothing about ritual. Or cult. Or kosher food laws. Or Sabbath or feast days. Or circumcision.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 381" }]
-  verses = [{ ref = "Jas.2.8-Jas.2.12", link = "background", note = "The Law here is love and the Decalogue." }]
+  verses = [{ ref = "Jas.2.8-Jas.2.12", link = "background", note = "James treats the Law in this passage as the commandment of love together with the Decalogue." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman reads the letter's alarm about ostentatious wealth as a sign of a later community: "Another indication of a late date is the concern over ostentatious wealth in the community.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
-  verses = [{ ref = "Jas.5.1-Jas.5.6", link = "background", note = "Charge against the rich." }]
+  verses = [{ ref = "Jas.5.1-Jas.5.6", link = "background", note = "James levels a charge against the rich here, which is used as background for dating the letter." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman takes the letter's call to wait patiently for the Lord's coming as evidence that years have gone by: "This seems to indicate that a good deal of time has passed in the expectation of the parousia""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
-  verses = [{ ref = "Jas.5.8-Jas.5.9", link = "background", note = "The Lord's coming is at hand." }]
+  verses = [{ ref = "Jas.5.8-Jas.5.9", link = "background", note = "James tells his readers that the Lord's coming is at hand, which is used as background for dating the letter." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman notes that the letter's church order looks later than the Jerusalem of James's day: "“elders” appear to be in charge of the community (5:14)""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
-  verses = [{ ref = "Jas.5.14", link = "background", note = "Elders." }]
+  verses = [{ ref = "Jas.5.14", link = "background", note = "James tells the sick to call the elders of the church, which is used as background for dating the letter." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman sums up the problem of authorship plainly: "This book, in short, claims to be written by someone who did not write it.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
-  verses = [{ ref = "Jas.1.1", link = "describes", note = "The authorial claim." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter opens by naming James as its author, which is the claim the authorship question turns on." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman reads the argument about faith and works as a reply to Paul, and so as a forgery written in James's name: "The book of James, in other words, is a counterforgery.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 385" }]
-  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "Faith and works." }]
+  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "James argues here about faith and works, the passage at the centre of the question of the letter's relation to Paul." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -109,7 +109,7 @@ Ehrman reports that Johnson sees no real quarrel between James and Paul, which w
   text = """
 Ehrman rejects Johnson's reading of the passage on faith and works: "Johnson is wrong to argue that “there is absolutely no reason to read this section [i.e., 2:14–26] as particularly responsive to Paul.”""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 384" }]
-  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "The passage at issue." }]
+  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "background", note = "This is the passage on faith and works whose relation to Paul's teaching is in dispute." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -139,7 +139,7 @@ citations = [{ source = "brown-1997", locator = "ch. 34, Summary of Basic Inform
   text = """
 Brown argues that the offices of teacher (3:1) and of presbyters with a "quasiliturgical" role (5:14–15) belong to a later church, since this "also suggests a late 1st-century date"."""
   citations = [{ source = "brown-1997", locator = "ch. 34, By and to whom, where, and when" }]
-  verses = [{ ref = "Jas.5.14", link = "dates", note = "Presbyters with a liturgical role." }]
+  verses = [{ ref = "Jas.5.14", link = "dates", note = "The passage has presbyters praying over the sick, a liturgical role that is used to date the letter." }]
 
 [[positions]]
 id = "carson-moo-early-middle-40s"
@@ -157,7 +157,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 621–623, 627–628" 
   text = """
 They argue that James 2:14-26 makes best sense if James had never heard Paul or read his letters, which puts the letter after Paul's teaching began to spread and before James and Paul met at the Jerusalem Council. They add that the letter shows no hint of conflict between Jewish and Gentile Christians, which they would expect after the Council."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 627–628" }]
-  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "dates", note = "Read as written before James met Paul, not as a reply to Paul's letters." }]
+  verses = [{ ref = "Jas.2.14-Jas.2.26", link = "dates", note = "The faith-and-works passage is read as written before James met Paul, not as a reply to Paul's letters." }]
 
 [[positions]]
 id = "ehrman-intro-late-first-century"
@@ -175,4 +175,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 323 approx
   text = """
 Ehrman notes it is "somewhat strange" that the letter never refers to personal knowledge of its author's brother Jesus or of his teachings. He also reads the letter as arguing against a misreading of Paul's faith without works (James 2:24)."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 323 approx." }]
-  verses = [{ ref = "Jas.1.1", link = "describes", note = "The author names himself James, with no claim to be the Lord's brother." }, { ref = "Jas.2.24", link = "background", note = "Read as aimed at a misreading of Paul." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The author names himself James, with no claim to be the Lord's brother." }, { ref = "Jas.2.24", link = "background", note = "The verse is read as aimed at a misreading of Paul, which is why it is background for the letter's date." }]

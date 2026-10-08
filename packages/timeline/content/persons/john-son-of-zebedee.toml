@@ -9,10 +9,10 @@ The tradition that he wrote the Fourth Gospel comes from Irenaeus around 180 CE.
 Brown himself thinks the unnamed Beloved Disciple was a minor figure in Jesus' ministry, probably the founder of the Johannine community, and that a later evangelist and redactor from that community wrote the Gospel. On his view the Beloved Disciple was not one of the Twelve, so he was not John. Brown still finds an Ephesus-area origin traditional and plausible, though some scholars prefer Syria. Meier finds no firm evidence that John was martyred or persecuted alone, and says that after his role as a Jerusalem pillar around 49 CE we are ignorant of his life and fate."""
 status = "draft"
 verses = [
-  { ref = "Mark.1.19-Mark.1.20", link = "describes", note = "called with his brother James" },
-  { ref = "Mark.10.35-Mark.10.40", link = "describes", note = "the request for places beside Jesus" },
-  { ref = "John.21.20-John.21.24", link = "describes", note = "the Beloved Disciple 'has written these things'; the passage does not name him" },
-  { ref = "Gal.2.9", link = "describes", note = "a John among the pillars" },
+  { ref = "Mark.1.19-Mark.1.20", link = "describes", note = "Mark 1:19–20 tells how Jesus called John together with his brother James." },
+  { ref = "Mark.10.35-Mark.10.40", link = "describes", note = "Mark 10:35–40 records the request by James and John for places beside Jesus." },
+  { ref = "John.21.20-John.21.24", link = "describes", note = "John 21:20–24 says the Beloved Disciple 'has written these things', but the passage does not name him." },
+  { ref = "Gal.2.9", link = "describes", note = "Galatians 2:9 names a John among the pillars of the Jerusalem church." },
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 11, section Authorship and the Beloved Disciple" },

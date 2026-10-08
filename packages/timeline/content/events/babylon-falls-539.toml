@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 Cyrus's army takes Babylon in October 539 BCE, which ends the Neo-Babylonian empire. The Nabonidus Chronicle records the battle at Opis, the taking of Sippar, and the entry into Babylon without a battle. Daniel 5 puts the death of Belshazzar on the same night."""
 verses = [
-  { ref = "Dan.5.30", link = "describes", note = "Belshazzar is killed that night" },
-  { ref = "Dan.5.31", link = "describes", note = "Darius the Mede receives the kingdom" },
-  { ref = "Isa.13.17", link = "alludes", note = "Yahweh stirs up the Medes against Babylon" },
-  { ref = "Jer.51.11", link = "alludes", note = "Yahweh has stirred up the kings of the Medes against Babylon" },
-  { ref = "Isa.45.1", link = "alludes", note = "Cyrus, to whom doors are opened and gates not shut" },
+  { ref = "Dan.5.30", link = "describes", note = "Daniel 5:30 says Belshazzar is killed that night." },
+  { ref = "Dan.5.31", link = "describes", note = "Daniel 5:31 says Darius the Mede receives the kingdom." },
+  { ref = "Isa.13.17", link = "alludes", note = "Isaiah 13:17 says Yahweh stirs up the Medes against Babylon." },
+  { ref = "Jer.51.11", link = "alludes", note = "Jeremiah 51:11 says Yahweh has stirred up the kings of the Medes against Babylon." },
+  { ref = "Isa.45.1", link = "alludes", note = "Isaiah 45:1 speaks of Cyrus, to whom doors are opened and gates not shut." },
 ]
 
 [[positions]]

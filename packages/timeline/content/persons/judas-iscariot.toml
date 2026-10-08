@@ -7,15 +7,15 @@ Judas is named last in the lists of the Twelve (Mark 3:19, Matt 10:4, Luke 6:16)
 The motives and the death are expanded later. Mark gives no motive (14:10-11). Matthew adds money (26:15) and a suicide (27:3-5), Luke and John add Satan's entry into him (Luke 22:3, John 13:2, 27), John calls him a thief (12:4-6), and Acts has a different death account (1:16-20). Meier says these reflect theology and imagination, and that rehabilitating Judas is as imaginative as demonizing him. The name Iscariot is unexplained. Meier discusses the dagger-men (sicarii), "liar", "hand over", a trade, and a place such as Kerioth. He thinks the John tradition of "Judas, son of Simon Iscariot" slightly favours a place name, and concludes the nickname, like the man, remains an enigma."""
 status = "draft"
 verses = [
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "last in Mark's list; 'who handed him over'" },
-  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "last in Matthew's list" },
-  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "last in Luke's list; called the betrayer" },
-  { ref = "Acts.1.13", link = "describes", note = "absent from the list of the Eleven" },
-  { ref = "Mark.14.10-Mark.14.11", link = "describes", note = "offers to hand Jesus over; money follows the offer" },
-  { ref = "Matt.27.3-Matt.27.5", link = "describes", note = "Matthew's account of his remorse and death" },
-  { ref = "Acts.1.16-Acts.1.20", link = "describes", note = "Luke's different account of his death" },
-  { ref = "John.12.4-John.12.6", link = "describes", note = "John calls him a thief in charge of the money box" },
-  { ref = "Luke.22.3", link = "describes", note = "Satan entered Judas; a demonic motive" },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists Judas Iscariot last among the Twelve, as the one 'who handed him over'." },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists Judas Iscariot last among the Twelve." },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists Judas Iscariot last among the Twelve and calls him the betrayer." },
+  { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven, and Judas is absent from it." },
+  { ref = "Mark.14.10-Mark.14.11", link = "describes", note = "Mark 14:10–11 has Judas offer to hand Jesus over to the chief priests, with money promised after the offer." },
+  { ref = "Matt.27.3-Matt.27.5", link = "describes", note = "Matthew 27:3–5 gives Matthew's account of the remorse and death of Judas." },
+  { ref = "Acts.1.16-Acts.1.20", link = "describes", note = "Acts 1:16–20 gives Luke's account of the death of Judas, which differs from Matthew's." },
+  { ref = "John.12.4-John.12.6", link = "describes", note = "John 12:4–6 calls Judas a thief who was in charge of the money box." },
+  { ref = "Luke.22.3", link = "describes", note = "Luke 22:3 says Satan entered Judas, giving a demonic motive for his act." },
 ]
 citations = [
   { source = "meier-2001", locator = "pp. 142–145" },

@@ -6,10 +6,10 @@ confidence = "contested"
 status = "draft"
 summary = "Moab, led by King Mesha, rebels against Israel, and King Jehoram marches against it. A stone monument called the Mesha Stele tells the story from Moab's side."
 verses = [
-  { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Mesha's revolt and the war that follows" },
-  { ref = "2Kgs.1.1", link = "background", note = "revolt after Ahab's death" },
-  { ref = "Isa.15.1-Isa.16.14", link = "alludes", note = "oracle on Moab" },
-  { ref = "Jer.48.1-Jer.48.47", link = "alludes", note = "oracle on Moab" },
+  { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Kings describes Mesha's revolt and the war that follows." },
+  { ref = "2Kgs.1.1", link = "background", note = "Kings says Moab revolted after Ahab's death, which gives context for the revolt dated here." },
+  { ref = "Isa.15.1-Isa.16.14", link = "alludes", note = "The oracle on Moab alludes to the nation involved in the revolt." },
+  { ref = "Jer.48.1-Jer.48.47", link = "alludes", note = "The oracle on Moab alludes to the nation involved in the revolt." },
 ]
 
 [[positions]]

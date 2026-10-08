@@ -9,6 +9,6 @@ citations = [
   { source = "arrian-chinnock-1884", locator = "pp. 134–135 (Book II, chs. 24–25) and p. 140 (Book III, ch. 1)" },
 ]
 verses = [
-  { ref = "Dan.8.5-Dan.8.7", link = "background", note = "The goat from the west that scholars read as Alexander" },
-  { ref = "Zech.9.3-Zech.9.4", link = "background", note = "Tyre's wealth and its fall into the sea, often read beside the siege" },
+  { ref = "Dan.8.5-Dan.8.7", link = "background", note = "Daniel 8:5–7 describes a goat from the west that scholars read as Alexander, the conqueror whose siege of Tyre Arrian narrates." },
+  { ref = "Zech.9.3-Zech.9.4", link = "background", note = "Zechariah 9:3–4 speaks of Tyre's wealth and its fall into the sea, and is often read beside Arrian's account of the siege." },
 ]

@@ -10,7 +10,7 @@ This asks who wrote the three letters of John and when. None of them names its a
 verses = [
   { ref = "1John.2.18-1John.2.19", link = "describes", note = "Former members have left the community and are called antichrists." },
   { ref = "2John.1.1", link = "describes", note = "The writer calls himself the presbyter." },
-  { ref = "3John.1.9-3John.1.10", link = "background", note = "Diotrephes, who resists the presbyter's authority." },
+  { ref = "3John.1.9-3John.1.10", link = "background", note = "Third John describes Diotrephes, who resists the presbyter's authority, as background to the letters' setting." },
 ]
 
 [[positions]]
@@ -33,7 +33,7 @@ citations = [
   text = """
 Brown ties the letters to a break inside the Johannine community: "The phase during which the Johannine Epistles, I and II John, were written (ca. AD 100). The community split in two", and many seceded, in the view of the author of 1 John 2:18–19."""
   citations = [{ source = "brown-1997", locator = "ch. 11, History of the Johannine Community" }]
-  verses = [{ ref = "1John.2.18-1John.2.19", link = "dates", note = "The secession." }]
+  verses = [{ ref = "1John.2.18-1John.2.19", link = "dates", note = "First John speaks of former members leaving the community, the secession that is used to date the letter." }]
 
 [[positions]]
 id = "carson-moo-early-90s"
@@ -51,7 +51,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 674–676" }]
   text = """
 They argue that the writer's authority over several congregations, seen in the way he brands opponents as liars and antichrists and in 3 John 9, is most simply explained if he was an apostle. They say the main reasons for rejecting John come from reconstructions of a Johannine community, not from hard evidence."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 674–675" }]
-  verses = [{ ref = "3John.1.9", link = "describes", note = "Diotrephes, who loves to be first; read as a power play against an apostle's authority." }]
+  verses = [{ ref = "3John.1.9", link = "describes", note = "Third John describes Diotrephes as loving to be first, which is read as a power play against an apostle's authority." }]
 
 [[positions]]
 id = "ehrman-intro-end-first-century"
@@ -69,4 +69,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 336 approx." }]
   text = """
 Ehrman points to themes the letters share with the Fourth Gospel, often in the same words (light and darkness, the commandment to love one another). He takes this to show that all four books come from one community."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 330 approx." }]
-  verses = [{ ref = "1John.2.7", link = "describes", note = "The old and new commandment, as in John 13:34." }, { ref = "John.13.34", link = "describes", note = "The new commandment shared with 1 John." }]
+  verses = [{ ref = "1John.2.7", link = "describes", note = "First John speaks of the commandment as both old and new, as in John 13:34, which links the letter to the Gospel." }, { ref = "John.13.34", link = "describes", note = "John 13:34 gives the new commandment that 1 John shares, which links the two writings." }]

@@ -6,10 +6,10 @@ confidence = "contested"
 status = "draft"
 summary = "Solomon is anointed to succeed David (twice, in the Bible's telling) and reigns forty years. Rodger C. Young argues that at first Solomon ruled jointly with David, a coregency."
 verses = [
-  { ref = "1Kgs.1.28-1Kgs.1.53", link = "describes", note = "David has Solomon anointed at Gihon" },
-  { ref = "1Kgs.2.12", link = "describes", note = "Solomon takes his father's throne" },
-  { ref = "1Chr.28.1-1Chr.29.25", link = "describes", note = "the same story in Chronicles; 29:22 records the second anointing" },
-  { ref = "Ps.72.1", link = "alludes", note = "psalm 'of' or 'for' Solomon: 'the royal son'" },
+  { ref = "1Kgs.1.28-1Kgs.1.53", link = "describes", note = "Kings tells how David has Solomon anointed at Gihon." },
+  { ref = "1Kgs.2.12", link = "describes", note = "Kings says Solomon takes his father's throne." },
+  { ref = "1Chr.28.1-1Chr.29.25", link = "describes", note = "Chronicles tells the same story, and 29:22 records the second anointing." },
+  { ref = "Ps.72.1", link = "alludes", note = "Psalm 72 carries Solomon's name in its heading and prays for the king and the king's son, which is read as an allusion to his accession." },
 ]
 
 [[positions]]

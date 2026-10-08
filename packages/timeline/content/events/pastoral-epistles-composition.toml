@@ -12,7 +12,7 @@ verses = [
   { ref = "Titus.1.1", link = "describes", note = "Paul named as author, the opening Ehrman compares with 1 Timothy 1:1-4." },
   { ref = "1Tim.6.20", link = "describes", note = "Guard what has been entrusted, a phrase shared with 2 Timothy." },
   { ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Personal requests to Timothy, which Ehrman calls verisimilitudes." },
-  { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Ehrman: qualifications for overseers and deacons, a church order already in place." },
+  { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Ehrman reads these qualifications for overseers and deacons as a church order already in place." },
 ]
 
 [[positions]]
@@ -37,21 +37,21 @@ Ehrman starts from the state of scholarship, where he finds little dispute: "the
   text = """
 Ehrman adds that the three letters are not usually separated, since their authorship is closely linked: "There has been far less disagreement over the joint authorship of 1 Timothy and Titus""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 262" }]
-  verses = [{ ref = "1Tim.1.1", link = "describes", note = "Matched by Titus 1:3." }, { ref = "Titus.1.1", link = "describes", note = "Opening compared with 1 Timothy 1:1." }]
+  verses = [{ ref = "1Tim.1.1", link = "describes", note = "First Timothy 1:1 names Paul as apostle in terms matched by Titus 1:3." }, { ref = "Titus.1.1", link = "describes", note = "Titus 1:1 names Paul as author, in an opening compared with 1 Timothy 1:1." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman points to wording that ties the letters together: "The injunction of 2 Tim. 1:12 has its counterpart in 1 Tim. 6:20""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 264" }]
-  verses = [{ ref = "1Tim.6.20", link = "describes", note = "Guard what is entrusted." }]
+  verses = [{ ref = "1Tim.6.20", link = "describes", note = "First Timothy 6:20 tells Timothy to guard what is entrusted to him, a phrase shared with 2 Timothy." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman argues that the letters assume a church organization Paul's own letters do not: "They instead presuppose that a church hierarchy already is in place""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 272" }]
-  verses = [{ ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Overseers and deacons with set qualifications." }]
+  verses = [{ ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "First Timothy 3 lists set qualifications for overseers and deacons." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -70,7 +70,7 @@ Ehrman insists that these points work together and should not be weighed one at 
   text = """
 Ehrman reads the personal details in 2 Timothy as part of the forger's method: "where the author cites names, places, and events from his life, thereby assuring the reader that he really is Paul""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 278" }]
-  verses = [{ ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Names, places and requests." }]
+  verses = [{ ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Second Timothy 4 closes with names, places and personal requests." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -94,7 +94,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 272, 281-282" }]
   text = """
 Ehrman reports the defenders' argument that the letters' lifelike detail speaks for Paul: "Some scholars still find it difficult to believe that a forger would employ such extensive verisimilitudes""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 281" }]
-  verses = [{ ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Personal requests in the closing." }]
+  verses = [{ ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Second Timothy closes with personal requests to Timothy." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -118,7 +118,7 @@ citations = [{ source = "brown-1997", locator = "ch. 29, Summary of Basic Inform
   text = """
 Brown argues from church order: the two-part structure of presbyter/bishops and deacons in Titus and 1 Timothy "is not far from that of Didache 15:1" (ca. AD 100?) and 1 Clement (ca. AD 96), so he places the Pastorals between 80 and 100."""
   citations = [{ source = "brown-1997", locator = "ch. 29, Who Wrote Titus and I Timothy?" }]
-  verses = [{ ref = "Titus.1.5", link = "background", note = "Presbyters appointed in every town." }, { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Overseers and deacons." }]
+  verses = [{ ref = "Titus.1.5", link = "background", note = "Titus is told to appoint presbyters in every town." }, { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "First Timothy 3 sets out qualifications for overseers and deacons." }]
 
 [[positions]]
 id = "carson-moo-paul-after-first-imprisonment"
@@ -136,7 +136,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 571-572, 578, 583" }]
   text = """
 Carson and Moo argue that "all the historical references in these letters ring true as statements coming from the life of Paul". They ask whether a later admirer would have had Paul call himself chief of sinners (1 Timothy 1:15) or recall that nobody stood by him (2 Timothy 4:16), and say no early church father knowingly accepted a pseudonymous book into the canon."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 567-568" }]
-  verses = [{ ref = "1Tim.1.15", link = "describes", note = "Paul as chief of sinners." }, { ref = "2Tim.4.16", link = "describes", note = "Nobody stood by him." }, { ref = "Titus.1.5", link = "dates", note = "Titus left in Crete." }]
+  verses = [{ ref = "1Tim.1.15", link = "describes", note = "First Timothy 1:15 has Paul call himself the chief of sinners." }, { ref = "2Tim.4.16", link = "describes", note = "Second Timothy 4:16 has Paul say that nobody stood by him." }, { ref = "Titus.1.5", link = "dates", note = "Titus 1:5 says Titus was left in Crete." }]
 
 [[positions]]
 id = "ehrman-intro-end-first-century"
@@ -154,4 +154,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 283 approx." }]
   text = """
 He supports this from church order, which he finds already developed: "The clerical structure of these letters appears far removed from what we find in the letters of Paul," and is closer to second-century authors."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 283 approx." }]
-  verses = [{ ref = "1Tim.3.1-1Tim.3.7", link = "describes", note = "Qualifications for the overseer." }, { ref = "Titus.1.5", link = "describes", note = "Appointing elders in every town." }]
+  verses = [{ ref = "1Tim.3.1-1Tim.3.7", link = "describes", note = "First Timothy 3:1-7 lists the qualifications for the overseer." }, { ref = "Titus.1.5", link = "describes", note = "Titus 1:5 tells Titus to appoint elders in every town." }]

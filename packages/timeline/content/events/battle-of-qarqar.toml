@@ -7,8 +7,8 @@ status = "draft"
 summary = """
 Shalmaneser III fights a coalition of kings in 853 BCE, including Ahab of Israel. The Bible does not mention the battle, so its date comes from Assyrian records."""
 verses = [
-  { ref = "1Kgs.16.29-1Kgs.16.34", link = "background", note = "Ahab becomes king. The Bible does not mention Qarqar" },
-  { ref = "1Kgs.22.1-1Kgs.22.4", link = "background", note = "three years without war between Syria and Israel" },
+  { ref = "1Kgs.16.29-1Kgs.16.34", link = "background", note = "1 Kings 16:29-34 reports that Ahab becomes king, though the Bible does not mention Qarqar." },
+  { ref = "1Kgs.22.1-1Kgs.22.4", link = "background", note = "1 Kings 22:1-4 reports three years without war between Syria and Israel." },
 ]
 
 [[positions]]

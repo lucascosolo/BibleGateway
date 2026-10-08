@@ -10,7 +10,7 @@ verses = [
   { ref = "2Kgs.18.13-2Kgs.19.37", link = "describes" },
   { ref = "Isa.36.1-Isa.37.38", link = "describes" },
   { ref = "2Chr.32.1-2Chr.32.23", link = "describes" },
-  { ref = "2Kgs.18.13", link = "dates", note = "in Hezekiah's fourteenth year" },
+  { ref = "2Kgs.18.13", link = "dates", note = "Kings places Sennacherib's attack in Hezekiah's fourteenth year, which is the date linked here." },
 ]
 
 [[positions]]
@@ -57,7 +57,7 @@ citations = [{ source = "galil-1996", locator = "pp. 102–104" }]
   Galil lists the proposals for the "fourteenth year" (a corruption of 24; a reference to Sargon's campaign of 713–712; a new count from a reform in 715; a derived figure) and concludes that "the third campaign of Sennacherib most likely was not conducted in year 14 of Hezekiah". The date, he argues, "is not original" but the redactor's calculation."""
   citations = [{ source = "galil-1996", locator = "pp. 102–103" }]
   verses = [
-    { ref = "2Kgs.18.13", link = "dates", note = "The fourteenth year of Hezekiah" },
-    { ref = "2Kgs.20.1-2Kgs.20.6", link = "background", note = "Fifteen years added to Hezekiah's life" },
-    { ref = "2Kgs.18.2", link = "dates", note = "Twenty-nine years" },
+    { ref = "2Kgs.18.13", link = "dates", note = "Kings dates the invasion to the fourteenth year of Hezekiah." },
+    { ref = "2Kgs.20.1-2Kgs.20.6", link = "background", note = "Kings says fifteen years were added to Hezekiah's life, which gives background to the dating." },
+    { ref = "2Kgs.18.2", link = "dates", note = "Kings gives Hezekiah's reign as twenty-nine years, a figure used in the dating." },
   ]

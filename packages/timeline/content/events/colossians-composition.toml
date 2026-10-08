@@ -10,11 +10,11 @@ This asks who wrote Colossians and when. The letter names Paul as author and twi
 verses = [
   { ref = "Col.1.1", link = "describes", note = "Paul is named as the author, with Timothy." },
   { ref = "Col.1.23", link = "describes", note = "The author speaks of himself as I, Paul." },
-  { ref = "Col.4.18", link = "describes", note = "The closing signature in the author's own hand, with I, Paul." },
-  { ref = "Col.1.13", link = "background", note = "Ehrman: God has already delivered believers, a realized view." },
-  { ref = "Col.2.12-Col.2.13", link = "background", note = "Ehrman: believers already raised with Christ, against Romans 6." },
-  { ref = "Col.3.1", link = "background", note = "Ehrman: if then you have been raised with Christ." },
-  { ref = "Col.3.18-Col.4.1", link = "background", note = "Ehrman: a household code at odds with Paul's preference for celibacy." },
+  { ref = "Col.4.18", link = "describes", note = "The letter closes with a signature in the author's own hand, written as I, Paul." },
+  { ref = "Col.1.13", link = "background", note = "Ehrman reads the statement that God has already delivered believers as a realized view of salvation." },
+  { ref = "Col.2.12-Col.2.13", link = "background", note = "Ehrman notes that believers are said to be already raised with Christ, which he sets against Romans 6." },
+  { ref = "Col.3.1", link = "background", note = "Ehrman cites this verse, which says believers have been raised with Christ, as part of the same realized view." },
+  { ref = "Col.3.18-Col.4.1", link = "background", note = "Ehrman reads this household code as at odds with Paul's preference for celibacy." },
 ]
 
 [[positions]]
@@ -33,14 +33,14 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 228, 234, 246" }]
   text = """
 Ehrman starts with the signature. The author's insistence on being Paul is what a forger would do: "Whoever wrote these books wanted their readers to think they really were Paul.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 228" }]
-  verses = [{ ref = "Col.1.23", link = "describes", note = "I, Paul." }, { ref = "Col.4.18", link = "describes", note = "The signature with my own hand." }]
+  verses = [{ ref = "Col.1.23", link = "describes", note = "Colossians 1:23 has the author speak of himself as I, Paul." }, { ref = "Col.4.18", link = "describes", note = "Colossians 4:18 closes with a greeting written with the author's own hand." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman rejects the idea that a close co-worker wrote the letter for Paul, calling that suggestion hopeless: "attributing the letter to a close co-worker appears to be a counsel of despair.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 227" }]
-  verses = [{ ref = "Col.1.1", link = "describes", note = "Paul named first, with Timothy." }]
+  verses = [{ ref = "Col.1.1", link = "describes", note = "Colossians 1:1 names Paul first as the sender, with Timothy beside him." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -59,7 +59,7 @@ He backs the point about style with a count: "The average in all the undisputed 
   text = """
 Ehrman finds a difference in teaching about the resurrection, which Colossians treats as already realized: "Believers have not only died with Christ but they have also been raised with him.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 232" }]
-  verses = [{ ref = "Col.2.12-Col.2.13", link = "background", note = "Raised with Christ." }, { ref = "Col.3.1", link = "background", note = "Have been raised up with Christ." }]
+  verses = [{ ref = "Col.2.12-Col.2.13", link = "background", note = "Colossians 2:12-13 says believers have already been raised with Christ, a point this argument weighs in the authorship debate." }, { ref = "Col.3.1", link = "background", note = "Colossians 3:1 begins by saying believers have been raised up with Christ." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -72,14 +72,14 @@ Ehrman finds a difference in how salvation is described: "Unlike Paul, this auth
   text = """
 Ehrman reads the household code as a sign of a later church that expects to last: "In short, this is written by someone who knows the church has been here and will be here for the long run.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 234" }]
-  verses = [{ ref = "Col.3.18-Col.4.1", link = "background", note = "The Haustafel." }]
+  verses = [{ ref = "Col.3.18-Col.4.1", link = "background", note = "Colossians 3:18-4:1 is a household code (a Haustafel), which this argument weighs in the authorship debate." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman concludes from all this that the letter is not Paul's: "it is clear that with Colossians we are not dealing with a letter of Paul, but a letter of someone wanting his readers to think he is Paul.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 234" }]
-  verses = [{ ref = "Col.1.1", link = "describes", note = "The authorial claim." }]
+  verses = [{ ref = "Col.1.1", link = "describes", note = "Colossians 1:1 makes the claim of authorship by naming Paul as the sender." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -103,7 +103,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 227, 250, 251" }]
   text = """
 Ehrman reports the argument of Barth and Blanke that the letter's opening and closing differ too much from Paul's style to be forged: "Col. 1:1–2 and 4:18 differ so widely from Paul’s epistolary style, they cannot be forged, as a forger would be sure to follow the style""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 250" }]
-  verses = [{ ref = "Col.4.18", link = "describes", note = "The closing signature." }]
+  verses = [{ ref = "Col.4.18", link = "describes", note = "Colossians 4:18 ends with a signature in Paul's own hand." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -116,7 +116,7 @@ Ehrman answers that this misunderstands how ancient forgers worked: "Once again,
   text = """
 Ehrman also dismisses the Timothy hypothesis, a variant of the traditional view, saying that "even if, to stretch the imagination, one of Paul’s colleagues wrote the letter""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 227" }]
-  verses = [{ ref = "Col.1.1", link = "describes", note = "Timothy as cosender." }]
+  verses = [{ ref = "Col.1.1", link = "describes", note = "Colossians 1:1 names Timothy as a co-sender alongside Paul." }]
 
   [[positions.arguments]]
   stance = "against"
@@ -140,7 +140,7 @@ citations = [{ source = "brown-1997", locator = "ch. 27, Summary of Basic Inform
   text = """
 Brown sees the letter's developed theology as the main reason to doubt Paul: "The developed christology, ecclesiology, and eschatology of Col has become the principal argument against Paul as the writer." He notes Paul never calls Christ the head of the church as his body, a major theme here."""
   citations = [{ source = "brown-1997", locator = "ch. 27, Did Paul Write Colossians?" }]
-  verses = [{ ref = "Col.1.18", link = "background", note = "Christ as head of the body, the church." }]
+  verses = [{ ref = "Col.1.18", link = "background", note = "Colossians 1:18 calls Christ the head of the body, the church." }]
 
 [[positions]]
 id = "carson-moo-rome-61"
@@ -158,7 +158,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 518-522" }]
   text = """
 Carson and Moo hold that the case against Pauline authorship is not decisive. The vocabulary, theology and eschatology of Colossians are within Paul's range, and the autograph greeting of Colossians 4:18 stands in the text. They also say a forger would not have chosen the unimportant town of Colosse, and conclude that "the arguments against Pauline authorship are not decisive"."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 518-520" }]
-  verses = [{ ref = "Col.4.18", link = "describes", note = "The signature in Paul's own hand." }, { ref = "Col.2.12-Col.2.13", link = "background", note = "The raised-with-Christ passage read against Romans 6." }]
+  verses = [{ ref = "Col.4.18", link = "describes", note = "Colossians 4:18 ends with a signature in Paul's own hand." }, { ref = "Col.2.12-Col.2.13", link = "background", note = "Colossians 2:12-13 says believers are raised with Christ, which is read against Romans 6." }]
 
 [[positions]]
 id = "ehrman-intro-after-paul"
@@ -176,4 +176,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
   text = """
 Ehrman argues that Colossians is emphatic that "believers have already been raised with Christ," whereas in the undisputed letters Paul insists the resurrection with Christ is still future."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
-  verses = [{ ref = "Col.2.12", link = "describes", note = "Raised with Christ in baptism." }, { ref = "Col.3.1", link = "describes", note = "Already raised with Christ." }]
+  verses = [{ ref = "Col.2.12", link = "describes", note = "Colossians 2:12 says believers were raised with Christ in baptism." }, { ref = "Col.3.1", link = "describes", note = "Colossians 3:1 says believers have already been raised with Christ." }]

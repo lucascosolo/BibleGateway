@@ -7,11 +7,11 @@ Bartholomew appears in all four lists of the Twelve (Mark 3:18, Matt 10:3, Luke 
 From about the ninth century Christian writers often identified him with Nathanael, who appears only in John (1:45-51; 21:2). Meier calls this a late tradition and says there is no basis for it unless one wrongly assumes that John thinks of most disciples as members of the Twelve. Meier's verdict on Bartholomew is that he is an absolute dead end: nothing is known of him as an individual, and the legends that fill the gap are later."""
 status = "draft"
 verses = [
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "list of the Twelve in Mark" },
-  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "list of the Twelve in Matthew" },
-  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "list of the Twelve in Luke" },
-  { ref = "Acts.1.13", link = "describes", note = "list of the Eleven in Acts" },
-  { ref = "John.1.45-John.1.51", link = "alludes", note = "Nathanael, identified with Bartholomew only from about the ninth century" },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve, and Bartholomew is among them." },
+  { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve, and Bartholomew is among them." },
+  { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists the Twelve, and Bartholomew is among them." },
+  { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven after Judas is gone, and Bartholomew is among them." },
+  { ref = "John.1.45-John.1.51", link = "alludes", note = "John 1:45–51 tells of Nathanael, who is identified with Bartholomew only from about the ninth century." },
 ]
 citations = [
   { source = "meier-2001", locator = "pp. 199–200" },

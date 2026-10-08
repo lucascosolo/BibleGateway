@@ -7,11 +7,11 @@ status = "draft"
 summary = """
 Nebuchadnezzar defeats the Egyptian army at Carchemish in 605 BCE, a victory that fixes a key point in the chronology of Judah's last decades."""
 verses = [
-  { ref = "Jer.46.2-Jer.46.12", link = "describes", note = "A message from God about Egypt at Carchemish" },
-  { ref = "Jer.46.2", link = "dates", note = "fourth year of Jehoiakim" },
-  { ref = "Jer.25.1", link = "dates", note = "fourth year of Jehoiakim" },
-  { ref = "2Chr.35.20", link = "background", note = "Neco goes to fight at Carchemish" },
-  { ref = "2Kgs.24.7", link = "alludes", note = "Egypt does not come out of its land again" },
+  { ref = "Jer.46.2-Jer.46.12", link = "describes", note = "Jeremiah 46:2-12 gives a message from God about Egypt at Carchemish." },
+  { ref = "Jer.46.2", link = "dates", note = "Jeremiah 46:2 dates the message about Carchemish to the fourth year of Jehoiakim." },
+  { ref = "Jer.25.1", link = "dates", note = "Jeremiah 25:1 also gives the fourth year of Jehoiakim, a year used to date the battle." },
+  { ref = "2Chr.35.20", link = "background", note = "2 Chronicles 35:20 says Neco goes to fight at Carchemish." },
+  { ref = "2Kgs.24.7", link = "alludes", note = "2 Kings 24:7 says Egypt does not come out of its land again." },
 ]
 
 [[positions]]

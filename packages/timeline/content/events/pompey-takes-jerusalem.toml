@@ -22,5 +22,5 @@ citations = [{ source = "lexundria-josephus-ant-14-66", locator = "Ant. 14.66" }
 artifact = "josephus-antiquities-14-61"
 relation = "corroborates"
 note = """
-Josephus describes the Temple's defences and the bridge Pompey used to get in."""
+This passage of Josephus's Antiquities describes the Temple's defences and the bridge Pompey used to get in. It corroborates the account of the siege dated here."""
 citations = [{ source = "lexundria-josephus-ant-14-61" }]

@@ -7,9 +7,9 @@ status = "draft"
 summary = """
 Jehu, called 'son of Omri' by the Assyrians, pays tribute to Shalmaneser III about 841 BCE. The Bible does not mention the tribute."""
 verses = [
-  { ref = "2Kgs.9.1-2Kgs.10.36", link = "background", note = "Jehu's revolt. The tribute is not mentioned" },
-  { ref = "2Kgs.10.32-2Kgs.10.33", link = "background", note = "Hazael cuts off parts of Israel's territory in his reign" },
-  { ref = "Hos.1.4", link = "alludes", note = "'the house of Jehu'" },
+  { ref = "2Kgs.9.1-2Kgs.10.36", link = "background", note = "Kings tells the story of Jehu's revolt as background, but it does not mention the tribute dated here." },
+  { ref = "2Kgs.10.32-2Kgs.10.33", link = "background", note = "Kings reports that Hazael cut off parts of Israel's territory in Jehu's reign, which gives background to the period of the tribute." },
+  { ref = "Hos.1.4", link = "alludes", note = "Hosea speaks of 'the house of Jehu,' a phrase that refers to Jehu's dynasty." },
 ]
 
 [[positions]]

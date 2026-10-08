@@ -7,20 +7,20 @@ status = "draft"
 summary = """
 Israel crosses the Jordan under Joshua, and Jericho falls, followed by Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE, while most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date here."""
 verses = [
-  { ref = "Josh.3.1-Josh.4.24", link = "describes", note = "The crossing of the Jordan" },
-  { ref = "Josh.5.13-Josh.6.27", link = "describes", note = "The fall of Jericho" },
-  { ref = "Josh.7.1-Josh.8.29", link = "describes", note = "Achan and the destruction of Ai" },
-  { ref = "Josh.9.1-Josh.10.43", link = "describes", note = "Gibeon and the southern campaign" },
-  { ref = "Josh.11.1-Josh.11.23", link = "describes", note = "The northern coalition. Hazor is burned" },
-  { ref = "Josh.12.1-Josh.12.24", link = "describes", note = "A list of defeated kings" },
-  { ref = "Judg.1.1-Judg.1.36", link = "describes", note = "The same period, seen as an incomplete conquest by the tribes" },
-  { ref = "Josh.24.11-Josh.24.13", link = "alludes", note = "Joshua's farewell: you crossed the Jordan and came to Jericho" },
-  { ref = "Ps.44.1-Ps.44.3", link = "alludes", note = "Our fathers did not win the land by their own sword" },
-  { ref = "Ps.78.54-Ps.78.55", link = "alludes", note = "He drove out nations and apportioned their inheritance" },
-  { ref = "Ps.105.43-Ps.105.45", link = "alludes", note = "He gave them the lands of the nations" },
-  { ref = "Neh.9.22-Neh.9.25", link = "alludes", note = "You gave them kingdoms and peoples; they took fortified cities" },
-  { ref = "Acts.7.45", link = "alludes", note = "Stephen says the tabernacle was brought in with Joshua when they drove out the nations" },
-  { ref = "Heb.11.30-Heb.11.31", link = "alludes", note = "By faith the walls of Jericho fell. Rahab is also named" },
+  { ref = "Josh.3.1-Josh.4.24", link = "describes", note = "Joshua 3:1-4:24 tells how Israel crosses the Jordan." },
+  { ref = "Josh.5.13-Josh.6.27", link = "describes", note = "Joshua 5:13-6:27 tells the fall of Jericho." },
+  { ref = "Josh.7.1-Josh.8.29", link = "describes", note = "Joshua 7:1-8:29 tells the story of Achan and the destruction of Ai." },
+  { ref = "Josh.9.1-Josh.10.43", link = "describes", note = "Joshua 9:1-10:43 tells of Gibeon and the southern campaign." },
+  { ref = "Josh.11.1-Josh.11.23", link = "describes", note = "Joshua 11 tells of the northern coalition and the burning of Hazor." },
+  { ref = "Josh.12.1-Josh.12.24", link = "describes", note = "Joshua 12 lists the kings Israel defeated." },
+  { ref = "Judg.1.1-Judg.1.36", link = "describes", note = "Judges 1 covers the same period but presents it as an incomplete conquest by the individual tribes." },
+  { ref = "Josh.24.11-Josh.24.13", link = "alludes", note = "In Joshua 24:11-13 Joshua's farewell recalls that Israel crossed the Jordan and came to Jericho." },
+  { ref = "Ps.44.1-Ps.44.3", link = "alludes", note = "Psalm 44:1-3 recalls that the fathers did not win the land by their own sword." },
+  { ref = "Ps.78.54-Ps.78.55", link = "alludes", note = "Psalm 78:54-55 says God drove out nations and apportioned their inheritance." },
+  { ref = "Ps.105.43-Ps.105.45", link = "alludes", note = "Psalm 105:43-45 says God gave Israel the lands of the nations." },
+  { ref = "Neh.9.22-Neh.9.25", link = "alludes", note = "Nehemiah 9:22-25 recalls that God gave Israel kingdoms and peoples, and that they took fortified cities." },
+  { ref = "Acts.7.45", link = "alludes", note = "Stephen says the tabernacle was brought in with Joshua when they drove out the nations." },
+  { ref = "Heb.11.30-Heb.11.31", link = "alludes", note = "Hebrews 11:30-31 says the walls of Jericho fell by faith and also names Rahab." },
 ]
 
 [[positions]]
