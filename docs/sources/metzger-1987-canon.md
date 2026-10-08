@@ -3,8 +3,11 @@
 Bruce M. Metzger, *The Canon of the New Testament: Its Origin, Development, and Significance*
 (Oxford: Clarendon Press, 1987). Supplied by the user on 2026-10-08 as a 333-page scanned PDF
 with no text layer (160 MB), filed at `~/.cache/jot/sources/metzger-1987-canon/`. OCR by
-tesseract at 300 dpi runs through `ocr.sh` into `ocr/page-NNN.txt` and `ocr/book.txt`; the
-printed-page offset is to be read from the running heads once the OCR is done. Copyrighted; the
+tesseract at 300 dpi (done 2026-10-08) is in `ocr/page-NNN.txt` and `ocr/book.txt`, about 132,000
+words.
+
+**Printed page = PDF page − 6** (PDF 40 carries the running head "34 Literature on the Canon";
+PDF 200 is p. 194, "Two Early Lists"). Copyrighted; the
 PDF stays out of the repository.
 
 ## What it gives
