@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from gpu_share import GpuWatch, foreign_compute_pids, yield_while_busy  # noqa: E402
+from gpu_share import GpuWatch, foreign_compute_pids, is_gpu_program, yield_while_busy, young_gpu_programs  # noqa: E402
 
 
 class Watch(unittest.TestCase):
@@ -67,3 +67,37 @@ class YieldWhileBusy(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GpuProgramMatch(unittest.TestCase):
+    def test_only_an_interpreter_running_main_py_counts(self):
+        self.assertTrue(is_gpu_program(["python3", "/home/x/ComfyUI/main.py", "--listen"]))
+        self.assertTrue(is_gpu_program(["/opt/venv/bin/python", "main.py"]) is False)  # bare name, no ComfyUI path
+        self.assertTrue(is_gpu_program(["/opt/venv/bin/python3.12", "/srv/comfyui/main.py"]))
+        # a shell, grep or tail that merely mentions the program is not the program
+        self.assertFalse(is_gpu_program(["/bin/bash", "-c", "pgrep -f ComfyUI/main.py"]))
+        self.assertFalse(is_gpu_program(["grep", "ComfyUI/main.py", "notes.md"]))
+        self.assertFalse(is_gpu_program(["tail", "-f", "/home/x/ComfyUI/main.py.log"]))
+        self.assertFalse(is_gpu_program([]))
+
+    def test_young_programs_read_from_a_scratch_proc(self):
+        import os
+        import tempfile
+        with tempfile.TemporaryDirectory() as proc:
+            for pid, argv in ((4242, ["python3", "/x/ComfyUI/main.py"]), (4343, ["bash", "-c", "ComfyUI/main.py"])):
+                os.makedirs(os.path.join(proc, str(pid)))
+                with open(os.path.join(proc, str(pid), "cmdline"), "wb") as f:
+                    f.write(b"\0".join(a.encode() for a in argv) + b"\0")
+            os.makedirs(os.path.join(proc, "not-a-pid"))
+            found = young_gpu_programs(grace_seconds=1e9, proc=proc)
+            # a scratch /proc has no stat file, so the age is unknown and the process counts
+            self.assertEqual([pid for pid, _ in found], [4242])
+
+
+class ReasonInLog(unittest.TestCase):
+    def test_step_aside_line_names_the_reason(self):
+        lines = []
+        states = iter([True, False])
+        yield_while_busy(lambda: None, lambda: None, lines.append, poll_seconds=0,
+                         busy=lambda: next(states), sleep=lambda s: None, reason=lambda: "pid 7 on the card")
+        self.assertIn("pid 7 on the card", lines[0])

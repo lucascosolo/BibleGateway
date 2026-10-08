@@ -8,8 +8,9 @@
 # limits like the September 2026 run: 24 hours, 10 GB RAM, four CPU threads, nice 10. Watch it with
 #   systemctl --user status jot-audio-alignment
 #   tail -f ~/.cache/jot-audio/work/resume-<date>.log
-# and stop it with `systemctl --user stop jot-audio-alignment`. Rerunning this script after a stop
-# or a failure continues from each chapter's saved state. Nothing here deploys or publishes.
+# and stop it with `systemctl --user stop jot-audio-alignment`. Rerunning this script, while it runs
+# or after a stop or a failure, restarts it and continues from each chapter's saved state. Nothing
+# here deploys or publishes.
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -26,8 +27,10 @@ done
 mkdir -p "$CACHE/work"
 
 if systemctl --user is-active --quiet "$UNIT"; then
-  echo "$UNIT is already running; stop it first if you mean to restart" >&2
-  exit 1
+  # Every chapter's state is saved as it finishes, so a restart loses at most the chapter in
+  # progress; relaunching is how a code fix reaches a running alignment.
+  echo "$UNIT is already running; stopping it to restart with the current code"
+  systemctl --user stop "$UNIT"
 fi
 
 systemd-run --user --unit="$UNIT" --collect \

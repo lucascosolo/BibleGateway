@@ -122,7 +122,7 @@ class Aligner:
         """Between chunks and before each window: step aside while anyone else wants the card."""
         if self.watch is None or not self.watch.busy:
             return
-        yield_while_busy(self.offload, self.restore, log or self.log, busy=self.watch.probe_now)
+        yield_while_busy(self.offload, self.restore, log or self.log, busy=self.watch.probe_now, reason=self.watch.reason)
 
     def clean(self, token: str) -> str:
         return "".join(ch for ch in token if ch in self.dictionary and ch != "*")
