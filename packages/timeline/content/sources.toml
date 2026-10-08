@@ -1246,3 +1246,33 @@ author = "Bart D. Ehrman"
 title = "Forgery and Counterforgery: The Use of Literary Deceit in Early Christian Polemics (ebook edition; page numbers follow its pagination)"
 publisher = "Oxford University Press, New York"
 year = 2013
+
+[[source]]
+id = "tov-2012"
+kind = "book"
+author = "Emanuel Tov"
+title = "Textual Criticism of the Hebrew Bible, third edition, revised and expanded"
+publisher = "Fortress Press, Minneapolis"
+year = 2012
+
+[[source]]
+id = "heiser-2001"
+kind = "article"
+author = "Michael S. Heiser"
+title = "Deuteronomy 32:8 and the Sons of God"
+container = "Bibliotheca Sacra 158 (January–March 2001), pp. 52–74"
+year = 2001
+
+[[source]]
+id = "tov-thetorah"
+kind = "web"
+author = "Emanuel Tov"
+title = "The Sons of Israel or God? Deuteronomy 32:8"
+url = "https://www.thetorah.com/article/the-sons-of-israel-or-god-deuteronomy-32-8"
+
+[[source]]
+id = "eichler-thetorah"
+kind = "web"
+author = "Raanan Eichler"
+title = "Gender Equality at Creation: Was Eve Made from Adam's Rib or Side?"
+url = "https://www.thetorah.com/article/gender-equality-at-creation"
