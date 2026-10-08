@@ -38,6 +38,6 @@ systemd-run --user --unit="$UNIT" --collect \
   --setenv=JOT_AUDIO_CACHE="$CACHE" \
   --setenv=HOME="$HOME" \
   --working-directory="$HERE" \
-  /bin/bash -c "exec '$HERE/resume.sh' >> '$LOG' 2>&1"
+  /bin/bash -c "exec /bin/bash '$HERE/resume.sh' >> '$LOG' 2>&1"
 
 echo "started $UNIT; log: $LOG"
