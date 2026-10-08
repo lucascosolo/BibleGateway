@@ -20,10 +20,10 @@ const event = (over: Record<string, unknown> = {}): Subject => ({
 }) as Subject;
 
 describe("toledotSentence: events", () => {
-  it("two or more positions: disputed, labels verbatim joined by 'or'", () => {
+  it("two or more positions: disputed, with the count and the span", () => {
     expect(toledotSentence(note(event()))).toEqual({
       lead: "Dating disputed",
-      body: "Scholars give Early date (c. 1446 BCE) or Late date (13th century BCE) for the Exodus.",
+      body: "Scholars disagree about the date of the Exodus: two positions, spanning 1446–1200 BCE.",
       href: "/toledot/events/ev-exodus",
       draft: false,
     });
@@ -44,7 +44,7 @@ describe("toledotSentence: new shapes", () => {
   it("event title not starting with 'The' keeps its case; 'The' is lower-cased", () => {
     const one = (title: string) => event({ confidence: "firm", title, earliest: -587, latest: -586, positions: [{ label: "Only", tradition: "critical" }] });
     expect(toledotSentence(note(one("The Exile"))).body).toBe("Scholars place the Exile in 587–586 BCE.");
-    expect(toledotSentence(note(one("Composition of James"))).body).toBe("Scholars place Composition of James in 587–586 BCE.");
+    expect(toledotSentence(note(one("Composition of James"))).body).toBe("Scholars place composition of James in 587–586 BCE.");
   });
   it("issue title already a question is used as is", () => {
     const s = toledotSentence(note({ kind: "issue", id: "i", title: "Is there a historical Moses?", issueKind: "historical", status: "reviewed" }));
@@ -53,16 +53,14 @@ describe("toledotSentence: new shapes", () => {
 });
 
 describe("toledotSentence: traditional lens", () => {
-  it("joins scholarly position labels only", () => {
+  it("counts scholarly positions only", () => {
     const s = toledotSentence(note(event({
       positions: [
         { label: "A", tradition: "chronological" }, { label: "B", tradition: "traditional" }, { label: "C", tradition: "critical" },
       ],
     })));
     expect(s.lead).toBe("Dating disputed");
-    expect(s.body).toContain("A");
-    expect(s.body).toContain("C");
-    expect(s.body).not.toContain("B");
+    expect(s.body).toContain("two positions");
   });
 
   it("only traditional positions: lead 'Traditional date', body is the label", () => {
@@ -80,11 +78,11 @@ describe("toledotSentence: arguments", () => {
   });
   it("for: label then event title", () => {
     expect(toledotSentence(note(arg("for")))).toEqual({
-      lead: "Cited in dating", body: "This passage is cited for dating the Exodus to Early date.", href: "/toledot/events/ev-exodus", draft: false,
+      lead: "Cited in dating", body: "This passage is cited for one dating of the Exodus: “Early date”.", href: "/toledot/events/ev-exodus", draft: false,
     });
   });
   it("against: adds ', against'", () => {
-    expect(toledotSentence(note(arg("against"))).body).toBe("This passage is cited against dating the Exodus to Early date.");
+    expect(toledotSentence(note(arg("against"))).body).toBe("This passage is cited against one dating of the Exodus: “Early date”.");
   });
 });
 

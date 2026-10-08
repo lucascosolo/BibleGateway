@@ -25,7 +25,9 @@ const ISSUE_LEAD: Record<IssueSummary["kind"], string> = {
 };
 
 const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
-const inProse = (title: string) => (title.startsWith("The ") ? lowerFirst(title) : title);
+const inProse = (title: string) => (title.startsWith("The ") || title.startsWith("Composition ") ? lowerFirst(title) : title);
+const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+const countWord = (n: number) => (n < WORDS.length ? WORDS[n] : String(n));
 const asSentence = (s: string) => (/[.!?]$/.test(s.trim()) ? s.trim() : `${s.trim()}.`);
 
 const ARTIFACT_VERB: Record<string, string> = {
@@ -45,7 +47,7 @@ function sentence(note: ToledotNote): ToledotSentence {
       const scholarly = s.positions.filter((p) => !isTraditional(p.tradition));
       const traditional = s.positions.filter((p) => isTraditional(p.tradition));
       if (scholarly.length >= 2) {
-        return { lead: "Dating disputed", body: `Scholars give ${scholarly.map((p) => p.label).join(" or ")} for ${inProse(s.title)}.`, href, draft };
+        return { lead: "Dating disputed", body: `Scholars disagree about the date of ${inProse(s.title)}: ${countWord(scholarly.length)} positions, spanning ${formatRange(s.earliest, s.latest)}.`, href, draft };
       }
       if (scholarly.length === 0 && traditional.length > 0) {
         return { lead: "Traditional date", body: `Only a traditional count dates ${inProse(s.title)}, to ${traditional.map((p) => p.label).join(" or ")}; no outside evidence fixes it.`, href, draft };
@@ -56,7 +58,7 @@ function sentence(note: ToledotNote): ToledotSentence {
     case "argument":
       return {
         lead: "Cited in dating",
-        body: `This passage is cited ${s.stance === "against" ? "against" : "for"} dating ${inProse(s.eventTitle)} to ${s.positionLabel}.`,
+        body: `This passage is cited ${s.stance === "against" ? "against" : "for"} one dating of ${inProse(s.eventTitle)}: “${s.positionLabel}”.`,
         href: `/toledot/events/${s.eventId}`,
         draft: s.eventStatus === "draft",
       };
