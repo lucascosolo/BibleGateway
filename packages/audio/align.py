@@ -224,13 +224,61 @@ def align_chapter(aligner, audio, t0, t_end, words, owners, rate, log) -> tuple[
     return verses, t0 + last_end, win, est
 
 
+# A chapter that scores below this (per language) is treated as suspect: the recording may skip
+# it, in which case its text has been forced onto the next chapter's audio and every chapter after
+# it drifts (KJV 2 Chronicles 4, 2026-10-08). The aligner then probes the next chapter at the
+# same point; if that scores well the suspect chapter is recorded as missing. On a relaunch, a
+# file's saved progress is rolled back to the last chapter above this floor so a drift is redone.
+LOW_SCORE = {"eng": 0.5, "hbo": 0.3}
+GOOD_SCORE = {"eng": 0.7, "hbo": 0.4}
+
+
 def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] | None, device, log,
              carried: list[dict] | None = None) -> list[dict]:
     """Align the unit's chapters (after any `carried` in from the previous file); returns the
     chapters whose audio ran out before they began, for the next file to take."""
     language = edition["language"]
+    low, good = LOW_SCORE[language], GOOD_SCORE[language]
     state_path = work_dir / (Path(unit["file"]).stem + ".state.json")
     state = json.loads(state_path.read_text()) if state_path.exists() else {"t0": 0.0, "rate": INITIAL_RATE[language], "done": []}
+    missing = {tuple(m) for m in state.get("missing", [])}
+
+    # Roll back saved progress to the last chapter that scored above the floor.
+    # A drift shows as two low chapters in a row (or a low final chapter); a single low chapter
+    # between good ones is just a hard chapter and is kept.
+    def saved_score(b: int, c: int) -> float | None:
+        try:
+            return float(json.loads((work_dir / f"{b:02d}-{c:03d}.json").read_text()).get("mean_score", 0.0))
+        except (OSError, ValueError):
+            return None
+
+    keep = []
+    last_good_end = 0.0
+    done = state["done"]
+    for n, (b, c) in enumerate(done):
+        if (b, c) in missing:
+            keep.append([b, c])
+            continue
+        score = saved_score(b, c)
+        if score is None:
+            break
+        if score < low:
+            following = [saved_score(nb, nc) for nb, nc in done[n + 1 : n + 2] if (nb, nc) not in missing]
+            if not following or following[0] is None or following[0] < low:
+                break
+        keep.append([b, c])
+        try:
+            last_good_end = float(json.loads((work_dir / f"{b:02d}-{c:03d}.json").read_text()).get("chapter_end", last_good_end))
+        except (OSError, ValueError):
+            pass
+    if len(keep) < len(state["done"]):
+        dropped = state["done"][len(keep):]
+        log(f"  {Path(unit['file']).name}: {len(dropped)} saved chapters from {dropped[0][0]:02d}-{dropped[0][1]:03d} "
+            f"scored below {low}; redoing them from {last_good_end:.0f}s")
+        state["done"] = keep
+        state["t0"] = last_good_end
+        state_path.write_text(json.dumps(state))
+
     pending = [c for c in (carried or []) + unit["chapters"] if [c["book_id"], c["chapter"]] not in state["done"]]
     if only:
         pending = [c for c in pending if (c["book_id"], c["chapter"]) in only]
@@ -241,37 +289,24 @@ def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] 
     t_end = len(audio) / SAMPLE_RATE
     log(f"  {Path(unit['file']).name}: {t_end/60:.1f} min, decoded in {time.time()-t_load:.1f}s")
 
-    leftover: list[dict] = []
-    carried_keys = {(c["book_id"], c["chapter"]) for c in (carried or [])}
-    for ch in pending:
-        t_ch = time.time()
+    def attempt(ch: dict, t0: float) -> dict | None:
+        """Align one chapter from t0 without touching state. None when the audio runs out first."""
         words, owners = chapter_words(ch, language, aligner)
         if not words:
-            continue
-        if leftover:
-            leftover.append(ch)
-            continue
+            return {"empty": True}
         est = sum(len(w) + 1 for w in words) / state["rate"]
-        if t_end - state["t0"] < est * MIN_REMAINING_FRACTION:
-            log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: only {t_end - state['t0']:.0f}s of audio left for "
+        if t_end - t0 < est * MIN_REMAINING_FRACTION:
+            log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: only {t_end - t0:.0f}s of audio left for "
                 f"about {est:.0f}s of text; carrying it to the next file")
-            leftover.append(ch)
-            continue
+            return None
         try:
-            verses, end_t, win, est = align_chapter(aligner, audio, state["t0"], t_end, words, owners, state["rate"], log)
+            verses, end_t, win, est = align_chapter(aligner, audio, t0, t_end, words, owners, state["rate"], log)
         except RuntimeError as exc:
             if "too long for CTC" not in str(exc):
                 raise
             log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: audio shorter than its text ({exc}); carrying it to the next file")
-            leftover.append(ch)
-            continue
-        out = {
-            "edition": edition["code"],
-            "book_id": ch["book_id"],
-            "chapter": ch["chapter"],
-            "file": unit["file"],
-            "verses": [],
-        }
+            return None
+        out = {"edition": edition["code"], "book_id": ch["book_id"], "chapter": ch["chapter"], "file": unit["file"], "verses": []}
         scores = []
         for vi, verse in enumerate(ch["verses"]):
             v = verses.get(vi)
@@ -281,41 +316,76 @@ def run_unit(aligner, edition, unit, work_dir: Path, only: set[tuple[int, int]] 
             scores.append(score)
             out["verses"].append({
                 "verse_id": verse["verse_id"],
-                "start": round(state["t0"] + v["start"], 3),
-                "end": round(state["t0"] + v["end"], 3),
+                "start": round(t0 + v["start"], 3),
+                "end": round(t0 + v["end"], 3),
                 "score": round(score, 4),
                 "words": v["words"],
             })
-        first = out["verses"][0]["start"] if out["verses"] else state["t0"]
-        last = out["verses"][-1]["end"] if out["verses"] else state["t0"]
+        first = out["verses"][0]["start"] if out["verses"] else t0
+        last = out["verses"][-1]["end"] if out["verses"] else t0
         duration = max(last - first, 1e-3)
-        n_chars = sum(len(w) + 1 for w in words)
-        measured_rate = n_chars / duration
+        measured_rate = sum(len(w) + 1 for w in words) / duration
         out["chapter_start"] = round(first, 3)
         out["chapter_end"] = round(last, 3)
         out["mean_score"] = round(float(np.mean(scores)), 4) if scores else 0.0
         out["min_score"] = round(float(np.min(scores)), 4) if scores else 0.0
         out["rate"] = round(measured_rate, 2)
-        if (ch["book_id"], ch["chapter"]) in carried_keys and out["mean_score"] < CARRIED_MIN_SCORE:
-            log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: carried in but scores {out['mean_score']:.2f} here; "
-                f"the recording skips it. Not aligned; this file starts over at {state['t0']:.0f}s")
-            state.setdefault("missing", []).append([ch["book_id"], ch["chapter"]])
-            state["done"].append([ch["book_id"], ch["chapter"]])
-            state_path.write_text(json.dumps(state))
-            continue
-        (work_dir / f"{ch['book_id']:02d}-{ch['chapter']:03d}.json").write_text(json.dumps(out, ensure_ascii=False))
+        return {"out": out, "end_t": end_t, "win": win, "rate": measured_rate, "n_verses": len(ch["verses"])}
 
+    def record_missing(ch: dict, why: str) -> None:
+        log(f"    {ch['book_id']:02d}-{ch['chapter']:03d}: {why}")
+        state.setdefault("missing", []).append([ch["book_id"], ch["chapter"]])
+        state["done"].append([ch["book_id"], ch["chapter"]])
+        state_path.write_text(json.dumps(state))
+
+    def commit(ch: dict, res: dict, t_ch: float) -> None:
+        out = res["out"]
+        (work_dir / f"{ch['book_id']:02d}-{ch['chapter']:03d}.json").write_text(json.dumps(out, ensure_ascii=False))
         # Only trust the measured rate to steer the next window if this chapter looked sane.
-        if out["mean_score"] > 0.5 and 3.0 < measured_rate < 40.0:
-            state["rate"] = 0.6 * state["rate"] + 0.4 * measured_rate
-        state["t0"] = end_t
+        if out["mean_score"] > 0.5 and 3.0 < res["rate"] < 40.0:
+            state["rate"] = 0.6 * state["rate"] + 0.4 * res["rate"]
+        state["t0"] = res["end_t"]
         state["done"].append([ch["book_id"], ch["chapter"]])
         state_path.write_text(json.dumps(state))
         log(
-            f"    {ch['book_id']:02d}-{ch['chapter']:03d}: {len(out['verses'])}/{len(ch['verses'])} verses, "
-            f"{first/60:.1f}-{last/60:.1f} min, score {out['mean_score']:.2f} (min {out['min_score']:.2f}), "
-            f"rate {measured_rate:.1f} c/s, window {win:.0f}s, {time.time()-t_ch:.1f}s"
+            f"    {ch['book_id']:02d}-{ch['chapter']:03d}: {len(out['verses'])}/{res['n_verses']} verses, "
+            f"{out['chapter_start']/60:.1f}-{out['chapter_end']/60:.1f} min, score {out['mean_score']:.2f} (min {out['min_score']:.2f}), "
+            f"rate {res['rate']:.1f} c/s, window {res['win']:.0f}s, {time.time()-t_ch:.1f}s"
         )
+
+    leftover: list[dict] = []
+    carried_keys = {(c["book_id"], c["chapter"]) for c in (carried or [])}
+    i = 0
+    while i < len(pending):
+        ch = pending[i]
+        i += 1
+        if leftover:
+            leftover.append(ch)
+            continue
+        t_ch = time.time()
+        res = attempt(ch, state["t0"])
+        if res is None:
+            leftover.append(ch)
+            continue
+        if res.get("empty"):
+            continue
+        score = res["out"]["mean_score"]
+        if (ch["book_id"], ch["chapter"]) in carried_keys and score < CARRIED_MIN_SCORE:
+            record_missing(ch, f"carried in but scores {score:.2f} here; the recording skips it. "
+                               f"Not aligned; this file starts over at {state['t0']:.0f}s")
+            continue
+        if score < low and i < len(pending):
+            # Suspect: does the next chapter fit this audio better? Then this one was skipped.
+            nxt = pending[i]
+            t_probe = time.time()
+            probe = attempt(nxt, state["t0"])
+            if probe and not probe.get("empty") and probe["out"]["mean_score"] >= good:
+                record_missing(ch, f"scores {score:.2f} here while {nxt['book_id']:02d}-{nxt['chapter']:03d} scores "
+                                   f"{probe['out']['mean_score']:.2f} at the same point; the recording skips it")
+                commit(nxt, probe, t_probe)
+                i += 1
+                continue
+        commit(ch, res, t_ch)
     return leftover
 
 
