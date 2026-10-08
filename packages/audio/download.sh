@@ -27,15 +27,16 @@ fetch() { # url, destination. Resumable; a leftover that is not audio (an error 
 }
 
 web() {
-  # 1,189 chapter files, one URL each, listed on the index page (the zip bundles are gone).
+  # 1,189 chapter files, one URL each. The server's directory listing is the authority: the
+  # index page misspells some names (Song of "Soloman", "1Thess"), which 404, and the zip bundles
+  # are gone. Lamentations 5 and the one-chapter books use short names the fragments regex accepts.
   mkdir -p "$RAW/web"
-  local index="$CACHE/webindex.htm"
-  [ -s "$index" ] || curl -sSL -A "$UA" -o "$index" "https://www.audiotreasure.com/webindex.htm"
-  grep -o 'content/WEBD_AT/[^"'"'"' >]*\.mp3' "$index" | sort -u > "$CACHE/web.list"
+  curl -sSL -A "$UA" "https://www.audiotreasure.com/content/WEBD_AT/" \
+    | grep -o 'href="[^"]*\.mp3"' | cut -d'"' -f2 | sort -u > "$CACHE/web.list"
+  [ -s "$CACHE/web.list" ] || { echo "web: empty directory listing" >&2; return 1; }
   local n=0 failed=0
-  while read -r rel; do
-    local name; name="$(basename "$rel")"
-    fetch "https://www.audiotreasure.com/$rel" "$RAW/web/$name" || failed=$((failed + 1))
+  while read -r name; do
+    fetch "https://www.audiotreasure.com/content/WEBD_AT/$name" "$RAW/web/$name" || failed=$((failed + 1))
     n=$((n + 1)); [ $((n % 50)) -eq 0 ] && echo "web $n"
   done < "$CACHE/web.list"
   [ "$failed" -eq 0 ] || echo "web: $failed files failed; rerun to retry" >&2
