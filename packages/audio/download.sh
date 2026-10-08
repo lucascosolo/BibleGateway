@@ -10,8 +10,20 @@ RAW="${CACHE:?}/raw"
 UA="Mozilla/5.0 (X11; Linux x86_64) jot-audio-pipeline"
 mkdir -p "$RAW"
 
-fetch() { # url, destination
-  curl -sSL -C - -A "$UA" --retry 3 --retry-delay 5 -o "$2" "$1"
+is_audio() { # a file that begins like an MP3 (ID3 tag or an MPEG frame sync) or a zip
+  local head; head="$(head -c 3 "$1" 2>/dev/null | od -An -tx1 | tr -d ' \n')"
+  case "$head" in 494433|fffb*|fff3*|fff2*|ffe3*|504b03) return 0 ;; *) return 1 ;; esac
+}
+
+fetch() { # url, destination. Resumable; a leftover that is not audio (an error page) is redone.
+  local url="$1" dest="$2"
+  if [ -e "$dest" ] && ! is_audio "$dest"; then : > "$dest"; fi
+  if ! curl -fsSL -C - -A "$UA" --retry 5 --retry-delay 10 --retry-all-errors -o "$dest" "$url"; then
+    echo "failed: $url" >&2
+    [ -e "$dest" ] && ! is_audio "$dest" && : > "$dest"
+    return 1
+  fi
+  is_audio "$dest" || { echo "not audio after download: $dest" >&2; : > "$dest"; return 1; }
 }
 
 web() {
@@ -20,12 +32,13 @@ web() {
   local index="$CACHE/webindex.htm"
   [ -s "$index" ] || curl -sSL -A "$UA" -o "$index" "https://www.audiotreasure.com/webindex.htm"
   grep -o 'content/WEBD_AT/[^"'"'"' >]*\.mp3' "$index" | sort -u > "$CACHE/web.list"
-  local n=0
+  local n=0 failed=0
   while read -r rel; do
     local name; name="$(basename "$rel")"
-    fetch "https://www.audiotreasure.com/$rel" "$RAW/web/$name"
+    fetch "https://www.audiotreasure.com/$rel" "$RAW/web/$name" || failed=$((failed + 1))
     n=$((n + 1)); [ $((n % 50)) -eq 0 ] && echo "web $n"
   done < "$CACHE/web.list"
+  [ "$failed" -eq 0 ] || echo "web: $failed files failed; rerun to retry" >&2
   echo "web done: $(find "$RAW/web" -name '*.mp3' | wc -l) files"
 }
 
@@ -49,9 +62,11 @@ import json, sys
 for name, _title, _dur in json.load(open(sys.argv[1])):
     print(name)
 EOF
+  local failed=0
   while read -r name; do
-    fetch "https://archive.org/download/bible_kjv_complete_2001_librivox/${name%.mp3}_64kb.mp3" "$RAW/kjv/$name"
+    fetch "https://archive.org/download/bible_kjv_complete_2001_librivox/${name%.mp3}_64kb.mp3" "$RAW/kjv/$name" || failed=$((failed + 1))
   done < "$CACHE/kjv.list"
+  [ "$failed" -eq 0 ] || echo "kjv: $failed files failed; rerun to retry" >&2
   echo "kjv done: $(find "$RAW/kjv" -name '*.mp3' | wc -l) files"
 }
 
@@ -60,9 +75,11 @@ heb() {
   mkdir -p "$RAW/heb"
   curl -sS -A "$UA" "https://archive.org/metadata/TanakhAudioRecordingByRabbiDanBeeri-BookByBook/files" \
     | python3 -I -c "import json,sys; print('\n'.join(f['name'] for f in json.load(sys.stdin)['result'] if f['name'].endswith('.mp3')))" > "$CACHE/heb.list"
+  local failed=0
   while read -r name; do
-    fetch "https://archive.org/download/TanakhAudioRecordingByRabbiDanBeeri-BookByBook/$name" "$RAW/heb/$name"
+    fetch "https://archive.org/download/TanakhAudioRecordingByRabbiDanBeeri-BookByBook/$name" "$RAW/heb/$name" || failed=$((failed + 1))
   done < "$CACHE/heb.list"
+  [ "$failed" -eq 0 ] || echo "heb: $failed files failed; rerun to retry" >&2
   echo "heb done: $(find "$RAW/heb" -name '*.mp3' | wc -l) files"
 }
 
