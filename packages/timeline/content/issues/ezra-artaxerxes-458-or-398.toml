@@ -11,6 +11,7 @@ verses = [
   { ref = "Neh.2.1", link = "dates" },
 ]
 citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
+persons = ["ezra", "nehemiah"]
 
 [[views]]
 label = "458/457 BCE (Artaxerxes I)"

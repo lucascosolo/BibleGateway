@@ -1,0 +1,19 @@
+id = "samuel"
+name = "Samuel"
+role = "prophet and judge"
+summary = """
+Samuel is dedicated as a child at Shiloh, judges Israel, and, as 1 Samuel tells it, anoints its first two kings: Saul in private, and later, in secret, the young David. The Bible gives no calendar date for any of it. The only dates available are those of Saul's reign, which bound both anointings: Rodger Young conjectures 1051–1009 BCE and marks those dates as guesses, while Finkelstein and Silberman's table, following Galil, gives about 1025–1005 BCE. Finkelstein and Silberman judge that some details of the 1 Samuel stories "are clearly legendary" but that "the geographical descriptions are quite accurate"."""
+status = "draft"
+verses = [
+  { ref = "1Sam.3.19-1Sam.3.21", link = "describes", note = "1 Samuel 3:19–21 says all Israel knew Samuel as a prophet." },
+  { ref = "1Sam.10.1", link = "describes", note = "1 Samuel 10:1 tells how Samuel anoints Saul." },
+  { ref = "1Sam.16.13", link = "describes", note = "1 Samuel 16:13 tells how Samuel anoints David." },
+]
+events = ["saul-accession", "david-anointed"]
+# young-2005 locator carried over from events/saul-accession.toml. F&S pp. 131 and 134 read in the OCR at
+# ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-144.txt and page-147.txt (printed = PDF - 13).
+citations = [
+  { source = "young-2005", locator = "Table 2, p. 246" },
+  { source = "finkelstein-silberman-2002", locator = "p. 131, Table Two" },
+  { source = "finkelstein-silberman-2002", locator = "p. 134" },
+]

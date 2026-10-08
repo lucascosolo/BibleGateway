@@ -4,7 +4,7 @@ title = "Is there a historical Moses?"
 status = "draft"
 summary = """
 No source outside the Bible from Moses' own time names him, and no Egyptian record mentions him. Scholars split into two camps: some see a figure of tradition with no recoverable history, others a real leader of some kind behind the story."""
-persons = ["moses"]
+persons = ["moses", "josiah"]
 events = ["exodus"]
 verses = [{ ref = "Exod.2.10", link = "describes" }]
 citations = [{ source = "wikipedia-moses" }]

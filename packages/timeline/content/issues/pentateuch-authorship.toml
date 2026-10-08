@@ -22,6 +22,7 @@ citations = [
   { source = "friedman-1987", locator = "pp. 18–27, 50–60, 86–87" },
   { source = "satlow-2014", locator = "pp. 74–75" },
 ]
+persons = ["josiah", "ezra"]
 
 [[views]]
 label = "Four sources combined (the Documentary Hypothesis)"

@@ -1,0 +1,23 @@
+id = "josiah"
+name = "Josiah"
+role = "king of Judah (640–609 BCE in Thiele)"
+summary = """
+Josiah became king of Judah as a boy. In his eighteenth year a book of the law was found in the temple and he purged the forbidden worship; he died at Megiddo confronting Pharaoh Neco. Thiele dates his reign 640–609 BCE. Young counts his eighteenth year from Tishri 623, and both put his death in Tammuz 609. In critical scholarship he matters as much for the books as for the reform: Finkelstein and Silberman place the Deuteronomistic History and parts of the Pentateuch in his reign, call him "a new David", and read the book of Joshua's hero as a portrait of him, while noting that archaeology gives little evidence for his specific acts. The Pentateuch, conquest, exodus and Moses issues all turn in part on that dating."""
+status = "draft"
+verses = [
+  { ref = "2Kgs.22.1-2Kgs.22.13", link = "describes", note = "2 Kings 22:1–13 tells of Josiah's accession and the finding of the book of the law." },
+  { ref = "2Kgs.23.1-2Kgs.23.25", link = "describes", note = "2 Kings 23:1–25 tells of the covenant, the purge and the Passover of Josiah's eighteenth year." },
+  { ref = "2Kgs.23.29-2Kgs.23.30", link = "describes", note = "2 Kings 23:29–30 tells of Josiah's death at Megiddo." },
+]
+events = ["josiah-reform", "josiah-death-megiddo", "conquest-of-canaan"]
+# Locators carried over from events/josiah-reform.toml, josiah-death-megiddo.toml and conquest-of-canaan.toml.
+# F&S p. 144 ("a new David") read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-157.txt.
+citations = [
+  { source = "thiele-1983", locator = "p. 180, §36; p. 182, Diagram 20" },
+  { source = "young-2004", locator = "p. 27" },
+  { source = "young-2004", locator = "p. 35" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 283-284" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 287-288" },
+  { source = "finkelstein-silberman-2002", locator = "p. 144" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 92-95" },
+]

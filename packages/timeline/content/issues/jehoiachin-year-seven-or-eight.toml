@@ -10,6 +10,7 @@ verses = [
   { ref = "Jer.52.28", link = "dates" },
 ]
 citations = [{ source = "livius-abc5" }]
+persons = ["nebuchadnezzar"]
 
 [[views]]
 label = "Seventh year"

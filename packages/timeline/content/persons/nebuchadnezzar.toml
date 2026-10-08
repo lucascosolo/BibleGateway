@@ -1,0 +1,34 @@
+id = "nebuchadnezzar"
+name = "Nebuchadnezzar"
+also_known_as = ["Nebuchadnezzar II"]
+role = "king of Babylon"
+summary = """
+Nebuchadnezzar II succeeded his father Nabopolassar in 605 BCE, the year he defeated Egypt at Carchemish; Thiele dates his father's death to 16 August and his accession to 7 September 605. The Babylonian Chronicle says that in his seventh year, on 2 Addaru (March 597), he "seized the city and captured the king", Jerusalem and Jehoiachin. 2 Kings 24:12 calls it his eighth year, a gap Thiele explains by Babylonian Nisan years against Judah's Tishri years. His army destroyed Jerusalem and its temple in 587 BCE on Young's count, or 586 on Thiele's and on Finkelstein and Silberman's. Daniel 5 later calls Belshazzar his son, while the Babylonian records make Belshazzar the son of Nabonidus (see the Belshazzar issue)."""
+status = "draft"
+verses = [
+  { ref = "2Kgs.24.10-2Kgs.24.17", link = "describes", note = "2 Kings 24:10–17 tells how Nebuchadnezzar takes Jerusalem and Jehoiachin and makes Zedekiah king." },
+  { ref = "2Kgs.25.1-2Kgs.25.12", link = "describes", note = "2 Kings 25:1–12 tells of the siege, the breach and the burning of the temple." },
+  { ref = "Jer.52.28-Jer.52.30", link = "describes", note = "Jeremiah 52:28–30 counts the deportations by Nebuchadnezzar's regnal years." },
+  { ref = "Dan.5.2", link = "alludes", note = "Daniel 5:2 calls Nebuchadnezzar Belshazzar's father." },
+]
+events = ["carchemish-605", "jerusalem-capture-597", "jerusalem-fall"]
+# Locators carried over from events/carchemish-605.toml, jerusalem-capture-597.toml, jerusalem-fall.toml,
+# issues/jehoiachin-year-seven-or-eight.toml and issues/belshazzar-king-and-father.toml for the same claims.
+citations = [
+  { source = "thiele-1983", locator = "p. 180, table of fixed dates; p. 186" },
+  { source = "livius-abc5" },
+  { source = "grayson-1975", locator = "Chronicle 5" },
+  { source = "young-2004", locator = "pp. 21–38; the conclusion at p. 27" },
+  { source = "finkelstein-silberman-2002", locator = "p. 307" },
+  { source = "wikipedia-cylinders-of-nabonidus" },
+]
+
+[[attestations]]
+artifact = "babylonian-chronicle-abc5"
+relation = "corroborates"
+note = """
+The Babylonian Chronicle covers Nebuchadnezzar's reign from his accession to his eleventh year and records his capture of Jerusalem and its king in his seventh year."""
+citations = [
+  { source = "grayson-1975", locator = "Chronicle 5" },
+  { source = "livius-abc5" },
+]

@@ -30,6 +30,7 @@ citations = [
   { source = "barton-2019", locator = "pp. 21-33" },
   { source = "friedman-1987", locator = "pp. 22, 50-69, 87" },
 ]
+persons = ["abraham", "jacob", "joseph"]
 
 [[views]]
 label = "The older consensus: a patriarchal age confirmed by Nuzi and Mari"

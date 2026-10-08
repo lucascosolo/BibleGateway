@@ -1,0 +1,21 @@
+id = "jacob"
+name = "Jacob"
+also_known_as = ["Israel"]
+role = "patriarch, ancestor of the twelve tribes"
+summary = """
+Jacob, Isaac's son, is renamed Israel and fathers the ancestors of the twelve tribes; at Joseph's invitation he takes his household of seventy into Egypt and settles in Goshen. Whether he was a historical person is argued in the patriarchs issue. Friedman notes that his stories come in pairs, with two revelations at Beth-El and two renamings of Jacob, each pair drawn from a different written source. Finkelstein and Silberman place the writing of the descent and Goshen traditions in the seventh and sixth centuries BCE. Among those who accept the setting, Wood ties an Asiatic settlement at Pi-Ramesse of the mid-19th century BCE to Jacob's family, and Ussher's traditional count, which adds up the Bible's own life-spans, has Jacob go down into Egypt in 1706 BC."""
+status = "draft"
+verses = [
+  { ref = "Gen.32.24-Gen.32.30", link = "describes", note = "Genesis 32:24–30 tells how Jacob wrestles at Peniel and is renamed Israel." },
+  { ref = "Gen.35.9-Gen.35.15", link = "describes", note = "Genesis 35:9–15 gives the second renaming, at Beth-El." },
+  { ref = "Gen.46.1-Gen.46.7", link = "describes", note = "Genesis 46:1–7 tells how Jacob and his household go down into Egypt." },
+]
+events = ["jacob-descent-egypt"]
+# Locators carried over from events/jacob-descent-egypt.toml and issues/patriarchs-historicity.toml for the same claims.
+citations = [
+  { source = "friedman-1987", locator = "p. 22; p. 35" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 52-55" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 66-67" },
+  { source = "wood-2005", locator = "p. 488" },
+  { source = "ussher-annals", locator = "paragraphs 135-138" },
+]

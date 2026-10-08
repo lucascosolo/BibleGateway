@@ -10,6 +10,7 @@ citations = [
   { source = "wikipedia-battle-of-jericho" },
   { source = "wikipedia-historicity-of-the-bible" },
 ]
+persons = ["joshua", "josiah"]
 
 [[views]]
 label = "No conquest model"

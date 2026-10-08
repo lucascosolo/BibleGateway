@@ -1,0 +1,19 @@
+id = "joseph"
+name = "Joseph"
+role = "son of Jacob, vizier in Egypt"
+summary = """
+Joseph, Jacob's son, is sold by his brothers, rises from slavery and prison to be Pharaoh's vizier, and saves Egypt and his family from famine. The story is usually treated apart from the other patriarchal stories, as a single composition (see the patriarchs issue). Donald Redford dated its writing between the seventh century and the third quarter of the fifth century BCE, and by the early 1990s most scholars read it as a wisdom novella. Finkelstein and Silberman point to Egyptian names in it, such as Potiphar and Asenath, that were most popular in the seventh and sixth centuries. Kitchen, who defends the Bible's reliability, sets the story in the East Delta of about 1860 to 1540 BCE. Ussher's traditional count makes Joseph governor in 1715 BC."""
+status = "draft"
+verses = [
+  { ref = "Gen.37.23-Gen.37.28", link = "describes", note = "Genesis 37:23–28 tells how Joseph's brothers sell him to traders." },
+  { ref = "Gen.41.37-Gen.41.45", link = "describes", note = "Genesis 41:37–45 tells how Pharaoh sets Joseph over Egypt and names him Zaphenath-paneah." },
+  { ref = "Gen.45.4-Gen.45.11", link = "describes", note = "Genesis 45:4–11 tells how Joseph reveals himself and invites his family to Egypt." },
+]
+events = ["joseph-in-egypt", "jacob-descent-egypt"]
+# Locators carried over from events/joseph-in-egypt.toml and issues/patriarchs-historicity.toml for the same claims.
+citations = [
+  { source = "wikipedia-joseph-genesis" },
+  { source = "finkelstein-silberman-2002", locator = "p. 67" },
+  { source = "kitchen-2003", locator = "pp. 345–348" },
+  { source = "ussher-annals", locator = "paragraphs 131-133" },
+]
