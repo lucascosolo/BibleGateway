@@ -1152,6 +1152,22 @@ publisher = "Zondervan, Grand Rapids"
 year = 2005
 
 [[source]]
+id = "friedman-1987"
+kind = "book"
+author = "Richard Elliott Friedman"
+title = "Who Wrote the Bible? (introduction and chapters 1–3 only, from a PDF excerpt at ~/.cache/jot/sources/friedman-1987/; page numbers from the running heads)"
+publisher = "Summit Books, New York"
+year = 1987
+
+[[source]]
+id = "barton-2019"
+kind = "book"
+author = "John Barton"
+title = "A History of the Bible: The Book and Its Faiths (publisher's sample, introduction and opening of chapter 1, at ~/.cache/jot/sources/barton-2019/; page numbers from the running heads)"
+publisher = "Allen Lane (Penguin), London"
+year = 2019
+
+[[source]]
 id = "streeter-1924"
 kind = "book"
 author = "Burnett Hillman Streeter"
