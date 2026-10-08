@@ -1,0 +1,16 @@
+id = "athanasius-festal-letter-39"
+name = "Athanasius, Festal Letter 39 (367 CE): the first list of the twenty-seven books"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 367, latest = 367 }
+summary = """
+In his Easter letter for the year 367, Athanasius, bishop of Alexandria, set out the books to be read in his churches. For the Old Testament: "There are, then, of the Old Testament, twenty-two books in number; for, as I have heard, it is handed down that this is the number of the letters among the Hebrews", and the list that follows runs from Genesis to Daniel, counting Ruth with Judges and Baruch and the Letter with Jeremiah, and omitting Esther. For the New Testament: "These are, the four Gospels, according to Matthew, Mark, Luke, and John. Afterwards, the Acts of the Apostles and Epistles (called Catholic), seven, viz. of James, one; of Peter, two; of John, three; after these, one of Jude. In addition, there are fourteen Epistles of Paul... And besides, the Revelation of John." He concludes: "These are fountains of salvation, that they who thirst may be satisfied with the living words they contain. In these alone is proclaimed the doctrine of godliness. Let no man add to these, neither let him take ought from these." A further group, "not indeed included in the Canon, but appointed by the Fathers to be read by those who newly join us", names the Wisdom of Solomon, Sirach, Esther, Judith, Tobit, the Didache and the Shepherd. This is the first surviving list whose New Testament exactly matches the twenty-seven books used today."""
+citations = [
+  { source = "npnf2-04-ccel", locator = "Festal Letter 39, sections 4-7" },
+]
+verses = [
+  { ref = "Matt.22.29", link = "background", note = "Athanasius quotes Jesus' rebuke in Matthew 22:29, 'Ye do err, not knowing the Scriptures', to close his list." },
+  { ref = "John.5.39", link = "background", note = "Athanasius quotes John 5:39, 'Search the Scriptures', as the warrant for the books he lists." },
+  { ref = "Esth.1.1", link = "background", note = "Esther is placed by Athanasius among the books to be read but outside the canon." },
+]

@@ -1,0 +1,16 @@
+id = "irenaeus-four-gospels"
+name = "Irenaeus, Against Heresies 3.11.8: the Gospels are four, neither more nor less"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 174, latest = 189 }
+summary = """
+Irenaeus of Lyon, writing about 180 CE against the Gnostic use of single or extra gospels, is the first author to argue that there must be exactly four Gospels. The chapter's heading in the Ante-Nicene Fathers translation states the claim: "The Gospels are four in number, neither more nor less. Mystic reasons for this." He grounds it in the four regions of the world, the four winds, and the four living creatures of Ezekiel and Revelation, assigning the lion, ox, man and eagle to John, Luke, Matthew and Mark. The argument is theological rather than historical, but it shows that by the 180s the four Gospels were a fixed set in Gaul and that Irenaeus knew of churches using fewer (the Ebionites with Matthew alone, Marcion with Luke) or more."""
+citations = [
+  { source = "anf01-ccel", locator = "Against Heresies 3.11.8" },
+]
+verses = [
+  { ref = "Rev.4.6-Rev.4.8", link = "background", note = "Revelation 4:6-8 describes the four living creatures that Irenaeus matches to the four Gospels." },
+  { ref = "Ezek.1.10", link = "background", note = "Ezekiel 1:10 gives the four faces of the living creatures, the older image behind Irenaeus's fourfold Gospel." },
+  { ref = "Matt.1.1", link = "background", note = "Matthew 1:1 opens the Gospel the Ebionites used alone, one of the single-gospel practices Irenaeus argues against." },
+]

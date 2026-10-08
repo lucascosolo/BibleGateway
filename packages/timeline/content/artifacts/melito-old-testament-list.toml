@@ -1,0 +1,15 @@
+id = "melito-old-testament-list"
+name = "Melito of Sardis's list of the Old Testament, quoted by Eusebius"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 160, latest = 180 }
+summary = """
+Melito, bishop of Sardis about 170 CE, wrote to a fellow Christian named Onesimus who had asked for "an accurate statement of the ancient book, as regards their number and their order". Eusebius preserves his answer: "Accordingly when I went East and came to the place where these things were preached and done, I learned accurately the books of the Old Testament, and send them to thee as written below." The list that follows has the five books of Moses, Joshua, Judges, Ruth, four of Kings, two of Chronicles, the Psalms of David, Proverbs (called Wisdom), Ecclesiastes, Song of Songs, Job, the prophets Isaiah and Jeremiah, the Twelve in one book, Daniel, Ezekiel and Esdras. Esther is absent, and nothing from the Greek additions appears. It is the earliest Christian list of Old Testament books, and it shows a Christian bishop travelling to Palestine to learn the Jewish count rather than taking it from his church's Greek Bible."""
+citations = [
+  { source = "npnf2-01-ccel", locator = "Church History 4.26.12-14" },
+]
+verses = [
+  { ref = "Esth.1.1", link = "background", note = "Esther is the one book of the later Hebrew canon that Melito's list leaves out." },
+  { ref = "Ezra.1.1", link = "background", note = "Ezra 1:1 opens the book Melito calls Esdras, which closes his list." },
+]

@@ -1,0 +1,16 @@
+id = "eusebius-church-history-3-25"
+name = "Eusebius, Church History 3.25: the accepted, disputed and spurious writings"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 311, latest = 325 }
+summary = """
+Eusebius of Caesarea, writing in the early fourth century, sorts the Christian writings into classes. "First then must be put the holy quaternion of the Gospels", then the Acts of the Apostles, "the epistles of Paul", the first epistle of John and the epistle of Peter, and "if it really seem proper, the Apocalypse of John", concerning which he promises to give the different opinions later. "These then belong among the accepted writings." Then come the writings "Among the disputed", which are nevertheless "recognized" by many: "the so-called epistle of James", with Jude, 2 Peter and 2 and 3 John. A third class, the spurious, holds the Acts of Paul, the Shepherd, the Apocalypse of Peter, Barnabas, the Didache and, "if it seem proper", the Apocalypse of John again, and a fourth holds the heretical gospels. The double placing of Revelation shows how unsettled it was in the Greek east. The passage is the fullest statement of which books were agreed and which disputed before any council spoke."""
+citations = [
+  { source = "npnf2-01-ccel", locator = "Church History 3.25.1-7" },
+]
+verses = [
+  { ref = "Jas.1.1", link = "background", note = "James is the first of the letters Eusebius lists as disputed yet recognized by many." },
+  { ref = "Rev.1.1", link = "background", note = "Revelation is the book Eusebius places both among the accepted and among the spurious writings." },
+  { ref = "Jude.1.1", link = "background", note = "Jude is among the disputed letters in Eusebius's classification." },
+]

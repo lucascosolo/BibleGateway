@@ -1,0 +1,15 @@
+id = "jerome-prologus-galeatus"
+name = "Jerome, the Helmeted Prologue to Samuel and Kings (c. 391): the Hebrew canon and the apocrypha"
+kind = "literary-text"
+status = "draft"
+language = "Latin"
+made = { earliest = 390, latest = 392 }
+summary = """
+Jerome prefaced his Latin translation of Samuel and Kings with a survey of the Hebrew scriptures that he called his helmeted prologue, a defence of translating from the Hebrew rather than the Greek. He counts the books by the twenty-two letters of the Hebrew alphabet: "And so there are also twenty-two books of the Old Testament; that is, five of Moses, eight of the prophets, nine of the Hagiographa, though some include Ruth and Kinoth (Lamentations) amongst the Hagiographa, and think that these books ought to be reckoned separately; we should thus have twenty-four books of the old law." He then draws the line that the western church would argue over for a thousand years: "what is not found in our list must be placed amongst the Apocryphal writings. Wisdom, therefore, which generally bears the name of Solomon, and the book of Jesus, the Son of Sirach, and Judith, and Tobias, and the Shepherd are not in the canon. The first book of Maccabees I have found to be Hebrew, the second is Greek, as can be proved from the very style." The Latin church did not follow him, keeping the Greek books in its Bibles, but his prologue became the Reformation's chief authority for the shorter Old Testament."""
+citations = [
+  { source = "npnf2-06-ccel", locator = "Prefaces to the Books of the Vulgate: Kings (the Prologus Galeatus), with the editor's date of about 391" },
+]
+verses = [
+  { ref = "Rev.4.4", link = "background", note = "Revelation 4:4 shows the twenty-four elders, whom Jerome takes as a figure of the twenty-four books of the old law." },
+  { ref = "1Sam.1.1", link = "background", note = "1 Samuel opens the books whose translation Jerome's prologue introduces." },
+]

@@ -1463,3 +1463,101 @@ author = "Karel van der Toorn"
 title = "Scribal Culture and the Making of the Hebrew Bible"
 publisher = "Harvard University Press, Cambridge, MA"
 year = 2007
+
+[[source]]
+id = "npnf2-01-ccel"
+kind = "edition"
+author = "Eusebius Pamphilius, translated by Arthur Cushman McGiffert"
+title = "Church History, in Nicene and Post-Nicene Fathers, Series II, vol. 1 (1890), Christian Classics Ethereal Library"
+url = "https://www.ccel.org/ccel/schaff/npnf201"
+
+[[source]]
+id = "npnf2-04-ccel"
+kind = "edition"
+author = "Athanasius, translated by Archibald Robertson"
+title = "Select Works and Letters, in Nicene and Post-Nicene Fathers, Series II, vol. 4 (1892), Christian Classics Ethereal Library"
+url = "https://www.ccel.org/ccel/schaff/npnf204"
+
+[[source]]
+id = "npnf2-06-ccel"
+kind = "edition"
+author = "Jerome, translated by W. H. Fremantle"
+title = "The Principal Works of St. Jerome, in Nicene and Post-Nicene Fathers, Series II, vol. 6 (1893), Christian Classics Ethereal Library"
+url = "https://www.ccel.org/ccel/schaff/npnf206"
+
+[[source]]
+id = "anf01-ccel"
+kind = "edition"
+author = "Irenaeus, translated by Alexander Roberts and William Rambaut"
+title = "Against Heresies, in Ante-Nicene Fathers, vol. 1 (1885), Christian Classics Ethereal Library"
+url = "https://www.ccel.org/ccel/schaff/anf01"
+
+[[source]]
+id = "anf05-salmond-muratorian"
+kind = "edition"
+author = "Translated by Stewart Dingwall Fordyce Salmond"
+title = "Canon Muratorianus, in Ante-Nicene Fathers, vol. 5, Fragments of Caius (1886), Wikisource transcription"
+url = "https://en.wikisource.org/wiki/Ante-Nicene_Fathers/Volume_V/Caius/Fragments_of_Caius/Canon_Muratorianus"
+
+[[source]]
+id = "kjv-apocrypha-sacred-texts"
+kind = "edition"
+author = "King James Version (1611), the Apocrypha"
+title = "The Apocrypha of the King James Bible, Internet Sacred Text Archive"
+url = "https://www.sacred-texts.com/bib/apo/"
+
+[[source]]
+id = "sefaria-davidson-talmud"
+kind = "edition"
+author = "The William Davidson Talmud (Koren Noé edition, English, CC BY-NC)"
+title = "Babylonian Talmud, Sefaria"
+url = "https://www.sefaria.org/Bava_Batra.14b"
+
+[[source]]
+id = "longacre-2022-dating-manuscripts"
+kind = "web"
+author = "Drew Longacre"
+title = "Four Ways Scholars Date Early Hebrew Bible Manuscripts (Text & Canon Institute, 2022)"
+url = "https://textandcanon.org/four-ways-scholars-date-early-hebrew-bible-manuscripts/"
+
+[[source]]
+id = "dospel-bas-dating-nt-manuscripts"
+kind = "web"
+author = "Marek Dospěl"
+title = "Dating the Oldest New Testament Christian Manuscripts (Biblical Archaeology Society)"
+url = "https://www.biblicalarchaeology.org/daily/biblical-topics/new-testament/dating-the-oldest-new-testament-christian-manuscripts/"
+
+[[source]]
+id = "koser-bible-interp-linguistic-dating"
+kind = "web"
+author = "Samuel Koser"
+title = "Refining Linguistic Dating of Biblical Texts: Methodological Considerations for Future Use (Bible and Interpretation)"
+url = "https://bibleinterp.arizona.edu/articles/refining-linguistic-dating-biblical-texts-methodological-considerations-future-use"
+
+[[source]]
+id = "godfrey-vridar-dating-texts"
+kind = "web"
+author = "Neil Godfrey"
+title = "A Better Way to Date a Biblical Text (Vridar, 2018; a summary of Niels Peter Lemche's method)"
+url = "https://vridar.org/2018/12/20/a-better-way-to-date-a-biblical-text/"
+
+[[source]]
+id = "uasv-age-of-sacred-texts"
+kind = "web"
+author = "Christian Publishing House"
+title = "The Age of Sacred Texts: Dating Ancient Biblical Manuscripts (2024)"
+url = "https://uasvbible.org/2024/01/25/the-age-of-sacred-texts-dating-ancient-biblical-manuscripts/"
+
+[[source]]
+id = "evidence-unseen-early-gospels"
+kind = "web"
+author = "Evidence Unseen (James Rochford)"
+title = "Evidence for an Early Dating of the Four Gospels"
+url = "https://evidenceunseen.com/theology/scripture/historicity-of-the-new-testament/evidence-for-an-early-dating-of-the-four-gospels"
+
+[[source]]
+id = "sewell-biblical-chronology"
+kind = "web"
+author = "Curt Sewell"
+title = "Biblical Chronology and Dating of the Early Bible"
+url = "https://www.ldolphin.org/sewell/"
