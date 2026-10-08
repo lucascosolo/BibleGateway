@@ -29,6 +29,8 @@ import time
 import unicodedata
 from pathlib import Path
 
+from gpu_share import GpuWatch, yield_while_busy
+
 import numpy as np
 import torch
 import torchaudio
@@ -94,13 +96,33 @@ def load_audio(path: str) -> np.ndarray:
 
 
 class Aligner:
-    def __init__(self, device: str):
+    def __init__(self, device: str, log=lambda msg: None):
         bundle = torchaudio.pipelines.MMS_FA
         self.device = device
+        self.log = log
         self.model = bundle.get_model(with_star=True).to(device).eval()
         self.tokenizer = bundle.get_tokenizer()
         self.aligner = bundle.get_aligner()
         self.dictionary = bundle.get_dict()
+        # Sharing the card: a watchdog polls for other GPU users every few seconds; the hot path
+        # only reads its flag, between chunks, so the model leaves the card within seconds.
+        self.watch = GpuWatch().start() if device != "cpu" else None
+
+    def offload(self) -> None:
+        """Leave the GPU entirely: model to the CPU and the cache released, for another job."""
+        if self.device != "cpu":
+            self.model.to("cpu")
+            torch.cuda.empty_cache()
+
+    def restore(self) -> None:
+        if self.device != "cpu":
+            self.model.to(self.device)
+
+    def share_gpu(self, log=None) -> None:
+        """Between chunks and before each window: step aside while anyone else wants the card."""
+        if self.watch is None or not self.watch.busy:
+            return
+        yield_while_busy(self.offload, self.restore, log or self.log, busy=self.watch.probe_now)
 
     def clean(self, token: str) -> str:
         return "".join(ch for ch in token if ch in self.dictionary and ch != "*")
@@ -114,10 +136,11 @@ class Aligner:
             piece = audio[start : start + chunk]
             if len(piece) < SAMPLE_RATE // 2:  # under half a second: pad, the model needs context
                 piece = np.pad(piece, (0, SAMPLE_RATE // 2 - len(piece)))
+            self.share_gpu()
             wav = torch.from_numpy(np.ascontiguousarray(piece)).unsqueeze(0).to(self.device)
             emission, _ = self.model(wav)
             n = emission.shape[1]
-            outs.append(emission[0])
+            outs.append(emission[0].cpu())  # off the card at once, so an offload strands nothing
             times.append(start / SAMPLE_RATE + np.arange(n) * (len(piece) / SAMPLE_RATE / n))
         return torch.cat(outs, dim=0), np.concatenate(times)
 
@@ -167,6 +190,7 @@ def align_chapter(aligner, audio, t0, t_end, words, owners, rate, log) -> tuple[
     for attempt in range(MAX_RETRIES):
         win = min(win, remaining)
         seg = audio[int(t0 * SAMPLE_RATE) : int((t0 + win) * SAMPLE_RATE)]
+        aligner.share_gpu(log)
         spans = aligner.align(seg, ["*"] + words + ["*"])
         body = spans[1:-1]
         last_end = max(e for _, e, _ in body if e == e)
@@ -282,7 +306,7 @@ def main() -> None:
             fh.write(msg + "\n")
 
     log(f"== {edition['code']} on {args.device}, {len(payload['units'])} files")
-    aligner = Aligner(args.device)
+    aligner = Aligner(args.device, log)
     for unit in payload["units"]:
         if only and not any((c["book_id"], c["chapter"]) in only for c in unit["chapters"]):
             continue
