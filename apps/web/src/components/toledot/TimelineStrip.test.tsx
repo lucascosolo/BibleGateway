@@ -8,7 +8,7 @@ afterEach(cleanup);
 
 type Ev = EventSummary & { display: string };
 const ev = (id: string, title: string, axis: Ev["axis"], confidence: Ev["confidence"], display: string): Ev => ({
-  id, title, axis, category: "x", confidence, status: "draft", earliest: -900, latest: -800, bookIds: [], segment: null, traditional: null, display,
+  id, title, axis, category: "x", confidence, status: "draft", earliest: -900, latest: -800, bookIds: [], segment: null, traditional: null, gist: "", firstVerse: null, display,
 });
 
 const eras: Era[] = [{ id: "monarchy", name: "Divided monarchy", start: -930, end: -586, summary: "", citations: [] }];
@@ -50,5 +50,23 @@ describe("TimelineStrip", () => {
   it("draws none when traditional is null", () => {
     const { container } = render(<TimelineStrip eras={eras} events={events} from={-1000} to={300} />);
     expect(container.querySelector('[aria-label^="traditional chronology:"]')).toBeNull();
+  });
+
+  describe("row cap", () => {
+    const three = ["a", "b", "c"].map((id) => ev(id, `Event ${id}`, "narrative", "firm", "900 BCE"));
+
+    it("draws only maxRows rows and reports the hidden count with the link", () => {
+      render(<TimelineStrip eras={eras} events={three} from={-1000} to={300} maxRows={1} overflowHref="/toledot/events#x" />);
+      expect(screen.getAllByRole("link", { name: /Event/ })).toHaveLength(1);
+      const note = screen.getByText(/not drawn/);
+      expect(note.textContent).toContain("2 more events");
+      expect(within(note).getByRole("link").getAttribute("href")).toBe("/toledot/events#x");
+    });
+
+    it("hides nothing for three events by default", () => {
+      const { container } = render(<TimelineStrip eras={eras} events={three} from={-1000} to={300} />);
+      expect(screen.getAllByRole("link", { name: /Event/ })).toHaveLength(3);
+      expect(container.querySelector(".toledot-overflow")).toBeNull();
+    });
   });
 });

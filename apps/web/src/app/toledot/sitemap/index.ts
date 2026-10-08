@@ -10,6 +10,9 @@ export async function toledotSitemapPaths(): Promise<string[]> {
   if (getTimelineBuildId() === null) return [];
   return [
     "/toledot",
+    "/toledot/events",
+    "/toledot/people",
+    "/toledot/issues",
     ...listEventIds().map((id) => `/toledot/events/${id}`),
     ...getPersons().map((person) => `/toledot/people/${person.id}`),
     ...listArtifactIds().map((id) => `/toledot/artifacts/${id}`),

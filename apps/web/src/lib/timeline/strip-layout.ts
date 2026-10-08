@@ -62,6 +62,17 @@ export function layoutBars(
     });
 }
 
+/**
+ * Caps a lane at `maxRows` rows: bars in rows `0..maxRows-1` are drawn, deeper ones are hidden.
+ * Input order is kept in both lists; nothing is dropped silently, the caller reports `hidden`.
+ */
+export function limitRows<T extends { lane: number }>(bars: readonly T[], maxRows: number): { drawn: T[]; hidden: T[] } {
+  const drawn: T[] = [];
+  const hidden: T[] = [];
+  for (const bar of bars) (bar.lane < maxRows ? drawn : hidden).push(bar);
+  return { drawn, hidden };
+}
+
 const STEPS = [50, 100, 250, 500] as const;
 
 /** The tick step for a window: the finest of 50/100/250/500 years giving at most 20 ticks. */

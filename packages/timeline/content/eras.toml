@@ -1,0 +1,100 @@
+# The eras everything in Toledot groups by. They are contiguous, so every year belongs to exactly
+# one, and the boundaries are the conventional ones: an era is a reading aid, not a claim about
+# history, which is why each summary says what the evidence for the period looks like. Years are
+# negative for BCE. An event belongs to the era holding its earliest scholarly year.
+
+[[era]]
+id = "patriarchs"
+name = "The patriarchs"
+start = -2100
+end = -1551
+summary = """
+Abraham, Isaac, Jacob and Joseph. The Bible's own numbers place them in the early second millennium, and conservative scholars match details of the stories to that period; the mainstream archaeological view is that the stories were written down much later and tell us most about the time of their writing."""
+citations = [
+  { source = "kitchen-2003", locator = "pp. 345–348, the Joseph story's dating horizons" },
+  { source = "finkelstein-silberman-2002", locator = "ch. 1, the patriarchs as a seventh-century composition" },
+]
+
+[[era]]
+id = "exodus-and-conquest"
+name = "Exodus and conquest"
+start = -1550
+end = -1201
+summary = """
+Egypt, Sinai and the entry into Canaan. The two biblical dates for the Exodus are the fifteenth century (from 1 Kings 6:1) and the thirteenth (from the city of Raamses); no Egyptian record mentions the events, and the archaeology of Jericho and Ai does not match the conquest story as told."""
+citations = [
+  { source = "kitchen-2003", locator = "pp. 307–310, the date limits for an exodus; pp. 187–188 on Jericho" },
+  { source = "finkelstein-silberman-2002", locator = "chs. 2–3 on the Exodus and the conquest" },
+]
+
+[[era]]
+id = "judges"
+name = "The judges"
+start = -1200
+end = -1031
+summary = """
+The settlement of the hill country and the local leaders of Judges and 1 Samuel. The Merneptah stele names Israel in Canaan by about 1208; the small farming villages of this period are the first material trace of the people the Bible describes."""
+citations = [
+  { source = "finkelstein-silberman-2002", locator = "ch. 4, the settlement" },
+  { source = "kitchen-2003", locator = "pp. 202–203, the judges as overlapping local rulers" },
+]
+
+[[era]]
+id = "united-monarchy"
+name = "Saul, David and Solomon"
+start = -1030
+end = -931
+summary = """
+One kingdom under three kings, ending at Solomon's death about 931/930, the first date the Bible's reign lengths can be tied to outside records. The Tel Dan stele names a 'House of David'; how large Solomon's kingdom was is one of the sharpest debates in the field."""
+citations = [
+  { source = "thiele-1984", locator = "p. 5, the table of reigns beginning at 930" },
+  { source = "finkelstein-silberman-2002", locator = "chs. 5–6, the united monarchy" },
+]
+
+[[era]]
+id = "divided-kingdom"
+name = "Israel and Judah"
+start = -930
+end = -587
+summary = """
+Two kingdoms, from the split after Solomon to Babylon's destruction of Jerusalem in 586. From here the Bible's kings meet Assyrian and Babylonian records by name, so most dates are fixed within a year or two."""
+citations = [
+  { source = "thiele-1984", locator = "p. 5, the table of reigns from 930 to 586" },
+  { source = "finkelstein-silberman-2002", locator = "p. 307, the destruction of Jerusalem in 586" },
+]
+
+[[era]]
+id = "exile-and-return"
+name = "Exile and return"
+start = -586
+end = -333
+summary = """
+Babylon, then Persia: the deportations, Cyrus's decree, the Second Temple finished in 516/515, and Ezra and Nehemiah under the Artaxerxes whose identity is still argued. Much of the Hebrew Bible reached its present shape in this period."""
+citations = [
+  { source = "finkelstein-silberman-2002", locator = "p. 300, the temple finished in 516" },
+  { source = "kitchen-2003", locator = "p. 71, Ezra 1–6 from Cyrus to the sixth year of Darius" },
+]
+
+[[era]]
+id = "hellenistic"
+name = "Greeks and Maccabees"
+start = -332
+end = -64
+summary = """
+From Alexander's conquest of the Levant to Pompey's arrival: Ptolemies, Seleucids, the Maccabean revolt and the Hasmonean kingdom. The book of Daniel in its present form, and the Septuagint, belong here."""
+citations = [
+  { source = "arrian-chinnock-1884", locator = "pp. 134–135, Tyre taken in 332" },
+  { source = "meier-2001", locator = "pp. 291–294, the Hasmoneans as a source of tension" },
+]
+
+[[era]]
+id = "roman"
+name = "Jesus and the early church"
+start = -63
+end = 200
+summary = """
+Rome's Judea: Herod, the prefects, Jesus, Paul, the war of 66–70 and the writing of the New Testament. Dates here rest on Josephus, Roman records and the letters of Paul, and most New Testament books are dated within a decade or two."""
+citations = [
+  { source = "meier-2001", locator = "pp. 294–298, Herod the Great and the Roman prefects and procurators" },
+  { source = "brown-1997", locator = "Table 1, chronology of people and events pertinent to the New Testament" },
+]

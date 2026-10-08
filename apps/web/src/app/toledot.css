@@ -426,3 +426,271 @@
   .toledot-strip__frame::after { transition: none; }
 }
 .toledot-lens-caveat { max-width: 62ch; margin: 0 0 var(--space-3); }
+
+/* --- Browsing: eras, chips, the sort control, sections and rows -------------------------------
+   One vocabulary for the hub and the three indexes. The chip is the unit of choice everywhere
+   (era, facet); the row is the unit of content everywhere (event, person, question). Phone first:
+   chips scroll sideways in one line and sections collapse; from 64rem chips wrap and sections
+   stand open. Nothing here is a card. */
+
+.toledot-chips,
+.toledot-facet {
+  display: flex;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 2px 0 var(--space-2);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, black calc(100% - var(--space-8)), transparent);
+  mask-image: linear-gradient(to right, black calc(100% - var(--space-8)), transparent);
+}
+.toledot-chips::-webkit-scrollbar,
+.toledot-facet::-webkit-scrollbar { display: none; }
+.toledot-chips > *,
+.toledot-facet > * { flex: 0 0 auto; }
+@media (min-width: 64rem) {
+  .toledot-chips,
+  .toledot-facet { flex-wrap: wrap; overflow: visible; -webkit-mask-image: none; mask-image: none; }
+}
+
+.toledot-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  background: transparent;
+  font: inherit;
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  color: var(--color-ink);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 150ms cubic-bezier(0.16, 1, 0.3, 1), border-color 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toledot-chip:hover { background: var(--color-surface-hover); }
+.toledot-chip:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.toledot-chip[data-selected="true"],
+.toledot-chip[aria-checked="true"] {
+  background: var(--color-brand-soft);
+  border-color: var(--color-brand);
+  color: var(--color-brand-strong);
+}
+.toledot-chip__span {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-muted);
+}
+.toledot-chip[aria-checked="true"] .toledot-chip__span { color: inherit; opacity: 0.85; }
+
+/* The sort control: one ruled frame, three segments, the chosen one sunken into the page. */
+.toledot-sort {
+  display: inline-flex;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.toledot-sort__option {
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 0;
+  border-left: 1px solid var(--color-border-strong);
+  background: transparent;
+  font: inherit;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+}
+.toledot-sort__option:first-child { border-left: 0; }
+.toledot-sort__option:hover { color: var(--color-ink); background: var(--color-surface-hover); }
+.toledot-sort__option:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: -3px; }
+.toledot-sort__option[aria-checked="true"] { background: var(--color-bg-sunken); color: var(--color-ink); font-weight: 600; }
+
+/* The tool strip stays put while the list scrolls under it, on every width. */
+.toledot-tools {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-3);
+  padding-block: var(--space-3) var(--space-2);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+.toledot-filter__input {
+  flex: 1 1 14rem;
+  min-height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-raised);
+  font: inherit;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-ink);
+}
+.toledot-filter__input::placeholder { color: var(--color-ink-faint); }
+.toledot-filter__input:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 1px; }
+.toledot-facets { flex-basis: 100%; display: flex; flex-direction: column; gap: 0; }
+.toledot-facet { align-items: center; padding-bottom: var(--space-1); }
+.toledot-facet__label {
+  flex: 0 0 auto;
+  padding-right: var(--space-1);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
+.toledot-facets .toledot-chip { min-height: 2.25rem; padding-block: var(--space-1); font-size: var(--text-xs); font-family: var(--font-sans); }
+@media (pointer: coarse) { .toledot-facets .toledot-chip { min-height: var(--touch-target); } }
+.toledot-filter__count {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-muted);
+  padding-block: var(--space-2);
+}
+.toledot-empty { font-family: var(--font-serif); font-style: italic; color: var(--color-ink-muted); padding-block: var(--space-6); }
+
+/* An era (or a book) as a disclosure: a ruled heading row that reads as a chapter opening. */
+.toledot-era { border-bottom: 1px solid var(--color-border-strong); }
+.toledot-era__summary {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  column-gap: var(--space-3);
+  min-height: var(--touch-target);
+  padding: var(--space-4) 0 var(--space-3) var(--space-5);
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+.toledot-era__summary::-webkit-details-marker { display: none; }
+.toledot-era__summary::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: calc(var(--space-4) + 0.55em);
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--color-ink-muted);
+  border-bottom: 1.5px solid var(--color-ink-muted);
+  transform: rotate(-45deg);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toledot-era[open] > .toledot-era__summary::before { transform: rotate(45deg); }
+.toledot-era__summary:hover .toledot-era__name { text-decoration: underline; text-decoration-color: var(--color-brand); text-underline-offset: 3px; }
+.toledot-era__summary:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; border-radius: var(--radius-sm); }
+.toledot-era__name { font-family: var(--font-serif); font-size: var(--text-lg); line-height: var(--leading-tight); color: var(--color-ink); }
+.toledot-era__span { font-family: var(--font-sans); font-size: var(--text-xs); font-variant-numeric: tabular-nums; color: var(--color-ink-muted); white-space: nowrap; }
+.toledot-era__count { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-faint); white-space: nowrap; text-align: right; }
+@media (max-width: 40rem) {
+  .toledot-era__summary { grid-template-columns: 1fr auto; }
+  .toledot-era__span { grid-column: 1 / -1; order: 3; }
+}
+
+.toledot-rows { list-style: none; margin: 0; padding: 0 0 var(--space-2); }
+.toledot-catalogue > .toledot-rows,
+.toledot-register .toledot-rows { border-top: 1px solid var(--color-border-strong); }
+.toledot-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+.toledot-row__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px var(--space-3); }
+.toledot-row__title { font-family: var(--font-serif); font-size: var(--text-md); line-height: var(--leading-snug); text-wrap: pretty; }
+.toledot-row__when {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-ink-muted);
+  white-space: nowrap;
+}
+@media (min-width: 40rem) { .toledot-row__when { margin-left: auto; } }
+.toledot-row__gist {
+  margin: 0;
+  max-width: 62ch;
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-muted);
+  text-wrap: pretty;
+}
+@media (max-width: 40rem) {
+  .toledot-row__gist { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+}
+.toledot-row__marks { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-1) var(--space-3); }
+.toledot-row__mark { font-family: var(--font-sans); font-size: var(--text-xs); color: var(--color-ink-muted); }
+.toledot-row__mark[data-tone="axis"] { font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.toledot-row__mark[data-tone="confidence"] { font-style: italic; }
+.toledot-row__mark[data-tone="axis"]:where(:not([data-axis])) { color: var(--color-ink-muted); }
+
+/* The overflow notice under the strip and the era introduction on the hub: caption and prose voices. */
+.toledot-overflow {
+  margin: var(--space-2) 0 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+}
+.toledot-overflow a { color: var(--color-brand-strong); text-decoration: underline; text-underline-offset: 3px; }
+.toledot-era-intro { display: flex; flex-direction: column; gap: var(--space-2); max-width: 62ch; }
+.toledot-era-intro .toledot-section__title { padding-bottom: 0; }
+
+.toledot-catalogue {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 52rem;
+  padding: var(--space-6) var(--space-4) var(--space-16);
+  min-width: 0;
+}
+.toledot-catalogue > .toledot-home__title { font-size: var(--text-2xl); }
+.toledot-catalogue > .toledot-home__lede { max-width: 62ch; }
+
+/* The hub's "in this era" register: three stacked groups on a phone, two columns from 56rem. */
+.toledot-era-register { display: grid; gap: var(--space-8); }
+@media (min-width: 56rem) {
+  .toledot-era-register { grid-template-columns: 3fr 2fr; gap: var(--space-10) var(--space-12); }
+  .toledot-era-register__events { grid-row: span 2; }
+}
+.toledot-era-register__group { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; }
+.toledot-era-register__axis {
+  margin-top: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+.toledot-era-register__axis[data-axis="composition"] { color: var(--color-brand-strong); }
+.toledot-era-register__axis[data-axis="canon"] { color: var(--color-rubric-strong); }
+.toledot-era-register__all {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-brand-strong);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toledot-chip,
+  .toledot-era__summary::before { transition: none; }
+}

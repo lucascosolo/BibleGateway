@@ -251,6 +251,7 @@ describe("persons", () => {
     expect(b).toEqual({
       id: "per-b", name: "Beta", role: "king of Judah", evidence: "corroborates", hasTension: true,
       status: "draft", lived: { earliest: -700, latest: -650 },
+      gist: "Beta sum", firstVerse: 14001001, firstYear: -700,
     });
     expect(all.find((p) => p.id === "per-c")).toMatchObject({ lived: null, hasTension: false, evidence: "none" });
   });

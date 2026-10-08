@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import type { Era, EventSummary } from "@/lib/db/timeline";
 import { AXES, type Axis } from "@/lib/timeline/axes";
-import { layoutBars, tickStep, yearOffset, yearTicks } from "@/lib/timeline/strip-layout";
+import { layoutBars, limitRows, tickStep, yearOffset, yearTicks } from "@/lib/timeline/strip-layout";
 import { formatRange, spanYears } from "@/lib/timeline/years";
 
 import { YearAxis } from "./YearAxis";
@@ -51,7 +51,21 @@ function traditionalExtent(event: StripEvent, from: number, to: number, barLeft:
  * a range from its earliest to its latest year. Confidence is the rule's style AND a word, the
  * axis is the lane AND its label, so neither depends on colour or line style alone.
  */
-export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]; events: readonly StripEvent[]; from: number; to: number }) {
+export function TimelineStrip({
+  eras,
+  events,
+  from,
+  to,
+  maxRows = 4,
+  overflowHref,
+}: {
+  eras: readonly Era[];
+  events: readonly StripEvent[];
+  from: number;
+  to: number;
+  maxRows?: number;
+  overflowHref?: string;
+}) {
   const viewport = useRef<HTMLDivElement>(null);
   const [atEnd, setAtEnd] = useState(false);
 
@@ -72,6 +86,7 @@ export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]
   const step = tickStep(from, to);
   const percentPerYear = 100 / spanYears(from, to);
   const bars = layoutBars(events, from, to, PX_PER_YEAR, 8, LABEL_RESERVE);
+  let hiddenCount = 0;
   const byId = new Map(events.map((event) => [event.id, event]));
 
   return (
@@ -109,22 +124,25 @@ export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]
           <YearAxis from={from} to={to} step={step} />
 
           {AXES.map((axis) => {
-            const laneBars = bars.filter((bar) => bar.axis === axis);
-            const rows = Math.max(1, ...laneBars.map((bar) => bar.lane + 1));
+            const { drawn: laneBars, hidden } = limitRows(bars.filter((bar) => bar.axis === axis), maxRows);
+            hiddenCount += hidden.length;
+            const rows = laneBars.length === 0 ? 0 : Math.max(...laneBars.map((bar) => bar.lane + 1));
             return (
               <section
                 key={axis}
                 className="toledot-lane"
                 data-axis={axis}
                 aria-label={`${axis}: ${AXIS_QUESTION[axis]}`}
-                style={{ height: rows * ROW_HEIGHT + 34 }}
+                style={{ height: rows === 0 ? 34 : rows * ROW_HEIGHT + 34 }}
               >
                 <h3 className="toledot-lane__name">
                   <span className="toledot-lane__axis">{axis}</span>
                   <span className="toledot-lane__question">{AXIS_QUESTION[axis]}</span>
                 </h3>
                 {laneBars.length === 0 ? (
-                  <p className="toledot-lane__empty">Nothing dated on this axis yet.</p>
+                  <p className="toledot-lane__empty">
+                    {hidden.length > 0 ? "Events here are listed below the strip." : "Nothing dated on this axis yet."}
+                  </p>
                 ) : (
                   <ol className="toledot-lane__bars">
                     {laneBars.map((bar) => {
@@ -167,6 +185,12 @@ export function TimelineStrip({ eras, events, from, to }: { eras: readonly Era[]
         </div>
       </div>
       </div>
+      {hiddenCount > 0 ? (
+        <p className="toledot-overflow">
+          {hiddenCount} more {hiddenCount === 1 ? "event" : "events"} in this window {hiddenCount === 1 ? "is" : "are"} not drawn:{" "}
+          {overflowHref ? <a href={overflowHref}>see {hiddenCount === 1 ? "it" : "them"} in the list</a> : "see the list"}
+        </p>
+      ) : null}
     </figure>
   );
 }

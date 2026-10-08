@@ -2,10 +2,10 @@ import { describe, expect, it } from "vitest";
 
 import type { EventSummary } from "@/lib/db/timeline";
 import { spanYears } from "./years";
-import { layoutBars } from "./strip-layout";
+import { layoutBars, limitRows, type StripBar } from "./strip-layout";
 
 function ev(id: string, earliest: number, latest: number, axis: EventSummary["axis"] = "narrative"): EventSummary {
-  return { id, title: id, axis, category: "x", confidence: "firm", status: "draft", earliest, latest, traditional: null, bookIds: [], segment: null };
+  return { id, title: id, axis, category: "x", confidence: "firm", status: "draft", earliest, latest, traditional: null, bookIds: [], segment: null, gist: "", firstVerse: null };
 }
 
 const by = (bars: ReturnType<typeof layoutBars>, id: string) => bars.find((b) => b.id === id)!;
@@ -61,5 +61,34 @@ describe("layoutBars", () => {
     expect(by(bars, "a").lane).not.toBe(by(bars, "b").lane);
     const plain = layoutBars([ev("a", -1200, -1150), b], -1600, -1000, 1);
     expect(by(plain, "a").lane).toBe(by(plain, "b").lane);
+  });
+});
+
+describe("limitRows", () => {
+  const bar = (id: string, axis: StripBar["axis"], lane: number): StripBar => ({ id, axis, lane, left: 0, width: 8 });
+  const bars = [bar("a", "narrative", 0), bar("b", "narrative", 2), bar("c", "composition", 1), bar("d", "composition", 0), bar("e", "narrative", 1)];
+
+  it("draws bars whose lane is below maxRows and hides the rest, per axis", () => {
+    const { drawn, hidden } = limitRows(bars, 2);
+    expect(drawn.map((b) => b.id)).toEqual(["a", "c", "d", "e"]);
+    expect(hidden.map((b) => b.id)).toEqual(["b"]);
+  });
+
+  it("preserves input order in both lists", () => {
+    const { drawn, hidden } = limitRows(bars, 1);
+    expect(drawn.map((b) => b.id)).toEqual(["a", "d"]);
+    expect(hidden.map((b) => b.id)).toEqual(["b", "c", "e"]);
+  });
+
+  it("hides nothing at Infinity", () => {
+    const { drawn, hidden } = limitRows(bars, Infinity);
+    expect(drawn).toEqual(bars);
+    expect(hidden).toEqual([]);
+  });
+
+  it("draws nothing at 0", () => {
+    const { drawn, hidden } = limitRows(bars, 0);
+    expect(drawn).toEqual([]);
+    expect(hidden).toEqual(bars);
   });
 });

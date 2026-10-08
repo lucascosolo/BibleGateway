@@ -33,7 +33,7 @@ describe("toledotSitemapPaths", () => {
         "/toledot/issues/long-chronology",
       ]),
     );
-    expect(paths).toHaveLength(7);
+    expect(paths).toHaveLength(10);
   });
 
   it("returns nothing when no timeline is deployed", async () => {

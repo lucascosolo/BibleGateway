@@ -6,7 +6,9 @@ import path from "node:path";
 
 import type { VerseId, VerseRange } from "@/lib/refs/verse-id";
 
+import { getBooks } from "./corpus";
 import { getCorpusBuildId } from "./client";
+import { firstSentence } from "@/lib/timeline/catalogue";
 
 /**
  * Read-only handle on the Toledot artifact, `data/timeline.db` (built by
@@ -127,6 +129,10 @@ export interface EventSummary {
   /** Envelope of the traditional-chronology positions, a lens drawn apart from the scholarly
    *  range above; null when the event has none. */
   traditional: { earliest: number; latest: number } | null;
+  /** First sentence of the summary, for index rows. */
+  gist: string;
+  /** Lowest verse id this event is linked to, or null when it has no verse link. */
+  firstVerse: number | null;
 }
 
 export interface Argument {
@@ -207,6 +213,10 @@ export interface PersonSummary {
   hasTension: boolean;
   status: ReviewStatus;
   lived: { earliest: number; latest: number } | null;
+  gist: string;
+  firstVerse: number | null;
+  /** `lived.earliest`, else the earliest year of an event naming them, else null. */
+  firstYear: number | null;
 }
 
 export interface PersonDetail extends PersonSummary {
@@ -224,6 +234,10 @@ export interface IssueSummary {
   kind: "chronology" | "textual" | "historical" | "internal";
   title: string;
   status: ReviewStatus;
+  gist: string;
+  firstVerse: number | null;
+  /** Earliest year among the events the question concerns, or null. */
+  firstYear: number | null;
 }
 
 export interface IssueDetail extends IssueSummary {
@@ -272,22 +286,28 @@ function versesFor(kind: "event" | "argument" | "artifact" | "issue" | "person",
 const EVENT_SUMMARY_COLUMNS = `event_id AS id, title, axis, category, confidence, status,
   earliest_year AS earliest, latest_year AS latest, segment_label AS segment,
   traditional_earliest AS tradEarliest, traditional_latest AS tradLatest,
-  (SELECT group_concat(book_id) FROM event_books b WHERE b.event_id = events.event_id) AS bookIdList`;
+  (SELECT group_concat(book_id) FROM event_books b WHERE b.event_id = events.event_id) AS bookIdList,
+  summary AS gistSource,
+  (SELECT MIN(start_verse_id) FROM verse_links v WHERE v.subject_kind = 'event' AND v.subject_id = events.event_id) AS firstVerse`;
 
-type EventSummaryRow = Omit<EventSummary, "bookIds" | "traditional"> & {
+type EventSummaryRow = Omit<EventSummary, "bookIds" | "traditional" | "gist"> & {
+  gistSource: string;
   bookIdList: string | null;
   tradEarliest: number | null;
   tradLatest: number | null;
 };
 
 function toSummary<T extends EventSummaryRow>({
+  gistSource,
   bookIdList,
   tradEarliest,
   tradLatest,
   ...row
-}: T): Omit<T, "bookIdList" | "tradEarliest" | "tradLatest"> & Pick<EventSummary, "bookIds" | "traditional"> {
+}: T): Omit<T, "gistSource" | "bookIdList" | "tradEarliest" | "tradLatest"> &
+  Pick<EventSummary, "bookIds" | "traditional" | "gist"> {
   return {
     ...row,
+    gist: firstSentence(gistSource),
     bookIds: bookIdList ? bookIdList.split(",").map(Number) : [],
     traditional: tradEarliest === null || tradLatest === null ? null : { earliest: tradEarliest, latest: tradLatest },
   };
@@ -329,6 +349,15 @@ export function getTimelineWindow({ from, to, axis }: { from: number; to: number
   return { available: true, eras, events };
 }
 
+/** Every era in start order, citations included. */
+export function getEras(): Era[] {
+  if (!db()) return [];
+  return all<Omit<Era, "citations">>(
+    `SELECT era_id AS id, name, start_year AS start, end_year AS "end", summary FROM eras
+     ORDER BY start_year, era_id`
+  ).map((era) => ({ ...era, citations: citationsFor("era", era.id) }));
+}
+
 /** Every event id, earliest first: the crawlable entity pages. */
 export function listEventIds(): string[] {
   return all<{ id: string }>(`SELECT event_id AS id FROM events ORDER BY earliest_year, event_id`).map((row) => row.id);
@@ -359,11 +388,34 @@ export function getEventSummaries(ids: readonly string[]): EventSummary[] {
 /** Summary rows for a list of issue ids, without their views and citations. */
 export function getIssueSummaries(ids: readonly string[]): IssueSummary[] {
   if (ids.length === 0) return [];
-  return all<IssueSummary>(
-    `SELECT issue_id AS id, kind, title, status FROM issues WHERE issue_id IN (${ids.map(() => "?").join(",")})
+  return all<IssueSummaryRow>(
+    `SELECT ${ISSUE_SUMMARY_COLUMNS} FROM issues WHERE issue_id IN (${ids.map(() => "?").join(",")})
      ORDER BY issue_id`,
     ...ids
-  );
+  ).map(toIssueSummary);
+}
+
+/** Every event, earliest first: the events index. */
+export function getAllEventSummaries(): EventSummary[] {
+  return all<EventSummaryRow>(
+    `SELECT ${EVENT_SUMMARY_COLUMNS} FROM events ORDER BY earliest_year, latest_year, title`
+  ).map(toSummary);
+}
+
+/** Book number to short English name, from the corpus. */
+export function getBookNames(): Map<number, string> {
+  return new Map(getBooks().map((book) => [book.bookId, book.name]));
+}
+
+const ISSUE_SUMMARY_COLUMNS = `issue_id AS id, kind, title, status, summary AS gistSource,
+  (SELECT MIN(start_verse_id) FROM verse_links v WHERE v.subject_kind = 'issue' AND v.subject_id = issues.issue_id) AS firstVerse,
+  (SELECT MIN(e.earliest_year) FROM issue_events ie JOIN events e ON e.event_id = ie.event_id
+   WHERE ie.issue_id = issues.issue_id) AS firstYear`;
+
+type IssueSummaryRow = Omit<IssueSummary, "gist"> & { gistSource: string };
+
+function toIssueSummary({ gistSource, ...row }: IssueSummaryRow): IssueSummary {
+  return { ...row, gist: firstSentence(gistSource) };
 }
 
 export function getEvent(id: string): EventDetail | null {
@@ -453,11 +505,12 @@ export function getArtifact(id: string): ArtifactDetail | null {
 }
 
 export function getIssue(id: string): IssueDetail | null {
-  const row = get<IssueSummary & { summary: string }>(
-    `SELECT issue_id AS id, kind, title, status, summary FROM issues WHERE issue_id = ?`,
+  const found = get<IssueSummaryRow & { summary: string }>(
+    `SELECT ${ISSUE_SUMMARY_COLUMNS}, summary FROM issues WHERE issue_id = ?`,
     id
   );
-  if (!row) return null;
+  if (!found) return null;
+  const row = { ...toIssueSummary(found), summary: found.summary };
   const views = all<{ id: string; label: string; text: string }>(
     `SELECT view_id AS id, label, text FROM issue_views WHERE issue_id = ? ORDER BY ordinal`,
     id
@@ -470,17 +523,22 @@ export function getIssue(id: string): IssueDetail | null {
 }
 
 const PERSON_SUMMARY_COLUMNS = `person_id AS id, name, role, evidence, has_tension AS hasTension, status,
-  lived_earliest AS livedEarliest, lived_latest AS livedLatest`;
+  lived_earliest AS livedEarliest, lived_latest AS livedLatest, summary AS gistSource,
+  (SELECT MIN(start_verse_id) FROM verse_links v WHERE v.subject_kind = 'person' AND v.subject_id = persons.person_id) AS firstVerse,
+  COALESCE(lived_earliest, (SELECT MIN(e.earliest_year) FROM person_events pe JOIN events e ON e.event_id = pe.event_id
+   WHERE pe.person_id = persons.person_id)) AS firstYear`;
 
-type PersonSummaryRow = Omit<PersonSummary, "lived" | "hasTension"> & {
+type PersonSummaryRow = Omit<PersonSummary, "lived" | "hasTension" | "gist"> & {
+  gistSource: string;
   hasTension: number;
   livedEarliest: number | null;
   livedLatest: number | null;
 };
 
-function toPersonSummary({ livedEarliest, livedLatest, hasTension, ...row }: PersonSummaryRow): PersonSummary {
+function toPersonSummary({ gistSource, livedEarliest, livedLatest, hasTension, ...row }: PersonSummaryRow): PersonSummary {
   return {
     ...row,
+    gist: firstSentence(gistSource),
     hasTension: hasTension === 1,
     lived: livedEarliest !== null && livedLatest !== null ? { earliest: livedEarliest, latest: livedLatest } : null,
   };
@@ -548,14 +606,14 @@ export function getTimelineForRange(range: VerseRange): {
     range.end,
     range.start
   ).map(toSummary);
-  const issues = all<IssueSummary>(
-    `SELECT issue_id AS id, kind, title, status FROM issues WHERE issue_id IN (
+  const issues = all<IssueSummaryRow>(
+    `SELECT ${ISSUE_SUMMARY_COLUMNS} FROM issues WHERE issue_id IN (
        SELECT subject_id FROM verse_links
        WHERE subject_kind = 'issue' AND start_verse_id <= ? AND end_verse_id >= ?
      ) ORDER BY issue_id`,
     range.end,
     range.start
-  );
+  ).map(toIssueSummary);
   const artifacts = all<{ id: string; name: string; kind: string; madeEarliest: number | null; madeLatest: number | null }>(
     `SELECT artifact_id AS id, name, kind, made_earliest AS madeEarliest, made_latest AS madeLatest
      FROM artifacts WHERE artifact_id IN (
