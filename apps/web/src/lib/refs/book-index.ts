@@ -17,6 +17,19 @@ export interface BookRecord {
   abbreviation: string;
   testament: "OT" | "NT" | "DC";
   chapterCount: number;
+  canon?: Canon;
+  numbering?: Numbering;
+}
+
+export type Canon = "hebrew" | "nt" | "deuterocanon" | "pseudepigrapha" | "nt-apocrypha" | "apostolic";
+export type Numbering = "chapter-verse" | "logion" | "section" | "chapter" | "part-chapter" | "paragraph";
+
+export function canonOf(bookId: number, index: BookIndex): Canon {
+  if (bookId >= 1 && bookId <= 39) return "hebrew";
+  if (bookId >= 40 && bookId <= 66) return "nt";
+  const canon = index.get(bookId)?.canon;
+  if (!canon) throw new InvalidReferenceError(`unknown book id: ${bookId}`);
+  return canon;
 }
 
 /**
@@ -114,6 +127,66 @@ const EXTRA_ALIASES: Record<string, string> = {
   jud: "Jude", jd: "Jude",
   rev: "Rev", rv: "Rev", apoc: "Rev", apocalypse: "Rev",
 };
+
+const OUTSIDE_ALIASES: Record<string, string[]> = {
+  Tob: ["tobit", "tb"],
+  Jdt: ["judith", "jth"],
+  AddEsth: ["addesth", "additionstoesther", "restofesther", "greekesther", "esthergreek"],
+  Wis: ["wisdom", "wisdomofsolomon", "ws"],
+  Sir: ["sirach", "ecclesiasticus", "ecclus", "bensira", "siracides"],
+  Bar: ["baruch"],
+  EpJer: ["letterofjeremiah", "epistleofjeremy", "epistleofjeremiah", "lje", "epjer"],
+  PrAzar: ["prayerofazariah", "songofthethree", "songofthethreeyoungmen", "s3y", "songthr"],
+  Sus: ["susanna"],
+  Bel: ["belandthedragon"],
+  "1Macc": ["1macc", "1mac", "1ma", "1maccabees"],
+  "2Macc": ["2macc", "2mac", "2ma", "2maccabees"],
+  "3Macc": ["3macc", "3mac", "3ma", "3maccabees"],
+  "4Macc": ["4macc", "4mac", "4ma", "4maccabees"],
+  "1Esd": ["1esd", "1esdras", "3ezra"],
+  "2Esd": ["2esd", "2esdras", "4ezra"],
+  PrMan: ["prayerofmanasseh", "prayerofmanasses", "man", "prman"],
+  Ps151: ["psalm151"],
+  "1En": ["1en", "1enoch", "enoch"],
+  Jub: ["jubilees", "jub"],
+  TReu: ["testamentofreuben", "treu", "treuben"],
+  TSim: ["testamentofsimeon", "tsim", "tsimeon"],
+  TLevi: ["testamentoflevi", "tlevi"],
+  TJud: ["testamentofjudah", "tjud", "tjudah"],
+  TIss: ["testamentofissachar", "tiss", "tissachar"],
+  TZeb: ["testamentofzebulun", "tzeb", "tzebulun"],
+  TDan: ["testamentofdan", "tdan"],
+  TNaph: ["testamentofnaphtali", "tnaph", "tnaphtali"],
+  TGad: ["testamentofgad", "tgad"],
+  TAsh: ["testamentofasher", "tash", "tasher"],
+  TJos: ["testamentofjoseph", "tjos", "tjoseph"],
+  TBenj: ["testamentofbenjamin", "tbenj", "tbenjamin"],
+  PssSol: ["psalmsofsolomon", "psssol", "pssol"],
+  "2Bar": ["2bar", "2baruch", "syriacbaruch"],
+  GThom: ["thomas", "gospelofthomas", "gosthom", "gthom"],
+  GPet: ["gospelofpeter", "gospet", "gpet"],
+  ProtJas: ["protevangeliumofjames", "protjas", "protevangelium", "infancygospelofjames"],
+  InfThom: ["infancygospelofthomas", "infthom", "infgosthom"],
+  PlThec: ["actsofpaulandthecla", "thecla", "plthec", "actspaulthec"],
+  ApocPet: ["apocalypseofpeter", "apocpet"],
+  GMary: ["gospelofmary", "gosmary", "gmary"],
+  GJudas: ["gospelofjudas", "gosjud", "gjudas"],
+  GPhil: ["gospelofphilip", "gosphil", "gphil"],
+  Did: ["didache", "did"],
+  "1Clem": ["1clem", "1clement", "firstclement"],
+  IgnEph: ["ignatiustotheephesians", "ignephesians", "igneph"],
+  IgnMagn: ["ignatiustothemagnesians", "ignmagnesians", "ignmagn", "ignmag"],
+  IgnTrall: ["ignatiustothetrallians", "igntrallians", "igntrall", "igntral"],
+  IgnRom: ["ignatiustotheromans", "ignromans", "ignrom"],
+  IgnPhld: ["ignatiustothephiladelphians", "ignphiladelphians", "ignphld", "ignphil"],
+  IgnSmyrn: ["ignatiustothesmyrnaeans", "ignsmyrnaeans", "ignsmyrn", "ignsmyr"],
+  IgnPol: ["ignatiustopolycarp", "ignpol"],
+  Barn: ["barnabas", "epistleofbarnabas", "barn"],
+  Herm: ["hermas", "shepherdofhermas", "herm", "shepherd"],
+};
+for (const [osis, aliases] of Object.entries(OUTSIDE_ALIASES)) {
+  for (const alias of aliases) EXTRA_ALIASES[alias] ??= osis;
+}
 
 export class BookIndex {
   private readonly byKey = new Map<string, BookRecord>();

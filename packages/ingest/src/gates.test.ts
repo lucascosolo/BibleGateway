@@ -34,8 +34,16 @@ describe("unplacedGateErrors", () => {
     expect(lxx.unplacedSourceVerses).toHaveLength(16);
   });
 
+  // KJVA (the King James Apocrypha, added with the outside books on 2026-10-09) has three
+  // reviewed unplaced verses: Sirach 20:3, 22:9 and 22:10, whose Brenton numbers hold other text.
+  it("declares 3 reviewed unplaced verses for KJVA, equal to its list", () => {
+    const kjva = TRANSLATION_SOURCES.find((t) => t.code === "KJVA")!;
+    expect(kjva.reviewedUnplacedCount).toBe(3);
+    expect(kjva.unplacedSourceVerses).toHaveLength(3);
+  });
+
   it("gives every other translation no unplaced list, a zero count, and a clean gate at 0", () => {
-    for (const t of TRANSLATION_SOURCES.filter((x) => x.code !== "LXX")) {
+    for (const t of TRANSLATION_SOURCES.filter((x) => x.code !== "LXX" && x.code !== "KJVA")) {
       expect(t.reviewedUnplacedCount ?? 0).toBe(0);
       expect(t.unplacedSourceVerses).toBeUndefined();
       expect(unplacedGateErrors(t, 0)).toEqual([]);

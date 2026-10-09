@@ -27,6 +27,8 @@ export const books = sqliteTable("books", {
   canonSection: text("canon_section"),
   genre: text("genre").notNull(), // JSON array, e.g. '["law","narrative"]'
   chapterCount: integer("chapter_count").notNull(),
+  canon: text("canon").notNull(), // 'hebrew' | 'nt' | 'deuterocanon' | 'pseudepigrapha' | 'nt-apocrypha' | 'apostolic'
+  numbering: text("numbering").notNull().default("chapter-verse"),
 });
 
 export const verses = sqliteTable(

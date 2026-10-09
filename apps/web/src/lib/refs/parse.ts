@@ -24,6 +24,7 @@ import {
   InvalidReferenceError,
   bookBounds,
   chapterEnd,
+  prologueId,
   chapterOf,
   bookOf,
   verseOf,
@@ -40,7 +41,7 @@ export interface ParsedReference extends VerseRange {
 
 /** Matches "Book c:v", "Book c", or "Book" — the head of any reference. */
 const REF_HEAD =
-  /^\s*((?:[1-3]|i{1,3}|first|second|third|1st|2nd|3rd)?[\s.]*[a-z][a-z\s.]*?)\s*(?:(\d+)\s*(?::\s*(\d+))?)?\s*$/i;
+  /^\s*((?:[1-4]|i{1,3}|first|second|third|1st|2nd|3rd)?[\s.]*[a-z][a-z\s.]*?)\s*(?:(\d+)\s*(?::\s*(\d+))?)?\s*$/i;
 
 /**
  * Parse a single reference (no separators). Throws InvalidReferenceError on bad input.
@@ -48,6 +49,9 @@ const REF_HEAD =
 export function parseReference(input: string, books: BookIndex): ParsedReference {
   const raw = input.trim();
   if (!raw) throw new InvalidReferenceError("empty reference");
+
+  const special = parseOutsideForms(raw, books);
+  if (special) return special;
 
   // OSIS form first — unambiguous, and the shape our datasets speak.
   const osis = parseOsis(raw, books);
@@ -73,6 +77,41 @@ export function parseReference(input: string, books: BookIndex): ParsedReference
     raw,
     isWhole: null,
   };
+}
+
+const HERMAS_PARTS: Record<string, [offset: number, max: number]> = {
+  vision: [0, 5], vis: [0, 5], mandate: [100, 12], mand: [100, 12],
+  parable: [200, 10], similitude: [200, 10], sim: [200, 10],
+};
+
+/** Forms the generic grammar cannot express: Hermas parts, Psalm 151, and prologues. */
+function parseOutsideForms(raw: string, books: BookIndex): ParsedReference | null {
+  const herm = raw.match(/^(?:shepherd\s+of\s+)?herm(?:as|\.)?\s+(vision|vis|mandate|mand|parable|similitude|sim)\.?\s+(\d+)(.*)$/i);
+  const hermBook = herm && books.find("Herm");
+  if (herm && hermBook) {
+    const [offset, max] = HERMAS_PARTS[herm[1].toLowerCase()];
+    const n = Number(herm[2]);
+    if (n < 1 || n > max) {
+      throw new InvalidReferenceError(`${herm[1]} has ${max} parts; got ${n} in "${raw}"`);
+    }
+    return parseReference(`${hermBook.osisId} ${offset + n}${herm[3]}`, books);
+  }
+
+  const psalm = raw.match(/^(?:ps|psa|psalm|psalms)\.?\s*151(?:\s*:\s*(\d+))?$/i);
+  const psalmBook = psalm && books.find("Ps151");
+  if (psalm && psalmBook) {
+    if (psalm[1] === undefined) return { ...bookBounds(psalmBook.bookId), raw, isWhole: "book" };
+    const id = toVerseId(psalmBook.bookId, 1, Number(psalm[1]));
+    return { start: id, end: id, raw, isWhole: null };
+  }
+
+  const prologue = raw.match(/^(.+?)\s+prol(?:ogue)?\.?$/i);
+  const prologueBook = prologue && books.find(prologue[1]);
+  if (prologueBook) {
+    const id = prologueId(prologueBook.bookId);
+    return { start: id, end: id, raw, isWhole: null };
+  }
+  return null;
 }
 
 function parseOsis(raw: string, books: BookIndex): ParsedReference | null {

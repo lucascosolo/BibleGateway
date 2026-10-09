@@ -80,16 +80,19 @@ export function unplacedGateErrors(
 /** Canonical ids in a printed, in-scope book that have neither text nor an omission row. */
 export function unexplainedGaps(
   canonicalVerseIds: Iterable<number>,
-  t: { scope: "all" | "OT" | "NT"; printedBookIds: ReadonlySet<number>; explained: ReadonlySet<number> },
+  t: { scope: TranslationScope; printedBookIds: ReadonlySet<number>; explained: ReadonlySet<number> },
 ): number[] {
   const gaps: number[] = [];
   for (const id of canonicalVerseIds) {
     const book = Math.floor(id / 1_000_000);
-    const inScope = t.scope === "all" || (t.scope === "OT" ? book <= 39 : book >= 40);
+    const inScope = book > 66 || t.scope === "all" || (t.scope === "OT" ? book <= 39 : book >= 40);
     if (inScope && t.printedBookIds.has(book) && !t.explained.has(id)) gaps.push(id);
   }
   return gaps.sort((a, b) => a - b);
 }
+
+/** 'all' = protocanon complete; 'OT'/'NT' = one testament; 'outside' = outside books only. */
+export type TranslationScope = "all" | "OT" | "NT" | "outside";
 
 export interface TranslationSource {
   /** Fixed. Ends up in verse_texts, verse_omissions and user annotations — never renumber. */
@@ -108,8 +111,9 @@ export interface TranslationSource {
    * parser returns the file rather than us pasting from it once and forgetting.
    */
   licenseAssertion: string;
-  /** 'all' = protocanon complete; 'OT'/'NT' = this text covers only that testament. */
-  scope: "all" | "OT" | "NT";
+  scope: TranslationScope;
+  /** Also loads the outside books this edition prints (see outside.ts). */
+  outsideBooks?: boolean;
   /** Plain-English, reader-facing. Empty for a full Bible. */
   scopeNote: string;
   /** Expected count of printed verses, as a band. Measured before this shipped. */
@@ -156,7 +160,7 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
   {
     translationId: 8,
     code: "LXX",
-    name: "Brenton's Septuagint (selected Old Testament books)",
+    name: "Brenton's Septuagint (selected books)",
     language: "English",
     ebibleId: "eng-Brenton",
     license: "Public Domain",
@@ -172,8 +176,12 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
       "the Septuagint numbers some passages differently and, in Exodus 36-39, orders the account " +
       "of the tabernacle differently. Sixteen Brenton verses in Exodus, Leviticus and Numbers have " +
       "no single Hebrew-numbered counterpart and are not shown. The remaining books are withheld " +
-      "until their differing Greek verse systems have a separately reviewed mapping.",
-    expectedVerses: [6_300, 6_500],
+      "until their differing Greek verse systems have a separately reviewed mapping. It also " +
+      "prints the Septuagint's books outside the Hebrew Bible (Tobit to Psalm 151); for most of " +
+      "them Brenton's edition reprints the Authorized Version's English under Septuagint numbering, " +
+      "and 3 and 4 Maccabees and Psalm 151 are Brenton's own translation.",
+    expectedVerses: [11_900, 11_950],
+    outsideBooks: true,
     versification: "brenton",
     // Brenton's distribution uses a genuinely different LXX verse system across many books.
     // Nehemiah, Lamentations, Habakkuk and Haggai are identity; the Pentateuch is identity except
@@ -185,9 +193,11 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
     // remnants of a re-divided verse, or Exodus 36-39 material the wording check could not match.
     // Excluding the rest is visible in translation_books and safer than putting a beautiful but
     // wrong verse beside the Hebrew.
-    includedBookIds: [1, 2, 3, 4, 5, 16, 25, 35, 37],
-    // Gen 2, Exod 63, Lev 1, Num 2, Deut 1, Nehemiah and Lamentations 21.
-    versificationOmissions: 90,
+    includedBookIds: [1, 2, 3, 4, 5, 16, 25, 35, 37, ...range(67, 83)],
+    // Gen 2, Exod 63, Lev 1, Num 2, Deut 1, Nehemiah and Lamentations 21; and 57 in the outside
+    // books where the KJV Apocrypha has a verse Brenton does not (Additions to Esther 19,
+    // Prayer of Azariah 3, Sirach 35), all from the reviewed tables in outside-maps.ts.
+    versificationOmissions: 147,
     reviewedUnplacedCount: 16,
     verseOffsets: [
       // Genesis: Brenton opens chapter 32 with Hebrew 31:55.
@@ -312,6 +322,45 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
     scope: "all",
     scopeNote: "",
     expectedVerses: [31_050, 31_150],
+  },
+  {
+    translationId: 9,
+    code: "KJVA",
+    name: "King James Version Apocrypha",
+    language: "English",
+    ebibleId: "eng-kjv",
+    license: "Public Domain (see notice: UK Crown letters patent)",
+    // Transcribed from eng-kjv/copr.htm (the "+ Apocrypha" edition), letters-patent paragraph in
+    // full for the reason given on KJV above.
+    copyrightNotice:
+      "The King James Version or Authorized Version of the Holy Bible, using the standardized " +
+      "text of 1769, with Apocrypha/Deuterocanon. Public Domain. Letters patent issued by King " +
+      "James with no expiration date means that to print this translation in the United Kingdom " +
+      "or import printed copies into the UK, you need permission. Currently, the Cambridge " +
+      "University Press, the Oxford University Press, and Collins have the exclusive right to " +
+      "print this Bible translation in the UK. This royal decree has no effect outside of the UK, " +
+      "where this work is firmly in the Public Domain. This free text of the King James Version " +
+      "of the Holy Bible is brought to you courtesy of the Crosswire Bible Society and eBible.org.",
+    licenseAssertion: "using the standardized text of 1769, with Apocrypha/Deuterocanon",
+    scope: "outside",
+    scopeNote:
+      "This is the Apocrypha of the King James Version (1611, in the standardized text of 1769): " +
+      "the books printed between the Testaments in the Authorized Version, from 1 Esdras to " +
+      "2 Maccabees. The Old and New Testaments are the separate King James Version. It has no " +
+      "3 or 4 Maccabees and no Psalm 151, and three verses of Sirach whose numbers hold other " +
+      "text in the Greek numbering used here are not shown.",
+    expectedVerses: [5_700, 5_740],
+    includedBookIds: [...range(67, 78), 81, 82, 84],
+    versification: "kjva",
+    outsideBooks: true,
+    // Tobit 10:8 (Brenton has one more verse there) and Sirach 20:3, 22:9, 22:10 (KJVA_UNPLACED).
+    versificationOmissions: 4,
+    reviewedUnplacedCount: 3,
+    unplacedSourceVerses: [
+      { bookId: 71, chapter: 20, verse: 3 },
+      { bookId: 71, chapter: 22, verse: 9 },
+      { bookId: 71, chapter: 22, verse: 10 },
+    ],
   },
   {
     translationId: 4,
@@ -601,6 +650,10 @@ const DEFAULT_CRITICAL_TEXT_HISTORY =
  * numbering. No exact insertion year is claimed: manuscripts can date the surviving evidence,
  * not the moment a reading first entered the tradition.
  */
+export const OMISSION_REASON_EDITION =
+  "This edition has no separate verse at this number: it joins this text to a neighbouring " +
+  "verse, numbers the passage differently, or translates a form of the book without it.";
+
 export function omissionExplanation(
   translation: Pick<TranslationSource, "versification"> | undefined,
   verseId: number,
@@ -608,6 +661,7 @@ export function omissionExplanation(
   const book = Math.floor(verseId / 1_000_000);
   const chapter = Math.floor((verseId % 1_000_000) / 1_000);
   const verse = verseId % 1_000;
+  if (book > 66) return { kind: "versification", reason: OMISSION_REASON_EDITION, history: "" };
   const history = OMISSION_HISTORY[`${book}.${chapter}.${verse}`];
   const reviewedExtra = CANONICAL_EXTRA_VERSES.some(
     (e) => e.bookId === book && e.chapter === chapter && e.verse === verse,
@@ -636,3 +690,112 @@ export function omissionExplanation(
  * fingerprint. Reader copy that the ingest cannot see is reader copy the ingest cannot
  * duplicate 7,957 times.
  */
+
+function range(from: number, to: number): number[] {
+  return Array.from({ length: to - from + 1 }, (_, i) => from + i);
+}
+
+// --- The outside books ------------------------------------------------------------------
+//
+// Books outside the 66 take ids from 67 upward, so `verse_id` and the one renderer carry over
+// unchanged. FIXED: an id ends up in annotations; never renumber, only append. Allocated before
+// their text is ingested (status "allocated", chapter_count 0) so the id space is settled once.
+// Brenton's order for the Septuagint's books, then 2 Esdras (printed by the KJV Apocrypha only),
+// the Second Temple writings, the New Testament apocrypha and the Apostolic Fathers. The
+// Testaments of the Twelve Patriarchs and Ignatius's letters are one book per testament and per
+// letter, because each source restarts its chapters for each.
+//
+// `numbering` says how chapter and verse are used, so the reader can label a reference:
+//   chapter-verse  ordinary chapter:verse; verse 0 of chapter 1 is a prologue
+//   logion         one chapter; the verse is the saying number (Thomas 42 = 1:42)
+//   section        one chapter; the verse is the section number (Gospel of Peter)
+//   chapter        the source numbers chapters only; each chapter is verse 1 of that chapter
+//   part-chapter   parts banded by hundreds, verse 1 (Hermas: Vision n = n, Mandate n = 100+n,
+//                  Parable n = 200+n; Infancy Thomas: Greek A n = n, Greek B = 100+n, Latin = 200+n)
+//   paragraph      the source prints no numbers; editorial ordinals (Thecla; Apocalypse of Peter's
+//                  Ethiopic, as chapter 2 after the Akhmim fragment's chapter 1)
+// The scheme of a book not yet ingested is provisional until chunk 4 loads it.
+
+export type Canon = "hebrew" | "nt" | "deuterocanon" | "pseudepigrapha" | "nt-apocrypha" | "apostolic";
+export type Numbering = "chapter-verse" | "logion" | "section" | "chapter" | "part-chapter" | "paragraph";
+
+export interface OutsideBook {
+  bookId: number;
+  osisId: string;
+  name: string;
+  abbreviation: string;
+  canon: Exclude<Canon, "hebrew" | "nt">;
+  numbering: Numbering;
+  status: "ingested" | "allocated";
+}
+
+const book = (
+  bookId: number, osisId: string, name: string, abbreviation: string,
+  canon: OutsideBook["canon"], numbering: Numbering = "chapter-verse", status: OutsideBook["status"] = "allocated",
+): OutsideBook => ({ bookId, osisId, name, abbreviation, canon, numbering, status });
+
+export const OUTSIDE_BOOKS: readonly OutsideBook[] = [
+  book(67, "Tob", "Tobit", "Tob", "deuterocanon", "chapter-verse", "ingested"),
+  book(68, "Jdt", "Judith", "Jdt", "deuterocanon", "chapter-verse", "ingested"),
+  book(69, "AddEsth", "Additions to Esther", "Add Esth", "deuterocanon", "chapter-verse", "ingested"),
+  book(70, "Wis", "Wisdom of Solomon", "Wis", "deuterocanon", "chapter-verse", "ingested"),
+  book(71, "Sir", "Sirach", "Sir", "deuterocanon", "chapter-verse", "ingested"),
+  book(72, "Bar", "Baruch", "Bar", "deuterocanon", "chapter-verse", "ingested"),
+  book(73, "EpJer", "Letter of Jeremiah", "Ep Jer", "deuterocanon", "chapter-verse", "ingested"),
+  book(74, "PrAzar", "Prayer of Azariah", "Pr Azar", "deuterocanon", "chapter-verse", "ingested"),
+  book(75, "Sus", "Susanna", "Sus", "deuterocanon", "chapter-verse", "ingested"),
+  book(76, "Bel", "Bel and the Dragon", "Bel", "deuterocanon", "chapter-verse", "ingested"),
+  book(77, "1Macc", "1 Maccabees", "1 Macc", "deuterocanon", "chapter-verse", "ingested"),
+  book(78, "2Macc", "2 Maccabees", "2 Macc", "deuterocanon", "chapter-verse", "ingested"),
+  book(79, "3Macc", "3 Maccabees", "3 Macc", "deuterocanon", "chapter-verse", "ingested"),
+  book(80, "4Macc", "4 Maccabees", "4 Macc", "deuterocanon", "chapter-verse", "ingested"),
+  book(81, "1Esd", "1 Esdras", "1 Esd", "deuterocanon", "chapter-verse", "ingested"),
+  book(82, "PrMan", "Prayer of Manasseh", "Pr Man", "deuterocanon", "chapter-verse", "ingested"),
+  book(83, "Ps151", "Psalm 151", "Ps 151", "deuterocanon", "chapter-verse", "ingested"),
+  book(84, "2Esd", "2 Esdras", "2 Esd", "deuterocanon", "chapter-verse", "ingested"),
+  book(85, "1En", "1 Enoch", "1 En", "pseudepigrapha"),
+  book(86, "Jub", "Jubilees", "Jub", "pseudepigrapha"),
+  book(87, "TReu", "Testament of Reuben", "T. Reu.", "pseudepigrapha"),
+  book(88, "TSim", "Testament of Simeon", "T. Sim.", "pseudepigrapha"),
+  book(89, "TLevi", "Testament of Levi", "T. Levi", "pseudepigrapha"),
+  book(90, "TJud", "Testament of Judah", "T. Jud.", "pseudepigrapha"),
+  book(91, "TIss", "Testament of Issachar", "T. Iss.", "pseudepigrapha"),
+  book(92, "TZeb", "Testament of Zebulun", "T. Zeb.", "pseudepigrapha"),
+  book(93, "TDan", "Testament of Dan", "T. Dan", "pseudepigrapha"),
+  book(94, "TNaph", "Testament of Naphtali", "T. Naph.", "pseudepigrapha"),
+  book(95, "TGad", "Testament of Gad", "T. Gad", "pseudepigrapha"),
+  book(96, "TAsh", "Testament of Asher", "T. Ash.", "pseudepigrapha"),
+  book(97, "TJos", "Testament of Joseph", "T. Jos.", "pseudepigrapha"),
+  book(98, "TBenj", "Testament of Benjamin", "T. Benj.", "pseudepigrapha"),
+  book(99, "PssSol", "Psalms of Solomon", "Pss. Sol.", "pseudepigrapha"),
+  book(100, "2Bar", "2 Baruch", "2 Bar.", "pseudepigrapha"),
+  book(101, "GThom", "Gospel of Thomas", "Gos. Thom.", "nt-apocrypha", "logion"),
+  book(102, "GPet", "Gospel of Peter", "Gos. Pet.", "nt-apocrypha", "section"),
+  book(103, "ProtJas", "Protevangelium of James", "Prot. Jas.", "nt-apocrypha", "chapter"),
+  book(104, "InfThom", "Infancy Gospel of Thomas", "Inf. Gos. Thom.", "nt-apocrypha", "part-chapter"),
+  book(105, "PlThec", "Acts of Paul and Thecla", "Acts Paul Thec.", "nt-apocrypha", "paragraph"),
+  book(106, "ApocPet", "Apocalypse of Peter", "Apoc. Pet.", "nt-apocrypha", "paragraph"),
+  book(107, "GMary", "Gospel of Mary", "Gos. Mary", "nt-apocrypha"),
+  book(108, "GJudas", "Gospel of Judas", "Gos. Jud.", "nt-apocrypha"),
+  book(109, "GPhil", "Gospel of Philip", "Gos. Phil.", "nt-apocrypha"),
+  book(110, "Did", "Didache", "Did.", "apostolic", "chapter"),
+  book(111, "1Clem", "1 Clement", "1 Clem.", "apostolic", "chapter"),
+  book(112, "IgnEph", "Ignatius to the Ephesians", "Ign. Eph.", "apostolic", "chapter"),
+  book(113, "IgnMagn", "Ignatius to the Magnesians", "Ign. Magn.", "apostolic", "chapter"),
+  book(114, "IgnTrall", "Ignatius to the Trallians", "Ign. Trall.", "apostolic", "chapter"),
+  book(115, "IgnRom", "Ignatius to the Romans", "Ign. Rom.", "apostolic", "chapter"),
+  book(116, "IgnPhld", "Ignatius to the Philadelphians", "Ign. Phld.", "apostolic", "chapter"),
+  book(117, "IgnSmyrn", "Ignatius to the Smyrnaeans", "Ign. Smyrn.", "apostolic", "chapter"),
+  book(118, "IgnPol", "Ignatius to Polycarp", "Ign. Pol.", "apostolic", "chapter"),
+  book(119, "Barn", "Epistle of Barnabas", "Barn.", "apostolic", "chapter"),
+  book(120, "Herm", "Shepherd of Hermas", "Herm.", "apostolic", "part-chapter"),
+];
+
+/** The canon a book id belongs to: the Hebrew Bible 1-39, the New Testament 40-66, else the table. */
+export function canonOf(bookId: number): Canon {
+  if (bookId >= 1 && bookId <= 39) return "hebrew";
+  if (bookId >= 40 && bookId <= 66) return "nt";
+  const b = OUTSIDE_BOOKS.find((x) => x.bookId === bookId);
+  if (!b) throw new Error(`no book with id ${bookId}`);
+  return b.canon;
+}

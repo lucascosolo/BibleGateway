@@ -36,6 +36,7 @@
 import { createHash } from "node:crypto";
 import unzipper from "unzipper";
 import { decodeEntities, parseFootnotes, type Footnote } from "./footnotes.js";
+import type { OutsideUnit } from "./outside.js";
 
 /**
  * USFM/USFX book codes in canonical order, so the index is `book_id - 1`.
@@ -94,6 +95,8 @@ export interface UsfxResult {
   verses: UsfxVerse[];
   /** Source refs the file contains that name a book outside the 66-book canon (DC books). */
   outsideCanon: string[];
+  /** Units of `outsideCodes` books (and Psalm 151), unmerged, with their letter suffix. */
+  outside: OutsideUnit[];
   /** MUST be empty. A non-empty list means a footnote removal welded two words. */
   weldSites: WeldSite[];
   /** The verbatim text of the distribution's own `copr.htm`, tags stripped. */
@@ -105,6 +108,28 @@ export interface UsfxResult {
 export interface ParseUsfxOptions {
   /** Some historical LXX distributions split one printed verse into labelled segments (2a/2b). */
   allowVerseSuffix?: boolean;
+  /**
+   * Source books whose text belongs to the outside books. Their verses are returned in
+   * `outside` with any letter suffix kept, never merged, plus any unversed text between
+   * chapter 1 and its first verse (a prologue) as verse 0. Placement is outside.ts's job.
+   */
+  outsideCodes?: ReadonlySet<string>;
+}
+
+function stripToText(raw: string): string {
+  return decodeEntities(raw.replace(/<[^>]*>/g, "")).replace(/¶/g, " ");
+}
+
+/** Unversed text after `<c id="1"/>` and before the first verse, headings removed. */
+function* prologues(doc: string, codes: ReadonlySet<string>): Generator<{ usfm: string; raw: string }> {
+  for (const m of doc.matchAll(/<book id="([^"]+)"[^>]*>([\s\S]*?)<\/book>/g)) {
+    if (!codes.has(m[1])) continue;
+    const at = m[2].search(/<c id="1"\s*\/>/);
+    const first = m[2].search(/<v id="/);
+    if (at < 0 || first < 0 || first < at) continue;
+    const raw = m[2].slice(at, first).replace(/<(s|d|h|toc|id|ide|rem)\b[^>]*>[\s\S]*?<\/\1>/g, "");
+    if (stripToText(raw).trim()) yield { usfm: m[1], raw };
+  }
 }
 
 const WORD_CHAR = /[\p{L}\p{N}]/u;
@@ -143,16 +168,16 @@ function deleteAll(input: string, pattern: RegExp, onWeld: (context: string) => 
  * the end of the book. `<ve/>` alone is not enough — not every USFX file emits it, and a
  * missing one would swallow the rest of the chapter into one verse.
  */
-function* verseSlices(doc: string): Generator<{ usfmCode: string; ref: string; raw: string }> {
+function* verseSlices(doc: string): Generator<{ usfmCode: string; ref: string; id: string; raw: string }> {
   for (const bookMatch of doc.matchAll(/<book id="([^"]+)"[^>]*>([\s\S]*?)<\/book>/g)) {
     const usfmCode = bookMatch[1];
     const body = bookMatch[2];
-    const marks = [...body.matchAll(/<v id="[^"]*"[^>]*bcv="([^"]+)"[^>]*\/>/g)];
+    const marks = [...body.matchAll(/<v id="([^"]*)"[^>]*bcv="([^"]+)"[^>]*\/>/g)];
     for (let i = 0; i < marks.length; i++) {
       const m = marks[i];
       const rest = body.slice(m.index + m[0].length, marks[i + 1]?.index ?? body.length);
       const stop = rest.search(/<ve\b[^>]*\/>|<c\b[^>]*\/>/);
-      yield { usfmCode, ref: m[1], raw: stop === -1 ? rest : rest.slice(0, stop) };
+      yield { usfmCode, ref: m[2], id: m[1], raw: stop === -1 ? rest : rest.slice(0, stop) };
     }
   }
 }
@@ -201,10 +226,16 @@ export async function parseUsfx(zipPath: string, options: ParseUsfxOptions = {})
   }
 
   const verses: UsfxVerse[] = [];
+  const outside: OutsideUnit[] = [];
   const outsideCanon = new Set<string>();
+  if (options.outsideCodes) {
+    for (const p of prologues(doc, options.outsideCodes)) {
+      outside.push({ usfm: p.usfm, chapter: 1, verse: 0, part: "", text: stripToText(p.raw), footnotes: [] });
+    }
+  }
 
   let index = 0;
-  for (const { usfmCode, ref, raw } of verseSlices(doc)) {
+  for (const { usfmCode, ref, id, raw } of verseSlices(doc)) {
     const bookId = USFM_BOOK_ID[usfmCode];
     const footnotes = rawNotes[index]?.ref === ref ? rawNotes[index].notes : null;
     index += 1;
@@ -215,6 +246,18 @@ export async function parseUsfx(zipPath: string, options: ParseUsfxOptions = {})
     const parts = ref.split(".");
     if (parts.length !== 3) throw new Error(`[usfx] malformed bcv "${ref}" in ${zipPath}`);
     const [refBook, chapterStr, verseStr] = parts;
+    const outsideCode = options.outsideCodes?.has(usfmCode) || (usfmCode === "PSA" && chapterStr === "151");
+    if (outsideCode && options.outsideCodes) {
+      // Brenton prints lettered subverses with the letter only in the milestone's id
+      // (`<v id="7a" bcv="TOB.4.7"/>`) and sometimes in the bcv as well.
+      const m = id.match(/^(\d+)([a-z]?)$/);
+      const b = verseStr.match(/^(\d+)([a-z]?)$/);
+      if (!m || !b || m[1] !== b[1] || (b[2] && m[2] && b[2] !== m[2]) || refBook !== usfmCode) {
+        throw new Error(`[usfx] unexpected outside-book reference "${ref}" (id "${id}") in ${zipPath}`);
+      }
+      outside.push({ usfm: usfmCode, chapter: Number(chapterStr), verse: Number(b[1]), part: b[2] || m[2], text: stripToText(raw), footnotes });
+      continue;
+    }
     if (bookId === undefined) {
       outsideCanon.add(ref);
       continue;
@@ -258,6 +301,7 @@ export async function parseUsfx(zipPath: string, options: ParseUsfxOptions = {})
 
   return {
     verses,
+    outside,
     outsideCanon: [...outsideCanon].sort(),
     weldSites,
     copyrightFileText: decodeEntities(coprRaw.toString("utf-8").replace(/<[^>]*>/g, "\n"))

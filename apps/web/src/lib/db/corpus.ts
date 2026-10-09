@@ -52,16 +52,41 @@ export interface Translation {
   scopeNote: string;
 }
 
-/** The canon, loaded once per request and memoized for the process. */
+const BOOK_COLUMNS = `book_id AS bookId, osis_id AS osisId, name, abbreviation, testament,
+            chapter_count AS chapterCount, canon, numbering`;
+
+/** The 66-book canon, loaded once per request and memoized for the process. */
 export const getBooks = cache((): BookRecord[] =>
   prepared(
-    `SELECT book_id AS bookId, osis_id AS osisId, name, abbreviation, testament,
-            chapter_count AS chapterCount
-     FROM books ORDER BY book_id`
+    `SELECT ${BOOK_COLUMNS} FROM books WHERE canon IN ('hebrew','nt') ORDER BY book_id`
   ).all() as BookRecord[]
 );
 
 export const getBookIndex = cache((): BookIndex => new BookIndex(getBooks()));
+
+export const getAllBooks = cache((): BookRecord[] =>
+  prepared(`SELECT ${BOOK_COLUMNS} FROM books ORDER BY book_id`).all() as BookRecord[]
+);
+
+export const getOutsideBookIndex = cache((): BookIndex => new BookIndex(getAllBooks()));
+
+export const getOutsideVerseCounts = cache(
+  (): { canon: string; books: number; verses: number }[] =>
+    prepared(
+      `SELECT b.canon AS canon, COUNT(DISTINCT b.book_id) AS books, COUNT(v.verse_id) AS verses
+       FROM books b LEFT JOIN verses v USING(book_id)
+       WHERE b.canon NOT IN ('hebrew','nt')
+       GROUP BY b.canon ORDER BY MIN(b.book_id)`
+    ).all() as { canon: string; books: number; verses: number }[]
+);
+
+export const getCanonicalVerseCount = cache((): number => {
+  const row = prepared(
+    `SELECT COUNT(*) AS n FROM verses v JOIN books b USING(book_id)
+     WHERE b.canon IN ('hebrew','nt')`
+  ).get() as { n: number };
+  return row.n;
+});
 
 export const getTranslations = cache((): Translation[] =>
   prepared(

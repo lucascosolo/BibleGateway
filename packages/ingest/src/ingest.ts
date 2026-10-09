@@ -50,6 +50,9 @@ import {
   mapSourceVerse,
   isUnplacedSourceVerse,
   TRANSLATION_SOURCES,
+  OUTSIDE_BOOKS,
+  canonOf,
+  type TranslationScope,
   unexplainedGaps,
   unexplainedOmissionErrors,
   unplacedGateErrors,
@@ -57,6 +60,8 @@ import {
   WEB_WELDED_VERSES,
 } from "./translations.js";
 import { parseUsfx, type UsfxResult } from "./usfx.js";
+import { OUTSIDE_SOURCE_CODES, placeEdition, type OutsideEdition, type PlacedVerse } from "./outside.js";
+import { OUTSIDE_EXPECTED_VERSES } from "./outside-maps.js";
 import { XREF_BOOK_MAP } from "./xref-book-map.js";
 import { parseTagntFiles, type TagntVariantRow } from "./tagnt.js";
 import { parseVarApp, type VarAppReadingRow } from "./varapp.js";
@@ -385,7 +390,10 @@ async function main() {
   console.log("\n[parse] USFX translations...");
   const usfx = new Map<string, UsfxResult>();
   for (const t of TRANSLATION_SOURCES) {
-    const result = await parseUsfx(usfxPaths.get(t.code)!, { allowVerseSuffix: t.code === "LXX" });
+    const result = await parseUsfx(usfxPaths.get(t.code)!, {
+      allowVerseSuffix: t.code === "LXX",
+      outsideCodes: t.outsideBooks ? OUTSIDE_SOURCE_CODES : undefined,
+    });
     usfx.set(t.code, result);
     console.log(
       `  ${t.code}: ${result.verses.length} source verses, ` +
@@ -476,6 +484,36 @@ async function main() {
     throw new Error(`Canonical verse count ${canonicalVerses.length} outside sane range 31000-31200`);
   }
 
+  // 3b. The outside books' address space: every address either edition places a unit at, held
+  //     per book to the reviewed count in outside-maps.ts so no source can invent an address
+  //     with nobody reading the diff. Kept apart from `canonicalVerses`, which is the 66-book
+  //     space every protocanonical check counts against.
+  const outsidePlaced = new Map<string, { placed: PlacedVerse[]; unplaced: number }>();
+  for (const t of TRANSLATION_SOURCES) {
+    if (t.outsideBooks) outsidePlaced.set(t.code, placeEdition(t.code as OutsideEdition, usfx.get(t.code)!.outside));
+  }
+  const outsideVerses: typeof canonicalVerses = [];
+  {
+    const seen = new Set<number>();
+    for (const { placed } of outsidePlaced.values()) {
+      for (const p of placed) {
+        const id = p.bookId * 1_000_000 + p.chapter * 1_000 + p.verse;
+        if (seen.has(id)) continue;
+        seen.add(id);
+        outsideVerses.push({ bookId: p.bookId, chapter: p.chapter, verse: p.verse, osisRef: `${p.osis}.${p.chapter}.${p.verse}`, verseId: id });
+      }
+    }
+    outsideVerses.sort((a, b) => a.verseId - b.verseId);
+    for (const b of OUTSIDE_BOOKS) {
+      const n = outsideVerses.filter((v) => v.bookId === b.bookId).length;
+      const expected = OUTSIDE_EXPECTED_VERSES[b.osisId] ?? 0;
+      if (n !== expected || (n > 0) !== (b.status === "ingested")) {
+        throw new Error(`[outside] ${b.osisId}: ${n} addresses placed, the reviewed table expects ${expected} (status ${b.status})`);
+      }
+    }
+    console.log(`[canonical] +${outsideVerses.length} outside-book addresses (not part of the ${canonicalVerses.length})`);
+  }
+
   // 4. Open a fresh DB — at a TEMPORARY path, promoted to bible.db only once the validation
   //    gate has passed.
   //
@@ -503,7 +541,12 @@ async function main() {
       testament     TEXT NOT NULL,
       canon_section TEXT,
       genre         TEXT NOT NULL,
-      chapter_count INTEGER NOT NULL
+      chapter_count INTEGER NOT NULL,
+      -- 'hebrew' (1-39) | 'nt' (40-66) | 'deuterocanon' | 'pseudepigrapha' | 'nt-apocrypha' |
+      -- 'apostolic'. The 66-book counts are the first two; everything else is counted apart.
+      canon         TEXT NOT NULL,
+      -- How chapter and verse are used, so a reference can be labelled (translations.ts).
+      numbering     TEXT NOT NULL DEFAULT 'chapter-verse'
     );
 
     CREATE TABLE verses (
@@ -970,8 +1013,8 @@ async function main() {
   //    against our static BOOKS table's expected count where we have no better source.
   console.log("[load] books...");
   const insertBook = sqlite.prepare(
-    `INSERT INTO books (book_id, osis_id, name, abbreviation, testament, canon_section, genre, chapter_count)
-     VALUES (@bookId, @osisId, @name, @abbreviation, @testament, @canonSection, @genre, @chapterCount)`
+    `INSERT INTO books (book_id, osis_id, name, abbreviation, testament, canon_section, genre, chapter_count, canon, numbering)
+     VALUES (@bookId, @osisId, @name, @abbreviation, @testament, @canonSection, @genre, @chapterCount, @canon, @numbering)`
   );
   const insertBooksTx = sqlite.transaction(() => {
     for (const b of BOOKS) {
@@ -988,6 +1031,22 @@ async function main() {
         canonSection: b.canonSection,
         genre: JSON.stringify(b.genre),
         chapterCount,
+        canon: canonOf(b.bookId),
+        numbering: "chapter-verse",
+      });
+    }
+    for (const b of OUTSIDE_BOOKS) {
+      insertBook.run({
+        bookId: b.bookId,
+        osisId: b.osisId,
+        name: b.name,
+        abbreviation: b.abbreviation,
+        testament: "DC",
+        canonSection: null,
+        genre: "[]",
+        chapterCount: new Set(outsideVerses.filter((v) => v.bookId === b.bookId).map((v) => v.chapter)).size,
+        canon: b.canon,
+        numbering: b.numbering,
       });
     }
   });
@@ -1000,7 +1059,7 @@ async function main() {
      VALUES (@verseId, @bookId, @chapter, @verse, @osisRef, @canonOrder)`
   );
   const insertVersesTx = sqlite.transaction(() => {
-    for (const v of canonicalVerses) {
+    for (const v of [...canonicalVerses, ...outsideVerses]) {
       insertVerse.run({
         verseId: v.verseId,
         bookId: v.bookId,
@@ -1193,7 +1252,7 @@ async function main() {
   // the Jewish Publication Society left John 3:16 out of the oldest Greek manuscripts would be
   // nonsense.
   const canonicalByBook = new Map<number, number[]>();
-  for (const v of canonicalVerses) {
+  for (const v of [...canonicalVerses, ...outsideVerses]) {
     const list = canonicalByBook.get(v.bookId);
     if (list) list.push(v.verseId);
     else canonicalByBook.set(v.bookId, [v.verseId]);
@@ -1251,6 +1310,26 @@ async function main() {
     });
     mapBrentonTx();
   }
+  const insertOutsideMap = sqlite.prepare(
+    `INSERT INTO versification_map
+       (scheme, verse_id, source_book, source_chapter, source_verse, source_part, mapping_type, note)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?)`
+  );
+  sqlite.transaction(() => {
+    for (const [code, { placed }] of outsidePlaced) {
+      const scheme = TRANSLATION_SOURCES.find((t) => t.code === code)!.versification!;
+      for (const p of placed) {
+        for (const s of p.sources) {
+          const moved = s.chapter !== p.chapter || s.verse !== p.verse || s.part !== "";
+          insertOutsideMap.run(
+            scheme, p.bookId * 1_000_000 + p.chapter * 1_000 + p.verse, s.usfm, s.chapter, s.verse, s.part,
+            p.sources.length > 1 ? "partial" : "full",
+            moved ? `${code} prints this as ${s.usfm} ${s.chapter}:${s.verse}${s.part} (reviewed placement, outside-maps.ts)` : null,
+          );
+        }
+      }
+    }
+  })();
 
   for (const t of TRANSLATION_SOURCES) {
     console.log(`[load] verse_texts (${t.code})...`);
@@ -1322,6 +1401,21 @@ async function main() {
       }
     });
     loadTx();
+    const outside = outsidePlaced.get(t.code);
+    if (outside) {
+      sqlite.transaction(() => {
+        for (const p of outside.placed) {
+          const id = p.bookId * 1_000_000 + p.chapter * 1_000 + p.verse;
+          const text = normalizeVerseText(p.text);
+          if (text.length === 0) continue;
+          p.footnotes.forEach((n, i) => insertFootnote.run(t.translationId, id, i + 1, n.caller, n.kind, n.text));
+          insertText.run(t.translationId, id, text);
+          printedIds.add(id);
+          stats.printed += 1;
+        }
+      })();
+      stats.unplaced += outside.unplaced;
+    }
 
     // Book coverage: a book this text covers is one it prints at least one verse in.
     const covered = new Set<number>();
@@ -1329,8 +1423,10 @@ async function main() {
     stats.booksCovered = covered.size;
 
     const claimsBook = (bookId: number) =>
-      (t.includedBookIds ? includedBooks?.has(bookId) === true : true) &&
-      (t.scope === "all" || (t.scope === "OT" ? bookId <= 39 : bookId > 39));
+      bookId > 66
+        ? includedBooks?.has(bookId) === true
+        : (t.includedBookIds ? includedBooks?.has(bookId) === true : true) &&
+          (t.scope === "all" || (t.scope === "OT" ? bookId <= 39 : t.scope === "NT" && bookId > 39));
 
     const omitTx = sqlite.transaction(() => {
       for (const [bookId, verseIds] of canonicalByBook) {
@@ -1351,7 +1447,9 @@ async function main() {
           // The gate the brief asks for, recorded here and raised below: a translation that
           // claims a book and prints nothing in it has been ingested wrong, and the corpus
           // would show a reader an entire empty book with no explanation.
-          stats.emptyClaimedBooks.push(BOOKS.find((b) => b.bookId === bookId)?.name ?? String(bookId));
+          stats.emptyClaimedBooks.push(
+            BOOKS.find((b) => b.bookId === bookId)?.name ?? OUTSIDE_BOOKS.find((b) => b.bookId === bookId)?.name ?? String(bookId),
+          );
           continue;
         }
         for (const vid of verseIds) {
@@ -2062,7 +2160,7 @@ async function main() {
       );
     }
     const scopedCanonicalCount = t.includedBookIds
-      ? canonicalVerses.filter((v) => t.includedBookIds?.includes(v.bookId)).length
+      ? [...canonicalVerses, ...outsideVerses].filter((v) => t.includedBookIds?.includes(v.bookId)).length
       : canonicalCount;
     const share = stats.printed / scopedCanonicalCount;
     // A selected divergent pilot may legitimately omit source verse labels that have no
@@ -2228,8 +2326,10 @@ async function main() {
         )
         .all(t.translationId) as { bookId: number; name: string; testament: string; status: string }[];
       for (const b of wrong) {
-        const claimed = (t.includedBookIds ? t.includedBookIds.includes(b.bookId) : true) &&
-          (t.scope === "all" || (t.scope === "OT" ? b.bookId <= 39 : b.bookId > 39));
+        const claimed = b.bookId > 66
+          ? t.includedBookIds?.includes(b.bookId) === true
+          : (t.includedBookIds ? t.includedBookIds.includes(b.bookId) : true) &&
+            (t.scope === "all" || (t.scope === "OT" ? b.bookId <= 39 : t.scope === "NT" && b.bookId > 39));
         if (claimed && b.status !== "printed") {
           errors.push(`${t.code}: declares scope '${t.scope}' but prints nothing in ${b.name}.`);
         }
@@ -2251,7 +2351,7 @@ async function main() {
     const canonicalIds = (sqlite.prepare(`SELECT verse_id AS v FROM verses ORDER BY verse_id`).all() as { v: number }[]).map((r) => r.v);
     const translations = sqlite
       .prepare(`SELECT translation_id AS id, code, scope FROM translations ORDER BY translation_id`)
-      .all() as { id: number; code: string; scope: "all" | "OT" | "NT" }[];
+      .all() as { id: number; code: string; scope: TranslationScope }[];
     for (const tr of translations) {
       const ids = (sql: string) => new Set((sqlite.prepare(sql).all(tr.id) as { v: number }[]).map((r) => r.v));
       const gaps = unexplainedGaps(canonicalIds, {
@@ -2308,6 +2408,26 @@ async function main() {
          GROUP BY vo.translation_id, vo.kind ORDER BY vo.translation_id, vo.kind`,
       )
       .all() as { code: string; kind: string; n: number }[];
+    // The 66-book address space and the outside books are counted apart, always.
+    const byCanon = sqlite
+      .prepare(
+        `SELECT b.canon, COUNT(DISTINCT b.book_id) AS books, COUNT(v.verse_id) AS verses
+         FROM books b LEFT JOIN verses v USING (book_id) GROUP BY b.canon ORDER BY MIN(b.book_id)`,
+      )
+      .all() as { canon: string; books: number; verses: number }[];
+    console.log(`  address space by canon:`);
+    for (const r of byCanon) console.log(`    ${r.canon.padEnd(14)} books=${String(r.books).padStart(3)} verses=${r.verses}`);
+    const protocanon = byCanon.filter((r) => r.canon === "hebrew" || r.canon === "nt").reduce((n, r) => n + r.verses, 0);
+    if (protocanon !== canonicalCount) {
+      errors.push(`hebrew+nt verses ${protocanon} != canonical address space ${canonicalCount}`);
+    }
+    const shared = sqlite
+      .prepare(
+        `SELECT COUNT(*) AS n FROM verses v WHERE v.book_id > 66 AND NOT EXISTS
+           (SELECT 1 FROM verse_texts vt WHERE vt.verse_id = v.verse_id)`,
+      )
+      .get() as { n: number };
+    if (shared.n > 0) errors.push(`${shared.n} outside-book address(es) are printed by no translation`);
     console.log(`  omissions by kind:`);
     for (const r of kinds) console.log(`    ${r.code.padEnd(4)} ${r.kind.padEnd(13)} ${r.n}`);
   }
@@ -3110,10 +3230,10 @@ async function main() {
   }
 
   for (const r of stream(
-    `SELECT book_id, osis_id, name, testament, canon_section, chapter_count
+    `SELECT book_id, osis_id, name, testament, canon_section, chapter_count, canon, numbering
      FROM books ORDER BY book_id`
   )) {
-    feed("book", [r.book_id, r.osis_id, r.name, r.testament, r.canon_section, r.chapter_count]);
+    feed("book", [r.book_id, r.osis_id, r.name, r.testament, r.canon_section, r.chapter_count, r.canon, r.numbering]);
   }
   for (const r of stream(
     // copyright_notice, scope and scope_note are in here because all three are RENDERED. The

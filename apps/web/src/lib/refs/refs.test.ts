@@ -63,7 +63,7 @@ describe("verse id encoding", () => {
 
   it("gives book bounds that contain every verse of the book but no other book", () => {
     const gen = bookBounds(1);
-    expect(gen.start).toBeLessThanOrEqual(toVerseId(1, 1, 1));
+    expect(gen.start).toBe(1_001_000);
     expect(gen.end).toBeGreaterThanOrEqual(toVerseId(1, 50, 26));
     expect(gen.end).toBeLessThan(toVerseId(2, 1, 1));
   });

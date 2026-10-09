@@ -114,13 +114,16 @@ export const chapterStart = (book: number, chapter: number): VerseId =>
 export const chapterEnd = (book: number, chapter: number): VerseId =>
   (book * BOOK_FACTOR + chapter * CHAPTER_FACTOR + MAX_VERSE) as VerseId;
 
+/** Chapter 1 verse 0: the slot for a book's prologue. */
+export const prologueId = (book: number): VerseId => (book * BOOK_FACTOR + CHAPTER_FACTOR) as VerseId;
+
 /** Bounds covering an entire book. Safe as SQL `BETWEEN` endpoints. */
 export function bookBounds(book: number): VerseRange {
   if (!Number.isInteger(book) || book < 1) {
     throw new InvalidReferenceError(`book must be a positive integer, got ${book}`);
   }
   return {
-    start: (book * BOOK_FACTOR + CHAPTER_FACTOR + 1) as VerseId,
+    start: prologueId(book),
     end: (book * BOOK_FACTOR + MAX_CHAPTER * CHAPTER_FACTOR + MAX_VERSE) as VerseId,
   };
 }
