@@ -68,3 +68,14 @@ list of 2026-10-09 is a lead, not a clearance.
   with cited excerpts.
 - Mobile navigation keeps five cells; the workspace enters through the "More" sheet on phones and
   gets its own rail entry on desktop.
+
+## Decisions after licence verification (2026-10-09)
+- Mattison's Gospel of Mary, Gospel of Judas and Gospel of Philip are printed, not described:
+  gospels.net publishes them under the same public-domain dedication as his Thomas (ledger:
+  docs/sources/outside-books.md).
+- The Letter of Aristeas is a described work in the first release: Thackeray's 1917 translation
+  is public domain, but no proofread transcription exists and the OCR loses the section numbers.
+- Charles's Testaments of the Twelve Patriarchs, Gray's Psalms of Solomon and Charles's 2 Baruch
+  are proofread against their page images before ingestion; nothing unproofread ships.
+- The Apostolic Fathers ship at chapter level (Hermas at Vision, Mandate and Parable level)
+  because the 1891 verse numbers are not in the free transcription; each work page says so.
