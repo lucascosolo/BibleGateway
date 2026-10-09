@@ -210,7 +210,7 @@ describe("toledotSentence: works", () => {
   });
   it.each([
     ["alludes", "Parallel in an outside work", "1 Enoch shares wording or a saying with this passage."],
-    ["background", "Retold in an outside work", "1 Enoch retells or builds on this passage."],
+    ["background", "Linked outside work", "1 Enoch is linked to this passage; the note says how."],
     ["describes", "Named in an outside work", "1 Enoch attaches itself to this passage."],
     ["dates", "Outside work", "1 Enoch is dated by reference to this passage."],
   ] as const)("a %s link reads as its own sentence", (linkType, lead, body) => {

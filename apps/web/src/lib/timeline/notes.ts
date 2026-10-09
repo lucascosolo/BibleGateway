@@ -40,7 +40,10 @@ const asSentence = (s: string) => (/[.!?]$/.test(s.trim()) ? s.trim() : `${s.tri
 
 const WORK_LINK: Record<VerseLink["linkType"], [lead: string, body: (title: string) => string]> = {
   alludes: ["Parallel in an outside work", (t) => `${t} shares wording or a saying with this passage.`],
-  background: ["Retold in an outside work", (t) => `${t} retells or builds on this passage.`],
+  // Neutral on purpose: a background link records a connection, not its direction. 1 Enoch 6-11
+  // and Genesis 6:1-4 have a disputed priority, and the Hermas link to Romans 16:14 is an old
+  // identification of the author, not a retelling. The link's own note says what the link is.
+  background: ["Linked outside work", (t) => `${t} is linked to this passage; the note says how.`],
   describes: ["Named in an outside work", (t) => `${t} attaches itself to this passage.`],
   dates: ["Outside work", (t) => `${t} is dated by reference to this passage.`],
 };
