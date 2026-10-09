@@ -1999,14 +1999,37 @@
   text-decoration: underline;
 }
 
-/* The arrow ends the line, so its touch target can grow inline-end and downward without
-   covering any text (AGENTS.md: 44px targets on inline marks). */
+/* On a touch screen the whole note is the target, not the arrow. The arrow is one glyph at
+   caption size, and the earlier fix (an ::after grown inline-end from it) failed whenever the
+   note's last line ended near the screen edge: the growth ran off the screen, leaving a target
+   about one glyph wide. Each note carries exactly one link, so stretching that link over its
+   own row is unambiguous: the anchor goes static and its ::after fills the row, which is
+   positioned and at least --touch-target tall. Rows stack with no gap, so neighbouring
+   targets meet but never overlap. Fine pointers keep the arrow alone, so a reader with a mouse
+   can still select a note's text. */
 @media (pointer: coarse) {
+  .toledot-notes {
+    gap: 0;
+  }
+
+  .toledot-note {
+    position: relative;
+    min-height: var(--touch-target);
+    padding-block: 0.3rem;
+  }
+
+  .toledot-note__link {
+    position: static;
+  }
+
   .toledot-note__link::after {
     content: "";
     position: absolute;
-    inset-block: calc((var(--touch-target) - 1.5em) / -2);
-    inset-inline: 0 calc(var(--touch-target) * -1 + 1.5em);
+    inset: 0;
+  }
+
+  .toledot-note:active {
+    background: var(--color-surface-hover);
   }
 }
 
