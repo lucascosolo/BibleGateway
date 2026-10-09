@@ -21,11 +21,32 @@
 //     piece of work with its own gate, not a line in this table.
 //   * The full Brenton LXX and the Clementine Vulgate (`latVUC`) remain withheld: their source
 //     systems contain many chapter/verse divergences and deuterocanonical books that this
-//     66-book canon has no addresses for. A four-book Brenton pilot below is loaded only where
-//     an identity map has been independently verified; it must not be expanded by assumption.
+//     66-book canon has no addresses for. A five-book Brenton selection below is loaded only where
+//     an identity map, or a reviewed offset table, has been independently verified; it must not be expanded by assumption.
 //
 // A wrong versification map is worse than an absent translation, because absence is visible
 // and a wrong map is not.
+
+export interface VerseOffset {
+  bookId: number;
+  chapter: number;
+  fromVerse: number;
+  toVerse: number;
+  canonicalChapter: number;
+  canonicalFirstVerse: number;
+}
+
+export function mapSourceVerse(
+  t: Pick<TranslationSource, "verseOffsets">,
+  bookId: number,
+  chapter: number,
+  verse: number,
+): { chapter: number; verse: number } {
+  const o = t.verseOffsets?.find(
+    (e) => e.bookId === bookId && e.chapter === chapter && verse >= e.fromVerse && verse <= e.toVerse,
+  );
+  return o ? { chapter: o.canonicalChapter, verse: o.canonicalFirstVerse + verse - o.fromVerse } : { chapter, verse };
+}
 
 export interface TranslationSource {
   /** Fixed. Ends up in verse_texts, verse_omissions and user annotations — never renumber. */
@@ -54,6 +75,11 @@ export interface TranslationSource {
   versification?: string;
   /** Some historical editions omit a protocanonical book or use a separate source book. */
   includedBookIds?: readonly number[];
+  /**
+   * Reviewed exceptions to identity for a divergent edition: each run of source verses maps to
+   * consecutive canonical verses. Any source verse not covered maps to its own label.
+   */
+  verseOffsets?: readonly VerseOffset[];
   /**
    * Source-specific text repair, applied before the shared normalization.
    *
@@ -84,16 +110,30 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
     licenseAssertion: "Published in 1851, and now in the Public Domain",
     scope: "OT",
     scopeNote:
-      "This is a four-book pilot of Brenton's public-domain English translation of the Septuagint. " +
-      "Only Nehemiah, Lamentations, Habakkuk, and Haggai are included: their source verse labels " +
-      "have a verified identity map here. The remaining books are withheld until their differing " +
-      "Greek verse systems have a separately reviewed mapping.",
-    expectedVerses: [500, 1_000],
+      "This is a selection from Brenton's public-domain English translation of the Septuagint: " +
+      "Deuteronomy, Nehemiah, Lamentations, Habakkuk, and Haggai. Deuteronomy is included under a " +
+      "reviewed verse map, because the Septuagint numbers two of its passages differently. Genesis, " +
+      "Exodus, Leviticus, and Numbers are withheld because their numbering differs in more than a " +
+      "verse or two. The remaining books are withheld until their differing Greek verse systems " +
+      "have a separately reviewed mapping.",
+    expectedVerses: [1_400, 1_800],
     versification: "brenton",
-    // Brenton's distribution uses a genuinely different LXX verse system across many books;
-    // only the four books named above are identity-mapped. Excluding the rest is visible in
-    // translation_books and safer than putting a beautiful but wrong verse beside the Hebrew.
-    includedBookIds: [16, 25, 35, 37],
+    // Brenton's distribution uses a genuinely different LXX verse system across many books.
+    // Nehemiah, Lamentations, Habakkuk and Haggai are identity; Deuteronomy is identity except
+    // the runs in `verseOffsets`, each checked against KJV wording
+    // (scripts/check-brenton-identity.ts, 2026-10-08). The Septuagint opens chapter 13 with
+    // Hebrew 12:32 and chapter 23 with Hebrew 22:30, and prints the corn-field law (23:25)
+    // before the vineyard law (Hebrew 23:24). Deut 14:14 has no Brenton label and is recorded
+    // as a versification omission. Excluding the rest is visible in translation_books and safer
+    // than putting a beautiful but wrong verse beside the Hebrew.
+    includedBookIds: [5, 16, 25, 35, 37],
+    verseOffsets: [
+      { bookId: 5, chapter: 13, fromVerse: 1, toVerse: 1, canonicalChapter: 12, canonicalFirstVerse: 32 },
+      { bookId: 5, chapter: 13, fromVerse: 2, toVerse: 19, canonicalChapter: 13, canonicalFirstVerse: 1 },
+      { bookId: 5, chapter: 23, fromVerse: 1, toVerse: 1, canonicalChapter: 22, canonicalFirstVerse: 30 },
+      { bookId: 5, chapter: 23, fromVerse: 2, toVerse: 24, canonicalChapter: 23, canonicalFirstVerse: 1 },
+      { bookId: 5, chapter: 23, fromVerse: 26, toVerse: 26, canonicalChapter: 23, canonicalFirstVerse: 24 },
+    ],
   },
   {
     translationId: 3,

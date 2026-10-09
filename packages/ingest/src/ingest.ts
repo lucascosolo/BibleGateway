@@ -47,6 +47,7 @@ import * as schema from "./schema.js";
 import {
   CANONICAL_EXTRA_VERSES,
   omissionExplanation,
+  mapSourceVerse,
   TRANSLATION_SOURCES,
 } from "./translations.js";
 import { parseUsfx, type UsfxResult } from "./usfx.js";
@@ -1157,14 +1158,13 @@ async function main() {
 
   // Divergent USFX editions enter the same canonical address space only through an explicit
   // map. The first supported case is Brenton's LXX selection: its selected protocanonical books
-  // use the canonical chapter/verse labels, while Psalms and Greek Esther are deliberately
-  // excluded until their non-identity numbering has a reviewed map. Identity is written as a
-  // row, never inferred at query time, so the completeness gate can prove what was actually
-  // mapped and a future source cannot silently fall through to `org`.
+  // use the canonical labels except the reviewed runs in `verseOffsets` (Deuteronomy 13 and 23).
+  // Identity is written as a row, never inferred at query time, so the completeness gate can
+  // prove what was actually mapped and a future source cannot silently fall through to `org`.
   const insertBrentonMap = sqlite.prepare(
     `INSERT INTO versification_map
        (scheme, verse_id, source_book, source_chapter, source_verse, source_part, mapping_type, note)
-     VALUES ('brenton', ?, ?, ?, ?, '', 'full', 'Brenton source reference mapped to canonical address')`
+     VALUES ('brenton', ?, ?, ?, ?, '', 'full', ?)`
   );
   const brenton = TRANSLATION_SOURCES.find((t) => t.code === "LXX");
   if (brenton) {
@@ -1172,11 +1172,21 @@ async function main() {
     const mapBrentonTx = sqlite.transaction(() => {
       for (const v of usfx.get("LXX")?.verses ?? []) {
         if (!included.has(v.bookId)) continue;
-        const canonicalId = verseIdByOsisKey.get(`${v.bookId}.${v.chapter}.${v.verse}`);
+        const to = mapSourceVerse(brenton, v.bookId, v.chapter, v.verse);
+        const canonicalId = verseIdByOsisKey.get(`${v.bookId}.${to.chapter}.${to.verse}`);
         if (canonicalId === undefined) continue;
         const sourceBook = BOOKS.find((b) => b.bookId === v.bookId)?.osisId;
         if (!sourceBook) throw new Error(`[brenton] unknown source book id ${v.bookId}`);
-        insertBrentonMap.run(canonicalId, sourceBook, v.chapter, v.verse);
+        const identity = to.chapter === v.chapter && to.verse === v.verse;
+        insertBrentonMap.run(
+          canonicalId,
+          sourceBook,
+          v.chapter,
+          v.verse,
+          identity
+            ? "Brenton source reference mapped to canonical address"
+            : `Septuagint numbering: Brenton ${v.chapter}:${v.verse} is ${to.chapter}:${to.verse} here (reviewed offset table)`,
+        );
       }
     });
     mapBrentonTx();
@@ -1988,7 +1998,7 @@ async function main() {
     const share = stats.printed / scopedCanonicalCount;
     // A selected divergent pilot may legitimately omit source verse labels that have no
     // counterpart in the canonical scheme; the per-book census and omission rows disclose
-    // those 21 cases. The 95% floor still catches a broken parse without pretending this is a
+    // those 22 cases. The 95% floor still catches a broken parse without pretending this is a
     // complete LXX edition.
     const minShare = t.scope === "all" ? 0.985 : t.includedBookIds ? 0.95 : 0.7;
     if (share < minShare || share > 1.0) {
