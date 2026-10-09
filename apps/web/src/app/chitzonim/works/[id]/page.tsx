@@ -6,7 +6,7 @@ import { CanonNotice } from "@/components/chitzonim/CanonNotice";
 import { PassageRenderer } from "@/components/passage/PassageRenderer";
 import { Citations } from "@/components/toledot/Citations";
 import { EntitySection } from "@/components/toledot/EntityShell";
-import { canonNotice, getArea } from "@/lib/chitzonim/outside";
+import { canonNotice, composedLabel, getArea } from "@/lib/chitzonim/outside";
 import { getPassage, getTranslationByCode } from "@/lib/db/corpus";
 import { getFirstChapter, getOutsideBook } from "@/lib/db/outside";
 import { getWork } from "@/lib/db/timeline";
@@ -56,7 +56,7 @@ export default async function WorkPage({ params }: Props) {
         <h1 className="outside-page__title">{work.title}</h1>
         <p className="outside-page__meta">
           {work.composedEarliest !== null && work.composedLatest !== null ? (
-            <>Written <strong>{formatRange(work.composedEarliest, work.composedLatest)}</strong></>
+            <>Written <strong>{composedLabel(work.composedEarliest, work.composedLatest, work.composed[0]?.label)}</strong></>
           ) : (
             work.composedUndated ?? "Not dated"
           )}
@@ -75,7 +75,7 @@ export default async function WorkPage({ params }: Props) {
           <ul className="outside-record">
             {work.composed.map((p) => (
               <li key={p.id}>
-                <strong>{p.label}</strong> ({formatRange(p.earliest, p.latest)}, {p.tradition}). {p.summary}
+                <strong>{p.label}</strong> ({p.earliest === p.latest ? "" : `${formatRange(p.earliest, p.latest)}, `}{p.tradition}). {p.summary}
                 <Citations citations={p.citations} />
               </li>
             ))}

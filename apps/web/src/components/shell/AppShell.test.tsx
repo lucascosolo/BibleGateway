@@ -27,6 +27,14 @@ describe("workspaceForPath", () => {
     ["/support/thanks", "read"],
     ["/roadmap", "read"],
     [null, "read"],
+    ["/read/Sir.1", "chitzonim"],
+    ["/read/1Macc.2.3-5", "chitzonim"],
+    ["/read/Wisdom%20of%20Solomon%201", "chitzonim"],
+    ["/read/Herm.101", "chitzonim"],
+    ["/read/Sirach%20prologue", "chitzonim"],
+    ["/read/John.3", "read"],
+    ["/read/1John.2", "read"],
+    ["/read/Jude", "read"],
   ])("%s -> %s", (path, key) => {
     expect(workspaceForPath(path as string | null)).toBe(key);
   });
@@ -60,5 +68,24 @@ describe("BottomTabBar on a reading route", () => {
     const links = within(nav).getAllByRole("link");
     expect(links.find((l) => l.getAttribute("href") === "/read")?.getAttribute("aria-current")).toBe("page");
     expect(links.find((l) => l.getAttribute("href") === "/")?.getAttribute("aria-current")).toBeNull();
+  });
+});
+
+describe("an outside book in the reader", () => {
+  const active = workspaceForPath("/read/Sir.1");
+  const chitzonim = () => current().map((l) => l.getAttribute("href"));
+
+  it("NavRail marks Chitzonim, not Read", () => {
+    render(<NavRail active={active} />);
+    expect(chitzonim()).toEqual(["/chitzonim"]);
+  });
+  it("TopTabs marks Chitzonim, not Read", () => {
+    render(<TopTabs active={active} />);
+    expect(chitzonim()).toEqual(["/chitzonim"]);
+  });
+  it("the phone bar's More cell names Chitzonim as current", () => {
+    render(<BottomTabBar active={active} />);
+    expect(screen.getByRole("button", { name: /^More, current page/ })).toBeTruthy();
+    expect(current().map((l) => l.getAttribute("href"))).not.toContain("/read");
   });
 });

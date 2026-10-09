@@ -5,6 +5,8 @@ import {
   OUTSIDE_AREAS,
   canonNotice,
   carryingTranslations,
+  composedLabel,
+  parallelPair,
   getArea,
   isOutsideBook,
   numberingLabel,
@@ -92,5 +94,43 @@ describe("carryingTranslations", () => {
   it("keeps only carriers, case-insensitively, in the order of `all`", () => {
     const all = ["WEB", "KJV", "LXX", "KJVA", "MATTISON"].map((code) => ({ code }));
     expect(carryingTranslations(all, ["kjva", "LXX"]).map((t) => t.code)).toEqual(["LXX", "KJVA"]);
+  });
+});
+
+describe("parallelPair", () => {
+  const code = (t?: { code: string }) => t?.code;
+  const sirach = ["LXX", "KJVA"].map((c) => ({ code: c }));
+  const bible = ["WEB", "BSB", "KJV"].map((c) => ({ code: c }));
+
+  it("defaults to two carrying editions when two exist", () => {
+    const { left, right } = parallelPair(sirach);
+    expect([code(left), code(right)]).toEqual(["LXX", "KJVA"]);
+  });
+  it("never picks an edition that does not carry the book, even when asked", () => {
+    const { left, right } = parallelPair(sirach, "WEB", "BSB");
+    expect([code(left), code(right)]).toEqual(["LXX", "KJVA"]);
+  });
+  it("leaves the right side empty when only one edition carries the book", () => {
+    const { left, right } = parallelPair([{ code: "MATTISON" }]);
+    expect(code(left)).toBe("MATTISON");
+    expect(right).toBeUndefined();
+  });
+  it("keeps WEB and BSB as the default pair for the 66", () => {
+    expect(parallelPair(bible).left?.code).toBe("WEB");
+    expect(parallelPair(bible).right?.code).toBe("BSB");
+    expect(parallelPair(bible, "BSB").right?.code).toBe("WEB");
+  });
+  it("honours an explicit identical pair so the page can ask for two different ones", () => {
+    const { left, right } = parallelPair(bible, "KJV", "KJV");
+    expect(left).toBe(right);
+  });
+});
+
+describe("composedLabel", () => {
+  it("prints the source's own label when the span is one year", () => {
+    expect(composedLabel(170, 170, "About 170 CE")).toBe("About 170 CE");
+  });
+  it("prints a range as a range", () => {
+    expect(composedLabel(-200, -175, "Early second century BCE")).toBe("200–175 BCE");
   });
 });

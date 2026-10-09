@@ -188,6 +188,20 @@ for (const [osis, aliases] of Object.entries(OUTSIDE_ALIASES)) {
   for (const alias of aliases) EXTRA_ALIASES[alias] ??= osis;
 }
 
+const OUTSIDE_KEYS = new Set<string>(
+  Object.keys(OUTSIDE_ALIASES).flatMap((osis) => [normalizeBookKey(osis), ...OUTSIDE_ALIASES[osis]]),
+);
+
+/**
+ * Whether a book name (any spelling the parser accepts) is one of the outside books, answered
+ * from the static alias table alone so a client component can ask it without a database. A
+ * spelling the 66 already own is never reported as outside.
+ */
+export function isOutsideBookName(name: string): boolean {
+  const key = normalizeBookKey(name);
+  return OUTSIDE_KEYS.has(key) && !(key in EXTRA_ALIASES && !(OUTSIDE_ALIASES[EXTRA_ALIASES[key]]));
+}
+
 export class BookIndex {
   private readonly byKey = new Map<string, BookRecord>();
   private readonly byId = new Map<number, BookRecord>();

@@ -2,10 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { shareMetadata } from "@/app/og/data";
-import { getArea, OUTSIDE_AREAS } from "@/lib/chitzonim/outside";
+import { composedLabel, getArea, OUTSIDE_AREAS } from "@/lib/chitzonim/outside";
 import { getOutsideBooks, type OutsideBook } from "@/lib/db/outside";
-import { getWorkSummaries, type WorkSummary } from "@/lib/db/timeline";
-import { formatRange } from "@/lib/timeline/years";
+import { getWork, getWorkSummaries, type WorkSummary } from "@/lib/db/timeline";
 
 export const dynamic = "force-dynamic";
 
@@ -53,7 +52,11 @@ function cards(books: OutsideBook[], works: WorkSummary[]): Card[] {
       href: `/chitzonim/works/${work.id}`,
       dates:
         work.composedEarliest !== null && work.composedLatest !== null
-          ? formatRange(work.composedEarliest, work.composedLatest)
+          ? composedLabel(
+              work.composedEarliest,
+              work.composedLatest,
+              work.composedEarliest === work.composedLatest ? getWork(work.id)?.composed[0]?.label : null,
+            )
           : work.composedUndated,
       translations: [...new Set(own.flatMap((b) => b.translations))],
       verses: own.reduce((n, b) => n + b.verses, 0),

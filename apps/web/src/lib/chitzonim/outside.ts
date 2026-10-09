@@ -58,6 +58,8 @@ export function getArea(key: string): AreaInfo | undefined {
   return OUTSIDE_AREAS.find((a) => a.key === key);
 }
 
+import { formatRange } from "@/lib/timeline/years";
+
 export const FIRST_OUTSIDE_BOOK = 67;
 
 export function isOutsideBook(bookId: number): boolean {
@@ -138,4 +140,28 @@ export function numberingRangeLabel(
 export function carryingTranslations<T extends { code: string }>(all: readonly T[], carriers: Iterable<string>): T[] {
   const codes = new Set([...carriers].map((c) => c.toUpperCase()));
   return all.filter((t) => codes.has(t.code.toUpperCase()));
+}
+
+/**
+ * The two editions /parallel opens with, drawn only from `carrying`. An explicit code that does
+ * not carry the book is ignored; `right` is undefined when only one edition carries it. An
+ * explicit identical pair is returned as asked so the page can ask for two different ones.
+ */
+export function parallelPair<T extends { code: string }>(
+  carrying: readonly T[],
+  a?: string,
+  b?: string,
+): { left: T | undefined; right: T | undefined } {
+  const find = (code?: string) => carrying.find((t) => t.code.toUpperCase() === code?.toUpperCase());
+  const left = find(a) ?? find("WEB") ?? carrying[0];
+  const right = find(b) ?? [find(left?.code === "BSB" ? "WEB" : "BSB"), ...carrying].find((t) => t && t !== left);
+  return { left, right };
+}
+
+/**
+ * How a work's dating reads. A one-year span prints the leading position's own label ("About 170
+ * CE"), because a bare year drops the word the source used; a real span prints as a range.
+ */
+export function composedLabel(earliest: number, latest: number, leadingLabel: string | null | undefined): string {
+  return earliest === latest && leadingLabel ? leadingLabel : formatRange(earliest, latest);
 }

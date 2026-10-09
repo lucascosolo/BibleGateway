@@ -44,7 +44,7 @@ import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorksForBook,
 import { getOutsideBook } from "@/lib/db/outside";
 import { CanonNotice } from "@/components/chitzonim/CanonNotice";
 import { OutsideWorld } from "@/components/chitzonim/OutsideWorld";
-import { canonNotice, carryingTranslations, isOutsideBook, numberingRangeLabel } from "@/lib/chitzonim/outside";
+import { canonNotice, carryingTranslations, parallelPair, isOutsideBook, numberingRangeLabel } from "@/lib/chitzonim/outside";
 import { labelVerses } from "@/lib/db/timeline-present";
 import {
   InvalidReferenceError,
@@ -163,7 +163,10 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   const outsideBook = isOutsideBook(firstBookId) ? getOutsideBook(firstBookId) : undefined;
   const translations = outsideBook
     ? carryingTranslations(getTranslations(), outsideBook.translations)
-    : getTranslations().filter((x) => x.scope !== "outside");
+    : carryingTranslations(
+        getTranslations().filter((x) => x.scope !== "outside"),
+        getTranslationsPrintingBook(firstBookId, 0).map((x) => x.code),
+      );
   const canonLine = outsideBook ? (
     <CanonNotice
       notice={canonNotice(outsideBook.canon, holdersFor(firstBookId))}
@@ -180,6 +183,9 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   // the verse address in the path is translation-independent by construction.
   const translation = getTranslationByCode(t ?? defaultTranslationFor(firstBookId));
   if (!translation) notFound();
+  // The compare link opens with the edition on screen and a second one that carries this book.
+  const second = parallelPair(translations, translation.code).right;
+  const compareHref = `/parallel/${canonicalReferenceSlug(range, books)}?a=${translation.code}${second ? `&b=${second.code}` : ""}`;
 
   // A book-sized reference is a container, not a passage. Decided before any text is fetched,
   // so `/read/Ps` never loads 2,461 verses in order to discover it should not have rendered
@@ -471,7 +477,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
           </Link>
           <Link
             className="reader__pill"
-            href={`/parallel/${canonicalReferenceSlug(range, books)}?a=${translation.code}&b=${translation.code === "BSB" ? "WEB" : "BSB"}`}
+            href={compareHref}
           >
             <CompareIcon className="reader__pill-icon" />
             Compare

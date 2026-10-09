@@ -5,6 +5,7 @@ import { useBreakpoint } from "@/lib/capability";
 import { BottomTabBar } from "./BottomTabBar";
 import { TopTabs } from "./TopTabs";
 import { NavRail } from "./NavRail";
+import { isOutsideBookName } from "@/lib/refs/book-index";
 import { HOME_WORKSPACE, WORKSPACES, type Workspace } from "./workspaces";
 import { GuidedTour } from "@/components/onboarding/GuidedTour";
 import { InstallNudge } from "@/components/onboarding/InstallNudge";
@@ -20,9 +21,25 @@ interface AppShellProps {
   sidebar?: React.ReactNode;
 }
 
-/** The workspace a path belongs to: "/" is Home, an unknown path falls back to Read. */
+/** The book part of a /read/<ref> slug: "1Macc.2.3" -> "1Macc", "Herm.Vision.2" -> "Herm". */
+function readSlugBook(pathname: string): string | null {
+  const m = pathname.match(/^\/read\/([^/?#]+)/);
+  if (!m) return null;
+  let slug: string;
+  try { slug = decodeURIComponent(m[1]); } catch { return null; }
+  const book = slug.match(/^\s*([1-4]?[\s.]*[A-Za-z][A-Za-z\s']*)/)?.[1];
+  return book?.replace(/\s+(vision|vis|mandate|mand|parable|similitude|sim|prol|prologue)\s*$/i, "") ?? null;
+}
+
+/**
+ * The workspace a path belongs to: "/" is Home, an unknown path falls back to Read. A /read/<ref>
+ * for an outside book belongs to Chitzonim; the book is named from the static alias table, so the
+ * server render agrees with the client and the shell never touches the database.
+ */
 export function workspaceForPath(pathname: string | null): Workspace["key"] {
   if (pathname === HOME_WORKSPACE.href) return HOME_WORKSPACE.key;
+  const book = pathname ? readSlugBook(pathname) : null;
+  if (book && isOutsideBookName(book)) return "chitzonim";
   const match = WORKSPACES.find((ws) => pathname?.startsWith(ws.href));
   return match?.key ?? "read";
 }

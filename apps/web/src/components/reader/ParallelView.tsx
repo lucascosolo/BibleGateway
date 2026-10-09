@@ -18,8 +18,10 @@ export interface ParallelTranslation {
 interface ParallelViewProps {
   reference: string;
   readerSlug: string;
-  translations: [ParallelTranslation, ParallelTranslation];
+  /** One edition when only one carries the book; `note` then says so. */
+  translations: [ParallelTranslation, ParallelTranslation?];
   verseIds: VerseId[];
+  note?: string;
 }
 
 function omissionNote(omission: VerseOmission) {
@@ -33,13 +35,13 @@ function omissionNote(omission: VerseOmission) {
 }
 
 /** Verse-aligned comparison: one shared canonical row, two instances of THE renderer. */
-export function ParallelView({ reference, readerSlug, translations, verseIds }: ParallelViewProps) {
+export function ParallelView({ reference, readerSlug, translations, verseIds, note }: ParallelViewProps) {
   const [left, right] = translations;
   const byVerse = (translation: ParallelTranslation) =>
     new Map(translation.verses.map((verse) => [verse.verseId, verse]));
 
   const leftByVerse = byVerse(left);
-  const rightByVerse = byVerse(right);
+  const rightByVerse = right ? byVerse(right) : new Map<number, VerseText>();
 
   return (
     <section className="parallel" aria-labelledby="parallel-title">
@@ -63,7 +65,7 @@ export function ParallelView({ reference, readerSlug, translations, verseIds }: 
       </header>
 
       <div className="parallel__legend" aria-label="Compared translations">
-        {[left, right].map((translation) => (
+        {(right ? [left, right] : [left]).map((translation) => (
           <div key={translation.code} className="parallel__edition">
             <span className="parallel__code">{translation.code}</span>
             <span>{translation.name}</span>
@@ -71,12 +73,14 @@ export function ParallelView({ reference, readerSlug, translations, verseIds }: 
         ))}
       </div>
 
+      {note && <p className="parallel__lede">{note}</p>}
+
       <div className="parallel__rows">
         {verseIds.map((verseId) => {
           const leftVerse = leftByVerse.get(verseId);
           const rightVerse = rightByVerse.get(verseId);
           const leftOmission = left.omissions.get(verseId);
-          const rightOmission = right.omissions.get(verseId);
+          const rightOmission = right?.omissions.get(verseId);
           const rowRange = { start: verseId, end: verseId } as VerseRange;
 
           return (
@@ -104,28 +108,30 @@ export function ParallelView({ reference, readerSlug, translations, verseIds }: 
                   }}
                 />
               </div>
-              <div className="parallel__cell">
-                <div className="parallel__cell-label">
-                  <span>{right.code}</span><span>{right.name}</span>
+              {right && (
+                <div className="parallel__cell">
+                  <div className="parallel__cell-label">
+                    <span>{right.code}</span><span>{right.name}</span>
+                  </div>
+                  <PassageRenderer
+                    verses={rightVerse ? [rightVerse] : []}
+                    range={rowRange}
+                    density="reader"
+                    translationId={right.translationId}
+                    omissions={rightOmission ? [omissionNote(rightOmission)] : undefined}
+                    layerOverrides={{
+                      verseNumbers: false,
+                      highlights: false,
+                      notes: false,
+                      crossRefs: false,
+                      heat: false,
+                      variants: false,
+                      sourceCrit: false,
+                      interlinear: false,
+                    }}
+                  />
                 </div>
-                <PassageRenderer
-                  verses={rightVerse ? [rightVerse] : []}
-                  range={rowRange}
-                  density="reader"
-                  translationId={right.translationId}
-                  omissions={rightOmission ? [omissionNote(rightOmission)] : undefined}
-                  layerOverrides={{
-                    verseNumbers: false,
-                    highlights: false,
-                    notes: false,
-                    crossRefs: false,
-                    heat: false,
-                    variants: false,
-                    sourceCrit: false,
-                    interlinear: false,
-                  }}
-                />
-              </div>
+              )}
             </article>
           );
         })}
