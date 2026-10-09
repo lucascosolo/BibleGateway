@@ -39,6 +39,14 @@ export async function GET(request: NextRequest) {
     throw error;
   }
 
+  // One chapter at a time: the player asks for the chapter that follows the one playing, and a
+  // whole-book or cross-book ref would make the route assemble every chapter's timings and
+  // compute `nextHref` from the wrong end of the range. The route is public, so the bound is
+  // enforced here rather than trusted to the caller.
+  if (bookOf(range.start) !== bookOf(range.end) || chapterOf(range.start) !== chapterOf(range.end)) {
+    return NextResponse.json({ error: `"${ref}" spans more than one chapter; ask for one chapter` }, { status: 400 });
+  }
+
   const verseIds = getExistingVerseIds(range);
   if (verseIds.length === 0) return NextResponse.json({ error: `no verses found for "${ref}"` }, { status: 404 });
 

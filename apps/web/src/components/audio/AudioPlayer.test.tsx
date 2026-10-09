@@ -168,7 +168,7 @@ describe("AudioPlayer lifecycle", () => {
     await act(async () => useAudioStore.getState().send({ kind: "play", verseId: null }));
     const main = view.container.querySelector("audio")!;
     await act(async () => main.dispatchEvent(new Event("ended")));
-    expect(router.push).toHaveBeenCalledWith("/read/John.5?t=WEB");
+    expect(router.replace).toHaveBeenCalledWith("/read/John.5?t=WEB", { scroll: false });
     const nextVerse = 43_005_001 as VerseId;
     const next = passage();
     next.slug = "John.5";
@@ -330,13 +330,13 @@ describe("AudioPlayer gapless chapter handoff", () => {
   it.each([
     ["answers not ok", () => stubFetch(nextPage(), false)],
     ["rejects", () => stubRejectingFetch()],
-  ])("falls back to router.push when the prefetch %s", async (_n, stub) => {
+  ])("falls back to navigating when the prefetch %s", async (_n, stub) => {
     stub();
     const { main } = await mountReader();
     await act(async () => { main.dispatchEvent(new Event("ended")); });
-    expect(router.push).toHaveBeenCalledWith("/read/John.5?t=WEB");
+    expect(router.replace).toHaveBeenCalledWith("/read/John.5?t=WEB", { scroll: false });
     expect(useAudioStore.getState().autoplayPending).toBe(true);
-    expect(router.replace).not.toHaveBeenCalled();
+    expect(router.push).not.toHaveBeenCalled();
   });
 
   it("ignores a prefetch whose href differs from the passage nextHref", async () => {
@@ -346,8 +346,8 @@ describe("AudioPlayer gapless chapter handoff", () => {
       prefetch: { href: "/read/John.9?t=WEB", passage: nextPage() },
     }));
     await act(async () => { main.dispatchEvent(new Event("ended")); });
-    expect(router.push).toHaveBeenCalledWith("/read/John.5?t=WEB");
+    expect(router.replace).toHaveBeenCalledWith("/read/John.5?t=WEB", { scroll: false });
     expect(useAudioStore.getState().autoplayPending).toBe(true);
-    expect(router.replace).not.toHaveBeenCalled();
+    expect(router.push).not.toHaveBeenCalled();
   });
 });

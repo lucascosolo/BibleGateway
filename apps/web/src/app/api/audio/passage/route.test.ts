@@ -85,6 +85,11 @@ describe("GET /api/audio/passage", () => {
     expect((await get("?ref=Nonsuchbook+3")).status).toBe(400);
   });
 
+  it("400s on a range that spans more than one chapter", async () => {
+    expect((await get("?ref=John.5-John.6&t=WEB")).status).toBe(400);
+    expect((await get("?ref=John&t=WEB")).status).toBe(400);
+  });
+
   it("404s on an unknown translation", async () => {
     expect((await get("?ref=John.5&t=XXX")).status).toBe(404);
   });

@@ -389,7 +389,9 @@ export function AudioPlayer() {
       }
       if (p.nextHref) {
         set({ autoplayPending: true, status: "loading" });
-        router.push(p.nextHref);
+        // `replace`, like the prefetched hand-off: a chapter the player turned to by itself is
+        // not a page the listener chose, so Back should return to where they were reading.
+        router.replace(p.nextHref, { scroll: false });
         return;
       }
       set({ status: "idle" });
