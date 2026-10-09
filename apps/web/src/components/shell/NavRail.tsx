@@ -3,7 +3,8 @@
 import Link from "next/link";
 import clsx from "clsx";
 import { WORKSPACES, type Workspace } from "./workspaces";
-import { WORKSPACE_ICONS } from "./icons";
+import { HeartIcon, WORKSPACE_ICONS } from "./icons";
+import { SUPPORT_URL } from "@/lib/support";
 import { GlossLabel } from "@/components/GlossLabel";
 import { Wordmark } from "@/components/Wordmark";
 import { ThemeToggle } from "./ThemeToggle";
@@ -72,6 +73,16 @@ export function NavRail({ active }: { active: Workspace["key"] }) {
             workspace list above, because it is not a place — it is help about the places. */}
         <TourLauncher variant="rail" />
         <ThemeToggle className="flex-col rounded-[var(--radius-lg)]" />
+        {SUPPORT_URL && (
+          <Link
+            href="/support"
+            aria-label="Support Jot"
+            title="Support Jot"
+            className="flex h-11 w-11 items-center justify-center rounded-[var(--radius-full)] text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-ink)]"
+          >
+            <HeartIcon className="h-5 w-5" />
+          </Link>
+        )}
       </div>
     </aside>
   );

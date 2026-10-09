@@ -5,7 +5,7 @@ export function SiteFooter() {
   return (
     <footer data-chrome className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-6 px-6 py-6 text-sm text-[var(--color-ink-muted)]">
       {SUPPORT_URL && (
-        <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href={SUPPORT_URL} target="_blank" rel="noopener noreferrer">
+        <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href="/support">
           Support Jot
         </a>
       )}

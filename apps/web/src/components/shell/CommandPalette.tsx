@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
+import { SUPPORT_URL } from "@/lib/support";
 import { useModalSurface } from "@/lib/a11y/modal-surface";
 
 function isGreekOrHebrew(value: string) {
@@ -66,6 +67,11 @@ export function CommandPalette() {
           />
           <p>References open in the reader; words search the text; Hebrew and Greek open Word study.</p>
         </form>
+        {SUPPORT_URL && (
+          <a href="/support" className="flex min-h-[var(--touch-target)] items-center border-t border-[var(--color-border)] px-4 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-ink)]">
+            Support Jot
+          </a>
+        )}
       </div>
     </div>,
     document.body,

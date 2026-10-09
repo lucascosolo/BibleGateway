@@ -7,6 +7,7 @@ import { ContinueReading } from "@/components/home/ContinueReading";
 import { BookBrowser } from "@/components/home/BookBrowser";
 import { CorpusDoorways } from "@/components/home/CorpusDoorways";
 import { CorpusFacts } from "@/components/home/CorpusFacts";
+import { SupportCard } from "@/components/home/SupportCard";
 import { TourLauncher } from "@/components/onboarding/TourLauncher";
 import { getAllOmissions } from "@/lib/db/apparatus";
 import {
@@ -107,6 +108,8 @@ export default function Home() {
         </p>
         <BookBrowser books={browseIndex} />
       </section>
+
+      <SupportCard />
 
       <section id="doorways" aria-label="Ways into the corpus">
         <h2 className="mb-4 font-serif text-[var(--text-lg)] text-[var(--color-ink)]">Ways in</h2>
