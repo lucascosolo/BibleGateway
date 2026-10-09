@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fetch the raw recordings named in sources.json into $CACHE/raw/<raw_dir>/. Idempotent and
 # resumable: every transfer uses `curl -C -`, so rerunning after an interruption continues.
-# Never deletes anything. Usage: ./download.sh web|bsb|kjv|heb|all
+# Never deletes anything. Usage: ./download.sh web|bsb|kjv|asv|heb|all
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -71,6 +71,22 @@ EOF
   echo "kjv done: $(find "$RAW/kjv" -name '*.mp3' | wc -l) files"
 }
 
+asv() {
+  # Ron Altman's LibriVox ASV, 129 multi-chapter files, fetched and stored exactly as kjv() does.
+  mkdir -p "$RAW/asv"
+  python3 -I - "$HERE/asv-files.json" > "$CACHE/asv.list" <<'EOF'
+import json, sys
+for name, _title, _dur in json.load(open(sys.argv[1])):
+    print(name)
+EOF
+  local failed=0
+  while read -r name; do
+    fetch "https://archive.org/download/bible_asv_complete_2112_librivox/${name%.mp3}_64kb.mp3" "$RAW/asv/$name" || failed=$((failed + 1))
+  done < "$CACHE/asv.list"
+  [ "$failed" -eq 0 ] || echo "asv: $failed files failed; rerun to retry" >&2
+  echo "asv done: $(find "$RAW/asv" -name '*.mp3' | wc -l) files"
+}
+
 heb() {
   # Rabbi Dan Be'eri's book-level recordings (CC BY-SA 3.0), 30 files.
   mkdir -p "$RAW/heb"
@@ -85,7 +101,7 @@ heb() {
 }
 
 case "${1:-}" in
-  web|bsb|kjv|heb) "$1" ;;
-  all) heb; web; kjv; bsb ;;
-  *) echo "usage: download.sh web|bsb|kjv|heb|all" >&2; exit 2 ;;
+  web|bsb|kjv|asv|heb) "$1" ;;
+  all) heb; web; kjv; asv; bsb ;;
+  *) echo "usage: download.sh web|bsb|kjv|asv|heb|all" >&2; exit 2 ;;
 esac

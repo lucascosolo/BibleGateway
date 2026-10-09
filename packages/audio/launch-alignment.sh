@@ -2,7 +2,10 @@
 # Start the full alignment as a transient user service, outside any sandbox, so it can see the
 # GPU and outlive the terminal. Run it yourself from a normal shell (or with `!` in Claude Code):
 #
-#   packages/audio/launch-alignment.sh
+#   packages/audio/launch-alignment.sh [EDITION...]
+#
+# JOT_AUDIO_UNIT names the unit (default jot-audio-alignment) and JOT_AUDIO_MAX_SECONDS its
+# runtime limit (default 86400); a CPU-only run of a whole Bible needs longer than a day.
 #
 # It runs resume.sh (Hebrew → WEB → BSB → KJV, one aligner at a time, resumable per chapter) under
 # limits like the September 2026 run: 24 hours, 10 GB RAM, four CPU threads, nice 10. Watch it with
@@ -15,11 +18,11 @@ set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CACHE="${JOT_AUDIO_CACHE:-$HOME/.cache/jot-audio}"
-UNIT="jot-audio-alignment"
+UNIT="${JOT_AUDIO_UNIT:-jot-audio-alignment}"
 LOG="${CACHE:?}/work/resume-$(date -u +%Y%m%d-%H%M%S).log"
 
 [ -x "$CACHE/venv/bin/python" ] || { echo "no venv at $CACHE/venv (see README.md)" >&2; exit 2; }
-for d in heb web kjv bsb; do
+for d in heb web kjv bsb asv; do
   n="$(find "$CACHE/raw/$d" -name '*.mp3' 2>/dev/null | wc -l)"
   echo "raw/$d: $n files"
 done
@@ -34,13 +37,13 @@ if systemctl --user is-active --quiet "$UNIT"; then
 fi
 
 systemd-run --user --unit="$UNIT" --collect \
-  --property=RuntimeMaxSec=86400 \
+  --property=RuntimeMaxSec="${JOT_AUDIO_MAX_SECONDS:-86400}" \
   --property=MemoryMax=10G \
   --property=CPUQuota=400% \
   --property=Nice=10 \
   --setenv=JOT_AUDIO_CACHE="$CACHE" \
   --setenv=HOME="$HOME" \
   --working-directory="$HERE" \
-  /bin/bash -c "exec /bin/bash '$HERE/resume.sh' >> '$LOG' 2>&1"
+  /bin/bash -c "exec /bin/bash '$HERE/resume.sh' $* >> '$LOG' 2>&1"
 
 echo "started $UNIT; log: $LOG"

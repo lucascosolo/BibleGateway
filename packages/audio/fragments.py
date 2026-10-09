@@ -108,10 +108,11 @@ def units_chapter_files(edition: dict, raw: Path) -> list[dict]:
     return units
 
 
-def units_multi_chapter_files(edition: dict, raw: Path, names: dict[str, int]) -> list[dict]:
+def units_multi_chapter_files(edition: dict, raw: Path, names: dict[str, int], db: sqlite3.Connection) -> list[dict]:
     entries = json.loads((HERE / edition["file_map"]).read_text())
-    # "001 - Genesis Ch. 1 - 14", "052 - Psalms 1 - 32", "126 - Revelation Ch.1 - 17", "124 - 3 John Ch. 1"
-    title_re = re.compile(r"^\d+\s*-\s*(?P<book>.+?)\s+(?:Ch\.?\s*)?(?P<a>\d+)(?:\s*-\s*(?P<b>\d+))?\s*$")
+    # "001 - Genesis Ch. 1 - 14", "052 - Psalms 1 - 32", "126 - Revelation Ch.1 - 17", "124 - 3 John Ch. 1",
+    # and "044 - Ezra" (ASV): a bare book name is the whole book.
+    title_re = re.compile(r"^\d+\s*-\s*(?P<book>.+?)(?:\s+(?:Ch\.?\s*)?(?P<a>\d+)(?:\s*-\s*(?P<b>\d+))?)?\s*$")
     units = []
     seen: set[tuple[int, int]] = set()
     for name, title, _length in entries:
@@ -121,8 +122,8 @@ def units_multi_chapter_files(edition: dict, raw: Path, names: dict[str, int]) -
         book_id = names.get(m["book"].lower())
         if book_id is None:
             raise SystemExit(f"unknown book in LibriVox title: {title!r}")
-        a = int(m["a"])
-        b = int(m["b"] or a)
+        a = int(m["a"] or 1)
+        b = int(m["b"] or m["a"] or chapter_count(db, book_id))
         # Two titles claim Deuteronomy 25 and Acts 10; the first file keeps them and a bad
         # alignment score on either would show the guess was wrong.
         chapters = [{"book_id": book_id, "chapter": c} for c in range(a, b + 1) if (book_id, c) not in seen]
@@ -174,7 +175,7 @@ def main() -> None:
         if layout == "chapter-files":
             units = units_chapter_files(edition, raw)
         elif layout == "multi-chapter-files":
-            units = units_multi_chapter_files(edition, raw, names)
+            units = units_multi_chapter_files(edition, raw, names, db)
         elif layout == "book-files":
             units = units_book_files(edition, raw, db)
         else:

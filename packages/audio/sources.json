@@ -73,6 +73,19 @@
         },
         "cantillated": [15, 19, 22, 34, 35, 36, 38, 39]
       }
+    },
+    {
+      "code": "ASV-librivox",
+      "translation": "ASV",
+      "language": "eng",
+      "reader": "Ron Altman",
+      "name": "American Standard Version, read by Ron Altman (LibriVox)",
+      "source_url": "https://archive.org/details/bible_asv_complete_2112_librivox",
+      "license": "Public domain (LibriVox)",
+      "attribution": "LibriVox recording of the American Standard Version (1901), read by Ron Altman. Distributed by the Internet Archive. LibriVox recordings are in the public domain.",
+      "layout": "multi-chapter-files",
+      "raw_dir": "asv",
+      "file_map": "asv-files.json"
     }
   ]
 }
