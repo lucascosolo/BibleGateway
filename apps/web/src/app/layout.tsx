@@ -87,6 +87,17 @@ export const metadata: Metadata = {
   openGraph: { ...siteCard.openGraph, url: undefined },
   twitter: siteCard.twitter,
   title: "Jot — scholarly Bible study",
+  // The installable app: manifest, icons and the iOS home-screen title. Without `appleWebApp`
+  // iOS names the tile from the page title and draws a letter for it; see `manifest.ts`.
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48 32x32 16x16" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/icons/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  appleWebApp: { capable: true, title: SITE_NAME, statusBarStyle: "default" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 } },
   // Says what a reader gets, in words they already have. The previous description — "academic
   // apparatus fused with a fast, personal, deeply interactive reading surface" — described the
