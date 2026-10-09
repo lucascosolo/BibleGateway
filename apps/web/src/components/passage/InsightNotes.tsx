@@ -51,7 +51,13 @@ export function InsightNotes({ notes }: InsightNotesProps) {
           <WindowIcon />
           <span className="insight-note__text">
             {note.text}
-            {note.source && <span className="insight-note__source"> — {note.source}</span>}
+            {note.alternatives && (
+              <>
+                {" "}
+                <span className="insight-note__alternatives">Other readings: {note.alternatives}</span>
+              </>
+            )}
+            <span className="insight-note__source"> — {note.source}</span>
           </span>
         </p>
       ))}

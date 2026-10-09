@@ -29,10 +29,12 @@ export interface InsightNote {
    *  skeptical reader trust it (a lexicon, a standard reference), and is shown quietly rather
    *  than as apparatus. */
   text: string;
-  source?: string;
+  /** Other defensible readings, shown after the text as "Other readings:". */
+  alternatives?: string;
+  source: string;
 }
 
-const NOTES: readonly InsightNote[] = [
+export const INSIGHT_NOTES: readonly InsightNote[] = [
   {
     id: "gen2-7-nephesh",
     verseId: toVerseId(1, 2, 7),
@@ -49,6 +51,7 @@ const NOTES: readonly InsightNote[] = [
     id: "gen26-30-covenant-meal",
     verseId: toVerseId(1, 26, 30),
     text: "Isaac and Abimelech seal their treaty by eating together. In the ancient Near East, a covenant was ratified with a shared meal — eating with someone wasn't hospitality, it was signing the contract.",
+    source: "Kitchen, On the Reliability of the Old Testament (2003), pp. 323-324 (treaty meals in Genesis 21, 26, 31)",
   },
   {
     id: "deut6-5-lev",
@@ -59,18 +62,21 @@ const NOTES: readonly InsightNote[] = [
   {
     id: "isa6-3-kavod",
     verseId: toVerseId(23, 6, 3),
-    text: "“Glory” (kavod) literally means weight — substance, not shine. Calling the earth “full of his glory” says the earth is full of the sheer weight of who God is, not full of a glow.",
+    text: "“Glory” (kavod) is formed from the Hebrew root for heaviness, and in use it means honour, importance and splendour. The image of weight is one way to read the word, not its meaning; calling the earth “full of his glory” says it is full of God’s honour and presence.",
     source: "BDB, kavod",
   },
   {
     id: "gen2-21-tsela",
     verseId: toVerseId(1, 2, 21),
-    text: "The Hebrew word tsela means “side” — like the side of a mountain or a building. Calling it a “rib” is a tradition, not a translation. God didn’t take a tiny bone; He split the human in half, and from that side made another whole person. The poetry of the passage (bone of my bones, flesh of my flesh) makes far more sense when you see it that way.",
+    text: "The Hebrew is tsela, which elsewhere in the Bible means the side of a structure (the tabernacle, the temple) and is rendered “rib” here by the ancient versions and most translations.",
+    alternatives: "Raanan Eichler argues for “side”, taking the verse as one half of the first human, while allowing that “rib” remains possible; the Septuagint, Vulgate and the English tradition read “rib”. Jot’s lexicon entry H6763 lists both.",
+    source: "BDB, tsela (H6763); Raanan Eichler, “When God Took Adam’s Rib”, TheTorah.com (2020)",
   },
   {
     id: "matt1-1-christos",
     verseId: toVerseId(40, 1, 1),
     text: "“Christ” is not Jesus’s surname. It comes from the Greek Christos, which translates the Hebrew mashiach — “the Anointed One.” Calling him Jesus Christ is like saying “Jesus the Messiah.” It’s a title, not a family name.",
+    source: "BDAG, christos; LSJ, chriō",
   },
 ];
 
@@ -79,5 +85,5 @@ const NOTES: readonly InsightNote[] = [
  *  page composes this exactly like it composes those, even though this source is static data
  *  rather than a query. */
 export function getInsightNotes(range: VerseRange): InsightNote[] {
-  return NOTES.filter((note) => note.verseId >= range.start && note.verseId <= range.end);
+  return INSIGHT_NOTES.filter((note) => note.verseId >= range.start && note.verseId <= range.end);
 }
