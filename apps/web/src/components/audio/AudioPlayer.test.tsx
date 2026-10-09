@@ -7,7 +7,7 @@ import { useAudioStore, type ReaderPassage } from "@/lib/store/audio";
 import { AudioPlayer } from "./AudioPlayer";
 import { ReaderAudio } from "./ReaderAudio";
 
-const router = vi.hoisted(() => ({ push: vi.fn() }));
+const router = vi.hoisted(() => ({ push: vi.fn(), replace: vi.fn() }));
 vi.mock("next/navigation", () => ({ useRouter: () => router }));
 
 const verse = 43_004_011 as VerseId;
@@ -31,8 +31,10 @@ let play: ReturnType<typeof vi.spyOn>;
 beforeEach(() => {
   useAudioStore.setState({
     passage: passage(), open: false, status: "idle", choice: "translation", rate: 1,
-    current: null, currentVerseId: null, autoplayPending: false, command: null, commandSeq: 0, error: null,
+    current: null, currentVerseId: null, autoplayPending: false, command: null, commandSeq: 0, error: null, prefetch: null,
   });
+  router.push.mockReset();
+  router.replace.mockReset();
   vi.spyOn(HTMLMediaElement.prototype, "readyState", "get").mockReturnValue(1);
   vi.spyOn(HTMLMediaElement.prototype, "load").mockImplementation(() => undefined);
   play = vi.spyOn(HTMLMediaElement.prototype, "play").mockImplementation(function (this: HTMLMediaElement) {
@@ -193,5 +195,159 @@ describe("AudioPlayer attribution", () => {
     const link = screen.getByRole("link", { name: /Licence: Public domain/ });
     expect(link.getAttribute("href")).toBe("https://example.com");
     expect(link.textContent).toBe("Public domain");
+  });
+});
+
+describe("AudioPlayer gapless chapter handoff", () => {
+  const nextVerse = 43_005_001 as VerseId;
+  const nextPage = (): ReaderPassage => ({
+    slug: "John.5", label: "John 5", bookName: "John", translationCode: "WEB",
+    renderedVerseIds: [nextVerse], nextHref: "/read/John.6?t=WEB",
+    audio: {
+      editions,
+      chapters: [{ bookId: 43, chapter: 5, byEdition: {
+        WEB: { ...chapter("WEB"), chapter: 5, url: "/audio/WEB/43-005.m4a?v=test",
+          verses: [{ verseId: nextVerse, startMs: 0, endMs: 5000 }] },
+      } }],
+    },
+  });
+  const json = (body: unknown, ok = true) => ({ ok, status: ok ? 200 : 500, json: async () => body });
+  const FIVE = "/api/audio/passage?ref=John.5&t=WEB";
+
+  /** Answers John.5 with `body`; any other URL (the next-next chapter) fails. */
+  function stubFetch(body: unknown, ok = true) {
+    const fn = vi.fn(async (url: string) => (url === FIVE ? json(body, ok) : json(null, false)));
+    vi.stubGlobal("fetch", fn);
+    return fn;
+  }
+  function stubRejectingFetch() {
+    const fn = vi.fn(async () => { throw new Error("offline"); });
+    vi.stubGlobal("fetch", fn);
+    return fn;
+  }
+
+  async function mountReader(key = "a") {
+    const view = render(<><ReaderAudio key={key} passage={passage()} /><AudioPlayer /></>);
+    await act(async () => useAudioStore.getState().send({ kind: "play", verseId: null }));
+    await act(async () => { await Promise.resolve(); });
+    const main = view.container.querySelector("audio")!;
+    return { view, main };
+  }
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
+    delete (navigator as unknown as Record<string, unknown>).mediaSession;
+  });
+
+  it("prefetches the next page from /api/audio/passage once a chapter is cued", async () => {
+    const body = nextPage();
+    const fetchMock = stubFetch(body);
+    await mountReader();
+    expect(fetchMock).toHaveBeenCalledWith(FIVE, expect.anything());
+    expect(useAudioStore.getState().prefetch).toEqual({ href: "/read/John.5?t=WEB", passage: body });
+  });
+
+  it("does not fetch when the passage has no nextHref", async () => {
+    const fetchMock = stubFetch(nextPage());
+    useAudioStore.setState({ passage: { ...passage(), nextHref: null } });
+    render(<AudioPlayer />);
+    await act(async () => useAudioStore.getState().send({ kind: "play", verseId: null }));
+    await act(async () => { await Promise.resolve(); });
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("does not fetch while a later chapter with audio follows on the same page", async () => {
+    const fetchMock = stubFetch(nextPage());
+    const two = passage();
+    two.audio = {
+      editions,
+      chapters: [
+        ...two.audio!.chapters,
+        { bookId: 43, chapter: 5, byEdition: { WEB: { ...chapter("WEB"), chapter: 5, url: "/audio/WEB/43-005.m4a?v=test" } } },
+      ],
+    };
+    useAudioStore.setState({ passage: two });
+    render(<AudioPlayer />);
+    await act(async () => useAudioStore.getState().send({ kind: "play", verseId: null }));
+    await act(async () => { await Promise.resolve(); });
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it.each([
+    ["answers not ok", () => stubFetch(nextPage(), false)],
+    ["rejects", () => stubRejectingFetch()],
+  ])("leaves prefetch null when the fetch %s", async (_n, stub) => {
+    stub();
+    await mountReader();
+    expect(useAudioStore.getState().prefetch).toBeNull();
+    expect(useAudioStore.getState().error).toBeNull();
+  });
+
+  it("on ended, starts the prefetched chapter synchronously and swaps the URL without navigating", async () => {
+    const body = nextPage();
+    stubFetch(body);
+    const ms = { setActionHandler: vi.fn(), metadata: null as { title: string } | null };
+    Object.defineProperty(navigator, "mediaSession", { value: ms, configurable: true });
+    vi.stubGlobal("MediaMetadata", class { constructor(public init: { title: string }) { Object.assign(this, init); } });
+    const { main } = await mountReader();
+    expect(useAudioStore.getState().prefetch).not.toBeNull();
+    play.mockClear();
+    let playedSync = 0;
+    let srcSync = "";
+    act(() => {
+      main.dispatchEvent(new Event("ended"));
+      playedSync = play.mock.contexts.filter((c) => c === main).length;
+      srcSync = main.src;
+    });
+    expect(playedSync).toBe(1);
+    expect(srcSync).toContain("43-005.m4a");
+    await act(async () => { await Promise.resolve(); });
+    const s = useAudioStore.getState();
+    expect(s.current?.chapter).toBe(5);
+    expect(s.passage?.slug).toBe("John.5");
+    expect(s.autoplayPending).toBe(false);
+    expect(s.prefetch === null || s.prefetch.href === "/read/John.6?t=WEB").toBe(true);
+    expect(router.replace).toHaveBeenCalledWith("/read/John.5?t=WEB", { scroll: false });
+    expect(router.push).not.toHaveBeenCalled();
+    expect(ms.metadata?.title).toBe("John 5");
+  });
+
+  it("does not restart playback when the next page then mounts", async () => {
+    const body = nextPage();
+    stubFetch(body);
+    const { view, main } = await mountReader("a");
+    await act(async () => { main.dispatchEvent(new Event("ended")); });
+    play.mockClear();
+    await act(async () => view.rerender(<><ReaderAudio key="b" passage={nextPage()} /><AudioPlayer /></>));
+    await act(async () => { await Promise.resolve(); });
+    expect(play).not.toHaveBeenCalled();
+    expect(main.src).toContain("43-005.m4a");
+    expect(useAudioStore.getState().status).toBe("playing");
+    expect(useAudioStore.getState().current?.chapter).toBe(5);
+    expect(useAudioStore.getState().passage?.slug).toBe("John.5");
+  });
+
+  it.each([
+    ["answers not ok", () => stubFetch(nextPage(), false)],
+    ["rejects", () => stubRejectingFetch()],
+  ])("falls back to router.push when the prefetch %s", async (_n, stub) => {
+    stub();
+    const { main } = await mountReader();
+    await act(async () => { main.dispatchEvent(new Event("ended")); });
+    expect(router.push).toHaveBeenCalledWith("/read/John.5?t=WEB");
+    expect(useAudioStore.getState().autoplayPending).toBe(true);
+    expect(router.replace).not.toHaveBeenCalled();
+  });
+
+  it("ignores a prefetch whose href differs from the passage nextHref", async () => {
+    stubRejectingFetch();
+    const { main } = await mountReader();
+    await act(async () => useAudioStore.setState({
+      prefetch: { href: "/read/John.9?t=WEB", passage: nextPage() },
+    }));
+    await act(async () => { main.dispatchEvent(new Event("ended")); });
+    expect(router.push).toHaveBeenCalledWith("/read/John.5?t=WEB");
+    expect(useAudioStore.getState().autoplayPending).toBe(true);
+    expect(router.replace).not.toHaveBeenCalled();
   });
 });

@@ -2,6 +2,7 @@ import "server-only";
 
 import { createHash } from "node:crypto";
 
+import { getAudioBuildId } from "./audio";
 import { getCorpusBuildId } from "./client";
 import { getTimelineBuildId } from "./timeline";
 
@@ -44,6 +45,15 @@ export function corpusCacheHeaders(request: Request): Record<string, string> {
  */
 export function timelineCacheHeaders(request: Request): Record<string, string> {
   return headersFor(request, "timeline", `${getTimelineBuildId() ?? "none"}.${getCorpusBuildId()}`);
+}
+
+/** The audio API, versioned by `audio.db` (file URLs, timings) and `bible.db` (slugs, labels). */
+export function audioCacheHeaders(request: Request): Record<string, string> {
+  return headersFor(request, "audio", `${getAudioBuildId()}.${getCorpusBuildId()}`);
+}
+
+export function audioNotModified(request: Request): Response | null {
+  return notModifiedFor(request, audioCacheHeaders(request));
 }
 
 function headersFor(request: Request, prefix: string, build: string): Record<string, string> {

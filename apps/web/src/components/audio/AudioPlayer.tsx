@@ -58,6 +58,17 @@ function chaptersWithAudio(passage: ReaderPassage, choice: "translation" | "orig
   return out;
 }
 
+/** Lock-screen title and reader for the chapter now on the element. */
+function showOnLockScreen(passage: ReaderPassage, current: ChapterAudio) {
+  if (typeof navigator === "undefined" || !("mediaSession" in navigator)) return;
+  const edition = editionByCode(passage.audio?.editions ?? [], current.editionCode);
+  navigator.mediaSession.metadata = new MediaMetadata({
+    title: `${passage.bookName} ${current.chapter}`,
+    artist: edition ? `${edition.name}` : "Jot",
+    album: "Jot",
+  });
+}
+
 export function AudioPlayer() {
   const router = useRouter();
   const mainRef = useRef<HTMLAudioElement>(null);
@@ -304,6 +315,35 @@ export function AudioPlayer() {
     if (mainRef.current) mainRef.current.playbackRate = rate;
   }, [rate]);
 
+  // When the chapter now playing is the last with audio on this page, fetch the next page's
+  // recordings ahead of time. `ended` can then switch files inside its own handler, which a
+  // locked phone allows; a play() from the next page after navigation it refuses.
+  const nextHref = passage?.nextHref ?? null;
+  useEffect(() => {
+    if (!passage || !current || !nextHref) return;
+    const list = chaptersWithAudio(passage, choice);
+    const i = list.findIndex((c) => c.bookId === current.bookId && c.chapter === current.chapter);
+    if (i >= 0 && i + 1 < list.length) return;
+    set({ prefetch: null });
+    const target = new URL(nextHref, "http://jot.invalid");
+    const ref = target.pathname.slice("/read/".length);
+    const t = encodeURIComponent(target.searchParams.get("t") ?? "");
+    const controller = new AbortController();
+    void (async () => {
+      try {
+        const res = await fetch(`/api/audio/passage?ref=${ref}&t=${t}`, { signal: controller.signal });
+        if (!res.ok) return;
+        const next = (await res.json()) as ReaderPassage;
+        if (useAudioStore.getState().passage?.nextHref === nextHref) set({ prefetch: { href: nextHref, passage: next } });
+      } catch {
+        // Offline or aborted: `ended` falls back to navigating and autoplaying.
+      }
+    })();
+    return () => controller.abort();
+    // Once per chapter start and per page; `passage` is read from the same render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [current?.url, passage?.slug, passage?.translationCode, nextHref, choice, set]);
+
   // Element events → store.
   useEffect(() => {
     const el = mainRef.current;
@@ -333,6 +373,20 @@ export function AudioPlayer() {
         cue(following, following.verses[0]?.verseId ?? null, true);
         return;
       }
+      const prefetched = s.prefetch && s.prefetch.href === p.nextHref ? s.prefetch.passage : null;
+      const next = prefetched ? chaptersWithAudio(prefetched, s.choice)[0] : undefined;
+      if (p.nextHref && prefetched && next) {
+        // Same element, new file, play() before this handler returns: the continuation a
+        // locked iPhone permits. The route follows the audio rather than leading it, and the
+        // page that mounts finds its chapter already playing.
+        el.src = next.url;
+        el.playbackRate = s.rate;
+        playMain();
+        s.advance(next);
+        showOnLockScreen(prefetched, next);
+        router.replace(p.nextHref, { scroll: false });
+        return;
+      }
       if (p.nextHref) {
         set({ autoplayPending: true, status: "loading" });
         router.push(p.nextHref);
@@ -354,7 +408,7 @@ export function AudioPlayer() {
       el.removeEventListener("error", onError);
       el.removeEventListener("ended", onEnded);
     };
-  }, [cue, router, set]);
+  }, [cue, playMain, router, set]);
 
   // The clip element: stop at the word's end, then hand back to the chapter if it was playing.
   useEffect(() => {
@@ -380,14 +434,7 @@ export function AudioPlayer() {
   useEffect(() => {
     if (typeof navigator === "undefined" || !("mediaSession" in navigator)) return;
     const ms = navigator.mediaSession;
-    if (passage && current) {
-      const edition = editionByCode(passage.audio?.editions ?? [], current.editionCode);
-      ms.metadata = new MediaMetadata({
-        title: `${passage.bookName} ${current.chapter}`,
-        artist: edition ? `${edition.name}` : "Jot",
-        album: "Jot",
-      });
-    }
+    if (passage && current) showOnLockScreen(passage, current);
     ms.setActionHandler("play", () => send({ kind: "play", verseId: null }));
     ms.setActionHandler("pause", () => send({ kind: "pause" }));
     ms.setActionHandler("previoustrack", () => send({ kind: "step", direction: -1 }));

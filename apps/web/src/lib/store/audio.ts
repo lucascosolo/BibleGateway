@@ -62,15 +62,21 @@ interface AudioState {
   /** Bumped with every command so two identical commands in a row both fire. */
   commandSeq: number;
   error: string | null;
+  /** The chapter after the page's last, fetched ahead so `ended` can switch files without a gesture. */
+  prefetch: { href: string; passage: ReaderPassage } | null;
 
   publish: (passage: ReaderPassage | null) => void;
+  /** Unpublish, but only if the store still holds this page; the player may have moved on. */
+  withdraw: (slug: string, translationCode: string) => void;
+  /** Take the prefetched chapter as the passage and `chapter` as what the element now plays. */
+  advance: (chapter: ChapterAudio) => void;
   setOpen: (open: boolean) => void;
   setChoice: (choice: EditionChoice) => void;
   setRate: (rate: number) => void;
   send: (command: PlayerCommand) => void;
   /** For the element only. */
   _set: (
-    patch: Partial<Pick<AudioState, "status" | "current" | "currentVerseId" | "autoplayPending" | "command" | "error" | "open">>,
+    patch: Partial<Pick<AudioState, "status" | "current" | "currentVerseId" | "autoplayPending" | "command" | "error" | "open" | "prefetch">>,
   ) => void;
 }
 
@@ -88,8 +94,26 @@ export const useAudioStore = create<AudioState>()(
       command: null,
       commandSeq: 0,
       error: null,
+      prefetch: null,
 
-      publish: (passage) => set({ passage }),
+      publish: (passage) =>
+        set((s) => ({ passage, prefetch: passage && samePage(s.passage, passage) ? s.prefetch : null })),
+      withdraw: (slug, translationCode) =>
+        set((s) => (samePage(s.passage, { slug, translationCode }) ? { passage: null, prefetch: null } : {})),
+      advance: (chapter) =>
+        set((s) =>
+          s.prefetch
+            ? {
+                passage: s.prefetch.passage,
+                prefetch: null,
+                current: chapter,
+                currentVerseId: chapter.verses[0]?.verseId ?? null,
+                autoplayPending: false,
+                error: null,
+                status: "loading",
+              }
+            : {},
+        ),
       setOpen: (open) => set({ open }),
       setChoice: (choice) => set({ choice }),
       setRate: (rate) => set({ rate }),
@@ -109,3 +133,10 @@ export const useAudioStore = create<AudioState>()(
     },
   ),
 );
+
+function samePage(
+  a: Pick<ReaderPassage, "slug" | "translationCode"> | null,
+  b: Pick<ReaderPassage, "slug" | "translationCode">,
+): boolean {
+  return a !== null && a.slug === b.slug && a.translationCode === b.translationCode;
+}
