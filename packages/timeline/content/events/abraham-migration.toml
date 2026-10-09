@@ -24,10 +24,10 @@ label = "A 2nd-millennium BCE patriarchal age"
 tradition = "archaeological"
 earliest = -2000
 latest = -1001
-held_by = "William F. Albright and G. Ernest Wright"
+held_by = "William F. Albright"
 summary = """
-Albright and Wright believed the patriarchs were real people, or believable composites of real people, who lived in the 2nd millennium BCE. They offer no narrower claim, so the span shown is the whole thousand years."""
-citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
+Albright and his colleagues believed the age of the patriarchs was a real one, in the 2nd millennium BCE (Finkelstein and Silberman report this view on pp. 34-36). The sources read give no narrower claim, so the span shown is the whole thousand years."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 34-36" }]
 
 [[positions]]
 id = "ussher-annals"

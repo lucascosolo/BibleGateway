@@ -5,8 +5,8 @@ status = "draft"
 made = { earliest = -407, latest = -407 }
 language = "Aramaic"
 summary = """
-A letter of 407 BCE (year 17 of Darius II) from Yedoniah and the priests of Elephantine to Bagoas, governor of Judea, asks leave to rebuild their temple, which was destroyed in 410 BCE. They also appeal to Sanballat's sons Delaiah and Shelemiah, and to Johanan the high priest, and Sanballat and Johanan both appear in the book of Nehemiah. Wikipedia's Elephantine papyri article labels this letter Cowley AP 30 (the Sayce-Cowley collection); the page read does not say which museum holds this papyrus."""
-citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-sanballat" }]
+A letter of 407 BCE (year 17 of Darius II) from Yedoniah and the priests of Elephantine to the governor of Judea, Bigvai (Bagoas), asks leave to rebuild their temple, which was destroyed in 410 BCE. Kitchen reports that they also appealed to Sanballat, governor of Samaria, and to Johanan, and Sanballat and Johanan both appear in the book of Nehemiah. Kitchen cites the letter as Cowley no. 30 (p. 77); the repository is not stated in the sources read."""
+citations = [{ source = "kitchen-2003", locator = "pp. 74, 77" }, { source = "satlow-2014", locator = "p. 86" }]
 verses = [
   { ref = "Neh.2.10", link = "background", note = "Nehemiah 2:10 names Sanballat the Horonite, the governor of Samaria that the petition also mentions." },
   { ref = "Neh.13.28", link = "background", note = "Nehemiah 13:28 says one of the high priest's sons was Sanballat's son-in-law, linking the Samaritan governor to the Jerusalem priesthood." },

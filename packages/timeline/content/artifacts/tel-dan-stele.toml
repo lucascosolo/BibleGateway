@@ -5,13 +5,13 @@ status = "sources-located"
 made = { earliest = -900, latest = -801 }
 language = "Old Aramaic"
 summary = """
-These are fragments of a 9th-century BCE victory stone set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David", the earliest known reference outside the Bible to a dynasty named for David, though a minority of scholars (among them Philip Davies, Niels Peter Lemche and Thomas Thompson) read the word as a place name or a divine name instead. Fragment A was found in 1993, and Fragments B1 and B2 followed in June 1994 and were published in 1995. Finkelstein and Silberman read it as Hazael of Damascus boasting of killing Jehoram of Israel and a king "of the House of David", around 835 BCE (pp. 129, 177-178), and take it as proof that David's reputation was not a late invention."""
+These are fragments of a 9th-century BCE victory stone set up by an Aramean king at Dan in northern Israel. Line 9 is usually read bytdwd, "House of David", the earliest known reference outside the Bible to a dynasty named for David, though minimalist scholars dispute it (Thomas Thompson, for one, took dwd as a divine title, "the Beloved"), a reading Kitchen rebuts (pp. 452-453). Fragment A was found in 1993, and Fragments B1 and B2 followed in June 1994 and were published in 1995. Finkelstein and Silberman read it as Hazael of Damascus boasting of killing Jehoram of Israel and a king "of the House of David", around 835 BCE (pp. 129, 177-178), and take it as proof that David's reputation was not a late invention."""
 discovered = { year = 1993, place = "Tel Dan, northern Israel (Avraham Biran's excavation)" }
 held_by = { institution = "Israel Museum, Jerusalem" }
 citations = [
   { source = "biran-naveh-1993", locator = "pp. 81–98" },
   { source = "biran-naveh-1995", locator = "pp. 1–18" },
-  { source = "hagelia-2010" },
-  { source = "wikipedia-tel-dan-stele" },
+  { source = "kitchen-2003", locator = "pp. 36–37, 92" },
+  { source = "kitchen-2003", locator = "pp. 452–453" },
   { source = "finkelstein-silberman-2002", locator = "pp. 129, 177-178" },
 ]

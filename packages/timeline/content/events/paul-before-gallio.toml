@@ -18,15 +18,21 @@ tradition = "chronological"
 earliest = 51
 latest = 52
 summary = """
-Gallio's time as governor can be dated fairly closely to 51 to 52 CE. The Delphi inscription mentions Claudius's twenty-sixth acclamation (a public salute as victorious emperor), and that corresponds to 52 CE."""
-citations = [{ source = "wikipedia-gallio" }]
+Carson and Moo say inscriptions enable Gallio's term as proconsul of Achaia to be fixed from July 51 to July 52, with a remote possibility of a year later. Brown cites an inscription that places Gallio at Corinth in the twelfth year of Claudius, which began on 25 January 52."""
+citations = [
+  { source = "carson-moo-2005", locator = "p. 366 and n. 38" },
+  { source = "brown-1997", locator = "ch. 16, Second and Third Missionary Journeys" },
+]
 
 [[attestations]]
 artifact = "gallio-inscription"
 relation = "corroborates"
 note = """
-Claudius calls Gallio "my friend and proconsul". This confirms that Gallio governed Achaia, and roughly when. The stone was found at Delphi and is published as Fouilles de Delphes III 4:286 and SIG II 801d. It cites Claudius's 26th acclamation (Wikipedia, Gallio inscription)."""
-citations = [{ source = "wikipedia-gallio-inscription" }, { source = "wikipedia-gallio" }]
+Claudius calls Gallio "my friend and proconsul". This confirms that Gallio governed Achaia, and roughly when. The stone was found at Delphi and is published as Fouilles de Delphes III 4:286 and SIG II 801d. Brown notes it places Gallio at Corinth in the twelfth year of Claudius."""
+citations = [
+  { source = "carson-moo-2005", locator = "p. 366 and n. 38" },
+  { source = "brown-1997", locator = "ch. 16, Second and Third Missionary Journeys" },
+]
 
 [[positions]]
 id = "brown-traditional-51-52"

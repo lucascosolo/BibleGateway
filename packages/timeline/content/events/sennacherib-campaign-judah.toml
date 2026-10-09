@@ -20,8 +20,8 @@ tradition = "chronological"
 earliest = -701
 latest = -701
 summary = """
-The Assyrian records date the campaign to 701 BCE. Scholars do not seriously dispute this."""
-citations = [{ source = "wikipedia-sennacherib-levant" }, { source = "thiele-1983", locator = "Preface to the Third Edition, pp. 23–24: \"The year 701, when Sennacherib came against Jerusalem in the fourteenth year of Hezekiah, is a major anchor point in my pattern.\"" }]
+The Assyrian records date the campaign to 701 BCE. Kitchen and Galil both take 701 as a fixed point."""
+citations = [{ source = "kitchen-2003", locator = "pp. 40–42 (Sennacherib's campaign)" }, { source = "galil-1996", locator = "p. 98" }, { source = "thiele-1983", locator = "Preface to the Third Edition, pp. 23–24: \"The year 701, when Sennacherib came against Jerusalem in the fourteenth year of Hezekiah, is a major anchor point in my pattern.\"" }]
 
 [[attestations]]
 artifact = "sennacherib-taylor-prism"
@@ -30,8 +30,7 @@ note = """
 Sennacherib's own account says he took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". It claims payment from Hezekiah but not the capture of the city, as in 2 Kings 18:13–16. But it gives the payment as 30 talents of gold and 800 talents of silver, sent later to Nineveh, where 2 Kings 18:14 has 30 talents of gold and 300 of silver."""
 citations = [
   { source = "pritchard-1969", locator = "p. 288, trans. A. Leo Oppenheim (Oriental Institute Prism)" },
-  { source = "cojs-sennacherib-prisms" },
-  { source = "wikipedia-sennacherib-annals" },
+  { source = "luckenbill-arab-2", locator = "§ 240 (Taylor Prism: 46 walled cities, 'caged bird', 30 talents of gold and 800 of silver)" },
 ]
 
 [[attestations]]
@@ -39,7 +38,7 @@ artifact = "lachish-reliefs"
 relation = "corroborates"
 note = """
 These carvings show the siege and fall of Lachish. 2 Kings 18:14 and 18:17 place Sennacherib there during the campaign."""
-citations = [{ source = "bm-lachish-reliefs" }]
+citations = [{ source = "pritchard-1969", locator = "p. 288 (epigraph on the relief of the conquest of Lachish), trans. A. Leo Oppenheim" }, { source = "luckenbill-arab-2", locator = "§ 489 (epigraph: Sennacherib at Lachish)" }, { source = "finkelstein-silberman-2002", locator = "p. 261" }, { source = "kitchen-2003", locator = "p. 42" }]
 
 [[positions]]
 id = "galil-701-year-25"

@@ -5,13 +5,12 @@ status = "sources-located"
 made = { earliest = -539, latest = -530 }
 language = "Akkadian (cuneiform)"
 summary = """
-A clay cylinder of Cyrus, made after he conquered Babylon, speaks of restoring gods and sending displaced peoples back to sites in Mesopotamia; in Oppenheim's ANET translation, "I (also) gathered all their (former) inhabitants and returned (to them) their habitations" (p. 316). As Wikipedia summarises, it mentions no Jews, Jerusalem or Judea, so whether it bears on Ezra 1 is disputed, and Kuhrt calls the restoration passage a literary device."""
+A clay cylinder of Cyrus, made after he conquered Babylon, speaks of restoring gods and sending displaced peoples back to sites in Mesopotamia; in Oppenheim's ANET translation, "I (also) gathered all their (former) inhabitants and returned (to them) their habitations" (p. 316). It mentions no Jews, Jerusalem or Judea in that translation, so whether it bears on Ezra 1 is disputed, and Kitchen reads the return of the gods as propaganda (p. 76)."""
 discovered = { year = 1879, place = "Babylon (Hormuzd Rassam)" }
 held_by = { institution = "British Museum", accession = "BM 90920" }
 citations = [
   { source = "wikidata", locator = "Q405008: inventory number 90920, British Museum" },
-  { source = "wikipedia-cyrus-cylinder" },
-  { source = "livius-cyrus-cylinder" },
+  { source = "kitchen-2003", locator = "p. 76" },
   { source = "pritchard-1969", locator = "pp. 315–316, trans. A. Leo Oppenheim" },
 ]
 verses = [{ ref = "Ezra.1.1-Ezra.1.4", link = "background", note = "Ezra 1:1–4 records Cyrus's proclamation letting the exiles return, the decree this cylinder is often compared with." }]

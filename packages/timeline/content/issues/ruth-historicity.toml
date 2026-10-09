@@ -3,22 +3,28 @@ kind = "historical"
 title = "When was Ruth written, and is it history?"
 status = "draft"
 summary = """
-Ruth is set in the time of the judges, but the book itself is generally dated to the Persian period. When it was written is a different question from when its events took place."""
+Ruth is set in the time of the judges, but when the book was written is a different question from when its events took place. The filed sources disagree: one reads it as a late adventure story, another thinks it pre-exilic."""
 events = ["ruth"]
 verses = [{ ref = "Ruth.1.1", link = "describes" }]
-citations = [{ source = "wikipedia-book-of-ruth" }]
+citations = [{ source = "van-der-toorn-2007", locator = "p. 25" }, { source = "mcdonald-2017-vol1", locator = "p. 388" }]
 
 [[views]]
-label = "Written in the Persian period"
+label = "A late adventure story"
 text = """
-The book was likely written in Biblical Hebrew during the Persian period (c. 550–330 BCE). Some scholars propose the 5th century BCE, reading Ruth's non-Israelite background and the stress on welcoming foreigners as signs of that setting."""
-citations = [{ source = "wikipedia-book-of-ruth" }]
+Van der Toorn counts Ruth with Esther, Judith, Tobit and Daniel 1-6 as adventure stories, a genre of historical fiction that he says emerged among the Jewish texts of the Hellenistic period, written for entertainment and education."""
+citations = [{ source = "van-der-toorn-2007", locator = "p. 25" }]
+
+[[views]]
+label = "Probably pre-exilic"
+text = """
+McDonald, following John J. Collins, holds that Ruth is likely pre-exilic, because it reflects a time when Israelite men marrying Moabite women was no problem. Unlike Ezra and Nehemiah, it has no polemic defending such marriages."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 388" }]
 
 [[views]]
 label = "Set in the days of the judges"
 text = """
-The story places itself in the time of the judges and ends with the family tree of David. According to Josephus, Boaz lived at the time of Eli, and some rabbis identify Boaz with the judge Ibzan of Bethlehem."""
+The story places itself in the time of the judges and ends with the family tree of David. According to Josephus, Boaz lived under Eli the high priest. Kitchen puts the judges period, the setting of Judges, Ruth and 1 Samuel, at 1210-1042 BCE."""
 citations = [
-  { source = "wikipedia-book-of-ruth" },
-  { source = "wikipedia-boaz" },
+  { source = "josephus-whiston", locator = "Antiquities 5.9.1" },
+  { source = "kitchen-2003", locator = "p. 159" },
 ]

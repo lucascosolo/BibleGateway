@@ -31,7 +31,7 @@ latest = -930
 held_by = "Edwin R. Thiele"
 summary = """
 The chronologist Edwin Thiele assumed that Solomon died in the second half of 931n (931t/930n). In his own words he had "fixed 931/30 as the year of the division of the monarchy", and he explains how: "With an interval of 78 years between the accession of Jeroboam I and the death of Ahab, and with the latter taking place in 853 B.C., we thus secure the date 931/930 B.C. as the year of Jeroboam's accession and of the schism between Judah and Israel." He then uses 930 "in the interests of simplicity", adding that 931 "might have been equally appropriate or even more accurate", depending on the season of Jeroboam's rebellion."""
-citations = [{ source = "thiele-1984", locator = "p. 5, table 'Reigns of the Hebrew kings': Rehoboam 930-913, Jeroboam I 930-909; gives 930 only, not 931 (open-access popular restatement of his dates)" }, { source = "thiele-1983", locator = "chapter 'The Chronology of Judah and Israel (930–841 B.C.)', opening pages" }, { source = "young-2003", locator = "p. 591" }, { source = "wikipedia-mysterious-numbers", locator = "Rehoboam 931/0 in the chronology table; second-hand, not Thiele's pages" }]
+citations = [{ source = "thiele-1984", locator = "p. 5, table 'Reigns of the Hebrew kings': Rehoboam 930-913, Jeroboam I 930-909; gives 930 only, not 931 (open-access popular restatement of his dates)" }, { source = "thiele-1983", locator = "chapter 'The Chronology of Judah and Israel (930–841 B.C.)', opening pages" }, { source = "young-2003", locator = "p. 591" }]
 
 [[positions]]
 id = "wiki-932-931"
@@ -39,8 +39,8 @@ label = "932/931 BCE"
 tradition = "critical"
 earliest = -932
 latest = -931
-summary = "This position follows Wikipedia's article on Rehoboam. It gives the revolt of the northern tribes as taking place in 932/931 BCE."
-citations = [{ source = "wikipedia-rehoboam" }]
+summary = "Kitchen dates Rehoboam to about 931-914 and says Jeroboam came to power in 931 with Shoshenq I's help, so the division falls about 932/931."
+citations = [{ source = "kitchen-2003", locator = "p. 33 (Rehoboam ca. 931-914); p. 34 (Jeroboam in 931)" }]
 
 [[positions]]
 id = "fs-two-highlands"

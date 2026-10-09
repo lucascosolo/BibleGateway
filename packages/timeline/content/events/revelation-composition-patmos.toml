@@ -6,7 +6,7 @@ books = ["Rev"]
 confidence = "contested"
 status = "sources-located"
 summary = """
-Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Wikipedia reports that the usual date is about 95 CE."""
+Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Brown dates it to 92 to 96 CE, at the end of Domitian's reign."""
 verses = [
   { ref = "Rev.1.9-Rev.1.11", link = "describes", note = "John says he is on Patmos 'on account of the word of God,' which places the writing on Patmos." },
 ]
@@ -25,7 +25,7 @@ citations = [
   { source = "newadvent-irenaeus-ah-5", locator = "5.30.3" },
   { source = "newadvent-eusebius-he-5", locator = "5.8.6" },
   { source = "newadvent-eusebius-he-3", locator = "3.18.3" },
-  { source = "wikipedia-book-of-revelation" },
+  { source = "brown-1997", locator = "ch. 37, Summary of Basic Information" },
 ]
 
 [[positions]]
@@ -35,8 +35,8 @@ tradition = "chronological"
 earliest = 95
 latest = 95
 summary = """
-Wikipedia says Revelation is "commonly dated to about 95 AD", because clues in the visions point to Domitian's reign. The cited page names no one scholar who holds this."""
-citations = [{ source = "wikipedia-book-of-revelation" }]
+Brown dates Revelation "probably between AD 92 and 96 at the end of the Emperor Domitian's reign", and about 95 is the middle of that span."""
+citations = [{ source = "brown-1997", locator = "ch. 37, Summary of Basic Information" }]
 
 [[attestations]]
 artifact = "eusebius-he-3-18"

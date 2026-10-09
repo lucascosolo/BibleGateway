@@ -4,7 +4,7 @@ books = ["Bel"]
 canon = "deuterocanon"
 status = "draft"
 summary = "No filed critical source dates the additions to Daniel; Brown says only that all the deuterocanonical books were composed before Jesus' time. Bel and the Dragon contains anecdotes told of Daniel, which the preface calls simple historical parables. The unsigned preface to the Apocrypha in the Brenton edition says the three additions to Daniel (the Song of the Three Children, Susanna, and Bel and the Dragon) were probably composed in the Maccabean age and that their original language is much disputed. They are in the Septuagint's Daniel; the Catholic and Orthodox churches hold them as scripture."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Daniel" }, { source = "mcdonald-2017-vol1", locator = "p. 227" }, { source = "brown-1997", locator = "PDF p. 41" }]
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Daniel" }, { source = "mcdonald-2017-vol1", locator = "p. 227" }, { source = "brown-1997", locator = "Introductory Background, Useful Information about the Bible as a Whole" }]
 original_language = "Disputed (Semitic or Greek)"
 composed_undated = "Not dated by any source filed here, and no filed source dates a manuscript of it. Brown says only that all the deuterocanonical books were composed before Jesus' time; an unsigned, undated preface to the Apocrypha in the eBible Brenton edition says 'the Maccabean age', without years."
 

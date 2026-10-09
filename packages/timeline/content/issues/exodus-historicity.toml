@@ -8,21 +8,21 @@ events = ["exodus"]
 persons = ["moses", "josiah"]
 verses = [{ ref = "Exod.12.40-Exod.12.41", link = "describes" }]
 citations = [
-  { source = "finkelstein-silberman-2001" },
-  { source = "hoffmeier-1997" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 59-63" },
+  { source = "kitchen-2003", locator = "pp. 247-248, 255-259" },
 ]
 
 [[views]]
 label = "Not as described"
 text = """
-Finkelstein and Silberman find no convincing archaeological evidence for an exodus as told. They see perhaps a distant memory of the Hyksos being driven out of Egypt, and they think the story took its present form in the late 7th century BCE, in Josiah's time, as a reply to Egyptian rule. On their reading, the early Israelites came from within Canaan."""
-citations = [{ source = "finkelstein-silberman-2001" }]
+Finkelstein and Silberman find no convincing archaeological evidence for an exodus as told. They see a parallel in the story of the Hyksos being driven out of Egypt, and they think the story took its present form in the late 7th century BCE, in Josiah's time, as a reply to Egyptian rule. On their reading, the early Israelites came from within Canaan."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 55-56" }, { source = "finkelstein-silberman-2002", locator = "pp. 62-63" }, { source = "finkelstein-silberman-2002", locator = "pp. 70-71" }, { source = "finkelstein-silberman-2002", locator = "p. 118" }]
 
 [[views]]
 label = "An authentic tradition"
 text = """
-Hoffmeier studies the Egyptian evidence, including a Semitic presence in the Nile Delta. He argues that it supports the Exodus tradition as authentic."""
-citations = [{ source = "hoffmeier-1997" }]
+Kitchen, an Egyptologist who defends the Bible's reliability, argues that the Egyptian evidence fits the Exodus tradition. In the New Kingdom Egypt used Semitic captives for brickmaking, as in the tomb of the vizier Rekhmire of about 1450 and a leather roll of Ramesses II's fifth year with brick quotas (pp. 247-248), and he identifies Raamses with Pi-Ramesse at Qantir (pp. 255-259)."""
+citations = [{ source = "kitchen-2003", locator = "pp. 247-248" }, { source = "kitchen-2003", locator = "pp. 255-259" }]
 
 [[views]]
 label = "Israel Finkelstein and Neil Asher Silberman: the Exodus did not happen as described"

@@ -2,7 +2,7 @@ id = "cyrus"
 name = "Cyrus"
 role = "king of Persia, conqueror of Babylon"
 summary = """
-Cyrus, the founder of the Persian empire, took Babylon in October 539 BCE. The Nabonidus Chronicle has his army enter the city "without battle" on 16 Tashritu and Cyrus himself on 3 Arahsamna. Ezra 1 and 2 Chronicles 36 credit him in his first year with a decree letting the exiles return and rebuild the temple, usually dated 538 BCE. The Cyrus Cylinder shows a policy of restoring gods and displaced peoples, but it names no Jews, Jerusalem or Judea, and Kuhrt calls its restoration passage a literary device. Lester Grabbe holds that the decree in Ezra cannot be considered genuine; Finkelstein and Silberman accept a decree and read it as Persian policy, not sympathy. Isaiah 45:1 calls Cyrus the Lord's anointed."""
+Cyrus, the founder of the Persian empire, took Babylon in October 539 BCE. The Nabonidus Chronicle has his army enter the city "without battle" on 16 Tashritu and Cyrus himself on 3 Arahsamna. Ezra 1 and 2 Chronicles 36 credit him in his first year with a decree letting the exiles return and rebuild the temple, usually dated 538 BCE. The Cyrus Cylinder shows a policy of restoring gods and displaced peoples, but it names no Jews, Jerusalem or Judea, and Kitchen reads its gesture as propaganda. Satlow thinks the Aramaic decree of Ezra 6, if authentic at all, is embellished; Finkelstein and Silberman accept a decree and read it as Persian policy, not sympathy. Isaiah 45:1 calls Cyrus the Lord's anointed."""
 status = "sources-located"
 verses = [
   { ref = "Ezra.1.1-Ezra.1.4", link = "describes", note = "Ezra 1:1–4 gives the decree of Cyrus." },
@@ -13,10 +13,9 @@ events = ["babylon-falls-539", "cyrus-decree-first-return", "second-temple-built
 # Locators carried over from events/babylon-falls-539.toml, cyrus-decree-first-return.toml and artifacts/cyrus-cylinder.toml.
 # F&S p. 298 ("Cyrus, the founder of the Persian empire") read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-311.txt.
 citations = [
-  { source = "livius-abc7", locator = "col. iii 15–16 (sixteenth day); iii 18 (Cyrus enters, 3 Arahsamna)" },
-  { source = "wikipedia-fall-of-babylon" },
-  { source = "wikipedia-edict-of-cyrus" },
-  { source = "wikipedia-cyrus-cylinder" },
+  { source = "pritchard-1969", locator = "p. 306, Nabonidus Chronicle iii, trans. A. Leo Oppenheim" },
+  { source = "kitchen-2003", locator = "p. 71 (Cyrus's accession in 539; Ezra 1-6)" },
+  { source = "pritchard-1969", locator = "pp. 315-316, Cyrus Cylinder, trans. A. Leo Oppenheim" },
   { source = "finkelstein-silberman-2002", locator = "p. 298" },
 ]
 
@@ -26,7 +25,6 @@ relation = "corroborates"
 note = """
 The Nabonidus Chronicle records the army of Cyrus entering Babylon without battle and Cyrus entering it himself on the third of Arahsamna."""
 citations = [
-  { source = "livius-abc7" },
   { source = "pritchard-1969", locator = "pp. 305–306, trans. A. Leo Oppenheim" },
 ]
 
@@ -36,6 +34,6 @@ relation = "corroborates"
 note = """
 Cyrus's own cylinder, made after he conquered Babylon, speaks of restoring gods and returning displaced peoples to their homes. It names no Jews, Jerusalem or Judea, so it attests the king and his policy, not the decree of Ezra 1."""
 citations = [
-  { source = "wikipedia-cyrus-cylinder" },
+  { source = "kitchen-2003", locator = "p. 76" },
   { source = "pritchard-1969", locator = "pp. 315–316, trans. A. Leo Oppenheim" },
 ]

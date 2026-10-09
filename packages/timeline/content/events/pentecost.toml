@@ -41,10 +41,10 @@ label = "30 CE"
 tradition = "chronological"
 earliest = 30
 latest = 30
-held_by = "John P. Meier; Rainer Riesner (by inference from their crucifixion date)"
+held_by = "John P. Meier; D. A. Carson and Douglas J. Moo (by inference from their crucifixion date)"
 summary = """
-Meier concludes that the crucifixion took place on Friday 7 April 30 CE, calling 30 "the more likely date", and Riesner holds the same. On that date the Pentecost of Acts 2 fell about seven weeks later, in late May 30. The year is an inference from the crucifixion date; no source dates Pentecost on its own."""
+Meier concludes that the crucifixion took place on Friday 7 April 30 CE, calling 30 "the more likely date", and Carson and Moo find 30 slightly preferable. On that date the Pentecost of Acts 2 fell about seven weeks later, in late May 30. The year is an inference from the crucifixion date; no source dates Pentecost on its own."""
 citations = [
   { source = "meier-1991", locator = "pp. 402, 407 for the crucifixion date; the Pentecost inference is the editor's" },
-  { source = "wikipedia-crucifixion-of-jesus", locator = "Chronology section, quoting Riesner" },
+  { source = "carson-moo-2005", locator = "p. 127 for the crucifixion date" },
 ]

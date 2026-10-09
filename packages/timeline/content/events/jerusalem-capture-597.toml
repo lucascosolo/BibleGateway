@@ -20,7 +20,8 @@ held_by = "Edwin R. Thiele"
 citations = [
   { source = "thiele-1983", locator = "p. 186; p. 180, table of fixed dates" },
   { source = "grayson-1975", locator = "Chronicle 5" },
-  { source = "livius-abc5" },
+  { source = "kitchen-2003", locator = "p. 44 (Chronicle: 2 Adar, 15/16 March 597)" },
+  { source = "finkelstein-silberman-2002", locator = "p. 293 (Chronicle quoted)" },
 ]
 
 [[attestations]]
@@ -28,4 +29,4 @@ artifact = "babylonian-chronicle-abc5"
 relation = "corroborates"
 note = """
 The Chronicle says Nebuchadnezzar "seized the city and captured the king" on 2 Addaru of his seventh year. It says he then appointed a king of his own choice. This matches 2 Kings 24:12-17."""
-citations = [{ source = "livius-abc5" }]
+citations = [{ source = "kitchen-2003", locator = "p. 44" }, { source = "finkelstein-silberman-2002", locator = "p. 293" }]

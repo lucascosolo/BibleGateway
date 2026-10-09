@@ -22,7 +22,7 @@ latest = 57
 held_by = "Raymond E. Brown"
 summary = """
 Raymond Brown dates the letter to late 56 or very early 57, written from Ephesus, and notes the revisionist alternative of 54/55. His summary line reads: "Late 56 or very early 57 from Ephesus (or 54/55 in the Revisionist Chronology)." He treats Pauline authorship as settled ("Not seriously disputed.") and adds that an increasing majority favours the letter's unity, though some see two or more letters interwoven."""
-citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information, PDF p. 562" }]
+citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"

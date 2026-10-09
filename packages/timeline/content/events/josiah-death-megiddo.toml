@@ -32,5 +32,5 @@ tradition = "critical"
 earliest = -609
 latest = -609
 summary = """
-Wikipedia gives the date more loosely, as June or July 609, which agrees with the fourth-month date of Young and Thiele."""
-citations = [{ source = "wikipedia-battle-of-megiddo-609" }]
+Kitchen gives Josiah's reign as 640-609 and says Josiah tried to stop Necho II from reaching Assur-uballit in time to support him against Babylon, which places his death in 609. He names no month."""
+citations = [{ source = "kitchen-2003", locator = "p. 32 (table of Judah's last kings); p. 43 (Josiah and Necho II)" }]

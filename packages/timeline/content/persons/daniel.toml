@@ -15,5 +15,5 @@ events = ["babylon-falls-539"]
 citations = [
   { source = "collins-1993" },
   { source = "baldwin-1978" },
-  { source = "wikipedia-cylinders-of-nabonidus" },
+  { source = "kitchen-2003", locator = "pp. 73-74" },
 ]

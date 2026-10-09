@@ -13,7 +13,7 @@ citations = [
   { source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 352" },
   { source = "metzger-1987-canon", locator = "p. 83 and n. 17" },
   { source = "mattison-gospels-net", locator = "Manuscript Information page" },
-  { source = "brown-1997", locator = "Appendix II, PDF p. 889" }
+  { source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on Infancy Gospel of Thomas" }
 ]
 
 [[witnesses]]

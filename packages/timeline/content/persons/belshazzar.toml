@@ -5,11 +5,11 @@ summary = """
 Belshazzar ruled Babylon at the feast of Daniel 5, the night the city fell. For a long time he was known only from Daniel, but a cylinder of Nabonidus names him as the king's eldest son, so his existence is backed up. Why Daniel calls him king, and son of Nebuchadnezzar, is a separate question (see the linked issue)."""
 status = "draft"
 verses = [{ ref = "Dan.5.1-Dan.5.31", link = "describes" }]
-citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
+citations = [{ source = "kitchen-2003", locator = "pp. 73-74" }, { source = "pritchard-1969", locator = "p. 313, Verse Account of Nabonidus, trans. A. Leo Oppenheim" }]
 
 [[attestations]]
 artifact = "nabonidus-cylinder-ur"
 relation = "corroborates"
 note = """
-Nabonidus prays for "Belshazzar, the eldest son, my offspring", which names Belshazzar as the son of Nabonidus, not of Nebuchadnezzar."""
-citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
+Nabonidus's closing prayer at Ur names Belshazzar as his eldest son, which makes him the son of Nabonidus, not of Nebuchadnezzar."""
+citations = [{ source = "kitchen-2003", locator = "p. 517, n. 22" }]

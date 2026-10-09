@@ -10,7 +10,7 @@ The Psalms of Solomon are eighteen psalms. McDonald, after Charlesworth, dates t
 citations = [
   { source = "charles-1913-apot-2", locator = "Psalms of Solomon, intro., p. 625" },
   { source = "charles-1913-apot-2", locator = "Psalms of Solomon, intro., p. 628" },
-  { source = "mcdonald-2017-vol1", locator = "p. 140" }, { source = "brown-1997", locator = "Appendix II, PDF p. 886" }
+  { source = "mcdonald-2017-vol1", locator = "p. 140" }, { source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on Psalms of Solomon" }
 ]
 
 [[composed]]
@@ -31,7 +31,7 @@ earliest = -65
 latest = -40
 held_by = "Raymond E. Brown (1997)"
 summary = "Brown says the eighteen psalms were composed in Hebrew in Palestine (Jerusalem) between 65 and 40 BCE, and that because they read Pompey's invasion as punishment for the Sadducee high priests they have been attributed to the Pharisees, though other anti-Sadducee groups are possible."
-citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 886" }]
+citations = [{ source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on Psalms of Solomon" }]
 
 [[composed]]
 id = "gray-1913"

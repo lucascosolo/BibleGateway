@@ -7,31 +7,27 @@ The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem, but
 persons = ["solomon", "david", "rehoboam"]
 verses = [{ ref = "1Kgs.9.15", link = "describes", note = "1 Kings 9:15 says Solomon built Hazor, Megiddo and Gezer, the building works this issue weighs against the archaeology of those sites." }]
 citations = [
-  { source = "cline-2009" },
-  { source = "wikipedia-solomon" },
+  { source = "kitchen-2003", locator = "pp. 88, 156" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 137–138, 141–143" },
 ]
 
 [[views]]
 label = "No inscription names him"
 text = """
-Eric Cline points out that there is still not a single contemporary or near-contemporary inscription that mentions Solomon."""
-citations = [{ source = "cline-2009" }]
+Kitchen says the sources outside the Bible name almost no biblical figure of the period before 853, David and Solomon included, and explains why (pp. 88, 156). Finkelstein and Silberman likewise say that archaeologically no more can be said of David and Solomon than that they existed (p. 143)."""
+citations = [{ source = "kitchen-2003", locator = "pp. 88, 156" }, { source = "finkelstein-silberman-2002", locator = "p. 143" }]
 
 [[views]]
 label = "Solomonic gates"
 text = """
 Yigael Yadin dug up large gates and buildings at Hazor, Megiddo and Gezer and credited them to Solomon's building programme, reading them alongside 1 Kings 9:15."""
-citations = [{ source = "wikipedia-solomon" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 137–138" }]
 
 [[views]]
 label = "A modest chiefdom; the gates are later"
 text = """
 Finkelstein and Silberman move those buildings to the Omride kings of the 9th century BCE. They see 10th-century Jerusalem as the rough hilltop stronghold of a local family of tribal chiefs, not the capital of an empire."""
-citations = [
-  { source = "finkelstein-silberman-2006" },
-  { source = "klein-2006-review" },
-  { source = "wikipedia-solomon" },
-]
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 141–142" }, { source = "finkelstein-silberman-2002", locator = "p. 187" }]
 
 [[views]]
 label = "Finkelstein and Silberman: a highland village, then Omride Israel"

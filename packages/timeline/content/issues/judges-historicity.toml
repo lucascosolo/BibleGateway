@@ -3,28 +3,28 @@ kind = "historical"
 title = "How historical is the Book of Judges?"
 status = "sources-located"
 summary = """
-Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree, and the book was edited long after the events; no judge is named in an inscription from their own time. The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
+Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree about how much of it is history. The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
 events = ["judges-period", "deborah-barak", "gideon", "samson"]
 verses = [{ ref = "Judg.2.16-Judg.2.19", link = "describes" }]
-citations = [{ source = "wikipedia-book-of-judges", locator = "sections on dating and historicity" }]
+citations = [{ source = "kitchen-2003", locator = "pp. 201-202" }, { source = "finkelstein-silberman-2002", locator = "pp. 99-100" }]
 
 [[views]]
-label = "Plausible, with the ring of truth"
+label = "Real but local figures, selected by the author"
 text = """
-William G. Dever finds the accounts historically plausible, with "the ring of truth for an archaeologist"."""
-citations = [{ source = "wikipedia-book-of-judges", locator = "section on historicity" }]
+Kitchen treats the judges as real local leaders. He holds that the twelve to fourteen figures in the book are a selection of the deliverers the author had records of and chose for his theme, that most of them acted only locally, and that there were undoubtedly others about whom nothing is known."""
+citations = [{ source = "kitchen-2003", locator = "pp. 201-202" }]
 
 [[views]]
-label = "Cannot be assessed"
+label = "Not a record of a military conquest"
 text = """
-Israel Finkelstein holds that it is impossible to know how far the tales rest on real memories. Lester Grabbe likewise calls the book too problematic to use as a historical source, although he allows that a real historical core cannot be ruled out."""
-citations = [{ source = "wikipedia-book-of-judges", locator = "section on historicity" }]
+Finkelstein and Silberman set the heroic tales of Judges beside Joshua's claim of total victory. They note that Judges lists unconquered Canaanite enclaves in the territory of over half the tribes (p. 99), and conclude that early Israel arose from local highland people rather than from outside (p. 118)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 99" }, { source = "finkelstein-silberman-2002", locator = "p. 118" }]
 
 [[views]]
-label = "Samson as a folk hero"
+label = "Samson and the archaeology"
 text = """
-Many current scholars compare Samson with the Near Eastern folk hero behind Enkidu, and with Heracles, while conservative scholars regard him as a real historical person."""
-citations = [{ source = "wikipedia-samson" }]
+Kitchen says most of Samson's adventures do not lend themselves to archaeological comment. He notes that Philistine temples, like those at Kition on Cyprus, could have had paired central columns, so a collapse such as the one at Gaza is architecturally conceivable (p. 216)."""
+citations = [{ source = "kitchen-2003", locator = "p. 216" }]
 
 [[views]]
 label = "Israel Finkelstein and Neil Asher Silberman: early Israel grew out of the Canaanite highlands"

@@ -19,20 +19,23 @@ label = "49 CE"
 tradition = "traditional"
 earliest = 49
 latest = 49
-held_by = "Brown (1997)"
+held_by = "Brown (1997); Carson and Moo (2005)"
 summary = """
-Wikipedia cites Brown's An Introduction to the New Testament (1997). It gives 49 CE as the traditional date and 47 or 51 as a minority dating that departs from the usual view."""
-citations = [{ source = "wikipedia-paul-the-apostle" }]
+Brown's Table 6 gives 49 CE as the traditional date of the Jerusalem conference and 47 or 51 for the Revisionist chronologies. Carson and Moo date the Council to 48 or 49."""
+citations = [
+  { source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" },
+  { source = "carson-moo-2005", locator = "p. 180" },
+]
 
 [[positions]]
 id = "48-50"
-label = "c. 48–50 CE"
+label = "48 or 49 CE (Carson and Moo)"
 tradition = "chronological"
 earliest = 48
-latest = 50
+latest = 49
 summary = """
-This position follows Wikipedia's article on the Council of Jerusalem. It dates the council to about 48-50 CE."""
-citations = [{ source = "wikipedia-council-of-jerusalem" }]
+Carson and Moo say the Council of Acts 15 is probably to be dated in 48 or 49, and on a 48 date they place Galatians just before it."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 180, 464, 627" }]
 
 [[positions]]
 id = "brown-traditional-49"

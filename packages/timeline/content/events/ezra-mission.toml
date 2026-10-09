@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "sources-located"
 summary = """
-Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king", and scholars dispute which Artaxerxes this is. Artaxerxes I gives 458 BCE, the most widely accepted date, while Artaxerxes II gives 398 BCE. A third group reads "seventh" as a scribe's mistake."""
+Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king", and the text does not say which Artaxerxes. Artaxerxes I gives 458 BCE, the date Kitchen defends; Artaxerxes II gives 398 BCE, the alternative McDonald records; Josephus reads the king as "Xerxes"."""
 verses = [
   { ref = "Ezra.7.7", link = "describes", note = "Ezra 7:7 says exiles go up in the seventh year of Artaxerxes." },
   { ref = "Ezra.7.8", link = "describes", note = "Ezra 7:8 says Ezra arrives in the fifth month of the seventh year." },
@@ -17,10 +17,10 @@ label = "458 BCE (Artaxerxes I, seventh year)"
 tradition = "traditional"
 earliest = -458
 latest = -457
-held_by = "Edwin M. Yamauchi"
+held_by = "K. A. Kitchen"
 summary = """
-Edwin Yamauchi, in the Expositor's Bible Commentary (abridged), calls Artaxerxes I the traditional view and says "which we believe is correct". On that view Ezra arrived in 458 (457)."""
-citations = [{ source = "preceptaustin-ezra-7", locator = "quotation from Yamauchi, Expositor's Bible Commentary (Abridged)" }]
+Kitchen places Ezra's visit in Year 7 of Artaxerxes I, 458, and says alternative interpretations fail to account for the evidence any better. Lim reports that Kyong-Jin Lee dates Ezra 7:8 to 458 from the Persian-Egyptian conflict. Josephus puts the arrival in the seventh year of "Xerxes" (his name for the king)."""
+citations = [{ source = "kitchen-2003", locator = "p. 74" }, { source = "lim-2013", locator = "p. 60" }, { source = "josephus-whiston", locator = "Antiquities 11.5.1-2" }]
 
 [[positions]]
 id = "398"
@@ -28,13 +28,7 @@ label = "398 BCE (Artaxerxes II, seventh year)"
 tradition = "critical"
 earliest = -398
 latest = -398
-held_by = "Albin van Hoonacker"
+held_by = "Lee Martin McDonald (as the alternative)"
 summary = """
-On this view Nehemiah comes before Ezra, and Ezra came in 398 BCE, the seventh year of Artaxerxes II (404-359 BCE). Wikipedia's Albin van Hoonacker article lists two of his works, his 1890 "Nehemie et Esdras. Nouvelle hypothese sur la chronologie de l'epoque de la Restauration juive" and his 1892 "Nehemie en l'an 20 d'Artaxerxes I. Esdras en l'an 7 d'Artaxerxes II", which argue for Ezra in year 7 of Artaxerxes II. The 398 conversion is the Ezra article's."""
-citations = [{ source = "wikipedia-albin-van-hoonacker", locator = "list of works, 1890 and 1892" }, { source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
-
-  [[positions.arguments]]
-  stance = "for"
-  text = """
-The case for reversing the order is that Nehemiah and Ezra seem to know nothing of each other, and their missions do not overlap. Reversing the order puts Ezra about fifty years after Nehemiah."""
-  citations = [{ source = "wikipedia-artaxerxes-i" }, { source = "wikipedia-ezra" }]
+McDonald dates Ezra and Nehemiah to about 458 BCE if the king is Artaxerxes I, or to 398 BCE if he is Artaxerxes II, and leaves the choice open."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 52" }]

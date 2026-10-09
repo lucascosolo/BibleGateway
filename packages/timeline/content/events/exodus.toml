@@ -50,7 +50,7 @@ summary = """
 Kitchen places the Exodus in the 13th century BCE under Ramesses II, who reigned about 1279-1213 BCE on the dating most Egyptologists follow (the reign dates are not Kitchen's range for the Exodus). Kitchen's own figure is an exodus "about 1260/1250 (minimum)" (p. 307), with the oppression running "circa 1320-1260/1250" from Ramesses II's work on Pi-Ramesse "from 1279 onward" (p. 310), and he calls a thirteenth-century exodus "at present the least objectionable dating". Traditional here means a date that keeps the Bible's exodus as a historical event; the range is the 1260/1250 minimum Kitchen states."""
 citations = [
   { source = "kitchen-2003", locator = "pp. 255–259; p. 307 (exodus about 1260/1250); p. 310 (from 1279; oppression circa 1320-1260/1250)" },
-  { source = "wikipedia-ramesses-ii" },
+  { source = "finkelstein-silberman-2002", locator = "p. 57" },
 ]
 
   [[positions.arguments]]

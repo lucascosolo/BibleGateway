@@ -24,11 +24,9 @@ earliest = 33
 latest = 33
 held_by = "Colin J. Humphreys and W. G. Waddington"
 summary = """
-Colin Humphreys and W. G. Waddington reconstruct the first-century Jewish calendar by computing when the new crescent could first be seen from Jerusalem. Their Table 1 gives the date of 14 Nisan for every year of Pilate's term, 26 to 36 CE, and only three years put 14 Nisan on a Friday: 11 April 27, 7 April 30 and 3 April 33. They rule out 27 as too early for a ministry that began after Tiberius's fifteenth year, and 34 (possible only with a leap month) as too late for Paul's conversion. That leaves "the only two plausible years for the Crucifixion are AD 30 and AD 33", and they prefer 33. As a second argument, a partial lunar eclipse was visible at moonrise over Jerusalem on the evening of 3 April 33, which they read as the "moon turned to blood" that Peter quotes from Joel at Pentecost (Acts 2:20). Humphreys (2011) later argued for Wednesday 1 April 33 for the Last Supper on the same crucifixion date, and Wikipedia also reports that Newton and Fotheringham (1910) favored 3 April 33."""
+Colin Humphreys and W. G. Waddington reconstruct the first-century Jewish calendar by computing when the new crescent could first be seen from Jerusalem. Their Table 1 gives the date of 14 Nisan for every year of Pilate's term, 26 to 36 CE, and only three years put 14 Nisan on a Friday: 11 April 27, 7 April 30 and 3 April 33. They rule out 27 as too early for a ministry that began after Tiberius's fifteenth year, and 34 (possible only with a leap month) as too late for Paul's conversion. That leaves "the only two plausible years for the Crucifixion are AD 30 and AD 33", and they prefer 33. As a second argument, a partial lunar eclipse was visible at moonrise over Jerusalem on the evening of 3 April 33, which they read as the "moon turned to blood" that Peter quotes from Joel at Pentecost (Acts 2:20)."""
 citations = [
   { source = "humphreys-waddington-1992", locator = "Table 1 on p. 335; Table 2 on p. 337; pp. 337–340 for the elimination; conclusion p. 350" },
-  { source = "wikipedia-date-of-crucifixion" },
-  { source = "wikipedia-chronology-of-jesus" },
 ]
 
   [[positions.arguments]]
@@ -68,12 +66,11 @@ tradition = "chronological"
 earliest = 30
 latest = 30
 summary = """
-Humphreys and Waddington find that the Jewish lunar calendar leaves two plausible Fridays, 7 April 30 CE and 3 April 33 CE, and they themselves prefer 33. Rainer Riesner holds instead that 14 Nisan (7 April) of the year 30 is "far and away the most likely date of the crucifixion", and he says this is also the view of the majority of contemporary scholars. Wikipedia's Chronology of Jesus (section "Astronomical analysis - Newton's method") says Humphreys rejects AD 27 and AD 34, and confirms 7 April AD 30 and 3 April AD 33 as the two feasible dates."""
-held_by = "Rainer Riesner"
+Humphreys and Waddington find that the Jewish lunar calendar leaves two plausible Fridays, 7 April 30 CE and 3 April 33 CE, and they themselves prefer 33. Meier, who prefers 30, notes that 7 April 30 is supported by a wide range of scholars who differ on many other questions, and Carson and Moo find 30 slightly preferable because a crucifixion as late as 33 might leave too little time before Paul's conversion."""
+held_by = "John P. Meier; D. A. Carson and Douglas J. Moo"
 citations = [
-  { source = "wikipedia-crucifixion-of-jesus", locator = "Chronology section, quoting Riesner" },
-  { source = "wikipedia-date-of-crucifixion" },
-  { source = "wikipedia-chronology-of-jesus" },
+  { source = "meier-1991", locator = "p. 402; p. 431 n. 114" },
+  { source = "carson-moo-2005", locator = "p. 127" },
 ]
 
   [[positions.arguments]]
@@ -82,7 +79,6 @@ citations = [
 Either 7 April 30 CE or 3 April 33 CE meets the Friday-Passover rule. Humphreys and Waddington's own Table 1 gives Friday 7 April for 14 Nisan in 30 CE, and they concede that this date "is also strongly supported"."""
   citations = [
     { source = "humphreys-waddington-1992", locator = "Table 1 on p. 335; p. 340" },
-    { source = "wikipedia-date-of-crucifixion" },
   ]
 
 [[positions]]
@@ -137,7 +133,10 @@ artifact = "josephus-testimonium-flavianum"
 relation = "partially-corroborates"
 note = """
 The original text probably mentioned Jesus's crucifixion under Pilate, but the text we have contains Christian additions, so the passage can only partly corroborate the event."""
-citations = [{ source = "wikipedia-josephus-on-jesus" }]
+citations = [
+  { source = "josephus-whiston", locator = "Antiquities 18.3.3" },
+  { source = "meier-1991", locator = "pp. 59–66" },
+]
 
 [[positions]]
 id = "meier-30"
@@ -149,19 +148,19 @@ held_by = "John P. Meier"
 summary = """
 Meier prefers Friday 7 April 30 CE, with the Last Supper on Thursday evening 6 April as the start of 14 Nisan, not a Passover meal. He treats the Johannine chronology as more likely than the Synoptic one and calls the date a "tentative conclusion". He finds 33 CE the only real alternative: "In my opinion, a.d. 30 is the more likely date.""""
 citations = [
-  { source = "meier-1991", locator = "pp. 380–381, 399–400, 405" },
+  { source = "meier-1991", locator = "pp. 402, 407" },
 ]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 John has the Jewish authorities avoid the praetorium so they could still eat the Passover, and calls the day of Jesus's trial the Day of Preparation. Meier judges this the likelier chronology, since a night Sanhedrin trial and execution on Passover Day itself is improbable, and the Last Supper then falls on the evening starting 14 Nisan."""
-  citations = [{ source = "meier-1991", locator = "pp. 387–388, 393–394" }]
+  citations = [{ source = "meier-1991", locator = "pp. 388–389, 395–396" }]
   verses = [{ ref = "John.18.28", link = "dates" }, { ref = "John.19.14", link = "dates" }, { ref = "Mark.15.42", link = "dates" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Of the years in Pilate's term, only 30 and 33 CE probably put 14 Nisan on a Friday. Starting from 28 CE, a death in 33 CE would mean a ministry of four to five years, more than either the Synoptics or John suggest."""
-  citations = [{ source = "meier-1991", locator = "p. 400" }]
+  citations = [{ source = "meier-1991", locator = "p. 402" }]
   verses = [{ ref = "Luke.3.1-Luke.3.2", link = "dates" }]

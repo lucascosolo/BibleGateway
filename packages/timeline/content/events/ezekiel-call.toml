@@ -18,11 +18,10 @@ label = "593 BCE (fifth year of Jehoiachin's exile)"
 tradition = "chronological"
 earliest = -593
 latest = -593
-held_by = "Edwin R. Thiele; Walther Eichrodt (as cited by Wikipedia, footnote 6)"
+held_by = "Edwin R. Thiele"
 summary = """
-The fifth year of Jehoiachin's exile is 593 BCE, but the "thirtieth year" is read in two ways. One reading takes it as Ezekiel's age, and the other, found in rabbinic sources, counts it from the discovery of the Book of the Law in 622 BCE. Edwin Thiele's Chart 31 fixes the day: "593—31 July—Ezekiel has vision on 4/5/5—Ezek. 1:1–2"."""
+Ezekiel dates his visions by the years of Jehoiachin's exile (Kitchen), and the fifth year is 593 BCE. What the "thirtieth year" counts is unsettled, and no filed source resolves it. Edwin Thiele's Chart 31 fixes the day: "593—31 July—Ezekiel has vision on 4/5/5—Ezek. 1:1–2"."""
 citations = [
   { source = "thiele-1983", locator = "p. 184, Chart 31" },
-  { source = "wikipedia-ezekiel", locator = "Chronology section, footnote 6: Eichrodt, Ezekiel: A Commentary (2003), p. 407, not checked directly" },
-  { source = "wikipedia-book-of-ezekiel" },
+  { source = "kitchen-2003", locator = "p. 66 (Ezekiel dates visions by years of Jehoiachin's exile; Ezek. 1:2); p. 72 (the river Chebar)" },
 ]

@@ -5,7 +5,7 @@ category = "political"
 confidence = "speculative"
 status = "sources-located"
 summary = """
-This rests on tradition only. 1 Clement says both men were martyred, and Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE, but the New Testament does not tell of either death."""
+This rests on tradition only. 1 Clement says both men were martyred, and Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Brown dates both deaths to Nero's persecution after the Great Fire of July 64, but the New Testament does not tell of either death."""
 verses = [
   { ref = "John.21.18-John.21.19", link = "alludes", note = "John 21:18-19 says Peter will stretch out his hands, a sign of how he would die." },
   { ref = "2Tim.4.6-2Tim.4.8", link = "alludes", note = "In 2 Timothy 4:6-8 Paul expects to die soon." },
@@ -20,9 +20,9 @@ tradition = "traditional"
 earliest = 64
 latest = 65
 summary = """
-Wikipedia dates Paul's death to about 64-65 CE, in Rome under Nero, citing 1 Clement 5 and Eusebius, and Eusebius places Peter's crucifixion under Nero as well. Neither source gives a year, so the dating is an inference from the tradition. Traditional here means the early church accounts."""
+Brown reports the respectable tradition that Peter and Paul were both martyred in Rome in Nero's persecution after the fire of July 64, and gives AD 64 or somewhat later (67) for Paul. Eusebius places Peter's crucifixion under Nero as well. Neither Brown nor Eusebius gives a single year, so the 64 to 65 span is the editor's reading of the earliest, post-fire option. Traditional here means the early church accounts."""
 citations = [
-  { source = "wikipedia-paul-the-apostle" },
+  { source = "brown-1997", locator = "ch. 4, The Second Third of the 1st Century AD; ch. 16, Paul Arrested in Jerusalem; Imprisoned in Caesarea; Taken to Rome; Death" },
   { source = "newadvent-eusebius-he-2", locator = "2.25.5" },
 ]
 
@@ -33,10 +33,10 @@ tradition = "traditional"
 earliest = 67
 latest = 68
 summary = """
-Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero". He says Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year, but Nero's reign began on 13 October 54 and ended with his death on 9 June 68, so his fourteenth year runs from October 67 to June 68. Eusebius's Chronicle was not read."""
+Jerome says Peter held the see at Rome "until the last, that is the fourteenth, year of Nero". He says Paul was beheaded at Rome in "the fourteenth year of Nero", the same year as Peter. Jerome gives no calendar year, but Brown dates Nero's reign 54 to 68, so on a count from the start of the reign his fourteenth year falls in 67 to 68 (the editor's computation). Eusebius's Chronicle was not read."""
 citations = [
   { source = "newadvent-jerome-de-viris", locator = "ch. 1 (Peter); ch. 5 (Paul)" },
-  { source = "wikipedia-nero", locator = "lead and reign sections: accession 13 October 54, death 9 June 68" },
+  { source = "brown-1997", locator = "ch. 4, The Second Third of the 1st Century AD (Nero, 54–68)" },
 ]
 
 [[attestations]]
@@ -64,8 +64,8 @@ summary = """
 Raymond Brown's Table 6 ends: "after summer 64 Death in Rome under Nero." In the text he says Paul was martyred "either about the same time as Peter (AD 64) or somewhat later (67)", and that Peter died "sometime between 64 and 68 during Nero's persecution". The upper year of 68 is Brown's bound for Peter, not for Paul, and the Table itself gives only "after summer 64"."""
 citations = [
   { source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" },
-  { source = "brown-1997", locator = "ch. 16, PDF p. 481" },
-  { source = "brown-1997", locator = "ch. 33, PDF p. 759" },
+  { source = "brown-1997", locator = "ch. 16, Paul Arrested in Jerusalem; Imprisoned in Caesarea; Taken to Rome; Death" },
+  { source = "brown-1997", locator = "ch. 33, The Background" },
 ]
 
   [[positions.arguments]]

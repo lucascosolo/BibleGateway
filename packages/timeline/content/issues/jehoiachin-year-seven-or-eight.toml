@@ -9,20 +9,20 @@ verses = [
   { ref = "2Kgs.24.12", link = "dates" },
   { ref = "Jer.52.28", link = "dates" },
 ]
-citations = [{ source = "livius-abc5" }]
+citations = [{ source = "kitchen-2003", locator = "p. 44" }, { source = "finkelstein-silberman-2002", locator = "p. 293" }]
 persons = ["nebuchadnezzar"]
 
 [[views]]
 label = "Seventh year"
 text = """
 The Babylonian Chronicle dates the capture of Jerusalem to Nebuchadnezzar's seventh year, which agrees with Jeremiah 52:28."""
-citations = [{ source = "livius-abc5" }]
+citations = [{ source = "kitchen-2003", locator = "p. 44" }, { source = "finkelstein-silberman-2002", locator = "p. 293" }]
 
 [[views]]
 label = "Eighth year"
 text = """
 2 Kings 24:12 says the king of Babylon took Jehoiachin "in the eighth year of his reign"."""
-citations = [{ source = "livius-abc5" }]
+citations = [{ source = "kitchen-2003", locator = "p. 44" }]
 
 [[views]]
 label = "Both are right: Nisan years in Babylon, Tishri years in Kings"

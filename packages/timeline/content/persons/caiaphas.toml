@@ -3,15 +3,15 @@ name = "Caiaphas"
 also_known_as = ["Joseph Caiaphas"]
 role = "high priest in Jerusalem"
 summary = """
-Caiaphas was the high priest at the trial of Jesus in the Gospels, and Josephus names him as high priest too. A family burial box found in Jerusalem in 1990 is widely, though not universally, identified as his."""
+Caiaphas was the high priest at the trial of Jesus in the Gospels, and Josephus names him as high priest too."""
 status = "sources-located"
 verses = [
   { ref = "Matt.26.3", link = "describes" },
   { ref = "John.18.13", link = "describes" },
 ]
 citations = [
-  { source = "ej-2007-caiaphas" },
-  { source = "wikipedia-caiaphas" },
+  { source = "josephus-whiston", locator = "Antiquities 18.2.2; 18.4.3" },
+  { source = "meier-2001", locator = "pp. 397, 466" },
 ]
 
 [[attestations]]
@@ -21,12 +21,6 @@ note = """
 Josephus names Joseph called Caiaphas as high priest, made so after Gratus's appointee (18.35), and records that Vitellius removed him and appointed Jonathan son of Ananus (18.95)."""
 citations = [
   { source = "josephus-whiston", locator = "Antiquities 18.2.2; 18.4.3" },
-  { source = "ej-2007-caiaphas" },
+  { source = "meier-2001", locator = "p. 397" },
 ]
 
-[[attestations]]
-artifact = "caiaphas-ossuary"
-relation = "partially-corroborates"
-note = """
-The box is inscribed "Joseph son of Caiaphas", and many accept that this is the high priest. Others doubt it because of the spelling, the lack of a title and the plain tomb."""
-citations = [{ source = "wikipedia-caiaphas-ossuary" }]

@@ -5,12 +5,11 @@ status = "sources-located"
 made = { earliest = 26, latest = 37 }
 language = "Latin"
 summary = """
-A limestone block from Caesarea Maritima records a building put up for Tiberius, and its inscription names "[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e", Pontius Pilate, prefect of Judaea. Maria Teresa Fortuna Canivet found it in 1961 in the theatre area, during excavations led by Antonio Frova, and a replica stands at Caesarea. It is dated by Pilate's time as governor (26/27–36/37 CE)."""
+A limestone block from Caesarea Maritima records a building put up for Tiberius, and its inscription names "[Ponti]us Pilatus … [Praef]ectus Iuda[ea]e", Pontius Pilate, prefect of Judaea. It was found in 1961, and Meier notes it shows Pilate bore the title prefect, not procurator. It is dated by Pilate's time as governor (26/27–36/37 CE)."""
 discovered = { year = 1961, place = "Caesarea Maritima (theatre area)" }
 held_by = { institution = "Israel Museum, Jerusalem" }
 citations = [
-  { source = "ae-1963-104" },
-  { source = "wikipedia-pilate-stone" },
-  { source = "wikipedia-pontius-pilate" },
+  { source = "ae-1963-104", locator = "no. 104" },
+  { source = "meier-1991", locator = "p. 100 n. 8; p. 256" },
 ]
 verses = [{ ref = "Luke.3.1", link = "background", note = "Luke 3:1 names Pontius Pilate as governor of Judea, the office the Pilate Stone shows him holding." }]

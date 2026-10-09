@@ -19,7 +19,7 @@ verses = [
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },
-  { source = "brown-1997", locator = "ch. 16, PDF pp. 468, 481" },
+  { source = "brown-1997", locator = "ch. 16, opening discussion of Acts and the letters as sources (before Birth and Upbringing); ch. 16, Paul Arrested in Jerusalem; Imprisoned in Caesarea; Taken to Rome; Death" },
   { source = "ehrman-paul-2000", locator = "p. 96 approx." },
   { source = "ehrman-paul-2000", locator = "p. 173 approx." },
 ]

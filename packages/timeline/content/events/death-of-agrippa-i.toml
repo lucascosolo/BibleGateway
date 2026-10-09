@@ -18,9 +18,9 @@ tradition = "chronological"
 earliest = 44
 latest = 44
 summary = """
-The Wikipedia article on Herod Agrippa dates the death to 44 CE. That fits Josephus, who counts four years of reign under Caius and three under Claudius."""
+Meier places Herod Agrippa I's killing of James (Acts 12:1-2), shortly before Agrippa's own death, at about 44 CE. That fits Josephus, who counts four years of reign under Caius and three under Claudius."""
 citations = [
-  { source = "wikipedia-herod-agrippa" },
+  { source = "meier-2001", locator = "p. 213" },
   { source = "josephus-whiston", locator = "Antiquities 19.8.2" },
 ]
 
@@ -31,5 +31,4 @@ note = """
 Both accounts have a crowd hailing Agrippa as a god at Caesarea, followed at once by a fatal illness, though they differ on the details. Josephus describes a silver garment, an owl as an omen, and five days of stomach pain, whereas Acts has an angel and worms."""
 citations = [
   { source = "josephus-whiston", locator = "Antiquities 19.8.2" },
-  { source = "wikipedia-herod-agrippa" },
 ]

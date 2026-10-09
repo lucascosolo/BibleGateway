@@ -5,7 +5,7 @@ books = ["2Esd"]
 canon = "deuterocanon"
 status = "sources-located"
 summary = "2 Esdras is three works in one; its core, chapters 3-14, is the Jewish apocalypse 4 Ezra, which Lim dates to the end of the first century CE and Brown to about 90-120 CE; the unsigned Brenton preface puts it in Domitian's reign (81-96 CE). Brown and McDonald say Christians added to it. Chapter 14 has Ezra keep 'the seventy last' books for the wise, which McDonald and Lim use in the canon debate. The Ethiopian church and the Greek Orthodox Church (1950) hold it as scripture."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }, { source = "lim-2013", locator = "p. 169" }, { source = "brown-1997", locator = "Appendix II, PDF p. 886" }]
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }, { source = "lim-2013", locator = "p. 169" }, { source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on IV Ezra" }]
 original_language = "Disputed; the preface says probably Greek, with no Greek text found"
 
 
@@ -27,7 +27,7 @@ earliest = 90
 latest = 120
 held_by = "Raymond E. Brown (1997)"
 summary = "Brown says chapters 3-14 are IV Ezra, a Jewish work of about 90-120 CE originally written in Hebrew or Aramaic, and that chapters 1-2 and 15-16 are Christian compositions. Meier dates the original 4 Ezra to about 100 CE, with additions made around the third century (p. 283)."
-citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { source = "meier-1994", locator = "p. 283" }]
+citations = [{ source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on IV Ezra" }, { source = "meier-1994", locator = "p. 283" }]
 
 [[composed]]
 id = "domitian-81-96"

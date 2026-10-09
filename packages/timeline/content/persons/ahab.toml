@@ -6,7 +6,7 @@ Ahab was the son of Omri and king of the northern kingdom of Israel, ruling from
 status = "sources-located"
 verses = [{ ref = "1Kgs.16.29-1Kgs.22.40", link = "describes" }]
 citations = [
-  { source = "cojs-kurkh-monolith" },
+  { source = "pritchard-1969", locator = "p. 279 (Monolith Inscription, sixth year), trans. A. Leo Oppenheim" },
   { source = "young-2005", locator = "Table 2, p. 246" },
 ]
 
@@ -16,6 +16,6 @@ relation = "corroborates"
 note = """
 The Kurkh Monolith names "Ahab the Israelite" among Shalmaneser III's opponents at Qarqar (853 BCE), crediting him with 2,000 chariots and 10,000 foot soldiers."""
 citations = [
-  { source = "cojs-kurkh-monolith" },
-  { source = "wikipedia-kurkh-monoliths" },
+  { source = "pritchard-1969", locator = "p. 279 (Monolith Inscription, sixth year), trans. A. Leo Oppenheim" },
+  { source = "grayson-1996", locator = "pp. 23–24, A.0.102.2 ii 89b–102 (Ahab at ii 91–92)" },
 ]

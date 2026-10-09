@@ -26,10 +26,10 @@ label = "A 2nd-millennium BCE patriarchal age"
 tradition = "archaeological"
 earliest = -2000
 latest = -1001
-held_by = "William F. Albright and G. Ernest Wright"
+held_by = "William F. Albright"
 summary = """
-Albright and Wright placed the patriarchs in the 2nd millennium BCE. The sources read give no narrower date for the covenant itself, so the span shown is the whole thousand years."""
-citations = [{ source = "wikipedia-abraham", locator = "section 'Historicity'" }]
+Albright and his colleagues placed the patriarchs in the 2nd millennium BCE. The sources read give no narrower date for the covenant itself, so the span shown is the whole thousand years."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 34-36" }]
 
 [[positions]]
 id = "ussher-1912"

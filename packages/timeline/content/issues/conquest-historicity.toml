@@ -7,18 +7,18 @@ Did Israel conquer Canaan by force, and did Jericho fall as the story says? That
 events = ["conquest-of-canaan", "judges-period"]
 verses = [{ ref = "Josh.6.20", link = "describes" }]
 citations = [
-  { source = "wikipedia-battle-of-jericho" },
-  { source = "wikipedia-historicity-of-the-bible" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 81-82" },
+  { source = "finkelstein-silberman-2002", locator = "pp. 117-118" },
 ]
 persons = ["joshua", "josiah"]
 
 [[views]]
 label = "No conquest model"
 text = """
-William G. Dever states the mainstream position plainly: "No mainstream biblicist or archaeologist any longer espouses the conquest model." The archaeology behind it is that Kathleen Kenyon showed Jericho was destroyed at the end of the Middle Bronze Age, not the Late Bronze Age, and radiocarbon testing in 1995 dated the destruction layer to the late 17th or 16th centuries BCE."""
+Finkelstein and Silberman conclude of early Israel: "There was no violent conquest of Canaan." The archaeology behind it at Jericho is that the Middle Bronze Age town was destroyed by fire at roughly 1550, as Kitchen also reports, and that the thirteenth century left no settlement at all."""
 citations = [
-  { source = "wikipedia-battle-of-jericho", locator = "section on academic consensus and radiocarbon testing" },
-  { source = "wikipedia-joshua" },
+  { source = "finkelstein-silberman-2002", locator = "p. 118" },
+  { source = "kitchen-2003", locator = "p. 187" },
 ]
 
 [[views]]

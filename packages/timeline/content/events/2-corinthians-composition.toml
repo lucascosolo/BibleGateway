@@ -22,7 +22,7 @@ latest = 57
 held_by = "Raymond E. Brown"
 summary = """
 Raymond Brown dates 2 Corinthians to late summer or early autumn 57, written in Macedonia, and gives the revisionist alternative of 55/56. His summary line reads: "Late summer/early autumn 57 from Macedonia (55/56 in the Revisionist Chronology)." He accepts Paul as author ("Not seriously disputed.") but notes that scholars doubt the book is a single letter: "Most scholars think that several (two to five) letters have been combined.""""
-citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information, PDF p. 590" }]
+citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"

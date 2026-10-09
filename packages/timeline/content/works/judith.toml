@@ -4,7 +4,7 @@ books = ["Jdt"]
 canon = "deuterocanon"
 status = "draft"
 summary = "Judith is a story of Jewish resistance. No filed critical source dates it; Brown says only that all the deuterocanonical books were composed before Jesus' time. The unsigned preface to the Apocrypha in the Brenton edition calls it a sacred historical novel written in the Maccabean age, with 'Nebuchadrezzar' probably standing for Antiochus Epiphanes, and thinks the Greek and Aramaic forms came from a Hebrew original. Athanasius lists it among the books to be read but not canonical; Jerome says it is not in the canon. The Roman Catholic, Orthodox and Ethiopian churches hold it as scripture."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "brown-1997", locator = "PDF p. 41" }]
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "brown-1997", locator = "Introductory Background, Useful Information about the Bible as a Whole" }]
 original_language = "Hebrew (probably; the Greek form survives)"
 composed_undated = "Not dated by any source filed here. The earliest copies the filed sources date are Codex Vaticanus (fourth century, about 350 CE) and Codex Sinaiticus (about 350-400 CE). Brown says only that all the deuterocanonical books were composed before Jesus' time; an unsigned, undated preface to the Apocrypha in the eBible Brenton edition says 'the Maccabean age', without years."
 

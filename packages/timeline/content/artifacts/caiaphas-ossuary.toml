@@ -4,7 +4,7 @@ kind = "inscription"
 status = "draft"
 language = "Hebrew script"
 summary = """
-An ornate limestone bone box found in December 1990 in a burial cave in south Jerusalem has one side inscribed "Yehosef bar Qayafa" ("Joseph son of Caiaphas") and another side reading "Yehosef bar Qafa". Many identify it with the high priest Joseph Caiaphas, while others point to the spelling, the lack of a priestly title and the plain tomb."""
+Two ossuaries (boxes for secondary burial) were found in 1990 in what appears to be the family tomb of the high priest Joseph Caiaphas, in the Peace Forest south of the Old City of Jerusalem. The most decorated one is inscribed on its narrow side "Joseph son of Qafa'" and on its rear side "Joseph son of Qayafa'". Ronny Reich, as Meier reports, observes that the inscription need not make Caiaphas Joseph's father, since the name could be a family nickname, and he suggests that the bones of a man about 60 years old in the decorated box are those of the high priest."""
 discovered = { year = 1990, place = "Jerusalem, Peace Forest / North Talpiot" }
 held_by = { institution = "Israel Museum, Jerusalem" }
-citations = [{ source = "wikipedia-caiaphas-ossuary" }]
+citations = [{ source = "meier-1994", locator = "p. 643 n. 36" }]

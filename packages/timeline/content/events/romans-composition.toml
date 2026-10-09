@@ -22,7 +22,7 @@ latest = 58
 held_by = "Raymond E. Brown"
 summary = """
 Brown, a critical scholar, gives his dating in one line: "In the winter of 57/58 from Corinth (55/56 in the Revisionist Chronology)." On authenticity he writes: "Not seriously disputed." He notes that a larger minority holds that chapter 16 was added later."""
-citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information, PDF p. 608" }]
+citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"

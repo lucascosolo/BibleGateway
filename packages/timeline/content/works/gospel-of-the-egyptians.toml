@@ -5,12 +5,11 @@ canon = "described"
 status = "sources-located"
 original_language = "Greek"
 summary = """
-An esoteric treatise preserved in two Coptic versions in the Nag Hammadi library, as NHC III,2 and IV,2. It is a different book from the Greek Gospel of the Egyptians, which Clement of Alexandria quoted and which Metzger dates after 150 CE; Metzger flags the difference in a footnote. No filed source gives a date for the Coptic work in particular; Metzger's general range for the Greek originals of the Nag Hammadi tractates is the second or third century. It has no verses in the corpus and no full English text in this app; the facsimiles are online."""
+An esoteric treatise preserved in two Coptic versions in the Nag Hammadi library, as NHC III,2 and IV,2. It is a different book from the Greek Gospel of the Egyptians, which Clement of Alexandria quoted and which Metzger dates after 150 CE; Metzger flags the difference in a footnote. No filed source gives a date for the Coptic work in particular; Metzger's general range for the Greek originals of the Nag Hammadi tractates is the second or third century. It has no verses in the corpus and no full English text in this app."""
 contents = """
-An esoteric treatise, known in two Coptic copies, one in Codex III and one in Codex IV. Not to be confused with the Greek Gospel of the Egyptians quoted by Clement of Alexandria. Photographs of the codices are in the Claremont Colleges Digital Library."""
+An esoteric treatise, known in two Coptic copies, one in Codex III and one in Codex IV. Not to be confused with the Greek Gospel of the Egyptians quoted by Clement of Alexandria."""
 citations = [
   { source = "metzger-1987-canon", locator = "pp. 84, 171 n. 14" },
-  { source = "claremont-nha", locator = "Nag Hammadi Archive collection page" },
 ]
 
 [[composed]]
@@ -37,8 +36,7 @@ latest = 400
 language = "Coptic"
 institution = "Coptic Museum, Cairo"
 url = "https://ccdl.claremont.edu/digital/collection/nha"
-note = "Burns and Goff say the Nag Hammadi codices were made probably in the fourth century. Facsimile photographs are in the Claremont Colleges Digital Library."
+note = "Burns and Goff say the Nag Hammadi codices were made probably in the fourth century."
 citations = [
   { source = "dss-nag-hammadi-codices", locator = "pp. 3, 121-122" },
-  { source = "claremont-nha", locator = "Nag Hammadi Archive collection page" },
 ]

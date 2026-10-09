@@ -5,13 +5,12 @@ canon = "described"
 status = "sources-located"
 original_language = "Greek"
 summary = """
-A Gnostic revelation text with a cosmic myth that includes a version of the story of the watchers of Genesis 6 and 1 Enoch. It is the most prominent Nag Hammadi text and survives in four Coptic copies: three in the Nag Hammadi codices (II,1, III,1, IV,1) and one in the Berlin Codex (BG 8502,2). Irenaeus reports a version of its myth in Against Heresies 1.29. No filed source dates the Greek original more narrowly than the second or third century CE that Metzger gives for the Greek originals of the Nag Hammadi tractates. It has no verses in the corpus and no full English text in this app; the facsimiles are online."""
+A Gnostic revelation text with a cosmic myth that includes a version of the story of the watchers of Genesis 6 and 1 Enoch. It is the most prominent Nag Hammadi text and survives in four Coptic copies: three in the Nag Hammadi codices (II,1, III,1, IV,1) and one in the Berlin Codex (BG 8502,2). Irenaeus reports a version of its myth in Against Heresies 1.29. No filed source dates the Greek original more narrowly than the second or third century CE that Metzger gives for the Greek originals of the Nag Hammadi tractates. It has no verses in the corpus and no full English text in this app."""
 contents = """
-A Gnostic cosmic myth in which a risen Jesus appears as the revealer, including a version of the story of the watchers of Genesis 6. It is preserved in four Coptic copies: NHC II,1, III,1 and IV,1, and BG 8502,2. Photographs of the Nag Hammadi copies are in the Claremont Colleges Digital Library."""
+A Gnostic cosmic myth in which a risen Jesus appears as the revealer, including a version of the story of the watchers of Genesis 6. It is preserved in four Coptic copies: NHC II,1, III,1 and IV,1, and BG 8502,2."""
 citations = [
   { source = "dss-nag-hammadi-codices", locator = "pp. 251, 267" },
   { source = "metzger-1987-canon", locator = "p. 84" },
-  { source = "claremont-nha", locator = "Nag Hammadi Archive collection page" },
 ]
 
 [[composed]]
@@ -41,10 +40,9 @@ latest = 400
 language = "Coptic"
 institution = "Coptic Museum, Cairo"
 url = "https://ccdl.claremont.edu/digital/collection/nha"
-note = "Three copies of the Secret Book of John from the fourth-century Nag Hammadi codices; Burns and Goff say the codices were made probably in the fourth century. Facsimile photographs are in the Claremont Colleges Digital Library."
+note = "Three copies of the Secret Book of John from the fourth-century Nag Hammadi codices; Burns and Goff say the codices were made probably in the fourth century."
 citations = [
   { source = "dss-nag-hammadi-codices", locator = "pp. 3, 267" },
-  { source = "claremont-nha", locator = "Nag Hammadi Archive collection page" },
 ]
 
 [[witnesses]]

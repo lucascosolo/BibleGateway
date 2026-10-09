@@ -9,16 +9,16 @@ verses = [
   { ref = "Dan.5.2", link = "describes", note = "Daniel 5:2 calls Nebuchadnezzar the father of Belshazzar, the claim this issue weighs against the Babylonian records." },
   { ref = "Dan.5.22", link = "describes", note = "Daniel 5:22 addresses Belshazzar as the son of Nebuchadnezzar, the same family claim this issue weighs against the Babylonian records." },
 ]
-citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
+citations = [{ source = "kitchen-2003", locator = "pp. 73-74" }, { source = "pritchard-1969", locator = "p. 313, Verse Account of Nabonidus, trans. A. Leo Oppenheim" }]
 
 [[views]]
 label = "The Babylonian record"
 text = """
-The Nabonidus Cylinder from Ur calls Belshazzar "the eldest son, my offspring" of Nabonidus."""
-citations = [{ source = "wikipedia-cylinders-of-nabonidus" }]
+The closing prayer of the Nabonidus Cylinder from Ur names Belshazzar as the eldest son of Nabonidus."""
+citations = [{ source = "kitchen-2003", locator = "p. 517, n. 22" }]
 
 [[views]]
 label = "Kingship entrusted to the eldest son"
 text = """
-The Verse Account of Nabonidus, in Oppenheim's translation, says that as the third year was about to begin Nabonidus "entrusted the army [?] to his oldest son, his first born". It adds that he "let everything go, entrusted the kingship to him, and, himself, he started out for a long journey". Read with the cylinder, this shows Belshazzar ruling in Babylon under his father. That bears on why Daniel calls him king. It says nothing about Nebuchadnezzar."""
-citations = [{ source = "livius-verse-account", locator = "column ii, lines 5–6" }]
+The Verse Account of Nabonidus, in Oppenheim's ANET translation, says that when the third year was about to begin Nabonidus entrusted the "Camp" to his oldest son, the first-born. It adds that he let everything go, entrusted the kingship to him, and himself started out for a long journey. Read with the cylinder, this shows Belshazzar ruling in Babylon under his father. That bears on why Daniel calls him king. It says nothing about Nebuchadnezzar."""
+citations = [{ source = "pritchard-1969", locator = "p. 313, Verse Account of Nabonidus, trans. A. Leo Oppenheim" }]

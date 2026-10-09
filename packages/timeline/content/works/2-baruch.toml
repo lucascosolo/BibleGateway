@@ -11,7 +11,7 @@ summary = """
 citations = [
   { source = "charles-1918-2baruch", locator = "intro., p. xii" },
   { source = "charles-1918-2baruch", locator = "intro., p. xiii" },
-  { source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { source = "mcdonald-2017-vol1", locator = "p. 139" }
+  { source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on II Baruch" }, { source = "mcdonald-2017-vol1", locator = "p. 139" }
 ]
 
 [[composed]]
@@ -22,7 +22,7 @@ earliest = 95
 latest = 120
 held_by = "Raymond E. Brown (1997)"
 summary = "Brown dates 2 Baruch, a Jewish work preserved in a Syriac translation from Greek, to 95-120 CE and makes it dependent on IV Ezra or a source common to both. McDonald's list, after Charlesworth, gives 'ca. 100 CE' (p. 139), and Meier places it in the early second century CE (pp. 283, 363)."
-citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "meier-1994", locator = "p. 283" }, { source = "meier-1994", locator = "p. 363" }]
+citations = [{ source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on II Baruch" }, { source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "meier-1994", locator = "p. 283" }, { source = "meier-1994", locator = "p. 363" }]
 
 [[composed]]
 id = "lim-second-century"

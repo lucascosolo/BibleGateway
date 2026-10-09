@@ -5,5 +5,8 @@ status = "draft"
 language = "Greek"
 summary = """
 Josephus reports that the high priest Ananus had "the brother of Jesus who was called Christ, whose name was James" stoned. Modern scholars almost all accept the passage as genuine. (Section 20.200 in the Niese numbering; 20.9.1 in Whiston's.)"""
-citations = [{ source = "wikipedia-josephus-on-jesus" }]
+citations = [
+  { source = "josephus-whiston", locator = "Antiquities 20.9.1" },
+  { source = "meier-1991", locator = "pp. 57–59" },
+]
 verses = [{ ref = "Gal.1.19", link = "background", note = "Galatians 1:19 calls James the Lord's brother, the James whose stoning Josephus reports here." }]

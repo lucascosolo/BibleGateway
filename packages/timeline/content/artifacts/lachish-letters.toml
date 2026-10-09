@@ -8,5 +8,5 @@ summary = """
 These are messages written in ink on pieces of broken pottery, found in the gate area of Lachish and dated to the last years before the Babylonian conquest, "perhaps in the autumn of 589 (or 588) B.C." in Albright's ANET wording (p. 322). In Ostracon IV an officer writes: "we are watching for the signals of Lachish, according to all the indications which my lord hath given, for we cannot see Azekah" (Albright's ANET translation, p. 322). This matches Jeremiah 34:7, where Lachish and Azekah are the last fortified cities of Judah still holding out."""
 discovered = { year = 1935, place = "Tell ed-Duweir (Lachish), excavated by James Leslie Starkey" }
 held_by = { institution = "British Museum (most); Israel Museum (Letter 6 and others)", accession = "ME 125701–125707, 125715a" }
-citations = [{ source = "wikipedia-lachish-letters" }, { source = "pritchard-1969", locator = "pp. 321–322 (introduction p. 321; Ostracon IV p. 322), trans. W. F. Albright" }]
+citations = [{ source = "pritchard-1969", locator = "pp. 321–322 (introduction p. 321; Ostracon IV p. 322), trans. W. F. Albright" }]
 verses = [{ ref = "Jer.34.7", link = "background", note = "Jeremiah 34:7 says Lachish and Azekah were the fortified cities of Judah still holding out against Babylon, the situation the Lachish letters reflect." }]

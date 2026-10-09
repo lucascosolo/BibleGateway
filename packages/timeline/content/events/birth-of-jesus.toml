@@ -20,38 +20,27 @@ label = "6–4 BCE"
 tradition = "chronological"
 earliest = -6
 latest = -4
-held_by = "Emil Schürer"
+held_by = "John P. Meier; Raymond E. Brown (for the 4 BCE death date)"
 summary = """
-Emil Schürer dated Herod's death to 4 BCE, working back from Archelaus's removal in 6 CE, and that is the latest point for a birth in Herod's days. Wikipedia reports that most scholars assume a birth between 6 and 4 BCE on this basis. Schürer's own date is for Herod's death; the birth range is an inference from it."""
+Herod's death in 4 BCE is the latest point for a birth in his days. Meier treats 4 BCE as the settled year, noting that Herod's successors counted their reigns from 5-4 BCE and that proposals for 1 BCE have not won acceptance, and Brown likewise says Jesus was born before Herod's death in 4 BC. The 6 to 4 BCE range is an inference from that death date."""
 citations = [
-  { source = "wikipedia-herod-the-great" },
-  { source = "wikipedia-chronology-of-jesus" },
+  { source = "meier-1991", locator = "p. 375; p. 414 n. 18" },
+  { source = "brown-1997", locator = "ch. 4, What Preceded the 1st Century AD (63–4 BC: Roman Dominance, Herod the Great, Augustus); ch. 4, The First Third of the 1st Century AD" },
 ]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 The Gospel of Matthew sets the limit. Matthew 2 places the birth in the days of Herod the king, so it cannot fall after his death."""
-  citations = [{ source = "wikipedia-chronology-of-jesus" }]
+  citations = [{ source = "meier-1991", locator = "p. 375 (Matt 2:1; Luke 1:5)" }]
   verses = [{ ref = "Matt.2.1", link = "dates" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
 The census in Luke pulls the other way. Luke 2:2 links the birth to a registration under Quirinius, which Josephus dates to the removal of Archelaus in 6 CE, about ten years later."""
-  citations = [{ source = "wikipedia-census-of-quirinius" }, { source = "josephus-whiston", locator = "Antiquities 18.1.1" }]
+  citations = [{ source = "meier-1991", locator = "pp. 212–213" }, { source = "josephus-whiston", locator = "Antiquities 18.1.1" }]
   verses = [{ ref = "Luke.2.2", link = "dates" }]
-
-[[positions]]
-id = "2-bce"
-label = "2 BCE"
-tradition = "traditional"
-earliest = -2
-latest = -2
-held_by = "Clement of Alexandria"
-summary = """
-Clement of Alexandria's date of 2 BCE comes from subtracting thirty years from the start of the ministry, in about 29 CE. Eusebius also places the birth in the forty-second year of Augustus, which is 2 BCE. Here traditional means the dating of early church writers."""
-citations = [{ source = "wikipedia-chronology-of-jesus" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-18-1"
@@ -60,7 +49,7 @@ note = """
 Josephus says Cyrenius came to Syria to assess Judea after Archelaus's removal, and he places that census in 6 CE. That is after the death of Herod, the king under whom Matthew sets the birth, which is why the two accounts are in tension."""
 citations = [
   { source = "josephus-whiston", locator = "Antiquities 18.1.1" },
-  { source = "wikipedia-census-of-quirinius" },
+  { source = "meier-1991", locator = "pp. 212–213" },
 ]
 
 [[positions]]
@@ -93,12 +82,12 @@ held_by = "John P. Meier"
 summary = """
 John Meier places Jesus's birth ca. 7 or 6 BCE, a few years before Herod the Great died in 4 BCE, and thinks it most likely took place in Nazareth, not Bethlehem. He holds this as a probability only: the Magi and flight-into-Egypt stories are, in his view, highly questionable history. He calls the match of Matthew 2 with Luke 3:23 "likely—though not certain"."""
 citations = [
-  { source = "meier-1991", locator = "pp. 373–376, 405" },
+  { source = "meier-1991", locator = "pp. 375–377, 407" },
 ]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Meier argues that Matthew and Luke independently place the birth in Herod's reign, and that Matthew's impression of a child one to two years old at the Magi's visit suggests the last years of that reign. Luke 3:23 ("about thirty") for a ministry beginning around 28 CE fits a birth a few, but only a few, years before 4 BCE."""
-  citations = [{ source = "meier-1991", locator = "pp. 373–375" }]
+  citations = [{ source = "meier-1991", locator = "pp. 375–377" }]
   verses = [{ ref = "Matt.2.1", link = "dates" }, { ref = "Luke.3.23", link = "dates" }]

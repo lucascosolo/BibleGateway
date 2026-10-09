@@ -44,8 +44,8 @@ Wood builds on the Jericho evidence, including Kitchen's own account of the site
   [[positions.arguments]]
   stance = "against"
   text = """
-A problem for any conquest date comes from Kathleen Kenyon, who dated Jericho's destruction to the end of the Middle Bronze Age, around 1550 BCE. That is too early for a conquest in the 15th century or later. Radiocarbon testing in 1995 dated the destruction level to the late 17th or 16th century BCE."""
-  citations = [{ source = "wikipedia-battle-of-jericho", locator = "sections on Kenyon and radiocarbon testing" }]
+A problem for any conquest date is the Middle Bronze Age town of Jericho. Kitchen says it perished violently, including by fire, at roughly 1550 or soon after, and that almost nothing of the Late Bronze settlement survives. That is too early for a conquest in the 15th century or later. Finkelstein and Silberman add that there was no settlement of any kind in the thirteenth century and no sign of a destruction in the earlier, small Late Bronze town."""
+  citations = [{ source = "kitchen-2003", locator = "p. 187" }, { source = "finkelstein-silberman-2002", locator = "pp. 81-82" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
 [[positions]]

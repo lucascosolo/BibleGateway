@@ -3,36 +3,30 @@ kind = "chronology"
 title = "Ezra's seventh year: 458 or 398 BCE?"
 status = "sources-located"
 summary = """
-Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes, and the sources read give three views: the seventh year of Artaxerxes I (458/457 BCE), the seventh year of Artaxerxes II (398 BCE), or a copyist's wrong number."""
+Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The seventh year of Artaxerxes I gives 458/457 BCE; that of Artaxerxes II gives 398 BCE."""
 events = ["ezra-mission"]
 verses = [
   { ref = "Ezra.7.7", link = "dates" },
   { ref = "Ezra.7.8", link = "dates" },
   { ref = "Neh.2.1", link = "dates" },
 ]
-citations = [{ source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
+citations = [{ source = "kitchen-2003", locator = "p. 74" }, { source = "lim-2013", locator = "p. 60" }, { source = "mcdonald-2017-vol1", locator = "p. 52" }]
 persons = ["ezra", "nehemiah"]
 
 [[views]]
 label = "458/457 BCE (Artaxerxes I)"
 text = """
-Yamauchi holds that Artaxerxes I, "the traditional view", is correct, so Ezra arrived in 458 (457). Wikipedia calls this the most widely accepted view."""
-citations = [{ source = "preceptaustin-ezra-7" }, { source = "wikipedia-ezra" }]
+Kitchen puts Ezra in Year 7 of Artaxerxes I, 458, and Nehemiah's governorship in Years 20-32 of the same king, 445-433. Lim reports Lee's dating of Ezra 7:8 to 458 from the Persian-Egyptian conflict."""
+citations = [{ source = "kitchen-2003", locator = "p. 74" }, { source = "lim-2013", locator = "p. 60" }]
 
 [[views]]
 label = "398 BCE (Artaxerxes II)"
 text = """
-On this view Nehemiah came before Ezra, and Ezra arrived in 398 BCE, the seventh year of Artaxerxes II. Albin van Hoonacker proposed it (1890 hypothesis; 1892 "Esdras en l'an 7 d'Artaxerxes II", per Wikipedia's list of his works)."""
-citations = [{ source = "wikipedia-albin-van-hoonacker" }, { source = "wikipedia-ezra" }, { source = "preceptaustin-ezra-7" }]
+McDonald gives 398 BCE, the seventh year of Artaxerxes II, as the alternative to 458, without choosing between them. Kitchen notes that alternatives to 458 are often proposed and holds that none explains the evidence better."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 52" }, { source = "kitchen-2003", locator = "p. 74" }]
 
 [[views]]
-label = "428 BCE (thirty-seventh year of Artaxerxes I)"
+label = "Josephus: the seventh year of Xerxes"
 text = """
-The letter in Ezra 7:11-26 comes from the thirty-seventh year of Artaxerxes I, 428 BCE."""
-citations = [{ source = "preceptaustin-ezra-7" }]
-
-[[views]]
-label = "Scribal error; Ezra and Nehemiah contemporaries"
-text = """
-A last group of scholars thinks "the seventh year" is a copyist's mistake, and so treats Ezra and Nehemiah as men who lived at the same time."""
-citations = [{ source = "wikipedia-ezra" }]
+Josephus, following the Greek form of the story, has Ezra leave Babylon in the seventh year of "Xerxes" and Nehemiah come in that king's twenty-fifth year, which fits neither the 458 nor the 398 count."""
+citations = [{ source = "josephus-whiston", locator = "Antiquities 11.5.1-2; 11.5.6-7" }]

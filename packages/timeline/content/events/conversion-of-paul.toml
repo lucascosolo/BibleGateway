@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "sources-located"
 summary = """
-Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times, and Paul refers to it in Galatians and 1 Corinthians. Scholars date it to 31-36 CE."""
+Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times, and Paul refers to it in Galatians and 1 Corinthians. Scholars date it between about 30 and 36 CE."""
 verses = [
   { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Acts 9:1-19 is Luke's account of Paul's conversion on the road to Damascus." },
   { ref = "Acts.22.3-Acts.22.16", link = "describes", note = "In Acts 22:3-16 Paul tells the story to the crowd in Jerusalem." },
@@ -18,34 +18,14 @@ verses = [
 
 [[positions]]
 id = "31-36"
-label = "31–36 CE"
+label = "32–35 CE (Carson and Moo)"
 tradition = "chronological"
-earliest = 31
-latest = 36
-held_by = "Bromley (1979), Barnett (2002), Niswonger (1992)"
+earliest = 32
+latest = 35
+held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Wikipedia reports that Bromley (1979), Barnett (2002) and Niswonger (1992) have dated Paul's conversion to 31-36 CE. The page gives surnames only and does not name their works, so the scholarship behind the range could not be checked further."""
-citations = [{ source = "wikipedia-paul-the-apostle" }]
-
-[[positions]]
-id = "4-7-years-after"
-label = "Four to seven years after the crucifixion"
-tradition = "critical"
-earliest = 34
-latest = 40
-summary = """
-Wikipedia says Acts suggests the conversion came four to seven years after the crucifixion. The years shown here (34-40) are that gap added to a crucifixion in 30 CE or 33 CE; the sum is the cataloguer's own, not a cited scholar's."""
-citations = [{ source = "wikipedia-conversion-of-paul" }]
-
-[[positions]]
-id = "33-36"
-label = "33-36 CE"
-tradition = "chronological"
-earliest = 33
-latest = 36
-summary = """
-Wikipedia's Chronology of Jesus (section "Conversion of Paul") gives a general estimate and places it relative to the crucifixion: "The generally accepted scholarly estimate for the date of conversion of Paul is AD 33-36, placing the death of Jesus before this date range." No individual holder is named on that page, and Riesner, Jewett and Luedemann were not found on the pages read."""
-citations = [{ source = "wikipedia-chronology-of-jesus", locator = "section Conversion of Paul" }]
+Carson and Moo reckon that if the famine-relief visit fell in 45 to 47 and Galatians 2:1's fourteen years are counted inclusively from the conversion, the conversion falls between 32 and 35. At least a year must separate the crucifixion from it, and Paul's escape from Aretas's Damascus (2 Corinthians 11:32) slightly favors the later end, perhaps 34 or 35. They allow that an earlier date cannot be excluded."""
+citations = [{ source = "carson-moo-2005", locator = "pp. 367–368" }]
 
 [[positions]]
 id = "brown-traditional-36"

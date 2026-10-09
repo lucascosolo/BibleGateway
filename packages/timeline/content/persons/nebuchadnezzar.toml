@@ -16,11 +16,11 @@ events = ["carchemish-605", "jerusalem-capture-597", "jerusalem-fall"]
 # issues/jehoiachin-year-seven-or-eight.toml and issues/belshazzar-king-and-father.toml for the same claims.
 citations = [
   { source = "thiele-1983", locator = "p. 180, table of fixed dates; p. 186" },
-  { source = "livius-abc5" },
+  { source = "kitchen-2003", locator = "p. 44" },
   { source = "grayson-1975", locator = "Chronicle 5" },
   { source = "young-2004", locator = "pp. 21–38; the conclusion at p. 27" },
   { source = "finkelstein-silberman-2002", locator = "p. 307" },
-  { source = "wikipedia-cylinders-of-nabonidus" },
+  { source = "kitchen-2003", locator = "pp. 73-74" },
 ]
 
 [[attestations]]
@@ -30,5 +30,5 @@ note = """
 The Babylonian Chronicle covers Nebuchadnezzar's reign from his accession to his eleventh year and records his capture of Jerusalem and its king in his seventh year."""
 citations = [
   { source = "grayson-1975", locator = "Chronicle 5" },
-  { source = "livius-abc5" },
+  { source = "kitchen-2003", locator = "pp. 44, 66" },
 ]

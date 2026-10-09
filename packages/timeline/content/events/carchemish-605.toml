@@ -29,5 +29,5 @@ citations = [{ source = "thiele-1983", locator = "p. 184; p. 185; p. 180, table 
 artifact = "babylonian-chronicle-abc5"
 relation = "corroborates"
 note = """
-The tablet records the battle in year 21 of Nabopolassar. Lines 2-4 say the Babylonian army marched to Carchemish and crossed the river against the Egyptian army, which withdrew."""
-citations = [{ source = "livius-abc5" }]
+The tablet records the battle in year 21 of Nabopolassar. Kitchen reports that the chronicle (BM 21946, Chronicle 5) recounts the Babylonian victory at Carchemish that drove Egypt from the Levant."""
+citations = [{ source = "kitchen-2003", locator = "p. 66" }]

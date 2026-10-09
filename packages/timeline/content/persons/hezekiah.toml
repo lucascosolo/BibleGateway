@@ -8,7 +8,7 @@ verses = [{ ref = "2Kgs.18.1-2Kgs.20.21", link = "describes" }]
 events = ["sennacherib-campaign-judah"]
 citations = [
   { source = "thiele-1983", locator = "p. 218, Appendix C" },
-  { source = "cojs-sennacherib-prisms" },
+  { source = "pritchard-1969", locator = "p. 288 (Oriental Institute Prism, third campaign), trans. A. Leo Oppenheim" },
   { source = "young-2005", locator = "Table 2, p. 246; §3, p. 227" },
   { source = "young-2003", locator = "p. 589" },
 ]
@@ -19,8 +19,8 @@ relation = "corroborates"
 note = """
 Sennacherib names "Hezekiah the Judahite", who had not submitted to his yoke, and says he shut Hezekiah up in Jerusalem "like a bird in a cage"."""
 citations = [
-  { source = "bm-taylor-prism" },
-  { source = "cojs-sennacherib-prisms" },
+  { source = "pritchard-1969", locator = "p. 288 (Oriental Institute Prism, third campaign), trans. A. Leo Oppenheim" },
+  { source = "luckenbill-arab-2", locator = "§ 240 (Taylor Prism: 46 walled cities, 'caged bird', 30 talents of gold and 800 of silver)" },
 ]
 
 [[attestations]]
@@ -28,4 +28,4 @@ artifact = "hezekiah-bulla-ophel"
 relation = "corroborates"
 note = """
 This is a seal impression of the king himself: "Belonging to Hezekiah [son of] Ahaz, king of Judah". It matches the father named in 2 Kings 18:1."""
-citations = [{ source = "bas-hezekiah-bulla" }]
+citations = [{ source = "bas-hezekiah-bulla", locator = "article text: the Ophel seal impression \"Belonging to Hezekiah [son of] Ahaz, king of Judah\"" }]

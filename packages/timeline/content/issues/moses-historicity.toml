@@ -3,34 +3,31 @@ kind = "historical"
 title = "Is there a historical Moses?"
 status = "sources-located"
 summary = """
-No source outside the Bible from Moses' own time names him, and no Egyptian record mentions him. Scholars split into two camps: some see a figure of tradition with no recoverable history, others a real leader of some kind behind the story."""
+Finkelstein and Silberman report that the Egyptian sources of the thirteenth century never mention the Israelites, so no outside record anchors Moses. Scholars split into two camps: some see a figure of tradition with no recoverable history, others a real leader of some kind behind the story."""
 persons = ["moses", "josiah"]
 events = ["exodus"]
 verses = [{ ref = "Exod.2.10", link = "describes" }]
-citations = [{ source = "wikipedia-moses" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 59-60" }]
 
 [[views]]
 label = "No trace outside the tradition"
 text = """
-No Egyptian source from his time mentions Moses, and none mentions him before the 4th century BCE. Jan Assmann accordingly describes him as a figure of memory with no traces outside the tradition."""
-citations = [{ source = "wikipedia-moses" }]
+Finkelstein and Silberman find in the abundant Egyptian sources of the New Kingdom "no reference to the Israelites, not even a single clue" (p. 59), and say Israel is absent from monuments, tombs and papyri alike (p. 60). On their account there is nothing outside the tradition to anchor a Moses."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 59-60" }]
 
 [[views]]
 label = "A leader behind the story"
 text = """
-William Dever has early Israel growing mostly out of Canaanite villages but including some people who had left Egypt, and he allows for a Moses-like leader among that group."""
-citations = [
-  { source = "dever-2003" },
-  { source = "coogan-2003-review" },
-]
+Kitchen argues that foreigners at the Egyptian court were common in the thirteenth century, so "A Moses would be simply one among many" (p. 297). He also holds that the covenant forms of Exodus-Leviticus and Deuteronomy fit a West Semite in Moses' role at the Egyptian court (p. 331)."""
+citations = [{ source = "kitchen-2003", locator = "p. 297" }, { source = "kitchen-2003", locator = "p. 331" }]
 
 [[views]]
 label = "An Egyptian name"
 text = """
-The name Moses is commonly linked to the Egyptian msy / mose, "born of" or "child of", which appears in names such as Thutmose and Ramose. Some read this as a sign that the tradition has a genuine Egyptian setting."""
+The name Moses is commonly linked to the Egyptian msy / mose, "born of" or "child of", which appears in names such as Thutmose and Ramose. Some read this as a sign that the tradition has a genuine Egyptian setting. Kitchen disagrees: the sibilants do not match as they should, he says, and the name is most likely not Egyptian (p. 297)."""
 citations = [
   { source = "griffiths-1953", locator = "p. 223" },
-  { source = "wikipedia-moses" },
+  { source = "kitchen-2003", locator = "p. 297" },
 ]
 
 [[views]]

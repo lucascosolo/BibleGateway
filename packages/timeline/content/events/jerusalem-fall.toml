@@ -59,14 +59,14 @@ artifact = "lachish-letters"
 relation = "consistent"
 note = """
 The letters were written in Judah's last years before the conquest. In Letter 4, an officer can still see the signals of Lachish but no longer those of Azekah. Jeremiah 34:7 describes the same situation, with those two as the last fortified cities holding out. The letters do not date the fall itself."""
-citations = [{ source = "wikipedia-lachish-letters" }]
+citations = [{ source = "pritchard-1969", locator = "pp. 321-322, Lachish ostraca, trans. W. F. Albright (Letter IV, p. 322)" }, { source = "kitchen-2003", locator = "p. 45" }]
 
 [[attestations]]
 artifact = "babylonian-chronicle-abc5"
 relation = "silent"
 note = """
-This chronicle (ABC 5) ends with Nebuchadnezzar's eleventh year (594 BCE), so it does not reach the fall of the city. It gives the earlier capture of 597 BCE instead."""
-citations = [{ source = "livius-abc5" }]
+This chronicle (ABC 5) is cited here for Carchemish in 605 and the capture of 597 BCE (Kitchen, pp. 44, 66); the sources read show no account of the fall of the city in it."""
+citations = [{ source = "kitchen-2003", locator = "pp. 44, 66" }]
 
 [[positions]]
 id = "fs-586"

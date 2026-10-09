@@ -22,33 +22,34 @@ latest = -538
 summary = """
 The decree comes after the conquest of Babylon in 539 BCE, and the usual dating puts the return under Cyrus in 538 BCE. Here traditional means that usual dating, which follows the biblical accounts."""
 citations = [
-  { source = "wikipedia-edict-of-cyrus" },
-  { source = "wikipedia-ezra-nehemiah" },
+  { source = "kitchen-2003", locator = "p. 71 (Ezra 1-6 runs from Cyrus's accession in 539 to the temple's completion in 516)" },
+  { source = "finkelstein-silberman-2002", locator = "p. 307 (the proclamation of Cyrus in 538)" },
+  { source = "josephus-whiston", locator = "Antiquities 11.1.1-3 (Cyrus's order and letter to the governors)" },
 ]
 
 [[positions]]
 id = "no-single-decree"
-label = "No authentic decree; gradual return (539-520 BCE bounds)"
+label = "Decree texts edited or embellished (539-520 BCE bounds)"
 tradition = "critical"
 earliest = -539
 latest = -520
-held_by = "Lester L. Grabbe"
+held_by = "Timothy H. Lim; Michael L. Satlow"
 summary = """
-Lester Grabbe holds that the reported decree, which lets or even orders the Jews to rebuild the temple, cannot be considered genuine. Other scholars suggest the return was gradual. The years shown run from the conquest to Haggai's 520 BCE, and they are the cataloguer's bounds, not Grabbe's."""
-citations = [{ source = "wikipedia-edict-of-cyrus" }]
+Satlow says the Aramaic Cyrus decree of Ezra 6, if authentic at all, is almost certainly embellished. Lim argues that the edict of Ezra 1 shows Judean priestly editing and records no petition behind it. The years shown run from the conquest to Haggai's 520 BCE, and they are the cataloguer's bounds."""
+citations = [{ source = "satlow-2014", locator = "p. 64" }, { source = "lim-2013", locator = "pp. 61-62" }]
 
   [[positions.arguments]]
   stance = "against"
   text = """
-Grabbe and Kuhrt find nothing in the Cyrus Cylinder that supports the biblical decree. It focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem. Kuhrt calls its passage on restoring peoples a literary device, and she says its purely Babylonian setting gives no proof for Jewish exiles."""
-  citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "wikipedia-edict-of-cyrus" }]
+The Cyrus Cylinder focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem; its restoration of gods and peoples concerns sacred cities of Babylonia and the east. Its purely Babylonian setting gives no proof for Jewish exiles."""
+  citations = [{ source = "pritchard-1969", locator = "pp. 315-316, Cyrus Cylinder, trans. A. Leo Oppenheim" }, { source = "kitchen-2003", locator = "p. 76" }]
 
 [[attestations]]
 artifact = "cyrus-cylinder"
 relation = "partially-corroborates"
 note = """
 The Cylinder says Cyrus restored gods and sent displaced peoples home to sites in Mesopotamia, and Ezra 1 credits Cyrus with the same policy. But the Cylinder does not mention Jews, Jerusalem or Judea, so it supports the policy but not the decree."""
-citations = [{ source = "wikipedia-cyrus-cylinder" }, { source = "livius-cyrus-cylinder" }]
+citations = [{ source = "pritchard-1969", locator = "pp. 315-316, Cyrus Cylinder, trans. A. Leo Oppenheim" }, { source = "kitchen-2003", locator = "p. 76" }]
 
 [[positions]]
 id = "fs-cyrus-539"

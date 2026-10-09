@@ -5,7 +5,7 @@ category = "political"
 confidence = "firm"
 status = "sources-located"
 summary = """
-The Roman army under Titus besieged Jerusalem from 13 April to 8 September 70 CE. The Second Temple burned on 10 Av. Jesus's words about the temple, in Matthew, Mark and Luke, point to this event. Josephus tells it from the Roman side, and the Arch of Titus in Rome shows the loot."""
+The Roman army under Titus took Jerusalem in 70 CE. The Second Temple burned on the tenth of Lous (Av). Jesus's words about the temple, in Matthew, Mark and Luke, point to this event. Josephus tells it from the Roman side, and the Arch of Titus in Rome depicts the sacred objects carried in triumph."""
 verses = [
   { ref = "Mark.13.1-Mark.13.2", link = "alludes", note = "Mark records the saying that not one stone will be left on another, which alludes to the destruction." },
   { ref = "Matt.24.1-Matt.24.2", link = "alludes", note = "Matthew gives the same saying, that the temple buildings will be thrown down." },
@@ -21,9 +21,9 @@ tradition = "chronological"
 earliest = 70
 latest = 70
 summary = """
-The siege lasted from 13 April to 8 September 70 CE. The Second Temple was destroyed on 10 Av. Josephus says it burned on the tenth of Lous. That was the same day the king of Babylon had burned the first temple."""
+Brown dates the fall of Jerusalem and the destruction of the Temple to 70 under Titus. Josephus says the Temple burned on the tenth of Lous (Av). That was the same day the king of Babylon had burned the first temple."""
 citations = [
-  { source = "wikipedia-siege-of-jerusalem-70" },
+  { source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD and the Beginning of the 2d" },
   { source = "josephus-whiston", locator = "Jewish War 6.4.5" },
 ]
 
@@ -38,5 +38,5 @@ citations = [{ source = "josephus-whiston", locator = "Jewish War 6.4.5" }]
 artifact = "arch-of-titus"
 relation = "corroborates"
 note = """
-One carved panel shows the loot taken from the Temple in Jerusalem. The menorah, the temple lampstand, is its main focus."""
-citations = [{ source = "wikipedia-arch-of-titus" }]
+The arch in the Roman forum depicts the Jewish sacred paraphernalia and captives brought to Rome in triumph in 71, as Brown describes it."""
+citations = [{ source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD and the Beginning of the 2d" }]

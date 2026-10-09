@@ -7,5 +7,5 @@ summary = """
 Josephus records that the Roman prefect Valerius Gratus appointed Joseph, called Caiaphas, as high priest, and that the Syrian legate Vitellius later removed him."""
 citations = [
   { source = "josephus-whiston", locator = "Antiquities 18.2.2 (made high priest after Gratus's appointee Simon); 18.4.3 (removed by Vitellius)" },
-  { source = "wikipedia-caiaphas", locator = "Antiquities, book 18" },
+  { source = "meier-2001", locator = "p. 397" },
 ]

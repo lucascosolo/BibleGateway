@@ -2,7 +2,7 @@ id = "joshua"
 name = "Joshua"
 role = "successor of Moses, leader of the conquest"
 summary = """
-Joshua son of Nun succeeds Moses and leads Israel across the Jordan; the book named after him tells of Jericho's fall and the conquest of Canaan. Whether that conquest happened is argued in the conquest issue. William Dever states the mainstream position: "No mainstream biblicist or archaeologist any longer espouses the conquest model." Finkelstein and Silberman found no thirteenth-century settlement at Jericho, and they read the book as shaped under King Josiah, with Joshua evoking that king. Among those who defend a conquest, Kitchen reads Joshua's campaigns as "disabling raids" and puts the entry of Hebrew raiding bands into Canaan "ca. 1220/1210", while Wood argues for about 1406–1400 BCE. Ussher's traditional count puts the fall of Jericho in 1451 BC."""
+Joshua son of Nun succeeds Moses and leads Israel across the Jordan; the book named after him tells of Jericho's fall and the conquest of Canaan. Whether that conquest happened is argued in the conquest issue. Finkelstein and Silberman conclude that "There was no violent conquest of Canaan" (p. 118). They and Silberman find no thirteenth-century settlement at Jericho, and they read the book as shaped under King Josiah, with Joshua evoking that king. Among those who defend a conquest, Kitchen reads Joshua's campaigns as "disabling raids" and puts the entry of Hebrew raiding bands into Canaan "ca. 1220/1210", while Wood argues for about 1406–1400 BCE. Ussher's traditional count puts the fall of Jericho in 1451 BC."""
 status = "sources-located"
 verses = [
   { ref = "Josh.1.1-Josh.1.9", link = "describes", note = "Joshua 1:1–9 tells how Joshua is commissioned as Moses' successor." },
@@ -13,7 +13,7 @@ events = ["conquest-of-canaan", "judges-period"]
 # Locators carried over from events/conquest-of-canaan.toml and issues/conquest-historicity.toml for the same claims;
 # F&S pp. 81-82 and 92-95 also checked against docs/sources/finkelstein-silberman-2002.md.
 citations = [
-  { source = "wikipedia-battle-of-jericho", locator = "section on academic consensus and radiocarbon testing" },
+  { source = "finkelstein-silberman-2002", locator = "p. 118" },
   { source = "finkelstein-silberman-2002", locator = "pp. 81-82" },
   { source = "finkelstein-silberman-2002", locator = "pp. 92-95" },
   { source = "kitchen-2003", locator = "pp. 160–162" },

@@ -9,9 +9,8 @@ verses = [
   { ref = "Mark.15.1-Mark.15.15", link = "describes" },
 ]
 citations = [
-  { source = "livius-pontius-pilate" },
-  { source = "ej-2007-caiaphas", locator = "Pilate (26–36)" },
-  { source = "wikipedia-pontius-pilate" },
+  { source = "meier-1991", locator = "p. 373 (office 26–36); p. 100 n. 8 (title prefect)" },
+  { source = "josephus-whiston", locator = "Antiquities 18.3.1" },
 ]
 
 [[attestations]]
@@ -20,8 +19,8 @@ relation = "corroborates"
 note = """
 The Pilate Stone is a building dedication by "[Ponti]us Pilatus, [Praef]ectus Iuda[ea]e". It gives his name and his title, prefect of Judaea, carved in his own time."""
 citations = [
-  { source = "ae-1963-104" },
-  { source = "wikipedia-pilate-stone" },
+  { source = "ae-1963-104", locator = "no. 104" },
+  { source = "meier-1991", locator = "p. 256" },
 ]
 
 [[attestations]]

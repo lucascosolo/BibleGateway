@@ -24,9 +24,3 @@ held_by = "James Ussher"
 summary = """
 The chronologist James Ussher has the angel appear to Manoah's wife in 2848d AM (year of the world), which is 1156 BC. He has Samson born in 2849b AM, which is 1155 BC."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 379-380" }]
-
-  [[positions.arguments]]
-  stance = "for"
-  text = """
-  A round seal about 15 mm across, found at Beth Shemesh and dated to the 12th-11th century BCE, shows a long-haired figure with a lion, which suggests that hero stories like Samson's were told in roughly the period this count gives. It is a date for the seal, not for Samson, and scholars say plainly that it does not show he was a real person."""
-  citations = [{ source = "wikipedia-samson" }]

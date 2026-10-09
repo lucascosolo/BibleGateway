@@ -22,7 +22,7 @@ latest = 63
 held_by = "Raymond E. Brown"
 summary = """
 Brown, a critical scholar, dates the letter by where Paul was held: "Ca. 56 if from Ephesus. (Or 61–63 from Rome, or 58–60 from Caesarea.)" On authenticity he writes: "Not seriously disputed." The span of 56 to 63 shown here covers his three options, with 56 as his lead date; on unity, scholarship is "about evenly divided"."""
-citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Information, PDF p. 533" }]
+citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Information" }]
 
   [[positions.arguments]]
   stance = "for"

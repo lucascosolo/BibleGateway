@@ -25,10 +25,10 @@ tradition = "chronological"
 earliest = -1230
 latest = -1073
 summary = """
-This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and before Jephthah, whose time as judge is estimated to begin between 1130 and 1073 BC. Separately, a 3,100-year-old inscription fragment is reported that seems to show the name Jerubbaal, but it shows only that the name is ancient."""
+This is a bracket from the order of the book, not a date offered by any scholar. Gideon comes after Deborah and Barak (about 1230 BC in Wood's scheme) and, as Kitchen reads the sequence of links in Judges, before Jephthah, whose time as judge is estimated to begin between 1130 and 1073 BC."""
 citations = [
   { source = "wood-2005", locator = "pp. 477, 488" },
-  { source = "wikipedia-gideon" },
+  { source = "kitchen-2003", locator = "p. 208" },
 ]
 
 [[positions]]

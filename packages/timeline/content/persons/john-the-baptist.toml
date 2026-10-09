@@ -17,7 +17,7 @@ events = ["john-baptist-ministry"]
 # Meier locators carried over from events/john-baptist-ministry.toml for the same claims.
 # Antiquities 18.5.2 read in Whiston (~/.cache/jot/sources/josephus-whiston/embedded.txt).
 citations = [
-  { source = "meier-1991", locator = "pp. 383–384, 405" },
+  { source = "meier-1991", locator = "pp. 383–386, 407" },
   { source = "meier-1994", locator = "pp. 22, 172–175" },
   { source = "josephus-whiston", locator = "Antiquities 18.5.2" },
 ]

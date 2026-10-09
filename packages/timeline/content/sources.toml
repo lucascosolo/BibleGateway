@@ -23,23 +23,6 @@ year = 2005
 url = "https://etsjets.org/wp-content/uploads/2010/06/files_JETS-PDFs_48_48-3_48-3-pp475-489_JETS.pdf"
 
 [[source]]
-id = "hoffmeier-1997"
-kind = "book"
-author = "James K. Hoffmeier"
-title = "Israel in Egypt: The Evidence for the Authenticity of the Exodus Tradition"
-publisher = "Oxford University Press"
-year = 1997
-
-[[source]]
-id = "finkelstein-silberman-2001"
-kind = "book"
-author = "Israel Finkelstein and Neil Asher Silberman"
-title = "The Bible Unearthed: Archaeology's New Vision of Ancient Israel and the Origin of Its Sacred Texts"
-publisher = "Free Press"
-year = 2001
-isbn = "0-684-86912-8"
-
-[[source]]
 id = "thiele-1983"
 kind = "book"
 author = "Edwin R. Thiele"
@@ -97,66 +80,6 @@ isbn = "0-87784-961-7"
 # position on their own.
 
 [[source]]
-id = "bm-lachish-reliefs"
-kind = "museum"
-author = "British Museum"
-title = "Lachish reliefs, South-West Palace of Sennacherib, Nineveh (collection record)"
-url = "https://www.britishmuseum.org/collection/object/W_1856-0909-14"
-
-[[source]]
-id = "cojs-sennacherib-prisms"
-kind = "web"
-author = "Center for Online Judaic Studies"
-title = "Hezekiah's Defeat: The Annals of Sennacherib on the Taylor, Jerusalem and Oriental Institute Prisms"
-url = "https://cojs.org/hezekiah-s_defeat-_the_annals_of_sennacherib_on_the_taylor-_jerusalem-_and_oriental_institute_prisms-_700_bce/"
-
-[[source]]
-id = "livius-abc5"
-kind = "web"
-author = "Livius.org"
-title = "ABC 5 (Jerusalem Chronicle)"
-url = "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-5-jerusalem-chronicle/"
-
-[[source]]
-id = "wikipedia-merneptah-stele"
-kind = "web"
-author = "Wikipedia"
-title = "Merneptah Stele"
-url = "https://en.wikipedia.org/wiki/Merneptah_Stele"
-
-[[source]]
-id = "wikipedia-sennacherib-annals"
-kind = "web"
-author = "Wikipedia"
-title = "Sennacherib's Annals"
-url = "https://en.wikipedia.org/wiki/Sennacherib%27s_Annals"
-
-[[source]]
-id = "wikipedia-lachish-letters"
-kind = "web"
-author = "Wikipedia"
-title = "Lachish letters"
-url = "https://en.wikipedia.org/wiki/Lachish_letters"
-
-[[source]]
-id = "wikipedia-ramesses-ii"
-kind = "web"
-author = "Wikipedia"
-title = "Ramesses II (reign dates following von Beckerath 1997)"
-url = "https://en.wikipedia.org/wiki/Ramesses_II"
-
-[[source]]
-id = "wikipedia-sennacherib-levant"
-kind = "web"
-author = "Wikipedia"
-title = "Sennacherib's campaign in the Levant"
-url = "https://en.wikipedia.org/wiki/Sennacherib%27s_campaign_in_the_Levant"
-
-# --- People (Revision 2). Checked 2026-10-06; where only a reference work or a review could be
-# reached, the entry says so in its title or the citing note, and the reviewer should prefer
-# replacing it with the primary publication.
-
-[[source]]
 id = "biran-naveh-1993"
 kind = "article"
 author = "Avraham Biran and Joseph Naveh"
@@ -171,27 +94,6 @@ author = "Avraham Biran and Joseph Naveh"
 title = "The Tel Dan Inscription: A New Fragment"
 container = "Israel Exploration Journal 45 (1), pp. 1–18"
 year = 1995
-
-[[source]]
-id = "wikipedia-tel-dan-stele"
-kind = "web"
-author = "Wikipedia"
-title = "Tel Dan stele"
-url = "https://en.wikipedia.org/wiki/Tel_Dan_stele"
-
-[[source]]
-id = "cojs-kurkh-monolith"
-kind = "web"
-author = "Center for Online Judaic Studies"
-title = "The Kurkh Monolith of Shalmaneser III"
-url = "https://cojs.org/?p=6525"
-
-[[source]]
-id = "wikipedia-kurkh-monoliths"
-kind = "web"
-author = "Wikipedia"
-title = "Kurkh Monoliths"
-url = "https://en.wikipedia.org/wiki/Kurkh_Monoliths"
 
 [[source]]
 id = "bas-hezekiah-bulla"
@@ -210,59 +112,10 @@ publisher = "Geuthner, Paris"
 year = 1939
 
 [[source]]
-id = "smb-vat-16378"
-kind = "museum"
-author = "Staatliche Museen zu Berlin, Vorderasiatisches Museum"
-title = "VAT 16378 (collection record)"
-url = "https://search.smb.museum/en/object/obj-1743721"
-
-[[source]]
-id = "wikipedia-jehoiachin-tablets"
-kind = "web"
-author = "Wikipedia"
-title = "Jehoiachin's Rations Tablets"
-url = "https://en.wikipedia.org/wiki/Jehoiachin%27s_Rations_Tablets"
-
-[[source]]
-id = "wikipedia-cylinders-of-nabonidus"
-kind = "web"
-author = "Wikipedia"
-title = "Cylinders of Nabonidus"
-url = "https://en.wikipedia.org/wiki/Cylinders_of_Nabonidus"
-
-[[source]]
 id = "ae-1963-104"
 kind = "edition"
 title = "L'Année épigraphique 1963, no. 104 (the Pilate inscription)"
 year = 1963
-
-[[source]]
-id = "wikipedia-pilate-stone"
-kind = "web"
-author = "Wikipedia"
-title = "Pilate stone"
-url = "https://en.wikipedia.org/wiki/Pilate_stone"
-
-[[source]]
-id = "wikipedia-pontius-pilate"
-kind = "web"
-author = "Wikipedia"
-title = "Pontius Pilate"
-url = "https://en.wikipedia.org/wiki/Pontius_Pilate"
-
-[[source]]
-id = "wikipedia-caiaphas-ossuary"
-kind = "web"
-author = "Wikipedia"
-title = "Caiaphas ossuary"
-url = "https://en.wikipedia.org/wiki/Caiaphas_ossuary"
-
-[[source]]
-id = "wikipedia-caiaphas"
-kind = "web"
-author = "Wikipedia"
-title = "Caiaphas"
-url = "https://en.wikipedia.org/wiki/Caiaphas"
 
 [[source]]
 id = "tacitus-annals-15-latin"
@@ -279,46 +132,6 @@ title = "Antiquities of the Jews, book 18 (Perseus Digital Library)"
 url = "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0146:book=18:section=63"
 
 [[source]]
-id = "wikipedia-josephus-on-jesus"
-kind = "web"
-author = "Wikipedia"
-title = "Josephus on Jesus"
-url = "https://en.wikipedia.org/wiki/Josephus_on_Jesus"
-
-[[source]]
-id = "ehrman-2012"
-kind = "book"
-author = "Bart D. Ehrman"
-title = "Did Jesus Exist? The Historical Argument for Jesus of Nazareth"
-publisher = "HarperOne"
-year = 2012
-isbn = "0-06-220460-2"
-
-[[source]]
-id = "wikipedia-moses"
-kind = "web"
-author = "Wikipedia"
-title = "Moses"
-url = "https://en.wikipedia.org/wiki/Moses"
-
-[[source]]
-id = "dever-2003"
-kind = "book"
-author = "William G. Dever"
-title = "Who Were the Early Israelites and Where Did They Come From?"
-publisher = "Eerdmans"
-year = 2003
-
-[[source]]
-id = "coogan-2003-review"
-kind = "article"
-author = "Michael D. Coogan"
-title = "Emerging Confederation (review of Dever, Who Were the Early Israelites)"
-container = "America, 9 June 2003"
-year = 2003
-url = "https://www.americamagazine.org/books/2003/06/09/emerging-confederation/"
-
-[[source]]
 id = "griffiths-1953"
 kind = "article"
 author = "J. Gwyn Griffiths"
@@ -327,73 +140,11 @@ container = "Journal of Near Eastern Studies 12, p. 223"
 year = 1953
 
 [[source]]
-id = "cline-2009"
-kind = "web"
-author = "Eric H. Cline"
-title = "Evidence for kings David and Solomon (History News Network, 16 November 2009; the page shows no byline)"
-year = 2009
-url = "https://www.historynewsnetwork.org/article/120094"
-
-[[source]]
-id = "finkelstein-silberman-2006"
-kind = "book"
-author = "Israel Finkelstein and Neil Asher Silberman"
-title = "David and Solomon: In Search of the Bible's Sacred Kings and the Roots of the Western Tradition"
-publisher = "Free Press"
-year = 2006
-
-[[source]]
-id = "klein-2006-review"
-kind = "article"
-author = "Julia M. Klein"
-title = "Review of Finkelstein and Silberman, David and Solomon"
-container = "Archaeology (January 2006 issue, per the archive URL)"
-year = 2006
-url = "https://archive.archaeology.org/0601/reviews/kings.html"
-
-[[source]]
-id = "wikipedia-solomon"
-kind = "web"
-author = "Wikipedia"
-title = "Solomon"
-url = "https://en.wikipedia.org/wiki/Solomon"
-
-[[source]]
-id = "bm-taylor-prism"
-kind = "museum"
-author = "British Museum"
-title = "Taylor Prism (collection record, registration 1855,1003.1)"
-url = "https://www.britishmuseum.org/collection/object/W_1855-1003-1"
-
-[[source]]
 id = "lexundria-josephus-ant-18"
 kind = "edition"
 author = "Flavius Josephus, trans. William Whiston"
 title = "Antiquities of the Jews, book 18, with Niese section numbers (Lexundria)"
 url = "https://lexundria.com/j_aj/18.26-18.95/wst"
-
-[[source]]
-id = "livius-verse-account"
-kind = "edition"
-author = "A. Leo Oppenheim (trans.), in James B. Pritchard, Ancient Near Eastern Texts relating to the Old Testament"
-title = "Verse Account of Nabonidus (Livius.org reproduction of the ANET translation)"
-year = 1950
-url = "https://www.livius.org/sources/content/anet/verse-account-of-nabonidus/"
-
-[[source]]
-id = "ej-2007-caiaphas"
-kind = "web"
-author = "Encyclopaedia Judaica, 2nd ed. (Gale, 2007), hosted by the Jewish Virtual Library"
-title = "Caiaphas, Joseph"
-year = 2007
-url = "https://www.jewishvirtuallibrary.org/caiaphas-joseph"
-
-[[source]]
-id = "livius-pontius-pilate"
-kind = "web"
-author = "Livius.org"
-title = "Pontius Pilate"
-url = "https://www.livius.org/articles/person/pontius-pilate/"
 
 [[source]]
 id = "young-2003"
@@ -414,15 +165,6 @@ year = 2005
 url = "https://www.rcyoung.org/articles/rtables.pdf"
 
 [[source]]
-id = "hagelia-2010"
-kind = "web"
-author = "Hallvard Hagelia"
-title = "The Dan Debate"
-container = "Bible and Interpretation, September 2010"
-year = 2010
-url = "https://bibleinterp.arizona.edu/node/2490"
-
-[[source]]
 id = "livius-nabonidus-cylinder-ur"
 kind = "web"
 author = "Livius.org"
@@ -437,270 +179,11 @@ title = "Annales, book 15, chapter 44 (Latin text, Perseus Digital Library)"
 url = "http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0077%3Abook%3D15%3Achapter%3D44"
 
 [[source]]
-id = "wikipedia-abraham"
-kind = "web"
-author = "Wikipedia"
-title = "Abraham"
-url = "https://en.wikipedia.org/wiki/Abraham"
-
-[[source]]
 id = "wikipedia-ussher-chronology"
 kind = "web"
 author = "Wikipedia"
 title = "Ussher chronology"
 url = "https://en.wikipedia.org/wiki/Ussher_chronology"
-
-[[source]]
-id = "wikipedia-chronology-of-the-bible"
-kind = "web"
-author = "Wikipedia"
-title = "Chronology of the Bible"
-url = "https://en.wikipedia.org/wiki/Chronology_of_the_Bible"
-
-[[source]]
-id = "wikipedia-historicity-of-the-bible"
-kind = "web"
-author = "Wikipedia"
-title = "Historicity of the Bible"
-url = "https://en.wikipedia.org/wiki/Historicity_of_the_Bible"
-
-[[source]]
-id = "wikipedia-battle-of-jericho"
-kind = "web"
-author = "Wikipedia"
-title = "Battle of Jericho"
-url = "https://en.wikipedia.org/wiki/Battle_of_Jericho"
-
-[[source]]
-id = "wikipedia-book-of-judges"
-kind = "web"
-author = "Wikipedia"
-title = "Book of Judges"
-url = "https://en.wikipedia.org/wiki/Book_of_Judges"
-
-[[source]]
-id = "wikipedia-joshua"
-kind = "web"
-author = "Wikipedia"
-title = "Joshua"
-url = "https://en.wikipedia.org/wiki/Joshua"
-
-[[source]]
-id = "wikipedia-book-of-ruth"
-kind = "web"
-author = "Wikipedia"
-title = "Book of Ruth"
-url = "https://en.wikipedia.org/wiki/Book_of_Ruth"
-
-[[source]]
-id = "wikipedia-joseph-genesis"
-kind = "web"
-author = "Wikipedia"
-title = "Joseph (Genesis)"
-url = "https://en.wikipedia.org/wiki/Joseph_(Genesis)"
-
-[[source]]
-id = "wikipedia-deborah"
-kind = "web"
-author = "Wikipedia"
-title = "Deborah"
-url = "https://en.wikipedia.org/wiki/Deborah"
-
-[[source]]
-id = "wikipedia-gideon"
-kind = "web"
-author = "Wikipedia"
-title = "Gideon"
-url = "https://en.wikipedia.org/wiki/Gideon"
-
-[[source]]
-id = "wikipedia-samson"
-kind = "web"
-author = "Wikipedia"
-title = "Samson"
-url = "https://en.wikipedia.org/wiki/Samson"
-
-[[source]]
-id = "wikipedia-boaz"
-kind = "web"
-author = "Wikipedia"
-title = "Boaz"
-url = "https://en.wikipedia.org/wiki/Boaz"
-
-[[source]]
-id = "livius-abc7"
-kind = "edition"
-author = "Livius.org"
-title = "ABC 7 (Nabonidus Chronicle)"
-url = "https://www.livius.org/sources/content/mesopotamian-chronicles-content/abc-7-nabonidus-chronicle/"
-
-[[source]]
-id = "livius-cyrus-cylinder"
-kind = "web"
-author = "Livius.org"
-title = "Cyrus Cylinder"
-url = "https://www.livius.org/sources/content/cyrus-cylinder/"
-
-[[source]]
-id = "wikipedia-cyrus-cylinder"
-kind = "web"
-author = "Wikipedia"
-title = "Cyrus Cylinder"
-url = "https://en.wikipedia.org/wiki/Cyrus_Cylinder"
-
-[[source]]
-id = "wikipedia-ezekiel"
-kind = "web"
-author = "Wikipedia"
-title = "Ezekiel"
-url = "https://en.wikipedia.org/wiki/Ezekiel"
-
-[[source]]
-id = "wikipedia-book-of-ezekiel"
-kind = "web"
-author = "Wikipedia"
-title = "Book of Ezekiel"
-url = "https://en.wikipedia.org/wiki/Book_of_Ezekiel"
-
-[[source]]
-id = "wikipedia-second-temple"
-kind = "web"
-author = "Wikipedia"
-title = "Second Temple"
-url = "https://en.wikipedia.org/wiki/Second_Temple"
-
-[[source]]
-id = "wikipedia-book-of-haggai"
-kind = "web"
-author = "Wikipedia"
-title = "Book of Haggai"
-url = "https://en.wikipedia.org/wiki/Book_of_Haggai"
-
-[[source]]
-id = "wikipedia-book-of-zechariah"
-kind = "web"
-author = "Wikipedia"
-title = "Book of Zechariah"
-url = "https://en.wikipedia.org/wiki/Book_of_Zechariah"
-
-[[source]]
-id = "wikipedia-ezra"
-kind = "web"
-author = "Wikipedia"
-title = "Ezra"
-url = "https://en.wikipedia.org/wiki/Ezra"
-
-[[source]]
-id = "wikipedia-ezra-nehemiah"
-kind = "web"
-author = "Wikipedia"
-title = "Ezra–Nehemiah"
-url = "https://en.wikipedia.org/wiki/Ezra%E2%80%93Nehemiah"
-
-[[source]]
-id = "wikipedia-nehemiah"
-kind = "web"
-author = "Wikipedia"
-title = "Nehemiah"
-url = "https://en.wikipedia.org/wiki/Nehemiah"
-
-[[source]]
-id = "wikipedia-elephantine-papyri"
-kind = "web"
-author = "Wikipedia"
-title = "Elephantine papyri"
-url = "https://en.wikipedia.org/wiki/Elephantine_papyri"
-
-[[source]]
-id = "wikipedia-sanballat"
-kind = "web"
-author = "Wikipedia"
-title = "Sanballat the Horonite"
-url = "https://en.wikipedia.org/wiki/Sanballat_the_Horonite"
-
-[[source]]
-id = "wikipedia-artaxerxes-i"
-kind = "web"
-author = "Wikipedia"
-title = "Artaxerxes I of Persia"
-url = "https://en.wikipedia.org/wiki/Artaxerxes_I_of_Persia"
-
-[[source]]
-id = "wikipedia-edict-of-cyrus"
-kind = "web"
-author = "Wikipedia"
-title = "Edict of Cyrus"
-url = "https://en.wikipedia.org/wiki/Edict_of_Cyrus"
-
-[[source]]
-id = "wikipedia-fall-of-babylon"
-kind = "web"
-author = "Wikipedia"
-title = "Fall of Babylon"
-url = "https://en.wikipedia.org/wiki/Fall_of_Babylon"
-
-[[source]]
-id = "preceptaustin-ezra-7"
-kind = "web"
-author = "Precept Austin"
-title = "Ezra 7 Commentary (collects Yamauchi, Utley and a pointer to Harrison)"
-url = "https://www.preceptaustin.org/ezra-7-commentary"
-
-[[source]]
-id = "wikipedia-antiochus-iv"
-kind = "web"
-author = "Wikipedia"
-title = "Antiochus IV Epiphanes"
-url = "https://en.wikipedia.org/wiki/Antiochus_IV_Epiphanes"
-
-[[source]]
-id = "wikipedia-maccabean-revolt"
-kind = "web"
-author = "Wikipedia"
-title = "Maccabean Revolt"
-url = "https://en.wikipedia.org/wiki/Maccabean_Revolt"
-
-[[source]]
-id = "wikipedia-abomination-of-desolation"
-kind = "web"
-author = "Wikipedia"
-title = "Abomination of desolation"
-url = "https://en.wikipedia.org/wiki/Abomination_of_desolation"
-
-[[source]]
-id = "wikipedia-siege-jerusalem-63bc"
-kind = "web"
-author = "Wikipedia"
-title = "Siege of Jerusalem (63 BC)"
-url = "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(63_BC)"
-
-[[source]]
-id = "wikipedia-herod-the-great"
-kind = "web"
-author = "Wikipedia"
-title = "Herod the Great"
-url = "https://en.wikipedia.org/wiki/Herod_the_Great"
-
-[[source]]
-id = "wikipedia-herods-temple"
-kind = "web"
-author = "Wikipedia"
-title = "Herod's Temple"
-url = "https://en.wikipedia.org/wiki/Herod%27s_Temple"
-
-[[source]]
-id = "wikipedia-siege-of-tyre-332"
-kind = "web"
-author = "Wikipedia"
-title = "Siege of Tyre (332 BC)"
-url = "https://en.wikipedia.org/wiki/Siege_of_Tyre_(332_BC)"
-
-[[source]]
-id = "wikipedia-alexander-the-great"
-kind = "web"
-author = "Wikipedia"
-title = "Alexander the Great"
-url = "https://en.wikipedia.org/wiki/Alexander_the_Great"
 
 [[source]]
 id = "lexundria-josephus-ant-15-380"
@@ -727,144 +210,11 @@ year = 2004
 url = "https://www.rcyoung.org/articles/samaria.pdf"
 
 [[source]]
-id = "wikipedia-shoshenq-i"
-kind = "web"
-author = "Wikipedia"
-title = "Shoshenq I"
-url = "https://en.wikipedia.org/wiki/Shoshenq_I"
-
-[[source]]
-id = "wikipedia-black-obelisk"
-kind = "web"
-author = "Wikipedia"
-title = "Black Obelisk of Shalmaneser III"
-url = "https://en.wikipedia.org/wiki/Black_Obelisk_of_Shalmaneser_III"
-
-[[source]]
-id = "wikipedia-mesha-stele"
-kind = "web"
-author = "Wikipedia"
-title = "Mesha Stele"
-url = "https://en.wikipedia.org/wiki/Mesha_Stele"
-
-[[source]]
-id = "wikipedia-battle-of-qarqar"
-kind = "web"
-author = "Wikipedia"
-title = "Battle of Qarqar"
-url = "https://en.wikipedia.org/wiki/Battle_of_Qarqar"
-
-[[source]]
-id = "wikipedia-sargon-ii"
-kind = "web"
-author = "Wikipedia"
-title = "Sargon II"
-url = "https://en.wikipedia.org/wiki/Sargon_II"
-
-[[source]]
 id = "wikipedia-battle-of-carchemish"
 kind = "web"
 author = "Wikipedia"
 title = "Battle of Carchemish"
 url = "https://en.wikipedia.org/wiki/Battle_of_Carchemish"
-
-[[source]]
-id = "wikipedia-rehoboam"
-kind = "web"
-author = "Wikipedia"
-title = "Rehoboam"
-url = "https://en.wikipedia.org/wiki/Rehoboam"
-
-[[source]]
-id = "wikipedia-battle-of-megiddo-609"
-kind = "web"
-author = "Wikipedia"
-title = "Battle of Megiddo (609 BC)"
-url = "https://en.wikipedia.org/wiki/Battle_of_Megiddo_(609_BC)"
-
-[[source]]
-id = "wikipedia-census-of-quirinius"
-kind = "web"
-author = "Wikipedia"
-title = "Census of Quirinius"
-url = "https://en.wikipedia.org/wiki/Census_of_Quirinius"
-
-[[source]]
-id = "wikipedia-date-of-crucifixion"
-kind = "web"
-author = "Wikipedia"
-title = "Date of the crucifixion of Jesus"
-url = "https://en.wikipedia.org/wiki/Date_of_the_crucifixion"
-
-[[source]]
-id = "wikipedia-chronology-of-jesus"
-kind = "web"
-author = "Wikipedia"
-title = "Chronology of Jesus"
-url = "https://en.wikipedia.org/wiki/Chronology_of_Jesus"
-
-[[source]]
-id = "wikipedia-herod-agrippa"
-kind = "web"
-author = "Wikipedia"
-title = "Herod Agrippa"
-url = "https://en.wikipedia.org/wiki/Herod_Agrippa"
-
-[[source]]
-id = "wikipedia-gallio"
-kind = "web"
-author = "Wikipedia"
-title = "Lucius Junius Gallio Annaeanus"
-url = "https://en.wikipedia.org/wiki/Lucius_Junius_Gallio_Annaeanus"
-
-[[source]]
-id = "wikipedia-arch-of-titus"
-kind = "web"
-author = "Wikipedia"
-title = "Arch of Titus"
-url = "https://en.wikipedia.org/wiki/Arch_of_Titus"
-
-[[source]]
-id = "wikipedia-council-of-jerusalem"
-kind = "web"
-author = "Wikipedia"
-title = "Council of Jerusalem"
-url = "https://en.wikipedia.org/wiki/Council_of_Jerusalem"
-
-[[source]]
-id = "wikipedia-paul-the-apostle"
-kind = "web"
-author = "Wikipedia"
-title = "Paul the Apostle"
-url = "https://en.wikipedia.org/wiki/Paul_the_Apostle"
-
-[[source]]
-id = "wikipedia-conversion-of-paul"
-kind = "web"
-author = "Wikipedia"
-title = "Conversion of Paul the Apostle"
-url = "https://en.wikipedia.org/wiki/Conversion_of_Paul_the_Apostle"
-
-[[source]]
-id = "wikipedia-porcius-festus"
-kind = "web"
-author = "Wikipedia"
-title = "Porcius Festus"
-url = "https://en.wikipedia.org/wiki/Porcius_Festus"
-
-[[source]]
-id = "wikipedia-siege-of-jerusalem-70"
-kind = "web"
-author = "Wikipedia"
-title = "Siege of Jerusalem (70 CE)"
-url = "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(70_CE)"
-
-[[source]]
-id = "wikipedia-book-of-revelation"
-kind = "web"
-author = "Wikipedia"
-title = "Book of Revelation"
-url = "https://en.wikipedia.org/wiki/Book_of_Revelation"
 
 [[source]]
 id = "lexundria-josephus-ant-17-342"
@@ -966,15 +316,6 @@ year = 2026
 url = "https://www.newadvent.org/fathers/2708.htm"
 
 [[source]]
-id = "wikipedia-gallio-inscription"
-kind = "web"
-author = "Wikipedia"
-title = "Gallio inscription"
-publisher = "Wikipedia"
-year = 2026
-url = "https://en.wikipedia.org/wiki/Gallio_inscription"
-
-[[source]]
 id = "lexundria-josephus-ant-14-66"
 kind = "edition"
 author = "Flavius Josephus, trans. William Whiston"
@@ -989,70 +330,6 @@ author = "First Maccabees (author unnamed), NRSVUE"
 title = "1 Maccabees 1:54 and 4:52 (Bible Gateway, NRSVUE)"
 publisher = "Bible Gateway"
 url = "https://www.biblegateway.com/passage/?search=1+Maccabees+1%3A54%3B+1+Maccabees+4%3A52&version=NRSVUE"
-
-[[source]]
-id = "wikipedia-albin-van-hoonacker"
-kind = "web"
-author = "Wikipedia"
-title = "Albin van Hoonacker"
-publisher = "Wikipedia"
-url = "https://en.wikipedia.org/wiki/Albin_van_Hoonacker"
-
-[[source]]
-id = "wikipedia-daniel-8"
-kind = "web"
-author = "Wikipedia"
-title = "Daniel 8"
-publisher = "Wikipedia"
-url = "https://en.wikipedia.org/wiki/Daniel_8"
-
-[[source]]
-id = "wikipedia-daniel-11"
-kind = "web"
-author = "Wikipedia"
-title = "Daniel 11"
-publisher = "Wikipedia"
-url = "https://en.wikipedia.org/wiki/Daniel_11"
-
-[[source]]
-id = "wikipedia-nero"
-kind = "web"
-title = "Nero (Wikipedia)"
-publisher = "Wikimedia Foundation"
-url = "https://en.wikipedia.org/wiki/Nero"
-
-[[source]]
-id = "wikipedia-mysterious-numbers"
-kind = "web"
-author = "Wikipedia"
-title = "The Mysterious Numbers of the Hebrew Kings"
-publisher = "Wikimedia Foundation"
-year = 2026
-url = "https://en.wikipedia.org/wiki/The_Mysterious_Numbers_of_the_Hebrew_Kings"
-
-[[source]]
-id = "cojs-nimrud-prism"
-kind = "web"
-author = "Center for Online Judaic Studies (citing K. Lawson Younger Jr., Israelites in Exile, BAR 29/6, Nov-Dec 2003)"
-title = "The Nimrud Prism, 720 BCE"
-publisher = "Center for Online Judaic Studies"
-year = 2003
-url = "https://cojs.org/the_nimrud_prism-_720_bce/"
-
-[[source]]
-id = "wikipedia-crucifixion-of-jesus"
-kind = "web"
-title = "Crucifixion of Jesus (Wikipedia)"
-publisher = "Wikimedia Foundation"
-url = "https://en.wikipedia.org/wiki/Crucifixion_of_Jesus"
-
-[[source]]
-id = "ezra-nehemiah-commentary-1988"
-kind = "book"
-title = "Ezra-Nehemiah: A Commentary (author not shown on the citing page)"
-publisher = "Westminster John Knox Press"
-year = 1988
-isbn = "978-0-664-22186-7"
 
 [[source]]
 id = "luckenbill-arab-1"
@@ -1701,22 +978,9 @@ title = "King James Version with Apocrypha (1611, standardized text of 1769; eBi
 url = "https://ebible.org/find/details.php?id=eng-kjv"
 
 [[source]]
-id = "imj-digital-dss"
-kind = "museum"
-author = "The Israel Museum, Jerusalem"
-title = "The Digital Dead Sea Scrolls"
-url = "http://dss.collections.imj.org.il/"
-
-[[source]]
 id = "leon-levy-dss"
 kind = "museum"
 author = "Israel Antiquities Authority"
 title = "The Leon Levy Dead Sea Scrolls Digital Library"
 url = "https://www.deadseascrolls.org.il/"
 
-[[source]]
-id = "claremont-nha"
-kind = "museum"
-author = "Claremont Colleges Digital Library"
-title = "Nag Hammadi Archive (facsimile photographs)"
-url = "https://ccdl.claremont.edu/digital/collection/nha"

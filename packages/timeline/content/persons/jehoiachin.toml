@@ -10,7 +10,7 @@ verses = [
 ]
 events = ["jerusalem-capture-597"]
 citations = [
-  { source = "wikipedia-jehoiachin-tablets" },
+  { source = "pritchard-1969", locator = "p. 308, Babylonian administrative texts, trans. A. Leo Oppenheim" },
   { source = "young-2004", locator = "pp. 21, 25" },
 ]
 
@@ -18,9 +18,9 @@ citations = [
 artifact = "jehoiachin-ration-tablet"
 relation = "corroborates"
 note = """
-The tablet lists oil rations for "Ya'u-kinu, king of the land of Yahudu" and his five sons in Babylon. This is the captive king of 2 Kings 24:15 and 25:27–30, still called king."""
+The Babylon ration texts list oil for Jehoiachin (Ia-'-u-kin, called "king") and for five sons of the king of Judah. This is the captive king of 2 Kings 24:15 and 25:27–30, still called king."""
 citations = [
-  { source = "smb-vat-16378" },
+  { source = "pritchard-1969", locator = "p. 308, Babylonian administrative texts, trans. A. Leo Oppenheim" },
   { source = "weidner-1939", locator = "pp. 923–935" },
 ]
 
@@ -29,4 +29,4 @@ artifact = "babylonian-chronicle-abc5"
 relation = "consistent"
 note = """
 The Chronicle records that Nebuchadnezzar "captured the king" of Jerusalem in 597 BCE and appointed a king of his own choice. It names neither man, but it fits Jehoiachin's surrender and Zedekiah's installation."""
-citations = [{ source = "livius-abc5" }]
+citations = [{ source = "kitchen-2003", locator = "p. 44" }]

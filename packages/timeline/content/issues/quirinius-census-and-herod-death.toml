@@ -10,8 +10,8 @@ verses = [
   { ref = "Matt.2.1", link = "dates" },
 ]
 citations = [
-  { source = "wikipedia-census-of-quirinius" },
-  { source = "wikipedia-herod-the-great" },
+  { source = "meier-1991", locator = "pp. 212–213" },
+  { source = "meier-1991", locator = "p. 375; p. 414 n. 18" },
   { source = "josephus-whiston", locator = "Antiquities 18.1.1; 18.2.1" },
 ]
 persons = ["josephus", "herod-the-great"]
@@ -19,33 +19,22 @@ persons = ["josephus", "herod-the-great"]
 [[views]]
 label = "The two anchors conflict"
 text = """
-Josephus says Quirinius was sent to Syria to assess Judea after Archelaus was removed, in the tenth year of Archelaus's rule, 6 CE. Schürer's chronology puts Herod's death in 4 BCE by working back from that same date, so, read plainly, Luke's census comes after Herod's death."""
+Josephus says Quirinius was sent to Syria to assess Judea after Archelaus was removed, in the tenth year of Archelaus's rule, 6 CE. The usual dating puts Herod's death in 4 BCE (Meier, Brown), so, read plainly, Luke's census comes after Herod's death."""
 citations = [
   { source = "josephus-whiston", locator = "Antiquities 17.13.2" },
   { source = "josephus-whiston", locator = "Antiquities 18.1.1" },
-  { source = "wikipedia-herod-the-great" },
+  { source = "brown-1997", locator = "ch. 4, The First Third of the 1st Century AD" },
 ]
-
-[[views]]
-label = "Luke says 'before', not 'first' (I. Howard Marshall, 1978; Brook W. R. Pearson, 1999)"
-text = """
-Marshall argued that the Greek of Luke 2:2 should be read "before" rather than "first", so that the verse speaks of a registration before Quirinius was governor. Pearson made a similar argument about the translation."""
-citations = [{ source = "wikipedia-census-of-quirinius" }]
-
-[[views]]
-label = "A census in Herod's last years (Colin Humphreys, 1995; Wayne Brindle, 1984; James Nollet, 2012)"
-text = """
-Humphreys proposed a census, without taxes, dated to Herod's final years. Brindle theorized a census under Herod, with two governors sharing the post, and Nollet asserted that Quirinius held two governorships, with a census in 2 BCE."""
-citations = [{ source = "wikipedia-census-of-quirinius" }]
-
-[[views]]
-label = "Herod died in 1 BCE (Andrew Steinmann, Rodger Young; Filmer)"
-text = """
-Steinmann and Young argue from the coins of Herod's sons, whose reigns began in 5 BCE while Herod was alive, so that Herod died in 1 BCE. They add that the eclipse of 13 March 4 BCE leaves too little time before the next Passover for the events Josephus records."""
-citations = [{ source = "wikipedia-herod-the-great" }]
 
 [[views]]
 label = "Luke 2:1–2 is historically unreliable (John P. Meier, 1991)"
 text = """
 Meier says that no ancient source documents a census under Augustus around 5 BCE, the time Luke's story would need. Quirinius became governor of Syria in 6 CE and conducted a census of Judea, not Galilee, in 6–7 CE, and Meier calls attempts to reconcile Luke 2:1 with ancient history "hopelessly contrived". He sides with Raymond Brown that Luke is inaccurate, and doubts that the Infancy Narratives can fix the date of Jesus's birth."""
-citations = [{ source = "meier-1991", locator = "pp. 210–211, 233 n. 23" }]
+citations = [{ source = "meier-1991", locator = "pp. 212–213, 235 n. 23" }]
+
+[[views]]
+label = "Herod died in 1 BCE (W. E. Filmer; Ernest L. Martin)"
+text = """
+Filmer argued that Herod died in 1 BCE, and Martin revived the theory and placed Jesus's birth in 3 or 2 BCE. Meier rejects it: Herod's successors all counted their reigns from 5-4 BCE, and synchronisms with datable events in Roman history make 1 BCE almost impossible to sustain. Other contributors to the volume Martin wrote in did not support him."""
+citations = [{ source = "meier-1991", locator = "p. 414 n. 18" }]
+

@@ -29,14 +29,14 @@ tradition = "chronological"
 earliest = 28
 latest = 29
 summary = """
-Tiberius's reign began at Augustus's death in September 14 CE. So Luke 3:1-2 implies that John's ministry began in late 28 or early 29 CE. The page cited names no individual scholar who holds this."""
-citations = [{ source = "wikipedia-chronology-of-jesus" }]
+Tiberius's reign began at Augustus's death in September 14 CE. So Luke 3:1-2 implies that John's ministry began in late 28 or early 29 CE. Meier discusses the calendars Luke might have used and shows that most ways of counting put part of 28 CE in the fifteenth year."""
+citations = [{ source = "meier-1991", locator = "pp. 385–386" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
   Luke names Tiberius's fifteenth year, Pontius Pilate as governor, and Herod as tetrarch of Galilee as the setting of John's call."""
-  citations = [{ source = "wikipedia-chronology-of-jesus" }]
+  citations = [{ source = "meier-1991", locator = "pp. 374, 383–384" }]
   verses = [{ ref = "Luke.3.1", link = "dates" }]
 
 [[positions]]
@@ -49,7 +49,7 @@ held_by = "John P. Meier"
 summary = """
 Meier takes the fifteenth year of Tiberius, counted from 14 CE, as most likely 28 CE, and has John begin around the end of 27 or the beginning of 28 CE, with Jesus baptized soon after. He calls this a "preliminary, not definitive, judgment", since Luke's reckoning could give 27 or 29. John's execution by Antipas fell in or before 30 or 33 on the Gospels' order, and in any case before the defeat by Aretas IV in 36 CE, which is where Josephus mentions it."""
 citations = [
-  { source = "meier-1991", locator = "pp. 383–384, 405" },
+  { source = "meier-1991", locator = "pp. 385–386, 407" },
   { source = "meier-1994", locator = "pp. 22, 174" },
 ]
 
@@ -57,7 +57,7 @@ citations = [
   stance = "for"
   text = """
   Luke most likely counted Tiberius's years from Augustus's death in 14 CE, and almost every way of counting puts at least part of 28 CE in the fifteenth year. Counting by the Julian calendar without an accession year, 28 CE coincides exactly with it."""
-  citations = [{ source = "meier-1991", locator = "pp. 383–384" }]
+  citations = [{ source = "meier-1991", locator = "pp. 385–386" }]
   verses = [{ ref = "Luke.3.1-Luke.3.2", link = "dates" }]
 
   [[positions.arguments]]

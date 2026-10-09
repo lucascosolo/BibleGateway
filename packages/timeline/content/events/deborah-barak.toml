@@ -26,17 +26,6 @@ Bryant Wood has Joshua destroying an earlier Hazor about 1400 BC, with Deborah a
 citations = [{ source = "wood-2005", locator = "pp. 476–477, 488" }]
 
 [[positions]]
-id = "seder-olam"
-label = "Seder Olam: 1107-1067 BC"
-tradition = "traditional"
-earliest = -1107
-latest = -1067
-held_by = "Seder Olam Rabbah"
-summary = """
-Seder Olam Rabbah, an early Jewish chronology of the Bible, puts Deborah's 40 years of judging Israel from 1107 BC until her death in 1067 BC (as reported by Wikipedia)."""
-citations = [{ source = "wikipedia-deborah" }]
-
-[[positions]]
 id = "ussher-1285"
 label = "Ussher, Annals: Deborah judges, 1285 BC"
 tradition = "traditional"

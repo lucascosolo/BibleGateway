@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "speculative"
 status = "sources-located"
 summary = """
-Ruth, a Moabite widow, returns to Bethlehem with her mother-in-law Naomi. She gathers leftover grain in Boaz's field and marries him. Their son Obed becomes King David's grandfather. The story is set 'when the judges ruled'. The book itself is generally dated much later (see the linked issue)."""
+Ruth, a Moabite widow, returns to Bethlehem with her mother-in-law Naomi. She gathers leftover grain in Boaz's field and marries him. Their son Obed becomes King David's grandfather. The story is set 'when the judges ruled'. The date of the book itself is a separate question (see the linked issue)."""
 verses = [
   { ref = "Ruth.1.1-Ruth.1.22", link = "describes", note = "The book tells of famine, Moab, and Naomi and Ruth's return to Bethlehem." },
   { ref = "Ruth.2.1-Ruth.2.23", link = "describes", note = "The book tells how Ruth gathers leftover grain in Boaz's field." },
@@ -23,9 +23,9 @@ tradition = "chronological"
 earliest = -1400
 latest = -1073
 summary = """
-This range comes from the book's own setting, not from any scholar. The story is set in the time of the judges. The range covers the dates the scholar Bryant G. Wood gives for that period. Josephus, by contrast, has Boaz living in the time of Eli."""
+This range comes from the book's own setting, not from any scholar. The story is set in the time of the judges. The range covers the dates the scholar Bryant G. Wood gives for that period; Kitchen puts the whole period at 1210-1042 BC, and names Ruth among its books. Josephus, by contrast, has Boaz living in the time of Eli."""
 citations = [
-  { source = "wikipedia-book-of-ruth" },
-  { source = "wikipedia-boaz" },
+  { source = "kitchen-2003", locator = "p. 159" },
+  { source = "josephus-whiston", locator = "Antiquities 5.9.1" },
   { source = "wood-2005", locator = "pp. 477, 488" },
 ]

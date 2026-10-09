@@ -12,7 +12,7 @@ citations = [
   { source = "metzger-1987-canon", locator = "p. 167" },
   { source = "anf08-ccel", locator = "Translator's Introductory Notice, pp. 351-352" },
   { source = "mattison-gospels-net", locator = "Manuscript Information page" },
-  { source = "mcdonald-2017-vol1", locator = "p. 289" }, { source = "brown-1997", locator = "Appendix II, PDF p. 888" }
+  { source = "mcdonald-2017-vol1", locator = "p. 289" }, { source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on Protevangelium of James" }
 ]
 
 [[composed]]
@@ -33,7 +33,7 @@ earliest = 150
 latest = 150
 held_by = "Raymond E. Brown (1997)"
 summary = "Brown says the work, preserved in many Greek manuscripts beginning in the third century, 'was in circulation by mid-2d century'. That is an upper bound on its date of writing, stored as the single year 150."
-citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 888" }]
+citations = [{ source = "brown-1997", locator = "Appendix II, Jewish and Christian Writings Pertinent to the New Testament, entry on Protevangelium of James" }]
 
 [[composed]]
 id = "walker-first-four-centuries"

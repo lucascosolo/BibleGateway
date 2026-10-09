@@ -17,8 +17,8 @@ label = "c. 925 BCE"
 tradition = "archaeological"
 earliest = -925
 latest = -925
-summary = "This is the usual date of the campaign. Scholars date Shoshenq I's reign differently: 945-924 (Kitchen), a 943 start (Krauss), or 962-941 (Schneider 2010)."
-citations = [{ source = "wikipedia-shoshenq-i" }]
+summary = "Kitchen dates Shoshenq I to about 945-924 and the victory monuments from his year 21 (about 925); Finkelstein and Silberman put the campaign in 926. Wilson's ANET also gives about 945-924."
+citations = [{ source = "kitchen-2003", locator = "pp. 33–34" }, { source = "finkelstein-silberman-2002", locator = "p. 161" }, { source = "pritchard-1969", locator = "p. 263 (The Campaign of Sheshonk I), trans. John A. Wilson" }]
 
 [[positions]]
 id = "young-926"
@@ -33,8 +33,8 @@ citations = [{ source = "young-2003", locator = "p. 598 n. 8" }]
 [[attestations]]
 artifact = "bubastite-portal"
 relation = "partially-corroborates"
-note = "It records a Shoshenq campaign in the region of Israel and Judah. Scholars debate whether Jerusalem is on the list."
-citations = [{ source = "wikipedia-shoshenq-i" }, { source = "wikipedia-rehoboam" }]
+note = "It lists Palestinian and Syrian towns Shoshenq claimed to have taken, but gives no narrative of the campaign (Wilson). Kitchen reads the rows as route segments through Judah and Israel that name no kings or states. Finkelstein and Silberman count about 150 places, from the south through the hill country to the Jezreel valley and coast, and say Jerusalem was hardly the only target."
+citations = [{ source = "pritchard-1969", locator = "pp. 263–264, trans. John A. Wilson" }, { source = "kitchen-2003", locator = "pp. 33–34" }, { source = "finkelstein-silberman-2002", locator = "p. 161" }]
 
 [[positions]]
 id = "kitchen-927-926"

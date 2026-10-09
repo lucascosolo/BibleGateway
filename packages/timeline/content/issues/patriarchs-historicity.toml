@@ -102,8 +102,8 @@ citations = [
 [[views]]
 label = "The Joseph story on its own"
 text = """
-The Joseph story is usually treated apart, as a single composition. Donald B. Redford dated its writing to between the seventh century and the third quarter of the fifth century BCE, and by the early 1990s most scholars read it as a wisdom novella by one author; Thomas Römer argues for the late Persian period. Kitchen's reply rests on the price of twenty shekels and the age of 110, both of which he reads as early Egyptian and Mesopotamian details."""
+The Joseph story is usually treated apart, as a single composition. Finkelstein and Silberman point to a seventh-century background in it: the Egyptian names Zaphenath-paneah, Potiphar, Potiphera and Asenath reach their greatest popularity in the seventh and sixth centuries, and the fear of invasion from the east makes sense only after the Ramesside age (p. 67). Kitchen's reply rests on the price of twenty shekels and the age of 110, both of which he reads as early Egyptian and Mesopotamian details."""
 citations = [
-  { source = "wikipedia-joseph-genesis" },
+  { source = "finkelstein-silberman-2002", locator = "p. 67" },
   { source = "kitchen-2003", locator = "pp. 344-345, 351" },
 ]

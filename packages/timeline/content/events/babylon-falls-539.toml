@@ -20,12 +20,11 @@ label = "October 539 BCE (16 Tashritu)"
 tradition = "chronological"
 earliest = -539
 latest = -539
-held_by = "A. K. Grayson (editor and translator of ABC 7, per Livius)"
+held_by = "Nabonidus Chronicle (ANET, trans. A. Leo Oppenheim)"
 summary = """
-Babylon was captured on the 16th of Tashritu, which is 12 October 539 BCE on the Julian calendar, in Nabonidus's seventeenth year. The main source is the Nabonidus Chronicle, in Grayson's translation as reproduced by Livius: "On the sixteenth day, Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon". Cyrus himself entered "on the third day of the month Arahsamna". On the Livius page, the entry into Babylon is at iii.15-16 and Cyrus's own entry at iii.18. The month of the sixteenth day falls in a damaged line (iii.12) and cannot be read in the translation as printed, so the match with 12 October 539 rests on the modern reconstruction cited below."""
+Babylon was captured on the 16th of Tashritu in Nabonidus's seventeenth year, 539 BCE. The main source is the Nabonidus Chronicle, in Oppenheim's ANET translation (p. 306): the battle at Opis is dated to the month of Tashritu, Sippar falls on the 14th, and on the 16th Gobryas (Ugbaru), governor of Gutium, and the army of Cyrus enter Babylon without battle. Cyrus himself enters on the 3rd day of Arahshamnu. Tashritu falls in September-October; a Julian day for the 16th is a modern conversion that no filed source gives, so none is asserted."""
 citations = [
-  { source = "livius-abc7", locator = "col. iii 15–16 (sixteenth day); iii 18 (Cyrus enters, 3 Arahsamna)" },
-  { source = "wikipedia-fall-of-babylon" },
+  { source = "pritchard-1969", locator = "p. 306, Nabonidus Chronicle iii, trans. A. Leo Oppenheim" },
 ]
 
 [[attestations]]
@@ -33,11 +32,11 @@ artifact = "nabonidus-chronicle-abc7"
 relation = "in-tension"
 note = """
 The Chronicle dates the fall but tells it differently from Daniel 5:30-31. In it Gobryas (Ugbaru), governor of Gutium, and the army of Cyrus enter Babylon "without battle", Nabonidus is arrested when he returns, and Cyrus himself enters on the 3rd of Arahshamnu and installs Gobryas's governors. Daniel instead has Belshazzar, whom it calls king, killed that night and "Darius the Mede" receiving the kingdom; the Chronicle has no king killed and no Darius. No critical discussion of the difference is filed here."""
-citations = [{ source = "pritchard-1969", locator = "p. 306, Nabonidus Chronicle iii, trans. A. Leo Oppenheim" }, { source = "livius-abc7" }]
+citations = [{ source = "pritchard-1969", locator = "p. 306, Nabonidus Chronicle iii, trans. A. Leo Oppenheim" }]
 
 [[attestations]]
 artifact = "cyrus-cylinder"
 relation = "consistent"
 note = """
-The Cylinder describes the conquest as happening "without battle", but modern scholars treat that as propaganda (Wikipedia's summary). Herodotus and Xenophon give differing accounts of how the city was taken, so the Cylinder fits the outcome without settling the manner."""
-citations = [{ source = "wikipedia-fall-of-babylon" }, { source = "wikipedia-cyrus-cylinder" }]
+The Cylinder says Marduk made Cyrus enter Babylon without any battle (ANET p. 315), which matches the Chronicle's entry without battle. Kitchen reads Cyrus's return of the gods as propaganda (p. 76), so the Cylinder fits the outcome and is also a royal self-presentation."""
+citations = [{ source = "pritchard-1969", locator = "p. 315, Cyrus Cylinder, trans. A. Leo Oppenheim" }, { source = "kitchen-2003", locator = "p. 76" }]

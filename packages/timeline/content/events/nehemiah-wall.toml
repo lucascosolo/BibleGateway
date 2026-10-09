@@ -20,11 +20,10 @@ tradition = "chronological"
 earliest = -445
 latest = -444
 summary = """
-Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Kitchen dates Nehemiah's Years 20-32 of Artaxerxes I to 445-433 (p. 74); the alternative 444 is the editor's count from the accession year, not a figure on a page read. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name. Thiele reads Nehemiah 1:1 and 2:1 as counting Artaxerxes' years from Tishri: Kislev fell in the twentieth year and the following Nisan "was still in the same twentieth year", which Persia's own Nisan reckoning would not allow. He notes the double-dated Aramaic papyri from Elephantine also date Persian kings by Judean Tishri years (Horn and Wood, JNES 13, 1954)."""
+Artaxerxes I ruled 465-424 BCE (Kitchen, p. 73). His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Kitchen dates Nehemiah's Years 20-32 of Artaxerxes I to 445-433 (p. 74); the alternative 444 is the editor's count from the accession year, not a figure on a page read. Josephus has Nehemiah come in the twenty-fifth year of "Xerxes" (Antiquities 11.5.6-7). Thiele reads Nehemiah 1:1 and 2:1 as counting Artaxerxes' years from Tishri: Kislev fell in the twentieth year and the following Nisan "was still in the same twentieth year", which Persia's own Nisan reckoning would not allow. He notes the double-dated Aramaic papyri from Elephantine also date Persian kings by Judean Tishri years (Horn and Wood, JNES 13, 1954)."""
 citations = [
-  { source = "wikipedia-nehemiah", locator = "n. 5" },
-  { source = "ezra-nehemiah-commentary-1988", locator = "p. 140, as cited by Wikipedia 'Nehemiah' n. 5" },
-  { source = "wikipedia-artaxerxes-i" },
+  { source = "kitchen-2003", locator = "p. 73 (Artaxerxes I, 465-424)" },
+  { source = "josephus-whiston", locator = "Antiquities 11.5.6-7" },
   { source = "kitchen-2003", locator = "p. 74" },
   { source = "thiele-1983", locator = "p. 53 (Kislev and Nisan in the same twentieth year; no year numbers)" },
 ]
@@ -33,8 +32,8 @@ citations = [
 artifact = "elephantine-temple-petition-407"
 relation = "partially-corroborates"
 note = """
-A letter of 407 BCE names Sanballat's sons Delaiah and Shelemiah, and Johanan the high priest. Sanballat and Johanan both appear in Nehemiah. But this does not date the wall."""
-citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-sanballat" }]
+A letter of 407 BCE appeals to Sanballat, governor of Samaria, and the Elephantine Jews had earlier appealed to Johanan, who is named with the governor of Judea (Kitchen). Sanballat and Johanan both appear in Nehemiah. But this does not date the wall."""
+citations = [{ source = "kitchen-2003", locator = "p. 74 (Sanballat, Year 17 of Darius II, 407); p. 77 (appeal after the temple's destruction in 410)" }, { source = "satlow-2014", locator = "pp. 86-87" }]
 
 [[positions]]
 id = "fs-445"

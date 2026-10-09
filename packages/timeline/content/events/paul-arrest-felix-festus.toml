@@ -25,10 +25,10 @@ label = "Festus succeeds Felix c. 59 CE"
 tradition = "chronological"
 earliest = 59
 latest = 59
-held_by = "F. F. Bruce"
+held_by = "D. A. Carson and Douglas J. Moo (citing F. F. Bruce and others)"
 summary = """
-Wikipedia says Bruce gives 59 CE for Festus taking office. He bases this on local coins struck in Nero's fifth year. Wikipedia adds that most scholars favor 58 to 60."""
-citations = [{ source = "wikipedia-porcius-festus" }]
+Carson and Moo rest their Pauline chronology on what they call a growing consensus that Festus replaced Felix as governor of Judea in 59. Their note on it lists F. F. Bruce among many others."""
+citations = [{ source = "carson-moo-2005", locator = "p. 368 and n. 45" }]
 
 [[positions]]
 id = "festus-55-61"
@@ -37,8 +37,8 @@ tradition = "critical"
 earliest = 55
 latest = 61
 summary = """
-Scholars disagree widely on when Festus took office. The earliest suggested start for his term is about 55 to 56 CE, and the latest is 61 CE, which gives the range shown here."""
-citations = [{ source = "wikipedia-porcius-festus" }]
+Carson and Moo report that some scholars argue for a much earlier date, 55 or 56, from the fall of the official Pallas, but they reject it, and that Schürer put Felix's recall in 60 and Ogg in 61. Those figures give the range shown here."""
+citations = [{ source = "carson-moo-2005", locator = "p. 368 n. 45" }]
 
 [[positions]]
 id = "brown-traditional-57-58"

@@ -18,17 +18,6 @@ verses = [
 ]
 
 [[positions]]
-id = "mt-1928"
-label = "Masoretic Text chronology: 1928 BCE"
-tradition = "traditional"
-earliest = -1928
-latest = -1928
-held_by = "the Masoretic Text chronology as tabulated by Wikipedia"
-summary = """
-In the Wikipedia article's table for the Masoretic Text (the traditional Hebrew text of the Bible), Jacob enters Egypt in 1928 BCE (AM 2236). AM means years counted from creation."""
-citations = [{ source = "wikipedia-chronology-of-the-bible" }]
-
-[[positions]]
 id = "mid-19th-century"
 label = "Mid-19th century BCE (with a 15th-century exodus)"
 tradition = "archaeological"

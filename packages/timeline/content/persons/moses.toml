@@ -2,8 +2,8 @@ id = "moses"
 name = "Moses"
 role = "prophet and lawgiver"
 summary = """
-Moses led the Exodus and gave the Law at Sinai. No source outside the Bible from his own time names him, and no Egyptian record does, so whether a real person lies behind the tradition is debated (see the linked issue)."""
+Moses led the Exodus and gave the Law at Sinai. The Egyptian sources of the New Kingdom make no reference to the Israelites (Finkelstein and Silberman), so whether a real person lies behind the tradition is debated (see the linked issue)."""
 status = "draft"
 verses = [{ ref = "Exod.2.10", link = "describes", note = "Exodus 2:10 says Pharaoh's daughter gave Moses his name." }]
 events = ["exodus"]
-citations = [{ source = "wikipedia-moses" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 59-60" }, { source = "kitchen-2003", locator = "p. 297" }]
