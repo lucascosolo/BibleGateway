@@ -17,6 +17,18 @@ export interface TranslationSwitcherProps {
   withAudio?: ReadonlySet<string>;
 }
 
+const ABOUT_TRANSLATIONS_CLASS =
+  "col-span-full mt-1 flex min-h-[var(--touch-target)] items-center border-t border-[var(--color-border)] px-3 pt-1 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)] underline decoration-[var(--color-border-strong)] underline-offset-2 hover:text-[var(--color-ink)]";
+
+/** The quiet way out of the list to what the codes mean: at the foot of the open panel, never in the summary. */
+export function AboutTranslationsLink() {
+  return (
+    <Link href="/translations" className={ABOUT_TRANSLATIONS_CLASS}>
+      About these translations
+    </Link>
+  );
+}
+
 /** The speaker mark beside a translation that has audio here; its text is for screen readers. */
 export function AudioMark() {
   return (
@@ -79,6 +91,7 @@ export function TranslationSwitcher({ translations, active, hrefFor, linkProps, 
             {withAudio?.has(option.code) && <AudioMark />}
           </Link>
         ))}
+        <AboutTranslationsLink />
       </nav>
     </details>
   );

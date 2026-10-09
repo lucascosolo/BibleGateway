@@ -31,7 +31,11 @@ export type LexiconId =
   | "difference-grammatical"
   | "difference-stylistic"
   | "difference-interpretive"
-  | "difference-editorial";
+  | "difference-editorial"
+  | "approach-formal"
+  | "approach-functional"
+  | "approach-balanced"
+  | "approach-original";
 
 export interface LexiconEntry {
   id: LexiconId;
@@ -208,6 +212,32 @@ export const lexicon: Record<LexiconId, LexiconEntry> = {
     term: "Editorial",
     plainLabel: "Editorial",
     gloss: "An editor's decision, such as punctuation, verse division or which reading to print in the main text.",
+  },
+  // Translation approaches, for the /translations profiles. Plain English already; the gloss says
+  // what the word means for a translation.
+  "approach-formal": {
+    id: "approach-formal",
+    term: "Form-based",
+    plainLabel: "Form-based",
+    gloss: "Also called formal equivalence or literal: follows the words and grammar of the original closely, even when the English reads stiffly.",
+  },
+  "approach-functional": {
+    id: "approach-functional",
+    term: "Meaning-based",
+    plainLabel: "Meaning-based",
+    gloss: "Also called functional or dynamic equivalence: renders the sense of each sentence in natural English, even when the words and grammar change.",
+  },
+  "approach-balanced": {
+    id: "approach-balanced",
+    term: "Balanced",
+    plainLabel: "Balanced",
+    gloss: "Between the two: close to the original's words where English allows, freer where a literal rendering would mislead.",
+  },
+  "approach-original": {
+    id: "approach-original",
+    term: "Original language",
+    plainLabel: "Original language",
+    gloss: "Not a translation: a scholarly edition of the Hebrew or Greek text itself.",
   },
 };
 

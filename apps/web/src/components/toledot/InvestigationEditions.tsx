@@ -1,8 +1,11 @@
+import Link from "next/link";
+
 import type { OmittedVerseNote } from "@/components/passage/OmittedVerse";
 import { PassageRenderer, type PassageLayers } from "@/components/passage/PassageRenderer";
 import type { Footnote } from "@/lib/db/apparatus";
 import type { VerseText } from "@/lib/db/corpus";
 import { chapterOf, verseOf, type VerseRange } from "@/lib/refs/verse-id";
+import { dependentPairs } from "@/lib/translations/profiles";
 
 export interface InvestigationEdition {
   translationId: number;
@@ -35,7 +38,16 @@ const WORDING_ONLY: Partial<PassageLayers> = {
  * stacks and a note stays beside its verse instead of drifting past every other edition.
  */
 export function InvestigationEditions({ editions, range }: { editions: InvestigationEdition[]; range: VerseRange }) {
+  const related = dependentPairs(editions.map((e) => e.code));
   return (
+    <>
+    {related.length > 0 && (
+      <p role="note" className="mb-3 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
+        {related.map(([a, b]) => `${a} and ${b}`).join("; ")} come from one line of revision, so where
+        they agree that is not independent confirmation of a reading.{" "}
+        <Link href="/translations" className="underline underline-offset-2">How these translations relate</Link>
+      </p>
+    )}
     <div className="toledot-edition-grid">
       {editions.map((e) => {
         const headingId = `edition-${e.code}`;
@@ -74,5 +86,6 @@ export function InvestigationEditions({ editions, range }: { editions: Investiga
         );
       })}
     </div>
+    </>
   );
 }

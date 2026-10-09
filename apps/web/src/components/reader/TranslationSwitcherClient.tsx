@@ -2,7 +2,7 @@
 
 import type { Translation } from "@/lib/db/corpus";
 
-import { AudioMark } from "./TranslationSwitcher";
+import { AboutTranslationsLink, AudioMark } from "./TranslationSwitcher";
 
 export interface TranslationSwitcherClientProps {
   translations: Translation[];
@@ -48,6 +48,7 @@ export function TranslationSwitcherClient({ translations, active, onSelect, with
             {withAudio?.has(option.code) && <AudioMark />}
           </button>
         ))}
+        <AboutTranslationsLink />
       </nav>
     </details>
   );

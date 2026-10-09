@@ -93,7 +93,10 @@ export function CorpusDoorways({
             {critical.length === 1 ? "this verse" : `these ${critical.length} verses`} — they first
             appear in copies made later. Most modern Bibles therefore leave them out, which is why
             the verse numbers sometimes jump; the King James and Bibles in its line print them.
-            Open one and you can read it either way.
+            Open one and you can read it either way.{" "}
+            <Link href="/translations" className="underline underline-offset-2">
+              How the translations on this site differ
+            </Link>
           </p>
           <OmissionList rows={critical} references={references} accent />
         </section>
