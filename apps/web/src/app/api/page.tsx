@@ -1,10 +1,10 @@
 import { shareMetadata } from "@/app/og/data";
 import Link from "next/link";
-import { getOutsideDocFacts } from "@/app/_docs/outside-facts";
+import { getOutsideDocFacts, type OutsideDocFacts } from "@/app/_docs/outside-facts";
 
 export const metadata = shareMetadata('Bible research API: text, cross-references & original languages · Jot', 'Public read-only Bible API with translation text, verse references, Hebrew and Greek words, manuscript evidence, source provenance and corpus exports.', '/api', { card: { kind: "page", page: "api" } });
 
-const endpoints = [
+const endpointsFor = (outside: OutsideDocFacts) => [
   {
     method: "GET",
     path: "/api/passage?ref=John+3:16&translation=WEB",
@@ -93,7 +93,7 @@ const endpoints = [
   {
     method: "GET",
     path: "/api/translations",
-    description: "Translation codes, licensing, attribution, scope, and copyright notices. Partial editions such as Brenton's Septuagint state which books they hold and why the rest are withheld. The seven outside-book editions (KJVA, CHARLES, GRAY, MATTISON, ANF, JAMES1924, LIGHTFOOT) have scope outside and list their books.",
+    description: `Translation codes, licensing, attribution, scope, and copyright notices. Partial editions such as Brenton's Septuagint state which books they hold and why the rest are withheld. The ${outside.translationWord.toLowerCase()} outside-book editions (${outside.translationCodes.join(", ")}) have scope outside and list their books.`,
   },
   {
     method: "GET",
@@ -129,7 +129,7 @@ export default function ApiPage() {
       <section aria-labelledby="api-endpoints-title">
         <h2 id="api-endpoints-title">Endpoints</h2>
         <ul className="api-docs__endpoints">
-          {endpoints.map((endpoint) => (
+          {endpointsFor(outside).map((endpoint) => (
             <li key={endpoint.path}>
               <code>{endpoint.method}</code>
               <a href={endpoint.path}><code>{endpoint.path}</code></a>

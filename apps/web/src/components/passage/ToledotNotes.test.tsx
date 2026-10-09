@@ -66,3 +66,24 @@ describe("<ToledotNotes>", () => {
     expect(screen.queryByText(/verses 9–9/)).toBeNull();
   });
 });
+
+describe("<ToledotNotes> work notes", () => {
+  const workNote = (status: string): import("@/lib/db/timeline").WorkNote => ({
+    id: "work:1-enoch@65001014", anchor: 65_001_014 as never, start: 65_001_014 as never, end: 65_001_015 as never,
+    linkType: "alludes", note: null,
+    subject: { kind: "work", id: "1-enoch", title: "1 Enoch", status: status as never, role: "link" },
+  });
+  it("links to the work with its own aria-label, and marks it unchecked when draft", () => {
+    render(<ToledotNotes notes={[workNote("sources-located")]} />);
+    const link = screen.getByRole("link", {
+      name: "Parallel in an outside work: 1 Enoch shares wording or a saying with this passage. — open the work record",
+    });
+    expect(link.getAttribute("href")).toBe("/chitzonim/works/1-enoch");
+    expect(screen.getByText("unchecked")).toBeTruthy();
+  });
+  it("no unchecked marker for a checked work; other kinds keep 'open on the timeline'", () => {
+    render(<ToledotNotes notes={[workNote("claims-checked"), issueNote()]} />);
+    expect(screen.queryByText("unchecked")).toBeNull();
+    expect(screen.getByRole("link", { name: "Historical question: Is there a historical Moses? — open on the timeline" })).toBeTruthy();
+  });
+});

@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 
-import type { ToledotNote } from "@/lib/db/timeline";
-import { toledotSentence } from "@/lib/timeline/notes";
+import { type MarginNote, toledotSentence } from "@/lib/timeline/notes";
 
 /**
  * Timeline notes under the verse they concern: a dating dispute, a person an outside source
@@ -17,7 +16,7 @@ import { toledotSentence } from "@/lib/timeline/notes";
  */
 
 export interface ToledotNotesProps {
-  notes: readonly ToledotNote[];
+  notes: readonly MarginNote[];
   spans?: ReadonlyMap<string, string>;
 }
 
@@ -40,7 +39,7 @@ export function ToledotNotes({ notes, spans }: ToledotNotesProps) {
               {span && <span className="toledot-note__span"> ({span})</span>}
               {s.draft && <span className="toledot-note__draft">unchecked</span>}
               {" "}
-              <Link href={s.href} className="toledot-note__link" aria-label={`${s.lead}: ${s.body} — open on the timeline`}>
+              <Link href={s.href} className="toledot-note__link" aria-label={`${s.lead}: ${s.body} — ${s.opens ?? "open on the timeline"}`}>
                 →
               </Link>
             </span>

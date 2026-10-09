@@ -40,7 +40,8 @@ import {
   type OriginalWord,
 } from "@/lib/db/originals";
 import { getInsightNotes, type InsightNote } from "@/lib/insights/notes";
-import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorksForBook, type ToledotNote } from "@/lib/db/timeline";
+import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorkNotesForRange, getWorksForBook, type WorkNote } from "@/lib/db/timeline";
+import type { MarginNote } from "@/lib/timeline/notes";
 import { getOutsideBook } from "@/lib/db/outside";
 import { CanonNotice } from "@/components/chitzonim/CanonNotice";
 import { OutsideWorld } from "@/components/chitzonim/OutsideWorld";
@@ -657,6 +658,23 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   );
 }
 
+/** On an outside book's page, one note at the first verse on screen opening its work record. */
+function workRecordNote(range: VerseRange, renderedVerseIds: readonly VerseId[]): WorkNote[] {
+  const book = bookOf(range.start) as number;
+  const first = renderedVerseIds[0];
+  const work = isOutsideBook(book) ? getWorksForBook(book)[0] : undefined;
+  if (!work || first === undefined) return [];
+  return [{
+    id: `work-record:${work.id}@${first}`,
+    anchor: first,
+    start: first,
+    end: first,
+    linkType: "describes",
+    note: null,
+    subject: { kind: "work", id: work.id, title: work.title, status: work.status, role: "record" },
+  }];
+}
+
 /**
  * Timeline notes keyed by the rendered verse they sit under. A link's anchor is an address, and
  * the address space is sparse and a translation may not print every verse, so each note moves
@@ -664,11 +682,11 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
  * never a walk of the id space). Two links of one subject landing on the same verse stay one note.
  */
 function buildToledotNotes(range: VerseRange, renderedVerseIds: readonly VerseId[]) {
-  const notes = new Map<VerseId, ToledotNote[]>();
+  const notes = new Map<VerseId, MarginNote[]>();
   const spans = new Map<string, string>();
   if (getTimelineBuildId() === null) return { notes, spans };
   const seen = new Set<string>();
-  for (const note of getTimelineNotesForRange(range)) {
+  for (const note of [...workRecordNote(range, renderedVerseIds), ...getTimelineNotesForRange(range), ...getWorkNotesForRange(range)]) {
     let lo = 0;
     let hi = renderedVerseIds.length;
     while (lo < hi) {

@@ -54,19 +54,24 @@ export interface Translation {
 }
 
 const BOOK_COLUMNS = `book_id AS bookId, osis_id AS osisId, name, abbreviation, testament,
-            chapter_count AS chapterCount, canon, numbering`;
+            chapter_count AS chapterCount, canon, numbering,
+            EXISTS (SELECT 1 FROM verses v WHERE v.verse_id = books.book_id * 1000000 + 1000) AS hasPrologue`;
+
+/** SQLite has no boolean; `hasPrologue` arrives as 0 or 1. */
+const toBookRecords = (rows: unknown[]): BookRecord[] =>
+  (rows as (Omit<BookRecord, "hasPrologue"> & { hasPrologue: number })[]).map((row) => ({ ...row, hasPrologue: row.hasPrologue === 1 }));
 
 /** The 66-book canon, loaded once per request and memoized for the process. */
 export const getBooks = cache((): BookRecord[] =>
-  prepared(
-    `SELECT ${BOOK_COLUMNS} FROM books WHERE canon IN ('hebrew','nt') ORDER BY book_id`
-  ).all() as BookRecord[]
+  toBookRecords(
+    prepared(`SELECT ${BOOK_COLUMNS} FROM books WHERE canon IN ('hebrew','nt') ORDER BY book_id`).all()
+  )
 );
 
 export const getBookIndex = cache((): BookIndex => new BookIndex(getBooks()));
 
 export const getAllBooks = cache((): BookRecord[] =>
-  prepared(`SELECT ${BOOK_COLUMNS} FROM books ORDER BY book_id`).all() as BookRecord[]
+  toBookRecords(prepared(`SELECT ${BOOK_COLUMNS} FROM books ORDER BY book_id`).all())
 );
 
 export const getOutsideBookIndex = cache((): BookIndex => new BookIndex(getAllBooks()));

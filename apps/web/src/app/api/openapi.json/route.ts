@@ -70,7 +70,7 @@ const buildOpenapi = (facts: OutsideDocFacts) => ({
           "Outside books resolve too: `ref=Thomas 42` (Gospel of Thomas, logion 42), `ref=Sir 1:1` (Sirach), `ref=Enoch 1:1`. `book` reports the book's `canon` and `numbering` scheme (chapter-verse, logion, section, chapter, part-chapter, paragraph, page); read the numbering before citing, because the unit is not always a verse (a logion, a manuscript page, an editorial ordinal). Use the translation that carries the book (see `books` in /api/translations); an outside book in WEB is a 404. " + OUTSIDE_NOTE,
         parameters: [
           referenceParameter,
-          { ...translationParameter, description: "Translation code from /api/translations; defaults to WEB. Outside books need a translation that prints them, such as KJVA (Apocrypha), CHARLES, GRAY, MATTISON, ANF, JAMES1924 or LIGHTFOOT.", schema: { type: "string", default: "WEB", example: "MATTISON" } },
+          { ...translationParameter, description: "Translation code from /api/translations; defaults to WEB. Outside books need a translation that prints them, such as " + facts.translationCodes.join(", ") + ".", schema: { type: "string", default: "WEB", example: "MATTISON" } },
           { name: "t", in: "query", description: "Alias for `translation`, as in reader URLs. `translation` wins when both are given.", schema: { type: "string", example: "LXX" } },
           { name: "footnotes", in: "query", description: "`1` adds `footnotes`: the translation's own notes on the returned verses. Off by default so the payload shape is stable. Any value other than 0 or 1 is a 400.", schema: { type: "string", enum: ["0", "1"], default: "0" } },
         ],
@@ -146,7 +146,7 @@ const buildOpenapi = (facts: OutsideDocFacts) => ({
     "/api/translations": {
       get: {
         summary: "List translation metadata",
-        description: "Codes, licensing, attribution, scope and `scopeNote`. A partial edition (such as LXX, Brenton's Septuagint) states which books it prints and why the others are withheld. The seven outside-book editions have `scope: \"outside\"` (KJVA, CHARLES, GRAY, MATTISON, ANF, JAMES1924, LIGHTFOOT) and carry a `books` list (`bookId`, `osisId`, `name`, `canon`, `numbering`) naming every book they print. Each one's `license` is its basis in the source ledger (age of publication and the translator's death year, a source's own public-domain statement, or the translator's dedication); its `copyrightNotice` says whether it was proofread against the printed pages (CHARLES's Testaments and 2 Baruch and GRAY were, in 2026). Quote the notice with the text.",
+        description: "Codes, licensing, attribution, scope and `scopeNote`. A partial edition (such as LXX, Brenton's Septuagint) states which books it prints and why the others are withheld. The " + facts.translationWord.toLowerCase() + " outside-book editions have `scope: \"outside\"` (" + facts.translationCodes.join(", ") + ") and carry a `books` list (`bookId`, `osisId`, `name`, `canon`, `numbering`) naming every book they print. Each one's `license` is its basis in the source ledger (age of publication and the translator's death year, a source's own public-domain statement, or the translator's dedication); its `copyrightNotice` says whether it was proofread against the printed pages (CHARLES's Testaments and 2 Baruch and GRAY were, in 2026). Quote the notice with the text.",
         responses: { "200": { description: "Translation codes, scope, licensing, and attribution." } },
       },
     },
