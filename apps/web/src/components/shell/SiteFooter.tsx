@@ -1,10 +1,20 @@
+/**
+ * Where "Support Jot" sends people. The business PayPal.me, chosen 2026-10-08 over the
+ * Trophonix Patreon (which is pitched at game development) and over Paddle (a merchant of
+ * record whose terms exclude donations). Overridable per deployment; the iOS shell should set it
+ * empty so the link does not render there (App Store guideline 3.1.1).
+ */
+const SUPPORT_URL = process.env.NEXT_PUBLIC_SUPPORT_URL ?? "https://paypal.me/trophonix";
+
 /** Secondary links stay after the page content, clear of the reading controls. */
 export function SiteFooter() {
   return (
     <footer data-chrome className="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-6 px-6 py-6 text-sm text-[var(--color-ink-muted)]">
-      <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href="https://patreon.com/Trophonix" target="_blank" rel="noopener noreferrer">
-        Support Jot on Patreon
-      </a>
+      {SUPPORT_URL && (
+        <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href={SUPPORT_URL} target="_blank" rel="noopener noreferrer">
+          Support Jot
+        </a>
+      )}
       <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href="https://lucascosolo.com" target="_blank" rel="noopener noreferrer">
         More projects
       </a>

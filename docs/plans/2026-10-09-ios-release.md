@@ -66,7 +66,7 @@ Success criteria: the listing form has no empty required field.
 ## Open questions for the user
 - Apple Developer Program: enrol as an individual (Lucas Cosolo) or an organisation?
 - Offline scope for chunk 4 (one translation, or all public-domain ones).
-- Whether the iOS app should hide the "Support Jot" link (Apple guideline 3.1.1 forbids linking out to external payment for digital goods; a donation link to a non-profit is allowed through approved platforms, and a general "support" link on a free app with no unlocks is tolerated but the safe choice is to show it only on the web).
+- Whether the iOS app should hide the "Support Jot" link (set NEXT_PUBLIC_SUPPORT_URL empty in the shell build) (Apple guideline 3.1.1 forbids linking out to external payment for digital goods; a donation link to a non-profit is allowed through approved platforms, and a general "support" link on a free app with no unlocks is tolerated but the safe choice is to show it only on the web).
 
 ## Preconditions checked on 2026-10-09
 - No Mac or Xcode is available in this environment; chunks 1 (install), 2, 3 and 5 need one.
