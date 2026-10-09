@@ -143,6 +143,15 @@ export function carryingTranslations<T extends { code: string }>(all: readonly T
 }
 
 /**
+ * The edition the reader should show for an outside book: the requested one when it carries the
+ * book, otherwise the first that does. Null when no edition carries it.
+ */
+export function translationForOutsideBook(requested: string | undefined, carriers: readonly string[]): string | null {
+  if (requested && carriers.some((c) => c.toUpperCase() === requested.toUpperCase())) return requested;
+  return carriers[0] ?? null;
+}
+
+/**
  * The two editions /parallel opens with, drawn only from `carrying`. An explicit code that does
  * not carry the book is ignored; `right` is undefined when only one edition carries it. An
  * explicit identical pair is returned as asked so the page can ask for two different ones.

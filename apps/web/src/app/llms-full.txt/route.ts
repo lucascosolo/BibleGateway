@@ -1,6 +1,10 @@
+import { getOutsideDocFacts } from "@/app/_docs/outside-facts";
+
 const BASE = "https://bible.lucascosolo.com";
 
-const body = `# Jot API instructions for language models
+function buildBody(): string {
+  const facts = getOutsideDocFacts();
+  return `# Jot API instructions for language models
 
 Jot is a public, read-only Bible research API for retrieval by search engines, agents, and language models. Public HTML pages are crawlable; the structured endpoints below provide more convenient data retrieval.
 
@@ -125,7 +129,7 @@ Books 67-120 are addressed by the same \`verse_id\` and printed by the same rend
 
 ### Work records
 
-\`GET ${BASE}/api/timeline/works\` lists the 43 works (filter with \`canon\`; an unknown canon is a 400); \`GET ${BASE}/api/timeline/works/{id}\` returns one in full: \`positions\` (cited dating positions with who holds each), \`witnesses\` (surviving copies), \`heldCanonicalBy\`, \`translations\`, \`excerpts\`, \`provenance\`, \`verses\` (links to Bible passages with reader paths), \`href\` and the human \`page\` (${BASE}/chitzonim/works/{id}). \`composed\` is a range (negative = BCE) derived from the positions, quoted as a range with its positions. Eight works are undated (Judith, Susanna, Bel and the Dragon, the Prayer of Azariah, 1 Esdras, the Letter of Jeremiah, the Gospel of Mary, the Gospel of Judas): for them \`composed\` is null and \`composedUndated\` states why and what is known, such as the earliest dated copy. Say "undated"; never turn a copy's date or a guess into a composition range. The same review \`status\` rule applies: below claims-checked is unchecked.
+\`GET ${BASE}/api/timeline/works\` lists the ${facts.workCount} works (filter with \`canon\`; an unknown canon is a 400); \`GET ${BASE}/api/timeline/works/{id}\` returns one in full: \`positions\` (cited dating positions with who holds each), \`witnesses\` (surviving copies), \`heldCanonicalBy\`, \`translations\`, \`excerpts\`, \`provenance\`, \`verses\` (links to Bible passages with reader paths), \`href\` and the human \`page\` (${BASE}/chitzonim/works/{id}). \`composed\` is a range (negative = BCE) derived from the positions, quoted as a range with its positions. ${facts.undatedWord} works are undated (${facts.undatedTitles.join(", ")}): for them \`composed\` is null and \`composedUndated\` states why and what is known, such as the earliest dated copy. Say "undated"; never turn a copy's date or a guess into a composition range. The same review \`status\` rule applies: below claims-checked is unchecked.
 
 ## Historical scholarship
 
@@ -174,9 +178,10 @@ The support page, donation links and onboarding are site pages, not data. Do not
 - Concise index: ${BASE}/llms.txt
 - Human API page: ${BASE}/api
 `;
+}
 
 export function GET() {
-  return new Response(body, { headers: {
+  return new Response(buildBody(), { headers: {
     "Content-Type": "text/plain; charset=utf-8",
     "Cache-Control": "public, max-age=3600, s-maxage=86400",
     "Access-Control-Allow-Origin": "*",

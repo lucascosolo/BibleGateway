@@ -5,7 +5,7 @@ import { passageSnapshot, quoteLine, shareMetadata } from "@/app/og/data";
 import { ReferenceLinks } from "@/app/_components/ReferenceLinks";
 import { CrossRefLayer } from "@/components/crossrefs/CrossRefLayer";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import { CrossRefAside } from "@/components/crossrefs/CrossRefAside";
 import { OutOfScopeNotice } from "@/components/passage/OutOfScopeNotice";
@@ -44,7 +44,7 @@ import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorksForBook,
 import { getOutsideBook } from "@/lib/db/outside";
 import { CanonNotice } from "@/components/chitzonim/CanonNotice";
 import { OutsideWorld } from "@/components/chitzonim/OutsideWorld";
-import { canonNotice, carryingTranslations, parallelPair, isOutsideBook, numberingRangeLabel } from "@/lib/chitzonim/outside";
+import { canonNotice, carryingTranslations, parallelPair, isOutsideBook, numberingRangeLabel, translationForOutsideBook } from "@/lib/chitzonim/outside";
 import { labelVerses } from "@/lib/db/timeline-present";
 import {
   InvalidReferenceError,
@@ -167,6 +167,11 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         getTranslations().filter((x) => x.scope !== "outside"),
         getTranslationsPrintingBook(firstBookId, 0).map((x) => x.code),
       );
+  if (outsideBook) {
+    const carrier = translationForOutsideBook(t, outsideBook.translations);
+    if (!carrier) notFound();
+    if (t && carrier !== t) redirect(`/read/${canonicalReferenceSlug(range, books)}?t=${carrier}`);
+  }
   const canonLine = outsideBook ? (
     <CanonNotice
       notice={canonNotice(outsideBook.canon, holdersFor(firstBookId))}

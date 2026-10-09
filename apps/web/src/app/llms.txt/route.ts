@@ -1,6 +1,10 @@
+import { getOutsideDocFacts } from "@/app/_docs/outside-facts";
+
 const BASE = "https://bible.lucascosolo.com";
 
-const body = `# Jot Bible Research API
+function buildBody(): string {
+  const facts = getOutsideDocFacts();
+  return `# Jot Bible Research API
 
 > Jot is a public, read-only Bible research corpus. Use the public HTML reader for citations and browsing, or these structured endpoints for data retrieval.
 
@@ -35,9 +39,9 @@ const body = `# Jot Bible Research API
 
 ## Outside books (Chitzonim)
 
-- Books 67-120 sit outside the Hebrew and Protestant canons, addressed by the same \`verse_id\`. Five canons: \`deuterocanon\`, \`pseudepigrapha\`, \`nt-apocrypha\`, \`apostolic\`, \`described\`. Seven editions carry them (\`scope: "outside"\` in ${BASE}/api/translations): KJVA, CHARLES, GRAY, MATTISON, ANF, JAMES1924, LIGHTFOOT. \`/api/corpus\` gives the 66-book count (31,102) and the outside counts per canon, kept separate.
+- Books 67-120 sit outside the Hebrew and Protestant canons, addressed by the same \`verse_id\`. Five canons: \`deuterocanon\`, \`pseudepigrapha\`, \`nt-apocrypha\`, \`apostolic\`, \`described\`. ${facts.translationWord} editions carry them (\`scope: "outside"\` in ${BASE}/api/translations): ${facts.translationCodes.join(", ")}. \`/api/corpus\` gives the 66-book count (31,102) and the outside counts per canon, kept separate.
 - Refs: \`GET /api/passage?ref=Thomas%2042&translation=MATTISON\`, \`ref=Sir%201:1&translation=KJVA\`. Numbering varies by book (chapter-verse, logion, section, chapter, part-chapter, paragraph, page); the response \`book.numbering\` says which. Search them with \`GET /api/search?q=kingdom&canon=all\` (default \`bible\` = the 66).
-- Work records: \`GET /api/timeline/works[?canon=nt-apocrypha]\`, \`GET /api/timeline/works/{id}\` (page: ${BASE}/chitzonim/works/{id}). Eight works are undated: \`composed\` is null and \`composedUndated\` says why. Never supply a date for them.
+- Work records: \`GET /api/timeline/works[?canon=nt-apocrypha]\`, \`GET /api/timeline/works/{id}\` (page: ${BASE}/chitzonim/works/{id}). ${facts.undatedWord} works are undated: \`composed\` is null and \`composedUndated\` says why. Never supply a date for them.
 - None of these books is in the Hebrew or Protestant canon. Catholic and Orthodox Bibles include most deuterocanonical books (they differ); only the Ethiopian Orthodox Tewahedo Church reads 1 Enoch and Jubilees as scripture; no New Testament includes the rest.
 
 ## Rules
@@ -65,9 +69,10 @@ const body = `# Jot Bible Research API
 
 For parameter definitions, schemas, limits, errors, and examples, read ${BASE}/llms-full.txt or the OpenAPI contract.
 `;
+}
 
 export function GET() {
-  return new Response(body, { headers: {
+  return new Response(buildBody(), { headers: {
     "Content-Type": "text/plain; charset=utf-8",
     "Cache-Control": "public, max-age=3600, s-maxage=86400",
     "Access-Control-Allow-Origin": "*",

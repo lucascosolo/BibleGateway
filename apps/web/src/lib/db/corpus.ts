@@ -467,11 +467,8 @@ export function getMostReferencedVerses(translationId: number, limit: number): H
   ).all(translationId, limit) as HeatVerse[];
 }
 
-/** Total verse count — stated on the home page so a researcher knows the corpus's real size. */
-export const getVerseCount = cache((): number => {
-  const row = prepared(`SELECT COUNT(*) AS n FROM verses`).get() as { n: number };
-  return row.n;
-});
+/** Verse count stated on the home page: the 66-book canonical address space, never the outside books. */
+export const getVerseCount = getCanonicalVerseCount;
 
 /** Total cross-reference edge count, across all sources. */
 export const getCrossReferenceCount = cache((): number => {

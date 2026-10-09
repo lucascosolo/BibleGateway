@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 
+import { getOutsideDocFacts, type OutsideDocFacts } from "@/app/_docs/outside-facts";
+
 export const dynamic = "force-static";
 
 const referenceParameter = {
@@ -37,7 +39,7 @@ const OUTSIDE_NOTE =
   "Outside books (ids 67-120) are not in the Hebrew or the Protestant canon. They fall in five canons: deuterocanon (read in Catholic and Orthodox Bibles, which differ on exactly which), " +
   "pseudepigrapha (1 Enoch and Jubilees are scripture only in the Ethiopian Orthodox Tewahedo Church), nt-apocrypha and apostolic (in no New Testament today), and described (no free translation; described, not printed). ";
 
-const openapi = {
+const buildOpenapi = (facts: OutsideDocFacts) => ({
   openapi: "3.1.0",
   info: {
     title: "Jot read-only research API",
@@ -260,7 +262,7 @@ const openapi = {
       get: {
         summary: "List the outside-book work records (Chitzonim), filterable by canon",
         description:
-          "43 works across five canons, in the order deuterocanon, pseudepigrapha, nt-apocrypha, apostolic, described. `composed` is the derived envelope of the scholarly dating positions as a range with `display`, or null. Eight works are explicitly undated: for them `composed` is null and `composedUndated` states why and what is known (for example the earliest dated copy). Never supply a date for an undated work. `traditional` is the separate traditional-chronology envelope, or null. Each work lists its `books` and an `href` (this API) and `page` (the human page under /chitzonim/works). " +
+          facts.workCount + " works across five canons, in the order deuterocanon, pseudepigrapha, nt-apocrypha, apostolic, described. `composed` is the derived envelope of the scholarly dating positions as a range with `display`, or null. " + facts.undatedWord + " works are explicitly undated: for them `composed` is null and `composedUndated` states why and what is known (for example the earliest dated copy). Never supply a date for an undated work. `traditional` is the separate traditional-chronology envelope, or null. Each work lists its `books` and an `href` (this API) and `page` (the human page under /chitzonim/works). " +
           OUTSIDE_NOTE + REVIEW_STATUS_NOTE,
         parameters: [
           { name: "canon", in: "query", description: "Only works of this canon. Omit for all five. An unknown value is a 400.", schema: { type: "string", enum: ["deuterocanon", "pseudepigrapha", "nt-apocrypha", "apostolic", "described"], example: "nt-apocrypha" } },
@@ -544,10 +546,10 @@ const openapi = {
       },
     },
   },
-} as const;
+});
 
 export async function GET() {
-  return NextResponse.json(openapi, {
+  return NextResponse.json(buildOpenapi(getOutsideDocFacts()), {
     headers: {
       "Cache-Control": "public, max-age=3600",
       "Access-Control-Allow-Origin": "*",

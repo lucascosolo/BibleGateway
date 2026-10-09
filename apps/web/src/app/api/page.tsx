@@ -1,5 +1,6 @@
 import { shareMetadata } from "@/app/og/data";
 import Link from "next/link";
+import { getOutsideDocFacts } from "@/app/_docs/outside-facts";
 
 export const metadata = shareMetadata('Bible research API: text, cross-references & original languages · Jot', 'Public read-only Bible API with translation text, verse references, Hebrew and Greek words, manuscript evidence, source provenance and corpus exports.', '/api', { card: { kind: "page", page: "api" } });
 
@@ -112,6 +113,7 @@ const endpoints = [
 ];
 
 export default function ApiPage() {
+  const outside = getOutsideDocFacts();
   return (
     <main className="api-docs">
       <header className="api-docs__header">
@@ -160,8 +162,13 @@ export default function ApiPage() {
           scripture), New Testament apocrypha and the Apostolic Fathers (in no New Testament), and
           described works. Each carries its numbering scheme (chapter-verse, logion, section,
           chapter, part-chapter, paragraph or page). Every edition is public domain on a stated
-          basis, in its <code>license</code> and notice, with proofreading status. Eight works are
-          undated; their records say so rather than carrying a range.
+          basis, in its <code>license</code> and notice, with proofreading status.{" "}
+          {outside.undatedCount > 0 && (
+            <>
+              {outside.undatedWord} {outside.undatedCount === 1 ? "work is" : "works are"} undated;
+              their records say so rather than carrying a range.
+            </>
+          )}
         </p>
         <p>
           The original-language endpoint identifies each source and its license. VarApp is a
