@@ -60,7 +60,11 @@ list of 2026-10-09 is a lead, not a clearance.
 8. Audio: LibriVox has public-domain readings of the KJV Apocrypha and of some Enoch and Didache texts; align what is complete as editions of their books.
 9. Review and deploy: corpus, timeline and web together.
 
-## Open questions for the user
-- The name: "Chitzonim" with plain label "Outside books", or a plainer primary label?
-- The threshold design: how far from the main site? Proposal: a darker parchment, a heavier old-style serif for headings only, hairline rules in rubric, no textures; the reading column itself identical.
-- Whether described-only works (Qumran, most of Nag Hammadi) belong in the first release or wait.
+## Decisions (user, 2026-10-09)
+- Name: "Chitzonim" as the term, plain label "Outside books", glossed through the lexicon.
+- Threshold design: darker parchment, a heavier old-style serif for headings only, rubric
+  hairlines, no textures; the reading column itself identical to the main site.
+- The described-only works (Qumran, most of Nag Hammadi) are in the first release as work pages
+  with cited excerpts.
+- Mobile navigation keeps five cells; the workspace enters through the "More" sheet on phones and
+  gets its own rail entry on desktop.
