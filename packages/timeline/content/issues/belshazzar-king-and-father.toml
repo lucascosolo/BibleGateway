@@ -1,7 +1,7 @@
 id = "belshazzar-king-and-father"
 kind = "historical"
 title = "Belshazzar: king, and son of Nebuchadnezzar?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Daniel 5 calls Belshazzar king and speaks of him as Nebuchadnezzar's son (5:2, 5:22). Babylonian sources say he was the eldest son of Nabonidus, the last king of Babylon, so on the cylinder he is the king's son, not the king. Another Babylonian text says Nabonidus handed the kingship to his eldest son before leaving Babylon, which helps explain the title "king". Whose son he was remains a discrepancy."""
 persons = ["belshazzar", "nebuchadnezzar", "daniel"]

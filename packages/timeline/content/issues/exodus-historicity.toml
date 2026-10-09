@@ -1,7 +1,7 @@
 id = "exodus-historicity"
 kind = "historical"
 title = "Did the Exodus happen as described?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 This question comes before the date: no Egyptian record mentions an Israelite exodus, and scholars disagree about what that silence and the archaeology mean. The entry is kept apart from the dating views because, if the event did not happen as described, there is no date to offer."""
 events = ["exodus"]

@@ -1,7 +1,7 @@
 id = "conquest-historicity"
 kind = "historical"
 title = "Did Israel conquer Canaan as Joshua describes?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Did Israel conquer Canaan by force, and did Jericho fall as the story says? That is a separate question from when a conquest would have happened, which evangelical defenders of a conquest argue about among themselves. Most archaeologists no longer defend the conquest model at all."""
 events = ["conquest-of-canaan", "judges-period"]
@@ -15,7 +15,7 @@ persons = ["joshua", "josiah"]
 [[views]]
 label = "No conquest model"
 text = """
-Finkelstein and Silberman conclude of early Israel: "There was no violent conquest of Canaan." The archaeology behind it at Jericho is that the Middle Bronze Age town was destroyed by fire at roughly 1550, as Kitchen also reports, and that the thirteenth century left no settlement at all."""
+Finkelstein and Silberman conclude of early Israel: "There was no violent conquest of Canaan." At Jericho, Kitchen reports, the Middle Bronze Age town was destroyed, including by fire, at roughly 1550."""
 citations = [
   { source = "finkelstein-silberman-2002", locator = "p. 118" },
   { source = "kitchen-2003", locator = "p. 187" },

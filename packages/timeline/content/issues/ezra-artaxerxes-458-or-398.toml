@@ -1,7 +1,7 @@
 id = "ezra-artaxerxes-458-or-398"
 kind = "chronology"
 title = "Ezra's seventh year: 458 or 398 BCE?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The seventh year of Artaxerxes I gives 458/457 BCE; that of Artaxerxes II gives 398 BCE. A third proposal corrects the number."""
 events = ["ezra-mission"]
