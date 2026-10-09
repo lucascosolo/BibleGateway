@@ -4,7 +4,7 @@ also_known_as = ["Nebuchadnezzar II"]
 role = "king of Babylon"
 summary = """
 Nebuchadnezzar II succeeded his father Nabopolassar in 605 BCE, the year he defeated Egypt at Carchemish; Thiele dates his father's death to 16 August and his accession to 7 September 605. The Babylonian Chronicle says that in his seventh year, on 2 Addaru (March 597), he "seized the city and captured the king", Jerusalem and Jehoiachin. 2 Kings 24:12 calls it his eighth year, a gap Thiele explains by Babylonian Nisan years against Judah's Tishri years. His army destroyed Jerusalem and its temple in 587 BCE on Young's count, or 586 on Thiele's and on Finkelstein and Silberman's. Daniel 5 later calls Belshazzar his son, while the Babylonian records make Belshazzar the son of Nabonidus (see the Belshazzar issue)."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "2Kgs.24.10-2Kgs.24.17", link = "describes", note = "2 Kings 24:10–17 tells how Nebuchadnezzar takes Jerusalem and Jehoiachin and makes Zedekiah king." },
   { ref = "2Kgs.25.1-2Kgs.25.12", link = "describes", note = "2 Kings 25:1–12 tells of the siege, the breach and the burning of the temple." },

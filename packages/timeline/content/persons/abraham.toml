@@ -4,7 +4,7 @@ also_known_as = ["Abram"]
 role = "patriarch"
 summary = """
 Abraham, first called Abram, is the ancestor with whom Genesis begins Israel's story: called from Haran to Canaan, promised land and descendants in a covenant, and father of Isaac. Whether he was a historical person is argued in the patriarchs issue. Since the 1970s most scholars have read the patriarchal stories as literature of the kingdoms of Israel and Judah; Finkelstein and Silberman date their writing to the eighth and seventh centuries BCE from anachronisms such as camels as pack animals and Philistines at Gerar. Albright and Wright placed the patriarchs in the 2nd millennium BCE, and Kitchen still argues that many details fit 1900 to 1600 BCE. Ussher's traditional count, which adds up the Bible's own life-spans, has Abraham called from Ur in 1922 BC."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "Genesis 12:1–9 tells the call of Abram and his journey into Canaan." },
   { ref = "Gen.15.1-Gen.15.21", link = "describes", note = "Genesis 15 tells the covenant ritual in which Abram is promised land and descendants." },

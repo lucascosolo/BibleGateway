@@ -3,7 +3,7 @@ name = "Nehemiah"
 role = "cupbearer to Artaxerxes, governor of Judah"
 summary = """
 Nehemiah, cupbearer to the Persian king Artaxerxes, hears of Jerusalem's ruin and in the king's twentieth year is sent to rebuild its wall, which is finished in fifty-two days despite Sanballat the Horonite. Artaxerxes I ruled from 465 to 424 BCE, so the twentieth year is 445 or 444. Finkelstein and Silberman accept the setting: the king appointed him governor, and he inspected the city by night around 445 BCE. A letter from Elephantine of 407 BCE does not name Nehemiah, but it names Sanballat's sons and the high priest Johanan, both figures of his book. On the usual dating he came after Ezra; on van Hoonacker's he came first (see the Ezra issue)."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Neh.1.1-Neh.1.4", link = "describes", note = "Nehemiah 1:1–4 tells how Nehemiah hears of Jerusalem's ruin." },
   { ref = "Neh.2.1-Neh.2.8", link = "describes", note = "Nehemiah 2:1–8 tells how Artaxerxes sends his cupbearer to rebuild the city." },

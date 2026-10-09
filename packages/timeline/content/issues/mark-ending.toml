@@ -1,7 +1,7 @@
 id = "mark-ending"
 kind = "textual"
 title = "Did Mark originally end at 16:8?"
-status = "draft"
+status = "sources-located"
 summary = """
 Mark's Gospel ends in some manuscripts with the women afraid and silent at the empty tomb (16:8). Others add the Longer Ending of 16:9-20, which describes appearances of the risen Jesus and an ascension, and two alternative endings exist. Brown says copyists apparently added the endings to soften the abrupt close."""
 verses = [{ ref = "Mark.16.8-Mark.16.9", link = "describes" }]

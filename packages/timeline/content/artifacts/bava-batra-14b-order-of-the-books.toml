@@ -1,7 +1,7 @@
 id = "bava-batra-14b-order-of-the-books"
 name = "Babylonian Talmud, Bava Batra 14b-15a: the order and authors of the books"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Hebrew and Aramaic"
 made = { earliest = 100, latest = 220 }
 summary = """

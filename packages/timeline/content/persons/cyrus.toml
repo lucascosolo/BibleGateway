@@ -3,7 +3,7 @@ name = "Cyrus"
 role = "king of Persia, conqueror of Babylon"
 summary = """
 Cyrus, the founder of the Persian empire, took Babylon in October 539 BCE. The Nabonidus Chronicle has his army enter the city "without battle" on 16 Tashritu and Cyrus himself on 3 Arahsamna. Ezra 1 and 2 Chronicles 36 credit him in his first year with a decree letting the exiles return and rebuild the temple, usually dated 538 BCE. The Cyrus Cylinder shows a policy of restoring gods and displaced peoples, but it names no Jews, Jerusalem or Judea, and Kuhrt calls its restoration passage a literary device. Lester Grabbe holds that the decree in Ezra cannot be considered genuine; Finkelstein and Silberman accept a decree and read it as Persian policy, not sympathy. Isaiah 45:1 calls Cyrus the Lord's anointed."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Ezra.1.1-Ezra.1.4", link = "describes", note = "Ezra 1:1–4 gives the decree of Cyrus." },
   { ref = "2Chr.36.22-2Chr.36.23", link = "describes", note = "2 Chronicles 36:22–23 ends the Chronicler's history with the same decree." },

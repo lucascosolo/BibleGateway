@@ -84,7 +84,7 @@ function get<T>(sql: string, ...params: unknown[]): T | null {
 
 import type { Axis } from "@/lib/timeline/axes";
 export type { Axis };
-export type ReviewStatus = "draft" | "reviewed";
+export type ReviewStatus = "draft" | "sources-located" | "claims-checked" | "expert-reviewed";
 
 export interface Citation {
   sourceId: string;

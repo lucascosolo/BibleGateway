@@ -6,7 +6,7 @@ import { ToledotNotes } from "./ToledotNotes";
 
 afterEach(cleanup);
 
-const issueNote = (over: Partial<ToledotNote> = {}, status: "draft" | "reviewed" = "reviewed"): ToledotNote => ({
+const issueNote = (over: Partial<ToledotNote> = {}, status: "draft" | "claims-checked" = "claims-checked"): ToledotNote => ({
   id: "issue:iss-1@1001001", anchor: 1_001_001 as never, start: 1_001_001 as never, end: 1_001_003 as never,
   linkType: "background",
   subject: { kind: "issue", id: "iss-1", title: "Is there a historical Moses?", issueKind: "historical", status },
@@ -35,7 +35,7 @@ describe("<ToledotNotes>", () => {
   it("renders one item per note", () => {
     const second = issueNote({
       id: "person:per-h@1001001",
-      subject: { kind: "person", id: "per-h", name: "Hezekiah", evidence: "corroborates", hasTension: false, status: "reviewed" },
+      subject: { kind: "person", id: "per-h", name: "Hezekiah", evidence: "corroborates", hasTension: false, status: "claims-checked" },
     });
     render(<ToledotNotes notes={[issueNote(), second]} />);
     expect(screen.getAllByRole("listitem")).toHaveLength(2);
@@ -49,11 +49,11 @@ describe("<ToledotNotes>", () => {
     expect(screen.getByRole("link", { name: "Historical question: Is there a historical Moses? — open on the timeline" })).toBeTruthy();
   });
 
-  it("shows a 'draft' caption only for draft subjects", () => {
-    const { rerender } = render(<ToledotNotes notes={[issueNote({}, "reviewed")]} />);
-    expect(screen.queryByText("draft")).toBeNull();
+  it("shows an 'unchecked' caption only for subjects whose claims are unchecked", () => {
+    const { rerender } = render(<ToledotNotes notes={[issueNote({}, "claims-checked")]} />);
+    expect(screen.queryByText("unchecked")).toBeNull();
     rerender(<ToledotNotes notes={[issueNote({}, "draft")]} />);
-    expect(screen.getByText("draft")).toBeTruthy();
+    expect(screen.getByText("unchecked")).toBeTruthy();
   });
 
   it("shows the span text only when one is provided for that note id", () => {

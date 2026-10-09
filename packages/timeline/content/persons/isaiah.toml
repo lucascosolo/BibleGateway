@@ -4,7 +4,7 @@ also_known_as = ["Isaiah son of Amoz"]
 role = "prophet in Jerusalem in the late eighth century BCE; traditionally the author of the book of Isaiah"
 summary = """
 The book opens by dating Isaiah son of Amoz to the reigns of Uzziah, Jotham, Ahaz and Hezekiah, and Kings and Isaiah 36–37 make him Hezekiah's counsellor during Sennacherib's siege, dated 701 BCE by Thiele. Finkelstein and Silberman treat him as a contemporary witness who was in Jerusalem at the time of the siege. Critical scholarship separates the prophet from most of the book. Friedman says most of chapters 1–39 can fit the eighth-century prophet but chapters 40–66 appear to be by someone about two centuries later; Barton and Finkelstein and Silberman place chapters 40–55, "Second Isaiah", among the exiles of the sixth century, and Barton adds that the eighth-century prophets' words have been overlaid with later additions. The traditional rabbinic attribution, in Bava Batra, does not credit Isaiah with writing the book down but Hezekiah and his colleagues."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Isa.1.1", link = "dates", note = "Isaiah 1:1 dates the prophet's visions to the reigns of Uzziah, Jotham, Ahaz and Hezekiah." },
   { ref = "Isa.6.1", link = "dates", note = "Isaiah 6:1 dates his call vision to the year King Uzziah died." },

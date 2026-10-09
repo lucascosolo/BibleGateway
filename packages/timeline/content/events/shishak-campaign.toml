@@ -3,7 +3,7 @@ title = "Shishak's campaign against Judah"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = "In Rehoboam's fifth year, Shishak of Egypt takes Judah's walled cities and the temple treasures. Shishak is usually identified with the pharaoh Shoshenq I, whose list of conquests at Karnak records a campaign. Rodger C. Young cautions that the Egyptian date itself rests on the Bible's chronology."
 verses = [
   { ref = "1Kgs.14.25-1Kgs.14.28", link = "describes", note = "Kings dates the campaign to Rehoboam's fifth year and says the treasures are taken." },

@@ -3,7 +3,7 @@ title = "Composition of 1, 2 and 3 John"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["1John", "2John", "3John"]
 summary = """
 This asks who wrote the three letters of John and when. None of them names its author in the usual way, and critical scholars place all three around the year 100, after the Gospel of John, as the Johannine community split. Whether one person wrote all three, and whether the Gospel's author wrote any, are not settled."""

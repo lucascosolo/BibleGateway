@@ -3,7 +3,7 @@ title = "The Moabite revolt"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = "Moab, led by King Mesha, rebels against Israel, and King Jehoram marches against it. A stone monument called the Mesha Stele tells the story from Moab's side."
 verses = [
   { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Kings describes Mesha's revolt and the war that follows." },

@@ -1,7 +1,7 @@
 id = "mesha-stele"
 name = "Mesha Stele (Moabite Stone)"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -840, latest = -840 }
 language = "Moabite"
 summary = """A Moabite royal inscription, dated c. 840 BCE and found at Dibon in 1868, says Omri was king of Israel and oppressed Moab for many days; in Albright's ANET translation, "As for Omri, king of Israel, he humbled Moab many years (lit., days)" (p. 320). It credits the god Chemosh with Mesha's victories and contains the earliest certain mention of YHWH outside the Bible. Line 31 is disputed: Lemaire (1994) proposed 'House of David', while Finkelstein, Na'aman and Römer (2019) suggest 'Balak'."""

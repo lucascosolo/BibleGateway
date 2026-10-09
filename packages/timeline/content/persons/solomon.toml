@@ -3,6 +3,6 @@ name = "Solomon"
 role = "king of Judah and Israel"
 summary = """
 Solomon was David's son and the builder of the First Temple. He is remembered as the wealthiest and wisest king of a united Israel. No inscription from his own time or close to it names him. Was 10th-century Jerusalem the capital of a substantial kingdom, or a modest highland centre? That is one of the central debates of biblical archaeology (see the linked issue). Finkelstein and Silberman hold that Solomon existed but ruled no empire: "Archeologically we can say no more about David and Solomon except that they existed", and the gates and palaces credited to him they date to the Omrides."""
-status = "draft"
+status = "sources-located"
 verses = [{ ref = "1Kgs.1.1-1Kgs.11.43", link = "describes" }]
 citations = [{ source = "cline-2009" }, { source = "finkelstein-silberman-2002", locator = "pp. 142-143, 187" }]

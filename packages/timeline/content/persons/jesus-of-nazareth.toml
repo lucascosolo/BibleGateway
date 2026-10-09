@@ -4,7 +4,7 @@ also_known_as = ["Jesus Christ"]
 role = "Jewish teacher from Galilee, crucified under Pontius Pilate"
 summary = """
 Most historians of antiquity, Bart Ehrman among them, conclude that Jesus existed and was crucified under Pontius Pilate, whatever they make of the Gospels' other claims. Two Roman-era writers outside the Christian tradition mention him: Tacitus does so directly, and Josephus does so in two passages, one of which later Christian copyists expanded."""
-status = "draft"
+status = "sources-located"
 verses = [{ ref = "Mark.15.1-Mark.15.15", link = "describes", note = "Mark 15:1–15 tells how Jesus was handed over by Pilate to be crucified, the Gospel account of the event outside sources also mention." }]
 citations = [{ source = "ehrman-2012" }]
 

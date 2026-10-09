@@ -46,7 +46,8 @@ SOURCE_KINDS = {"book", "chapter", "article", "edition", "museum", "web"}
 AXES = {"narrative", "composition", "canon"}
 CATEGORIES = {"biblical-narrative", "political", "composition", "canon"}
 CONFIDENCE = {"firm", "contested", "speculative"}
-STATUSES = {"draft", "reviewed"}
+# Review grade, lowest to highest; the web app renders it as one sentence (ReviewMarker).
+STATUSES = {"draft", "sources-located", "claims-checked", "expert-reviewed"}
 STANCES = {"for", "against"}
 TRADITIONS = {"critical", "archaeological", "chronological", "traditional"}
 # What a position dates: the event itself, or the writing of the story about it.
@@ -119,6 +120,11 @@ def check_enum(report: Report, where: str, key: str, value: str, allowed: set[st
         report.error(where, f"'{key}' must be one of {sorted(allowed)}, got '{value}'")
         return False
     return True
+
+
+def check_status(report: Report, where: str, value: str) -> None:
+    if value not in STATUSES:
+        report.error(where, f"unknown status '{value}' (expected one of {sorted(STATUSES)})")
 
 
 def check_id(report: Report, where: str, value: str) -> bool:
@@ -348,7 +354,7 @@ def load_artifacts(report: Report, directory: Path, content: Content, corpus: Co
         if artifact is None or not check_id(report, where, artifact["id"]):
             continue
         check_enum(report, where, "kind", artifact["kind"], ARTIFACT_KINDS)
-        check_enum(report, where, "status", artifact["status"], STATUSES)
+        check_status(report, where, artifact["status"])
         if artifact["kind"] == "literary-text":
             for key in ("held_by", "discovered"):
                 if key in artifact:
@@ -397,7 +403,7 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
         check_enum(report, where, "axis", event["axis"], AXES)
         check_enum(report, where, "category", event["category"], CATEGORIES)
         check_enum(report, where, "confidence", event["confidence"], CONFIDENCE)
-        check_enum(report, where, "status", event["status"], STATUSES)
+        check_status(report, where, event["status"])
 
         # A composition event dates one or more books: a source document such as the Priestly
         # source spans several, so this is a list, never a single book.
@@ -492,7 +498,7 @@ def load_issues(report: Report, directory: Path, content: Content, corpus: Corpu
         if issue is None or not check_id(report, where, issue["id"]):
             continue
         check_enum(report, where, "kind", issue["kind"], ISSUE_KINDS)
-        check_enum(report, where, "status", issue["status"], STATUSES)
+        check_status(report, where, issue["status"])
         if not issue["views"]:
             report.error(where, "needs at least one [[views]] entry")
         views = []
@@ -524,7 +530,7 @@ def load_persons(report: Report, directory: Path, content: Content, corpus: Corp
         person = check_table(report, where, raw, spec)
         if person is None or not check_id(report, where, person["id"]):
             continue
-        check_enum(report, where, "status", person["status"], STATUSES)
+        check_status(report, where, person["status"])
         aliases = person.get("also_known_as", [])
         if not all(isinstance(alias, str) and alias for alias in aliases):
             report.error(where, "'also_known_as' must be an array of non-empty strings")

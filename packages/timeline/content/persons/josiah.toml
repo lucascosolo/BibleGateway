@@ -3,7 +3,7 @@ name = "Josiah"
 role = "king of Judah (640–609 BCE in Thiele)"
 summary = """
 Josiah became king of Judah as a boy. In his eighteenth year a book of the law was found in the temple and he purged the forbidden worship; he died at Megiddo confronting Pharaoh Neco. Thiele dates his reign 640–609 BCE. Young counts his eighteenth year from Tishri 623, and both put his death in Tammuz 609. In critical scholarship he matters as much for the books as for the reform: Finkelstein and Silberman place the Deuteronomistic History and parts of the Pentateuch in his reign, call him "a new David", and read the book of Joshua's hero as a portrait of him, while noting that archaeology gives little evidence for his specific acts. The Pentateuch, conquest, exodus and Moses issues all turn in part on that dating."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "2Kgs.22.1-2Kgs.22.13", link = "describes", note = "2 Kings 22:1–13 tells of Josiah's accession and the finding of the book of the law." },
   { ref = "2Kgs.23.1-2Kgs.23.25", link = "describes", note = "2 Kings 23:1–25 tells of the covenant, the purge and the Passover of Josiah's eighteenth year." },

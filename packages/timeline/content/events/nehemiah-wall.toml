@@ -3,7 +3,7 @@ title = "Nehemiah rebuilds the wall of Jerusalem"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 In the twentieth year of King Artaxerxes (445 or 444 BCE), Nehemiah, the king's cupbearer, is sent to Jerusalem. The wall is finished in fifty-two days, despite opposition from Sanballat the Horonite. Letters found at Elephantine in Egypt, from 407 BCE, name Sanballat's sons and the high priest Johanan. That ties the Nehemiah story to a world we can check outside the Bible."""
 verses = [

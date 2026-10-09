@@ -1,7 +1,7 @@
 id = "judges-historicity"
 kind = "historical"
 title = "How historical is the Book of Judges?"
-status = "draft"
+status = "sources-located"
 summary = """
 Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree, and the book was edited long after the events; no judge is named in an inscription from their own time. The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
 events = ["judges-period", "deborah-barak", "gideon", "samson"]

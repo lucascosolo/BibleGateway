@@ -21,7 +21,7 @@ beforeAll(async () => {
     INSERT INTO eras VALUES ('era-1','Monarchy',-1000,-587,'s'),('era-2','Exile',-586,-539,'s'),('era-3','Hellenistic',-330,-63,'s');
 
     INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-exodus','Exodus','narrative','biblical-narrative','contested','draft','sum',NULL,-1446,-1200);
-    INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-fall','Fall of Jerusalem','narrative','political','firm','reviewed','sum',NULL,-587,-586);
+    INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-fall','Fall of Jerusalem','narrative','political','firm','claims-checked','sum',NULL,-587,-586);
     INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-dan','Daniel written','composition','composition','contested','draft','sum',NULL,-600,-164);
     INSERT INTO event_books VALUES ('ev-dan',27),('ev-dan',26);
     INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-canon','Torah closed','canon','canon','speculative','draft','sum',NULL,-450,-400);
@@ -35,13 +35,13 @@ beforeAll(async () => {
       ('position','ev-exodus/early','src-a','p. 9',1);
 
     INSERT INTO artifacts VALUES ('art-stele','Merneptah Stele','inscription','draft',-1208,-1208,'Egyptian','sum',1896,'Thebes','Cairo Museum','CG 34025');
-    INSERT INTO artifacts VALUES ('art-far','Far Thing','seal','reviewed',-100,-90,'Greek','sum',NULL,NULL,NULL,NULL);
+    INSERT INTO artifacts VALUES ('art-far','Far Thing','seal','claims-checked',-100,-90,'Greek','sum',NULL,NULL,NULL,NULL);
     INSERT INTO attestations VALUES ('ev-exodus@art-stele','art-stele','ev-exodus','consistent','Names Israel.');
     INSERT INTO citations(subject_kind,subject_id,source_id,locator,ordinal) VALUES ('attestation','ev-exodus@art-stele','src-b','p. 1',1);
 
     INSERT INTO persons VALUES ('per-d','Early One',NULL,'patriarch','sum','draft',-900,-850,'none',0);
     INSERT INTO persons VALUES ('per-b','Beta','["Bee","Betty"]','king of Judah','Beta sum','draft',-700,-650,'corroborates',1);
-    INSERT INTO persons VALUES ('per-a','Alpha',NULL,'prophet','sum','reviewed',-700,-650,'silent',0);
+    INSERT INTO persons VALUES ('per-a','Alpha',NULL,'prophet','sum','claims-checked',-700,-650,'silent',0);
     INSERT INTO persons VALUES ('per-c','Gamma',NULL,'apostle','sum','draft',NULL,NULL,'none',0);
     INSERT INTO person_attestations VALUES ('per-b@art-stele','per-b','art-stele','corroborates','Named.');
     INSERT INTO person_events VALUES ('per-b','ev-exodus');

@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Write a Markdown review sheet for the timeline's draft content.
+"""Write a Markdown review sheet for the timeline content whose claims are not yet checked.
 
     python3 packages/timeline/review.py --db data/timeline.db --out review.md [--all] [--corpus data/bible.db]
 
-One checklist entry per draft artifact, event, person and issue: every claim it makes, each with
+One checklist entry per artifact, event, person and issue graded `draft` or `sources-located`: every claim it makes, each with
 its citations (title, author, year, locator, URL), and the TOML file to edit. A reviewer checks a
-batch against the cited sources and flips `status = "draft"` to `status = "reviewed"` in those
-files, then rebuilds. `--all` includes entries already reviewed. With `--corpus`, verse links are
+batch against the cited sources and sets `status = "claims-checked"` in those files, then
+rebuilds. `--all` includes entries already checked. With `--corpus`, verse links are
 shown as references (`1Kgs 6:1`) instead of raw verse ids.
 
 Stdlib only; reads the built database and writes only --out. Contract: Revision 2 of
@@ -20,6 +20,9 @@ import json
 import sqlite3
 import sys
 from pathlib import Path
+
+# Grades whose claims have not been checked against the cited pages yet.
+UNCHECKED = {"draft", "sources-located"}
 
 
 class Sheet:
@@ -38,7 +41,7 @@ class Sheet:
         self.lines.append(line)
 
     def wanted(self, status: str) -> bool:
-        return self.include_reviewed or status == "draft"
+        return self.include_reviewed or status in UNCHECKED
 
     @staticmethod
     def years(earliest: int | None, latest: int | None) -> str:
@@ -188,11 +191,11 @@ class Sheet:
 
     def render(self) -> str:
         build = self.db.execute("SELECT value FROM meta WHERE key = 'build_id'").fetchone()
-        scope = "all entries" if self.include_reviewed else "draft entries only"
+        scope = "all entries" if self.include_reviewed else "entries whose claims are not yet checked"
         self.emit("# Timeline review sheet")
         self.emit()
         self.emit(f"Build `{build[0] if build else 'unknown'}`, {scope}. Check each claim against its cited source; when an")
-        self.emit('entry holds up, set `status = "reviewed"` in its file (path in backticks) and rebuild.')
+        self.emit('entry holds up, set `status = "claims-checked"` in its file (path in backticks) and rebuild.')
         self.emit("A claim you cannot confirm should be cut or corrected, not left in.")
         self.emit()
         self.artifacts()
@@ -206,7 +209,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--db", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
-    parser.add_argument("--all", action="store_true", help="include entries already reviewed")
+    parser.add_argument("--all", action="store_true", help="include entries whose claims are already checked")
     parser.add_argument("--corpus", type=Path, help="bible.db, to show verse links as references")
     args = parser.parse_args(argv)
     if not args.db.is_file():

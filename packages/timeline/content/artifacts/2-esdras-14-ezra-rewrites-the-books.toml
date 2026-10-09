@@ -1,7 +1,7 @@
 id = "2-esdras-14-ezra-rewrites-the-books"
 name = "2 Esdras (4 Ezra) 14: Ezra dictates ninety-four books"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Latin"
 made = { earliest = 95, latest = 105 }
 summary = """

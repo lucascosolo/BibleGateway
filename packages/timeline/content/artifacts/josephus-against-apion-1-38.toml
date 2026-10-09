@@ -1,7 +1,7 @@
 id = "josephus-against-apion-1-38"
 name = "Josephus, Against Apion 1.37-43: the twenty-two books"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Greek"
 made = { earliest = 94, latest = 100 }
 summary = """

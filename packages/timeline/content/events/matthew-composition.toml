@@ -3,7 +3,7 @@ title = "Composition of the Gospel of Matthew"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Matt"]
 summary = """
 This asks who wrote the Gospel of Matthew and when. It was written after Mark, which it draws on, and most critical scholars date it to the 80s or 90s, after the destruction of the Temple in 70 CE. The church tradition that the tax-collector Matthew wrote it is not accepted by most critical scholars, and the exact date is not settled."""

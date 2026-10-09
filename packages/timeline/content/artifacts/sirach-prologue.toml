@@ -1,7 +1,7 @@
 id = "sirach-prologue"
 name = "The prologue to Sirach (Ecclesiasticus): the law, the prophets and the other books"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Greek"
 made = { earliest = -132, latest = -117 }
 summary = """

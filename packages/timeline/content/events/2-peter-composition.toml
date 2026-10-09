@@ -3,7 +3,7 @@ title = "Composition of 2 Peter"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["2Pet"]
 summary = """
 This asks who wrote 2 Peter and when. The letter names Simon Peter as its author, but Ehrman says 2 Peter is, more than any other New Testament writing, widely recognised as forged. The only date he gives in the passages read is "the end of the first century, at best" for the situation it assumes, so the range shown below is the editor's bracket around that remark."""

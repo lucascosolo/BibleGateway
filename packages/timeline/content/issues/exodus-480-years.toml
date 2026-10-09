@@ -1,7 +1,7 @@
 id = "exodus-480-years"
 kind = "chronology"
 title = "The 480 years of 1 Kings 6:1"
-status = "draft"
+status = "sources-located"
 summary = """
 1 Kings 6:1 says Solomon's temple was founded in the 480th year after the Exodus. Counted straight, that puts the Exodus in the 15th century BCE. Many scholars argue from archaeology for the 13th century instead, and that does not fit the count. So how you read the number largely decides the date."""
 events = ["exodus"]

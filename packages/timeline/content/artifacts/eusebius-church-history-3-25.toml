@@ -1,7 +1,7 @@
 id = "eusebius-church-history-3-25"
 name = "Eusebius, Church History 3.25: the accepted, disputed and spurious writings"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Greek"
 made = { earliest = 311, latest = 325 }
 summary = """

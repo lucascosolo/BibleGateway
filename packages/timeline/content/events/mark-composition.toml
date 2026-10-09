@@ -3,7 +3,7 @@ title = "Composition of the Gospel of Mark"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Mark"]
 summary = """
 This asks who wrote the Gospel of Mark and when. Most scholars place it around the time of the First Jewish Revolt against Rome, either just before or just after the Temple fell in 70 CE, and treat it as the earliest Gospel. Whether it shows knowledge of the Temple's destruction, and whether its author was the Mark of church tradition, are not settled."""

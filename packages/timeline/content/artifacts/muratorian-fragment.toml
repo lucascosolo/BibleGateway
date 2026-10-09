@@ -1,7 +1,7 @@
 id = "muratorian-fragment"
 name = "The Muratorian Fragment: an early list of the New Testament writings"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Latin"
 summary = """
 An eighty-five-line Latin text found by Ludovico Muratori in a seventh- or eighth-century manuscript at Milan and published in 1740. It lists the books the writer's church receives. Its start is lost; it begins mid-sentence with the second Gospel and continues: "The third book of the Gospel, that according to Luke, the well-known physician Luke wrote in his own name" ... "in order after the ascension of Christ" ... "The fourth Gospel is that of John, one of the disciples." It names Acts, thirteen letters of Paul, Jude, two letters of John, the Wisdom of Solomon, and the apocalypses of John and Peter, "though some amongst us will not have this latter read in the Church". Of the Shepherd it says: "The Pastor, moreover, did Hermas write very recently in our times in the city of Rome, while his brother bishop Pius sat in the chair of the Church of Rome. And therefore it also ought to be read; but it cannot be made public" ... "in the Church to the people, nor placed among the prophets, as their number is complete, nor among the apostles to the end of time." It does not mention Hebrews, James or 1 and 2 Peter. The remark about Pius, bishop about 140 to 155, is the basis for the usual dating to the late second century; a minority of scholars place the list in the fourth century. It is the earliest surviving list of Christian books with reasons for inclusion and exclusion."""

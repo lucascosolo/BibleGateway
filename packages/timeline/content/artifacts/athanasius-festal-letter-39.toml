@@ -1,7 +1,7 @@
 id = "athanasius-festal-letter-39"
 name = "Athanasius, Festal Letter 39 (367 CE): the first list of the twenty-seven books"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Greek"
 made = { earliest = 367, latest = 367 }
 summary = """

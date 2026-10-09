@@ -4,7 +4,7 @@ axis = "composition"
 category = "composition"
 books = ["Rev"]
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 Revelation says its author, John, was on the island of Patmos. The early writer Irenaeus, quoted by Eusebius, puts the vision at the end of Emperor Domitian's reign (81 to 96 CE). Wikipedia reports that the usual date is about 95 CE."""
 verses = [

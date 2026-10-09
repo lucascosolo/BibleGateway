@@ -3,7 +3,7 @@ title = "Ezra's mission to Jerusalem"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king", and scholars dispute which Artaxerxes this is. Artaxerxes I gives 458 BCE, the most widely accepted date, while Artaxerxes II gives 398 BCE. A third group reads "seventh" as a scribe's mistake."""
 verses = [

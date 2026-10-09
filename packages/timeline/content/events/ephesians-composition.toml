@@ -3,7 +3,7 @@ title = "Composition of the letter to the Ephesians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Eph"]
 summary = """
 This asks who wrote Ephesians and when. The letter names Paul as author and has him say "I Paul, a prisoner of Christ Jesus". Ehrman holds it was forged by a later follower of Paul who copied Colossians, which he also takes to be a forgery, and he gives no date. The year bounds of 60 and 110 are therefore the editor's: 60 is just after Paul's lifetime ministry was ending, and 110 allows for the Pastoral Epistles, which Ehrman says know Ephesians."""

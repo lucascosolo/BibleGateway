@@ -4,7 +4,7 @@ also_known_as = ["Luke the Evangelist"]
 role = "traditionally the author of the Gospel of Luke and Acts; companion of Paul"
 summary = """
 The Gospel of Luke and Acts are one anonymous work in two volumes. By the late second century (Irenaeus, the Muratorian Fragment, the title in P75) it was credited to Luke, the "beloved physician" and fellow worker whom three letters name beside Paul. Brown reports scholars about evenly divided on whether the attribution is historical. The case for it rests on the "we" passages of Acts, which Brown thinks most simply read as the author's own diary; the case against rests on discrepancies between Acts and Paul's letters and on Acts' silence about them. Ehrman, the firmer critical voice, sees "reasons to suspect" the tradition and calls the author "Luke" only for convenience. Carson and Moo, the evangelical position, hold that the evidence points strongly to Luke. Brown dates the work about 85 CE, give or take five to ten years."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Luke.1.1-Luke.1.4", link = "describes", note = "Luke 1:1–4 is the preface in which the author says he followed earlier accounts and eyewitnesses, so he was not one himself." },
   { ref = "Acts.1.1", link = "describes", note = "Acts 1:1 refers back to 'the first book', joining Acts to the Gospel." },

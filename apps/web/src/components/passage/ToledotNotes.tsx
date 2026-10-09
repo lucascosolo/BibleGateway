@@ -38,7 +38,7 @@ export function ToledotNotes({ notes, spans }: ToledotNotesProps) {
               {s.body}
               {s.note && ` ${s.note}`}
               {span && <span className="toledot-note__span"> ({span})</span>}
-              {s.draft && <span className="toledot-note__draft">draft</span>}
+              {s.draft && <span className="toledot-note__draft">unchecked</span>}
               {" "}
               <Link href={s.href} className="toledot-note__link" aria-label={`${s.lead}: ${s.body} — open on the timeline`}>
                 →

@@ -311,6 +311,11 @@
 }
 .toledot-entity__crumb a:hover { color: var(--color-ink); }
 .toledot-entity__header { display: flex; flex-direction: column; gap: var(--space-2); padding-bottom: var(--space-2); }
+.toledot-review {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  color: var(--color-ink-faint);
+}
 .toledot-entity__title {
   font-family: var(--font-serif);
   font-size: var(--text-3xl);

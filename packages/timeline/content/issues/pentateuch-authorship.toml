@@ -1,7 +1,7 @@
 id = "pentateuch-authorship"
 kind = "internal"
 title = "Who wrote the Pentateuch, and when?"
-status = "draft"
+status = "sources-located"
 summary = """
 Jewish and Christian tradition held that Moses wrote the first five books of the Bible. From the Middle Ages readers noticed passages Moses could not have written, such as the report of his own death, and critical scholars came to see the books as several sources combined over centuries. The Documentary Hypothesis, in Wellhausen's classic form, names four: J (which uses the name Yahweh), E, D (Deuteronomy) and P (the priestly source). Most critical scholars still accept that the Pentateuch is composite and largely post-Mosaic, but the dates, the number of sources and the idea of separate continuous documents are now disputed, with some placing the main shaping of the narrative in the seventh century or later."""
 events = ["sinai-covenant", "exodus"]

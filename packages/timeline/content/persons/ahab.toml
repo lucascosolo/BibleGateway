@@ -3,7 +3,7 @@ name = "Ahab"
 role = "king of Israel (reigned c. 874–853 BCE)"
 summary = """
 Ahab was the son of Omri and king of the northern kingdom of Israel, ruling from Samaria. Kings remembers him mostly for his conflict with Elijah, but an Assyrian inscription names him as a major member of the coalition that met Shalmaneser III at Qarqar in 853 BCE. Young's reconstruction of the regnal data gives his reign as 874–853 BCE."""
-status = "draft"
+status = "sources-located"
 verses = [{ ref = "1Kgs.16.29-1Kgs.22.40", link = "describes" }]
 citations = [
   { source = "cojs-kurkh-monolith" },

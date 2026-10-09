@@ -3,7 +3,7 @@ name = "Ezra"
 role = "priest and scribe"
 summary = """
 Ezra, a priest and "a scribe skilled in the law of Moses" (Ezra 7:6), comes from Babylonia to Jerusalem in the seventh year of "Artaxerxes the king", reads the law to the people and has the returnees put away their foreign wives. Which Artaxerxes is disputed (see the linked issue). 458 BCE, under Artaxerxes I, is the most widely accepted date: Yamauchi holds it as the traditional view, and Finkelstein and Silberman say "probably in 458 BCE". Albin van Hoonacker argued for 398 BCE, under Artaxerxes II, with Nehemiah coming first; others read "seventh" as a copyist's mistake and make the two men contemporaries. Satlow argues that Ezra's "book of the law of Moses" was probably some subset of the Priestly and Deuteronomic material, not the whole Pentateuch."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Ezra.7.1-Ezra.7.10", link = "describes", note = "Ezra 7:1–10 introduces Ezra and dates his journey to the seventh year of Artaxerxes." },
   { ref = "Neh.8.1-Neh.8.8", link = "describes", note = "Nehemiah 8:1–8 tells how Ezra reads the book of the law of Moses to the people." },

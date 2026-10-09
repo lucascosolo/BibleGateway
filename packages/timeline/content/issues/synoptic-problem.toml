@@ -1,7 +1,7 @@
 id = "synoptic-problem"
 kind = "internal"
 title = "How are Matthew, Mark and Luke related?"
-status = "draft"
+status = "sources-located"
 summary = """
 Matthew, Mark and Luke share so much wording and so much of the same order that they must be related, yet they also differ. The most common solution is Markan priority: Mark was written first and Matthew and Luke each used it. The material Matthew and Luke share that is not in Mark is explained by a lost sayings source called Q. In 1924 B. H. Streeter widened this into a four-document hypothesis (Mark, Q, M and L) and proposed a Proto-Luke; Brown notes that other solutions, such as the Griesbach hypothesis, remain on offer."""
 events = ["mark-composition", "matthew-composition", "luke-acts-composition"]

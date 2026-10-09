@@ -8,7 +8,7 @@ His name was Simon, and he was called Cephas (Aramaic) or Peter (Greek), both me
 The sources disagree on the Jerusalem meeting and its aftermath. Acts and Galatians both place Peter at the meeting c. 49 CE. In Galatians 2 Paul says that at Antioch Peter withdrew from eating with Gentiles and that Paul opposed him publicly. Acts has no such scene.
 
 Peter's death is not narrated in any New Testament book. John 21 hints at a death by stretching out his hands, which Brown reads as martyrdom. Brown dates the martyrdom at Rome between 64 and 68 under Nero, and he cites 1 Clement 5. The Matthew 16 passage that calls him the rock of the church and gives him the keys is a later Gospel tradition, written after 70 according to Brown. First Peter names "Babylon" as its place of writing, and Brown reads that as Rome. Meier judges the Matthew 16 saying about the church probably comes from the early church and not the historical Jesus, while the denial after the arrest is solidly historical."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Matt.16.17-Matt.16.19", link = "describes", note = "Matthew 16:17–19 has Jesus call Peter the rock, a passage found in Matthew only." },
   { ref = "Gal.2.11-Gal.2.14", link = "describes", note = "Galatians 2:11–14 is Paul's account of his dispute with Peter at Antioch." },

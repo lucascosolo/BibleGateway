@@ -1,7 +1,7 @@
 id = "lachish-reliefs"
 name = "Lachish reliefs"
 kind = "relief"
-status = "draft"
+status = "sources-located"
 made = { earliest = -700, latest = -692 }
 language = "Akkadian (captions)"
 summary = """

@@ -1,7 +1,7 @@
 id = "jehoiachin-ration-tablet"
 name = "Jehoiachin ration tablet"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -595, latest = -570 }
 language = "Akkadian (cuneiform)"
 summary = """

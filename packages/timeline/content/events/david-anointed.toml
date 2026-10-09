@@ -3,7 +3,7 @@ title = "Samuel anoints David"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 Samuel secretly anoints Jesse's youngest son during Saul's reign. The Bible gives no year, so the only limits available are those of Saul's reign."""
 verses = [

@@ -4,7 +4,7 @@ also_known_as = ["Jehu son of Nimshi"]
 role = "king of Israel (841–814 BCE in Thiele)"
 summary = """
 Kings tells how Jehu, an army commander anointed at Elisha's word, killed Jehoram of Israel and Ahaziah of Judah, had Jezebel thrown down, wiped out the house of Ahab and purged Baal worship, while leaving Jeroboam's calves at Bethel and Dan. Outside the Bible, the Black Obelisk shows a figure bowing before Shalmaneser III and records the tribute of "Jehu, son of Omri", which Thiele and Grayson date to Shalmaneser III's eighteenth year, 841 BCE. Thiele dates his reign 841–814, Finkelstein and Silberman 842–814. They read "son of Omri" as naming a vassal of the kingdom Omri founded, not a descendant. The Tel Dan stele, as usually restored, has Hazael of Damascus claim to have killed both kings himself; Finkelstein and Silberman leave open whether it was Hazael or Jehu."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "1Kgs.19.16-1Kgs.19.17", link = "background", note = "1 Kings 19:16–17 has Elijah commanded to anoint Jehu king of Israel." },
   { ref = "2Kgs.9.1-2Kgs.10.36", link = "describes", note = "2 Kings 9–10 tells of Jehu's anointing, his coup and his reign." },

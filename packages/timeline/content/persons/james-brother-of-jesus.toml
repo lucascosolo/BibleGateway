@@ -8,7 +8,7 @@ James is listed first among Jesus' brothers in Mark 6:3. Brown says there is no 
 The two accounts of that meeting differ. In Acts James proposes a ruling that Gentiles keep some purity rules, while Paul in Galatians reports only that the pillars gave him the right hand of fellowship. Brown adds that in Galatians 2 the men who made Peter withdraw at Antioch came "from James".
 
 Josephus says that James, "the brother of Jesus who was called the Messiah", was stoned in the early 60s after the high priest Ananus convened a Sanhedrin while the Roman prefect was absent. Brown dates the death to about 62. Whether James wrote the New Testament letter that bears his name is a separate question. Brown thinks most scholars see it as the work of a later admirer."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Gal.1.19", link = "describes", note = "Galatians 1:19 has Paul say he met James the brother of the Lord on a visit to Jerusalem." },
   { ref = "Gal.2.9", link = "describes", note = "Galatians 2:9 names James first among the pillars of the Jerusalem church." },

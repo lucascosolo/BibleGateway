@@ -1,7 +1,7 @@
 id = "john-7-53-8-11"
 kind = "textual"
 title = "Does the story of the woman caught in adultery belong in John?"
-status = "draft"
+status = "sources-located"
 summary = """
 The story in John 7:53-8:11 is missing from the best Greek manuscripts, and some copies place it elsewhere, for example after Luke 21:38. Brown thinks it was inserted long after the Gospel was finished, but may preserve an old story of Jesus' mercy."""
 verses = [{ ref = "John.7.53-John.8.11", link = "describes" }]

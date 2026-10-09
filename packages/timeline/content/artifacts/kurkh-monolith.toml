@@ -1,7 +1,7 @@
 id = "kurkh-monolith"
 name = "Kurkh Monolith of Shalmaneser III"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -853, latest = -852 }
 language = "Akkadian (cuneiform)"
 summary = """

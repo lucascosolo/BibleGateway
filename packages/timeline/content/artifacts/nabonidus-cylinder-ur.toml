@@ -1,7 +1,7 @@
 id = "nabonidus-cylinder-ur"
 name = "Nabonidus Cylinder from Ur"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -556, latest = -539 }
 language = "Akkadian (cuneiform)"
 summary = """

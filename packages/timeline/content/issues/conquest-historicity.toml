@@ -1,7 +1,7 @@
 id = "conquest-historicity"
 kind = "historical"
 title = "Did Israel conquer Canaan as Joshua describes?"
-status = "draft"
+status = "sources-located"
 summary = """
 Did Israel conquer Canaan by force, and did Jericho fall as the story says? That is a separate question from when a conquest would have happened, which evangelical defenders of a conquest argue about among themselves. Most archaeologists no longer defend the conquest model at all."""
 events = ["conquest-of-canaan", "judges-period"]

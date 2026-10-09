@@ -3,7 +3,7 @@ title = "Solomon's accession"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = "Solomon is anointed to succeed David (twice, in the Bible's telling) and reigns forty years. Rodger C. Young argues that at first Solomon ruled jointly with David, a coregency."
 verses = [
   { ref = "1Kgs.1.28-1Kgs.1.53", link = "describes", note = "Kings tells how David has Solomon anointed at Gihon." },

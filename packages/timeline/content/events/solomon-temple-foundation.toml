@@ -3,7 +3,7 @@ title = "The foundation of Solomon's temple"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = "Work on the temple begins in the second month of Solomon's fourth year (1 Kings 6:1). Which calendar year that is depends on where you start counting Solomon's reign."
 verses = [
   { ref = "1Kgs.6.1", link = "dates", note = "Kings dates the start of the temple to Solomon's fourth year, in the month of Ziv." },

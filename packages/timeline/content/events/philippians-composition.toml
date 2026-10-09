@@ -3,7 +3,7 @@ title = "Composition of Philippians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Phil"]
 summary = """
 Paul wrote Philippians to the church at Philippi, the Roman colony where he had founded his first church in Europe, while he was in prison. Its authorship is not seriously disputed, but scholars disagree on where he was held. Raymond Brown favours Ephesus around 56, and treats Rome (61-63) and Caesarea (58-60) as the alternatives. Whether it is one letter or several joined is also unsettled."""

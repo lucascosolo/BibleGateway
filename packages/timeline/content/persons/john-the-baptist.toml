@@ -4,7 +4,7 @@ also_known_as = ["John the Baptizer"]
 role = "Jewish prophet and baptizer (active c. 28 CE)"
 summary = """
 Josephus describes John independently of the Gospels. He calls him "a good man" who urged the Jews to virtue and to baptism, and says Herod Antipas, fearing his influence, imprisoned him at Machaerus and had him killed. Luke dates the start of his preaching to the fifteenth year of Tiberius, which Meier takes as most likely 28 CE, with John beginning around the end of 27 or early 28 and Jesus baptized by him soon after. Meier treats Josephus as the main source for John's death, finds errors and folkloric traits in Mark's story of Herodias's daughter, and dates the execution only to before 36 CE."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Luke.1.5-Luke.1.25", link = "describes", note = "Luke 1:5–25 tells of the announcement of John's birth to Zechariah, a priest, in the days of Herod." },
   { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "Luke 3:1–2 dates John's call to the fifteenth year of Tiberius." },

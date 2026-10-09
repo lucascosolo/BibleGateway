@@ -3,7 +3,7 @@ name = "Daniel"
 role = "Judean exile at the Babylonian and Persian courts, as the book tells it"
 summary = """
 Daniel is the hero of the book that bears his name: a young Judean taken to Babylon who interprets Nebuchadnezzar's dreams, reads the writing on the wall at Belshazzar's feast, survives the lions' den, and receives the visions of chapters 7–12. The book is set in the sixth century BCE. Most critical scholars date the visions to the persecution under the Seleucid king Antiochus IV; John Collins places chapters 7–12 in 167–164 BCE. For the traditional view, Joyce Baldwin holds that part or all of those chapters may go back to the sixth century. The book's Belshazzar, a king and a son of Nebuchadnezzar, does not match the Babylonian records, which make him the eldest son of Nabonidus (see the Belshazzar issue)."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Dan.1.1-Dan.1.7", link = "describes", note = "Daniel 1:1–7 tells how Daniel and his companions are taken to Babylon and renamed." },
   { ref = "Dan.5.13-Dan.5.17", link = "describes", note = "Daniel 5:13–17 brings Daniel before Belshazzar to read the writing on the wall." },

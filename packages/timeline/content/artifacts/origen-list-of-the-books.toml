@@ -1,7 +1,7 @@
 id = "origen-list-of-the-books"
 name = "Origen on the twenty-two books and the four Gospels, quoted by Eusebius"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Greek"
 made = { earliest = 230, latest = 250 }
 summary = """

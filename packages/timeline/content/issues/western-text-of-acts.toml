@@ -1,7 +1,7 @@
 id = "western-text-of-acts"
 kind = "textual"
 title = "Which Greek text of Acts is the original, the shorter or the longer Western one?"
-status = "draft"
+status = "sources-located"
 summary = """
 The Western family of Greek manuscripts gives Acts a text about one-tenth longer than the Egyptian (Alexandrian) text, with extra phrases, clauses and whole verses. Brown calls this the most acute textual problem of any New Testament book. Most commentaries are based on the shorter text."""
 verses = [

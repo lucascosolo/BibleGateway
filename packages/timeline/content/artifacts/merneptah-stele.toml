@@ -1,7 +1,7 @@
 id = "merneptah-stele"
 name = "Merneptah Stele"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -1208, latest = -1208 }
 language = "Egyptian (hieroglyphic)"
 summary = """

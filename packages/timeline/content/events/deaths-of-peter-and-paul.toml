@@ -3,7 +3,7 @@ title = "The deaths of Peter and Paul"
 axis = "narrative"
 category = "political"
 confidence = "speculative"
-status = "draft"
+status = "sources-located"
 summary = """
 This rests on tradition only. 1 Clement says both men were martyred, and Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Wikipedia places Paul's death around 64-65 CE, but the New Testament does not tell of either death."""
 verses = [

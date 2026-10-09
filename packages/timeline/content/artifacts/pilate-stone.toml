@@ -1,7 +1,7 @@
 id = "pilate-stone"
 name = "Pilate Stone"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = 26, latest = 37 }
 language = "Latin"
 summary = """

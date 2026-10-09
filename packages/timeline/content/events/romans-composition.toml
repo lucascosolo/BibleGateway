@@ -3,7 +3,7 @@ title = "Composition of Romans"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 books = ["Rom"]
 summary = """
 Paul wrote Romans from Corinth, in the winter of 57/58, to Christians in Rome, a church he had never visited but where he had friends. He was about to carry the collection to Jerusalem and hoped to go on to Spain by way of Rome. Its authorship is not seriously disputed. A revisionist chronology would put it in 55-56."""

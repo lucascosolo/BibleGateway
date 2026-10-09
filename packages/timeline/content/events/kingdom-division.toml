@@ -3,7 +3,7 @@ title = "The division of the kingdom"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = "After Solomon dies, the northern tribes break away from his son Rehoboam and make Jeroboam their king."
 verses = [
   { ref = "1Kgs.11.26-1Kgs.11.40", link = "background", note = "Kings reports Ahijah's prophecy and Jeroboam's flight, which gives background to the division." },

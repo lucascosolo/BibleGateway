@@ -3,7 +3,7 @@ title = "Composition of 1 Corinthians"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 books = ["1Cor"]
 summary = """
 Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church he had founded at Corinth, answering a letter and reports that had reached him from there. He says he will stay at Ephesus until Pentecost, which puts the writing in late 56 or very early 57. Its authorship is not seriously disputed, though a revisionist chronology would move it to 54-55."""

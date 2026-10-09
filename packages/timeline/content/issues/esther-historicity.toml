@@ -1,7 +1,7 @@
 id = "esther-historicity"
 kind = "historical"
 title = "Is the Book of Esther history, and when was it written?"
-status = "draft"
+status = "sources-located"
 summary = """
 Esther is set at the Persian court of Ahasuerus, usually identified with Xerxes I (486-465 BCE). Most scholars today read the book as a historical novel rather than a record: it knows the Persian court well but contains errors no court insider would make. The Hebrew text is the oldest version we have, and its language and vocabulary point to a date after Xerxes and probably before Greek influence reached the Jews."""
 verses = [

@@ -3,7 +3,7 @@ title = "Composition of the letter of Jude"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Jude"]
 summary = """
 This entry asks who wrote the letter of Jude and when. The letter names Jude, brother of James, whom Ehrman takes to be the brother of Jesus. Ehrman holds that it is a forgery, written "relatively late in the first century, after the age of the apostles" by a highly educated Greek-speaking Christian. He gives no years, so the span of 70 to 100 shown here is an editorial reading of that phrase."""

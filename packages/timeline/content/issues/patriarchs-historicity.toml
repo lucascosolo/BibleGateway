@@ -1,7 +1,7 @@
 id = "patriarchs-historicity"
 kind = "historical"
 title = "Were Abraham, Isaac, Jacob and Joseph historical figures of a patriarchal age?"
-status = "draft"
+status = "claims-checked"
 summary = """
 This question comes before any date. For much of the twentieth century scholars spoke of a "patriarchal age" in the early second millennium BCE and read the Genesis stories as memories of it, supported by newly found tablets from Nuzi and Mari that seemed to share the patriarchs' customs. Since the 1970s most scholars have read the stories instead as literature of the kingdoms of Israel and Judah, written between the ninth and the sixth centuries BCE, and the Nuzi argument has been dropped. The question is still argued. Finkelstein and Silberman date the writing from the stories' anachronisms; Friedman shows two written versions, J and E, each shaped by its own kingdom; Barton treats the stories as legend with perhaps a folk memory behind them; Kitchen, against the current, lists some twenty features that he says fit only the period 1900 to 1600 BCE. The dating views on the patriarchal events record only the dates offered by people who accept the setting."""
 events = ["abraham-migration", "abraham-covenant", "jacob-descent-egypt", "joseph-in-egypt"]

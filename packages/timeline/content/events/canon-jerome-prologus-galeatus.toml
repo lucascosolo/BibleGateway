@@ -3,7 +3,7 @@ title = "Jerome's Helmeted Prologue sets the Hebrew books apart from the apocryp
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 summary = """
 Introducing his Latin translation of Samuel and Kings from the Hebrew, Jerome surveyed the Hebrew scriptures. He counts twenty-two books to match the Hebrew alphabet, or twenty-four if Ruth and Lamentations are counted separately, a number he compares with the twenty-four elders of Revelation. Whatever is not in his list, he says, is apocryphal: Wisdom, Sirach, Judith, Tobit and the Shepherd are not in the canon. The Latin church kept the Greek books, but the prologue became the main patristic authority for the shorter Old Testament. McDonald notes that Jerome's list broadly follows the Hebrew order of the books, as few Christian lists do."""
 verses = [

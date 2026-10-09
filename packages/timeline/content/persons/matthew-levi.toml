@@ -6,7 +6,7 @@ summary = """
 Meier separates two figures that the First Gospel merges. In Mark and Luke, Jesus calls a toll collector named Levi, "son of Alphaeus" in Mark, to follow him (Mark 2:14, Luke 5:27). Matthew appears separately in the lists of the Twelve (Mark 3:18, Luke 6:15, Acts 1:13) with no description, and nothing else is known of him. Only the Gospel of Matthew joins the two: it changes Levi's name to Matthew in the call story (Matt 9:9) and adds "the toll collector" to Matthew's name in its list (Matt 10:3).
 
 Meier treats that as an editorial change by the First Evangelist near the end of the first century, and says it tells us nothing about an original member of the Twelve named Matthew. Levi is therefore a real disciple, probably a toll collector at Capernaum, whose call shows that Jesus accepted people from despised occupations; whether Levi was one of the Twelve is not known. Meier adds that Levi and James "of Alphaeus" may have been brothers, though that cannot be proved."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Mark.2.14", link = "describes", note = "Mark 2:14 tells how Jesus called Levi son of Alphaeus, a toll collector." },
   { ref = "Luke.5.27", link = "describes", note = "Luke 5:27 gives Luke's version of the call of Levi." },

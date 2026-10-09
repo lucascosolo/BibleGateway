@@ -20,7 +20,11 @@ export type LexiconId =
   | "massaot"
   | "lashon"
   | "derash"
-  | "seder";
+  | "seder"
+  | "review-draft"
+  | "review-sources-located"
+  | "review-claims-checked"
+  | "review-expert-reviewed";
 
 export interface LexiconEntry {
   id: LexiconId;
@@ -127,6 +131,32 @@ export const lexicon: Record<LexiconId, LexiconEntry> = {
     plainLabel: "Reading plans",
     gloss: "Order. The cycle of readings.",
     plainGloss: "A set schedule of readings to work through.",
+  },
+  // Review grades for Toledot entities. The visible marker is the gloss itself, so the term and
+  // the plain label are the same English words: there is no Hebrew name to translate.
+  "review-draft": {
+    id: "review-draft",
+    term: "Draft",
+    plainLabel: "Draft",
+    gloss: "Draft.",
+  },
+  "review-sources-located": {
+    id: "review-sources-located",
+    term: "Sources located",
+    plainLabel: "Sources located",
+    gloss: "Sources located; claims not yet checked against them.",
+  },
+  "review-claims-checked": {
+    id: "review-claims-checked",
+    term: "Claims checked",
+    plainLabel: "Claims checked",
+    gloss: "Claims checked against the cited pages.",
+  },
+  "review-expert-reviewed": {
+    id: "review-expert-reviewed",
+    term: "Expert reviewed",
+    plainLabel: "Expert reviewed",
+    gloss: "Reviewed by a subject expert.",
   },
 };
 

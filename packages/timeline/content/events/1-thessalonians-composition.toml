@@ -3,7 +3,7 @@ title = "Composition of 1 Thessalonians"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 books = ["1Thess"]
 summary = """
 Paul wrote 1 Thessalonians from Corinth to the new Christian community at Thessalonica, only a few months after he first preached there. It is the oldest preserved Christian document, and its authorship is not seriously doubted. Raymond Brown dates it to 50 or 51 on the traditional chronology of Paul's career, whereas a revisionist chronology that puts Paul's work before the Jerusalem meeting would move it to 41-43."""

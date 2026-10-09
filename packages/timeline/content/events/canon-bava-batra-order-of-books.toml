@@ -3,7 +3,7 @@ title = "The baraita of Bava Batra 14b-15a: the order and authors of the books"
 axis = "canon"
 category = "canon"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 A baraita, a teaching of the early rabbis left out of the Mishnah, is quoted in the Babylonian Talmud at Bava Batra 14b-15a. It gives the first itemised list of the Prophets and the Writings in three divisions, and says who wrote each book: Moses the Torah and Job, Joshua his own book and the last eight verses of the Torah, Samuel his book with Judges and Ruth, and so on. The Talmud that preserves it was compiled centuries later, but critical scholars date the teaching itself to the second century CE. McDonald puts it at 150-180 CE and doubts it spoke for most Jews of that time; Philip Alexander, as Lim reports, dates it before 200 CE. Some scholars use it as evidence of a three-part canon centuries earlier; McDonald calls that an overstatement."""
 verses = [

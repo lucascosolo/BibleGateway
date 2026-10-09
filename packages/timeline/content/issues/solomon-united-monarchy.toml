@@ -1,7 +1,7 @@
 id = "solomon-united-monarchy"
 kind = "historical"
 title = "Solomon's kingdom: an empire or a highland chiefdom?"
-status = "draft"
+status = "sources-located"
 summary = """
 The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem, but no inscription names him. The debate therefore turns on archaeology, above all on the date of the large gates and buildings once credited to him."""
 persons = ["solomon", "david", "rehoboam"]

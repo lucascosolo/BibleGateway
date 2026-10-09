@@ -1,7 +1,7 @@
 id = "sennacherib-taylor-prism"
 name = "Taylor Prism (annals of Sennacherib)"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -691, latest = -691 }
 language = "Akkadian (cuneiform)"
 summary = """

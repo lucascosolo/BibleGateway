@@ -3,7 +3,7 @@ title = "The crucifixion of Jesus"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 All four Gospels place the crucifixion at Passover, on a Friday, under Pontius Pilate, and scholars generally agree on a date between 30 and 36 CE. The Friday-Passover rule leaves two plausible years by the astronomy, 30 CE and 33 CE, and which of the two is right is still open."""
 verses = [

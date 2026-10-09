@@ -1,7 +1,7 @@
 id = "philippians-unity"
 kind = "textual"
 title = "Is Philippians one letter or two or three letters combined?"
-status = "draft"
+status = "sources-located"
 summary = """
 Philippians shifts between thanks, travel plans, warnings and exhortation, and the "Finally" of 3:1 sounds like a closing that does not come. Many scholars think an editor combined two or three letters. Brown reports scholarship as about evenly divided and notes that a respectable case can be made for unity."""
 verses = [{ ref = "Phil.3.1-Phil.3.2", link = "describes" }]

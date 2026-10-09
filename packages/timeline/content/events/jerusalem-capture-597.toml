@@ -3,7 +3,7 @@ title = "Nebuchadnezzar takes Jerusalem and Jehoiachin"
 axis = "narrative"
 category = "political"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 summary = """
 Babylon captures Jerusalem for the first time. Jehoiachin surrenders and is taken to Babylon, and Zedekiah is made king in his place. The Babylonian Chronicle, an ancient Babylonian record, gives the date down to the month."""
 verses = [{ ref = "2Kgs.24.10-2Kgs.24.17", link = "describes" }]

@@ -5,9 +5,11 @@ import type { ReviewStatus } from "@/lib/db/timeline";
 import { yearOffset } from "@/lib/timeline/strip-layout";
 import { formatRange, spanYears } from "@/lib/timeline/years";
 
+import { ReviewMarker } from "./ReviewMarker";
 
-/** The frame every Toledot entity page shares: the way back, the title, its facts line, the draft disclosure. */
-export function EntityShell({ title, meta, children }: { title: string; meta: ReactNode; status?: ReviewStatus; children: ReactNode }) {
+
+/** The frame every Toledot entity page shares: the way back, the title, its facts line, its review grade. */
+export function EntityShell({ title, meta, status, children }: { title: string; meta: ReactNode; status?: ReviewStatus; children: ReactNode }) {
   return (
     <article className="toledot-entity">
       <nav aria-label="Breadcrumb" className="toledot-entity__crumb">
@@ -16,6 +18,7 @@ export function EntityShell({ title, meta, children }: { title: string; meta: Re
       <header className="toledot-entity__header">
         <h1 className="toledot-entity__title">{title}</h1>
         <p className="toledot-entity__meta">{meta}</p>
+        {status && <ReviewMarker status={status} />}
       </header>
       {children}
     </article>

@@ -43,7 +43,7 @@ function sentence(note: ToledotNote): ToledotSentence {
   switch (s.kind) {
     case "event": {
       const href = `/toledot/events/${s.id}`;
-      const draft = s.status === "draft";
+      const draft = unchecked(s.status);
       const scholarly = s.positions.filter((p) => !isTraditional(p.tradition));
       const traditional = s.positions.filter((p) => isTraditional(p.tradition));
       if (scholarly.length >= 2) {
@@ -60,16 +60,16 @@ function sentence(note: ToledotNote): ToledotSentence {
         lead: "Cited in dating",
         body: `This passage is cited ${s.stance === "against" ? "against" : "for"} one dating of ${inProse(s.eventTitle)}: “${s.positionLabel}”.`,
         href: `/toledot/events/${s.eventId}`,
-        draft: s.eventStatus === "draft",
+        draft: unchecked(s.eventStatus),
       };
     case "issue":
-      return { lead: ISSUE_LEAD[s.issueKind], body: s.title.trim().endsWith("?") ? s.title : `An open question: ${s.title}.`, href: `/toledot/issues/${s.id}`, draft: s.status === "draft" };
+      return { lead: ISSUE_LEAD[s.issueKind], body: s.title.trim().endsWith("?") ? s.title : `An open question: ${s.title}.`, href: `/toledot/issues/${s.id}`, draft: unchecked(s.status) };
     case "person":
       return {
         lead: `${EVIDENCE_MEANING[s.evidence]}${s.hasTension ? "; a source contradicts a detail" : ""}`,
         body: `${s.name} appears here; ${lowerFirst(EVIDENCE_MEANING[s.evidence])}.`,
         href: `/toledot/people/${s.id}`,
-        draft: s.status === "draft",
+        draft: unchecked(s.status),
       };
     case "artifact":
       return {
@@ -81,9 +81,15 @@ function sentence(note: ToledotNote): ToledotSentence {
               : "Outside source",
         body: `${s.name} is an outside source that ${ARTIFACT_VERB[s.relation ?? "silent"]} this passage.`,
         href: `/toledot/artifacts/${s.id}`,
-        draft: s.status === "draft",
+        draft: unchecked(s.status),
       };
   }
+}
+
+/** True until the claims have been checked against their cited pages. "Sources located" means
+ *  the citations exist, not that anyone has read them, so the reader is still warned. */
+function unchecked(status: string): boolean {
+  return status !== "claims-checked" && status !== "expert-reviewed";
 }
 
 export function toledotSentence(note: ToledotNote): ToledotSentence {

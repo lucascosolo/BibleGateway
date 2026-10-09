@@ -1,7 +1,7 @@
 id = "irenaeus-four-gospels"
 name = "Irenaeus, Against Heresies 3.11.8: the Gospels are four, neither more nor less"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Greek"
 made = { earliest = 174, latest = 189 }
 summary = """

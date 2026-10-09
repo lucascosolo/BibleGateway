@@ -3,7 +3,7 @@ title = "Composition of Luke and Acts"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Luke", "Acts"]
 summary = """
 This asks who wrote the Gospel of Luke and the Acts of the Apostles and when. The two books are one work in two parts, and the Gospel draws on Mark. Critical scholars usually date the work to the 80s or 90s; church tradition names Luke, a companion of Paul, as the author. Whether the author really travelled with Paul is not settled."""

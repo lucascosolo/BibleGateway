@@ -3,7 +3,7 @@ title = "The fall of Samaria"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = "Assyria takes Samaria after a siege and carries the people of Israel away. Rodger C. Young, following Olmstead, Thiele and Tadmor, holds that King Shalmaneser V captured it. Sargon II, whose inscriptions claim the conquest, did not."
 verses = [
   { ref = "2Kgs.17.1-2Kgs.17.41", link = "describes", note = "Kings describes Hoshea's reign, the siege of Samaria, and the exile." },

@@ -41,7 +41,7 @@ CREATE TABLE events (
   axis          TEXT NOT NULL CHECK (axis IN ('narrative','composition','canon')),
   category      TEXT NOT NULL CHECK (category IN ('biblical-narrative','political','composition','canon')),
   confidence    TEXT NOT NULL CHECK (confidence IN ('firm','contested','speculative')),
-  status        TEXT NOT NULL CHECK (status IN ('draft','reviewed')),
+  status        TEXT NOT NULL CHECK (status IN ('draft','sources-located','claims-checked','expert-reviewed')),
   summary       TEXT NOT NULL,
   -- Composition axis only: an optional label for the part being dated ('Daniel 7–12',
   -- 'Priestly source'). The books are in event_books; the exact extent in verse_links.
@@ -101,7 +101,7 @@ CREATE TABLE artifacts (
   -- 'literary-text' is a work outside the Bible (a passage of Josephus or Tacitus): `made` is
   -- its date of composition, and it has no findspot or holding institution.
   kind             TEXT NOT NULL CHECK (kind IN ('inscription','chronicle','relief','papyrus','ostracon','manuscript','seal','coin','site','literary-text')),
-  status           TEXT NOT NULL CHECK (status IN ('draft','reviewed')),
+  status           TEXT NOT NULL CHECK (status IN ('draft','sources-located','claims-checked','expert-reviewed')),
   -- When the object itself was made, when that is established. NULL rather than a guess: a
   -- chronicle copy can record 605-594 BCE while its own date of writing is unknown.
   made_earliest    INTEGER CHECK (made_earliest <> 0),
@@ -131,7 +131,7 @@ CREATE TABLE issues (
   kind     TEXT NOT NULL CHECK (kind IN ('chronology','textual','historical','internal')),
   title    TEXT NOT NULL,
   summary  TEXT NOT NULL,
-  status   TEXT NOT NULL CHECK (status IN ('draft','reviewed'))
+  status   TEXT NOT NULL CHECK (status IN ('draft','sources-located','claims-checked','expert-reviewed'))
 );
 
 CREATE TABLE issue_views (
@@ -150,7 +150,7 @@ CREATE TABLE persons (
   also_known_as TEXT,                       -- JSON array of strings, or NULL
   role          TEXT NOT NULL,
   summary       TEXT NOT NULL,
-  status        TEXT NOT NULL CHECK (status IN ('draft','reviewed')),
+  status        TEXT NOT NULL CHECK (status IN ('draft','sources-located','claims-checked','expert-reviewed')),
   lived_earliest INTEGER CHECK (lived_earliest <> 0),
   lived_latest   INTEGER CHECK (lived_latest <> 0),
   -- DERIVED from person_attestations, never authored: the strongest relation, in-tension

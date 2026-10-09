@@ -3,7 +3,7 @@ title = "Melito of Sardis sends the first Christian list of Old Testament books"
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 summary = """
 Asked by a fellow Christian, Onesimus, how many the ancient books were and in what order, Melito, bishop of Sardis, travelled east to the place where these things were preached and done and sent back a list. Eusebius preserves it. It runs from the five books of Moses, with Numbers before Leviticus, through Joshua, Judges, Ruth, Kingdoms, Chronicles, Psalms, Proverbs, Ecclesiastes, Song of Songs, Job, the prophets and Daniel and Ezekiel, to Esdras. Esther is missing. McDonald calls it the earliest Christian list of Old Testament books and suggests it may come from Melito's contact with Jews in Palestine; he notes that its contents and order do not exactly match the later Jewish collection."""
 verses = [

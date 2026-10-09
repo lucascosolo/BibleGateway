@@ -4,7 +4,7 @@ also_known_as = ["Joseph Caiaphas"]
 role = "high priest in Jerusalem"
 summary = """
 Caiaphas was the high priest at the trial of Jesus in the Gospels, and Josephus names him as high priest too. A family burial box found in Jerusalem in 1990 is widely, though not universally, identified as his."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Matt.26.3", link = "describes" },
   { ref = "John.18.13", link = "describes" },

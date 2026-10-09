@@ -1,7 +1,7 @@
 id = "james-and-jude-authorship"
 kind = "historical"
 title = "Did the brothers of Jesus write James and Jude?"
-status = "draft"
+status = "sources-located"
 summary = """
 The letters of James and Jude name brothers of Jesus as their authors, but Ehrman argues that neither brother did the writing. Other scholars, set out below, defend the traditional authors."""
 events = ["james-composition", "jude-composition"]

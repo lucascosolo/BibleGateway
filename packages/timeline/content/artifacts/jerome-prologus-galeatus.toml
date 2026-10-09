@@ -1,7 +1,7 @@
 id = "jerome-prologus-galeatus"
 name = "Jerome, the Helmeted Prologue to Samuel and Kings (c. 391): the Hebrew canon and the apocrypha"
 kind = "literary-text"
-status = "draft"
+status = "sources-located"
 language = "Latin"
 made = { earliest = 390, latest = 392 }
 summary = """

@@ -1,7 +1,7 @@
 id = "sinai-covenant-format"
 kind = "chronology"
 title = "Does the form of the Sinai covenant date it?"
-status = "draft"
+status = "sources-located"
 summary = """
 Kitchen argues that the Sinai covenant texts match Hittite treaties of c. 1400–1200 BCE better than anything else. Wood replies that the biblical covenant texts follow no fixed format and that Kitchen rearranged them to fit."""
 events = ["sinai-covenant"]

@@ -14,7 +14,7 @@ function note(subject: Subject, extra: Partial<ToledotNote> = {}): ToledotNote {
 }
 
 const event = (over: Record<string, unknown> = {}): Subject => ({
-  kind: "event", id: "ev-exodus", title: "The Exodus", status: "reviewed", confidence: "contested",
+  kind: "event", id: "ev-exodus", title: "The Exodus", status: "claims-checked", confidence: "contested",
   earliest: -1446, latest: -1200, positions: [{ label: "Early date (c. 1446 BCE)", tradition: "chronological" }, { label: "Late date (13th century BCE)", tradition: "critical" }],
   ...over,
 }) as Subject;
@@ -47,7 +47,7 @@ describe("toledotSentence: new shapes", () => {
     expect(toledotSentence(note(one("Composition of James"))).body).toBe("Scholars place composition of James in 587–586 BCE.");
   });
   it("issue title already a question is used as is", () => {
-    const s = toledotSentence(note({ kind: "issue", id: "i", title: "Is there a historical Moses?", issueKind: "historical", status: "reviewed" }));
+    const s = toledotSentence(note({ kind: "issue", id: "i", title: "Is there a historical Moses?", issueKind: "historical", status: "claims-checked" }));
     expect(s.body).toBe("Is there a historical Moses?");
   });
 });
@@ -74,7 +74,7 @@ describe("toledotSentence: traditional lens", () => {
 
 describe("toledotSentence: arguments", () => {
   const arg = (stance: "for" | "against"): Subject => ({
-    kind: "argument", eventId: "ev-exodus", eventTitle: "The Exodus", eventStatus: "reviewed", positionLabel: "Early date", stance,
+    kind: "argument", eventId: "ev-exodus", eventTitle: "The Exodus", eventStatus: "claims-checked", positionLabel: "Early date", stance,
   });
   it("for: label then event title", () => {
     expect(toledotSentence(note(arg("for")))).toEqual({
@@ -93,14 +93,14 @@ describe("toledotSentence: issues", () => {
     ["historical", "Historical question"],
     ["internal", "Internal question"],
   ] as const)("%s issue leads with %s", (issueKind, lead) => {
-    const s = toledotSentence(note({ kind: "issue", id: "iss-1", title: "The 480 years", issueKind, status: "reviewed" }));
+    const s = toledotSentence(note({ kind: "issue", id: "iss-1", title: "The 480 years", issueKind, status: "claims-checked" }));
     expect(s).toEqual({ lead, body: "An open question: The 480 years.", href: "/toledot/issues/iss-1", draft: false });
   });
 });
 
 describe("toledotSentence: persons", () => {
   const person = (evidence: EvidenceGrade, hasTension = false): Subject => ({
-    kind: "person", id: "per-h", name: "Hezekiah", evidence, hasTension, status: "reviewed",
+    kind: "person", id: "per-h", name: "Hezekiah", evidence, hasTension, status: "claims-checked",
   });
   const grades: EvidenceGrade[] = ["corroborates", "partially-corroborates", "consistent", "silent", "none"];
 
@@ -128,7 +128,7 @@ describe("toledotSentence: persons", () => {
 
 describe("toledotSentence: artifacts", () => {
   const artifact = (relation: Relation | null): Subject => ({
-    kind: "artifact", id: "art-nab", name: "Nabonidus Cylinder", status: "reviewed", relation,
+    kind: "artifact", id: "art-nab", name: "Nabonidus Cylinder", status: "claims-checked", relation,
   });
   it.each([
     ["in-tension", "Outside source in tension with this passage", "contradicts"],
@@ -146,7 +146,7 @@ describe("toledotSentence: artifacts", () => {
 
 describe("toledotSentence: link note and draft", () => {
   it("carries the link's own note as a separate sentence, not in the body", () => {
-    const p = { kind: "person", id: "per-b", name: "Belshazzar", evidence: "none", hasTension: false, status: "reviewed" } as const;
+    const p = { kind: "person", id: "per-b", name: "Belshazzar", evidence: "none", hasTension: false, status: "claims-checked" } as const;
     const s = toledotSentence(note(p, { note: "Nebuchadnezzar his father" }));
     expect(s.body).toBe("Belshazzar appears here; no outside evidence.");
     expect(s.note).toBe("Nebuchadnezzar his father.");
@@ -160,6 +160,11 @@ describe("toledotSentence: link note and draft", () => {
     expect(toledotSentence(note({ kind: "issue", id: "i", title: "T", issueKind: "textual", status: "draft" })).draft).toBe(true);
     expect(toledotSentence(note({ kind: "person", id: "p", name: "N", evidence: "none", hasTension: false, status: "draft" })).draft).toBe(true);
     expect(toledotSentence(note({ kind: "artifact", id: "a", name: "N", status: "draft", relation: null })).draft).toBe(true);
-    expect(toledotSentence(note(event({ status: "reviewed" }))).draft).toBe(false);
+    expect(toledotSentence(note(event({ status: "claims-checked" }))).draft).toBe(false);
+  });
+
+  it("still flags an event whose sources are located but whose claims are unchecked", () => {
+    expect(toledotSentence(note(event({ status: "sources-located" }))).draft).toBe(true);
+    expect(toledotSentence(note(event({ status: "claims-checked" }))).draft).toBe(false);
   });
 });

@@ -1,7 +1,7 @@
 id = "babylonian-chronicle-abc5"
 name = "Babylonian Chronicle ABC 5 (the \"Jerusalem Chronicle\")"
 kind = "chronicle"
-status = "draft"
+status = "sources-located"
 language = "Akkadian (cuneiform)"
 summary = """
 A Babylonian chronicle tablet covering 605–594 BCE, from the 21st year of Nabopolassar to the 11th year of Nebuchadnezzar II. For Nebuchadnezzar's seventh year it records that "on the second day of the month Addaru he seized the city and captured the king", which means Jerusalem and Jehoiachin, in February/March 597 BCE. The date the tablet itself was written is not recorded here; it is the events it records that are dated."""

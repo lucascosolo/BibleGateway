@@ -55,7 +55,7 @@ class Review(ReviewCase):
 
     def test_reviewed_entities_excluded_unless_all(self):
         f = valid_files()
-        mutate(f, "events/ev-comp.toml", 'status = "draft"', 'status = "reviewed"')
+        mutate(f, "events/ev-comp.toml", 'status = "draft"', 'status = "claims-checked"')
         self.build(f)
         default = self.review()
         self.assertNotIn("Composition of Daniel", default)
@@ -64,6 +64,14 @@ class Review(ReviewCase):
         everything = self.review("--all")
         self.assertIn("Composition of Daniel", everything)
         self.assertIn("events/ev-comp.toml", everything)
+
+    def test_sources_located_entities_listed_by_default(self):
+        f = valid_files()
+        mutate(f, "events/ev-comp.toml", 'status = "draft"', 'status = "sources-located"')
+        self.build(f)
+        default = self.review()
+        self.assertIn("Composition of Daniel", default)
+        self.assertIn("events/ev-comp.toml", default)
 
     def test_writes_only_the_output_file(self):
         self.build(valid_files())

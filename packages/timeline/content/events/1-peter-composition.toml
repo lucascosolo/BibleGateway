@@ -3,7 +3,7 @@ title = "Composition of 1 Peter"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["1Pet"]
 summary = """
 This asks who wrote 1 Peter and when. The letter names Peter as its author, but Bart Ehrman argues Peter did not write it and says it is "best located" between Nero and Trajan. He cites the view that "Babylon", a code name for Rome, points to a date after 70 CE, while warning that this does not tie the letter to the time of Pliny's letter, around 112 CE. The year bounds shown are the editor's reading of that argument; the traditional date falls in Peter's own life, which Ehrman places before 70 CE."""

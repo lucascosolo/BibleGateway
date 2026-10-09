@@ -4,7 +4,7 @@ also_known_as = ["Jeremiah son of Hilkiah"]
 role = "prophet in Judah from Josiah's reign to the fall of Jerusalem"
 summary = """
 The book dates Jeremiah's call to the thirteenth year of Josiah and his work through the reigns of Jehoiakim and Zedekiah to the fall of Jerusalem, 586 BCE on Thiele's count and 587 on Young's. He urged submission to Babylon, stayed with the governor Gedaliah at Mizpah, and was taken to Egypt after Gedaliah's murder. Barton says many scholars think the book's narrative sections reliable and that they tally well with Assyrian and Babylonian records, and he links its Deuteronomistic style to the time of Josiah's reform, which Jeremiah probably experienced. Finkelstein and Silberman treat his count of 4,600 deportees as basically plausible. On authorship, the book itself has Baruch write at his dictation; the rabbinic tradition in Bava Batra credits Jeremiah with his own book, Kings and Lamentations, while Barton thinks Lamentations probably not his."""
-status = "draft"
+status = "sources-located"
 verses = [
   { ref = "Jer.1.1-Jer.1.3", link = "dates", note = "Jeremiah 1:1–3 dates his prophecy from Josiah's thirteenth year to the exile of Jerusalem." },
   { ref = "Jer.36.1-Jer.36.4", link = "describes", note = "Jeremiah 36:1–4 has Baruch write Jeremiah's words on a scroll at his dictation." },

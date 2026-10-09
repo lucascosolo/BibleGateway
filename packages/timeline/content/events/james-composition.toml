@@ -3,7 +3,7 @@ title = "Composition of the letter of James"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 books = ["Jas"]
 summary = """
 This entry asks who wrote the letter of James and when. The letter names James, whom Ehrman identifies as the brother of Jesus and head of the church in Jerusalem, but Ehrman argues that this James did not write it. On his view it was written after James's death, which he puts "presumably sometime in the 60s", by someone addressing the post-Pauline church "at the end of the first century". The year span shown here follows those two phrases, and Ehrman calls the result a counterforgery aimed at a later form of Pauline teaching."""

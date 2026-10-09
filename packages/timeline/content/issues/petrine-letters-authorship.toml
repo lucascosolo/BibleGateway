@@ -1,7 +1,7 @@
 id = "petrine-letters-authorship"
 kind = "historical"
 title = "Did Peter write the letters in his name?"
-status = "draft"
+status = "sources-located"
 summary = """
 Two New Testament letters name Peter as their author, and Ehrman argues that neither was written by Peter. Only 1 and 2 Peter are entered here; Jude has not been entered."""
 events = ["1-peter-composition", "2-peter-composition"]

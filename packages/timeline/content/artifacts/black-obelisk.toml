@@ -1,7 +1,7 @@
 id = "black-obelisk"
 name = "Black Obelisk of Shalmaneser III"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 made = { earliest = -827, latest = -824 }
 language = "Akkadian (cuneiform)"
 summary = """

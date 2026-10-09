@@ -3,7 +3,7 @@ title = "The birth of Jesus"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 Matthew sets Jesus's birth in the reign of Herod the king, while Luke ties it to a census under Quirinius. Most scholars infer a date between 6 and 4 BCE from the date of Herod's death, but Josephus dates the Quirinius census to 6 CE, which does not fit that window. The tension is unresolved."""
 verses = [

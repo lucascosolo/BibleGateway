@@ -8,7 +8,7 @@ Paul's own letters are the best evidence. Ehrman counts seven that are almost ce
 Acts adds Tarsus, Roman citizenship, training under Gamaliel in Jerusalem, three accounts of the Damascus road, and a series of missionary journeys. Brown thinks the author of Acts knew many real facts but compressed events and shaped Paul to fit his own theology. Ehrman finds large disparities where Acts and the letters cover the same events. One example is Paul's first visit to Jerusalem after his conversion, which Galatians places three years later and Acts places at once. Brown dates the conversion c. 36 from the Aretas episode in 2 Corinthians. Both chronologies Brown sets out are scholarly reconstructions with wide spreads, and he follows the traditional one.
 
 No letter and no part of Acts narrates Paul's death. A tradition says he was executed at Rome under Nero, and Brown puts this between 64 and 67. The earliest witness, 1 Clement, written c. 95, says only that Paul reached "the limits of the West" and bore witness before the rulers. Eusebius, writing in the fourth century, repeats the Roman martyrdom tradition. The later Acts of Paul adds legendary detail. Whether Paul reached Spain, and whether he travelled again after the two years of house arrest that Acts ends with, is unknown."""
-status = "draft"
+status = "sources-located"
 lived = { earliest = 5, latest = 67 }
 verses = [
   { ref = "Acts.9.1-Acts.9.19", link = "describes", note = "Acts 9:1–19 tells the story of Paul's encounter on the Damascus road." },

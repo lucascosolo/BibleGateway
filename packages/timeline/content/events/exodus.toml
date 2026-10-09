@@ -3,7 +3,7 @@ title = "The Exodus from Egypt"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "draft"
+status = "sources-located"
 summary = """
 This is Israel's departure from Egypt under Moses. Scholars who date it as an event favor one of two dates: one in the 15th century BCE, read from 1 Kings 6:1, and the other in the 13th century, in the reign of Ramesses II. Whether it happened as described at all is a separate question, kept apart from the dating (see the linked historicity issue). Either way it comes before about 1208 BCE, when the Merneptah Stele already names Israel as a people in Canaan."""
 verses = [

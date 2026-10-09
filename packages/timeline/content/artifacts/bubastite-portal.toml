@@ -1,7 +1,7 @@
 id = "bubastite-portal"
 name = "Bubastite Portal (Shoshenq I's Karnak campaign list)"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 language = "Egyptian (hieroglyphic)"
 summary = """At Karnak, a list of cities conquered by Shoshenq I lies in the region of Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel. He is conventionally identified with the Shishak of 1 Kings 14:25; Wilson's ANET note says "Sheshonk I (about 945-924 B.C.) is the Shishak of the Old Testament" (p. 263). Wikipedia's Shoshenq I article says the list "does not include Jerusalem", and it offers proposed explanations: the mention was erased, Rehoboam's tribute spared the city, or Shoshenq claimed a conquest he did not carry out. Finkelstein is cited as treating the looting story as a theological construct. No verdict is taken here."""
 citations = [{ source = "wikipedia-shoshenq-i" }, { source = "wikipedia-rehoboam" }, { source = "pritchard-1969", locator = "pp. 263–264 (The Campaign of Sheshonk I; commentary on the list, which ANET does not translate), trans. John A. Wilson" }]

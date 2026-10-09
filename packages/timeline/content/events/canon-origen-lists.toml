@@ -3,7 +3,7 @@ title = "Origen counts twenty-two Hebrew books and only four Gospels"
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "draft"
+status = "sources-located"
 summary = """
 Eusebius quotes several passages of Origen, the Alexandrian scholar who later taught at Caesarea. From his commentary on the first Psalm comes the statement that the canonical books, as the Hebrews hand them down, are twenty-two, the number of letters in their alphabet, with a list of Hebrew titles. From the commentary on Matthew comes his judgement that only four Gospels are undisputed in the church; from the commentary on John, that Peter's second letter and John's second and third are disputed; from the homilies on Hebrews, that only God knows who wrote it. Origen died in 253 or 254, and Metzger dates the John commentary to about 230-231 and the Matthew commentary after 244. Lim argues that by 'the Hebrews' Origen could mean the Jews of his own day."""
 verses = [

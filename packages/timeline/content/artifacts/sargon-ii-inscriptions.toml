@@ -1,7 +1,7 @@
 id = "sargon-ii-inscriptions"
 name = "Inscriptions of Sargon II (Samaria claim)"
 kind = "inscription"
-status = "draft"
+status = "sources-located"
 language = "Akkadian (cuneiform)"
 summary = """
 Sargon II's royal inscriptions claim he conquered Samaria and moved 27,280 Israelites elsewhere (Wikipedia's wording). Wikipedia judges it more likely that Shalmaneser V captured the city. The Babylonian Chronicles and the Hebrew Bible both treat the fall of Israel as the main event of that reign. For the Nimrud Prism, COJS gives the figure as 27,290 (after Younger, BAR 29/6), against Wikipedia's 27,280. The two sources disagree. Luckenbill's Ancient Records prints two of the texts. In the Annals, first year, the figure is restored: "[27,290 people, who lived therein] I carried away; 50 chariots for my royal equipment, I selected from [among them]" (the bracketed words are the editor's restoration). The Display Inscription has it intact: "I besieged and captured Samaria, carrying off 27,290 of the people who dwelt therein." The 27,280 reading was not found in Luckenbill."""
