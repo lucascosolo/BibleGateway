@@ -6,11 +6,23 @@ canon = "pseudepigrapha"
 status = "sources-located"
 original_language = "Hebrew"
 summary = """
-The Testaments are twelve separate writings, one for each son of Jacob (Reuben, Simeon, Levi, Judah, Issachar, Zebulun, Dan, Naphtali, Gad, Asher, Joseph and Benjamin). This summary rests on the translator's introduction of 1917: W. O. E. Oesterley, following R. H. Charles, held that the book was written in Hebrew, that the earliest form known is a Greek translation, that the original belongs to the time of John Hyrcanus, that further passages were added in the middle of the first century BCE, and that Christian additions came later. Scholarship has moved since then."""
+The Testaments are twelve separate writings, one for each son of Jacob (Reuben, Simeon, Levi, Judah, Issachar, Zebulun, Dan, Naphtali, Gad, Asher, Joseph and Benjamin). McDonald, after Charlesworth, gives the present form as Christian, about 150-200 CE, with Jewish sources behind Levi, Judah and Naphtali; Brown reports a divided field. The translator's introduction of 1917 is the older view: W. O. E. Oesterley, following R. H. Charles, held that the book was written in Hebrew, that the earliest form known is a Greek translation, that the original belongs to the time of John Hyrcanus, that further passages were added in the middle of the first century BCE, and that Christian additions came later.
+"""
 citations = [
   { source = "charles-1917-testaments", locator = "intro., p. viii" },
   { source = "charles-1917-testaments", locator = "intro., pp. xvii-xviii" },
+  { source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "brown-1997", locator = "Appendix II, PDF p. 887" }
 ]
+
+[[composed]]
+id = "present-form-150-200"
+label = "Present Christian form, about 150 to 200 CE (Charlesworth, listed by McDonald)"
+tradition = "critical"
+earliest = 150
+latest = 200
+held_by = "James H. Charlesworth, as listed by McDonald (2017)"
+summary = "McDonald, following Charlesworth, lists the Testaments as 'present form is Christian, ca. 150-200 CE', with Levi, Judah and Naphtali drawing on Jewish sources before 70 CE and probably of the second or first century BCE (p. 139). Lim puts the work in the second century CE (p. 169). Brown says it was composed before 200 CE and that scholars are divided between Christian additions to a Jewish original written just before 100 BCE and a Jewish Christian composition drawing on earlier sources, the view of Hollander and de Jonge."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "lim-2013", locator = "p. 169" }, { source = "brown-1997", locator = "Appendix II, PDF p. 887" }]
 
 [[composed]]
 id = "charles-oesterley-original"

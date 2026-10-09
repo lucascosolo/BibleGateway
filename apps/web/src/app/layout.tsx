@@ -7,6 +7,7 @@ import "./search.css";
 import "./lashon.css";
 import "./audio.css";
 import "./toledot.css";
+import "./chitzonim.css";
 import { ThemeScript } from "@/components/ThemeScript";
 import { Providers } from "@/components/Providers";
 import { AppShell } from "@/components/shell/AppShell";
@@ -63,6 +64,15 @@ const notoSerifHebrew = localFont({
   variable: "--font-noto-hebrew",
   display: "swap",
   src: [{ path: "./fonts/noto-serif-hebrew.woff2", weight: "400 700", style: "normal" }],
+});
+
+// Headings inside the outside-books workspace only (`[data-world="outside"]` in globals.css).
+// Not preloaded: no other page sets a glyph in it, so no other page downloads it.
+const ebGaramond = localFont({
+  variable: "--font-eb-garamond",
+  display: "swap",
+  preload: false,
+  src: [{ path: "./fonts/eb-garamond-normal.woff2", weight: "400 800", style: "normal" }],
 });
 
 const jetbrainsMono = localFont({
@@ -133,7 +143,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${literata.variable} ${archivo.variable} ${jetbrainsMono.variable} ${notoSerifHebrew.variable}`}
+      className={`${literata.variable} ${archivo.variable} ${jetbrainsMono.variable} ${notoSerifHebrew.variable} ${ebGaramond.variable}`}
     >
       <head>
         <ThemeScript />

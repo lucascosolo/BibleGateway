@@ -4,29 +4,40 @@ also_known_as = ["4 Ezra (chapters 3-14)", "Ezra Apocalypse"]
 books = ["2Esd"]
 canon = "deuterocanon"
 status = "sources-located"
-summary = "2 Esdras is three works in one; its core, chapters 3-14, is the Jewish apocalypse 4 Ezra, which the unsigned Brenton preface dates to Domitian's reign (81-96 CE) and Lim to the end of the first century CE. McDonald says the Latin form received final Christian additions. Chapter 14 has Ezra keep 'the seventy last' books for the wise, which McDonald and Lim use in the canon debate. The Ethiopian church and the Greek Orthodox Church (1950) hold it as scripture."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }, { source = "lim-2013", locator = "p. 169" }]
+summary = "2 Esdras is three works in one; its core, chapters 3-14, is the Jewish apocalypse 4 Ezra, which Lim dates to the end of the first century CE and Brown to about 90-120 CE; the unsigned Brenton preface puts it in Domitian's reign (81-96 CE). Brown and McDonald say Christians added to it. Chapter 14 has Ezra keep 'the seventy last' books for the wise, which McDonald and Lim use in the canon debate. The Ethiopian church and the Greek Orthodox Church (1950) hold it as scripture."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }, { source = "lim-2013", locator = "p. 169" }, { source = "brown-1997", locator = "Appendix II, PDF p. 886" }]
 original_language = "Disputed; the preface says probably Greek, with no Greek text found"
 
-[[composed]]
-id = "domitian-81-96"
-label = "Reign of Domitian, 81 to 96 CE"
-tradition = "critical"
-earliest = 81
-latest = 96
-summary = "The preface says the seven visions were 'written probably in Domitian's reign (a.d. 81-96)'. It says the book has three distinct works and dates only the apocalypse. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
-held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }]
 
 [[composed]]
 id = "end-of-first-century"
-label = "End of the first century CE"
+label = "End of the first century CE (Lim, 2013; McDonald, 2017)"
 tradition = "critical"
 earliest = 90
 latest = 100
-summary = "Lim gives '2 Esdras (end of first century CE)' and McDonald says 4 Ezra is 'after 70 CE, with final Christian additions later'. The range converts 'end of the first century' to 90-100."
 held_by = "Lim (2013) and McDonald (2017)"
-citations = [{ source = "lim-2013", locator = "p. 169" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }]
+summary = "Lim gives '2 Esdras (end of first century CE)'. McDonald dates 4 Ezra 'ca. 90-100 CE' (p. 352) and says it is 'after 70 CE, with final Christian additions later' (p. 138)."
+citations = [{ source = "lim-2013", locator = "p. 169" }, { source = "mcdonald-2017-vol1", locator = "p. 352" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }]
+
+[[composed]]
+id = "brown-90-120"
+label = "About 90 to 120 CE, chapters 3-14 (Brown, 1997)"
+tradition = "critical"
+earliest = 90
+latest = 120
+held_by = "Raymond E. Brown (1997)"
+summary = "Brown says chapters 3-14 are IV Ezra, a Jewish work of about 90-120 CE originally written in Hebrew or Aramaic, and that chapters 1-2 and 15-16 are Christian compositions. Meier dates the original 4 Ezra to about 100 CE, with additions made around the third century (p. 283)."
+citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { source = "meier-1994", locator = "p. 283" }]
+
+[[composed]]
+id = "domitian-81-96"
+label = "Reign of Domitian, 81 to 96 CE (unsigned preface)"
+tradition = "critical"
+earliest = 81
+latest = 96
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+summary = "The preface says the seven visions were 'written probably in Domitian's reign (a.d. 81-96)'. It says the book has three distinct works and dates only the apocalypse. The preface mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }]
 
 [[held_canonical_by]]
 tradition = "Ethiopian Orthodox Tewahedo Church"

@@ -11,9 +11,12 @@ courtesy.
 | `archivo-normal.woff2` | Archivo | Copyright 2019 The Archivo Project Authors (https://github.com/Omnibus-Type/Archivo) |
 | `jetbrains-mono-normal.woff2` | JetBrains Mono | Copyright 2020 The JetBrains Mono Project Authors (https://github.com/JetBrains/JetBrainsMono) |
 | `noto-serif-hebrew.woff2` | Noto Serif Hebrew | Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hebrew) |
+| `eb-garamond-normal.woff2` | EB Garamond | Copyright 2017 The EB Garamond Project Authors (https://github.com/octaviopardo/EBGaramond12) |
 
-All four are the latin (or, for the Hebrew, the `hebrew`) subset of the variable face, so weight
+All five are the latin (or, for the Hebrew, the `hebrew`) subset of the variable face, so weight
 is an axis and one file covers the whole range.
+
+**EB Garamond is for headings in the outside-books workspace only** (`/chitzonim` and the reader on books 67 and up), never for scripture. The file is `files/eb-garamond-latin-wght-normal.woff2` from `@fontsource-variable/eb-garamond` 5.3.0 (npm tarball sha512 `656OJsA9…PQMwlQ==`), whose LICENSE is the OFL 1.1 below.
 
 **Noto Serif Hebrew is here for a specific reason.** The Westminster Leningrad Codex carries
 vowel points below the consonants and cantillation accents above them, and whether those land in

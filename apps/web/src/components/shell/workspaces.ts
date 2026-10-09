@@ -40,6 +40,9 @@ export const WORKSPACES: Workspace[] = [
   // cited (draft) data behind them, so Toledot leaves PLANNED_WORKSPACES and takes a primary
   // slot. Before Notes so the research surfaces sit together and the notebook keeps the end.
   { key: "toledot", href: "/toledot", plainLabel: "Timeline", lexiconId: "toledot", icon: "timeline" },
+  // The outside books. After the research surfaces and before the notebook; on phones it folds
+  // into the More sheet so the bar keeps five cells (user decision, 2026-10-09).
+  { key: "chitzonim", href: "/chitzonim", plainLabel: "Outside books", lexiconId: "chitzonim", icon: "tied-scroll" },
   { key: "notes", href: "/notes", plainLabel: "Notes", icon: "notes" },
 ];
 
@@ -47,7 +50,7 @@ export const WORKSPACES: Workspace[] = [
  * The workspaces the <768px bar folds into its More sheet so the bar keeps five cells. The rail
  * and the top tabs still list every workspace.
  */
-export const COLLAPSED_WORKSPACE_KEYS: ReadonlySet<Workspace["key"]> = new Set(["lashon", "notes"]);
+export const COLLAPSED_WORKSPACE_KEYS: ReadonlySet<Workspace["key"]> = new Set(["lashon", "chitzonim", "notes"]);
 
 /**
  * Not a member of `WORKSPACES`: its href is `/`, and `AppShell`'s `useActiveWorkspace` matches

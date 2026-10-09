@@ -1,0 +1,62 @@
+id = "gospel-of-mary"
+title = "Gospel of Mary"
+also_known_as = ["Berlin Codex 8502, tractate 1"]
+books = ["GMary"]
+canon = "nt-apocrypha"
+status = "draft"
+original_language = "Greek (two Greek fragments survive; the fullest text is Coptic)"
+summary = """
+An incomplete gospel in which Jesus gives a revelation to the disciples and departs, and Mary Magdalene then relates what he revealed to her, which Peter and Andrew doubt and Levi defends. Ehrman notes it was discovered at the end of the nineteenth century but published only in the mid-twentieth. No filed source dates its composition, so the record is a draft. Its manuscripts are dated: the Coptic Berlin Codex 8502 to the fifth century, and two Greek fragments, P.Oxy. 3525 and P.Ryl. 463, to the third and early third century."""
+citations = [
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+  { source = "ehrman-2013", locator = "PDF p. 573" },
+]
+
+[[composed]]
+id = "bracket-before-early-third-century"
+label = "Not dated by any filed source: between Jesus' death and the earliest copy"
+tradition = "chronological"
+earliest = 30
+latest = 250
+held_by = "Bracket for this record, not a scholar's dating"
+summary = """
+No filed source gives a date of composition for the Gospel of Mary. This is a bracket, not a date: the text is set after Jesus has given his teaching and left, so it is later than his death, for which Humphreys and Waddington leave 30 or 33 CE as the only plausible years; and it must be earlier than its oldest copy, P.Ryl. 463, which the manuscript list dates to the early third century, read here as no later than 250. A scholar's date should replace this when one is filed."""
+citations = [
+  { source = "humphreys-waddington-1992", locator = "p. 339" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+
+[[witnesses]]
+name = "Berlin Codex 8502, tractate 1"
+siglum = "BG 8502,1"
+earliest = 401
+latest = 500
+language = "Coptic"
+note = "Papyrus codex dated to the fifth century, converted to 401-500; it preserves about half the gospel (codex pages 1-19, with pages 1-6 and 11-14 lost). Losekam reports that Lundhaug and Jenott question the fifth-century date of the codex and date its cover to the sixth or seventh century."
+citations = [
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+  { source = "dss-nag-hammadi-codices", locator = "p. 267, n. 25" },
+]
+
+[[witnesses]]
+name = "Oxyrhynchus Papyrus 3525"
+siglum = "P.Oxy. 3525"
+earliest = 201
+latest = 300
+language = "Greek"
+note = "Papyrus roll dated to the third century, converted to 201-300; it preserves a version of the text found in BG 8502 9.5-10.13."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[witnesses]]
+name = "Rylands Papyrus 463"
+siglum = "P.Ryl. 463"
+earliest = 201
+latest = 250
+language = "Greek"
+url = "https://www.digitalcollections.manchester.ac.uk/view/MS-GREEK-P-00463"
+note = "Papyrus codex dated to the early third century, read here as 201-250; it preserves a version of the text found in BG 8502 17.5-19.5."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[translations]]
+ledger = "mattison-mary"
+note = "Mattison's public-domain translation of the Coptic text of Berlin Codex 8502,1 from gospels.net."

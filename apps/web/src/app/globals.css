@@ -316,6 +316,65 @@
   --shadow-alpha-deep: 0.55;
 }
 
+/* The outside-books world (/chitzonim, and the reader on books 67+). Scoped by an attribute on
+   that workspace's wrapper, so the 66-book reader and every other workspace never see it.
+   A darker parchment, a heavier old-style serif for headings only, and rubric hairlines in
+   chitzonim.css; no textures. Body ink and the scripture face are deliberately NOT redefined:
+   the reading column reads exactly like the main reader.
+   Ratios: oklch -> linear sRGB -> WCAG relative luminance (the same method as the :root notes),
+   each foreground against all five surfaces in the order bg / raised / sunken / surface / hover.
+   Light's worst surface is the darkest (hover); dark's is the lightest (hover). 4.5:1 floor.
+   The -source re-pointing is required: those are resolved where they are declared (:root), so
+   without redeclaring them here Tailwind's bg-bg/text-ink utilities would keep the root values. */
+[data-world="outside"] {
+  --color-bg: oklch(93.5% 0.022 76);          /* darker parchment */
+  --color-bg-raised: oklch(95.5% 0.018 78);
+  --color-bg-sunken: oklch(90.5% 0.026 72);
+  --color-surface: oklch(92.5% 0.024 74);
+  --color-surface-hover: oklch(89.5% 0.028 72);
+  /* --color-ink is unchanged (24%): 12.03:1 at worst, on surface-hover. */
+  --color-ink-muted: oklch(40% 0.024 55);     /* 7.65 bg / 8.13 raised / 6.97 sunken / 7.42 surface / 6.76 hover */
+  --color-ink-faint: oklch(45% 0.02 55);      /* 6.17 / 6.56 / 5.62 / 5.99 / 5.45 — darkened from 50%, which this darker ground would pull under 4.5:1 */
+  --color-border: oklch(78% 0.032 65);        /* a hairline, not text: 1.47-1.76:1 */
+  /* Unchanged and re-checked on the darker ground: --color-rubric 4.81:1 at worst (hover),
+     --color-brand 4.99:1 at worst (hover). */
+  --font-heading: var(--font-eb-garamond), var(--jot-font-serif);
+  --color-bg-source: var(--color-bg);
+  --color-bg-raised-source: var(--color-bg-raised);
+  --color-bg-sunken-source: var(--color-bg-sunken);
+  --color-surface-source: var(--color-surface);
+  --color-ink-muted-source: var(--color-ink-muted);
+}
+
+/* These two blocks MUST stay identical, as the root's do. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [data-world="outside"] {
+    --color-bg: oklch(16.5% 0.016 52);
+    --color-bg-raised: oklch(20.5% 0.017 52);
+    --color-bg-sunken: oklch(13.5% 0.015 52);
+    --color-surface: oklch(19.5% 0.017 52);
+    --color-surface-hover: oklch(24.5% 0.019 52);
+    /* --color-ink unchanged (92%): 12.85:1 at worst, on surface-hover. */
+    --color-ink-muted: oklch(76% 0.016 70);     /* 8.97 bg / 8.35 raised / 9.31 sunken / 8.52 surface / 7.57 hover */
+    --color-ink-faint: oklch(68% 0.017 65);     /* 6.68 / 6.22 / 6.94 / 6.35 / 5.64 */
+    --color-border: oklch(34% 0.024 58);        /* hairline: 1.38-1.69:1 */
+    /* Unchanged and re-checked: --color-rubric 5.67:1, --color-brand 6.84:1, both at worst (hover). */
+  }
+}
+
+:root[data-theme="dark"] [data-world="outside"] {
+  --color-bg: oklch(16.5% 0.016 52);
+  --color-bg-raised: oklch(20.5% 0.017 52);
+  --color-bg-sunken: oklch(13.5% 0.015 52);
+  --color-surface: oklch(19.5% 0.017 52);
+  --color-surface-hover: oklch(24.5% 0.019 52);
+  /* --color-ink unchanged (92%): 12.85:1 at worst, on surface-hover. */
+  --color-ink-muted: oklch(76% 0.016 70);     /* 8.97 bg / 8.35 raised / 9.31 sunken / 8.52 surface / 7.57 hover */
+  --color-ink-faint: oklch(68% 0.017 65);     /* 6.68 / 6.22 / 6.94 / 6.35 / 5.64 */
+  --color-border: oklch(34% 0.024 58);        /* hairline: 1.38-1.69:1 */
+  /* Unchanged and re-checked: --color-rubric 5.67:1, --color-brand 6.84:1, both at worst (hover). */
+}
+
 /* Re-export the design tokens under Tailwind's namespace so utility classes (`font-serif`,
    `bg-bg`, `text-ink`, …) resolve to the same values the hand-written CSS uses. `inline` is
    required: without it Tailwind snapshots the value once, and the light/dark token swap below

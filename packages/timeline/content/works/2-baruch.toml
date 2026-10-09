@@ -6,11 +6,33 @@ canon = "pseudepigrapha"
 status = "sources-located"
 original_language = "Hebrew"
 summary = """
-2 Baruch is an apocalypse in the name of Baruch, the scribe of Jeremiah, written after the fall of Jerusalem. It survives complete only in Syriac, translated from Greek, and Charles held that the original was Hebrew. This summary is the view of the translator's introduction, by W. O. E. Oesterley in 1918, and scholarship has moved since."""
+2 Baruch is an apocalypse in the name of Baruch, the scribe of Jeremiah, written after the fall of Jerusalem. Brown dates it to 95-120 CE and ties it to IV Ezra; McDonald gives about 100 CE and Lim the second century CE. It survives complete only in Syriac, translated from Greek. Its translator's introduction, by W. O. E. Oesterley in 1918, dated it after 70 CE and probably not much after 100, and Charles held that the original was Hebrew.
+"""
 citations = [
   { source = "charles-1918-2baruch", locator = "intro., p. xii" },
   { source = "charles-1918-2baruch", locator = "intro., p. xiii" },
+  { source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { source = "mcdonald-2017-vol1", locator = "p. 139" }
 ]
+
+[[composed]]
+id = "brown-95-120"
+label = "About 95 to 120 CE (Brown, 1997)"
+tradition = "critical"
+earliest = 95
+latest = 120
+held_by = "Raymond E. Brown (1997)"
+summary = "Brown dates 2 Baruch, a Jewish work preserved in a Syriac translation from Greek, to 95-120 CE and makes it dependent on IV Ezra or a source common to both. McDonald's list, after Charlesworth, gives 'ca. 100 CE' (p. 139), and Meier places it in the early second century CE (pp. 283, 363)."
+citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "meier-1994", locator = "p. 283" }, { source = "meier-1994", locator = "p. 363" }]
+
+[[composed]]
+id = "lim-second-century"
+label = "Second century CE (Lim, 2013)"
+tradition = "critical"
+earliest = 101
+latest = 200
+held_by = "Timothy H. Lim (2013)"
+summary = "Lim lists the (Syriac) Apocalypse of Baruch as second century CE, among works that postdate Paul's letters."
+citations = [{ source = "lim-2013", locator = "p. 169" }]
 
 [[composed]]
 id = "oesterley-1918"

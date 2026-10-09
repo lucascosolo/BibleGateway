@@ -107,6 +107,16 @@ export function classifySearchQuery(query: string, books: BookIndex): QueryClass
   return reference ? { mode: "reference", reference } : { mode: "text" };
 }
 
+// --- Canon filter ----------------------------------------------------------------------
+
+/** "bible" = the 66 books; "all" also searches the outside books (Apocrypha, Pseudepigrapha, ...). */
+export type CanonFilter = "bible" | "all";
+export const DEFAULT_CANON_FILTER: CanonFilter = "bible";
+
+export function parseCanonFilter(raw: string | null | undefined): CanonFilter {
+  return raw?.toLowerCase() === "all" ? "all" : DEFAULT_CANON_FILTER;
+}
+
 // --- Pagination ------------------------------------------------------------------------
 
 export const SEARCH_DEFAULT_LIMIT = 20;

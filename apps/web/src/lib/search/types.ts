@@ -1,4 +1,4 @@
-import type { MatchOffset } from "./query";
+import type { CanonFilter, MatchOffset } from "./query";
 
 /** `/api/search` response shape — shared between the route and the client search page. */
 export interface SearchApiHit {
@@ -31,6 +31,7 @@ export interface SearchApiResponse {
   translation: { code: string };
   testament?: "OT" | "NT" | "DC";
   bookId?: number;
+  canon: CanonFilter;
   total: number;
   returned: number;
   limit: number;

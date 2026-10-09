@@ -2,7 +2,7 @@ import { shareMetadata } from "@/app/og/data";
 import { excerpt } from "@/lib/seo";
 import { Suspense } from "react";
 
-import { getBookIndex, getTranslations } from "@/lib/db/corpus";
+import { getOutsideBookIndex, getTranslations } from "@/lib/db/corpus";
 import { DerashSearch } from "./DerashSearch";
 
 /**
@@ -31,7 +31,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 }
 
 export default async function DerashPage() {
-  const books = getBookIndex().all;
+  const books = getOutsideBookIndex().all;
   const translations = getTranslations();
 
   return (

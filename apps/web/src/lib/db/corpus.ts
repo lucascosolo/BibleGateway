@@ -9,6 +9,7 @@ import {
   HIGHLIGHT_START,
   parseHighlightMarkers,
   sanitizeFtsQuery,
+  type CanonFilter,
   type MatchOffset,
 } from "@/lib/search/query";
 import { prepared } from "./client";
@@ -420,7 +421,7 @@ export function countUniqueReferences(range: VerseRange, minVotes: number): numb
 // Corpus-wide facts and entry points, computed from real rows rather than hardcoded — the
 // home page's promise to a researcher is that every number on it is a live query result.
 
-/** The canon for the "browse by book" surface, with genre attached for grouping. */
+/** The 66 for the "browse by book" surface, with genre attached for grouping. The outside books get one door, not pills. */
 export function getBookBrowseIndex(): {
   bookId: number;
   osisId: string;
@@ -432,7 +433,7 @@ export function getBookBrowseIndex(): {
   const rows = prepared(
     `SELECT book_id AS bookId, osis_id AS osisId, name, testament, genre,
             chapter_count AS chapterCount
-     FROM books ORDER BY book_id`
+     FROM books WHERE canon IN ('hebrew','nt') ORDER BY book_id`
   ).all() as { bookId: number; osisId: string; name: string; testament: string; genre: string; chapterCount: number }[];
   // `genre` is stored as a JSON array (a book can be both law and narrative); parsed here so
   // the pure grouping logic in lib/home/bookGroups.ts never has to know it was ever a string.
@@ -510,6 +511,8 @@ export interface SearchResult {
 export interface SearchFilters {
   testament?: "OT" | "NT" | "DC";
   bookId?: number;
+  /** "bible" (default) = the 66 books only; "all" adds the outside books. An explicit outside `bookId` implies "all". */
+  canon?: CanonFilter;
   limit: number;
   offset: number;
 }
@@ -547,6 +550,12 @@ export function searchVerses(query: string, translationId: number, filters: Sear
     resultParams.push(filters.testament);
     distConditions.push("books.testament = ?");
     distParams.push(filters.testament);
+  }
+  const includesOutside =
+    filters.canon === "all" || (filters.bookId !== undefined && !getBookIndex().get(filters.bookId));
+  if (!includesOutside) {
+    resultConditions.push("books.canon IN ('hebrew','nt')");
+    distConditions.push("books.canon IN ('hebrew','nt')");
   }
   if (filters.bookId !== undefined) {
     resultConditions.push("verses.book_id = ?");

@@ -1,6 +1,8 @@
 import { StructuredData } from "@/app/_components/StructuredData";
 import { shareMetadata } from "@/app/og/data";
 export const metadata = shareMetadata('Bible study, cross-references & Hebrew and Greek tools · Jot', 'Read and compare Bible translations, follow cross-references across the Bible, study Hebrew and Greek words, and consult sourced textual notes.', '/', { card: { kind: "page", page: "home" }, shareTitle: "Jot — read the Bible closely" });
+import Link from "next/link";
+import { GlossLabel } from "@/components/GlossLabel";
 import { Wordmark } from "@/components/Wordmark";
 import { JumpSearch } from "@/components/home/JumpSearch";
 import { ContinueReading } from "@/components/home/ContinueReading";
@@ -12,6 +14,7 @@ import { TourLauncher } from "@/components/onboarding/TourLauncher";
 import { getAllOmissions } from "@/lib/db/apparatus";
 import {
   getBookBrowseIndex,
+  getOutsideVerseCounts,
   getBookIndex,
   getBooks,
   getCrossReferenceCount,
@@ -35,6 +38,7 @@ export default function Home() {
 
   const books = getBooks();
   const browseIndex = getBookBrowseIndex();
+  const outsideBooks = getOutsideVerseCounts().reduce((n, c) => n + c.books, 0);
   const topVerses = getMostReferencedVerses(defaultTranslation.translationId, 6);
   const omissions = getAllOmissions();
   const verseCount = getVerseCount();
@@ -107,6 +111,15 @@ export default function Home() {
           and go straight there.
         </p>
         <BookBrowser books={browseIndex} />
+        {/* One door, not more pills: the outside books are not among the 66 and are not listed as if they were. */}
+        <Link href="/chitzonim" className="outside-door" data-door="chitzonim" data-world="outside">
+          <span className="outside-door__title">
+            <GlossLabel id="chitzonim" />
+          </span>
+          <span className="outside-door__count">
+            {outsideBooks} books beside the 66, read in their own room
+          </span>
+        </Link>
       </section>
 
       <SupportCard />

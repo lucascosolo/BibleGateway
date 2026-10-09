@@ -17,7 +17,8 @@ export type FamilyId =
   | "berean"
   | "jewish"
   | "septuagint"
-  | "original-text";
+  | "original-text"
+  | "outside-books";
 
 export interface Citation {
   source: string;
@@ -75,6 +76,11 @@ export const FAMILIES: Record<FamilyId, { label: string; description: string }> 
     description:
       "An English translation of the ancient Greek translation of the Hebrew scriptures, not of the Hebrew itself.",
   },
+  "outside-books": {
+    label: "Texts outside the 66 books",
+    description:
+      "English translations of ancient writings that sit outside the Protestant canon, made by several different translators and editors. Two works in this group are not related to each other merely by being in it.",
+  },
   "original-text": {
     label: "Original-language edition",
     description: "A modern scholarly edition of the Hebrew or Greek text. Not a translation.",
@@ -102,6 +108,9 @@ const BEREAN_SOURCES = publisher(
   "https://bereanbibles.com/about-berean-study-bible/greek-and-hebrew-sources/",
 );
 const BEREAN_TERMS = publisher("Berean Bible, terms of use", "public-domain dedication", "https://berean.bible/terms.htm");
+const LEDGER = "Outside-books licence ledger (docs/sources/outside-books.md)";
+const led = (section: string): Citation => cite(LEDGER, section);
+const SAMPLE = (code: string, ref: string, label: string) => cite(TEXT, `${label} (/read/${ref}?t=${code})`);
 const DEUT_6_4 = (code: string) => cite(TEXT, `Deuteronomy 6:4 (/read/Deut.6.4?t=${code})`);
 const JOHN_3_16 = (code: string) => cite(TEXT, `John 3:16 (/read/John.3.16?t=${code})`);
 
@@ -199,7 +208,7 @@ export const PROFILES: readonly TranslationProfile[] = [
       },
     ],
     family: "tyndale-kjv",
-    notIndependentOf: ["ASV", "WEB"],
+    notIndependentOf: ["ASV", "WEB", "KJVA"],
     readWhen: "Read it when you need the wording that shaped English literature and liturgy, or the Textus Receptus behind it.",
     status: "claims-checked",
   },
@@ -398,6 +407,258 @@ export const PROFILES: readonly TranslationProfile[] = [
     notIndependentOf: [],
     readWhen: "Read it when you want the Greek a modern critical translation is made from.",
     status: "claims-checked",
+  },
+  {
+    code: "KJVA",
+    kind: "translation",
+    name: "King James Version Apocrypha",
+    year: "1611; standard text 1769",
+    lineage: {
+      text: "The Apocrypha of the King James Bible: the work of the King James translators of 1611, in the standardised text of 1769, as distributed by eBible.org. It covers 1 and 2 Esdras, Tobit, Judith, the Rest of Esther, Wisdom, Sirach, Baruch with the Epistle of Jeremy as chapter 6, the Prayer of Azariah, Susanna, Bel, the Prayer of Manasses and 1 and 2 Maccabees.",
+      citations: [led("`kjv-apocrypha`: Translator, year; Edition")],
+    },
+    otSource: null,
+    ntSource: null,
+    sourcePolicy: {
+      text: "The ledger records no source text for these books. It records that this edition has no Psalm 151 and no 3 or 4 Maccabees, so it prints fewer books than Brenton's Septuagint.",
+      citations: [led("`kjv-apocrypha`: Numbering as found")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The same translators and the same English as the King James Version, so it shares that edition's form-based classification, which is this site's.",
+      citations: [led("`kjv-apocrypha`: Translator, year"), FORM_BASED, SAMPLE("KJVA", "Wis.1.1", "Wisdom 1:1")],
+    },
+    conventions: [
+      {
+        text: "Licence: public domain outside the United Kingdom. Crown letters patent restrict printing and importing printed copies in the UK; online display is the eBible position.",
+        citations: [led("`kjv-apocrypha`: Licence and Notes")],
+      },
+    ],
+    family: "tyndale-kjv",
+    notIndependentOf: ["KJV"],
+    readWhen: "Read it when you want the deuterocanonical books in the wording of the King James Bible.",
+    status: "sources-located",
+  },
+  {
+    code: "CHARLES",
+    kind: "translation",
+    name: "R. H. Charles's Pseudepigrapha",
+    year: "1913–1918",
+    lineage: {
+      text: "Robert Henry Charles's translations of 1 Enoch (1917 SPCK edition of his 1912 translation), Jubilees (1913, in the Oxford Apocrypha and Pseudepigrapha of the Old Testament, vol. 2), the Testaments of the Twelve Patriarchs (1917 SPCK edition of his 1908 translation) and 2 Baruch (1918 SPCK edition).",
+      citations: [led("`charles-1enoch`, `charles-jubilees`, `charles-testaments`, `charles-2baruch`: Translator, year; Edition")],
+    },
+    otSource: null,
+    ntSource: null,
+    sourcePolicy: {
+      text: "The ledger records the editions this site's text was taken from, not the ancient-language texts Charles translated, so none is stated here. In the Jubilees text the 1913 revision is used, which is not verbatim the 1917 reprint.",
+      citations: [led("`charles-jubilees`: Notes")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The ledger records no statement of method for these translations, and this site has not classified them; the form-based label is a placeholder, not a finding.",
+      citations: [led("Per text (no method recorded)")],
+    },
+    conventions: [
+      {
+        text: "Charles's square brackets mark suspected interpolations and his corner marks mark doubtful text; the brackets and corner marks are kept in the Testaments. All four works follow his printed numbering; the edition prints no Levi 6:3 and no Zebulun 4:4, and those gaps stay.",
+        citations: [led("`charles-testaments`: Proofread 2026-10-09"), led("`charles-2baruch`: Excluded; Proofread 2026-10-09"), led("`charles-1enoch`: Numbering as found"), SAMPLE("CHARLES", "1En.1.1", "1 Enoch 1:1")],
+      },
+      {
+        text: "The Testaments and 2 Baruch were taken from a scan's character recognition and then proofread page by page against the printed editions on 9 October 2026; one word in 2 Baruch 71:1 is kept as printed.",
+        citations: [led("`charles-testaments`: Proofread 2026-10-09"), led("`charles-2baruch`: Proofread 2026-10-09")],
+      },
+      { text: "Licence: public domain by age; all four works were published by 1918 and Charles died in 1931.", citations: [led("`charles-1enoch`: Licence; `charles-2baruch`: Licence")] },
+    ],
+    family: "outside-books",
+    notIndependentOf: [],
+    readWhen: "Read it when you want the standard early-twentieth-century English text of Enoch, Jubilees, the Testaments and 2 Baruch.",
+    status: "sources-located",
+  },
+  {
+    code: "GRAY",
+    kind: "translation",
+    name: "G. Buchanan Gray's Psalms of Solomon",
+    year: "1913",
+    lineage: {
+      text: "George Buchanan Gray's translation of the Psalms of Solomon, in R. H. Charles (ed.), The Apocrypha and Pseudepigrapha of the Old Testament in English, vol. 2 (Oxford: Clarendon, 1913), pp. 625–652.",
+      citations: [led("`gray-psalms-solomon`: Translator, year; Edition")],
+    },
+    otSource: null,
+    ntSource: null,
+    sourcePolicy: {
+      text: "The ledger records the edition, not the ancient-language text Gray translated, so none is stated here.",
+      citations: [led("`gray-psalms-solomon`: Edition")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The ledger records no statement of method, and this site has not classified it; the form-based label is a placeholder, not a finding.",
+      citations: [led("`gray-psalms-solomon`")],
+    },
+    conventions: [
+      {
+        text: "Verses carry Gray's leading, Hebrew-based numbers; the Greek numbers he gives in parentheses are not carried.",
+        citations: [led("`gray-psalms-solomon`: Numbering as found"), SAMPLE("GRAY", "PssSol.1.1", "Psalms of Solomon 1:1")],
+      },
+      {
+        text: "Proofread page by page against pp. 631–652 on 9 October 2026. The scan crops the margin on p. 649, so twelve verse numbers (17:17–21, 17:23–24, 17:28–29, 17:47–48, 18:11) were assigned from the Greek numbering and Gray's footnote references and are uncertain; the edition prints no 13:6.",
+        citations: [led("`gray-psalms-solomon`: Proofread 2026-10-09")],
+      },
+      { text: "Licence: public domain by age; published 1913, translator died 1922.", citations: [led("`gray-psalms-solomon`: Licence")] },
+    ],
+    family: "outside-books",
+    notIndependentOf: [],
+    readWhen: "Read it when you want the Psalms of Solomon in Gray's translation, with its uncertain verse numbers disclosed.",
+    status: "sources-located",
+  },
+  {
+    code: "MATTISON",
+    kind: "translation",
+    name: "Mark M. Mattison's Gospels",
+    year: "Undated web edition",
+    lineage: {
+      text: "Mark M. Mattison's translation of the Gospel of Thomas (Coptic, Nag Hammadi Codex II,2) from the gospels.net web edition, accessed 9 October 2026; the page is undated and its notes cite Mattison's 2015 book. gospels.net also publishes his Gospel of Mary, Gospel of Judas and Gospel of Philip under the same dedication.",
+      citations: [led("`mattison-thomas`: Translator, year; Edition"), led("Described works: A finding that changes the plan's assumption")],
+    },
+    otSource: null,
+    ntSource: "Coptic (Gospel of Thomas, Nag Hammadi Codex II,2)",
+    sourcePolicy: {
+      text: "For Thomas the ledger names the Coptic text of Nag Hammadi Codex II,2. It records no source text for the Mary, Judas or Philip translations.",
+      citations: [led("`mattison-thomas`: Title and Edition")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The ledger records no statement of method, and this site has not classified it; the form-based label is a placeholder, not a finding.",
+      citations: [led("`mattison-thomas`")],
+    },
+    conventions: [
+      {
+        text: "Mattison's editorial sigla [ ] ( ) / \\ are kept in the text; his saying titles, symbol key and notes on translation are not.",
+        citations: [led("`mattison-thomas`: Excluded; Notes"), SAMPLE("MATTISON", "GThom.1.1", "Gospel of Thomas, first saying")],
+      },
+      {
+        text: "Licence: a public-domain dedication by the translator, who states the text may be freely copied and used, changed or unchanged, for any purpose. Only the translator vouches for it.",
+        citations: [publisher("Mark M. Mattison, Gospel of Thomas (gospels.net), public-domain statement", "licence note", "https://www.gospels.net/thomas/"), led("`mattison-thomas`: Licence")],
+      },
+    ],
+    family: "outside-books",
+    notIndependentOf: [],
+    readWhen: "Read it when you want a recent English translation of the Coptic Thomas and the Mary, Judas and Philip gospels.",
+    status: "sources-located",
+  },
+  {
+    code: "ANF",
+    kind: "translation",
+    name: "Ante-Nicene Fathers Apocrypha",
+    year: "1870–1896",
+    lineage: {
+      text: "Alexander Walker's translations (Ante-Nicene Christian Library vol. 16, 1870; American edition ANF vol. 8, 1886) of the Protevangelium of James, the Infancy Gospel of Thomas and the Acts of Paul and Thecla, with J. Armitage Robinson's translation of the Gospel of Peter (ANF vol. 9, American edition 1896), as transcribed by the Christian Classics Ethereal Library.",
+      citations: [led("`walker-protevangelium`, `walker-infancy-thomas`, `walker-thecla`, `robinson-gospel-peter`: Translator, year; Edition")],
+    },
+    otSource: null,
+    ntSource: null,
+    sourcePolicy: {
+      text: "The ledger records that the Protevangelium text is Tischendorf-based and records no source text for the other works.",
+      citations: [led("`walker-protevangelium`: Notes")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The ledger records no statement of method, and this site has not classified it; the form-based label is a placeholder, not a finding.",
+      citations: [led("Per text (no method recorded)")],
+    },
+    conventions: [
+      {
+        text: "The edition prints no verse numbers: chapters (the Protevangelium, the Infancy Gospel's three forms) or sections (the Gospel of Peter, 1–14) are the finest units, and the Acts of Paul and Thecla is unnumbered, so its references are editorial paragraph ordinals.",
+        citations: [led("`walker-protevangelium`, `walker-infancy-thomas`, `walker-thecla`, `robinson-gospel-peter`: Numbering as found"), SAMPLE("ANF", "ProtJas.1.1", "Protevangelium of James, chapter 1")],
+      },
+      {
+        text: "Robinson's square brackets mark his own restorations and are kept.",
+        citations: [led("`robinson-gospel-peter`: Notes")],
+      },
+      {
+        text: "Licence: public domain by age, and CCEL's rights field reads “Public Domain”. Walker's death year is unconfirmed in the ledger.",
+        citations: [led("`walker-protevangelium`: Licence"), led("`robinson-gospel-peter`: Licence")],
+      },
+    ],
+    family: "outside-books",
+    notIndependentOf: [],
+    readWhen: "Read it when you want the nineteenth-century English of the Protevangelium, the Infancy Gospel of Thomas, Paul and Thecla and the Gospel of Peter.",
+    status: "sources-located",
+  },
+  {
+    code: "JAMES1924",
+    kind: "translation",
+    name: "M. R. James's Apocalypse of Peter",
+    year: "1924",
+    lineage: {
+      text: "Montague Rhodes James's translation of the Apocalypse of Peter in The Apocryphal New Testament (Oxford University Press, 1924), transcribed on Wikisource from the 1924 Oxford printing.",
+      citations: [led("`james-apocalypse-peter`: Translator, year; Edition")],
+    },
+    otSource: null,
+    ntSource: null,
+    sourcePolicy: {
+      text: "The ledger records that James translates both the Akhmim Greek fragment and the Ethiopic version; it records no other source detail.",
+      citations: [led("`james-apocalypse-peter`: Numbering as found")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The ledger records no statement of method, and this site has not classified it; the form-based label is a placeholder, not a finding.",
+      citations: [led("`james-apocalypse-peter`")],
+    },
+    conventions: [
+      {
+        text: "The Akhmim fragment keeps James's verses 1–34. James prints no numbers for the Ethiopic version, so its references are editorial paragraph ordinals, not source numbering.",
+        citations: [led("`james-apocalypse-peter`: Numbering as found"), SAMPLE("JAMES1924", "ApocPet.1.1", "Apocalypse of Peter 1:1")],
+      },
+      {
+        text: "Angle brackets and daggers are James's own conjecture marks and are kept.",
+        citations: [led("`james-apocalypse-peter`: Notes")],
+      },
+      { text: "Licence: public domain by age; published 1924, translator died 1936.", citations: [led("`james-apocalypse-peter`: Licence")] },
+    ],
+    family: "outside-books",
+    notIndependentOf: [],
+    readWhen: "Read it when you want the Apocalypse of Peter in its standard early-twentieth-century English.",
+    status: "sources-located",
+  },
+  {
+    code: "LIGHTFOOT",
+    kind: "translation",
+    name: "Lightfoot-Harmer Apostolic Fathers",
+    year: "1891",
+    lineage: {
+      text: "The English translations in The Apostolic Fathers, edited by J. B. Lightfoot and J. R. Harmer (London: Macmillan, 1891), as transcribed by the Christian Classics Ethereal Library: the Didache, 1 Clement, the seven letters of Ignatius, Barnabas and the Shepherd of Hermas.",
+      citations: [led("`lightfoot-didache`, `lightfoot-1clement`, `lightfoot-ignatius`, `lightfoot-barnabas`, `lightfoot-hermas`: Edition")],
+    },
+    otSource: null,
+    ntSource: null,
+    sourcePolicy: {
+      text: "The ledger says the volume prints revised Greek texts alongside the translations; it does not say which manuscripts they rest on, and the Greek is not reproduced here. The Ignatius letters are the seven of the middle recension.",
+      citations: [led("`lightfoot-didache`: Edition; Excluded"), led("`lightfoot-ignatius`: Title")],
+    },
+    approach: "formal",
+    philosophy: {
+      text: "The ledger records no statement of method, and this site has not classified it; the form-based label is a placeholder, not a finding.",
+      citations: [led("`lightfoot-didache`")],
+    },
+    conventions: [
+      {
+        text: "The CCEL transcription does not carry the 1891 verse numbers, so the finest unit is the chapter; the Shepherd of Hermas is addressed only by Vision, Mandate and Parable. Hermas Parables 1–5 are unnumbered in the source and numbered here by order.",
+        citations: [led("`lightfoot-didache`: Numbering as found; Notes"), led("`lightfoot-hermas`: Numbering as found; Notes"), SAMPLE("LIGHTFOOT", "Did.1.1", "Didache, chapter 1")],
+      },
+      {
+        text: "The spelling is American (neighbor, splendor), where the 1891 print has British (neighbour, splendour).",
+        citations: [led("`lightfoot-didache`: Notes")],
+      },
+      {
+        text: "Licence: public domain; CCEL's rights field reads “Public Domain”, and the work was published in 1891 by editors who died in 1889 and 1944.",
+        citations: [led("`lightfoot-didache`: Licence")],
+      },
+    ],
+    family: "outside-books",
+    notIndependentOf: [],
+    readWhen: "Read it when you want the Apostolic Fathers in the Lightfoot-Harmer English of 1891.",
+    status: "sources-located",
   },
 ];
 

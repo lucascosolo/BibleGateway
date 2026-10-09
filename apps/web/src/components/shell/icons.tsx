@@ -185,11 +185,24 @@ export function TranslationsIcon({ className }: IconProps) {
   );
 }
 
+/** A rolled scroll tied with a cord: the outside books, as distinct from Geniza's open scroll. */
+export function TiedScrollIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect x="3" y="7" width="18" height="8" rx="4" />
+      <path d="M17 7a2 4 0 0 0 0 8" />
+      <path d="M10 7v8" />
+      <path d="M10 15l-1.75 4M10 15l1.75 4" />
+    </svg>
+  );
+}
+
 export const WORKSPACE_ICONS: Record<string, (props: IconProps) => React.JSX.Element> = {
   book: BookIcon,
   root: RootIcon,
   timeline: TimelineIcon,
   scroll: ScrollIcon,
+  "tied-scroll": TiedScrollIcon,
   map: MapIcon,
   search: SearchIcon,
   roadmap: RoadmapIcon,

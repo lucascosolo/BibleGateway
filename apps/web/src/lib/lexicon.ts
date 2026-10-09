@@ -20,6 +20,7 @@ export type LexiconId =
   | "massaot"
   | "lashon"
   | "derash"
+  | "chitzonim"
   | "seder"
   | "review-draft"
   | "review-sources-located"
@@ -135,6 +136,14 @@ export const lexicon: Record<LexiconId, LexiconEntry> = {
     // not have.
     gloss: "To seek out. Searches the English text. \"Love\" also finds \"loved\". It does not search Hebrew or Greek, or look up meanings.",
     plainGloss: "Searches the English text. \"Love\" also finds \"loved\". It does not search Hebrew or Greek, or look up meanings.",
+  },
+  chitzonim: {
+    id: "chitzonim",
+    term: "Chitzonim",
+    plainLabel: "Outside books",
+    // The Mishnah's word (Sanhedrin 10:1) for books outside the scriptures.
+    gloss: "The outside books: writings beside the Bible that some communities read and others set aside",
+    plainGloss: "Writings beside the Bible that some communities read and others set aside",
   },
   seder: {
     id: "seder",

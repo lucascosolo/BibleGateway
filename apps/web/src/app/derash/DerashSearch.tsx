@@ -12,7 +12,8 @@ import { getLexiconEntry, glossFor } from "@/lib/lexicon";
 import { usePreferencesStore } from "@/lib/store/preferences";
 import { BookIndex, formatRange, toUrlSlug, type BookRecord } from "@/lib/refs";
 import type { VerseId } from "@/lib/refs/verse-id";
-import { classifySearchQuery } from "@/lib/search/query";
+import { CanonFilterControl } from "@/components/search/CanonFilterControl";
+import { classifySearchQuery, parseCanonFilter } from "@/lib/search/query";
 import type {
   OriginalSearchApiResponse,
   SearchApiHit,
@@ -52,10 +53,15 @@ export function DerashSearch({ books, translations }: DerashSearchProps) {
   const originalLanguage = searchParams.get("language") ?? "";
   const originalMorph = searchParams.get("morph") ?? "";
   const translationCode = searchParams.get("t") ?? translations[0]?.code ?? "WEB";
+  const canon = parseCanonFilter(searchParams.get("canon"));
+  const searchBooks = useMemo(
+    () => (canon === "all" ? books : books.filter((b) => b.canon === "hebrew" || b.canon === "nt")),
+    [books, canon]
+  );
   const availableTestaments = useMemo(() => {
-    const present = new Set(books.map((b) => b.testament));
+    const present = new Set(searchBooks.map((b) => b.testament));
     return (["OT", "NT", "DC"] as Testament[]).filter((t) => present.has(t));
-  }, [books]);
+  }, [searchBooks]);
 
   const testamentParam = searchParams.get("testament");
   const testament: Testament | null =
@@ -93,6 +99,7 @@ export function DerashSearch({ books, translations }: DerashSearchProps) {
     } else {
       if (testament) params.set("testament", testament);
       if (bookId) params.set("book", String(bookId));
+      if (canon === "all") params.set("canon", "all");
     }
 
     fetch(`${endpoint}?${params}`)
@@ -113,7 +120,7 @@ export function DerashSearch({ books, translations }: DerashSearchProps) {
     return () => {
       cancelled = true;
     };
-  }, [q, translation, testament, bookId, offset, mode, originalLanguage, originalMorph]);
+  }, [q, translation, testament, bookId, canon, offset, mode, originalLanguage, originalMorph]);
 
   // A researcher typing "Rom 8:28" wants the passage, not a word match — classify against
   // the COMMITTED query (not the live draft) so the banner doesn't flicker mid-keystroke.
@@ -230,6 +237,11 @@ export function DerashSearch({ books, translations }: DerashSearchProps) {
             ))}
           </div>
 
+          <CanonFilterControl
+            value={canon}
+            onChange={(next) => updateParams({ canon: next === "all" ? "all" : null, book: null, offset: null })}
+          />
+
           <select
             className="derash__book-select"
             aria-label="Filter by book"
@@ -237,7 +249,7 @@ export function DerashSearch({ books, translations }: DerashSearchProps) {
             onChange={(e) => updateParams({ book: e.target.value || null, offset: null })}
           >
             <option value="">All books</option>
-            {books
+            {searchBooks
               .filter((b) => !testament || b.testament === testament)
               .map((b) => (
                 <option key={b.bookId} value={b.bookId}>

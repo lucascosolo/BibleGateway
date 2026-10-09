@@ -1,0 +1,166 @@
+/* The outside-books world. Tokens come from `[data-world="outside"]` in globals.css; this file
+   only places them. Restraint per docs/brand.md: a darker ground, the old-style face on headings,
+   rubric hairlines. No textures, ornaments, drop caps or decorative dividers, and nothing here
+   touches the scripture column, which reads exactly as it does in the main reader. */
+
+.outside-world {
+  min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.outside-world :is(h1, h2, h3),
+.outside-world .reader__title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+/* A rubric hairline over a faint one, four pixels apart: the ruling of a scribe's page. */
+.outside-world .reader__header,
+.outside-page__header {
+  position: relative;
+  border-bottom: 1px solid var(--color-rubric);
+}
+.outside-world .reader__header::after,
+.outside-page__header::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.canon-notice {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  gap: var(--space-1) var(--space-3);
+  margin: var(--space-2) 0 0;
+  padding-inline-start: var(--space-3);
+  border-inline-start: 1px solid var(--color-rubric);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+  color: var(--color-ink-muted);
+}
+.canon-notice__numbering { color: var(--color-ink-faint); }
+
+.outside-page {
+  max-width: 46rem;
+  margin-inline: auto;
+  padding: var(--space-8) var(--space-4) var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+.outside-page__header { display: flex; flex-direction: column; gap: var(--space-3); padding-bottom: var(--space-5); }
+.outside-page__title { margin: 0; font-size: var(--text-2xl); line-height: var(--leading-tight); color: var(--color-ink); }
+.outside-page__lede,
+.outside-page__prose { margin: 0; font-family: var(--font-serif); font-size: var(--text-base); line-height: 1.65; color: var(--color-ink); }
+.outside-page__readby,
+.outside-page__meta,
+.outside-page__empty { margin: 0; font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }
+.outside-page__crumb { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }
+.outside-page__crumb a,
+.outside-page__areas a,
+.outside-page__continue a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--color-border-strong); }
+
+/* The five areas, numbered in rubric roman numerals as a scribe numbers sections. */
+.threshold-areas { list-style: none; margin: 0; padding: 0; counter-reset: area; }
+.threshold-areas__item {
+  counter-increment: area;
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  column-gap: var(--space-2);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.threshold-areas__item::before {
+  content: counter(area, lower-roman) ".";
+  grid-row: span 2;
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-rubric);
+}
+.threshold-areas__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0 var(--space-3);
+  min-height: var(--touch-target);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.threshold-areas__title { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 600; }
+.threshold-areas__link:hover .threshold-areas__title { text-decoration: underline; text-decoration-color: var(--color-rubric); text-underline-offset: 4px; }
+.threshold-areas__count { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); white-space: nowrap; }
+.threshold-areas__summary { grid-column: 2; margin: 0; font-family: var(--font-serif); font-size: var(--text-sm); line-height: 1.6; color: var(--color-ink-muted); }
+
+.outside-page__canon-note {
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--color-ink-muted);
+}
+.outside-page__canon-note p { margin: 0 0 var(--space-2); color: var(--color-ink); }
+.outside-page__canon-note ul { margin: 0; padding-inline-start: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); }
+.outside-page__canon-note strong { color: var(--color-ink); font-weight: 600; }
+
+.outside-page__areas { display: flex; flex-wrap: wrap; gap: 0 var(--space-4); font-family: var(--font-sans); font-size: var(--text-sm); padding-top: var(--space-4); border-top: 1px solid var(--color-border); }
+.outside-page__areas a { min-height: var(--touch-target); display: inline-flex; align-items: center; }
+
+.outside-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: var(--space-3); }
+.outside-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border);
+  border-top-color: var(--color-rubric);
+  border-radius: var(--radius-md);
+}
+.outside-card__link { display: flex; align-items: center; min-height: var(--touch-target); color: var(--color-ink); text-decoration: none; }
+.outside-card__link::after { content: ""; position: absolute; inset: 0; }
+.outside-card__link:hover .outside-card__title { text-decoration: underline; text-decoration-color: var(--color-rubric); text-underline-offset: 4px; }
+.outside-card__link:focus-visible { outline: none; }
+.outside-card:has(.outside-card__link:focus-visible) { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+.outside-card__title { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 600; line-height: 1.25; }
+.outside-card__facts { margin: 0; display: flex; flex-direction: column; gap: var(--space-1); font-family: var(--font-sans); font-size: var(--text-sm); }
+.outside-card__facts div { display: flex; gap: var(--space-2); }
+.outside-card__facts dt { min-width: 5.5rem; color: var(--color-ink-faint); }
+.outside-card__facts dd { margin: 0; color: var(--color-ink-muted); }
+
+.outside-record { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-3); font-family: var(--font-serif); line-height: 1.6; }
+.outside-excerpt { margin: 0; }
+.outside-excerpt blockquote { margin: 0; padding-inline-start: var(--space-4); border-inline-start: 1px solid var(--color-rubric); font-family: var(--font-serif); font-style: italic; }
+.outside-excerpt figcaption { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }
+
+/* The home page's single door: a small piece of the other room, so the step is visible before
+   it is taken. It carries data-world itself, so it is drawn in that room's tokens. */
+.outside-door {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  margin-top: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  min-height: var(--touch-target);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-top-color: var(--color-rubric);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+.outside-door__title { font-family: var(--font-heading); font-size: var(--text-lg); font-weight: 600; }
+.outside-door__count { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }
+.outside-door:hover .outside-door__title { text-decoration: underline; text-decoration-color: var(--color-rubric); text-underline-offset: 4px; }

@@ -1,0 +1,42 @@
+id = "gospel-of-judas"
+title = "Gospel of Judas"
+also_known_as = ["Codex Tchacos, tractate 3"]
+books = ["GJudas"]
+canon = "nt-apocrypha"
+status = "draft"
+original_language = "Unknown; the only surviving text is Coptic"
+summary = """
+A gnostic gospel in which Jesus gives his secret revelation principally to Judas Iscariot, who alone understands that Jesus comes from a realm above the creator god; Ehrman notes that Jesus laughs at the other disciples' misunderstanding four times. No filed source dates its composition, so the record is a draft. Its only manuscript, Codex Tchacos, is dated to the late fourth or early fifth century. Ehrman reports that Irenaeus, in the second century, accused the Cainites of using a forged Gospel of Judas; that page does not say whether it is this text."""
+citations = [
+  { source = "ehrman-brief-intro-2017", locator = "Box 8.3, pp. 116-117 (approx.)" },
+  { source = "ehrman-2013", locator = "PDF p. 203" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+
+[[composed]]
+id = "bracket-before-codex-tchacos"
+label = "Not dated by any filed source: between Jesus' death and the only copy"
+tradition = "chronological"
+earliest = 30
+latest = 450
+held_by = "Bracket for this record, not a scholar's dating"
+summary = """
+No filed source gives a date of composition for the Gospel of Judas. This is a bracket, not a date: the text tells of Jesus' last days and Judas's handing him over, so it is later than his death, for which Humphreys and Waddington leave 30 or 33 CE as the only plausible years; and it must be earlier than its only copy, Codex Tchacos, which the manuscript list dates to the late fourth or early fifth century, read here as no later than 450. If the Gospel of Judas that Irenaeus knew is this text, it existed by his time, but no filed page makes that identification."""
+citations = [
+  { source = "humphreys-waddington-1992", locator = "p. 339" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+  { source = "ehrman-2013", locator = "PDF p. 203" },
+]
+
+[[witnesses]]
+name = "Codex Tchacos, tractate 3"
+siglum = "CT 3"
+earliest = 351
+latest = 450
+language = "Coptic"
+note = "Papyrus codex dated to the late fourth or early fifth century, read here as 351-450; it preserves more than 90% of the gospel. Fragments recovered after National Geographic's first edition have since been photographed, and Gregor Wurst has made provisional digital reconstructions of several pages."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[translations]]
+ledger = "mattison-judas"
+note = "Mattison's public-domain translation of the Coptic text of Codex Tchacos 3 from gospels.net."

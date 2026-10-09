@@ -3,19 +3,20 @@ title = "Letter of Jeremiah"
 also_known_as = ["Epistle of Jeremiah", "Epistle of Jeremy"]
 books = ["EpJer"]
 canon = "deuterocanon"
-status = "sources-located"
-summary = "The Letter of Jeremiah is a short attack on idolatry, purportedly sent to the captives about to be exiled to Babylon; VanderKam gives it 73 verses. The unsigned preface to the Apocrypha in the Brenton edition says it was written in Greek, probably by an Alexandrian Jew of the first century BCE, and forms the last chapter of Baruch in the King James Apocrypha. A tiny Greek papyrus from Qumran cave 7 (7Q2) may be a copy."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Epistle of Jeremiah" }, { source = "vanderkam-2012", locator = "ch. 4, section 'Epistle of Jeremiah'" }]
+status = "draft"
+summary = "The Letter of Jeremiah is a short attack on idolatry, purportedly sent to the captives about to be exiled to Babylon; VanderKam gives it 73 verses. No filed critical source dates its composition; Lim lists a Greek papyrus from Qumran cave 7 (7Q2) as a copy of about 100 BCE. The unsigned preface to the Apocrypha in the Brenton edition says it was written in Greek, probably by an Alexandrian Jew of the first century BCE, and forms the last chapter of Baruch in the King James Apocrypha."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Epistle of Jeremiah" }, { source = "vanderkam-2012", locator = "ch. 4, section 'Epistle of Jeremiah'" }, { source = "lim-2013", locator = "p. 86" }]
 original_language = "Greek"
 
+
 [[composed]]
-id = "first-century-bce"
-label = "First century BCE"
+id = "first-century-bce-preface"
+label = "First century BCE, per the unsigned preface (no filed critical dating)"
 tradition = "critical"
 earliest = -100
 latest = -1
-summary = "The preface says it was written 'probably by a Jew of Alexandria in the first century b.c.' A Qumran papyrus dated about 100 BCE, if correctly identified, would sit at the early edge of this range. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+summary = "No filed critical source dates the composition, so this record stays a draft. The only critical datum filed is a manuscript: Lim lists the Qumran Greek papyrus 7QpapEpJer (7Q2) at 100 BCE, which would put the book no later than about 100 BCE, at the early edge of this range. The preface says it was written 'probably by a Jew of Alexandria in the first century b.c.' The preface mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Epistle of Jeremiah" }, { source = "lim-2013", locator = "p. 86" }]
 
 [[provenance]]

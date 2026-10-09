@@ -22,7 +22,7 @@ import {
 } from "@/lib/db/apparatus";
 import { getCorpusBuildId } from "@/lib/db/client";
 import {
-  getBookIndex,
+  getOutsideBookIndex,
   getChapterCount,
   getChapterLastVerse,
   getChapterSummary,
@@ -40,7 +40,11 @@ import {
   type OriginalWord,
 } from "@/lib/db/originals";
 import { getInsightNotes, type InsightNote } from "@/lib/insights/notes";
-import { getTimelineBuildId, getTimelineNotesForRange, type ToledotNote } from "@/lib/db/timeline";
+import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorksForBook, type ToledotNote } from "@/lib/db/timeline";
+import { getOutsideBook } from "@/lib/db/outside";
+import { CanonNotice } from "@/components/chitzonim/CanonNotice";
+import { OutsideWorld } from "@/components/chitzonim/OutsideWorld";
+import { canonNotice, carryingTranslations, isOutsideBook, numberingRangeLabel } from "@/lib/chitzonim/outside";
 import { labelVerses } from "@/lib/db/timeline-present";
 import {
   InvalidReferenceError,
@@ -88,15 +92,15 @@ interface ReaderPageProps {
 export async function generateMetadata({ params, searchParams }: ReaderPageProps) {
   const { ref } = await params;
   const { t } = await searchParams;
-  const books = getBookIndex();
-  const translation = getTranslationByCode(t ?? "WEB");
-  if (!translation) notFound();
+  const books = getOutsideBookIndex();
   let range;
   try {
     range = parseReference(decodeURIComponent(ref), books);
   } catch {
     notFound();
   }
+  const translation = getTranslationByCode(t ?? defaultTranslationFor(bookOf(range.start) as number));
+  if (!translation) notFound();
   if (getExistingVerseIds(range).length === 0) notFound();
   const label = formatRange(range, books);
   const available = hasEditionContent(range.start, range.end, translation.translationId);
@@ -124,17 +128,23 @@ export async function generateMetadata({ params, searchParams }: ReaderPageProps
   };
 }
 
+/** WEB for the 66; for an outside book, the first edition that prints it. */
+function defaultTranslationFor(bookId: number): string {
+  return (isOutsideBook(bookId) && getOutsideBook(bookId)?.translations[0]) || "WEB";
+}
+
+/** Who holds the book canonical, from its work record when chunk 5's record exists. */
+function holdersFor(bookId: number): string[] {
+  const work = getWorksForBook(bookId)[0];
+  return work ? (getWork(work.id)?.heldCanonicalBy.map((h) => h.tradition) ?? []) : [];
+}
+
 export default async function ReaderPage({ params, searchParams }: ReaderPageProps) {
   const { ref } = await params;
   const { t } = await searchParams;
 
-  const books = getBookIndex();
-  const translations = getTranslations();
-
-  // Translation is a query param, not part of the path, so switching it preserves position:
-  // the verse address in the path is translation-independent by construction.
-  const translation = getTranslationByCode(t ?? "WEB");
-  if (!translation) notFound();
+  // Every book, 67+ included: an outside book is addressed and rendered exactly like the 66.
+  const books = getOutsideBookIndex();
 
   let range;
   try {
@@ -144,7 +154,32 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     throw error;
   }
 
-  if (getExistingVerseIds(range).length === 0) notFound();
+  const realVerses = getExistingVerseIds(range);
+  if (realVerses.length === 0) notFound();
+
+  // An outside book steps into its own world (scoped tokens), says who reads it, and offers
+  // only the translations that print it. The 66 never list the outside-only editions.
+  const firstBookId = bookOf(range.start) as number;
+  const outsideBook = isOutsideBook(firstBookId) ? getOutsideBook(firstBookId) : undefined;
+  const translations = outsideBook
+    ? carryingTranslations(getTranslations(), outsideBook.translations)
+    : getTranslations().filter((x) => x.scope !== "outside");
+  const canonLine = outsideBook ? (
+    <CanonNotice
+      notice={canonNotice(outsideBook.canon, holdersFor(firstBookId))}
+      numbering={numberingRangeLabel(
+        outsideBook.numbering,
+        outsideBook.osisId,
+        { chapter: chapterOf(realVerses[0]), verse: verseOf(realVerses[0]) },
+        { chapter: chapterOf(realVerses[realVerses.length - 1]), verse: verseOf(realVerses[realVerses.length - 1]) },
+      )}
+    />
+  ) : null;
+
+  // Translation is a query param, not part of the path, so switching it preserves position:
+  // the verse address in the path is translation-independent by construction.
+  const translation = getTranslationByCode(t ?? defaultTranslationFor(firstBookId));
+  if (!translation) notFound();
 
   // A book-sized reference is a container, not a passage. Decided before any text is fetched,
   // so `/read/Ps` never loads 2,461 verses in order to discover it should not have rendered
@@ -164,13 +199,13 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
       // chapter grid is neither — dropped into it as an only child, the track resolved
       // against its own indefinite width and the 150-chapter grid collapsed to six columns
       // in a page that had room for sixteen.
-      <div className="reader-index-shell">
+      <OutsideWorld bookId={firstBookId}><div className="reader-index-shell">
         <ChapterIndex
           chapters={chapters}
           translationCode={translation.code}
           label={formatRange(range, books)}
         />
-      </div>
+      </div></OutsideWorld>
     );
   }
 
@@ -199,10 +234,11 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
 
   if (wholeRangeOutOfScope) {
     return (
-      <div className="reader-layout">
+      <OutsideWorld bookId={firstBookId}><div className="reader-layout">
         <article className="reader">
           <header className="reader__header">
             <h1 className="reader__title">{formatRange(range, books)}</h1>
+        {canonLine}
             <TranslationSwitcher
               translations={translations}
               active={translation}
@@ -230,7 +266,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             </p>
           </footer>
         </article>
-      </div>
+      </div></OutsideWorld>
     );
   }
 
@@ -266,10 +302,11 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     // text here; we do not know why, and inventing a manuscript explanation would put a claim
     // about textual transmission on the page that nothing in the corpus supports.
     return (
-      <div className="reader-layout">
+      <OutsideWorld bookId={firstBookId}><div className="reader-layout">
         <article className="reader">
           <header className="reader__header">
             <h1 className="reader__title">{formatRange(range, books)}</h1>
+        {canonLine}
             <TranslationSwitcher
               translations={translations}
               active={translation}
@@ -300,7 +337,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
             </p>
           </footer>
         </article>
-      </div>
+      </div></OutsideWorld>
     );
   }
 
@@ -406,7 +443,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   const { notes: toledotNotes, spans: toledotSpans } = buildToledotNotes(renderRange, renderedVerseIds);
 
   return (
-    <div className="reader-layout">
+    <OutsideWorld bookId={firstBookId}><div className="reader-layout">
       <article className="reader">
       <StructuredData data={{
         "@context": "https://schema.org",
@@ -424,6 +461,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
       }} />
       <header className="reader__header">
         <h1 className="reader__title">{formatRange(range, books)}</h1>
+        {canonLine}
 
         <div className="reader__header-actions">
           {passageAudio && <ListenButton choices={audioChoices} translationCode={translation.code} />}
@@ -604,7 +642,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
         translationCode={translation.code}
         translationId={translation.translationId}
       />
-    </div>
+    </div></OutsideWorld>
   );
 }
 

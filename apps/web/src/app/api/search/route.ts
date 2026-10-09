@@ -1,8 +1,8 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 import { corpusCacheHeaders, notModified } from "@/lib/db/cache";
-import { getBookIndex, getTranslationByCode, getTranslations, searchVerses } from "@/lib/db/corpus";
-import { clampSearchPagination } from "@/lib/search/query";
+import { getBookIndex, getOutsideBookIndex, getTranslationByCode, getTranslations, searchVerses } from "@/lib/db/corpus";
+import { clampSearchPagination, parseCanonFilter } from "@/lib/search/query";
 import type { SearchApiResponse } from "@/lib/search/types";
 
 // NOT `force-static` — see apps/web/src/app/api/passage/route.ts for why: it strips the query
@@ -21,10 +21,11 @@ export async function GET(request: NextRequest) {
   const unchanged = notModified(request);
   if (unchanged) return unchanged;
 
-    const q = request.nextUrl.searchParams.get("q") ?? "";
+  const q = request.nextUrl.searchParams.get("q") ?? "";
   const translationCode = request.nextUrl.searchParams.get("translation") ?? "WEB";
   const testamentRaw = request.nextUrl.searchParams.get("testament");
   const testament = testamentRaw === "OT" || testamentRaw === "NT" || testamentRaw === "DC" ? testamentRaw : undefined;
+  const canon = parseCanonFilter(request.nextUrl.searchParams.get("canon"));
   const bookParam = request.nextUrl.searchParams.get("book");
   const bookId = bookParam !== null ? Number.parseInt(bookParam, 10) : undefined;
   const { limit, offset } = clampSearchPagination(
@@ -44,17 +45,18 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  if (bookId !== undefined && (!Number.isInteger(bookId) || !getBookIndex().get(bookId))) {
+  if (bookId !== undefined && (!Number.isInteger(bookId) || !(canon === "all" ? getOutsideBookIndex() : getBookIndex()).get(bookId))) {
     return NextResponse.json({ error: `unknown book id "${bookParam}"` }, { status: 400 });
   }
 
-  const result = searchVerses(q, translation.translationId, { testament, bookId, limit, offset });
+  const result = searchVerses(q, translation.translationId, { testament, bookId, canon, limit, offset });
 
   const body: SearchApiResponse = {
     query: q,
     translation: { code: translation.code },
     testament,
     bookId,
+    canon,
     total: result.total,
     returned: result.hits.length,
     limit,

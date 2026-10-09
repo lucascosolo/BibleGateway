@@ -2,20 +2,21 @@ id = "judith"
 title = "Judith"
 books = ["Jdt"]
 canon = "deuterocanon"
-status = "sources-located"
-summary = "Judith is a story of Jewish resistance. The unsigned preface to the Apocrypha in the Brenton edition calls it a sacred historical novel written in the Maccabean age, with 'Nebuchadrezzar' probably standing for Antiochus Epiphanes, and thinks the Greek and Aramaic forms came from a Hebrew original. Athanasius lists it among the books to be read but not canonical; Jerome says it is not in the canon. The Roman Catholic, Orthodox and Ethiopian churches hold it as scripture."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+status = "draft"
+summary = "Judith is a story of Jewish resistance. No filed critical source dates it; Brown says only that all the deuterocanonical books were composed before Jesus' time. The unsigned preface to the Apocrypha in the Brenton edition calls it a sacred historical novel written in the Maccabean age, with 'Nebuchadrezzar' probably standing for Antiochus Epiphanes, and thinks the Greek and Aramaic forms came from a Hebrew original. Athanasius lists it among the books to be read but not canonical; Jerome says it is not in the canon. The Roman Catholic, Orthodox and Ethiopian churches hold it as scripture."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "brown-1997", locator = "PDF p. 41" }]
 original_language = "Hebrew (probably; the Greek form survives)"
 
+
 [[composed]]
-id = "maccabean-age"
-label = "The Maccabean age"
+id = "maccabean-age-preface"
+label = "The Maccabean age, per the unsigned preface (no filed critical dating)"
 tradition = "critical"
 earliest = -175
-latest = -63
-summary = "The preface says only that the book 'was written in the Maccabean age', without years. The range is a conversion made for this record: it begins in 175 BCE, when Antiochus Epiphanes began imposing his Hellenizing policies (Lim, p. 96), and ends in 63 BCE, when the Romans took control of the land after the Hasmonean kingdom (McDonald, p. 175). This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+latest = -135
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "lim-2013", locator = "p. 96" }, { source = "mcdonald-2017-vol1", locator = "p. 175" }]
+summary = "No filed critical source dates Judith, so this record stays a draft. The only dated statement filed is the unsigned preface's 'the Maccabean age', with no years. The range reads that phrase through Satlow's dating of the Maccabean revolt, 175-135 BCE (p. 124); it is this record's conversion, not a scholar's date for the book. Brown says only that all the deuterocanonical books were composed before Jesus' time. The preface mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "satlow-2014", locator = "p. 124" }, { source = "brown-1997", locator = "PDF p. 41" }]
 
 [[witnesses]]
 name = "Codex Vaticanus (B)"

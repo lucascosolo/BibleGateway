@@ -38,6 +38,8 @@ from typing import Any
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
 SCHEMA_VERSION = "3"
+DEFAULT_LEDGER = Path(__file__).resolve().parents[2] / "docs" / "sources" / "outside-books.md"
+LEDGER_ID_RE = re.compile(r"^(?:\| |### )`([a-z0-9-]+)`", re.MULTILINE)
 
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 REF_RE = re.compile(r"^([1-4]?[A-Za-z]+)\.(\d+)\.(\d+)$")
@@ -1125,7 +1127,21 @@ def write_atomically(db: sqlite3.Connection, out: Path) -> None:
     os.replace(temporary, out)
 
 
-def build(content_dir: Path, corpus_path: Path, out: Path) -> Report:
+def check_translation_ledger(report: Report, content: Content, ledger: Path) -> None:
+    uses = [(f"works/{w['id']}.toml translations {i + 1}", t["ledger"])
+            for w in content.works.values() for i, t in enumerate(w["translations"])]
+    if not uses:
+        return
+    if not ledger.is_file():
+        report.error(str(ledger), "translation ledger not found (every work's translation ledger id resolves there)")
+        return
+    known = set(LEDGER_ID_RE.findall(ledger.read_text(encoding="utf-8")))
+    for where, ledger_id in uses:
+        if ledger_id not in known:
+            report.error(where, f"'{ledger_id}' is not in the translation ledger {ledger}")
+
+
+def build(content_dir: Path, corpus_path: Path, out: Path, ledger: Path = DEFAULT_LEDGER) -> Report:
     report = Report()
     corpus = load_corpus(corpus_path)
     content = Content()
@@ -1141,6 +1157,7 @@ def build(content_dir: Path, corpus_path: Path, out: Path) -> Report:
     load_persons(report, content_dir, content, corpus)
     load_investigations(report, content_dir, content, corpus)
     load_works(report, content_dir, content, corpus)
+    check_translation_ledger(report, content, ledger)
     cross_check(report, content)
     if report.errors:
         return report
@@ -1157,11 +1174,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--content", type=Path, required=True)
     parser.add_argument("--corpus", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--ledger", type=Path, default=DEFAULT_LEDGER)
     args = parser.parse_args(argv)
     if not args.corpus.is_file():
         print(f"{args.corpus}: corpus database not found", file=sys.stderr)
         return 2
-    report = build(args.content, args.corpus, args.out)
+    report = build(args.content, args.corpus, args.out, args.ledger)
     for warning in report.warnings:
         print(f"warning: {warning}", file=sys.stderr)
     if report.errors:

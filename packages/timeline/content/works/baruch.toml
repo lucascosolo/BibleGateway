@@ -4,28 +4,39 @@ also_known_as = ["1 Baruch"]
 books = ["Bar"]
 canon = "deuterocanon"
 status = "sources-located"
-summary = "Baruch is a composite. The unsigned preface to the Apocrypha in the Brenton edition says it holds several unconnected minor writings, probably of the first century BCE, joined in the first century CE by a compiler who prefixed a historical introduction (1:1-14) attributing the whole to Baruch the prophet; the first part (to 3:8) was probably Hebrew, the second (3:9-4:4) Aramaic and the third (4:5-5:9) Greek. Athanasius counts Baruch with Jeremiah. The Catholic and Orthodox churches hold it as scripture, with the Letter of Jeremiah."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+summary = "Baruch is a composite. Van der Toorn dates it to the late second century BCE as a pseudonymous work. The unsigned preface to the Apocrypha in the Brenton edition dates it later: several unconnected minor writings, probably of the first century BCE, joined in the first century CE by a compiler who prefixed a historical introduction (1:1-14) attributing the whole to Baruch the prophet; it takes the first part (to 3:8) as probably Hebrew, the second (3:9-4:4) Aramaic and the third (4:5-5:9) Greek. Athanasius counts Baruch with Jeremiah. The Catholic and Orthodox churches hold it as scripture, with the Letter of Jeremiah."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "van-der-toorn-2007", locator = "p. 226" }]
 original_language = "Hebrew, Aramaic and Greek (by section)"
+
+
+[[composed]]
+id = "late-second-century-bce"
+label = "Late second century BCE (van der Toorn, 2007)"
+tradition = "critical"
+earliest = -150
+latest = -101
+held_by = "Karel van der Toorn (2007)"
+summary = "Van der Toorn calls the Book of Baruch 'a pseudonymous work of the late second century b.c.e.' and reads 4:1 as taking the book of the commandments as the embodiment of wisdom. The range reads 'late second century' as 150-101 BCE. He dates the book as a whole and does not separate its parts."
+citations = [{ source = "van-der-toorn-2007", locator = "p. 226" }]
 
 [[composed]]
 id = "pieces-first-century-bce"
-label = "Component writings, first century BCE"
+label = "Component writings, first century BCE (unsigned preface)"
 tradition = "critical"
 earliest = -100
 latest = -1
-summary = "The preface says the minor writings are 'probably of the first century b.c.' This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+summary = "The preface says the minor writings are 'probably of the first century b.c.' The preface mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }]
 
 [[composed]]
 id = "compiled-first-century-ce"
-label = "Compiled with its introduction, first century CE"
+label = "Compiled with its introduction, first century CE (unsigned preface)"
 tradition = "critical"
 earliest = 1
 latest = 100
-summary = "The preface says the pieces were joined 'in the first century a.d.' by a compiler who added the historical introduction. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+summary = "The preface says the pieces were joined 'in the first century a.d.' by a compiler who added the historical introduction. Van der Toorn's late-second-century BCE date for the book is earlier than both of the preface's dates. The preface mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }]
 
 [[witnesses]]
