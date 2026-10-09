@@ -80,6 +80,12 @@ def chapter_count(db: sqlite3.Connection, book_id: int) -> int:
     return db.execute("SELECT chapter_count FROM books WHERE book_id = ?", (book_id,)).fetchone()[0]
 
 
+def book_chapters(db: sqlite3.Connection, book_id: int) -> list[int]:
+    """The chapters that exist. Not range(1, chapter_count + 1): outside books number sparsely
+    (Infancy Thomas is 1-19, 101-111 and 201-215, one band per form)."""
+    return [c for (c,) in db.execute("SELECT DISTINCT chapter FROM verses WHERE book_id = ? ORDER BY chapter", (book_id,))]
+
+
 def book_names(db: sqlite3.Connection) -> dict[str, int]:
     """Lower-cased name -> book_id, with a few aliases LibriVox titles use."""
     out = {}
@@ -122,12 +128,14 @@ def units_multi_chapter_files(edition: dict, raw: Path, names: dict[str, int], d
         book_id = names.get(m["book"].lower())
         if book_id is None:
             raise SystemExit(f"unknown book in LibriVox title: {title!r}")
-        a = int(m["a"] or 1)
-        b = int(m["b"] or m["a"] or chapter_count(db, book_id))
+        if m["a"]:
+            span = list(range(int(m["a"]), int(m["b"] or m["a"]) + 1))
+        else:
+            span = book_chapters(db, book_id)
         # Two titles claim Deuteronomy 25 and Acts 10; the first file keeps them and a bad
         # alignment score on either would show the guess was wrong.
-        chapters = [{"book_id": book_id, "chapter": c} for c in range(a, b + 1) if (book_id, c) not in seen]
-        seen.update((book_id, c) for c in range(a, b + 1))
+        chapters = [{"book_id": book_id, "chapter": c} for c in span if (book_id, c) not in seen]
+        seen.update((book_id, c) for c in span)
         units.append({"file": str(raw / edition["raw_dir"] / name), "chapters": chapters})
     return units
 
