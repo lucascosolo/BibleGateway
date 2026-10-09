@@ -7,7 +7,12 @@ const endpoints = [
   {
     method: "GET",
     path: "/api/passage?ref=John+3:16&translation=WEB",
-    description: "Translation text, copyright notice, and omission apparatus for a canonical reference.",
+    description: "Translation text, copyright notice, and omission apparatus for a canonical reference. Each omission states its kind: critical-text, versification, coverage or unexplained.",
+  },
+  {
+    method: "GET",
+    path: "/api/passage?ref=Deut.23&t=LXX&footnotes=1",
+    description: "The same, with the translator's own footnotes for the returned verses (off unless footnotes=1). t is an alias for translation.",
   },
   {
     method: "GET",
@@ -51,13 +56,33 @@ const endpoints = [
   },
   {
     method: "GET",
+    path: "/api/timeline/investigations",
+    description: "Textual investigations: one passage where ancient witnesses differ, with witness and difference counts and review status.",
+  },
+  {
+    method: "GET",
+    path: "/api/timeline/investigations/deut-32-8-9",
+    description: "One investigation: each witness's reading, which editions follow which witness, and the cited explanations of each difference with who holds them.",
+  },
+  {
+    method: "GET",
     path: "/api/timeline/persons/hezekiah",
     description: "One biblical figure: every source outside the Bible that names, fits or contradicts them, with a derived evidence grade.",
   },
   {
     method: "GET",
     path: "/api/translations",
-    description: "Translation codes, licensing, attribution, scope, and copyright notices.",
+    description: "Translation codes, licensing, attribution, scope, and copyright notices. Partial editions such as Brenton's Septuagint state which books they hold and why the rest are withheld.",
+  },
+  {
+    method: "GET",
+    path: "/api/audio/passage?ref=John.3&t=WEB",
+    description: "One chapter's recordings in every audio edition with per-verse millisecond timings. No text; one chapter per request.",
+  },
+  {
+    method: "GET",
+    path: "/api/corpus",
+    description: "Content-derived build IDs for the corpus and the audio artifact, and checksums of every upstream input.",
   },
   {
     method: "GET",
@@ -99,6 +124,14 @@ export default function ApiPage() {
           numeric range. Corpus endpoints are public and cacheable; annotation endpoints are
           private and never cached. Missing or malformed parameters return JSON errors with 400
           or 404 status codes.
+        </p>
+        <p>
+          Timeline records carry a review status: draft, sources-located, claims-checked,
+          expert-reviewed. Anything below claims-checked is unchecked &mdash; its sources are
+          located but its claims are not yet verified against them &mdash; and should be cited
+          as such. Every position, argument, attestation and difference carries its citations.
+          An event&rsquo;s <code>positions</code> date the event; its
+          <code>compositionPositions</code> date when its story was written.
         </p>
         <p>
           The original-language endpoint identifies each source and its license. VarApp is a

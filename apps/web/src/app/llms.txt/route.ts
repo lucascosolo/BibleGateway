@@ -23,12 +23,15 @@ const body = `# Jot Bible Research API
 
 ## Historical scholarship
 
-- Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
-- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`.
+- Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}, ${BASE}/toledot/investigations/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
+- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/investigations\`, \`GET /api/timeline/investigations/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`.
 - Every date is a RANGE (\`earliest\`, \`latest\`; negative = BCE, no year 0) with a confidence (firm, contested, speculative) and the scholarly positions behind it, each with arguments for and against and their citations. Quote the range and the positions, never a single year.
 - Three axes are separate questions: \`narrative\` (when events happened), \`composition\` (when texts were written), \`canon\` (when collections were recognised as scripture). Do not merge them.
 - Evidence grades for people are derived from outside sources: corroborates (named by a source outside the Bible), partially-corroborates (partly confirmed; the reading is disputed), consistent (fits an outside source without naming them), silent (outside sources exist but say nothing), none (no outside evidence). A separate tension flag means an outside source contradicts a biblical detail about them.
-- Content with \`status: "draft"\` has not yet been reviewed against its sources. Say so when citing it.
+- An event's \`positions\` date the event; its \`compositionPositions\` date when the story was written. Keep them apart. Traditional chronology is a separate lens, not evidence.
+- Every claim carries citations; quote them with it.
+- Review \`status\`: draft < sources-located < claims-checked < expert-reviewed. Anything below claims-checked is UNCHECKED; say so when citing it.
+- Investigations (e.g. \`deut-32-8-9\`, \`gen-2-21-23\`) set out how ancient witnesses read one passage, which editions follow which witness, and the cited explanations of each difference with who holds them.
 
 ## Rules
 
@@ -42,14 +45,15 @@ const body = `# Jot Bible Research API
 
 ## Endpoints
 
-- \`GET /api/corpus\` — content-derived corpus build ID and SHA-256 checksums/URLs for every upstream input archive.
-- \`GET /api/passage?ref=John%203%3A16&translation=WEB\` — translation text, omissions, apparatus, and canonical verse IDs.
+- \`GET /api/corpus\` — content-derived corpus build ID, the audio build ID (or null), and SHA-256 checksums/URLs for every upstream input archive.
+- \`GET /api/passage?ref=John%203%3A16&translation=WEB\` — translation text, omissions (each with a \`kind\`: critical-text, versification, coverage, unexplained), and canonical verse IDs. \`t\` aliases \`translation\`; \`footnotes=1\` adds the translator's own footnotes for the returned verses.
 - \`GET /api/originals?ref=John%203%3A16\` — Hebrew/Greek tokens, lemmas, Strong's keys, morphology, Qere/Kethiv, and selected witness readings.
 - \`GET /api/search?q=grace&translation=WEB\` — full-text search with totals, pagination, and book distribution.
 - \`GET /api/original-search?q=agape&language=grc&morph=V\` — original-language lemma/surface/Strong's search with filters.
 - \`GET /api/xrefs?ref=John%203%3A16&limit=40\` — ranked inbound and outbound cross-references, with totals and caps.
 - \`GET /api/graph?ref=John%203%3A16&depth=2\` — capped reference graph for research visualizations.
-- \`GET /api/translations\` — translation codes, licensing, attribution, scope, and copyright notices.
+- \`GET /api/translations\` — translation codes, licensing, attribution, scope, and copyright notices. LXX (Brenton's Septuagint) covers only Deuteronomy, Nehemiah, Lamentations, Habakkuk and Haggai, under a reviewed verse map; other books are withheld until their numbering is mapped.
+- \`GET /api/audio/passage?ref=John.3&t=WEB\` — one chapter's recordings (BSB, WEB, KJV, Hebrew WLC editions) with per-verse millisecond timings; no text. 400 for more than one chapter, 404 when unrecorded.
 - \`GET /api/concordance?key=H2617a&format=tsv&limit=5000\` — bounded TSV occurrence export with IDs, references, source references, and morphology.
 
 For parameter definitions, schemas, limits, errors, and examples, read ${BASE}/llms-full.txt or the OpenAPI contract.

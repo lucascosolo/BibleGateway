@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 import { corpusCacheHeaders, notModified } from "@/lib/db/cache";
-import { getOmissions } from "@/lib/db/apparatus";
+import { getFootnotes, getOmissions } from "@/lib/db/apparatus";
 import {
   getBookIndex,
   getPassage,
@@ -16,7 +16,11 @@ import { InvalidReferenceError, formatRange, parseReference } from "@/lib/refs";
 export const dynamic = "force-dynamic";
 
 /**
- * GET /api/passage?ref=John+3:16-18&translation=WEB
+ * GET /api/passage?ref=John+3:16-18&translation=WEB[&footnotes=1]
+ *
+ * `t` is accepted as an alias for `translation`, matching reader URLs. `footnotes=1` adds the
+ * translation's own notes on the returned verses; it is off by default so the payload every
+ * reading surface already parses does not change shape.
  *
  * The one endpoint every reading surface uses — tooltip, side panel, timeline modal and the
  * full reader all call this with different bounds. Deliberately cacheable forever: the text
@@ -30,10 +34,17 @@ export async function GET(request: NextRequest) {
   // `request.nextUrl` rather than `new URL(request.url)`: the latter loses the query string
   // under `next start` once the route has been marked cacheable.
   const ref = request.nextUrl.searchParams.get("ref");
-  const translationCode = request.nextUrl.searchParams.get("translation") ?? "WEB";
+  const params = request.nextUrl.searchParams;
+  const translationCode = params.get("translation") ?? params.get("t") ?? "WEB";
+  const footnotesFlag = params.get("footnotes");
 
   if (!ref) {
     return NextResponse.json({ error: "missing `ref` parameter" }, { status: 400 });
+  }
+  // A flag that silently ignores a value it does not understand reads as "this verse has no
+  // notes", which is indistinguishable from the real answer.
+  if (footnotesFlag !== null && footnotesFlag !== "0" && footnotesFlag !== "1") {
+    return NextResponse.json({ error: "`footnotes` must be 0 or 1" }, { status: 400 });
   }
 
   const translation = getTranslationByCode(translationCode);
@@ -97,6 +108,9 @@ export async function GET(request: NextRequest) {
       },
       verses,
       omissions,
+      ...(footnotesFlag === "1"
+        ? { footnotes: getFootnotes(verses.map((v) => v.verseId), translation.translationId) }
+        : {}),
     },
     // Cacheable against the corpus build id rather than forever — see `lib/db/cache.ts`.
     // User annotations are fetched separately and are never cached.

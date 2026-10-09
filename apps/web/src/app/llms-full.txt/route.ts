@@ -17,12 +17,13 @@ Jot is a public, read-only Bible research API for retrieval by search engines, a
 
 1. Resolve the user's reference into a Jot reference such as \`John 3:16\`.
 2. Call \`/api/corpus\` when recording a reproducible citation; retain its \`buildId\` and source checksums.
-3. Call \`/api/passage?ref=...&translation=...\` for quoted translation text. If no translation is named, call \`/api/translations\` and state which one you selected.
+3. Call \`/api/passage?ref=...&translation=...\` for quoted translation text (\`t\` is an alias for \`translation\`). Add \`footnotes=1\` when the translator's own notes matter. If no translation is named, call \`/api/translations\` and state which one you selected.
 4. Call \`/api/originals?ref=...\` for Hebrew, Aramaic, Greek, morphology, Qere/Kethiv, or textual differences.
 5. Call \`/api/original-search?q=...\` for lemma, surface-form, Strong's-key, or morphology-prefix searches.
 6. Call \`/api/xrefs\` or \`/api/graph\` when relationships are relevant; both are bounded and disclose caps.
 7. Call \`/api/concordance?key=...&format=tsv\` for a machine-readable occurrence list; keep \`limit<=5000\`.
-8. Cite the returned reference, translation, source/provenance, build ID, and any truncation or selected-apparatus caveat. Separate retrieved evidence from interpretation.
+8. Call \`/api/timeline/passage?ref=...\` for the historical dating, people, outside sources and textual investigations that bear on a passage, then follow each \`href\`.
+9. Cite the returned reference, translation, source/provenance, build ID, and any truncation or selected-apparatus caveat. Separate retrieved evidence from interpretation.
 
 ## Canonical addressing
 
@@ -34,13 +35,28 @@ Jot is a public, read-only Bible research API for retrieval by search engines, a
 
 \`GET ${BASE}/api/corpus\`
 
-Returns the content-derived \`buildId\` and a public manifest of every upstream input archive with its source URL, filename, and SHA-256 checksum. Store this alongside a research citation; the build ID identifies the derived corpus, while the manifest identifies its inputs.
+Returns the content-derived \`buildId\` of the text corpus, \`audioBuildId\` (the separately built recordings artifact, or \`null\` when this deployment has no audio), and a public manifest of every upstream input archive with its source URL, filename, and SHA-256 checksum. Store this alongside a research citation; the build ID identifies the derived corpus, while the manifest identifies its inputs.
 
 ### Passage
 
 \`GET ${BASE}/api/passage?ref=John%203%3A16&translation=WEB\`
 
-Returns translation metadata, verse rows, omissions/apparatus, canonical verse IDs, and the corpus build identifier. Omission rows include both \`reason\` and a cautious \`history\` explaining likely harmonizing, explanatory, or liturgical transmission; they deliberately do not claim an exact insertion year. Use them when explaining why a translation leaves a verse out. \`ref\` is required; \`translation\` is optional.
+Parameters: \`ref\` (required); \`translation\` or its alias \`t\` (default WEB; \`translation\` wins if both are sent); \`footnotes\` = \`0\` (default) or \`1\`, anything else is a 400.
+
+Returns translation metadata with its copyright notice, \`verses\` (\`verseId\`, \`chapter\`, \`verse\`, \`text\`; text is plain and NFC-normalized, with no markup or footnote callers), and \`omissions\`. A reference the edition does not print but records as omitted is a 200 with empty \`verses\` and a populated \`omissions\`; 404 means the reference addresses nothing in that edition.
+
+Every omission carries a \`kind\`, and the kinds are different facts. Never describe one as another:
+
+- \`critical-text\`: the verse is absent from the earliest manuscripts and editions following the critical text leave it out. \`history\` gives a cautious account of how the reading likely entered the tradition (harmonizing, explanatory, liturgical); it deliberately claims no insertion year.
+- \`versification\`: the edition numbers its verses differently (for example Brenton's Septuagint) and has no verse at this canonical address. The text is not missing from the translation, only from this numbering. \`history\` is empty.
+- \`coverage\`: reserved for a whole book outside the edition's scope. Book scope is reported by \`/api/translations\` and is normally not written per verse.
+- \`unexplained\`: the edition does not print the verse and its source gives no reason. Say exactly that; do not supply a reason.
+
+\`printedBy\` lists the loaded editions that do print the verse.
+
+With \`footnotes=1\` the response also has \`footnotes\`: the requested translation's own notes on the returned verses, in verse then printed order, each \`{ verseId, noteOrder, caller, kind, text }\` where \`kind\` is \`footnote\`, \`endnote\` or \`crossref\` and \`caller\` is the mark the publisher printed (or null). A footnote is the translator's note, not Jot's commentary; attribute it to the edition. The key is absent without the flag, so existing clients see an unchanged payload.
+
+Worked example: \`GET ${BASE}/api/passage?ref=Deut.23&t=LXX&footnotes=1\` returns Brenton's Deuteronomy 23 at canonical addresses (the Septuagint's 23:1 is canonical 22:30, so it appears in Deuteronomy 22, not here), Brenton's footnotes for those verses, and any \`versification\` omission in range. Quote the text with the LXX copyright notice and say it is Brenton's English translation of the Greek, not the Hebrew.
 
 ### Original language
 
@@ -76,7 +92,9 @@ Returns a bounded graph. Treat cap notices as information about the result bound
 
 \`GET ${BASE}/api/translations\`
 
-Returns translation codes, names, rights, license/attribution, scope, and copyright notices. Fetch this before quoting a translation whose rights are not already known.
+Returns translation codes, names, rights, license/attribution, scope, \`scopeNote\`, and copyright notices. Fetch this before quoting a translation whose rights are not already known.
+
+Partial editions say what they hold. \`LXX\` is Brenton's 1851 English translation of the Septuagint, loaded for Deuteronomy, Nehemiah, Lamentations, Habakkuk and Haggai only. Nehemiah, Lamentations, Habakkuk and Haggai number their verses identically to the canonical scheme; Deuteronomy is loaded under a reviewed verse map because the Septuagint opens chapter 13 with Hebrew 12:32, opens chapter 23 with Hebrew 22:30 and orders two laws in chapter 23 differently, and Deut 14:14 has no Brenton counterpart (recorded as a \`versification\` omission). Every other book is withheld: Genesis through Numbers number their verses differently in more than a verse or two, and the rest wait for a separately reviewed mapping. A wrong verse map would put a well-formed but wrong verse beside the Hebrew at every address, which is worse than an absent book. Do not claim Jot has Brenton text for a book not in \`scopeNote\`, and do not fill the gap from elsewhere under the LXX label.
 
 ### Concordance export
 
@@ -84,14 +102,39 @@ Returns translation codes, names, rights, license/attribution, scope, and copyri
 
 Returns UTF-8 TSV. Comment lines provide total/exported/truncated counts, followed by \`verse_id\`, \`reference\`, \`source_ref\`, \`position\`, \`surface\`, \`morphology\`, and \`language\`. Report truncation rather than implying completeness.
 
+### Audio timings
+
+\`GET ${BASE}/api/audio/passage?ref=John.3&t=WEB\`
+
+Exactly one chapter: a ref spanning more than one chapter is a 400, a chapter with no recording is a 404. Returns no verse text. \`audio.editions\` lists the recordings (reader, language, license, attribution, source URL); editions currently include \`BSB-souer\`, \`WEB-williams\`, \`KJV-librivox\` and the Hebrew \`WLC-beeri\`, and the response, not this list, is authoritative. \`audio.chapters[].byEdition[code]\` gives the chapter file \`url\`, \`durationMs\`, and \`verses\` as \`{ verseId, startMs, endMs }\` within that file. \`t\` selects \`translationCode\` and \`nextHref\` (the reader path of the next chapter, null at the end of a book). Carry the edition's attribution when citing a recording; timings come from automatic alignment, not hand-placed cues.
+
 ## Historical scholarship
 
-- Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
-- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`.
+- Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}, ${BASE}/toledot/investigations/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
+- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/investigations\`, \`GET /api/timeline/investigations/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`. Every list item carries an \`href\` to its full record.
 - Every date is a RANGE (\`earliest\`, \`latest\`; negative = BCE, no year 0) with a confidence (firm, contested, speculative) and the scholarly positions behind it, each with arguments for and against and their citations. Quote the range and the positions, never a single year.
-- Three axes are separate questions: \`narrative\` (when events happened), \`composition\` (when texts were written), \`canon\` (when collections were recognised as scripture). Do not merge them.
+- Three axes are separate questions: \`narrative\` (when events happened), \`composition\` (when texts were written), \`canon\` (when collections were recognised as scripture, e.g. the closing of the Hebrew Bible or the fixing of the New Testament list). Do not merge them. The \`/api/timeline\` response returns them as separate \`tracks\`.
+- Each position on an event's date says what it dates. \`positions\` date the event itself and alone make \`earliest\`/\`latest\`; \`compositionPositions\` date when the story was written. "The exodus narrative was written in the 6th century BCE" and "the exodus happened in the 13th century BCE" are different claims; never report one as the other.
+- Critical and archaeological positions lead. \`traditional\` chronology (adding up the Bible's own numbers) is a lens reported separately in \`traditional\`, not evidence, and is excluded from the envelope unless it is the only position.
 - Evidence grades for people are derived from outside sources: corroborates (named by a source outside the Bible), partially-corroborates (partly confirmed; the reading is disputed), consistent (fits an outside source without naming them), silent (outside sources exist but say nothing), none (no outside evidence). A separate tension flag means an outside source contradicts a biblical detail about them.
-- Content with \`status: "draft"\` has not yet been reviewed against its sources. Say so when citing it.
+- Every claim is cited: positions, arguments, attestations, issue views, witnesses, differences and challenges each carry \`citations\` (source, author, year, locator). Quote the citation with the claim; do not restate a claim without it.
+- Every event, person, artifact, issue and investigation has a review \`status\`, in order: \`draft\` < \`sources-located\` < \`claims-checked\` < \`expert-reviewed\`. Anything below \`claims-checked\` is UNCHECKED: its sources have been found but its claims have not been verified against them. Say "unchecked" when citing such content.
+
+### Textual investigations
+
+\`GET ${BASE}/api/timeline/investigations\` lists them; \`GET ${BASE}/api/timeline/investigations/{id}\` returns one in full. An investigation takes one passage where the ancient witnesses (such as the Masoretic Text, the Septuagint, the Dead Sea Scrolls and the Vulgate) read differently and lays out:
+
+- \`witnesses\`: each witness's \`siglum\`, \`reading\` in its own language, an English \`translation\`, and citations.
+- \`editions\`: which printed translation follows which witness here (\`follows\` is a witness siglum), so a reader can see why two Bibles differ.
+- \`differences\`: each difference with its \`kind\` (textual, lexical, grammatical, stylistic, interpretive, editorial), the explanation, \`heldBy\` (who holds it), and citations.
+- \`challenges\`: cited objections to the investigation's own conclusions.
+- \`passage\` (\`start\`, \`end\`, \`label\`, reader \`path\`), \`href\`, and the human \`page\`.
+
+Worked example: \`GET ${BASE}/api/timeline/investigations/deut-32-8-9\` covers Deuteronomy 32:8-9: the Masoretic Text reads "the sons of Israel", the Qumran scroll 4QDeut^j "the sons of God", and most Septuagint manuscripts "the angels of God". \`editions\` shows KJV and WEB following MT while BSB follows 4QDeut^j, which is why those Bibles disagree here. Report each witness's reading with its citation, which editions follow which witness, and the stated explanations with who holds them; do not pick a winner the record does not pick. \`gen-2-21-23\` is the other live example.
+
+### Worked example: dating a passage
+
+\`GET ${BASE}/api/timeline/passage?ref=2Kgs.18\` returns the events, issues, artifacts, people and investigations linked to 2 Kings 18, plus \`notes\`. Follow an event's \`href\` to \`/api/timeline/events/{id}\`; quote its range as a range with its \`confidence\`, name the positions and their holders with citations, keep \`compositionPositions\` separate, list outside sources by \`relation\`, and state the \`status\`.
 
 ## HTTP behavior
 
@@ -99,11 +142,16 @@ Returns UTF-8 TSV. Comment lines provide total/exported/truncated counts, follow
 - Send \`If-None-Match\` to receive \`304 Not Modified\` when unchanged.
 - Invalid or missing parameters return JSON errors with HTTP 400; unresolved references return HTTP 404.
 - Corpus responses are tied to a content-derived build ID. Do not cache forever under an unversioned URL.
-- Annotation routes are private and should not be called by unauthenticated clients.
+- \`/api/annotations\` is private and user-scoped (\`Cache-Control: private, no-store\`); it is not part of the research API and should not be called by unauthenticated clients.
+- Timeline responses are versioned by both the timeline and corpus builds; audio responses and \`/api/corpus\` by the audio and corpus builds.
+
+## Not API
+
+The support page, donation links and onboarding are site pages, not data. Do not cite them as sources.
 
 ## Machine-readable contract
 
-- OpenAPI: ${BASE}/api/openapi.json
+- OpenAPI: ${BASE}/api/openapi.json (\`/api/openapi.json\`)
 - Concise index: ${BASE}/llms.txt
 - Human API page: ${BASE}/api
 `;
