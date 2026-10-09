@@ -13,3 +13,22 @@ Web page cited as `wikidata` (no author named). A fallback citation; a book cita
 ## Used by
 
 (to be filled by the next agent)
+
+## Entity pages refetched 2026-10-09T22:34Z
+
+The `page.html` / `text.txt` saved earlier in this folder is Wikidata's main page, not the cited
+items, so no wikidata citation could be confirmed from it. The five cited items were fetched through
+the API (`wbgetentities`, labels, claims, info) into `entities/<Q-id>.json`, with a readable summary
+in `entities.txt` (sha256 `5ee89e49ba91f1dfd1155a1fb8899c79a04f173e8b2a4c8933a9bb733ef53a25`) giving each item's revision id, its inventory number (P217) with
+its collection qualifier, and its collection (P195) resolved to a label:
+
+| Item | Revision | P217 inventory number | Collection |
+|---|---|---|---|
+| Q754378 Merneptah Stele | 2550116442 | JE 31408 | Egyptian Museum |
+| Q724954 Mesha Stele | 2550188588 | AO 5066 | Louvre, Department of Near Eastern Antiquities |
+| Q1793123 Kurkh Monoliths | 2547448843 | ME 118883 | British Museum |
+| Q1471650 Black Obelisk | 2549313601 | 1848-11-04, 0001 | British Museum |
+| Q405008 Cyrus Cylinder | 2532206377 | 90920 | British Museum |
+
+Each matches its citation's locator. Wikidata is crowd-edited; cite it for an inventory number only,
+beside a scholarly source for anything else.

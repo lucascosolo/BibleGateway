@@ -3,7 +3,10 @@
 Downloaded 2026-10-07 at the user's direction from archive.org
 (`johnp.meieramarginaljewv.3anchorbiblereferencelibrary2001`), 712 PDF pages with a clean text
 layer. On disk at `~/.cache/jot/sources/meier-2001-v3/marginal-jew-v3-2001.pdf` with `text.txt`.
-**Printed page = PDF page − 13.**
+**The PDF-to-printed offset is not constant** (measured 2026-10-09 from the running heads, runs of
+five or more agreeing pages): PDF 15–30 printed = PDF − 14 (front matter); PDF 33–298 = PDF − 13;
+PDF 300–624 = PDF − 11 (e.g. PDF 408 = p. 397); PDF 625–679 = PDF − 10; PDF 680–712 = PDF − 9.
+Confirm any locator against the running head on its page.
 
 Meier is the standard critical, criteria-based study of the historical Jesus. Volume 3 is not a
 chronology; its value for the timeline is **people** (the disciples, the Twelve one by one, the
