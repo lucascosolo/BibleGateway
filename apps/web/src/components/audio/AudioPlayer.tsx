@@ -505,37 +505,6 @@ export function AudioPlayer() {
             </button>
           </div>
 
-          <div className="audio-bar__now" aria-live="polite">
-            {error ? (
-              <span className="audio-bar__error">{error}</span>
-            ) : current && currentVerseId !== null ? (
-              <>
-                <span className="audio-bar__ref">
-                  {passage.bookName} {chapterOf(currentVerseId)}:{verseOf(currentVerseId)}
-                </span>
-                <span className="audio-bar__reader">{edition?.reader ?? ""}</span>
-                {edition ? (
-                  <a
-                    className="audio-bar__license"
-                    href={edition.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer license"
-                    aria-label={`Recording: ${edition.attribution}. Licence: ${edition.license}. Opens the source in a new tab`}
-                  >
-                    {edition.license}
-                  </a>
-                ) : null}
-              </>
-            ) : !hasTranslation && !hasOriginal ? (
-              <span className="audio-bar__error">
-                No recording of this page{hasAnyEdition(passage) ? ` in ${passage.translationCode}` : ""}.
-                {availableTranslations(passage) ? ` Available recordings: ${availableTranslations(passage)}.` : ""}
-              </span>
-            ) : (
-              <span className="audio-bar__ref">{passage.label}</span>
-            )}
-          </div>
-
           <div className="audio-bar__options">
             {hasTranslation && hasOriginal && (
               <div className="audio-bar__choice" role="group" aria-label="Voice">
@@ -580,6 +549,37 @@ export function AudioPlayer() {
             >
               <CloseIcon className="audio-bar__icon" />
             </button>
+          </div>
+
+          <div className="audio-bar__now" aria-live="polite">
+            {error ? (
+              <span className="audio-bar__error">{error}</span>
+            ) : current && currentVerseId !== null ? (
+              <>
+                <span className="audio-bar__ref">
+                  {passage.bookName} {chapterOf(currentVerseId)}:{verseOf(currentVerseId)}
+                </span>
+                <span className="audio-bar__reader">{edition?.reader ?? ""}</span>
+                {edition ? (
+                  <a
+                    className="audio-bar__license"
+                    href={edition.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer license"
+                    aria-label={`Recording: ${edition.attribution}. Licence: ${edition.license}. Opens the source in a new tab`}
+                  >
+                    {edition.license}
+                  </a>
+                ) : null}
+              </>
+            ) : !hasTranslation && !hasOriginal ? (
+              <span className="audio-bar__error">
+                No recording of this page{hasAnyEdition(passage) ? ` in ${passage.translationCode}` : ""}.
+                {availableTranslations(passage) ? ` Available recordings: ${availableTranslations(passage)}.` : ""}
+              </span>
+            ) : (
+              <span className="audio-bar__ref">{passage.label}</span>
+            )}
           </div>
         </section>
       )}

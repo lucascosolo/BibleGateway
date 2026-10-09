@@ -55,6 +55,7 @@ import {
   verseOf,
 } from "@/lib/refs";
 import { ReaderInteractions } from "./ReaderInteractions";
+import { CompareIcon, NoteIcon } from "@/components/audio/icons";
 import { ListenButton } from "@/components/audio/ListenButton";
 import { ReaderAudio } from "@/components/audio/ReaderAudio";
 import { availableChoices, translationsWithAudio } from "@/lib/audio/select";
@@ -426,13 +427,15 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
 
         <div className="reader__header-actions">
           {passageAudio && <ListenButton choices={audioChoices} translationCode={translation.code} />}
-          <Link className="reader__compare-link" href="/notes">
+          <Link className="reader__pill" href="/notes">
+            <NoteIcon className="reader__pill-icon" />
             Notes
           </Link>
           <Link
-            className="reader__compare-link"
+            className="reader__pill"
             href={`/parallel/${canonicalReferenceSlug(range, books)}?a=${translation.code}&b=${translation.code === "BSB" ? "WEB" : "BSB"}`}
           >
+            <CompareIcon className="reader__pill-icon" />
             Compare
           </Link>
           <TranslationSwitcher

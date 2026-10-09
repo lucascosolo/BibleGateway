@@ -36,11 +36,11 @@ export function ListenButton({
     return (
       <button
         type="button"
-        className="reader__listen"
+        className="reader__pill reader__pill--primary reader__listen"
         onClick={() => play("translation")}
         title="Listen from the selected verse, or the top of the page"
       >
-        <SpeakerIcon className="reader__listen-icon" />
+        <SpeakerIcon className="reader__pill-icon" />
         Listen
       </button>
     );
@@ -50,17 +50,17 @@ export function ListenButton({
     <span className="reader__listen-group">
       <button
         type="button"
-        className="reader__listen reader__listen--none"
+        className="reader__pill reader__listen reader__listen--none"
         aria-disabled="true"
         title={`No recording of the ${translationCode} for this page. Translations with audio carry a speaker mark in the translation list.`}
       >
-        <SpeakerIcon className="reader__listen-icon" />
+        <SpeakerIcon className="reader__pill-icon" />
         No {translationCode} audio
       </button>
       {choices.includes("original") && (
         <button
           type="button"
-          className="reader__listen reader__listen--alt"
+          className="reader__pill reader__listen reader__listen--alt"
           onClick={() => play("original")}
           title="Listen to the Hebrew reading of this passage"
         >

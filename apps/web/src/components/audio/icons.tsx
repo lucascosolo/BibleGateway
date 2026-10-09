@@ -64,3 +64,22 @@ export function SpinnerIcon({ className }: IconProps) {
     </svg>
   );
 }
+
+export function NoteIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M6 3.5h8.5L19 8v12.5H6V3.5Z" />
+      <path d="M14 3.5V8.5h5" />
+      <path d="M9 13h7M9 16.5h5" />
+    </svg>
+  );
+}
+
+export function CompareIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <rect x="3.5" y="4.5" width="7" height="15" rx="1.5" />
+      <rect x="13.5" y="4.5" width="7" height="15" rx="1.5" />
+    </svg>
+  );
+}

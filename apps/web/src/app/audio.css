@@ -44,6 +44,12 @@ html[data-audio-bar] .reader {
   padding-block-end: calc(var(--space-16) + var(--touch-target) * 2 + var(--space-8));
 }
 
+/* DOM order is transport, options, now (so focus order matches the phone's two rows); on a
+   wide bar the readout is pinned back into the middle column. */
+.audio-bar__transport { grid-column: 1; grid-row: 1; }
+.audio-bar__now { grid-column: 2; grid-row: 1; }
+.audio-bar__options { grid-column: 3; grid-row: 1; }
+
 .audio-bar__transport,
 .audio-bar__options {
   display: flex;
@@ -68,7 +74,6 @@ html[data-audio-bar] .reader {
 .audio-bar__button:disabled { color: var(--color-ink-faint); cursor: default; }
 .audio-bar__button:focus-visible,
 .audio-bar__chip:focus-visible,
-.reader__listen:focus-visible,
 .interlinear__speak:focus-visible {
   outline: 2px solid var(--color-focus-ring);
   outline-offset: 2px;
@@ -167,32 +172,9 @@ html[data-audio-bar] .reader {
 
 /* --- The Listen button in the reader header ------------------------------------------- */
 
-.reader__listen {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-1);
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--color-brand-strong);
-  font: 600 var(--text-xs)/1 var(--font-sans);
-  cursor: pointer;
-}
-.reader__listen:hover { text-decoration: underline; }
-.reader__listen--none {
-  color: var(--color-ink-faint);
-  cursor: default;
-}
-.reader__listen--none:hover { text-decoration: none; }
-.reader__listen-group {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-.reader__listen--alt {
-  padding-inline-start: var(--space-2);
-  border-inline-start: 1px solid var(--color-border);
-}
+/* Appearance comes from `.reader__pill` in reader.css; these are the Listen-only parts. */
+.reader__listen-group { display: contents; }
+.reader__listen--alt { color: var(--color-brand-strong); }
 
 /* The speaker mark beside a translation that has a recording of the passage on screen. */
 .translation-switcher__option-audio {
@@ -202,10 +184,6 @@ html[data-audio-bar] .reader {
   color: var(--color-brand-strong);
 }
 .translation-switcher__option-audio-icon {
-  inline-size: 1rem;
-  block-size: 1rem;
-}
-.reader__listen-icon {
   inline-size: 1rem;
   block-size: 1rem;
 }
@@ -271,4 +249,38 @@ html[data-audio-bar] .reader {
 /* Room for the button so it does not sit over the word's last letter. */
 .interlinear__word:has(.interlinear__speak) .interlinear__link {
   padding-inline-end: 1.4rem;
+}
+
+/* Phones: two rows. Controls on the first (transport at the start, voice, rate and close at
+   the end), the reference, reader and licence on a full-width line beneath, truncated rather
+   than allowed to run over a control. */
+@media (max-width: 30rem) {
+  .audio-bar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: var(--space-1);
+    column-gap: var(--space-2);
+  }
+  .audio-bar__transport { grid-column: 1; grid-row: 1; }
+  .audio-bar__options { grid-column: 2; grid-row: 1; gap: var(--space-2); }
+  .audio-bar__now {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--space-2);
+    min-width: 0;
+    overflow: hidden;
+    font-size: var(--text-xs);
+    color: var(--color-ink-faint);
+  }
+  .audio-bar__now > * { flex: 0 1 auto; min-width: 0; }
+  .audio-bar__ref { flex: none; color: var(--color-ink-faint); }
+  .audio-bar__reader { color: var(--color-ink-faint); }
+  .audio-bar__license {
+    color: var(--color-ink-faint);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .audio-bar { padding-inline: var(--space-2); }
+  .audio-bar__chip { min-height: var(--touch-target); padding-inline: var(--space-2); }
 }

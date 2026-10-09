@@ -33,3 +33,25 @@ describe("ListenButton", () => {
     expect(screen.queryByRole("button", { name: /Hebrew/ })).toBeNull();
   });
 });
+
+describe("reader header action pills", () => {
+  it("renders Listen, Notes and Compare as pill buttons or links with their names", async () => {
+    const { default: Link } = await import("next/link");
+    const { NoteIcon, CompareIcon } = await import("./icons");
+    render(
+      <div>
+        <ListenButton choices={["translation"]} translationCode="WEB" />
+        <Link className="reader__pill" href="/notes"><NoteIcon className="reader__pill-icon" />Notes</Link>
+        <Link className="reader__pill" href="/parallel/Gen.1"><CompareIcon className="reader__pill-icon" />Compare</Link>
+      </div>,
+    );
+    for (const el of [
+      screen.getByRole("button", { name: "Listen" }),
+      screen.getByRole("link", { name: "Notes" }),
+      screen.getByRole("link", { name: "Compare" }),
+    ]) {
+      expect(el.classList.contains("reader__pill")).toBe(true);
+      expect(el.querySelector("svg")?.getAttribute("aria-hidden")).toBe("true");
+    }
+  });
+});

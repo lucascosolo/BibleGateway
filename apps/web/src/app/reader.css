@@ -375,13 +375,48 @@
   gap: var(--space-3);
 }
 
-.reader__compare-link {
-  color: var(--color-brand-strong);
-  font: 600 var(--text-xs)/1 var(--font-sans);
+/* The header's action buttons (Listen, Notes, Compare) share the translation switcher's pill:
+   2.75rem is the 44px touch target, same padding, radius and type scale. Block controls, so the
+   inline-text touch-target trap does not apply. */
+.reader__pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-sunken);
+  color: var(--color-ink);
+  font: 600 var(--text-sm)/1.2 var(--font-sans);
   text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 120ms ease;
 }
-
-.reader__compare-link:hover { text-decoration: underline; }
+.reader__pill:hover { background: var(--color-surface-hover); }
+.reader__pill:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+.reader__pill-icon {
+  inline-size: 1.125rem;
+  block-size: 1.125rem;
+  flex: none;
+}
+.reader__pill--primary {
+  background: var(--color-brand);
+  color: var(--color-ink-on-accent);
+}
+.reader__pill--primary:hover {
+  background: var(--color-brand-strong);
+}
+.reader__pill[aria-disabled="true"] {
+  color: var(--color-ink-faint);
+  cursor: default;
+}
+.reader__pill[aria-disabled="true"]:hover { background: var(--color-bg-sunken); }
 
 /* --- Translation switcher --------------------------------------------------
    `<details>`/`<summary>` disclosure shared by the reader and derash — see
@@ -524,6 +559,15 @@
   .reader__header-actions {
     flex-wrap: wrap;
     row-gap: var(--space-3);
+  }
+  /* Listen, Notes and Compare share one row with equal flex. */
+  .reader__header-actions > .reader__pill,
+  .reader__listen-group > .reader__pill {
+    flex: 1 1 0;
+    min-inline-size: 0;
+    padding-inline: var(--space-3);
+    white-space: normal;
+    text-align: center;
   }
   .translation-switcher__panel {
     position: static;
