@@ -62,21 +62,34 @@ const PLANNED_FEATURES: PlannedFeature[] = [
   {
     key: "timeline-categories",
     lexiconId: "toledot",
-    title: "— per-category timeline toggles",
+    title: "— the remaining timeline axes",
     body:
-      "Four independently switchable categories rather than one undifferentiated track: events narrated in the text, the composition of the texts themselves, notable translations and transcriptions, and major theological movements. Dating stays a range with a named tradition and a citation, never a bare year.",
+      "Three axes are live: events narrated in the text, the composition of the texts themselves, and the canon (when collections came to be recognised as scripture, now dated from eleven primary texts). Each event's positions say whether they date the event or the writing of its story, so a composition date no longer widens an event's envelope. Still wanted: notable translations and transcriptions, and major theological movements, as further axes. Dating stays a range with a named tradition and a citation, never a bare year.",
   },
   {
     key: "translations",
     title: "More translations",
     body:
-      "KJV, ASV, Darby, Young's Literal and JPS 1917 have shipped, so seven English texts are now readable side by side. Still wanted: Brenton's Septuagint and the Clementine Vulgate. Both are out of copyright and neither is blocked by licensing — they are blocked by numbering. Each counts verses in its own tradition, so Douay-Rheims Psalm 23:1 is what this corpus calls Psalm 24:1, and loading one as though the traditions agreed would quietly move thousands of verses to the wrong address. They wait on a verse mapping that has been checked rather than assumed. NET and LEB carry publisher terms that would have to be cleared. NRSVue requires a paid licence: the schema would take it without migration, but shipping a text we have no rights to was never an option.",
+      "KJV, ASV, Darby, Young's Literal and JPS 1917 have shipped, so seven English texts are readable side by side, and Brenton's Septuagint is live for five books (Deuteronomy, Nehemiah, Lamentations, Habakkuk and Haggai) under verse mappings that were checked word by word rather than assumed. Genesis to Numbers are withheld because Brenton numbers whole chapters differently; the Clementine Vulgate waits for the same reason. Each counts verses in its own tradition, so Douay-Rheims Psalm 23:1 is what this corpus calls Psalm 24:1, and loading one as though the traditions agreed would quietly move thousands of verses to the wrong address. NET and LEB carry publisher terms that would have to be cleared. NRSVue requires a paid licence: the schema would take it without migration, but shipping a text we have no rights to was never an option. A profile of each translation — its date, lineage, source texts and approach, and which editions are not independent of one another — is the next piece.",
   },
   {
     key: "parallel",
     title: "Broader parallel texts — MT/LXX and Greek",
     body:
-      "English translation comparison is now live at /parallel/<ref>, with two editions locked to the same canonical verse and a phone layout that keeps each row together. Greek edition differences from STEPBible TAGNT now appear under the original-language layer with edition support and a source link; they are explicitly not presented as a complete manuscript collation. A verified four-book Brenton Septuagint pilot now supplies an LXX-side translation for Nehemiah, Lamentations, Habakkuk, and Haggai; the remaining LXX books stay withheld until their differing verse systems have reviewed mappings. The Greek Old Testament is often the earliest evidence of how a Hebrew verse was read, and sometimes it reads a Hebrew text we no longer have.",
+      "English translation comparison is now live at /parallel/<ref>, with two editions locked to the same canonical verse and a phone layout that keeps each row together. Greek edition differences from STEPBible TAGNT now appear under the original-language layer with edition support and a source link; they are explicitly not presented as a complete manuscript collation. A verified Brenton Septuagint now supplies an LXX-side translation for Deuteronomy, Nehemiah, Lamentations, Habakkuk and Haggai; the remaining LXX books stay withheld until their differing verse systems have reviewed mappings. The Greek Old Testament is often the earliest evidence of how a Hebrew verse was read, and sometimes it reads a Hebrew text we no longer have.",
+  },
+  {
+    key: "audio",
+    title: "Audiobook editions",
+    body:
+      "Four editions are live and aligned to the verse: the Berean Standard Bible, the World English Bible, the King James Version from LibriVox (three chapters the reader skipped come from other LibriVox readers; Job 14 stays absent because the only free recording starts partway in), and the Hebrew of the Westminster Leningrad Codex. Playback continues across chapter boundaries with the phone locked. Next: the American Standard Version from LibriVox's complete recording, which is being aligned now. There are no free recordings of Darby beyond the New Testament, of Young's Literal in one voice, or of Brenton's Septuagint, so those editions stay text-only.",
+  },
+  {
+    key: "ancient-texts",
+    lexiconId: "toledot",
+    title: "— related ancient texts and the canon view",
+    body:
+      "Six works outside the canon that the biblical texts quote, answer or share material with, linked verse by verse (twenty to thirty connections to begin with); and a canon view that keeps a list of books apart from a manuscript's contents, since the two are different kinds of evidence. Every entity on the timeline now carries a review grade — draft, sources located, claims checked, expert reviewed — shown as one sentence on its page, and the reader's margin marks anything below claims checked as unchecked.",
   },
   {
     key: "citation",
@@ -88,7 +101,7 @@ const PLANNED_FEATURES: PlannedFeature[] = [
     key: "apparatus",
     title: "A wider textual apparatus",
     body:
-      "The build now shows witness-level Greek readings from CrossWire VarApp, including manuscript sigla and the source link, alongside the verses some Bibles leave out and the Masoretic marginal readings in the Hebrew. VarApp is a selected apparatus, not a complete census: the next scholarly layer would add dated witness metadata, editorial sigla conventions, and broader OT/ECM coverage rather than pretending this one module is exhaustive.",
+      "The build now shows witness-level Greek readings from CrossWire VarApp, including manuscript sigla and the source link, alongside the verses some Bibles leave out (each gap now says whether it is a manuscript omission or a Septuagint numbering difference), the translators' own footnotes kept at ingest, and the Masoretic marginal readings in the Hebrew. Toledot investigations put a passage's witnesses, each edition's wording, the attributed explanations and the challenges on one page; two are live, on Deuteronomy 32:8-9 and Genesis 2:21-23. VarApp is a selected apparatus, not a complete census: the next scholarly layer would add full parsing of its witness strings with dated witness metadata and links to the manuscripts, editorial sigla conventions, and broader OT/ECM coverage rather than pretending this one module is exhaustive.",
   },
   {
     key: "api",
@@ -109,10 +122,11 @@ export default function RoadmapIndexPage() {
       </div>
 
       <p className="font-serif text-[var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
-        Everything on this page is planned and none of it is built. Three whole workspaces are
-        scheduled — they used to sit in the primary navigation next to the reader and search, and
-        this page exists so that stops being true while the plan stays just as reachable. Below
-        them is the work planned inside the surfaces that already exist.
+        Everything on this page is planned and not yet built, except where a row says which slice
+        has already shipped. Two whole workspaces are scheduled — they used to sit in the primary
+        navigation next to the reader and search, and this page exists so that stops being true
+        while the plan stays just as reachable. Below them is the work planned inside the surfaces
+        that already exist.
       </p>
 
       <section className="flex flex-col gap-3">
