@@ -432,10 +432,70 @@ export const CANONICAL_EXTRA_VERSES: readonly {
   { bookId: 44, chapter: 8, verse: 37, note: "Acts 8:37 — the Ethiopian eunuch's confession; KJV/YLT print it" },
   { bookId: 44, chapter: 15, verse: 34, note: "Acts 15:34 — printed by KJV/YLT" },
   { bookId: 44, chapter: 24, verse: 7, note: "Acts 24:7 — printed by KJV/ASV/DBY/YLT" },
-  { bookId: 45, chapter: 16, verse: 25, note: "Romans 16:25 — the doxology; WEB ends chapter 16 at verse 24" },
+  { bookId: 45, chapter: 16, verse: 25, note: "Romans 16:25 — the doxology; WEB's source ends chapter 16 at 24 (see WEB_WELDED_VERSES)" },
   { bookId: 45, chapter: 16, verse: 26, note: "Romans 16:26 — the doxology" },
   { bookId: 45, chapter: 16, verse: 27, note: "Romans 16:27 — the doxology" },
 ];
+
+export interface WeldedVerse {
+  bookId: number;
+  chapter: number;
+  verse: number;
+  /** Each part starts at its anchor and runs to the next anchor or the end of the source text. */
+  parts: readonly { anchor: string; chapter: number; verse: number }[];
+  note: string;
+}
+
+/**
+ * WEB source verses whose text carries other canonical verses. The web.json distribution has no
+ * Romans 16:25-27 labels: it prints the doxology inside 14:23, where some manuscripts place it.
+ * The doxology is in P61, Sinaiticus and Vaticanus, so recording 16:25-27 as a critical-text
+ * omission would misinform; the text goes to its canonical address and the map row says where
+ * WEB prints it. Anchors checked against the published WEB verse divisions of Romans 16:25-27.
+ */
+export const WEB_WELDED_VERSES: readonly WeldedVerse[] = [
+  {
+    bookId: 45,
+    chapter: 14,
+    verse: 23,
+    parts: [
+      { anchor: "Now to him who is able to establish you", chapter: 16, verse: 25 },
+      { anchor: "but now is revealed", chapter: 16, verse: 26 },
+      { anchor: "to the only wise God", chapter: 16, verse: 27 },
+    ],
+    note: "WEB prints the doxology (Romans 16:25-27) after Romans 14:23, inside that verse",
+  },
+];
+
+export function splitWeldedVerse(
+  text: string,
+  w: WeldedVerse,
+): { chapter: number; verse: number; text: string }[] {
+  const cuts = w.parts.map((p) => {
+    const at = text.indexOf(p.anchor);
+    if (at < 0 || text.indexOf(p.anchor, at + 1) >= 0) {
+      throw new Error(`${w.bookId}.${w.chapter}.${w.verse}: anchor "${p.anchor}" must occur exactly once`);
+    }
+    return at;
+  });
+  cuts.forEach((c, i) => {
+    if (i > 0 && c <= cuts[i - 1]) throw new Error(`${w.bookId}.${w.chapter}.${w.verse}: anchors out of order`);
+  });
+  const bounds = [0, ...cuts, text.length];
+  const targets = [{ chapter: w.chapter, verse: w.verse }, ...w.parts];
+  return targets.map((t, i) => {
+    const piece = text.slice(bounds[i], bounds[i + 1]);
+    if (piece.trim().length === 0) throw new Error(`${w.bookId}.${t.chapter}.${t.verse}: empty piece after split`);
+    return { chapter: t.chapter, verse: t.verse, text: piece };
+  });
+}
+
+/** `unexplained` rows mean a gap nobody reviewed; none is allowed to ship. */
+export function unexplainedOmissionErrors(code: string, count: number): string[] {
+  return count === 0
+    ? []
+    : [`${code}: ${count} omission row(s) of kind 'unexplained'. Find why the verse is missing and classify or fix it.`];
+}
 
 /**
  * Why a translation does not print a verse the canon addresses. Reader-facing, rendered in the

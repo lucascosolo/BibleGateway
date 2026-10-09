@@ -51,7 +51,10 @@ import {
   isUnplacedSourceVerse,
   TRANSLATION_SOURCES,
   unexplainedGaps,
+  unexplainedOmissionErrors,
   unplacedGateErrors,
+  splitWeldedVerse,
+  WEB_WELDED_VERSES,
 } from "./translations.js";
 import { parseUsfx, type UsfxResult } from "./usfx.js";
 import { XREF_BOOK_MAP } from "./xref-book-map.js";
@@ -1094,19 +1097,43 @@ async function main() {
     return "text" as const;
   };
 
-  let webSkipped = 0;
+  // WEB_WELDED_VERSES: source verses that carry the text of other canonical verses (the
+  // Romans doxology inside 14:23). Split on reviewed anchors; each relocated piece gets a map row
+  // saying where WEB prints it, so the text lands at its canonical address with provenance.
+  const insertWebMap = sqlite.prepare(
+    `INSERT INTO versification_map
+       (scheme, verse_id, source_book, source_chapter, source_verse, source_part, mapping_type, note)
+     VALUES ('web', ?, ?, ?, ?, ?, 'partial', ?)`
+  );
+  const webSkipped: string[] = [];
+  let weldsApplied = 0;
   const insertWebTx = sqlite.transaction(() => {
     for (const v of webVerses) {
-      const vid = verseIdByOsisKey.get(`${v.bookId}.${v.chapter}.${v.verse}`);
-      if (vid === undefined) {
-        webSkipped++;
-        continue;
-      }
-      loadVerseText(1, vid, v.text);
+      const weld = WEB_WELDED_VERSES.find((w) => w.bookId === v.bookId && w.chapter === v.chapter && w.verse === v.verse);
+      const pieces = weld ? splitWeldedVerse(v.text, weld) : [{ chapter: v.chapter, verse: v.verse, text: v.text }];
+      if (weld) weldsApplied++;
+      pieces.forEach((piece, i) => {
+        const vid = verseIdByOsisKey.get(`${v.bookId}.${piece.chapter}.${piece.verse}`);
+        if (vid === undefined) {
+          webSkipped.push(`${v.bookId}.${piece.chapter}.${piece.verse}`);
+          return;
+        }
+        loadVerseText(1, vid, piece.text);
+        if (weld && i > 0) {
+          const osis = BOOKS.find((b) => b.bookId === v.bookId)!.osisId;
+          insertWebMap.run(vid, osis, v.chapter, v.verse, `!${String.fromCharCode(97 + i)}`, weld.note);
+        }
+      });
     }
   });
   insertWebTx();
-  if (webSkipped > 0) console.log(`  WARNING: ${webSkipped} WEB verses skipped (no canonical verse_id)`);
+  // A source label with no canonical address is text the reader never sees. Fail, never warn.
+  if (webSkipped.length > 0) {
+    throw new Error(`WEB: ${webSkipped.length} source verse(s) have no canonical verse_id: ${webSkipped.slice(0, 8).join(", ")}`);
+  }
+  if (weldsApplied !== WEB_WELDED_VERSES.length) {
+    throw new Error(`WEB: ${weldsApplied} of ${WEB_WELDED_VERSES.length} reviewed welded verse(s) found in the source`);
+  }
 
   console.log("[load] verse_texts (BSB)...");
   let bsbMapped = 0;
@@ -1124,6 +1151,7 @@ async function main() {
     }
   });
   insertBsbTx();
+  if (bsbDropped > 0) throw new Error(`BSB: ${bsbDropped} source verse(s) have no canonical verse_id`);
 
   // WEB and BSB express an omitted verse as an empty string, but a verse the source skips
   // entirely — WEB has no Acts 8:37, its chapter runs 36, 38 — never reaches loadVerseText,
@@ -2121,6 +2149,16 @@ async function main() {
          GROUP BY t.translation_id ORDER BY t.translation_id`,
       )
       .all() as { code: string; translationId: number; n: number; numbering: number }[];
+    const unexplained = sqlite
+      .prepare(
+        `SELECT t.code, COUNT(vo.verse_id) AS n FROM translations t
+         LEFT JOIN verse_omissions vo ON vo.translation_id = t.translation_id AND vo.kind = 'unexplained'
+         GROUP BY t.translation_id`,
+      )
+      .all() as { code: string; n: number }[];
+    // The gap gate below is satisfied by any omission row, and the WEB/BSB fill writes one for
+    // every unwritten verse; this keeps that fill from turning a dropped verse into apparatus.
+    for (const r of unexplained) errors.push(...unexplainedOmissionErrors(r.code, r.n));
     for (const r of omissionCounts) {
       // Numbering gaps are structure by definition, so they are not held to the textual cap;
       // they are held to the exact count the reviewed verse map produces instead, which is
