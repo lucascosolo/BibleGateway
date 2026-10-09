@@ -6,10 +6,10 @@ canon = "nt-apocrypha"
 status = "draft"
 original_language = "Greek (two Greek fragments survive; the fullest text is Coptic)"
 summary = """
-An incomplete gospel in which Jesus gives a revelation to the disciples and departs, and Mary Magdalene then relates what he revealed to her, which Peter and Andrew doubt and Levi defends. Ehrman notes it was discovered at the end of the nineteenth century but published only in the mid-twentieth. No filed source dates its composition, so the record is a draft. Its manuscripts are dated: the Coptic Berlin Codex 8502 to the fifth century, and two Greek fragments, P.Oxy. 3525 and P.Ryl. 463, to the third and early third century."""
+An incomplete gospel in which the Savior teaches the disciples and leaves, and Mary then relates what he revealed to her, which Andrew and Peter doubt and Levi defends. No filed source dates its composition, so the record is a draft. Its manuscripts are dated: the Coptic Berlin Codex 8502 to the fifth century, and two Greek fragments, P.Oxy. 3525 and P.Ryl. 463, to the third and early third century."""
 citations = [
   { source = "mattison-gospels-net", locator = "Manuscript Information page" },
-  { source = "ehrman-2013", locator = "PDF p. 573" },
+  { source = "mattison-gospels-net", locator = "Gospel of Mary, translation, pages 7-19" },
 ]
 
 [[composed]]
@@ -20,7 +20,7 @@ earliest = 30
 latest = 250
 held_by = "Bracket for this record, not a scholar's dating"
 summary = """
-No filed source gives a date of composition for the Gospel of Mary. This is a bracket, not a date: the text is set after Jesus has given his teaching and left, so it is later than his death, for which Humphreys and Waddington leave 30 or 33 CE as the only plausible years; and it must be earlier than its oldest copy, P.Ryl. 463, which the manuscript list dates to the early third century, read here as no later than 250. A scholar's date should replace this when one is filed."""
+No filed source gives a date of composition for the Gospel of Mary. This is a bracket, not a date: the text is set after the Savior has given his last teaching and left, so it is later than his death, for which Humphreys and Waddington leave 30 or 33 CE as the only plausible years; and it must be earlier than its oldest copy, P.Ryl. 463, which the manuscript list dates to the early third century, read here as no later than 250. A scholar's date should replace this when one is filed."""
 citations = [
   { source = "humphreys-waddington-1992", locator = "p. 339" },
   { source = "mattison-gospels-net", locator = "Manuscript Information page" },

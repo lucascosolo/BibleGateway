@@ -26,6 +26,9 @@ introductions, headings or page furniture are in `text.txt`.
 | `charles-2baruch` | 2 Baruch | Charles 1918 (SPCK) | age (1918; d. 1931) | ch:verse, 87 ch | **OCR draft, unproofread** |
 | `thackeray-aristeas` | Letter of Aristeas | Thackeray 1917 | age (1917; d. 1930) | sections 1-322 | **withheld: no clean text** |
 | `mattison-thomas` | Gospel of Thomas | Mattison (online, undated) | translator's public-domain dedication | logion 1-114 + prologue, colophon | clean |
+| `mattison-mary` | Gospel of Mary | Mattison (online, undated) | translator's public-domain dedication | codex page:line block (BG 8502 pp. 7-10, 15-19) | clean |
+| `mattison-judas` | Gospel of Judas | Mattison (online, undated) | translator's public-domain dedication | codex page:line block (Codex Tchacos pp. 33-58) | clean |
+| `mattison-philip` | Gospel of Philip | Mattison (online, undated) | translator's public-domain dedication | codex page:line block (NHC II pp. 51-86) | clean |
 | `robinson-gospel-peter` | Gospel of Peter | J. A. Robinson 1896 (ANF 9) | age (1896; d. 1933) + CCEL PD | sections 1-14 | clean (ThML) |
 | `walker-protevangelium` | Protevangelium of James | Walker 1870 (ANF 8) | age (1870) + CCEL PD | ch 1-24 | clean (ThML) |
 | `walker-infancy-thomas` | Infancy Gospel of Thomas | Walker 1870 (ANF 8) | age (1870) + CCEL PD | three forms, chapters | clean (ThML) |
@@ -134,6 +137,39 @@ entries list the known defects.
 - **Numbering as found:** prologue + logion 1-114 + colophon (116 units) (116 units)
 - **Excluded:** Mattison's editorial saying titles (e.g. "True Meaning"), symbol key, Notes on Translation, site navigation and bookstore links
 - **Notes:** Editorial sigla [ ] ( ) / \ kept in the text.
+
+### `mattison-mary` — Gospel of Mary (Coptic, Berlin Codex 8502,1)
+
+- **Translator, year:** Mark M. Mattison, undated
+- **Edition:** gospels.net web edition, accessed 2026-10-09 (page undated); single web page, filed as `described-works/gospels-net-mary.html` (see "Described works" below)
+- **Licence:** Public-domain dedication by the translator. Evidence: https://www.gospels.net/mary ("committed to the public domain and may be freely copied and used, changed or unchanged, for any purpose")
+- **Download:** https://www.gospels.net/mary
+- **sha256:** `gospels-net-mary.html` 1fbf26b9c23f48a901b20625bba37e6e79a22ca18f16c036bd52976a36376293; manuscript dates from `gospels-net-manuscript.html` (Mattison's Manuscript Information page)
+- **Numbering as found:** codex page and line, as Mattison prints it; the corpus numbers by page (`page` scheme)
+- **Excluded:** Mattison's editorial section titles, notes, site navigation and bookstore links
+- **Notes:** Added to this ledger 2026-10-09 so every work's translation id resolves; the texts were ingested in chunk 4 (`packages/ingest/src/translations.ts`, same sha256).
+
+### `mattison-judas` — Gospel of Judas (Coptic, Codex Tchacos 3)
+
+- **Translator, year:** Mark M. Mattison, undated
+- **Edition:** gospels.net web edition, accessed 2026-10-09 (page undated); single web page, filed as `described-works/gospels-net-judas.html` (see "Described works" below)
+- **Licence:** Public-domain dedication by the translator. Evidence: https://www.gospels.net/judas ("committed to the public domain and may be freely copied and used, changed or unchanged, for any purpose")
+- **Download:** https://www.gospels.net/judas
+- **sha256:** `gospels-net-judas.html` d8ed61e43f25ecfd29a55fb657a0e4b54f7799a65b655c952a84398a40328efc; manuscript dates from `gospels-net-manuscript.html` (Mattison's Manuscript Information page)
+- **Numbering as found:** codex page and line, as Mattison prints it; the corpus numbers by page (`page` scheme)
+- **Excluded:** Mattison's editorial section titles, notes, site navigation and bookstore links
+- **Notes:** Added to this ledger 2026-10-09 so every work's translation id resolves; the texts were ingested in chunk 4 (`packages/ingest/src/translations.ts`, same sha256).
+
+### `mattison-philip` — Gospel of Philip (Coptic, NHC II,3)
+
+- **Translator, year:** Mark M. Mattison, undated
+- **Edition:** gospels.net web edition, accessed 2026-10-09 (page undated); single web page, filed as `described-works/gospels-net-philip.html` (see "Described works" below)
+- **Licence:** Public-domain dedication by the translator. Evidence: https://www.gospels.net/philip ("committed to the public domain and may be freely copied and used, changed or unchanged, for any purpose")
+- **Download:** https://www.gospels.net/philip
+- **sha256:** `gospels-net-philip.html` b71f86fb08060c94984300a035919ff62ea07159a08ce0273c1b15ec69359168; manuscript dates from `gospels-net-manuscript.html` (Mattison's Manuscript Information page)
+- **Numbering as found:** codex page and line, as Mattison prints it; the corpus numbers by page (`page` scheme)
+- **Excluded:** Mattison's editorial section titles, notes, site navigation and bookstore links
+- **Notes:** Added to this ledger 2026-10-09 so every work's translation id resolves; the texts were ingested in chunk 4 (`packages/ingest/src/translations.ts`, same sha256).
 
 ### `robinson-gospel-peter` — Gospel of Peter (Akhmim fragment)
 
