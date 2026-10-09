@@ -54,7 +54,7 @@ export function CorpusDoorways({
   return (
     <div className="flex flex-col gap-8">
       <section aria-label="Most cross-referenced verses">
-        <h3 className="mb-3 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
+        <h3 className="mb-3 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
           Most cross-referenced verses
         </h3>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
@@ -64,7 +64,7 @@ export function CorpusDoorways({
               href={`/read/${v.osisRef}`}
               className="flex flex-col gap-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-3 transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)]"
             >
-              <span className="font-sans text-[var(--text-xs)] font-medium text-[var(--color-ink-faint)]">
+              <span className="font-sans text-[length:var(--text-xs)] font-medium text-[var(--color-ink-faint)]">
                 {references.get(v.verseId) ?? v.osisRef} · linked from {v.inboundCount} other passages
               </span>
               <PassageRenderer
@@ -132,8 +132,8 @@ export function CorpusDoorways({
 }
 
 const HEADING =
-  "mb-1 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-ink-muted)]";
-const NOTE = "mb-3 font-serif text-[var(--text-sm)] italic text-[var(--color-ink-faint)]";
+  "mb-1 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-ink-muted)]";
+const NOTE = "mb-3 font-serif text-[length:var(--text-sm)] italic text-[var(--color-ink-faint)]";
 
 const plural = (n: number) => (n === 1 ? "verse" : "verses");
 
@@ -162,7 +162,7 @@ function OmissionList({
                   : o.reason
               }
               className={
-                "inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border px-3 font-sans text-[var(--text-sm)] transition-opacity hover:opacity-85 " +
+                "inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border px-3 font-sans text-[length:var(--text-sm)] transition-opacity hover:opacity-85 " +
                 (accent
                   ? "border-[var(--color-rubric)] bg-[var(--color-rubric-soft)] text-[var(--color-rubric-strong)]"
                   : "border-[var(--color-border)] bg-[var(--color-bg-raised)] text-[var(--color-ink-muted)]")

@@ -34,7 +34,7 @@ export function TopTabs({ active }: { active: Workspace["key"] }) {
               href={ws.href}
               aria-current={isActive ? "page" : undefined}
               className={clsx(
-                "flex h-full shrink-0 items-center gap-2 border-b-2 px-2.5 text-[var(--text-sm)] font-medium whitespace-nowrap",
+                "flex h-full shrink-0 items-center gap-2 border-b-2 px-2.5 text-[length:var(--text-sm)] font-medium whitespace-nowrap",
                 isActive
                   ? "border-[var(--color-brand)] text-[var(--color-ink)]"
                   : "border-transparent text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]",

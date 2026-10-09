@@ -12,7 +12,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ fil
   const key = file.slice(0, -4);
   let paths: string[];
   if (key === "pages") {
-    paths = ["/", "/read", "/derash", "/lashon", "/roadmap", "/api", "/translations", ...PROFILES.map((p) => `/translations/${p.code}`)];
+    paths = ["/", "/read", "/derash", "/lashon", "/roadmap", "/api", "/translations", "/privacy", ...PROFILES.map((p) => `/translations/${p.code}`)];
   } else if (key === "toledot") {
     paths = await toledotSitemapPaths();
     if (paths.length === 0) return new Response("Not found", { status: 404 });

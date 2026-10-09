@@ -91,10 +91,10 @@ function Section({
 }) {
   return (
     <section className="mx-auto w-full max-w-5xl px-6 py-14">
-      <p className="font-sans text-[var(--text-xs)] font-semibold uppercase tracking-[0.14em] text-[var(--color-rubric)]">
+      <p className="font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-[0.14em] text-[var(--color-rubric)]">
         {eyebrow}
       </p>
-      <h2 className="mt-1 font-serif text-[var(--text-xl)] font-semibold text-[var(--color-ink)]">
+      <h2 className="mt-1 font-serif text-[length:var(--text-xl)] font-semibold text-[var(--color-ink)]">
         {title}
       </h2>
       <div className="mt-8">{children}</div>
@@ -111,7 +111,7 @@ function CapabilityBadge({ level }: { level: "full" | "reduced" | "unavailable" 
   return (
     <span
       className={clsx(
-        "inline-flex items-center rounded-[var(--radius-full)] border px-2.5 py-1 text-[var(--text-xs)] font-semibold uppercase tracking-wide",
+        "inline-flex items-center rounded-[var(--radius-full)] border px-2.5 py-1 text-[length:var(--text-xs)] font-semibold uppercase tracking-wide",
         styles[level],
       )}
     >
@@ -136,13 +136,13 @@ export default function StylePage() {
       {/* Hero */}
       <header className="border-b border-[var(--color-border)] bg-[var(--color-surface)] px-6 py-16 text-center">
         <Wordmark size="xl" withVerse className="mx-auto items-center" />
-        <h1 className="mt-8 font-serif text-[var(--text-2xl)] font-semibold">Design system</h1>
-        <p className="mx-auto mt-3 max-w-lg font-sans text-[var(--text-base)] text-[var(--color-ink-muted)]">
+        <h1 className="mt-8 font-serif text-[length:var(--text-2xl)] font-semibold">Design system</h1>
+        <p className="mx-auto mt-3 max-w-lg font-sans text-[length:var(--text-base)] text-[var(--color-ink-muted)]">
           Palette, type, the biblical-vocabulary primitive, capability
           matrix, and shell chrome — the foundation every workspace builds
           on.
         </p>
-        <p className="mt-4 font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+        <p className="mt-4 font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
           current breakpoint: <strong className="text-[var(--color-ink)]">{breakpoint}</strong> · viewport-driven, SSR-safe
         </p>
       </header>
@@ -240,7 +240,7 @@ export default function StylePage() {
         <div className="grid gap-8 sm:grid-cols-2">
           {PALETTE_GROUPS.map((group) => (
             <div key={group.title}>
-              <h3 className="mb-3 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
+              <h3 className="mb-3 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
                 {group.title}
               </h3>
               <div className="flex flex-wrap gap-3">
@@ -250,7 +250,7 @@ export default function StylePage() {
                       className="h-14 w-14 rounded-[var(--radius-md)] border border-[var(--color-border)]"
                       style={{ background: `var(${token.varName})`, boxShadow: "var(--shadow-sm)" }}
                     />
-                    <span className="font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+                    <span className="font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
                       {token.name}
                     </span>
                   </div>
@@ -266,7 +266,7 @@ export default function StylePage() {
         <div className="mb-10 space-y-3">
           {TYPE_SCALE.map((step) => (
             <div key={step} className="flex items-baseline gap-4 border-b border-[var(--color-border)] pb-2">
-              <span className="w-14 shrink-0 font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+              <span className="w-14 shrink-0 font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
                 {step}
               </span>
               <span className="font-sans text-[var(--color-ink)]" style={{ fontSize: `var(--text-${step})` }}>
@@ -276,16 +276,16 @@ export default function StylePage() {
           ))}
         </div>
         <div className="container-passage rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-6 sm:p-8">
-          <p className="mb-2 font-sans text-[var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+          <p className="mb-2 font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
             Scripture — Literata, capped at 68ch
           </p>
           <p className="prose-scripture text-[var(--color-ink)]">
-            <sup className="mr-1 font-sans text-[var(--text-scripture-verse-num)] text-[var(--color-ink-faint)]">1</sup>
+            <sup className="mr-1 font-sans text-[length:var(--text-scripture-verse-num)] text-[var(--color-ink-faint)]">1</sup>
             In the beginning God created the heaven and the earth.{" "}
-            <sup className="mr-1 font-sans text-[var(--text-scripture-verse-num)] text-[var(--color-ink-faint)]">2</sup>
+            <sup className="mr-1 font-sans text-[length:var(--text-scripture-verse-num)] text-[var(--color-ink-faint)]">2</sup>
             And the earth was without form, and void; and darkness was upon the
             face of the deep. And the Spirit of God moved upon the face of the
-            waters. <sup className="mr-1 font-sans text-[var(--text-scripture-verse-num)] text-[var(--color-ink-faint)]">3</sup>
+            waters. <sup className="mr-1 font-sans text-[length:var(--text-scripture-verse-num)] text-[var(--color-ink-faint)]">3</sup>
             And God said, <span style={{ background: "var(--color-highlight-amber)" }}>Let there be light</span>: and there was light.
           </p>
         </div>
@@ -295,8 +295,8 @@ export default function StylePage() {
       <Section eyebrow="Primitive" title="GlossLabel — biblical vocabulary">
         <div className="mb-6 flex items-center justify-between rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-sunken)] px-4 py-3">
           <div>
-            <p className="font-sans text-[var(--text-sm)] font-semibold">Plain labels</p>
-            <p className="font-sans text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+            <p className="font-sans text-[length:var(--text-sm)] font-semibold">Plain labels</p>
+            <p className="font-sans text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
               Swaps every term below for its English equivalent.
             </p>
           </div>
@@ -322,24 +322,24 @@ export default function StylePage() {
         <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
           {(Object.keys(lexicon) as LexiconId[]).map((id) => (
             <div key={id} className="border-b border-[var(--color-border)] pb-4">
-              <GlossLabel id={id} as="strong" className="font-serif text-[var(--text-md)] font-semibold" />
+              <GlossLabel id={id} as="strong" className="font-serif text-[length:var(--text-md)] font-semibold" />
             </div>
           ))}
         </div>
 
-        <p className="mt-8 max-w-prose font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+        <p className="mt-8 max-w-prose font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
           Hover or focus a term above (desktop) to see the tooltip. On a
           touch device the gloss is a permanent italic subtitle instead —
-          pure CSS, driven by <code className="font-mono text-[var(--text-xs)]">@media (hover: none)</code>,
+          pure CSS, driven by <code className="font-mono text-[length:var(--text-xs)]">@media (hover: none)</code>,
           nothing measured in JS. Either way the gloss is wired into{" "}
-          <code className="font-mono text-[var(--text-xs)]">aria-describedby</code>. A forced preview of the
+          <code className="font-mono text-[length:var(--text-xs)]">aria-describedby</code>. A forced preview of the
           touch presentation:
         </p>
         <div className="mt-4 flex flex-wrap gap-6 rounded-[var(--radius-lg)] border border-dashed border-[var(--color-border-strong)] p-5">
           {(["selah", "masora", "toledot"] as LexiconId[]).map((id) => (
             <div key={id}>
-              <strong className="font-serif text-[var(--text-md)] font-semibold">{lexicon[id].term}</strong>
-              <span className="block font-serif text-[var(--text-xs)] italic text-[var(--color-ink-faint)]">
+              <strong className="font-serif text-[length:var(--text-md)] font-semibold">{lexicon[id].term}</strong>
+              <span className="block font-serif text-[length:var(--text-xs)] italic text-[var(--color-ink-faint)]">
                 {lexicon[id].gloss}
               </span>
             </div>
@@ -349,13 +349,13 @@ export default function StylePage() {
 
       {/* Capability matrix */}
       <Section eyebrow="Responsiveness" title="Feature availability matrix">
-        <p className="mb-6 max-w-prose font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
-          Live output of <code className="font-mono text-[var(--text-xs)]">useCapability()</code> at the
+        <p className="mb-6 max-w-prose font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
+          Live output of <code className="font-mono text-[length:var(--text-xs)]">useCapability()</code> at the
           current breakpoint (<strong>{breakpoint}</strong>), next to the full matrix and the reasoning
           behind each cut.
         </p>
         <div className="overflow-x-auto rounded-[var(--radius-lg)] border border-[var(--color-border)]">
-          <table className="w-full min-w-[720px] border-collapse text-left font-sans text-[var(--text-sm)]">
+          <table className="w-full min-w-[720px] border-collapse text-left font-sans text-[length:var(--text-sm)]">
             <thead>
               <tr className="bg-[var(--color-bg-sunken)]">
                 <th className="px-4 py-3 font-semibold">Feature</th>
@@ -384,7 +384,7 @@ export default function StylePage() {
                     <td className="px-4 py-3">
                       <CapabilityBadge level={row.desktop} />
                     </td>
-                    <td className="max-w-xs px-4 py-3 text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+                    <td className="max-w-xs px-4 py-3 text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
                       {row.reason}
                     </td>
                   </tr>
@@ -399,31 +399,31 @@ export default function StylePage() {
       <Section eyebrow="Shell" title="Chrome controls">
         <div className="flex flex-wrap items-center gap-8">
           <div>
-            <p className="mb-2 font-sans text-[var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+            <p className="mb-2 font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
               Theme
             </p>
             <ThemeToggle />
           </div>
           <div>
-            <p className="mb-2 font-sans text-[var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+            <p className="mb-2 font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
               Selah mode
             </p>
             <SelahToggle />
           </div>
           <div>
-            <p className="mb-2 font-sans text-[var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+            <p className="mb-2 font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
               Bottom sheet
             </p>
             <button
               type="button"
               onClick={() => setSheetOpen(true)}
-              className="inline-flex h-11 items-center rounded-[var(--radius-full)] border border-[var(--color-border)] px-4 font-sans text-[var(--text-sm)] font-medium hover:bg-[var(--color-surface-hover)]"
+              className="inline-flex h-11 items-center rounded-[var(--radius-full)] border border-[var(--color-border)] px-4 font-sans text-[length:var(--text-sm)] font-medium hover:bg-[var(--color-surface-hover)]"
             >
               Open panel preview
             </button>
           </div>
         </div>
-        <p className="mt-6 max-w-prose font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+        <p className="mt-6 max-w-prose font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
           The nav itself is live above this page: resize the window to see
           it move between a bottom tab bar (&lt;768px), top tabs
           (768–1279px), and a left rail with a sidebar slot (≥1280px).
@@ -431,10 +431,10 @@ export default function StylePage() {
       </Section>
 
       <BottomSheet open={sheetOpen} onClose={() => setSheetOpen(false)} title="Masora">
-        <p className="font-serif text-[var(--text-sm)] italic text-[var(--color-ink-muted)]">
+        <p className="font-serif text-[length:var(--text-sm)] italic text-[var(--color-ink-muted)]">
           {lexicon.masora.gloss}
         </p>
-        <p className="mt-4 font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+        <p className="mt-4 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
           This is how a panel is presented below 768px — as a bottom sheet
           over the reader rather than a docked sidebar.
         </p>

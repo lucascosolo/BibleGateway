@@ -80,7 +80,7 @@ function MoreRow({ row, current, onClose }: { row: Row; current: boolean; onClos
   const entry = row.lexiconId ? getLexiconEntry(row.lexiconId) : null;
   const Icon = row.icon;
   const className = clsx(
-    "flex min-h-[var(--touch-target)] w-full items-center gap-3 rounded-[var(--radius-md)] px-3 py-2 text-left font-sans text-[var(--text-sm)]",
+    "flex min-h-[var(--touch-target)] w-full items-center gap-3 rounded-[var(--radius-md)] px-3 py-2 text-left font-sans text-[length:var(--text-sm)]",
     current
       ? "bg-[var(--color-brand-soft)] font-semibold text-[var(--color-brand-strong)]"
       : "text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)]",
@@ -95,7 +95,7 @@ function MoreRow({ row, current, onClose }: { row: Row; current: boolean; onClos
         // The gloss is visible text inside the row, so it is part of the accessible name too.
         <span className="flex min-w-0 flex-col">
           <span>{entry.term}</span>
-          <span className="text-[var(--text-xs)] font-normal italic text-[var(--color-ink-muted)]">{entry.gloss}</span>
+          <span className="text-[length:var(--text-xs)] font-normal italic text-[var(--color-ink-muted)]">{entry.gloss}</span>
         </span>
       ) : (
         <span>{entry ? entry.plainLabel : row.plainLabel}</span>

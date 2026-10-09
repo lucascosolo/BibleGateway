@@ -154,7 +154,7 @@ export function AnchoredPanel({ open, onClose, title, anchorRef, children }: Anc
         className="scroll-shadows fixed max-h-[calc(100dvh-1.5rem)] w-[min(24rem,calc(100vw-1.5rem))] overflow-y-auto overscroll-contain rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-4"
       >
         <div className="flex items-start justify-between gap-2">
-          <h2 id={titleId} className="font-serif text-[var(--text-md)] font-semibold text-[var(--color-ink)]">
+          <h2 id={titleId} className="font-serif text-[length:var(--text-md)] font-semibold text-[var(--color-ink)]">
             {title}
           </h2>
           <button

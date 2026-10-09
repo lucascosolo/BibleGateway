@@ -34,7 +34,7 @@ export function HeatBadge({ bucket, inboundCount, weightedScore, className }: He
             type="button"
             aria-describedby={descId}
             className={clsx(
-              "inline-flex min-h-[var(--touch-target)] min-w-[var(--touch-target)] items-center justify-center gap-1 rounded-[var(--radius-full)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-2 text-[var(--text-xs)] text-[var(--color-ink-muted)]",
+              "inline-flex min-h-[var(--touch-target)] min-w-[var(--touch-target)] items-center justify-center gap-1 rounded-[var(--radius-full)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-2 text-[length:var(--text-xs)] text-[var(--color-ink-muted)]",
               className
             )}
           >
@@ -49,7 +49,7 @@ export function HeatBadge({ bucket, inboundCount, weightedScore, className }: He
         <Tooltip.Portal>
           <Tooltip.Content
             id={descId}
-            className="z-50 max-w-72 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 py-2 font-sans text-[var(--text-sm)] text-[var(--color-ink)] shadow-[var(--shadow-md)]"
+            className="z-50 max-w-72 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 py-2 font-sans text-[length:var(--text-sm)] text-[var(--color-ink)] shadow-[var(--shadow-md)]"
             sideOffset={8}
           >
             <p className="font-medium">
@@ -58,7 +58,7 @@ export function HeatBadge({ bucket, inboundCount, weightedScore, className }: He
             <p className="mt-1 text-[var(--color-ink-muted)]">{info.description}</p>
             <p className="mt-2 text-[var(--color-ink-faint)]">{HEAT_EXPLAINER}</p>
             {(inboundCount !== undefined || weightedScore !== undefined) && (
-              <p className="mt-2 font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+              <p className="mt-2 font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
                 {inboundCount !== undefined && `${inboundCount} inbound`}
                 {inboundCount !== undefined && weightedScore !== undefined && " · "}
                 {weightedScore !== undefined && `${weightedScore} vote-weighted`}

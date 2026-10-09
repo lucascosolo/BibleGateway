@@ -114,7 +114,7 @@ export function GuidedTour() {
         className="relative flex max-h-[88dvh] w-full max-w-[34rem] flex-col overflow-y-auto rounded-t-[var(--radius-xl)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-6 pb-[calc(var(--space-6)+env(safe-area-inset-bottom))] sm:rounded-[var(--radius-xl)] sm:pb-6"
         style={{ boxShadow: "var(--shadow-lg)" }}
       >
-        <p className="font-sans text-[var(--text-xs)] tracking-[0.06em] text-[var(--color-ink-faint)] uppercase">
+        <p className="font-sans text-[length:var(--text-xs)] tracking-[0.06em] text-[var(--color-ink-faint)] uppercase">
           A quick guide · {index + 1} of {TOUR_STEPS.length}
         </p>
 
@@ -131,7 +131,7 @@ export function GuidedTour() {
               // `tabIndex={-1}` so it can receive focus programmatically on each step change
               // without ever entering the Tab order.
               tabIndex={-1}
-              className="font-serif text-[var(--text-lg)] font-semibold text-[var(--color-ink)] focus-visible:outline-none"
+              className="font-serif text-[length:var(--text-lg)] font-semibold text-[var(--color-ink)] focus-visible:outline-none"
             >
               {step.title}
             </h2>
@@ -139,7 +139,7 @@ export function GuidedTour() {
               // The Hebrew term is shown as what it is: a name for the thing just described in
               // English, with its meaning attached. Introduced this way it reads as vocabulary
               // the tool has a reason to use, rather than decoration over an ordinary feature.
-              <p className="mt-0.5 font-serif text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+              <p className="mt-0.5 font-serif text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
                 Called <strong className="font-semibold text-[var(--color-ink)]">{lexicon.term}</strong>{" "}
                 here — <span className="italic">{lexicon.gloss}</span>
               </p>
@@ -148,10 +148,10 @@ export function GuidedTour() {
         </div>
 
         <div id={bodyId} className="mt-4 flex flex-col gap-3">
-          <p className="font-sans text-[var(--text-sm)] leading-relaxed text-[var(--color-ink)]">
+          <p className="font-sans text-[length:var(--text-sm)] leading-relaxed text-[var(--color-ink)]">
             {step.what}
           </p>
-          <p className="border-l-2 border-[var(--color-border-strong)] pl-3 font-sans text-[var(--text-sm)] leading-relaxed text-[var(--color-ink-muted)]">
+          <p className="border-l-2 border-[var(--color-border-strong)] pl-3 font-sans text-[length:var(--text-sm)] leading-relaxed text-[var(--color-ink-muted)]">
             <span className="font-semibold text-[var(--color-ink)]">Why it is here:</span>{" "}
             {step.why}
           </p>
@@ -159,7 +159,7 @@ export function GuidedTour() {
             <Link
               href={step.href}
               onClick={dismiss}
-              className="w-fit font-sans text-[var(--text-sm)] font-medium text-[var(--color-brand)] underline underline-offset-4"
+              className="w-fit font-sans text-[length:var(--text-sm)] font-medium text-[var(--color-brand)] underline underline-offset-4"
             >
               {step.hrefLabel ?? "See it"} →
             </Link>
@@ -173,7 +173,7 @@ export function GuidedTour() {
               href={SUPPORT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[var(--touch-target)] w-fit items-center rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
+              className="inline-flex min-h-[var(--touch-target)] w-fit items-center rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
             >
               Donate with PayPal
             </a>
@@ -211,7 +211,7 @@ export function GuidedTour() {
           <button
             type="button"
             onClick={dismiss}
-            className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] px-3 font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-ink)]"
+            className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] px-3 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-ink)]"
           >
             {isLast ? "Close" : "Skip"}
           </button>
@@ -221,14 +221,14 @@ export function GuidedTour() {
               type="button"
               onClick={() => setIndex((i) => Math.max(0, i - 1))}
               disabled={index === 0}
-              className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] border border-[var(--color-border)] px-4 font-sans text-[var(--text-sm)] text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)] disabled:cursor-not-allowed disabled:opacity-40"
+              className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] border border-[var(--color-border)] px-4 font-sans text-[length:var(--text-sm)] text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)] disabled:cursor-not-allowed disabled:opacity-40"
             >
               Back
             </button>
             <button
               type="button"
               onClick={() => (isLast ? dismiss() : setIndex((i) => Math.min(LAST, i + 1)))}
-              className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
+              className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
             >
               {isLast ? "Start reading" : "Next"}
             </button>

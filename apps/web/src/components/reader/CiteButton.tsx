@@ -108,7 +108,7 @@ function CiteDialog({
         <div className="flex items-start justify-between gap-2">
           <h2
             id="cite-title"
-            className="font-serif text-[var(--text-md)] font-semibold text-[var(--color-ink)]"
+            className="font-serif text-[length:var(--text-md)] font-semibold text-[var(--color-ink)]"
           >
             Cite {subject.reference}
           </h2>
@@ -124,7 +124,7 @@ function CiteDialog({
 
         {/* Says why the build id is in there. Without this it looks like noise and gets deleted
             by the first person who pastes it into a footnote. */}
-        <p className="font-sans text-[var(--text-xs)] leading-snug text-[var(--color-ink-muted)]">
+        <p className="font-sans text-[length:var(--text-xs)] leading-snug text-[var(--color-ink-muted)]">
           The reference includes the id of the exact version of the text this site is serving.
           The wording of a translation here can be corrected — one of them arrived with words
           run together and had to be repaired — so that id is what lets anyone check later that
@@ -140,7 +140,7 @@ function CiteDialog({
               aria-checked={format === f.id}
               title={f.hint}
               onClick={() => setFormat(f.id)}
-              className={`min-h-[var(--touch-target)] rounded-[var(--radius-full)] border px-3 font-sans text-[var(--text-sm)] ${
+              className={`min-h-[var(--touch-target)] rounded-[var(--radius-full)] border px-3 font-sans text-[length:var(--text-sm)] ${
                 format === f.id
                   ? "border-[var(--color-brand)] bg-[var(--color-brand-soft)] text-[var(--color-ink)]"
                   : "border-[var(--color-border)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)]"
@@ -160,20 +160,20 @@ function CiteDialog({
           value={text}
           rows={format === "bibtex" || format === "csl-json" ? 12 : 4}
           aria-label="Citation text"
-          className="w-full resize-y rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg)] p-3 font-mono text-[var(--text-xs)] leading-relaxed text-[var(--color-ink)]"
+          className="w-full resize-y rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg)] p-3 font-mono text-[length:var(--text-xs)] leading-relaxed text-[var(--color-ink)]"
         />
 
         <div className="flex items-center gap-3">
           <button
             type="button"
             onClick={copy}
-            className="min-h-[var(--touch-target)] rounded-[var(--radius-full)] bg-[var(--color-brand)] px-4 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-bg)]"
+            className="min-h-[var(--touch-target)] rounded-[var(--radius-full)] bg-[var(--color-brand)] px-4 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-bg)]"
           >
             Copy
           </button>
           {/* Polite, not assertive: this is a confirmation, and it must not interrupt whatever a
               screen-reader user was in the middle of hearing. */}
-          <span aria-live="polite" className="font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+          <span aria-live="polite" className="font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
             {copied ? "Copied" : ""}
           </span>
         </div>

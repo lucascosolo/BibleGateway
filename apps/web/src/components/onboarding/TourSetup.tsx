@@ -83,7 +83,7 @@ export function TourSetup() {
       </Section>
 
       <div className="flex items-center justify-between gap-3 border-t border-[var(--color-border)] pt-3">
-        <p className="font-sans text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+        <p className="font-sans text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
           Changes save as you make them.
         </p>
         {/* Named for what it does rather than "Reset", which reads as though it might also
@@ -91,7 +91,7 @@ export function TourSetup() {
         <button
           type="button"
           onClick={resetSettings}
-          className="min-h-[var(--touch-target)] shrink-0 rounded-[var(--radius-md)] border border-[var(--color-border)] px-3 font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-ink)]"
+          className="min-h-[var(--touch-target)] shrink-0 rounded-[var(--radius-md)] border border-[var(--color-border)] px-3 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)] hover:text-[var(--color-ink)]"
         >
           Restore defaults
         </button>
@@ -111,11 +111,11 @@ function Section({
 }) {
   return (
     <section className="flex flex-col gap-2">
-      <h3 className="font-sans text-[var(--text-xs)] font-semibold tracking-[0.06em] text-[var(--color-ink-faint)] uppercase">
+      <h3 className="font-sans text-[length:var(--text-xs)] font-semibold tracking-[0.06em] text-[var(--color-ink-faint)] uppercase">
         {title}
       </h3>
       {note && (
-        <p className="font-sans text-[var(--text-xs)] leading-snug text-[var(--color-ink-muted)]">
+        <p className="font-sans text-[length:var(--text-xs)] leading-snug text-[var(--color-ink-muted)]">
           {note}
         </p>
       )}
@@ -165,7 +165,7 @@ function TranslationChoice({
 
   if (!translations) {
     return (
-      <p className="font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+      <p className="font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
         Currently <strong className="font-semibold text-[var(--color-ink)]">{value}</strong>.
         {failed
           ? " The full list could not be loaded — you can change it from the translation control above any passage."
@@ -192,15 +192,15 @@ function TranslationChoice({
                 : "text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)]")
             }
           >
-            <span className="w-12 shrink-0 font-mono text-[var(--text-xs)] font-semibold">
+            <span className="w-12 shrink-0 font-mono text-[length:var(--text-xs)] font-semibold">
               {option.code}
             </span>
             <span className="min-w-0">
-              <span className="block font-sans text-[var(--text-sm)]">{option.name}</span>
+              <span className="block font-sans text-[length:var(--text-sm)]">{option.name}</span>
               {/* Partial editions say so here. JPS 1917 is the Hebrew Bible only, and a reader
                   who picks it as their default and then opens John should have been told. */}
               {option.scopeNote && (
-                <span className="block font-sans text-[var(--text-xs)] leading-snug text-[var(--color-ink-faint)]">
+                <span className="block font-sans text-[length:var(--text-xs)] leading-snug text-[var(--color-ink-faint)]">
                   {option.scopeNote}
                 </span>
               )}

@@ -44,7 +44,7 @@ export function InstallNudge() {
           <h2 id={titleId} className="font-serif text-[length:var(--text-md)] font-semibold text-[var(--color-ink)]">
             Keep Jot on your home screen
           </h2>
-          <p className="mt-1 font-sans text-[var(--text-sm)] leading-relaxed text-[var(--color-ink-muted)]">
+          <p className="mt-1 font-sans text-[length:var(--text-sm)] leading-relaxed text-[var(--color-ink-muted)]">
             {INSTALL_STEP.what}
           </p>
         </div>
@@ -67,7 +67,7 @@ export function InstallNudge() {
             if (install) install();
             else openTour("install");
           }}
-          className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
+          className="min-h-[var(--touch-target)] rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
         >
           {install ? "Install" : "Show me how"}
         </button>

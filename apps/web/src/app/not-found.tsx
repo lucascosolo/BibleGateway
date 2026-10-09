@@ -33,18 +33,18 @@ export default function NotFound() {
     <div className="mx-auto flex max-w-xl flex-col gap-8 px-6 py-16">
       <header className="flex flex-col gap-4">
         <Wordmark size="md" />
-        <h1 className="font-serif text-[var(--text-xl)] text-[var(--color-ink)]">
+        <h1 className="font-serif text-[length:var(--text-xl)] text-[var(--color-ink)]">
           There is nothing at this address
         </h1>
       </header>
 
-      <div className="flex flex-col gap-3 font-serif text-[var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
+      <div className="flex flex-col gap-3 font-serif text-[length:var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
         <p>
           Most often this is a reference that could not be read. A reference here looks like{" "}
-          <code className="font-mono text-[var(--text-sm)] text-[var(--color-ink)]">Gen 1</code>,{" "}
-          <code className="font-mono text-[var(--text-sm)] text-[var(--color-ink)]">John 3:16</code>{" "}
+          <code className="font-mono text-[length:var(--text-sm)] text-[var(--color-ink)]">Gen 1</code>,{" "}
+          <code className="font-mono text-[length:var(--text-sm)] text-[var(--color-ink)]">John 3:16</code>{" "}
           or{" "}
-          <code className="font-mono text-[var(--text-sm)] text-[var(--color-ink)]">Ps 23:1-6</code>{" "}
+          <code className="font-mono text-[length:var(--text-sm)] text-[var(--color-ink)]">Ps 23:1-6</code>{" "}
           — a book, then a chapter, then an optional verse or range.
         </p>
         <p>
@@ -62,10 +62,10 @@ export default function NotFound() {
             href={w.href}
             className="flex min-h-[var(--touch-target)] items-center justify-between gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-4 py-3 transition-colors hover:border-[var(--color-brand)] hover:bg-[var(--color-surface-hover)]"
           >
-            <span className="font-serif text-[var(--text-md)] font-semibold text-[var(--color-ink)]">
+            <span className="font-serif text-[length:var(--text-md)] font-semibold text-[var(--color-ink)]">
               {w.label}
             </span>
-            <span className="text-end font-sans text-[var(--text-xs)] text-[var(--color-ink-muted)]">
+            <span className="text-end font-sans text-[length:var(--text-xs)] text-[var(--color-ink-muted)]">
               {w.hint}
             </span>
           </Link>

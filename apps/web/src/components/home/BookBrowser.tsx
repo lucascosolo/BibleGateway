@@ -24,13 +24,13 @@ export function BookBrowser({ books }: { books: BookBrowseEntry[] }) {
     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {groups.map((testamentGroup) => (
         <section key={testamentGroup.testament} aria-label={TESTAMENT_LABEL[testamentGroup.testament]}>
-          <h3 className="mb-3 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
+          <h3 className="mb-3 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
             {TESTAMENT_LABEL[testamentGroup.testament]}
           </h3>
           <div className="flex flex-col gap-3">
             {testamentGroup.genres.map((genreGroup) => (
               <div key={genreGroup.genre}>
-                <h4 className="mb-1.5 font-sans text-[var(--text-xs)] font-medium text-[var(--color-ink-faint)]">
+                <h4 className="mb-1.5 font-sans text-[length:var(--text-xs)] font-medium text-[var(--color-ink-faint)]">
                   {genreLabel(genreGroup.genre)}
                 </h4>
                 <ul className="flex flex-wrap gap-1.5">
@@ -38,7 +38,7 @@ export function BookBrowser({ books }: { books: BookBrowseEntry[] }) {
                     <li key={`${genreGroup.genre}-${book.bookId}`}>
                       <Link
                         href={`/read/${book.osisId}`}
-                        className="inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 font-sans text-[var(--text-sm)] text-[var(--color-ink)] transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)]"
+                        className="inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 font-sans text-[length:var(--text-sm)] text-[var(--color-ink)] transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)]"
                       >
                         {book.name}
                       </Link>

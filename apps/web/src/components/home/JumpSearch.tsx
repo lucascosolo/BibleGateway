@@ -44,16 +44,16 @@ export function JumpSearch({ books }: JumpSearchProps) {
           placeholder="John 3:16, Rom 8, or “born again”"
           autoComplete="off"
           spellCheck={false}
-          className="h-12 min-w-0 flex-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-4 font-sans text-[var(--text-base)] text-[var(--color-ink)] placeholder:text-[var(--color-ink-faint)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus-ring)]"
+          className="h-12 min-w-0 flex-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-4 font-sans text-[length:var(--text-base)] text-[var(--color-ink)] placeholder:text-[var(--color-ink-faint)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus-ring)]"
         />
         <button
           type="submit"
-          className="h-12 shrink-0 rounded-[var(--radius-lg)] bg-[var(--color-brand-strong)] px-5 font-sans text-[var(--text-sm)] font-semibold text-on-accent transition-opacity hover:opacity-90"
+          className="h-12 shrink-0 rounded-[var(--radius-lg)] bg-[var(--color-brand-strong)] px-5 font-sans text-[length:var(--text-sm)] font-semibold text-on-accent transition-opacity hover:opacity-90"
         >
           Go
         </button>
       </div>
-      <p aria-live="polite" className="min-h-[1.5em] px-1 font-sans text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+      <p aria-live="polite" className="min-h-[1.5em] px-1 font-sans text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
         {intent.type === "reference" && (
           <>
             → Jump straight to <strong className="text-[var(--color-ink-muted)]">{intent.label}</strong>

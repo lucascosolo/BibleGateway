@@ -121,14 +121,14 @@ export function Wordmark({
       </svg>
       {withTagline ? (
         <span
-          className="mt-1 font-serif italic text-[var(--text-xs)] text-[var(--color-ink-faint)]"
+          className="mt-1 font-serif italic text-[length:var(--text-xs)] text-[var(--color-ink-faint)]"
           aria-hidden="true"
         >
           not one jot or one tittle
         </span>
       ) : null}
       {withVerse ? (
-        <p className="mt-2 max-w-[26ch] font-serif text-[var(--text-xs)] italic leading-[var(--leading-snug)] text-[var(--color-ink-faint)]">
+        <p className="mt-2 max-w-[26ch] font-serif text-[length:var(--text-xs)] italic leading-[var(--leading-snug)] text-[var(--color-ink-faint)]">
           &ldquo;not one jot or one tittle shall pass from the law&rdquo;
           <br />
           <span

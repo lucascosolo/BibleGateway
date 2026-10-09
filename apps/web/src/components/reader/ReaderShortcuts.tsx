@@ -121,15 +121,15 @@ function ShortcutHelp({ onClose }: { onClose: () => void }) {
       >
         <h2
           id="shortcuts-title"
-          className="font-serif text-[var(--text-md)] font-semibold text-[var(--color-ink)]"
+          className="font-serif text-[length:var(--text-md)] font-semibold text-[var(--color-ink)]"
         >
           Keyboard shortcuts
         </h2>
         <dl className="mt-3 flex flex-col gap-2">
           {SHORTCUTS.map((s) => (
             <div key={s.keys} className="flex items-baseline justify-between gap-4">
-              <dt className="font-mono text-[var(--text-xs)] text-[var(--color-ink)]">{s.keys}</dt>
-              <dd className="font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+              <dt className="font-mono text-[length:var(--text-xs)] text-[var(--color-ink)]">{s.keys}</dt>
+              <dd className="font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
                 {s.what}
               </dd>
             </div>
@@ -138,7 +138,7 @@ function ShortcutHelp({ onClose }: { onClose: () => void }) {
         <button
           type="button"
           onClick={close}
-          className="mt-4 min-h-[var(--touch-target)] w-full rounded-[var(--radius-full)] border border-[var(--color-border)] font-sans text-[var(--text-sm)] text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)]"
+          className="mt-4 min-h-[var(--touch-target)] w-full rounded-[var(--radius-full)] border border-[var(--color-border)] font-sans text-[length:var(--text-sm)] text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)]"
         >
           Close
         </button>

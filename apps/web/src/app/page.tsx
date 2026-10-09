@@ -69,7 +69,7 @@ export default function Home() {
             The numbers earn their place by being checkable — a reader who doubts the
             cross-reference count can open the panel and count. Keep them queried; a hardcoded
             number here would be the first thing to go stale. */}
-        <p className="max-w-prose font-serif text-[var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
+        <p className="max-w-prose font-serif text-[length:var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
           Read the text with the evidence beside it:{" "}
           {translations.length} translations that keep your place when you switch between them,{" "}
           {crossReferenceCount.toLocaleString()} cross-references, the verses the earliest
@@ -90,7 +90,7 @@ export default function Home() {
       <ContinueReading />
 
       <section id="browse" aria-label="Browse the canon">
-        <h2 className="mb-1 font-serif text-[var(--text-lg)] text-[var(--color-ink)]">Browse the canon</h2>
+        <h2 className="mb-1 font-serif text-[length:var(--text-lg)] text-[var(--color-ink)]">Browse the canon</h2>
         {/* The 66 pills below are a wall, and the obvious fix — a type-to-filter box on the
             list — would be the SECOND text input on this page doing very nearly the same job
             as the first. `<JumpSearch>` already resolves a typed book name to its reader
@@ -99,7 +99,7 @@ export default function Home() {
             box people can find. So this says where the fast path is instead of duplicating it;
             the list stays what it is good at, which is browsing by testament and genre when
             you do not yet know the name you want. */}
-        <p className="mb-4 font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+        <p className="mb-4 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
           All 66 books, by testament and genre. Know the one you want?{" "}
           <a href="#jump-search" className="text-[var(--color-brand)] underline underline-offset-2">
             Type its name in the box above
@@ -112,7 +112,7 @@ export default function Home() {
       <SupportCard />
 
       <section id="doorways" aria-label="Ways into the corpus">
-        <h2 className="mb-4 font-serif text-[var(--text-lg)] text-[var(--color-ink)]">Ways in</h2>
+        <h2 className="mb-4 font-serif text-[length:var(--text-lg)] text-[var(--color-ink)]">Ways in</h2>
         <CorpusDoorways
           translationId={defaultTranslation.translationId}
           topVerses={topVerses}
@@ -122,19 +122,19 @@ export default function Home() {
       </section>
 
       <section aria-label="About this corpus">
-        <h2 className="mb-4 font-serif text-[var(--text-lg)] text-[var(--color-ink)]">What&rsquo;s actually here</h2>
+        <h2 className="mb-4 font-serif text-[length:var(--text-lg)] text-[var(--color-ink)]">What&rsquo;s actually here</h2>
         <CorpusFacts
           translations={translations}
           verseCount={verseCount}
           crossReferenceCount={crossReferenceCount}
         />
-        <p className="mt-4 font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+        <p className="mt-4 font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
           Cross-references follow shared verse addresses, so you can use them alongside other
           editions, including the NIV. Jot does not provide NIV text.
         </p>
       </section>
 
-      <p className="text-center font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
+      <p className="text-center font-sans text-[length:var(--text-sm)] text-[var(--color-ink-muted)]">
         Building a research tool?{" "}
         <a href="/api" className="text-[var(--color-brand)] underline underline-offset-2">
           Use the public Bible API

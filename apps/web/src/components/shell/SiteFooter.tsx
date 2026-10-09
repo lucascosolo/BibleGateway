@@ -15,6 +15,9 @@ export function SiteFooter() {
       <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href="/api">
         Bible research API
       </a>
+      <a className="inline-flex min-h-11 items-center underline underline-offset-4 hover:text-[var(--color-ink)]" href="/privacy">
+        Privacy
+      </a>
     </footer>
   );
 }

@@ -3,8 +3,8 @@
 import { useInstallPlatform, useInstallPrompt } from "./install";
 
 const PRIMARY =
-  "min-h-[var(--touch-target)] w-fit rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90";
-const TEXT = "font-sans text-[var(--text-sm)] leading-relaxed text-[var(--color-ink)]";
+  "min-h-[var(--touch-target)] w-fit rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[length:var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90";
+const TEXT = "font-sans text-[length:var(--text-sm)] leading-relaxed text-[var(--color-ink)]";
 
 /**
  * How to install, for the browser in front of us. Says only what it can tell: a browser it does

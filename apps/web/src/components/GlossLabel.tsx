@@ -75,7 +75,7 @@ export function GlossLabel({ id, className, as = "span", compact = false }: Glos
         </span>
         <Tooltip.Portal>
           <Tooltip.Content
-            className="z-50 max-w-64 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 py-2 font-serif text-[var(--text-sm)] italic text-[var(--color-ink-muted)] shadow-[var(--shadow-md)]"
+            className="z-50 max-w-64 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 py-2 font-serif text-[length:var(--text-sm)] italic text-[var(--color-ink-muted)] shadow-[var(--shadow-md)]"
             sideOffset={8}
           >
             {entry.gloss}

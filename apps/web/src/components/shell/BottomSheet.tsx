@@ -76,7 +76,7 @@ export function BottomSheet({ open, onClose, title, children }: BottomSheetProps
       >
         <div className="mx-auto mb-4 h-1.5 w-10 rounded-full bg-[var(--color-border-strong)]" />
         <div className="flex items-center justify-between">
-          <h2 id={titleId} className="font-serif text-[var(--text-lg)] font-semibold">
+          <h2 id={titleId} className="font-serif text-[length:var(--text-lg)] font-semibold">
             {title}
           </h2>
           <button

@@ -13,6 +13,7 @@ const NEXT: { href: string; label: string; hint: string }[] = [
   { href: "/read/Gen.1", label: "Back to reading", hint: "Pick up where you left off, or start at Genesis 1" },
   { href: "/toledot", label: "Toledot", hint: "The timeline of the evidence your support keeps growing" },
   { href: "/roadmap", label: "What is next", hint: "The work planned for the coming releases" },
+  { href: "/privacy", label: "Privacy", hint: "What Jot stores about you, and what it does not" },
 ];
 
 export default function SupportPage() {

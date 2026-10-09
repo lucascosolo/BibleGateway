@@ -68,7 +68,7 @@ export function SelahToggle({
                 "border font-sans font-medium transition-colors",
                 stacked
                   ? "flex min-h-[var(--touch-target)] w-full flex-col items-center gap-1 rounded-[var(--radius-lg)] px-1 py-2 text-center text-[0.6875rem] leading-tight break-words hyphens-auto"
-                  : "inline-flex h-11 items-center gap-2 rounded-[var(--radius-full)] px-3.5 text-[var(--text-sm)]",
+                  : "inline-flex h-11 items-center gap-2 rounded-[var(--radius-full)] px-3.5 text-[length:var(--text-sm)]",
                 selahMode
                   ? "border-[var(--color-rubric)] bg-[var(--color-rubric-soft)] text-[var(--color-rubric-strong)]"
                   : "border-[var(--color-border)] bg-transparent text-[var(--color-ink-muted)] hover:bg-[var(--color-surface-hover)]",
@@ -97,7 +97,7 @@ export function SelahToggle({
         </span>
         <Tooltip.Portal>
           <Tooltip.Content
-            className="z-50 max-w-64 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 py-2 font-serif text-[var(--text-sm)] italic text-[var(--color-ink-muted)] shadow-[var(--shadow-md)]"
+            className="z-50 max-w-64 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 py-2 font-serif text-[length:var(--text-sm)] italic text-[var(--color-ink-muted)] shadow-[var(--shadow-md)]"
             sideOffset={8}
           >
             {glossFor(entry, plainLabels)}

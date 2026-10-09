@@ -41,7 +41,7 @@ export function TourLauncher({
       type="button"
       onClick={openTour}
       className={clsx(
-        "inline-flex min-h-[var(--touch-target)] items-center gap-2 rounded-[var(--radius-md)] border border-[var(--color-border)] px-4 font-sans text-[var(--text-sm)] text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)]",
+        "inline-flex min-h-[var(--touch-target)] items-center gap-2 rounded-[var(--radius-md)] border border-[var(--color-border)] px-4 font-sans text-[length:var(--text-sm)] text-[var(--color-ink)] hover:bg-[var(--color-surface-hover)]",
         className,
       )}
     >

@@ -115,13 +115,13 @@ export default function RoadmapIndexPage() {
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-8 px-6 py-16">
       <div>
-        <p className="mb-1 font-sans text-[var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+        <p className="mb-1 font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
           Not built yet
         </p>
-        <h1 className="font-serif text-[var(--text-2xl)] text-[var(--color-ink)]">Roadmap</h1>
+        <h1 className="font-serif text-[length:var(--text-2xl)] text-[var(--color-ink)]">Roadmap</h1>
       </div>
 
-      <p className="font-serif text-[var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
+      <p className="font-serif text-[length:var(--text-md)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
         Everything on this page is planned and not yet built, except where a row says which slice
         has already shipped. Two whole workspaces are scheduled — they used to sit in the primary
         navigation next to the reader and search, and this page exists so that stops being true
@@ -130,7 +130,7 @@ export default function RoadmapIndexPage() {
       </p>
 
       <section className="flex flex-col gap-3">
-        <h2 className="font-sans text-[var(--text-sm)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+        <h2 className="font-sans text-[length:var(--text-sm)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
           Workspaces
         </h2>
         <ul className="flex flex-col gap-3">
@@ -142,9 +142,9 @@ export default function RoadmapIndexPage() {
               >
                 <span className="flex items-center gap-2">
                   {ws.lexiconId ? (
-                    <GlossLabel id={ws.lexiconId} as="strong" className="font-serif text-[var(--text-md)] font-semibold" />
+                    <GlossLabel id={ws.lexiconId} as="strong" className="font-serif text-[length:var(--text-md)] font-semibold" />
                   ) : (
-                    <span className="font-serif text-[var(--text-md)] font-semibold">{ws.plainLabel}</span>
+                    <span className="font-serif text-[length:var(--text-md)] font-semibold">{ws.plainLabel}</span>
                   )}
                   <span className="sr-only">{plannedSrText(ws.phase)}</span>
                 </span>
@@ -157,7 +157,7 @@ export default function RoadmapIndexPage() {
                   >
                     Soon
                   </span>
-                  <span aria-hidden="true" className="font-sans text-[var(--text-xs)] text-[var(--color-ink-faint)]">
+                  <span aria-hidden="true" className="font-sans text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
                     Phase {ws.phase}
                   </span>
                 </span>
@@ -168,7 +168,7 @@ export default function RoadmapIndexPage() {
       </section>
 
       <section className="flex flex-col gap-3">
-        <h2 className="font-sans text-[var(--text-sm)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+        <h2 className="font-sans text-[length:var(--text-sm)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
           Planned work inside what exists
         </h2>
         {/* No phase badges on these. The workspaces above have phase numbers because
@@ -180,13 +180,13 @@ export default function RoadmapIndexPage() {
               key={feature.key}
               className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-4 py-3"
             >
-              <h3 className="mb-1 flex flex-wrap items-baseline gap-1.5 font-serif text-[var(--text-md)] font-semibold text-[var(--color-ink)]">
+              <h3 className="mb-1 flex flex-wrap items-baseline gap-1.5 font-serif text-[length:var(--text-md)] font-semibold text-[var(--color-ink)]">
                 {feature.lexiconId && <GlossLabel id={feature.lexiconId} as="strong" />}
                 <span className={feature.lexiconId ? "font-normal text-[var(--color-ink-muted)]" : undefined}>
                   {feature.title}
                 </span>
               </h3>
-              <p className="font-sans text-[var(--text-sm)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
+              <p className="font-sans text-[length:var(--text-sm)] leading-[var(--leading-normal)] text-[var(--color-ink-muted)]">
                 {feature.body}
               </p>
             </li>
@@ -200,7 +200,7 @@ export default function RoadmapIndexPage() {
           the whole column and swallowing taps aimed past it. */}
       <Link
         href="/"
-        className="inline-flex min-h-[var(--touch-target)] items-center self-start font-sans text-[var(--text-sm)] text-[var(--color-brand)] underline underline-offset-4"
+        className="inline-flex min-h-[var(--touch-target)] items-center self-start font-sans text-[length:var(--text-sm)] text-[var(--color-brand)] underline underline-offset-4"
       >
         ← Back to Jot
       </Link>

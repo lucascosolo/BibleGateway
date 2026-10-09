@@ -179,7 +179,7 @@ export function LayerControls({
           "border border-[var(--color-border)] bg-transparent font-sans font-medium text-[var(--color-ink-muted)] transition-colors hover:bg-[var(--color-surface-hover)]",
           stacked
             ? "flex min-h-[var(--touch-target)] w-full flex-col items-center gap-1 rounded-[var(--radius-lg)] px-1 py-2 text-center text-[0.6875rem] leading-tight break-words hyphens-auto"
-            : "inline-flex h-11 items-center gap-2 rounded-[var(--radius-full)] px-3.5 text-[var(--text-sm)]",
+            : "inline-flex h-11 items-center gap-2 rounded-[var(--radius-full)] px-3.5 text-[length:var(--text-sm)]",
           className,
         )}
       >
@@ -240,7 +240,7 @@ function LayerSheetBody() {
           same three words twice, six pixels apart. The heading stays in the dialog title; what
           sits here now is the gloss, which says something the title does not. Sourced from the
           lexicon, never retyped — an inline copy is a copy free to drift (AGENTS.md). */}
-      <p className="font-serif text-[var(--text-xs)] italic text-[var(--color-ink-faint)]">
+      <p className="font-serif text-[length:var(--text-xs)] italic text-[var(--color-ink-faint)]">
         {glossFor(pardes, plainLabels)}
       </p>
 
@@ -257,7 +257,7 @@ function LayerSheetBody() {
           onChange={toggleSelahMode}
         />
         {selahMode && (
-          <p className="pb-2 font-sans text-[var(--text-xs)] text-[var(--color-ink-muted)]">
+          <p className="pb-2 font-sans text-[length:var(--text-xs)] text-[var(--color-ink-muted)]">
             Every layer below is hidden right now regardless of its switch — including the
             cross-reference panel beside the passage. Turning {selahLabel} off brings back
             whatever is switched on.
@@ -330,11 +330,11 @@ export function LayerRow({
       className="flex min-h-[var(--touch-target)] w-full items-center justify-between gap-3 rounded-[var(--radius-md)] px-1 py-2 text-start hover:bg-[var(--color-surface-hover)]"
     >
       <span className="min-w-0">
-        <span className="block font-sans text-[var(--text-sm)] text-[var(--color-ink)]">{label}</span>
+        <span className="block font-sans text-[length:var(--text-sm)] text-[var(--color-ink)]">{label}</span>
         {/* `leading-snug` rather than the inherited body leading. Seven of these rows now stack
             in a 22rem panel, and at normal leading a two-line description makes every row ~100px
             tall, which is what pushed the panel past the height of the screen. */}
-        <span className="block font-sans text-[var(--text-xs)] leading-snug text-[var(--color-ink-faint)]">
+        <span className="block font-sans text-[length:var(--text-xs)] leading-snug text-[var(--color-ink-faint)]">
           {description}
         </span>
       </span>
