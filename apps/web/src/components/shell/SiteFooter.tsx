@@ -1,11 +1,4 @@
-/**
- * Where "Support Jot" sends people. The business PayPal donate button (its return and cancel URLs are
- * /support/thanks and /support/cancelled), chosen 2026-10-08 over the
- * Trophonix Patreon (which is pitched at game development) and over Paddle (a merchant of
- * record whose terms exclude donations). Overridable per deployment; the iOS shell should set it
- * empty so the link does not render there (App Store guideline 3.1.1).
- */
-const SUPPORT_URL = process.env.NEXT_PUBLIC_SUPPORT_URL ?? "https://www.paypal.com/donate/?hosted_button_id=EQK7PQ72S49K2";
+import { SUPPORT_URL } from "@/lib/support";
 
 /** Secondary links stay after the page content, clear of the reading controls. */
 export function SiteFooter() {

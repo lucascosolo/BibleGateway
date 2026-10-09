@@ -115,11 +115,11 @@ describe("TourSetup", () => {
 
   it("does not re-arm the first-run tour", async () => {
     stubFetch({ translations: TRANSLATIONS });
-    usePreferencesStore.getState().setTourSeen(true);
+    usePreferencesStore.getState().setTourSeenVersion(2);
     render(<TourSetup />);
 
     fireEvent.click(screen.getByRole("button", { name: "Restore defaults" }));
-    expect(usePreferencesStore.getState().tourSeen).toBe(true);
+    expect(usePreferencesStore.getState().tourSeenVersion).toBe(2);
   });
 
   it("aborts the in-flight request when the tour is dismissed", async () => {

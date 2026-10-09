@@ -12,7 +12,7 @@
 // succeeds while quietly producing something that does not work — so it gets the same treatment:
 // an explicit assertion, because the absence of an error proves nothing.
 
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -281,5 +281,31 @@ describe("globals.css design tokens", () => {
     for (const v of values!) {
       expect(v, `--shadow-color: ${v} — lightness must carry a % sign`).toMatch(/^\d+(\.\d+)?%\s/);
     }
+  });
+});
+
+describe("custom property references", () => {
+  // A `var(--x)` whose token is defined nowhere makes the whole declaration invalid at
+  // computed-value time, so `padding-block-start: var(--space-7)` silently became 0 and the
+  // comparison page's heading sat under the phone's browser chrome. Every token a stylesheet
+  // reads without a fallback must exist in globals.css or in that stylesheet; the font tokens
+  // are set by next/font on the html element and are the one allowed exception.
+  it("every var() without a fallback in app/*.css names a token globals.css or that file defines", () => {
+    const dir = import.meta.dirname;
+    const defined = new Set(props.keys());
+    const missing: string[] = [];
+    for (const file of readdirSync(dir).filter((f) => f.endsWith(".css"))) {
+      const source = readFileSync(path.join(dir, file), "utf8");
+      const local = collectCustomProperties(source);
+      for (const m of source.matchAll(/var\((--[\w-]+)\s*\)/g)) {
+        const name = m[1];
+        // Font stacks: `--font-*` come from next/font; `--jot-font-*` are declared in a
+        // multi-line value this test's single-line collector does not parse.
+        if (name.startsWith("--font-") || name.startsWith("--jot-font-")) continue;
+        if (defined.has(name) || local.has(name)) continue;
+        missing.push(`${file}: ${name}`);
+      }
+    }
+    expect(missing, missing.join("\n")).toEqual([]);
   });
 });

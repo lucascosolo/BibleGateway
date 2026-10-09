@@ -50,6 +50,7 @@
   --color-brand: oklch(46% 0.075 185);          /* oxidised bronze-green */
   --color-brand-strong: oklch(32% 0.078 185);  /* action text pair: >4.5:1 with ink-on-accent */
   --color-brand-soft: oklch(91% 0.03 185);
+  --color-brand-glow: oklch(46% 0.075 185 / 0.45);  /* the home button halo: brand at 45% */
   --color-rubric: oklch(52% 0.19 32);           /* rubric red */
   --color-rubric-strong: oklch(44% 0.19 30);
   --color-rubric-soft: oklch(92% 0.05 30);
@@ -130,7 +131,7 @@
   /* The raised home button when the reader is on the home page: a soft halo in the brand
      colour plus a lifted shadow, so "you are here" reads from across the room and not only
      from a 2px ring. Both layers derive from brand tokens, so the dark theme follows. */
-  --shadow-glow-brand: 0 0 0 4px var(--color-brand-soft), 0 6px 18px oklch(from var(--color-brand) l c h / 0.45);
+  --shadow-glow-brand: 0 0 0 4px var(--color-brand-soft), 0 6px 18px var(--color-brand-glow);
 
   /* ---- borders as tokens ---- */
   --border-hairline: 1px solid var(--color-border);
@@ -242,6 +243,8 @@
     --color-brand: oklch(72% 0.09 182);
     --color-brand-strong: oklch(80% 0.09 182);
     --color-brand-soft: oklch(30% 0.05 182);
+  --color-brand-glow: oklch(72% 0.09 182 / 0.45);
+    --color-brand-glow: oklch(72% 0.09 182 / 0.45);
     --color-rubric: oklch(70% 0.17 30);
     --color-rubric-strong: oklch(78% 0.17 28);
     --color-rubric-soft: oklch(32% 0.09 28);

@@ -7,9 +7,11 @@ import { createPortal } from "react-dom";
 import { useModalSurface } from "@/lib/a11y/modal-surface";
 import { getLexiconEntry } from "@/lib/lexicon";
 import { usePreferencesStore } from "@/lib/store/preferences";
-import { useTourStore } from "@/lib/store/tour";
+import { SUPPORT_URL } from "@/lib/support";
+import { TOUR_VERSION, useTourStore } from "@/lib/store/tour";
 import { WORKSPACE_ICONS } from "@/components/shell/icons";
 import { TOUR_STEPS } from "./tour-steps";
+import { InstallPanel } from "./InstallPanel";
 import { TourSetup } from "./TourSetup";
 
 /**
@@ -38,36 +40,41 @@ export function GuidedTour() {
   const open = useTourStore((s) => s.open);
   const openTour = useTourStore((s) => s.openTour);
   const closeTour = useTourStore((s) => s.closeTour);
-  const tourSeen = usePreferencesStore((s) => s.tourSeen);
-  const setTourSeen = usePreferencesStore((s) => s.setTourSeen);
+  const startStepId = useTourStore((s) => s.startStepId);
+  const tourSeenVersion = usePreferencesStore((s) => s.tourSeenVersion);
+  const setTourSeenVersion = usePreferencesStore((s) => s.setTourSeenVersion);
 
   const [mounted, setMounted] = useState(false);
   const [index, setIndex] = useState(0);
+  const [wasOpen, setWasOpen] = useState(false);
   const titleId = useId();
   const bodyId = useId();
   const headingRef = useRef<HTMLHeadingElement | null>(null);
 
   useEffect(() => setMounted(true), []);
 
-  // First run. Gated on `mounted` because `tourSeen` comes from localStorage: reading it during
+  // Each opening starts at the requested step (the install nudge asks for its own), else at the
+  // first. Set during render rather than in an effect so step 1 never flashes first.
+  if (open !== wasOpen) {
+    setWasOpen(open);
+    if (open) setIndex(Math.max(0, TOUR_STEPS.findIndex((s) => s.id === startStepId)));
+  }
+
+  // First run. Gated on `mounted` because `tourSeenVersion` comes from localStorage: reading it during
   // the server render would render the dialog into HTML for everyone, and reading it during the
   // first client render would produce a hydration mismatch for anyone who has seen it.
   useEffect(() => {
     if (!mounted) return;
-    if (tourSeen) return;
+    // Only a reader who has never seen any tour gets it whole; an older version gets
+    // `<InstallNudge>` instead.
+    if (tourSeenVersion !== 0) return;
     openTour();
     // Marked seen on OPEN, not on finish. Someone who closes the tab halfway through has seen
     // it; reopening it on their next visit would be the app failing to take no for an answer.
-    setTourSeen(true);
-  }, [mounted, tourSeen, openTour, setTourSeen]);
+    setTourSeenVersion(TOUR_VERSION);
+  }, [mounted, tourSeenVersion, openTour, setTourSeenVersion]);
 
-  const dismiss = useCallback(() => {
-    closeTour();
-    // Reset so reopening starts at the beginning rather than wherever it was abandoned. Done on
-    // close rather than on open so the reset is not visible as a flash of step 1 while the
-    // dialog fades.
-    setIndex(0);
-  }, [closeTour]);
+  const dismiss = useCallback(() => closeTour(), [closeTour]);
 
   const { rootRef, dialogRef } = useModalSurface<HTMLDivElement, HTMLDivElement>({
     open,
@@ -161,6 +168,17 @@ export function GuidedTour() {
               the dialog's accessible description rather than sitting outside it as an unrelated
               region. The dialog is already `overflow-y-auto` and capped at 88dvh, so a panel
               taller than the viewport scrolls rather than escaping the box. */}
+          {step.action === "support" && SUPPORT_URL && (
+            <a
+              href={SUPPORT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[var(--touch-target)] w-fit items-center rounded-[var(--radius-md)] bg-[var(--color-brand)] px-4 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-bg)] hover:opacity-90"
+            >
+              Donate with PayPal
+            </a>
+          )}
+          {step.action === "install" && <InstallPanel />}
           {step.setup && (
             <div className="mt-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-sunken)] p-4">
               <TourSetup />

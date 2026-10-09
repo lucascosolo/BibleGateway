@@ -1,4 +1,5 @@
 import type { LexiconId } from "@/lib/lexicon";
+import { SUPPORT_URL } from "@/lib/support";
 
 /**
  * What the guided tour says.
@@ -43,7 +44,20 @@ export interface TourStep {
    * button. Only its body is different.
    */
   setup?: boolean;
+  /** Renders the donate link (`support`) or the platform-aware install panel (`install`). */
+  action?: "support" | "install";
 }
+
+const SUPPORT_STEP: TourStep = {
+  id: "support",
+  title: "Support the work",
+  action: "support",
+  what:
+    "Jot is free and has no ads. If you would like to help pay for it, the “Support Jot” link at the foot of every page opens a PayPal donation.",
+  why:
+    "The PayPal form has a note field. If there is something you wish Jot did, say so there — notes left with a donation are read, and they help decide what gets built next.",
+};
+
 
 export const TOUR_STEPS: TourStep[] = [
   {
@@ -140,10 +154,21 @@ export const TOUR_STEPS: TourStep[] = [
   },
   {
     id: "reopen",
-    title: "That is the tour",
+    title: "Finding this guide again",
     what:
       "You can reopen this guide whenever you like: the “Guide” button beside the reading controls, or the link near the top of the home page.",
     why:
       "Nothing here is hidden behind having paid attention the first time.",
+  },
+  // Omitted where SUPPORT_URL is set empty (the iOS shell), exactly as the footer link is.
+  ...(SUPPORT_URL ? [SUPPORT_STEP] : []),
+  {
+    id: "install",
+    title: "Keep it on your home screen",
+    action: "install",
+    what:
+      "Jot can live on your home screen like an app: it opens full-screen, without the browser around it, and picks up where you left off.",
+    why:
+      "A passage you mean to come back to is easier to come back to when the book is one tap away, and the text gets the whole screen.",
   },
 ];

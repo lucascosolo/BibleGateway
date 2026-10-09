@@ -1595,7 +1595,7 @@
 .parallel-index nav { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .parallel-index nav a { padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-md); }
 @media (max-width: 47.999rem) {
-  .parallel { padding-block-start: var(--space-7); }
+  .parallel { padding-block-start: var(--space-6); }
   .parallel__header { display: block; }
   .parallel__back { display: inline-block; margin-block-start: var(--space-4); }
   .parallel__row { grid-template-columns: 2rem minmax(0, 1fr); gap: var(--space-3); }

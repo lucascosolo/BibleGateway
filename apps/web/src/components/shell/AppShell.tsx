@@ -5,8 +5,9 @@ import { useBreakpoint } from "@/lib/capability";
 import { BottomTabBar } from "./BottomTabBar";
 import { TopTabs } from "./TopTabs";
 import { NavRail } from "./NavRail";
-import { WORKSPACES, type Workspace } from "./workspaces";
+import { HOME_WORKSPACE, WORKSPACES, type Workspace } from "./workspaces";
 import { GuidedTour } from "@/components/onboarding/GuidedTour";
+import { InstallNudge } from "@/components/onboarding/InstallNudge";
 import { CommandPalette } from "./CommandPalette";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { SiteFooter } from "./SiteFooter";
@@ -19,11 +20,16 @@ interface AppShellProps {
   sidebar?: React.ReactNode;
 }
 
-function useActiveWorkspace(explicit?: Workspace["key"]): Workspace["key"] {
-  const pathname = usePathname();
-  if (explicit) return explicit;
+/** The workspace a path belongs to: "/" is Home, an unknown path falls back to Read. */
+export function workspaceForPath(pathname: string | null): Workspace["key"] {
+  if (pathname === HOME_WORKSPACE.href) return HOME_WORKSPACE.key;
   const match = WORKSPACES.find((ws) => pathname?.startsWith(ws.href));
   return match?.key ?? "read";
+}
+
+function useActiveWorkspace(explicit?: Workspace["key"]): Workspace["key"] {
+  const pathname = usePathname();
+  return explicit ?? workspaceForPath(pathname);
 }
 
 /**
@@ -45,6 +51,8 @@ export function AppShell({ children, active: explicitActive, sidebar }: AppShell
           until it is opened, and it portals to <body>, so its position in this tree is only
           about lifetime. */}
       <GuidedTour />
+      {/* Once, beside the tour: it also holds the captured install prompt for the whole visit. */}
+      <InstallNudge />
       <CommandPalette />
       {/* Same reasoning as the tour: mounted once, outside the breakpoint branch, because the
           `<audio>` element inside it must survive both a width change and a client navigation

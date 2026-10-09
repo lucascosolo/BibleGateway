@@ -69,7 +69,7 @@ const defaultLayers: LayerToggles = {
  * apparatus they have always had, with no action of their own. The migration below moves
  * exactly that cohort onto the new default and leaves every other preference alone.
  */
-const PREFERENCES_VERSION = 3;
+const PREFERENCES_VERSION = 4;
 
 interface PreferencesState {
   layers: LayerToggles;
@@ -80,14 +80,13 @@ interface PreferencesState {
   tradition: string;
   lastRead: LastRead | null;
   /**
-   * Whether the first-run guided tour has been shown.
+   * Which version of the guided tour this reader has seen; 0 is never.
    *
-   * Stored as a plain boolean rather than a version number on purpose. A version would let a
-   * later change re-open the tour over everyone's page, and a tour that reappears after you have
-   * dismissed it is worse than one that never updates — the guide is reachable on demand from
-   * the rail and the home page either way.
+   * A version, not a boolean, so new steps can reach people who saw an older tour. What they get
+   * is decided by `tourEntry` in `tour.ts`: never the whole tour again (a tour that reappears
+   * after you dismissed it is worse than one that never updates), only a one-time nudge.
    */
-  tourSeen: boolean;
+  tourSeenVersion: number;
 
   toggleLayer: (layer: keyof LayerToggles) => void;
   setSelahMode: (on: boolean) => void;
@@ -98,14 +97,14 @@ interface PreferencesState {
   setTranslation: (code: string) => void;
   setTradition: (tradition: string) => void;
   setLastRead: (lastRead: Omit<LastRead, "readAt">) => void;
-  setTourSeen: (seen: boolean) => void;
+  setTourSeenVersion: (version: number) => void;
   /**
    * Put every *configurable* preference back to its shipped default.
    *
    * Deliberately narrow. `lastRead` is a record of something the reader did, not a setting, and
-   * `tourSeen` is the flag that decides whether the tour opens itself — resetting it from a
+   * `tourSeenVersion` decides whether the tour opens itself — resetting it from a
    * button inside the tour would arm the dialog to reopen over the reader's next page, which is
-   * the one thing `tourSeen`'s comment above exists to prevent.
+   * the one thing `tourSeenVersion`'s comment above exists to prevent.
    */
   resetSettings: () => void;
 }
@@ -128,7 +127,7 @@ export const usePreferencesStore = create<PreferencesState>()(
     (set) => ({
       ...DEFAULT_SETTINGS,
       lastRead: null,
-      tourSeen: false,
+      tourSeenVersion: 0,
 
       toggleLayer: (layer) =>
         set((state) => ({
@@ -142,7 +141,7 @@ export const usePreferencesStore = create<PreferencesState>()(
       setTranslation: (code) => set({ translation: code }),
       setTradition: (tradition) => set({ tradition }),
       setLastRead: (lastRead) => set({ lastRead: { ...lastRead, readAt: Date.now() } }),
-      setTourSeen: (tourSeen) => set({ tourSeen }),
+      setTourSeenVersion: (tourSeenVersion) => set({ tourSeenVersion }),
       // Spread a fresh copy of `layers`: `DEFAULT_SETTINGS.layers` is the same object every
       // call, and handing the store a reference to it would let the next `toggleLayer` — which
       // spreads before writing — be fine, but any future direct mutation corrupt the constant
@@ -153,7 +152,10 @@ export const usePreferencesStore = create<PreferencesState>()(
       name: PREFERENCES_STORAGE_KEY,
       version: PREFERENCES_VERSION,
       migrate: (persisted, from) => {
-        const state = (persisted ?? {}) as Partial<PreferencesState>;
+        // v3 -> v4: the boolean `tourSeen` became `tourSeenVersion`. Everyone who saw a tour
+        // before this saw version 1 of it.
+        const { tourSeen, ...rest } = (persisted ?? {}) as Partial<PreferencesState> & { tourSeen?: boolean };
+        const state: Partial<PreferencesState> = { ...rest, tourSeenVersion: rest.tourSeenVersion ?? (tourSeen ? 1 : 0) };
         // v1 -> v2: `interlinear` was added. `persist` merges the stored object over the
         // defaults SHALLOWLY, so a stored `layers` replaces the default object wholesale and
         // any key added since is simply absent — `undefined`, not `false`. That reads as falsy
