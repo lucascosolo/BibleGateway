@@ -76,7 +76,9 @@ function eventDate(s: EventSubject): string {
         ? `${all} scholarly positions fall in ${range}`
         : `scholars disagree, with ${countWord(n)} positions spanning ${range}`
     : n === 1
-      ? `a chronological reckoning dates it to ${range}${doubt}`
+      ? s.confidence === "firm"
+        ? `dated to ${range}` // a firm date (Babylon 539, the Temple 70) is not a mere reckoning
+        : `a chronological reckoning dates it to ${range}${doubt}`
       : s.earliest === s.latest
         ? `${all} chronological reckonings date it to ${range}`
         : `${countWord(n)} chronological reckonings span ${range}`;

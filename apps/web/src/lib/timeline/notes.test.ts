@@ -87,7 +87,7 @@ describe("toledotSentence: events", () => {
   });
   it("chronological only, one position, firm: no confidence clause", () => {
     const s = body(note(event({ title: "Second Temple destroyed", confidence: "firm", earliest: 70, latest: 70, positions: [pos("Only", "chronological")] })));
-    expect(s).toBe("Second Temple destroyed: a chronological reckoning dates it to 70 CE.");
+    expect(s).toBe("Second Temple destroyed: dated to 70 CE.");
   });
   it("chronological only, two positions in one year: both reckonings", () => {
     const s = body(note(event({ title: "Ruth", earliest: -1100, latest: -1100, positions: [pos("A", "chronological"), pos("B", "chronological")] })));
