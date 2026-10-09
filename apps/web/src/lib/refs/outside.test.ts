@@ -35,7 +35,12 @@ const BOOKS: BookRecord[] = [
   out(102, "GPet", "Gospel of Peter", "Gos. Pet.", 1, "nt-apocrypha", "section"),
   out(110, "Did", "Didache", "Did.", 16, "apostolic", "chapter"),
   out(115, "IgnRom", "Ignatius to the Romans", "Ign. Rom.", 10, "apostolic", "chapter"),
-  out(120, "Herm", "Shepherd of Hermas", "Herm.", 210, "apostolic", "part-chapter"),
+  out(104, "InfThom", "Infancy Gospel of Thomas", "Inf. Thom.", 45, "nt-apocrypha", "part-chapter"),
+  out(107, "GMary", "Gospel of Mary", "Gos. Mary", 9, "nt-apocrypha", "page"),
+  out(108, "GJudas", "Gospel of Judas", "Gos. Judas", 26, "nt-apocrypha", "page"),
+  out(109, "GPhil", "Gospel of Philip", "Gos. Phil.", 36, "nt-apocrypha", "page"),
+  out(111, "1Clem", "1 Clement", "1 Clem.", 65, "apostolic", "chapter"),
+  out(120, "Herm", "Shepherd of Hermas", "Herm.", 27, "apostolic", "part-chapter"),
 ];
 
 const books = new BookIndex(BOOKS);
@@ -162,5 +167,28 @@ describe("existing books are unaffected", () => {
   it("parses John and Jude", () => {
     expect(parse("John 3:16").start).toBe(43_003_016);
     expect(parse("Jude 5").start).toBe(65_001_005);
+  });
+});
+
+describe("outside books: real chapter counts and page numbering", () => {
+  it("reads Thomas 77 as logion 77 although the book has one chapter", () => {
+    expectVerse(["Thomas 77"], 101_001_077);
+  });
+  it("parses Didache, 1 Clement and Ignatius Romans as whole chapters", () => {
+    expectChapter(["Didache 9"], 110, 9);
+    expectChapter(["1 Clement 5"], 111, 5);
+    expectChapter(["Ignatius Romans 4"], 115, 4);
+  });
+  it("keeps Hermas part bands with 27 real chapters", () => {
+    expectChapter(["Hermas Mandate 4"], 120, 104);
+    expect(() => parse("Hermas Vision 6")).toThrow(InvalidReferenceError);
+  });
+  it("reads 1 Enoch chapter:verse", () => {
+    expectVerse(["1 Enoch 1:9"], 85_001_009);
+  });
+  it("does not reject a page number above chapter_count for page books", () => {
+    expectChapter(["Gospel of Mary 9"], 107, 9);
+    expectChapter(["Gospel of Judas 33"], 108, 33);
+    expectVerse(["Gospel of Philip 86:2"], 109_086_002);
   });
 });

@@ -1,3 +1,5 @@
+import type { PlainSourceId } from "./outside-plain.js";
+
 // The reviewed translation table.
 //
 // Every entry here is a claim about somebody else's licence, and that claim is rendered under
@@ -100,8 +102,14 @@ export interface TranslationSource {
   code: string;
   name: string;
   language: string;
-  /** eBible.org translation id; also the zip basename. */
-  ebibleId: string;
+  /** eBible.org translation id; also the zip basename. Absent for a plain-text edition. */
+  ebibleId?: string;
+  translator?: string;
+  year?: string;
+  /** Where the licence (or the date that establishes it) can be read. */
+  licenseUrl?: string;
+  /** A plain-text outside edition, loaded through outside-plain.ts instead of USFX. */
+  plain?: readonly PlainSourceRef[];
   license: string;
   /** Transcribed from the distribution's copr.htm. Rendered under every passage. */
   copyrightNotice: string;
@@ -155,6 +163,203 @@ export interface TranslationSource {
     why: string;
   };
 }
+
+export interface PlainSourceRef {
+  id: PlainSourceId;
+  /** Relative to the filed sources directory (~/.cache/jot/sources/outside). */
+  file: string;
+  format: "tab" | "mattison-html";
+  /** The reviewed (for OCR texts, proofread) file; any other content fails the build. */
+  sha256: string;
+  url: string;
+  /** A filed licence evidence file and a phrase it must still contain. */
+  licenceEvidence: readonly [file: string, phrase: string];
+}
+
+const MATTISON_DEDICATION = "committed to the public domain and may be freely copied and used, changed or unchanged, for any purpose";
+const CCEL_PD = "<DC.Rights>Public Domain</DC.Rights>";
+
+/** The Second Temple, New Testament apocrypha and Apostolic Fathers texts (chunk 4). */
+const PLAIN_SOURCES: readonly TranslationSource[] = [
+  {
+    translationId: 10,
+    code: "CHARLES",
+    name: "R. H. Charles's Pseudepigrapha",
+    language: "English",
+    translator: "R. H. Charles",
+    year: "1913-1918",
+    license: "Public Domain (published 1913-1918; the translator died in 1931)",
+    licenseUrl: "https://en.wikipedia.org/wiki/R._H._Charles",
+    copyrightNotice:
+      "Translated by R. H. Charles: The Book of Enoch (SPCK, 1917); The Book of Jubilees (The " +
+      "Apocrypha and Pseudepigrapha of the Old Testament, Oxford, 1913); The Testaments of the " +
+      "Twelve Patriarchs (SPCK, 1917); The Apocalypse of Baruch (SPCK, 1918). Public domain. The " +
+      "Testaments and 2 Baruch were proofread against the printed pages in 2026.",
+    licenseAssertion: "PD/US|1931",
+    scope: "outside",
+    scopeNote:
+      "R. H. Charles's translations of 1 Enoch, Jubilees, the Testaments of the Twelve Patriarchs " +
+      "(Testament of Reuben, Testament of Simeon, Testament of Levi, Testament of Judah, Testament " +
+      "of Issachar, Testament of Zebulun, Testament of Dan, Testament of Naphtali, Testament of " +
+      "Gad, Testament of Asher, Testament of Joseph, Testament of Benjamin) and 2 Baruch, in " +
+      "Charles's chapter and verse numbering. The prologue of Jubilees is verse 0 of chapter 1. " +
+      "The Testament of Levi has no 6:3 and the Testament of Zebulun no 4:4 because the printed " +
+      "edition has no verse with those numbers.",
+    expectedVerses: [4_065, 4_065],
+    includedBookIds: [...range(85, 98), 100],
+    plain: [
+      { id: "charles-1enoch", file: "charles-1enoch/text.txt", format: "tab", sha256: "65a7448a300400dc4729b76b277acb691339060be0fde0c523c2ffd50e181b97", url: "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)", licenceEvidence: ["charles-1enoch/licence-wikisource-root.wiki", "PD/US|1931"] },
+      { id: "charles-jubilees", file: "charles-jubilees/text.txt", format: "tab", sha256: "8d2b36d0f1d69fc00d45f05a97d5e06d18a44c1a71a3800b69b309fa6097fa1f", url: "https://www.pseudepigrapha.com/jubilees/index.htm", licenceEvidence: ["charles-jubilees/licence-wikipedia-charles.html", "1855-1931"] },
+      { id: "charles-testaments", file: "charles-testaments/text.proofread.txt", format: "tab", sha256: "50aabf81728e6453a4acc6fc458d941897ab23055986eeed39e5b93000bb2525", url: "https://archive.org/details/testamentsoftwel00char", licenceEvidence: ["charles-testaments/archive-metadata.json", '"date":"1917"'] },
+      { id: "charles-2baruch", file: "charles-2baruch/text.proofread.txt", format: "tab", sha256: "ee162e7b79394e5f2543ce737c1f34cf0902f0b272495a4e02a97a888dd375d5", url: "https://archive.org/details/apocalypseofbaru00cha", licenceEvidence: ["charles-2baruch/archive-metadata.json", '"date":"1918"'] },
+    ],
+  },
+  {
+    translationId: 11,
+    code: "GRAY",
+    name: "G. Buchanan Gray's Psalms of Solomon",
+    language: "English",
+    translator: "G. Buchanan Gray",
+    year: "1913",
+    license: "Public Domain (published 1913; the translator died in 1922)",
+    licenseUrl: "https://archive.org/details/Charles_The-Apocrypha-of-the-Old-Testament-vol-2_1913",
+    copyrightNotice:
+      "Translated by G. Buchanan Gray, in R. H. Charles (ed.), The Apocrypha and Pseudepigrapha of " +
+      "the Old Testament, vol. 2 (Oxford, 1913), pp. 631-652. Public domain. Proofread against the " +
+      "printed pages in 2026.",
+    licenseAssertion: '"date":"1913"',
+    scope: "outside",
+    scopeNote:
+      "The Psalms of Solomon in G. Buchanan Gray's translation, psalm and verse in Gray's own " +
+      "numbering. The edition prints no 13:6. Twelve verse numbers in Psalms 17 and 18 are cut off " +
+      "in the scan and were assigned from the Greek numbering and Gray's notes.",
+    expectedVerses: [328, 328],
+    includedBookIds: [99],
+    plain: [
+      { id: "gray-psalms-solomon", file: "gray-psalms-solomon/text.proofread.txt", format: "tab", sha256: "a1f06c10e96ae38b59d85f5db182529de36c34eb279ca95fbb6c81c65e831e86", url: "https://archive.org/details/Charles_The-Apocrypha-of-the-Old-Testament-vol-2_1913", licenceEvidence: ["gray-psalms-solomon/archive-metadata.json", '"date":"1913"'] },
+    ],
+  },
+  {
+    translationId: 12,
+    code: "MATTISON",
+    name: "Mark M. Mattison's Gospels",
+    language: "English",
+    translator: "Mark M. Mattison",
+    year: "undated (gospels.net, accessed 2026-10-09)",
+    license: "Public domain dedication by the translator",
+    licenseUrl: "https://www.gospels.net/thomas/",
+    copyrightNotice:
+      "Translated by Mark M. Mattison (gospels.net). The translator has committed these " +
+      "translations to the public domain: they may be freely copied and used, changed or " +
+      "unchanged, for any purpose.",
+    licenseAssertion: MATTISON_DEDICATION,
+    scope: "outside",
+    scopeNote:
+      "Mark M. Mattison's translations of the Gospel of Thomas (logia 1-114 of the Coptic Gospel " +
+      "of Thomas, with the prologue as logion 0), the Gospel of Mary, the Gospel of Judas and the " +
+      "Gospel of Philip. Mary, Judas and Philip are numbered by the manuscript page Mattison prints " +
+      "(Mary 7-10 and 15-19, the other pages being lost; Judas 33-58; Philip 51-86); the verse is " +
+      "the passage's place on that page, counted here, not printed by the translator.",
+    expectedVerses: [376, 376],
+    includedBookIds: [101, 107, 108, 109],
+    plain: [
+      { id: "mattison-thomas", file: "mattison-thomas/text.txt", format: "tab", sha256: "36417c4cd1671561839ed9aa6f2813a066d1ff15957d1eecfee5055947abad22", url: "https://www.gospels.net/thomas/", licenceEvidence: ["mattison-thomas/index.html", MATTISON_DEDICATION] },
+      { id: "mattison-mary", file: "described-works/gospels-net-mary.html", format: "mattison-html", sha256: "1fbf26b9c23f48a901b20625bba37e6e79a22ca18f16c036bd52976a36376293", url: "https://www.gospels.net/mary", licenceEvidence: ["described-works/gospels-net-mary.html", MATTISON_DEDICATION] },
+      { id: "mattison-judas", file: "described-works/gospels-net-judas.html", format: "mattison-html", sha256: "d8ed61e43f25ecfd29a55fb657a0e4b54f7799a65b655c952a84398a40328efc", url: "https://www.gospels.net/judas", licenceEvidence: ["described-works/gospels-net-judas.html", MATTISON_DEDICATION] },
+      { id: "mattison-philip", file: "described-works/gospels-net-philip.html", format: "mattison-html", sha256: "b71f86fb08060c94984300a035919ff62ea07159a08ce0273c1b15ec69359168", url: "https://www.gospels.net/philip", licenceEvidence: ["described-works/gospels-net-philip.html", MATTISON_DEDICATION] },
+    ],
+  },
+  {
+    translationId: 13,
+    code: "ANF",
+    name: "Ante-Nicene Fathers Apocrypha",
+    language: "English",
+    translator: "J. Armitage Robinson (Gospel of Peter); Alexander Walker (the others)",
+    year: "1870-1896",
+    license: "Public Domain (published 1870-1896)",
+    licenseUrl: "https://www.ccel.org/ccel/schaff/anf08.html",
+    copyrightNotice:
+      "From the Ante-Nicene Fathers (American edition, vols. 8 and 9, 1886 and 1896): the Gospel of " +
+      "Peter translated by J. Armitage Robinson; the Protevangelium of James, the Infancy Gospel of " +
+      "Thomas and the Acts of Paul and Thecla translated by Alexander Walker (1870). Public domain; " +
+      "text from the Christian Classics Ethereal Library.",
+    licenseAssertion: CCEL_PD,
+    scope: "outside",
+    scopeNote:
+      "The Gospel of Peter, the Protevangelium of James, the Infancy Gospel of Thomas and the Acts " +
+      "of Paul and Thecla, from the Ante-Nicene Fathers. The Gospel of Peter is in Robinson's " +
+      "sections 1-14 (the finer verse numbers are not printed there). The Protevangelium is one unit " +
+      "per chapter. The Infancy Gospel of Thomas is one unit per chapter of each form: the first " +
+      "Greek form as chapters 1-19, the second as 101-111, the Latin as 201-215. The Acts of Paul and " +
+      "Thecla print no numbers at all; its paragraphs are counted here in order, 1-29 as chapter 1 " +
+      "and the ending from Grabe's manuscript as chapter 2.",
+    expectedVerses: [114, 114],
+    includedBookIds: [102, 103, 104, 105],
+    plain: [
+      { id: "robinson-gospel-peter", file: "robinson-gospel-peter/text.txt", format: "tab", sha256: "706188d5ddff78d9eaa435b15cfefcac1450184d0590efa8c5957698ae5a7c5a", url: "https://www.ccel.org/ccel/schaff/anf09.html", licenceEvidence: ["robinson-gospel-peter/anf09.xml", CCEL_PD] },
+      { id: "walker-protevangelium", file: "walker-protevangelium/text.txt", format: "tab", sha256: "785ab97036618dfded205687dc6eff4edf17dea067cd50bab2354eac38c585a5", url: "https://www.ccel.org/ccel/schaff/anf08.html", licenceEvidence: ["walker-protevangelium/anf08.xml", CCEL_PD] },
+      { id: "walker-infancy-thomas", file: "walker-infancy-thomas/text.txt", format: "tab", sha256: "a237c9285d87792238d08de1c55fe837a60f0d1c184084ca924fa64aaf084690", url: "https://www.ccel.org/ccel/schaff/anf08.html", licenceEvidence: ["walker-infancy-thomas/anf08.xml", CCEL_PD] },
+      { id: "walker-thecla", file: "walker-thecla/text.txt", format: "tab", sha256: "7657e36050b367e31509373af99f101fdfd1a124fd467f4e6e0eb504a9d23681", url: "https://www.ccel.org/ccel/schaff/anf08.html", licenceEvidence: ["walker-thecla/anf08.xml", CCEL_PD] },
+    ],
+  },
+  {
+    translationId: 14,
+    code: "JAMES1924",
+    name: "M. R. James's Apocalypse of Peter",
+    language: "English",
+    translator: "M. R. James",
+    year: "1924",
+    license: "Public Domain (published 1924; the translator died in 1936)",
+    licenseUrl: "https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)/Apocalypses/The_Apocalypse_of_Peter",
+    copyrightNotice:
+      "Translated by M. R. James, The Apocryphal New Testament (Oxford: Clarendon Press, 1924). " +
+      "Public domain; transcription from Wikisource.",
+    licenseAssertion: "PD/US|1936",
+    scope: "outside",
+    scopeNote:
+      "The Apocalypse of Peter from M. R. James's Apocryphal New Testament: the Akhmim Greek fragment " +
+      "as chapter 1, verses 1-34 as James prints them, and the Ethiopic text as chapter 2, whose 51 " +
+      "paragraphs James does not number; they are counted here in order.",
+    expectedVerses: [85, 85],
+    includedBookIds: [106],
+    plain: [
+      { id: "james-apocalypse-peter", file: "james-apocalypse-peter/text.txt", format: "tab", sha256: "9a0907ebe9e95140111d38975cdf9fc298129d1705e72777956fe06a58d291f6", url: "https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)/Apocalypses/The_Apocalypse_of_Peter", licenceEvidence: ["james-apocalypse-peter/index-1924.raw.wiki", "PD/US|1936"] },
+    ],
+  },
+  {
+    translationId: 15,
+    code: "LIGHTFOOT",
+    name: "Lightfoot-Harmer Apostolic Fathers",
+    language: "English",
+    translator: "J. B. Lightfoot and J. R. Harmer",
+    year: "1891",
+    license: "Public Domain (published 1891; the editors died in 1889 and 1944)",
+    licenseUrl: "https://www.ccel.org/ccel/lightfoot/fathers.html",
+    copyrightNotice:
+      "From The Apostolic Fathers, ed. J. B. Lightfoot and J. R. Harmer (London: Macmillan, 1891): " +
+      "1 Clement and Ignatius translated by Lightfoot; the Didache, Barnabas and Hermas completed by " +
+      "Harmer from Lightfoot's notes. Public domain; text from the Christian Classics Ethereal Library.",
+    licenseAssertion: CCEL_PD,
+    scope: "outside",
+    scopeNote:
+      "The Didache, 1 Clement, the seven letters of Ignatius (Ignatius to the Ephesians, Ignatius to " +
+      "the Magnesians, Ignatius to the Trallians, Ignatius to the Romans, Ignatius to the " +
+      "Philadelphians, Ignatius to the Smyrnaeans, Ignatius to Polycarp), the Epistle of Barnabas " +
+      "and the Shepherd of Hermas, from the 1891 Lightfoot-Harmer edition. Each chapter is one unit, " +
+      "because the 1891 verse numbers are not in the transcription; the opening greeting of 1 Clement " +
+      "and of each letter of Ignatius is verse 0 of chapter 1. Hermas is one unit per Vision (1-5), " +
+      "Mandate (1-12, as chapters 101-112) and Parable (1-10, as chapters 201-210).",
+    expectedVerses: [228, 228],
+    includedBookIds: range(110, 120),
+    plain: [
+      { id: "lightfoot-didache", file: "lightfoot-didache/text.txt", format: "tab", sha256: "9885d5649f247e5e8478f2722cff052587aff71d358bcc9e46dcbb525829501d", url: "https://www.ccel.org/ccel/lightfoot/fathers.html", licenceEvidence: ["lightfoot-didache/ccel-lightfoot-fathers.xml", CCEL_PD] },
+      { id: "lightfoot-1clement", file: "lightfoot-1clement/text.txt", format: "tab", sha256: "3d87c3741ac1afa72a80f51726e10088ad9c83cc56e0221224e9a6b70973fe31", url: "https://www.ccel.org/ccel/lightfoot/fathers.html", licenceEvidence: ["lightfoot-1clement/ccel-lightfoot-fathers.xml", CCEL_PD] },
+      { id: "lightfoot-ignatius", file: "lightfoot-ignatius/text.txt", format: "tab", sha256: "e0a1418fbd330104091a077cd3928329c7678098c19c8150906466cfb6fde353", url: "https://www.ccel.org/ccel/lightfoot/fathers.html", licenceEvidence: ["lightfoot-ignatius/ccel-lightfoot-fathers.xml", CCEL_PD] },
+      { id: "lightfoot-barnabas", file: "lightfoot-barnabas/text.txt", format: "tab", sha256: "9193921d3e7017b71f33c9f08b7ce55f0c6be46738866e3020bf53ba7e33c67f", url: "https://www.ccel.org/ccel/lightfoot/fathers.html", licenceEvidence: ["lightfoot-barnabas/ccel-lightfoot-fathers.xml", CCEL_PD] },
+      { id: "lightfoot-hermas", file: "lightfoot-hermas/text.txt", format: "tab", sha256: "dd00830803891feeaf9171b2331c6f9128ddc3e71f80dc1748a6fa1f2e93e2c7", url: "https://www.ccel.org/ccel/lightfoot/fathers.html", licenceEvidence: ["lightfoot-hermas/ccel-lightfoot-fathers.xml", CCEL_PD] },
+    ],
+  },
+];
 
 export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
   {
@@ -447,6 +652,7 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
       why: "JPS 1917 prints the Hebrew verse number inline where it differs from the English",
     },
   },
+  ...PLAIN_SOURCES,
 ];
 
 /**
@@ -712,12 +918,13 @@ function range(from: number, to: number): number[] {
 //   chapter        the source numbers chapters only; each chapter is verse 1 of that chapter
 //   part-chapter   parts banded by hundreds, verse 1 (Hermas: Vision n = n, Mandate n = 100+n,
 //                  Parable n = 200+n; Infancy Thomas: Greek A n = n, Greek B = 100+n, Latin = 200+n)
+//   page           chapter = the manuscript page the translation prints; verse = the passage's
+//                  place on that page, counted here (Mattison's Mary, Judas, Philip)
 //   paragraph      the source prints no numbers; editorial ordinals (Thecla; Apocalypse of Peter's
 //                  Ethiopic, as chapter 2 after the Akhmim fragment's chapter 1)
-// The scheme of a book not yet ingested is provisional until chunk 4 loads it.
 
 export type Canon = "hebrew" | "nt" | "deuterocanon" | "pseudepigrapha" | "nt-apocrypha" | "apostolic";
-export type Numbering = "chapter-verse" | "logion" | "section" | "chapter" | "part-chapter" | "paragraph";
+export type Numbering = "chapter-verse" | "logion" | "section" | "chapter" | "part-chapter" | "paragraph" | "page";
 
 export interface OutsideBook {
   bookId: number;
@@ -753,42 +960,42 @@ export const OUTSIDE_BOOKS: readonly OutsideBook[] = [
   book(82, "PrMan", "Prayer of Manasseh", "Pr Man", "deuterocanon", "chapter-verse", "ingested"),
   book(83, "Ps151", "Psalm 151", "Ps 151", "deuterocanon", "chapter-verse", "ingested"),
   book(84, "2Esd", "2 Esdras", "2 Esd", "deuterocanon", "chapter-verse", "ingested"),
-  book(85, "1En", "1 Enoch", "1 En", "pseudepigrapha"),
-  book(86, "Jub", "Jubilees", "Jub", "pseudepigrapha"),
-  book(87, "TReu", "Testament of Reuben", "T. Reu.", "pseudepigrapha"),
-  book(88, "TSim", "Testament of Simeon", "T. Sim.", "pseudepigrapha"),
-  book(89, "TLevi", "Testament of Levi", "T. Levi", "pseudepigrapha"),
-  book(90, "TJud", "Testament of Judah", "T. Jud.", "pseudepigrapha"),
-  book(91, "TIss", "Testament of Issachar", "T. Iss.", "pseudepigrapha"),
-  book(92, "TZeb", "Testament of Zebulun", "T. Zeb.", "pseudepigrapha"),
-  book(93, "TDan", "Testament of Dan", "T. Dan", "pseudepigrapha"),
-  book(94, "TNaph", "Testament of Naphtali", "T. Naph.", "pseudepigrapha"),
-  book(95, "TGad", "Testament of Gad", "T. Gad", "pseudepigrapha"),
-  book(96, "TAsh", "Testament of Asher", "T. Ash.", "pseudepigrapha"),
-  book(97, "TJos", "Testament of Joseph", "T. Jos.", "pseudepigrapha"),
-  book(98, "TBenj", "Testament of Benjamin", "T. Benj.", "pseudepigrapha"),
-  book(99, "PssSol", "Psalms of Solomon", "Pss. Sol.", "pseudepigrapha"),
-  book(100, "2Bar", "2 Baruch", "2 Bar.", "pseudepigrapha"),
-  book(101, "GThom", "Gospel of Thomas", "Gos. Thom.", "nt-apocrypha", "logion"),
-  book(102, "GPet", "Gospel of Peter", "Gos. Pet.", "nt-apocrypha", "section"),
-  book(103, "ProtJas", "Protevangelium of James", "Prot. Jas.", "nt-apocrypha", "chapter"),
-  book(104, "InfThom", "Infancy Gospel of Thomas", "Inf. Gos. Thom.", "nt-apocrypha", "part-chapter"),
-  book(105, "PlThec", "Acts of Paul and Thecla", "Acts Paul Thec.", "nt-apocrypha", "paragraph"),
-  book(106, "ApocPet", "Apocalypse of Peter", "Apoc. Pet.", "nt-apocrypha", "paragraph"),
-  book(107, "GMary", "Gospel of Mary", "Gos. Mary", "nt-apocrypha"),
-  book(108, "GJudas", "Gospel of Judas", "Gos. Jud.", "nt-apocrypha"),
-  book(109, "GPhil", "Gospel of Philip", "Gos. Phil.", "nt-apocrypha"),
-  book(110, "Did", "Didache", "Did.", "apostolic", "chapter"),
-  book(111, "1Clem", "1 Clement", "1 Clem.", "apostolic", "chapter"),
-  book(112, "IgnEph", "Ignatius to the Ephesians", "Ign. Eph.", "apostolic", "chapter"),
-  book(113, "IgnMagn", "Ignatius to the Magnesians", "Ign. Magn.", "apostolic", "chapter"),
-  book(114, "IgnTrall", "Ignatius to the Trallians", "Ign. Trall.", "apostolic", "chapter"),
-  book(115, "IgnRom", "Ignatius to the Romans", "Ign. Rom.", "apostolic", "chapter"),
-  book(116, "IgnPhld", "Ignatius to the Philadelphians", "Ign. Phld.", "apostolic", "chapter"),
-  book(117, "IgnSmyrn", "Ignatius to the Smyrnaeans", "Ign. Smyrn.", "apostolic", "chapter"),
-  book(118, "IgnPol", "Ignatius to Polycarp", "Ign. Pol.", "apostolic", "chapter"),
-  book(119, "Barn", "Epistle of Barnabas", "Barn.", "apostolic", "chapter"),
-  book(120, "Herm", "Shepherd of Hermas", "Herm.", "apostolic", "part-chapter"),
+  book(85, "1En", "1 Enoch", "1 En", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(86, "Jub", "Jubilees", "Jub", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(87, "TReu", "Testament of Reuben", "T. Reu.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(88, "TSim", "Testament of Simeon", "T. Sim.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(89, "TLevi", "Testament of Levi", "T. Levi", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(90, "TJud", "Testament of Judah", "T. Jud.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(91, "TIss", "Testament of Issachar", "T. Iss.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(92, "TZeb", "Testament of Zebulun", "T. Zeb.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(93, "TDan", "Testament of Dan", "T. Dan", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(94, "TNaph", "Testament of Naphtali", "T. Naph.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(95, "TGad", "Testament of Gad", "T. Gad", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(96, "TAsh", "Testament of Asher", "T. Ash.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(97, "TJos", "Testament of Joseph", "T. Jos.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(98, "TBenj", "Testament of Benjamin", "T. Benj.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(99, "PssSol", "Psalms of Solomon", "Pss. Sol.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(100, "2Bar", "2 Baruch", "2 Bar.", "pseudepigrapha", "chapter-verse", "ingested"),
+  book(101, "GThom", "Gospel of Thomas", "Gos. Thom.", "nt-apocrypha", "logion", "ingested"),
+  book(102, "GPet", "Gospel of Peter", "Gos. Pet.", "nt-apocrypha", "section", "ingested"),
+  book(103, "ProtJas", "Protevangelium of James", "Prot. Jas.", "nt-apocrypha", "chapter", "ingested"),
+  book(104, "InfThom", "Infancy Gospel of Thomas", "Inf. Gos. Thom.", "nt-apocrypha", "part-chapter", "ingested"),
+  book(105, "PlThec", "Acts of Paul and Thecla", "Acts Paul Thec.", "nt-apocrypha", "paragraph", "ingested"),
+  book(106, "ApocPet", "Apocalypse of Peter", "Apoc. Pet.", "nt-apocrypha", "paragraph", "ingested"),
+  book(107, "GMary", "Gospel of Mary", "Gos. Mary", "nt-apocrypha", "page", "ingested"),
+  book(108, "GJudas", "Gospel of Judas", "Gos. Jud.", "nt-apocrypha", "page", "ingested"),
+  book(109, "GPhil", "Gospel of Philip", "Gos. Phil.", "nt-apocrypha", "page", "ingested"),
+  book(110, "Did", "Didache", "Did.", "apostolic", "chapter", "ingested"),
+  book(111, "1Clem", "1 Clement", "1 Clem.", "apostolic", "chapter", "ingested"),
+  book(112, "IgnEph", "Ignatius to the Ephesians", "Ign. Eph.", "apostolic", "chapter", "ingested"),
+  book(113, "IgnMagn", "Ignatius to the Magnesians", "Ign. Magn.", "apostolic", "chapter", "ingested"),
+  book(114, "IgnTrall", "Ignatius to the Trallians", "Ign. Trall.", "apostolic", "chapter", "ingested"),
+  book(115, "IgnRom", "Ignatius to the Romans", "Ign. Rom.", "apostolic", "chapter", "ingested"),
+  book(116, "IgnPhld", "Ignatius to the Philadelphians", "Ign. Phld.", "apostolic", "chapter", "ingested"),
+  book(117, "IgnSmyrn", "Ignatius to the Smyrnaeans", "Ign. Smyrn.", "apostolic", "chapter", "ingested"),
+  book(118, "IgnPol", "Ignatius to Polycarp", "Ign. Pol.", "apostolic", "chapter", "ingested"),
+  book(119, "Barn", "Epistle of Barnabas", "Barn.", "apostolic", "chapter", "ingested"),
+  book(120, "Herm", "Shepherd of Hermas", "Herm.", "apostolic", "part-chapter", "ingested"),
 ];
 
 /** The canon a book id belongs to: the Hebrew Bible 1-39, the New Testament 40-66, else the table. */

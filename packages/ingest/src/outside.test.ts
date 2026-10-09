@@ -41,8 +41,8 @@ describe("OUTSIDE_BOOKS id table", () => {
     expect(byId(120).numbering).toBe("part-chapter");
   });
 
-  it("marks 67-84 ingested and 85-120 allocated", () => {
-    for (const b of OUTSIDE_BOOKS) expect(b.status).toBe(b.bookId <= 84 ? "ingested" : "allocated");
+  it("marks every outside book ingested", () => {
+    for (const b of OUTSIDE_BOOKS) expect(b.status).toBe("ingested");
   });
 
   it("assigns canon by id range", () => {
@@ -189,14 +189,21 @@ describe("TRANSLATION_SOURCES outside editions", () => {
 });
 
 describe("OUTSIDE_EXPECTED_VERSES", () => {
-  it("has a key for exactly the 18 ingested books", () => {
+  it("has a key for exactly the 54 ingested books", () => {
     const ingested = OUTSIDE_BOOKS.filter((b) => b.status === "ingested").map((b) => b.osisId).sort();
-    expect(ingested).toHaveLength(18);
+    expect(ingested).toHaveLength(54);
     expect(Object.keys(OUTSIDE_EXPECTED_VERSES).sort()).toEqual(ingested);
   });
 
   it("sums to the total of its values", () => {
     const sum = Object.values(OUTSIDE_EXPECTED_VERSES).reduce((a, b) => a + b, 0);
-    expect(sum).toBe(6_437);
+    expect(sum).toBe(11_633);
+  });
+
+  it("carries the settled count for each newly ingested book", () => {
+    expect(OUTSIDE_EXPECTED_VERSES).toMatchObject({
+      "1En": 1063, Jub: 1307, TReu: 66, TLevi: 159, PssSol: 328, "2Bar": 697, GThom: 115,
+      GMary: 37, GJudas: 88, GPhil: 136, "1Clem": 66, Herm: 27, IgnPol: 9,
+    });
   });
 });

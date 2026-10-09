@@ -2,7 +2,8 @@
 // Run with `npm run ingest`. Never runs in prod; the app only ever reads bible.db.
 
 import { createHash } from "node:crypto";
-import { existsSync, mkdirSync, renameSync, unlinkSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, renameSync, unlinkSync } from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
@@ -62,11 +63,16 @@ import {
 import { parseUsfx, type UsfxResult } from "./usfx.js";
 import { OUTSIDE_SOURCE_CODES, placeEdition, type OutsideEdition, type PlacedVerse } from "./outside.js";
 import { OUTSIDE_EXPECTED_VERSES } from "./outside-maps.js";
+import { parseMattisonHtml, parseTabText, placePlainSource } from "./outside-plain.js";
 import { XREF_BOOK_MAP } from "./xref-book-map.js";
 import { parseTagntFiles, type TagntVariantRow } from "./tagnt.js";
 import { parseVarApp, type VarAppReadingRow } from "./varapp.js";
 
 const DATA_DIR = path.resolve(import.meta.dirname, "..", "..", "..", "data");
+// The outside books' filed plain texts (docs/sources/outside-books.md), pinned by sha256 in translations.ts.
+const OUTSIDE_SOURCES_DIR = process.env.OUTSIDE_SOURCES_DIR ?? path.join(os.homedir(), ".cache", "jot", "sources", "outside");
+/** The eBible USFX editions; the plain-text outside editions load through outside-plain.ts. */
+const USFX_SOURCES = TRANSLATION_SOURCES.filter((t) => t.plain === undefined);
 const DB_PATH = path.join(DATA_DIR, "bible.db");
 /** Where the corpus is assembled. Promoted onto DB_PATH only after the validation gate passes. */
 const BUILD_PATH = path.join(DATA_DIR, "bible.db.building");
@@ -352,8 +358,8 @@ async function main() {
   const wlcDir = path.join(morphhbDir, "wlc");
 
   const usfxPaths = new Map<string, string>();
-  for (const t of TRANSLATION_SOURCES) {
-    usfxPaths.set(t.code, await fetchCached(USFX_SOURCE_URL(t.ebibleId)));
+  for (const t of USFX_SOURCES) {
+    usfxPaths.set(t.code, await fetchCached(USFX_SOURCE_URL(t.ebibleId!)));
   }
 
   // Keep the exact inputs beside the derived corpus. A build id proves that two corpus files
@@ -371,12 +377,15 @@ async function main() {
     { key: "tagnt-mat-jhn", name: "STEPBible TAGNT Matthew–John", url: SOURCES.tagntMatJhn.url, path: tagntMatJhnPath },
     { key: "tagnt-act-rev", name: "STEPBible TAGNT Acts–Revelation", url: SOURCES.tagntActRev.url, path: tagntActRevPath },
     { key: "varapp", name: "CrossWire VarApp", url: SOURCES.varApp.url, path: varAppPath },
-    ...TRANSLATION_SOURCES.map((t) => ({
+    ...USFX_SOURCES.map((t) => ({
       key: `translation-${t.code.toLowerCase()}`,
       name: t.name,
-      url: USFX_SOURCE_URL(t.ebibleId).url,
+      url: USFX_SOURCE_URL(t.ebibleId!).url,
       path: usfxPaths.get(t.code)!,
     })),
+    ...TRANSLATION_SOURCES.flatMap((t) =>
+      (t.plain ?? []).map((s) => ({ key: `outside-${s.id}`, name: `${t.name}: ${s.id}`, url: s.url, path: path.join(OUTSIDE_SOURCES_DIR, s.file) })),
+    ),
   ] as const;
   const sourceChecksums = await Promise.all(
     sourceInputs.map(async (source) => ({ ...source, sha256: await sha256File(source.path) })),
@@ -389,7 +398,7 @@ async function main() {
 
   console.log("\n[parse] USFX translations...");
   const usfx = new Map<string, UsfxResult>();
-  for (const t of TRANSLATION_SOURCES) {
+  for (const t of USFX_SOURCES) {
     const result = await parseUsfx(usfxPaths.get(t.code)!, {
       allowVerseSuffix: t.code === "LXX",
       outsideCodes: t.outsideBooks ? OUTSIDE_SOURCE_CODES : undefined,
@@ -489,12 +498,39 @@ async function main() {
   //     with nobody reading the diff. Kept apart from `canonicalVerses`, which is the 66-book
   //     space every protocanonical check counts against.
   const outsidePlaced = new Map<string, { placed: PlacedVerse[]; unplaced: number }>();
-  for (const t of TRANSLATION_SOURCES) {
+  for (const t of USFX_SOURCES) {
     if (t.outsideBooks) outsidePlaced.set(t.code, placeEdition(t.code as OutsideEdition, usfx.get(t.code)!.outside));
+  }
+  // The plain-text editions: each file must be the one filed and proofread (sha256 pin), and
+  // its licence evidence must still say what the ledger says, before any of it is placed.
+  const plainPlaced = new Map<string, ReturnType<typeof placePlainSource>>();
+  for (const t of TRANSLATION_SOURCES) {
+    if (!t.plain) continue;
+    const placed: ReturnType<typeof placePlainSource> = [];
+    for (const s of t.plain) {
+      const file = path.join(OUTSIDE_SOURCES_DIR, s.file);
+      const sha = sourceChecksums.find((c) => c.key === `outside-${s.id}`)!.sha256;
+      if (sha !== s.sha256) throw new Error(`[outside] ${t.code} ${s.file}: sha256 ${sha} is not the reviewed ${s.sha256}`);
+      const [evidence, phrase] = s.licenceEvidence;
+      if (!readFileSync(path.join(OUTSIDE_SOURCES_DIR, evidence), "utf8").includes(phrase)) {
+        throw new Error(`[outside] ${t.code} ${s.id}: licence evidence ${evidence} no longer contains "${phrase}"`);
+      }
+      const body = readFileSync(file, "utf8");
+      placed.push(...placePlainSource(s.id, s.format === "tab" ? parseTabText(body) : parseMattisonHtml(body)));
+    }
+    plainPlaced.set(t.code, placed);
   }
   const outsideVerses: typeof canonicalVerses = [];
   {
     const seen = new Set<number>();
+    for (const [code, placed] of plainPlaced) {
+      for (const p of placed) {
+        const id = p.bookId * 1_000_000 + p.chapter * 1_000 + p.verse;
+        if (seen.has(id)) throw new Error(`[outside] ${code} ${p.osis} ${p.chapter}:${p.verse} is placed twice`);
+        seen.add(id);
+        outsideVerses.push({ bookId: p.bookId, chapter: p.chapter, verse: p.verse, osisRef: `${p.osis}.${p.chapter}.${p.verse}`, verseId: id });
+      }
+    }
     for (const { placed } of outsidePlaced.values()) {
       for (const p of placed) {
         const id = p.bookId * 1_000_000 + p.chapter * 1_000 + p.verse;
@@ -1331,7 +1367,7 @@ async function main() {
     }
   })();
 
-  for (const t of TRANSLATION_SOURCES) {
+  for (const t of USFX_SOURCES) {
     console.log(`[load] verse_texts (${t.code})...`);
     const parsed = usfx.get(t.code)!;
     const stats: TranslationLoadStats = {
@@ -1469,6 +1505,25 @@ async function main() {
         `${stats.booksCovered} book(s) covered` +
         (t.quirks ? `, ${stats.quirkReplacements} ${t.quirks.why}` : ""),
     );
+  }
+
+  // 8a-ter. The plain-text outside editions. Their address space is exactly what they print
+  // (3b), so a number the printed edition skips (Testament of Levi 6:3) has no address and needs
+  // no omission row; the gap gate below still checks every address in a book they print.
+  for (const [code, placed] of plainPlaced) {
+    const t = TRANSLATION_SOURCES.find((x) => x.code === code)!;
+    sqlite.transaction(() => {
+      for (const p of placed) {
+        const text = normalizeVerseText(p.text);
+        if (text.length === 0) throw new Error(`[outside] ${code} ${p.osis} ${p.chapter}:${p.verse} is empty`);
+        insertText.run(t.translationId, p.bookId * 1_000_000 + p.chapter * 1_000 + p.verse, text);
+      }
+    })();
+    const [lo, hi] = t.expectedVerses;
+    if (placed.length < lo || placed.length > hi) {
+      throw new Error(`[outside] ${code}: ${placed.length} printed verses, expected ${lo}-${hi}`);
+    }
+    console.log(`  ${code}: ${placed.length} printed (plain text)`);
   }
 
   // 8b. Populate the full-text index. Done here (after both translations are loaded) rather
@@ -2085,7 +2140,7 @@ async function main() {
   // what the page says they mean. So each property is checked here, before promotion.
   const canonicalCount = canonicalVerses.length;
 
-  for (const t of TRANSLATION_SOURCES) {
+  for (const t of USFX_SOURCES) {
     const parsed = usfx.get(t.code)!;
     const stats = usfxStats.find((s) => s.code === t.code)!;
 

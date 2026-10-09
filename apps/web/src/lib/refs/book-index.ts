@@ -22,7 +22,7 @@ export interface BookRecord {
 }
 
 export type Canon = "hebrew" | "nt" | "deuterocanon" | "pseudepigrapha" | "nt-apocrypha" | "apostolic";
-export type Numbering = "chapter-verse" | "logion" | "section" | "chapter" | "part-chapter" | "paragraph";
+export type Numbering = "chapter-verse" | "logion" | "section" | "chapter" | "part-chapter" | "paragraph" | "page";
 
 export function canonOf(bookId: number, index: BookIndex): Canon {
   if (bookId >= 1 && bookId <= 39) return "hebrew";
@@ -174,13 +174,13 @@ const OUTSIDE_ALIASES: Record<string, string[]> = {
   GPhil: ["gospelofphilip", "gosphil", "gphil"],
   Did: ["didache", "did"],
   "1Clem": ["1clem", "1clement", "firstclement"],
-  IgnEph: ["ignatiustotheephesians", "ignephesians", "igneph"],
-  IgnMagn: ["ignatiustothemagnesians", "ignmagnesians", "ignmagn", "ignmag"],
-  IgnTrall: ["ignatiustothetrallians", "igntrallians", "igntrall", "igntral"],
-  IgnRom: ["ignatiustotheromans", "ignromans", "ignrom"],
-  IgnPhld: ["ignatiustothephiladelphians", "ignphiladelphians", "ignphld", "ignphil"],
-  IgnSmyrn: ["ignatiustothesmyrnaeans", "ignsmyrnaeans", "ignsmyrn", "ignsmyr"],
-  IgnPol: ["ignatiustopolycarp", "ignpol"],
+  IgnEph: ["ignatiusephesians", "ignatiustotheephesians", "ignephesians", "igneph"],
+  IgnMagn: ["ignatiusmagnesians", "ignatiustothemagnesians", "ignmagnesians", "ignmagn", "ignmag"],
+  IgnTrall: ["ignatiustrallians", "ignatiustothetrallians", "igntrallians", "igntrall", "igntral"],
+  IgnRom: ["ignatiusromans", "ignatiustotheromans", "ignromans", "ignrom"],
+  IgnPhld: ["ignatiusphiladelphians", "ignatiustothephiladelphians", "ignphiladelphians", "ignphld", "ignphil"],
+  IgnSmyrn: ["ignatiussmyrnaeans", "ignatiustothesmyrnaeans", "ignsmyrnaeans", "ignsmyrn", "ignsmyr"],
+  IgnPol: ["ignatiuspolycarp", "ignatiustopolycarp", "ignpol"],
   Barn: ["barnabas", "epistleofbarnabas", "barn"],
   Herm: ["hermas", "shepherdofhermas", "herm", "shepherd"],
 };
@@ -238,6 +238,7 @@ export class BookIndex {
     const book = this.byId.get(bookOf(id) as BookId as number);
     if (!book) return false;
     const chapter = chapterOf(id);
-    return chapter >= 1 && chapter <= book.chapterCount;
+    const labelled = book.numbering === "part-chapter" || book.numbering === "page";
+    return chapter >= 1 && (labelled || chapter <= book.chapterCount);
   }
 }

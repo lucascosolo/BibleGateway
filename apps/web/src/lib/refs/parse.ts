@@ -17,7 +17,7 @@
  *   Ps 23; Rom 8:28      lists, separated by ; or ,
  *   John.3.16            OSIS form, as used by the ingest datasets
  */
-import { BookIndex } from "./book-index";
+import { type BookRecord, BookIndex } from "./book-index";
 import {
   type VerseId,
   type VerseRange,
@@ -125,7 +125,7 @@ function parseOsis(raw: string, books: BookIndex): ParsedReference | null {
 
   if (!m[2]) return { ...bookBounds(book.bookId), raw, isWhole: "book" };
   const chapter = Number(m[2]);
-  requireChapter(book.chapterCount, chapter, book.name, raw);
+  requireChapter(book, chapter, raw);
   if (!m[3]) {
     return {
       start: toVerseId(book.bookId, chapter, 1),
@@ -162,7 +162,7 @@ function expandSingle(text: string, books: BookIndex, raw: string): ParsedRefere
     return { start: id, end: id, raw, isWhole: null };
   }
 
-  requireChapter(book.chapterCount, chapter, book.name, raw);
+  requireChapter(book, chapter, raw);
 
   if (verseStr === undefined) {
     return {
@@ -188,7 +188,7 @@ function parseRangeEnd(text: string, left: ParsedReference, books: BookIndex, ra
     if (left.isWhole === "chapter") {
       const chapter = Number(trimmed);
       const book = books.get(leftBook as number);
-      if (book) requireChapter(book.chapterCount, chapter, book.name, raw);
+      if (book) requireChapter(book, chapter, raw);
       return chapterEnd(leftBook as number, chapter);
     }
     return toVerseId(leftBook as number, chapterOf(left.start), Number(trimmed));
@@ -200,7 +200,7 @@ function parseRangeEnd(text: string, left: ParsedReference, books: BookIndex, ra
     const leftBook = bookOf(left.start);
     const chapter = Number(chapterVerse[1]);
     const book = books.get(leftBook as number);
-    if (book) requireChapter(book.chapterCount, chapter, book.name, raw);
+    if (book) requireChapter(book, chapter, raw);
     return toVerseId(leftBook as number, chapter, Number(chapterVerse[2]));
   }
 
@@ -209,8 +209,16 @@ function parseRangeEnd(text: string, left: ParsedReference, books: BookIndex, ra
   return parsed.end;
 }
 
-function requireChapter(chapterCount: number, chapter: number, bookName: string, raw: string): void {
-  if (chapter < 1 || chapter > chapterCount) {
+/**
+ * A banded or page-numbered outside book's chapters are labels (Mandate 4 is 104, Judas starts
+ * at page 33), so chapter_count — the number of distinct chapters — is no upper bound for them.
+ */
+const LABELLED_CHAPTERS = new Set(["part-chapter", "page"]);
+
+function requireChapter(book: BookRecord, chapter: number, raw: string): void {
+  const { chapterCount, name: bookName } = book;
+  const over = !LABELLED_CHAPTERS.has(book.numbering ?? "") && chapter > chapterCount;
+  if (chapter < 1 || over) {
     throw new InvalidReferenceError(
       `${bookName} has ${chapterCount} chapter${chapterCount === 1 ? "" : "s"}; got ${chapter} in "${raw}"`
     );

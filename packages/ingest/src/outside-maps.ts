@@ -384,7 +384,11 @@ export const KJVA_UNPLACED: readonly (readonly [string, number, number])[] = [
   ["SIR", 22, 10],
 ]
 
-/** Addresses per outside book (union of both editions), reviewed with the tables above. */
+/**
+ * Addresses per outside book: books 67-84 are the union of both USFX editions, reviewed with the
+ * tables above; books 85-120 are what each filed plain text prints (outside-plain.ts), counted
+ * 2026-10-09 from the pinned files.
+ */
 export const OUTSIDE_EXPECTED_VERSES: Readonly<Record<string, number>> = {
   "1Esd": 448,
   "1Macc": 924,
@@ -404,4 +408,40 @@ export const OUTSIDE_EXPECTED_VERSES: Readonly<Record<string, number>> = {
   "Sus": 64,
   "Tob": 245,
   "Wis": 436,
+  "1En": 1063,
+  "Jub": 1307,
+  "TReu": 66,
+  "TSim": 53,
+  "TLevi": 159,
+  "TJud": 163,
+  "TIss": 55,
+  "TZeb": 75,
+  "TDan": 54,
+  "TNaph": 67,
+  "TGad": 54,
+  "TAsh": 45,
+  "TJos": 138,
+  "TBenj": 69,
+  "PssSol": 328,
+  "2Bar": 697,
+  "GThom": 115,
+  "GPet": 14,
+  "ProtJas": 24,
+  "InfThom": 45,
+  "PlThec": 31,
+  "ApocPet": 85,
+  "GMary": 37,
+  "GJudas": 88,
+  "GPhil": 136,
+  "Did": 16,
+  "1Clem": 66,
+  "IgnEph": 22,
+  "IgnMagn": 16,
+  "IgnTrall": 14,
+  "IgnRom": 11,
+  "IgnPhld": 12,
+  "IgnSmyrn": 14,
+  "IgnPol": 9,
+  "Barn": 21,
+  "Herm": 27,
 };
