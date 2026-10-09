@@ -1,20 +1,23 @@
 "use client";
 
+import { useRef, useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import { WORKSPACES, HOME_WORKSPACE, type Workspace } from "./workspaces";
-import { WORKSPACE_ICONS } from "./icons";
+import { WORKSPACES, HOME_WORKSPACE, COLLAPSED_WORKSPACE_KEYS, type Workspace } from "./workspaces";
+import { MenuIcon, WORKSPACE_ICONS } from "./icons";
 import { GlossLabel } from "@/components/GlossLabel";
-import { LayerControlsTab } from "./LayerControls";
+import { LayerSheet } from "./LayerControls";
+import { MoreSheet } from "./MoreSheet";
 import { PlannedMarker, plannedSrText } from "./PlannedMarker";
+import { getLexiconEntry } from "@/lib/lexicon";
+import { usePreferencesStore } from "@/lib/store/preferences";
 
-// Home isn't in `WORKSPACES` itself (see the note on `HOME_WORKSPACE`) — it's spliced into the
-// exact centre of the bar's own render order, so the raised tab sits under the thumb's resting
-// position whatever the workspace count. The bar also ends in the layer-controls cell
-// (`<LayerControlsTab>`), which counts: five workspaces plus that cell make six, so home goes
-// after the third and is the fourth of seven.
-const HOME_AT = Math.ceil((WORKSPACES.length + 1) / 2);
-const TABS: Workspace[] = [...WORKSPACES.slice(0, HOME_AT), HOME_WORKSPACE, ...WORKSPACES.slice(HOME_AT)];
+// Five cells, no more: the workspaces in `COLLAPSED_WORKSPACE_KEYS` and everything the rail
+// carries below its workspace list fold into the More sheet. Home is spliced into the exact
+// centre (third of five), so the raised tab sits under the thumb's resting position.
+const PRIMARY = WORKSPACES.filter((ws) => !COLLAPSED_WORKSPACE_KEYS.has(ws.key));
+const HOME_AT = Math.ceil((PRIMARY.length + 1) / 2);
+const TABS: Workspace[] = [...PRIMARY.slice(0, HOME_AT), HOME_WORKSPACE, ...PRIMARY.slice(HOME_AT)];
 
 /**
  * <768px: single column, bottom tab bar. Touch targets are the full 56px-tall cell.
@@ -37,6 +40,10 @@ const TABS: Workspace[] = [...WORKSPACES.slice(0, HOME_AT), HOME_WORKSPACE, ...W
  * the row's height fixed and the inset only adding empty space beneath it, the icons never move.
  */
 export function BottomTabBar({ active }: { active: Workspace["key"] }) {
+  const [moreOpen, setMoreOpen] = useState(false);
+  const [layersOpen, setLayersOpen] = useState(false);
+  const moreRef = useRef<HTMLButtonElement | null>(null);
+
   return (
     <nav
       aria-label="Workspaces"
@@ -53,6 +60,7 @@ export function BottomTabBar({ active }: { active: Workspace["key"] }) {
           return (
             <Link
               key={ws.key}
+              data-tab-cell={ws.key}
               href={ws.href}
               aria-current={isActive ? "page" : undefined}
               className={clsx(
@@ -80,8 +88,25 @@ export function BottomTabBar({ active }: { active: Workspace["key"] }) {
             </Link>
           );
         })}
-        <LayerControlsTab />
+        <MoreTab
+          ref={moreRef}
+          active={active}
+          expanded={moreOpen}
+          onClick={(e) => {
+            // Safari does not focus a button on click, and the sheet restores focus to whatever
+            // held it on open; without this, closing the sheet drops focus on <body>.
+            e.currentTarget.focus();
+            setMoreOpen((v) => !v);
+          }}
+        />
       </div>
+      <MoreSheet
+        open={moreOpen}
+        onClose={() => setMoreOpen(false)}
+        active={active}
+        onOpenLayers={() => setLayersOpen(true)}
+      />
+      <LayerSheet open={layersOpen} onClose={() => setLayersOpen(false)} anchorRef={moreRef} />
     </nav>
   );
 }
@@ -96,6 +121,7 @@ function HomeTab({ ws, isActive }: { ws: Workspace; isActive: boolean }) {
   const Icon = WORKSPACE_ICONS[ws.icon];
   return (
     <Link
+      data-tab-cell={ws.key}
       href={ws.href}
       aria-current={isActive ? "page" : undefined}
       aria-label="Home"
@@ -114,5 +140,55 @@ function HomeTab({ ws, isActive }: { ws: Workspace; isActive: boolean }) {
         <Icon className="h-6 w-6" />
       </span>
     </Link>
+  );
+}
+
+/**
+ * The fifth cell. When the current page is one of the folded workspaces it borrows that
+ * workspace's name and the active pill, so the bar still says where the reader is; the name
+ * keeps "More" first because the button opens the sheet, and `aria-current` stays on the row
+ * inside it, since this button is not the page.
+ */
+function MoreTab({
+  ref,
+  active,
+  expanded,
+  onClick,
+}: {
+  ref: React.Ref<HTMLButtonElement>;
+  active: Workspace["key"];
+  expanded: boolean;
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}) {
+  const plainLabels = usePreferencesStore((s) => s.plainLabels);
+  const current = COLLAPSED_WORKSPACE_KEYS.has(active) ? WORKSPACES.find((ws) => ws.key === active) : undefined;
+  const entry = current?.lexiconId ? getLexiconEntry(current.lexiconId) : null;
+  const label = !current ? "More" : entry ? (plainLabels ? entry.plainLabel : entry.term) : current.plainLabel;
+
+  return (
+    <button
+      ref={ref}
+      type="button"
+      data-tab-cell="more"
+      data-active={current ? "true" : undefined}
+      aria-haspopup="dialog"
+      aria-expanded={expanded}
+      aria-label={current ? `More, current page: ${label}` : "More"}
+      onClick={onClick}
+      className={clsx(
+        "flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-0.5 text-[10px] leading-tight",
+        current ? "font-semibold text-[var(--color-brand-strong)]" : "font-medium text-[var(--color-ink-faint)]",
+      )}
+    >
+      <span
+        className={clsx(
+          "flex shrink-0 items-center justify-center rounded-[var(--radius-full)] px-2.5 py-0.5 transition-colors",
+          current ? "bg-[var(--color-brand-soft)]" : "bg-transparent",
+        )}
+      >
+        <MenuIcon className="h-5 w-5" />
+      </span>
+      <span className="w-full truncate text-center">{label}</span>
+    </button>
   );
 }

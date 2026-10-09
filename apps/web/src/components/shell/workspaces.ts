@@ -44,6 +44,12 @@ export const WORKSPACES: Workspace[] = [
 ];
 
 /**
+ * The workspaces the <768px bar folds into its More sheet so the bar keeps five cells. The rail
+ * and the top tabs still list every workspace.
+ */
+export const COLLAPSED_WORKSPACE_KEYS: ReadonlySet<Workspace["key"]> = new Set(["lashon", "notes"]);
+
+/**
  * Not a member of `WORKSPACES`: its href is `/`, and `AppShell`'s `useActiveWorkspace` matches
  * by `pathname.startsWith(ws.href)` — every route starts with `/`, so mixed into the shared list
  * it would shadow every other workspace's own match. `NavRail` and `TopTabs` also already carry

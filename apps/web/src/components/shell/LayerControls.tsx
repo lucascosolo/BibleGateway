@@ -196,31 +196,28 @@ export function LayerControls({
 }
 
 /**
- * The bottom-tab-bar trigger: matches the other four workspace cells (icon over a compact
- * label) rather than the pill button above, since it sits in that row, not beside it.
+ * The layer surface opened from somewhere other than a `<LayerControls>` trigger — the phone
+ * bar's More sheet, which closes itself and opens this in the same render so two modals never
+ * stack. Controlled, so the caller owns `open`; the title follows the Plain labels preference.
  */
-export function LayerControlsTab() {
-  const [open, setOpen] = useState(false);
+export function LayerSheet({
+  open,
+  onClose,
+  anchorRef,
+}: {
+  open: boolean;
+  onClose: () => void;
+  anchorRef: React.RefObject<HTMLButtonElement | null>;
+}) {
   const plainLabels = usePreferencesStore((s) => s.plainLabels);
   const entry = getLexiconEntry("pardes");
-  const label = plainLabels ? entry.plainLabel : entry.term;
-  const triggerRef = useRef<HTMLButtonElement | null>(null);
-
   return (
-    <>
-      <button
-        ref={triggerRef}
-        type="button"
-        aria-haspopup="dialog"
-        aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
-        className="flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-0.5 text-[10px] leading-tight font-medium text-[var(--color-ink-faint)]"
-      >
-        <LayersIcon className="h-5 w-5 shrink-0" />
-        <span className="w-full truncate text-center">{label}</span>
-      </button>
-      <LayerSurface open={open} onClose={() => setOpen(false)} title={label} anchorRef={triggerRef} />
-    </>
+    <LayerSurface
+      open={open}
+      onClose={onClose}
+      title={plainLabels ? entry.plainLabel : entry.term}
+      anchorRef={anchorRef}
+    />
   );
 }
 

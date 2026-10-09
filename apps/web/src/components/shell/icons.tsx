@@ -157,6 +157,34 @@ export function HeartIcon({ className }: IconProps) {
   );
 }
 
+export function MenuIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  );
+}
+
+export function QuestionIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M9.5 9.2a2.6 2.6 0 0 1 5 .9c0 1.7-2.5 2.1-2.5 3.9" />
+      <path d="M12 17.2h.01" />
+    </svg>
+  );
+}
+
+/** Two overlapping speech marks: the same text in more than one tongue. */
+export function TranslationsIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M4 5h9v7H8l-3 2.5V12H4z" />
+      <path d="M13 9h7v7h-1v2.5L16 16h-5v-2" />
+    </svg>
+  );
+}
+
 export const WORKSPACE_ICONS: Record<string, (props: IconProps) => React.JSX.Element> = {
   book: BookIcon,
   root: RootIcon,
