@@ -69,6 +69,7 @@ export async function GET(request: NextRequest) {
     verse: o.verse,
     reason: o.reason,
     history: o.history,
+    kind: o.kind,
     printedBy: o.printedBy.map(({ code, name }) => ({ code, name })),
   }));
 

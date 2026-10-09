@@ -22,6 +22,7 @@ export interface VerseOmission {
   verseId: VerseId;
   chapter: number;
   verse: number;
+  kind: OmissionKind;
   reason: string;
   /** Historical context for the reading difference; no exact insertion year is claimed. */
   history: string;
@@ -37,7 +38,7 @@ export interface VerseOmission {
  */
 export function getOmissions(range: VerseRange, translationId: number): Map<number, VerseOmission> {
   const rows = prepared(
-    `SELECT o.verse_id AS verseId, v.chapter, v.verse, o.reason, o.history
+    `SELECT o.verse_id AS verseId, v.chapter, v.verse, o.kind, o.reason, o.history
      FROM verse_omissions o
      JOIN verses v ON v.verse_id = o.verse_id
      WHERE o.translation_id = ? AND o.verse_id BETWEEN ? AND ?
@@ -46,6 +47,7 @@ export function getOmissions(range: VerseRange, translationId: number): Map<numb
     verseId: VerseId;
     chapter: number;
     verse: number;
+    kind: OmissionKind;
     reason: string;
     history: string;
   }[];

@@ -353,6 +353,7 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     verse: o.verse,
     reason: o.reason,
     history: o.history,
+    kind: o.kind,
     printedBy: o.printedBy.map(({ code, name }) => ({ code, name })),
   }));
 

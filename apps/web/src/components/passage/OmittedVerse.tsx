@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 
+import type { OmissionKind } from "@/lib/db/apparatus";
+
 /**
  * The place where a translation declines to print a verse.
  *
@@ -19,6 +21,8 @@ import Link from "next/link";
 export interface OmittedVerseNote {
   verseId: number;
   verse: number;
+  /** Absent means "critical-text", the only kind the callers sent before `kind` existed. */
+  kind?: OmissionKind;
   reason: string;
   history: string;
   printedBy: { code: string; name: string }[];
@@ -34,6 +38,7 @@ interface OmittedVerseProps {
 }
 
 export function OmittedVerse({ note, passageSlug, detailed }: OmittedVerseProps) {
+  const hasHistory = (note.kind ?? "critical-text") === "critical-text";
   return (
     <aside className="omission" data-verse-id={note.verseId} aria-label={`Verse ${note.verse}, omitted`}>
       <p className="omission__line">
@@ -49,6 +54,7 @@ export function OmittedVerse({ note, passageSlug, detailed }: OmittedVerseProps)
       {detailed && (
         <div className="omission__detail">
           <p>{note.reason}</p>
+          {hasHistory && (
           <details className="omission__history" open>
             <summary>Where this reading came from and when</summary>
             <p>{note.history}</p>
@@ -58,6 +64,7 @@ export function OmittedVerse({ note, passageSlug, detailed }: OmittedVerseProps)
               not identify a single author or moment of insertion.
             </p>
           </details>
+          )}
           {note.printedBy.length > 0 && (
             <p>
               Printed in{" "}
