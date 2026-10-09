@@ -1,0 +1,78 @@
+id = "didache"
+title = "Didache"
+also_known_as = ["The Teaching of the Twelve Apostles", "The Teaching of the Lord to the Gentiles through the Twelve Apostles"]
+books = ["Did"]
+canon = "apostolic"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+A short church manual in sixteen chapters. The first six describe the Way of Life and the Way of Death, chapters 7 to 15 give instructions on baptism, fasting, prayer, the Eucharist and the treatment of prophets, bishops and deacons, and chapter 16 looks ahead to the Second Coming. No copy was known until 1875, when a manuscript was found in Constantinople; its date is disputed. Most scholars in Metzger's survey place it in the first half of the second century, while several argue for the first century. Eusebius counted it among the rejected writings and Athanasius among the books to be read but not canonical."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 49-50" },
+  { source = "lightfoot-harmer-1891", locator = "intro., pp. 215-216" },
+]
+verses = [
+  { ref = "Matt.6.5-Matt.6.13", link = "alludes", note = "Didache 8.2 tells readers to pray as the Lord commanded in his gospel, and gives the Lord's Prayer; Metzger p. 50 identifies it as drawn from Matthew." },
+  { ref = "Matt.7.6", link = "alludes", note = "Didache 9.5 quotes the saying about giving what is holy to the dogs to bar the unbaptised from the Eucharist (Metzger p. 50)." },
+  { ref = "Mal.1.11", link = "alludes", note = "Metzger p. 50 lists Malachi 1:11 and 1:14 as the Old Testament quotation in Didache 14." },
+  { ref = "Zech.14.5", link = "alludes", note = "Metzger p. 50 lists Zechariah 14:5 as quoted in Didache 16." },
+]
+
+[[composed]]
+id = "first-half-second-century"
+label = "First half of the second century CE"
+tradition = "critical"
+earliest = 101
+latest = 150
+held_by = "Most scholars, as reported by Bruce M. Metzger (1987)"
+summary = """
+Metzger notes that questions of author, date and place are notoriously difficult, but says most scholars prefer a date in the first half of the second century. He reads the title 'Twelve Apostles' as a later addition, since the word 'apostles' in the text itself refers to itinerant evangelists."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 49-50" }]
+
+[[composed]]
+id = "first-century"
+label = "First century CE"
+tradition = "critical"
+earliest = 1
+latest = 100
+held_by = "J.-P. Audet, R. M. Grant, J. A. T. Robinson, W. Rordorf and A. Tuilier, as reported by Metzger (1987)"
+summary = """
+Metzger reports that several scholars assign the Didache to the first century: Audet puts the first half near 70 CE, Grant about 90, Robinson before 60, and Rordorf and Tuilier in the latter part of the century. Lightfoot and Harmer (1891) say the language and church order point to the first or the beginning of the second century. The numbers here are the whole first century, since these scholars do not agree on a single span."""
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 49 n. 16" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 216" },
+]
+
+[[provenance]]
+place = "Syria"
+note = "Metzger says Syria or Egypt is disputed and Syria more likely; Lightfoot and Harmer (1891) argue from the 'corn scattered upon the mountains' that it was written in Syria or Palestine."
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 50" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 216" },
+]
+
+[[witnesses]]
+name = "Jerusalem manuscript (Constantinopolitan or Hierosolymitan manuscript)"
+earliest = 1056
+latest = 1056
+language = "Greek"
+institution = "Library of the Jerusalem Monastery of the Holy Sepulchre, Constantinople"
+note = "Found by Philotheos Bryennios, Metropolitan of Nicomedia, and published in 1883. It is the only complete Greek copy Metzger names; the same manuscript also holds 1 Clement and Barnabas."
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 49" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 216" },
+]
+
+[[translations]]
+ledger = "lightfoot-didache"
+note = "Lightfoot-Harmer 1891, chapter level (16 chapters); verse numbers are not carried."
+
+[[events]]
+event = "canon-athanasius-festal-letter-39"
+note = "Athanasius names 'that which is called the Teaching of the Apostles' among books outside the canon but appointed to be read by new converts."
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, section 7" }]
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists 'the so-called Teachings of the Apostles' among the rejected writings."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.4" }]

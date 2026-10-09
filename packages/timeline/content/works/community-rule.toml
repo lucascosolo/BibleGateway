@@ -1,0 +1,60 @@
+id = "community-rule"
+title = "Community Rule (1QS)"
+also_known_as = ["Rule of the Community", "Serekh ha-Yahad", "Manual of Discipline"]
+canon = "described"
+status = "sources-located"
+original_language = "Hebrew"
+summary = """
+The Community Rule sets out how the sectarian community at Qumran lived: who could join, how members were ranked, how they shared meals, and the beliefs behind it, including a teaching on two spirits of good and evil. The best-preserved copy, 1QS, was one of the first seven scrolls found in Cave 1 in 1947. Ten or more further copies from Caves 4 and 5 show that the text changed over time, and the Cave 1 copy is a late form."""
+contents = """
+McDonald lists six parts: the community's aims and ideals; an annual census of members, with a moral charge to humility; a treatise on the spirits of good and evil; rules on obedience; an oath of allegiance; and a closing hymn that mentions calendar details and the secrecy of the community's teaching. The Israel Museum describes a communal, ascetic life in which members saw themselves as a spiritual temple."""
+citations = [
+  { source = "mcdonald-2017-vol1", locator = "p. 241" },
+  { source = "imj-digital-dss", locator = "Community Rule Scroll page" },
+]
+
+[[composed]]
+id = "satlow-earliest-copies"
+label = "By the late second to early first century BCE (date of the earliest copies)"
+tradition = "critical"
+earliest = -150
+latest = -76
+held_by = "Michael L. Satlow (2014)"
+summary = """
+Satlow says the earliest fragments of the Community Rule and the Damascus Document date to the late second or early first century BCE. That dates the surviving copies, not the writing of the text, and the Israel Museum notes the Cave 1 copy is a late stage of a text that developed over time, so the first version may be older. The range converts 'late second to early first century' to 150 to 76 BCE."""
+citations = [
+  { source = "satlow-2014", locator = "p. 176" },
+  { source = "imj-digital-dss", locator = "Community Rule Scroll page" },
+]
+
+[[witnesses]]
+name = "Rule of the Community Scroll (1QS)"
+siglum = "1QS"
+earliest = -100
+latest = -75
+language = "Hebrew"
+institution = "Israel Museum, Jerusalem"
+url = "http://dss.collections.imj.org.il/community"
+note = """
+Qumran Cave 1; the museum dates the copy to 100 to 75 BCE in a Hasmonean script, and hosts full photographs with a viewer."""
+citations = [{ source = "imj-digital-dss", locator = "Community Rule Scroll page" }]
+
+[[witnesses]]
+name = "Cave 4 copies (4Q255-264)"
+siglum = "4Q255-264"
+earliest = -150
+latest = -76
+language = "Hebrew"
+institution = "Israel Antiquities Authority"
+url = "https://www.deadseascrolls.org.il/explore-the-archive/manuscript/4Q258-1"
+note = """
+At least ten copies from Cave 4. The dates are Satlow's for the earliest fragments of the rule texts (late second to early first century BCE, converted); the dates of individual copies are not given in the sources read. The link goes to 4Q258 in the Leon Levy library."""
+citations = [
+  { source = "satlow-2014", locator = "p. 176" },
+  { source = "imj-digital-dss", locator = "Community Rule Scroll page" },
+]
+
+[[excerpts]]
+text = "Whoever enters the council of the Community enters the covenant of God in the presence of all who freely volunteer."
+note = "From the Community Rule (column 5), quoted by McDonald."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 236" }]

@@ -1,0 +1,39 @@
+id = "testaments-of-the-twelve-patriarchs"
+title = "Testaments of the Twelve Patriarchs"
+also_known_as = ["Testaments of the Twelve Patriarchs"]
+books = ["TReu", "TSim", "TLevi", "TJud", "TIss", "TZeb", "TDan", "TNaph", "TGad", "TAsh", "TJos", "TBenj"]
+canon = "pseudepigrapha"
+status = "sources-located"
+original_language = "Hebrew"
+summary = """
+The Testaments are twelve separate writings, one for each son of Jacob (Reuben, Simeon, Levi, Judah, Issachar, Zebulun, Dan, Naphtali, Gad, Asher, Joseph and Benjamin). This summary rests on the translator's introduction of 1917: W. O. E. Oesterley, following R. H. Charles, held that the book was written in Hebrew, that the earliest form known is a Greek translation, that the original belongs to the time of John Hyrcanus, that further passages were added in the middle of the first century BCE, and that Christian additions came later. Scholarship has moved since then."""
+citations = [
+  { source = "charles-1917-testaments", locator = "intro., p. viii" },
+  { source = "charles-1917-testaments", locator = "intro., pp. xvii-xviii" },
+]
+
+[[composed]]
+id = "charles-oesterley-original"
+label = "About 135 to 104 BCE, the original book (Charles, 1917)"
+tradition = "critical"
+earliest = -135
+latest = -104
+held_by = "R. H. Charles, reported by W. O. E. Oesterley (1917)"
+summary = """
+This is the translator's view as of 1917. Oesterley takes Charles's reading that a verse in the Testament of Levi (8:14-15) is aimed at John Hyrcanus, who reigned 135 to 104 BCE, so the book in its original form may well belong to that period. He adds that a somewhat later date is not excluded."""
+citations = [{ source = "charles-1917-testaments", locator = "intro., p. xvii" }]
+
+[[composed]]
+id = "charles-oesterley-additions"
+label = "Middle of the first century BCE, later additions (Charles, 1917)"
+tradition = "critical"
+earliest = -60
+latest = -40
+held_by = "R. H. Charles, reported by W. O. E. Oesterley (1917)"
+summary = """
+Oesterley reports that Charles assigns a set of passages, mainly in Levi, Judah, Zebulun, Dan, Naphtali, Gad and Asher, to additions made 'during the middle of the last century B.C.', attacking the Maccabean high priesthood. The range reads 'the middle' as 60 to 40 BCE. Christian additions, such as in Simeon 6:7 and Benjamin 9:3-5, are later still and are not dated on that page."""
+citations = [{ source = "charles-1917-testaments", locator = "intro., pp. xvii-xviii" }]
+
+[[translations]]
+ledger = "charles-testaments"
+note = "R. H. Charles's translation of 1908, as printed in the SPCK edition of 1917. The project's ledger marks the text as an unproofread draft."

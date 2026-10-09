@@ -1,0 +1,85 @@
+id = "baruch"
+title = "Baruch"
+also_known_as = ["1 Baruch"]
+books = ["Bar"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "Baruch is a composite. The unsigned preface to the Apocrypha in the Brenton edition says it holds several unconnected minor writings, probably of the first century BCE, joined in the first century CE by a compiler who prefixed a historical introduction (1:1-14) attributing the whole to Baruch the prophet; the first part (to 3:8) was probably Hebrew, the second (3:9-4:4) Aramaic and the third (4:5-5:9) Greek. Athanasius counts Baruch with Jeremiah. The Catholic and Orthodox churches hold it as scripture, with the Letter of Jeremiah."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+original_language = "Hebrew, Aramaic and Greek (by section)"
+
+[[composed]]
+id = "pieces-first-century-bce"
+label = "Component writings, first century BCE"
+tradition = "critical"
+earliest = -100
+latest = -1
+summary = "The preface says the minor writings are 'probably of the first century b.c.' This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }]
+
+[[composed]]
+id = "compiled-first-century-ce"
+label = "Compiled with its introduction, first century CE"
+tradition = "critical"
+earliest = 1
+latest = 100
+summary = "The preface says the pieces were joined 'in the first century a.d.' by a compiler who added the historical introduction. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Baruch" }]
+
+[[witnesses]]
+name = "Codex Vaticanus (B)"
+siglum = "B"
+earliest = 301
+latest = 400
+language = "Greek"
+note = "McDonald dates it to the fourth century (p. 497; 'ca. 350 CE' on p. 427); the range is the century. His list of its Old Testament has Baruch after Jeremiah, then Lamentations and the Epistle of Jeremiah. No holding institution is stated on the pages read."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has Baruch after Jeremiah."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[witnesses]]
+name = "Coptic papyrus codices from the Pachomian monastery collection"
+earliest = 301
+latest = 700
+language = "Coptic"
+note = "McDonald lists Baruch 1-5 (Coptic) among manuscripts 'produced from the beginning of the fourth century CE to around the seventh century' (p. 427); the range is that span."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }]
+
+[[held_canonical_by]]
+tradition = "Roman Catholic Church"
+note = "McDonald lists it among the deuterocanonical books of the Roman Catholic Old Testament (p. 142, n. 49; p. 10, n. 14)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 10, n. 14" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald lists it among the books the Roman Catholic and Orthodox canons include beyond the Hebrew Bible; the Orthodox settled the scope of their canon at the Council of Jerusalem in 1672 (p. 142, n. 49)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = "McDonald's narrower Ethiopian list includes Baruch (p. 457)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 457" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's Septuagint edition (1851). The corpus note says that for most of these books it reprints the Authorized Version's English under Septuagint numbering."
+
+[[translations]]
+ledger = "kjv-apocrypha"
+code = "KJVA"
+note = "The King James Version Apocrypha (1611, standardized text of 1769)."
+
+[[events]]
+event = "canon-athanasius-festal-letter-39"
+note = "Athanasius's list reads 'Jeremiah with Baruch, Lamentations, and the epistle'."
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, section 4" }]

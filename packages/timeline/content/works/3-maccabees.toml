@@ -1,0 +1,42 @@
+id = "3-maccabees"
+title = "3 Maccabees"
+books = ["3Macc"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "3 Maccabees contains no reference to the Maccabees; the preface to the Apocrypha in the Brenton edition places its events at 217-209 BCE and its author as an Alexandrian Jew writing in Greek, perhaps in the first century BCE, though some scholars give a much later date. McDonald dates it about the first century BCE. It is in the Orthodox canon and Codex Alexandrinus but not the Latin Apocrypha."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
+original_language = "Greek"
+
+[[composed]]
+id = "first-century-bce"
+label = "About the first century BCE"
+tradition = "critical"
+earliest = -100
+latest = -1
+summary = "McDonald lists it as 'Jewish, ca. first century BCE' in Charlesworth's categories; the preface also says 'perhaps in the first century b.c.'"
+held_by = "James H. Charlesworth, as listed by McDonald (2017)"
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
+
+[[provenance]]
+place = "Alexandria"
+note = "The preface calls the author an Alexandrian Jew."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has Maccabees 1-4."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald says the Orthodox include 3 Maccabees (p. 142, n. 49); the Greek Orthodox Church authorized it in 1950 (p. 335)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 335" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's own translation (1851); the edition prints no King James text for this book."

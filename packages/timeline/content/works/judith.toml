@@ -1,0 +1,80 @@
+id = "judith"
+title = "Judith"
+books = ["Jdt"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "Judith is a story of Jewish resistance. The unsigned preface to the Apocrypha in the Brenton edition calls it a sacred historical novel written in the Maccabean age, with 'Nebuchadrezzar' probably standing for Antiochus Epiphanes, and thinks the Greek and Aramaic forms came from a Hebrew original. Athanasius lists it among the books to be read but not canonical; Jerome says it is not in the canon. The Roman Catholic, Orthodox and Ethiopian churches hold it as scripture."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+original_language = "Hebrew (probably; the Greek form survives)"
+
+[[composed]]
+id = "maccabean-age"
+label = "The Maccabean age"
+tradition = "critical"
+earliest = -175
+latest = -63
+summary = "The preface says only that the book 'was written in the Maccabean age', without years. The range is a conversion made for this record: it begins in 175 BCE, when Antiochus Epiphanes began imposing his Hellenizing policies (Lim, p. 96), and ends in 63 BCE, when the Romans took control of the land after the Hasmonean kingdom (McDonald, p. 175). This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Judith" }, { source = "lim-2013", locator = "p. 96" }, { source = "mcdonald-2017-vol1", locator = "p. 175" }]
+
+[[witnesses]]
+name = "Codex Vaticanus (B)"
+siglum = "B"
+earliest = 301
+latest = 400
+language = "Greek"
+note = "McDonald dates it to the fourth century (p. 497; 'ca. 350 CE' on p. 427); the range is the century. His list of its Old Testament has Wisdom, Sirach, Esther, Judith and Tobit. No holding institution is stated on the pages read."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[witnesses]]
+name = "Codex Sinaiticus (01)"
+siglum = "01"
+earliest = 350
+latest = 400
+language = "Greek"
+note = "McDonald dates it 'ca. 350-400 CE' (p. 427). His list of its Old Testament has Judith after Tobit."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has Judith after Tobit."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[held_canonical_by]]
+tradition = "Roman Catholic Church"
+note = "McDonald lists it among the deuterocanonical books of the Roman Catholic Old Testament (p. 142, n. 49; p. 10, n. 14)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 10, n. 14" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald lists it among the books the Roman Catholic and Orthodox canons include beyond the Hebrew Bible; the Orthodox settled the scope of their canon at the Council of Jerusalem in 1672 (p. 142, n. 49)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = "McDonald reports Judith in both Ethiopian Old Testament lists (p. 457)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 457" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's Septuagint edition (1851). The corpus note says that for most of these books it reprints the Authorized Version's English under Septuagint numbering."
+
+[[translations]]
+ledger = "kjv-apocrypha"
+code = "KJVA"
+note = "The King James Version Apocrypha (1611, standardized text of 1769)."
+
+[[events]]
+event = "canon-athanasius-festal-letter-39"
+note = "Athanasius names Judith among the books appointed to be read, outside his canon."
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, section 7" }]
+
+[[events]]
+event = "canon-jerome-prologus-galeatus"
+note = "Jerome lists Judith as not in the canon."
+citations = [{ source = "npnf2-06-ccel", locator = "Prologus Galeatus (Preface to Samuel and Kings), closing paragraphs" }]

@@ -1,0 +1,66 @@
+id = "4-maccabees"
+title = "4 Maccabees"
+books = ["4Macc"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "4 Maccabees retells the story of the Maccabean martyrs as a philosophical treatise on the triumph of reason over the passions. The preface to the Apocrypha in the Brenton edition says Eusebius and Jerome attributed it to Josephus, but it does not resemble his style. McDonald calls it hard to date and gives several views, from the mid-first century CE to about 100 CE or later."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }, { source = "mcdonald-2017-vol1", locator = "p. 384, n. 32" }]
+original_language = "Greek"
+
+[[composed]]
+id = "mid-first-century-ce"
+label = "Mid first century CE"
+tradition = "critical"
+earliest = 40
+latest = 54
+summary = "McDonald: 'ca. 40-54 CE', calling it difficult to date but likely a diaspora Jew in the mid-first century, following Anderson."
+held_by = "Lee Martin McDonald (2017)"
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 384, n. 32" }]
+
+[[composed]]
+id = "century-before-70-ce"
+label = "The century before the fall of Jerusalem"
+tradition = "critical"
+earliest = -30
+latest = 70
+summary = "The preface says it was 'written during the century before the fall of Jerusalem'; converted here to 30 BCE-70 CE. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
+
+[[composed]]
+id = "about-100-ce-or-later"
+label = "About 100 CE or later in the second century"
+tradition = "critical"
+earliest = 100
+latest = 200
+summary = "McDonald elsewhere says 'probably written perhaps ca. 100 CE, or even in the middle to late second century CE', by an observant Jew from the northeastern Mediterranean. The upper bound converts 'late second century' to 200."
+held_by = "Lee Martin McDonald (2017)"
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 285, n. 50" }]
+
+[[witnesses]]
+name = "Codex Sinaiticus (01)"
+siglum = "01"
+earliest = 350
+latest = 400
+language = "Greek"
+note = "McDonald dates it 'ca. 350-400 CE' (p. 427). His list of its Old Testament has 4 Maccabees after 1 Maccabees."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has Maccabees 1-4."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald says the Greek Orthodox Church of 1950 placed 4 Maccabees in an appendix; the 1956 Russian Bible omits it (p. 335)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 335" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's own translation (1851); the edition prints no King James text for this book."

@@ -1,0 +1,134 @@
+id = "tobit"
+title = "Tobit"
+also_known_as = ["Tobias"]
+books = ["Tob"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "Tobit is a narrative found in Greek copies of the scriptures but not in the Hebrew Bible. VanderKam reports five copies from Qumran cave 4, in Aramaic and Hebrew, copied from about 100 BCE into the early first century CE, so the book is older than the earliest of them; he judges Aramaic the more likely original language. The unsigned preface to the Apocrypha in the Brenton edition calls it one of the most perfect Hebrew idylls and dates it probably within the second century BCE. The Church of Rome, the Orthodox churches and the Ethiopian church hold it as scripture, while Athanasius and Jerome placed it outside their canons."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Tobit" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+original_language = "Aramaic (probably; Hebrew copies also found at Qumran)"
+
+[[composed]]
+id = "second-century-bce"
+label = "Second century BCE"
+tradition = "critical"
+earliest = -200
+latest = -101
+summary = "The preface says Tobit was 'probably written within the second century b.c.' and sprang from a Hebrew or Aramaic original. The oldest Qumran copy (4Q199) is dated about 100 BCE by Fitzmyer, as reported by VanderKam, which fits. The preface's 'second century' is converted here to 200-101 BCE. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Tobit" }, { source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }]
+
+[[witnesses]]
+name = "4QTobit^d ar (4Q199)"
+siglum = "4Q199"
+earliest = -100
+latest = -100
+language = "Aramaic"
+note = "The oldest of five Tobit copies from cave 4 and the earliest of the Aramaic ones; VanderKam gives 'ca. 100 B.C.E.' (a single approximate date, so earliest and latest are equal), the dates being Fitzmyer's."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }]
+
+[[witnesses]]
+name = "4QpapTobit^a ar (4Q196)"
+siglum = "4Q196"
+earliest = -50
+latest = -50
+language = "Aramaic"
+note = "Late Hasmonean, 'ca. 50 B.C.E.' in VanderKam's list (a single approximate date). It preserves the most text of the five, parts of chapters 1-7 and 12-14."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }]
+
+[[witnesses]]
+name = "4QTobit^c ar (4Q198)"
+siglum = "4Q198"
+earliest = -50
+latest = -50
+language = "Aramaic"
+note = "Late Hasmonean or early Herodian, 'ca. 50 B.C.E.' in VanderKam's list (a single approximate date)."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }]
+
+[[witnesses]]
+name = "4QTobit^b ar (4Q197)"
+siglum = "4Q197"
+earliest = -25
+latest = 25
+language = "Aramaic"
+note = "Early Herodian, 'ca. 25 B.C.E.-25 C.E.' in VanderKam's list."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }]
+
+[[witnesses]]
+name = "4QTobit^e (4Q200)"
+siglum = "4Q200"
+earliest = -30
+latest = 20
+language = "Hebrew"
+note = "Early Herodian, 'ca. 30 B.C.E.-20 C.E.'; the only Hebrew copy. The Qumran texts agree in general with the long Greek recension in Codex Sinaiticus."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }]
+
+[[witnesses]]
+name = "Codex Vaticanus (B)"
+siglum = "B"
+earliest = 301
+latest = 400
+language = "Greek"
+note = "McDonald dates it to the fourth century (p. 497; 'ca. 350 CE' on p. 427); the range is the century. His list of its Old Testament has Wisdom, Sirach, Esther, Judith and Tobit. No holding institution is stated on the pages read."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[witnesses]]
+name = "Codex Sinaiticus (01)"
+siglum = "01"
+earliest = 350
+latest = 400
+language = "Greek"
+note = "McDonald dates it 'ca. 350-400 CE' (p. 427). His list of its Old Testament has Tobit among Esther, Tobit, Judith, 1 Maccabees and 4 Maccabees."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has Tobit with Esther, Judith, Esdras and Maccabees."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[witnesses]]
+name = "Coptic papyrus codices from the Pachomian monastery collection"
+earliest = 301
+latest = 700
+language = "Coptic"
+note = "McDonald lists Tobit (Coptic) among manuscripts 'produced from the beginning of the fourth century CE to around the seventh century' (p. 427); the range is that span."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }]
+
+[[held_canonical_by]]
+tradition = "Roman Catholic Church"
+note = "McDonald lists it among the deuterocanonical books of the Roman Catholic Old Testament (p. 142, n. 49; p. 10, n. 14)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 10, n. 14" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald lists it among the books the Roman Catholic and Orthodox canons include beyond the Hebrew Bible; the Orthodox settled the scope of their canon at the Council of Jerusalem in 1672 (p. 142, n. 49)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = "McDonald reports Tobit in both Ethiopian Old Testament lists, the broader (Sinodos) and the narrower (p. 457)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 457" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's Septuagint edition (1851). The corpus note says that for most of these books it reprints the Authorized Version's English under Septuagint numbering."
+
+[[translations]]
+ledger = "kjv-apocrypha"
+code = "KJVA"
+note = "The King James Version Apocrypha (1611, standardized text of 1769)."
+
+[[events]]
+event = "canon-athanasius-festal-letter-39"
+note = "Athanasius lists Tobit with Wisdom, Sirach, Esther and Judith as books appointed to be read by new converts, outside his canon."
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, section 7" }]
+
+[[events]]
+event = "canon-jerome-prologus-galeatus"
+note = "Jerome names 'Tobias' with Wisdom, Sirach, Judith and the Shepherd as not in the canon."
+citations = [{ source = "npnf2-06-ccel", locator = "Prologus Galeatus (Preface to Samuel and Kings), closing paragraphs" }]

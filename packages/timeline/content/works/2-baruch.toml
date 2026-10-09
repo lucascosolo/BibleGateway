@@ -1,0 +1,38 @@
+id = "2-baruch"
+title = "2 Baruch"
+also_known_as = ["Syriac Apocalypse of Baruch", "The Apocalypse of Baruch"]
+books = ["2Bar"]
+canon = "pseudepigrapha"
+status = "sources-located"
+original_language = "Hebrew"
+summary = """
+2 Baruch is an apocalypse in the name of Baruch, the scribe of Jeremiah, written after the fall of Jerusalem. It survives complete only in Syriac, translated from Greek, and Charles held that the original was Hebrew. This summary is the view of the translator's introduction, by W. O. E. Oesterley in 1918, and scholarship has moved since."""
+citations = [
+  { source = "charles-1918-2baruch", locator = "intro., p. xii" },
+  { source = "charles-1918-2baruch", locator = "intro., p. xiii" },
+]
+
+[[composed]]
+id = "oesterley-1918"
+label = "After 70 CE and probably not much after 100 CE (Oesterley, 1918)"
+tradition = "critical"
+earliest = 70
+latest = 100
+held_by = "W. O. E. Oesterley (1918)"
+summary = """
+This is the translator's introducer's view as of 1918. Oesterley says that Jerusalem has fallen (32:2-4), so the book was written after 70 CE, though some parts may be slightly earlier. He thinks it improbable that it was written much later than 100 CE, because of its likeness to 2 (4) Esdras, and he treats 100 CE as the practical limit."""
+citations = [{ source = "charles-1918-2baruch", locator = "intro., p. xii" }]
+
+[[witnesses]]
+name = "Ambrosian Syriac manuscript (Peshitta codex)"
+earliest = 501
+latest = 600
+language = "Syriac"
+institution = "Ambrosian Library, Milan"
+note = """
+The only Syriac manuscript with the whole text, a sixth-century Peshitta codex found by Ceriani (read here as 501 to 600). Its heading says the work was translated from Greek into Syriac."""
+citations = [{ source = "charles-1918-2baruch", locator = "intro., p. xiii" }]
+
+[[translations]]
+ledger = "charles-2baruch"
+note = "R. H. Charles's translation of 1918. The project's ledger marks the text as proofread against the printed edition."

@@ -41,6 +41,19 @@ The rules the builder cannot check:
 - **Everything is `status = "draft"` until a human has reviewed it.** Only the reviewer changes it
   to `reviewed`.
 
+## Works (outside books)
+
+`content/works/<id>.toml` holds one record per text outside the Hebrew and Protestant canons
+(`docs/plans/2026-10-09-outside-books.md`, chunk 5): its canon (`deuterocanon`, `pseudepigrapha`,
+`nt-apocrypha`, `apostolic`, or `described` for a work the site does not print), the bible.db books
+that print it, `[[composed]]` positions (ranges with a tradition and citations, critical first; the
+builder refuses a traditional position ahead of a scholarly one), provenance, dated witnesses,
+the traditions that hold it canonical, the translation ledger id from
+`docs/sources/outside-books.md`, verse links into the 66 books, links to the canon-axis events
+whose primary text names it, and, for described works only, a contents summary and cited excerpts
+under 25 words. Every part is cited. Where the filed scholarship is silent, a position cites the
+public-domain translator's introduction and says it is that translator's view and its date.
+
 ## Review notes for the seed content
 
 The seed (5 events, 5 artifacts, 3 issues, 18 sources) was drafted by Claude from checked

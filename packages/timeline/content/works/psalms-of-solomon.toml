@@ -1,0 +1,30 @@
+id = "psalms-of-solomon"
+title = "Psalms of Solomon"
+books = ["PssSol"]
+canon = "pseudepigrapha"
+status = "sources-located"
+original_language = "Hebrew"
+summary = """
+The Psalms of Solomon are eighteen psalms that Gray, writing in 1913, said were composed in the middle of the first century BCE. The state of society they reflect, and their allusions to Pompey's actions in Palestine and his death in Egypt in 48 BCE, fit that period. Gray also held that they were originally written in Hebrew, although only Greek and Syriac texts survive. This is one translator's view as of 1913; scholarship has moved since."""
+citations = [
+  { source = "charles-1913-apot-2", locator = "Psalms of Solomon, intro., p. 625" },
+  { source = "charles-1913-apot-2", locator = "Psalms of Solomon, intro., p. 628" },
+]
+
+[[composed]]
+id = "gray-1913"
+label = "Middle of the first century BCE, about 63 to 48 BCE (Gray, 1913)"
+tradition = "critical"
+earliest = -63
+latest = -48
+held_by = "George Buchanan Gray (1913)"
+summary = """
+This is the translator's view as of 1913. Gray says the psalms fit the middle of the first century BCE and that most were probably written soon after Pompey's invasion of Palestine in 63 BCE. Psalm 2 was written after, and probably soon after, Pompey's death in 48 BCE. He notes that Psalms 4 and 12 may be the earliest and may predate the invasion, so the start of this range is a cautious reading of his main case."""
+citations = [
+  { source = "charles-1913-apot-2", locator = "Psalms of Solomon, intro., p. 625" },
+  { source = "charles-1913-apot-2", locator = "Psalms of Solomon, intro., pp. 628-630" },
+]
+
+[[translations]]
+ledger = "gray-psalms-solomon"
+note = "George Buchanan Gray's translation in Charles's Apocrypha and Pseudepigrapha, vol. 2 (1913). The project's ledger marks the text as an OCR draft with verse gaps."

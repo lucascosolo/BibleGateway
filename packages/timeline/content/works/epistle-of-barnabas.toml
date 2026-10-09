@@ -1,0 +1,85 @@
+id = "epistle-of-barnabas"
+title = "Epistle of Barnabas"
+also_known_as = ["Letter of Barnabas"]
+books = ["Barn"]
+canon = "apostolic"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+An anonymous theological tract in letter form, arguing that the Old Testament points to Christ and that Jewish sacrifice, the temple and the food laws were misunderstood from the start. Clement of Alexandria and Origen attributed it to Paul's companion Barnabas, but Metzger rejects that because the letter looks back on the fall of Jerusalem in 70 CE. It was probably written in or near Alexandria. Metzger places it in the first half of the second century; Lightfoot and Harmer (1891) argued for 70 to 79. Eusebius listed it among the rejected writings, and Codex Sinaiticus puts it after the New Testament."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 56-59" },
+  { source = "lightfoot-harmer-1891", locator = "intro., pp. 239-241" },
+]
+verses = [
+  { ref = "Matt.27.34", link = "alludes", note = "Barnabas 7.3 says Jesus was given vinegar and gall; Metzger notes only Matthew has gall, though Psalm 69:21 may lie behind it (p. 57)." },
+  { ref = "Matt.22.14", link = "alludes", note = "Barnabas 4.14 quotes 'many are called, but few are chosen' with 'as it is written' (Metzger p. 57)." },
+  { ref = "Matt.9.13", link = "alludes", note = "Barnabas 5.9 says Jesus came not to call the righteous but sinners, as in Matthew 9:13 and Mark 2:17 (Metzger p. 57)." },
+  { ref = "John.3.14", link = "alludes", note = "Barnabas 12.7 on the bronze serpent may allude to John 3:14 (Metzger p. 58)." },
+  { ref = "1Tim.1.15", link = "alludes", note = "Barnabas 5.9 may echo 1 Timothy 1:15 (Metzger p. 58)." },
+  { ref = "Rev.1.13", link = "alludes", note = "Barnabas 7.9 describes Jesus in a robe 'down to the feet', which Metzger thinks may come from Revelation 1:13 (p. 58)." },
+  { ref = "Num.21.7-Num.21.8", link = "background", note = "The bronze serpent passage that Barnabas 12 reads as a type of Christ (Metzger p. 58)." },
+]
+
+[[composed]]
+id = "first-half-second-century"
+label = "First half of the second century CE"
+tradition = "critical"
+earliest = 101
+latest = 150
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger says most scholars think the contents suggest the first half of the second century, and that the letter must postdate the fall of Jerusalem in 70 CE; he notes the question remains open if the writer wrote shortly before or after 130. Lightfoot and Harmer (1891) give the possible limits as 70 and 132 CE."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 56, 58-59" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 240" },
+]
+
+[[composed]]
+id = "vespasian"
+label = "70 to 79 CE (reign of Vespasian)"
+tradition = "critical"
+earliest = 70
+latest = 79
+held_by = "J. B. Lightfoot and J. R. Harmer (1891)"
+summary = """
+Lightfoot and Harmer read the 'three kings' of Daniel in chapter 4 as the Flavian family and place the letter between 70 and 79, while saying the decision depends on the origin of the chapters shared with the Didache. This is the view of the translators as of 1891; scholarship has moved since."""
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., pp. 240-241" }]
+
+[[provenance]]
+place = "Alexandria"
+note = "Metzger says its allegorical method suggests a writer in or near Alexandria; Lightfoot and Harmer note that the earliest notices of it are all from Alexandria."
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 56" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 239" },
+]
+
+[[witnesses]]
+name = "Codex Sinaiticus"
+siglum = "N"
+earliest = 301
+latest = 400
+language = "Greek"
+note = "The complete letter follows Revelation as an appendix to the New Testament, in company with the Shepherd of Hermas. 'Fourth century' converted to 301-400."
+citations = [
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 242" },
+  { source = "metzger-1987-canon", locator = "p. 65" },
+]
+
+[[witnesses]]
+name = "Constantinopolitan or Hierosolymitan manuscript (C)"
+siglum = "C"
+earliest = 1056
+latest = 1056
+language = "Greek"
+note = "Complete; the same manuscript as the Didache. Lightfoot and Harmer call it an eleventh-century document and elsewhere date it to 1056."
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., pp. 216, 242" }]
+
+[[translations]]
+ledger = "lightfoot-barnabas"
+note = "Lightfoot-Harmer 1891, chapter level (chapters 1-21); verse numbers are not carried."
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists 'the extant epistle of Barnabas' among the rejected writings."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.4" }]

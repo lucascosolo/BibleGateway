@@ -20,7 +20,9 @@ def make_corpus(path):
     db.executescript("""
       CREATE TABLE books(book_id INTEGER, osis_id TEXT, name TEXT);
       INSERT INTO books VALUES (1,'Gen','Genesis'),(2,'Exod','Exodus'),
-        (11,'1Kgs','1 Kings'),(27,'Dan','Daniel');
+        (11,'1Kgs','1 Kings'),(27,'Dan','Daniel'),(85,'1En','1 Enoch');
+      CREATE TABLE translations(translation_id INTEGER, code TEXT);
+      INSERT INTO translations VALUES (1,'WEB'),(2,'LXX');
       CREATE TABLE verses(verse_id INTEGER PRIMARY KEY, book_id INTEGER, chapter INTEGER, verse INTEGER);
       CREATE TABLE corpus_meta(key TEXT, value TEXT);
       INSERT INTO corpus_meta VALUES ('build_id','corpusfixture0001');

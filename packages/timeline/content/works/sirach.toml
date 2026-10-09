@@ -1,0 +1,133 @@
+id = "sirach"
+title = "Sirach"
+also_known_as = ["Ecclesiasticus", "Wisdom of Jesus ben Sira", "Wisdom of Ben Sira"]
+books = ["Sir"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "Sirach was written in Hebrew by Jesus ben Sira and translated into Greek by his grandson, who says in his prologue that he came to Egypt in the thirty-eighth year of Euergetes. Lim reads that as 132 BCE and dates the book itself, by the high priest Simon's death and the silence about Antiochus Epiphanes, after 196 and before 175 BCE. It survives in two Hebrew forms and two Greek ones; medieval Hebrew copies from the Cairo Geniza were joined by first-century BCE copies from Masada and Qumran, so about 68 percent of the Hebrew is now available. The Catholic, Orthodox and Ethiopian churches hold it as scripture; Athanasius lists it among books to be read and Jerome places it outside the canon. The rabbis debated it and in the end rejected it."
+citations = [{ source = "lim-2013", locator = "pp. 95-96" }, { source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }, { source = "mcdonald-2017-vol1", locator = "p. 135" }]
+original_language = "Hebrew"
+verses = [
+  { ref = "Jas.1.19", link = "alludes", note = "McDonald (p. 334), reporting Stendebach, cites the allusion to Sirach 5:11 in James 1:19." },
+]
+
+[[composed]]
+id = "196-175-bce"
+label = "After 196 and before 175 BCE"
+tradition = "critical"
+earliest = -196
+latest = -175
+summary = "Lim reaches this from the grandson's arrival in Egypt in 132 BCE (the thirty-eighth year of Ptolemy VII Euergetes II), from a generation gap that gives 222-197 BCE, from Sirach's praise of the high priest Simon (high priest 219-196 BCE) as already dead, and from the absence of any mention of Antiochus Epiphanes, whose policies began in 175. He calls the dating 'relatively straightforward' and a scholarly consensus. The Brenton preface agrees, placing it a few years before the Maccabean persecution."
+held_by = "Timothy H. Lim (2013)"
+citations = [{ source = "lim-2013", locator = "pp. 95-96" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Ecclesiasticus" }]
+
+[[provenance]]
+place = "Jerusalem"
+note = "Lim places Ben Sira's school of study in Jerusalem (Sir 51:23) and speaks of him addressing a Judean audience."
+citations = [{ source = "lim-2013", locator = "p. 96" }]
+
+[[provenance]]
+place = "Egypt"
+note = "The grandson translated the book into Greek in Egypt for Greek-speaking Jews, going there in 132 BCE and publishing the prologue, Lim conjectures, after 117 BCE."
+citations = [{ source = "lim-2013", locator = "pp. 95-96" }]
+
+[[witnesses]]
+name = "Masada Ben Sira scroll"
+earliest = -100
+latest = -51
+language = "Hebrew"
+note = "Seven columns with text from Sirach 39:27-44:17, on VanderKam's reading of the handwriting 'copied in the first half of the first century B.C.E.' (converted here to 100-51 BCE). Yadin called it the most ancient of all extant manuscripts of Sirach. The scroll is also discussed by Lim (p. 103)."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }, { source = "lim-2013", locator = "p. 103" }]
+
+[[witnesses]]
+name = "2Q18"
+siglum = "2Q18"
+earliest = -50
+latest = -1
+language = "Hebrew"
+note = "Two very small Qumran cave 2 fragments from Sirach 6:14-31. Baillet dated them to the second half of the first century BCE, as VanderKam reports."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }]
+
+[[witnesses]]
+name = "11QPs^a (Sirach 51:13-30 acrostic)"
+siglum = "11QPs-a"
+earliest = 1
+latest = 50
+language = "Hebrew"
+note = "The Psalms Scroll from cave 11 contains the acrostic poem of Sirach 51:13-20, 30 as a psalm. VanderKam says it was copied in the first half of the first century CE. It tells us the poem circulated apart from Sirach, not that the book was scripture there."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }]
+
+[[witnesses]]
+name = "Cairo Geniza Hebrew manuscripts A-D"
+earliest = 901
+latest = 1200
+language = "Hebrew"
+note = "Found in the Cairo Geniza and identified from 1896 (Schechter); by 1900 four copies, labelled A-D, were known. VanderKam says all were medieval, 'ranging in date from the tenth to the twelfth century C.E.'"
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }]
+
+[[witnesses]]
+name = "Codex Vaticanus (B)"
+siglum = "B"
+earliest = 301
+latest = 400
+language = "Greek"
+note = "McDonald dates it to the fourth century (p. 497; 'ca. 350 CE' on p. 427); the range is the century. His list of its Old Testament has Wisdom, Sirach, Esther, Judith and Tobit. No holding institution is stated on the pages read."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[witnesses]]
+name = "Codex Sinaiticus (01)"
+siglum = "01"
+earliest = 350
+latest = 400
+language = "Greek"
+note = "McDonald dates it 'ca. 350-400 CE' (p. 427). His list of its Old Testament has Wisdom of Solomon, the Prologue to Sirach and Sirach before Job."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 427" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has Wisdom of Solomon and Wisdom of Sirach."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[held_canonical_by]]
+tradition = "Roman Catholic Church"
+note = "McDonald lists it among the deuterocanonical books of the Roman Catholic Old Testament (p. 142, n. 49; p. 10, n. 14)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 10, n. 14" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald lists it among the books the Roman Catholic and Orthodox canons include beyond the Hebrew Bible; the Orthodox settled the scope of their canon at the Council of Jerusalem in 1672 (p. 142, n. 49)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = "McDonald reports Ecclesiasticus in both Ethiopian Old Testament lists (p. 457)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 457" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's Septuagint edition (1851). The corpus note says that for most of these books it reprints the Authorized Version's English under Septuagint numbering."
+
+[[translations]]
+ledger = "kjv-apocrypha"
+code = "KJVA"
+note = "The King James Version Apocrypha (1611, standardized text of 1769)."
+
+[[events]]
+event = "canon-sirach-prologue"
+note = "The prologue is by Ben Sira's grandson, who says he came to Egypt in the thirty-eighth year of Euergetes and translated his grandfather's book; it also speaks of the law, the prophets and the other books of the fathers."
+citations = [{ source = "kjv-apocrypha-sacred-texts", locator = "Prologue of Ecclesiasticus (KJV Apocrypha)" }]
+
+[[events]]
+event = "canon-athanasius-festal-letter-39"
+note = "Athanasius lists the Wisdom of Sirach among the books appointed to be read, outside his canon."
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, section 7" }]
+
+[[events]]
+event = "canon-jerome-prologus-galeatus"
+note = "Jerome says 'the book of Jesus, the Son of Sirach' is not in the canon."
+citations = [{ source = "npnf2-06-ccel", locator = "Prologus Galeatus (Preface to Samuel and Kings), closing paragraphs" }]

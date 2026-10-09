@@ -1,0 +1,50 @@
+id = "ignatius"
+title = "The Seven Letters of Ignatius"
+also_known_as = ["Letters of Ignatius of Antioch", "Epistles of Ignatius"]
+books = ["IgnEph", "IgnMagn", "IgnTrall", "IgnRom", "IgnPhld", "IgnSmyrn", "IgnPol"]
+canon = "apostolic"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+Seven letters written by Ignatius, bishop of Antioch, while under guard on his way to martyrdom in Rome. From Smyrna he wrote to the churches of Ephesus, Magnesia, Tralles and Rome, and from Troas to the churches of Philadelphia and Smyrna and to Polycarp. Metzger dates the journey about 110 CE. The letters rarely quote, and echo Paul's letters often, especially 1 Corinthians. Metzger judges it probable that Ignatius knew Matthew and John, and perhaps Luke, and finds no sign he called any of them Scripture."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 43-49, 59" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 99" },
+]
+verses = [
+  { ref = "1Cor.4.13", link = "alludes", note = "Ephesians 8.1 and 18.1 apply Paul's 'offscouring of all things' to Ignatius himself (Metzger p. 44-45)." },
+  { ref = "1Cor.9.27", link = "alludes", note = "Trallians 12.3 uses 'lest I be found a castaway' (Metzger p. 45)." },
+  { ref = "1Cor.4.4", link = "alludes", note = "Romans 5.1 reuses 'but not by this am I justified' (Metzger p. 45)." },
+  { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "Echoed in five letters: Romans 9.1, Ephesians 21.2, Trallians 13.1, Magnesians 4.1, Smyrnaeans 11.1 (Metzger p. 45)." },
+  { ref = "Matt.3.15", link = "alludes", note = "Smyrnaeans 1.1: Jesus 'baptized by John so that all righteousness might be fulfilled'; only Matthew has the phrase (Metzger pp. 45-46)." },
+  { ref = "Matt.19.12", link = "alludes", note = "Smyrnaeans 6.1 'let him receive it' echoes Matthew's wording (Metzger p. 46)." },
+  { ref = "Matt.10.16", link = "alludes", note = "Polycarp 2.2 echoes Matthew (Metzger p. 46)." },
+  { ref = "Matt.18.19-Matt.18.20", link = "alludes", note = "Ephesians 5.2 echoes Matthew (Metzger p. 46)." },
+  { ref = "Luke.24.39", link = "alludes", note = "Smyrnaeans 3.1-2 resembles Luke's 'handle me and see'; Metzger says it is hard to decide whether Ignatius depends on Luke (p. 46)." },
+]
+
+[[composed]]
+id = "about-110"
+label = "About 110 CE"
+tradition = "critical"
+earliest = 110
+latest = 110
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger places the journey from Antioch to Rome, during which the seven letters were written, about 110, under the emperor Trajan; he notes elsewhere that the difference between 110 and 135 is not great for the related letter of Polycarp. Lightfoot and Harmer (1891) say only that the letters were written in the early years of the second century."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 43, 59-60" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 99" },
+]
+
+[[provenance]]
+place = "Smyrna and Alexandria Troas"
+note = "Ephesians, Magnesians, Trallians and Romans were written at Smyrna; Philadelphians, Smyrnaeans and Polycarp at Troas."
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 43-44" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 99" },
+]
+
+[[translations]]
+ledger = "lightfoot-ignatius"
+note = "Lightfoot 1891, the seven letters of the middle recension at chapter level (prologue and chapters); verse numbers are not carried. The seven letters are filed as one text with seven books."

@@ -1,0 +1,86 @@
+id = "1-clement"
+title = "1 Clement"
+also_known_as = ["The Epistle of Clement to the Corinthians", "First Epistle of Clement"]
+books = ["1Clem"]
+canon = "apostolic"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+A long letter sent in the name of the church at Rome to the church at Corinth, where some younger members had ousted certain presbyters. The writer, traditionally Clement of Rome, calls the factions to repentance and tells the Corinthians to reinstate the deposed leaders. Metzger dates it about 95 to 96 CE. For the history of the canon its value is that it quotes the Old Testament as Scripture more than a hundred times, recalls the words of the Lord Jesus twice without naming a written gospel, and knows several of Paul's letters and Hebrews without calling them Scripture."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 40-43" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 3" },
+]
+verses = [
+  { ref = "Matt.5.7", link = "alludes", note = "1 Clement 13.2 strings together sayings of Jesus that Metzger traces to Matthew 5:7, 6:14-15, 7:1-2 and 7:12 and Luke 6:31 and 6:36-38 (p. 41)." },
+  { ref = "Luke.6.36-Luke.6.38", link = "alludes", note = "Part of the cento of sayings in 1 Clement 13.2 (Metzger p. 41)." },
+  { ref = "Mark.9.42", link = "alludes", note = "1 Clement 46.7-8 recalls the millstone saying; Metzger compares Mark 9:42, Matthew 18:6-7 and Luke 17:1-2 (p. 42)." },
+  { ref = "Matt.18.6-Matt.18.7", link = "alludes", note = "Parallel to the saying recalled in 1 Clement 46.7-8 (Metzger p. 42)." },
+  { ref = "Luke.17.1-Luke.17.2", link = "alludes", note = "Parallel to the saying recalled in 1 Clement 46.7-8 (Metzger p. 42)." },
+  { ref = "Matt.13.3", link = "alludes", note = "1 Clement 24.5 uses imagery from the parable of the sower (Metzger p. 42)." },
+  { ref = "Rom.1.29-Rom.1.32", link = "alludes", note = "1 Clement 35.5-6 paraphrases the passage (Metzger p. 43)." },
+  { ref = "Heb.1.1-Heb.1.3", link = "alludes", note = "1 Clement 36.2-5 consists almost entirely of echoes of these verses (Metzger p. 43)." },
+]
+
+[[composed]]
+id = "ad-95-96"
+label = "About 95 to 96 CE"
+tradition = "critical"
+earliest = 95
+latest = 96
+held_by = "Bruce M. Metzger (1987); Lightfoot and Harmer (1891) place it near 95"
+summary = """
+Metzger gives about 95 to 96 CE for the letter. Lightfoot and Harmer (1891) tie it to the end of Domitian's reign and the year 95, when Flavius Clemens was put to death."""
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 40" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 3" },
+]
+
+[[composed]]
+id = "ad-69-70"
+label = "69 to early 70 CE"
+tradition = "critical"
+earliest = 69
+latest = 70
+held_by = "A. E. Wilhelm-Hooijbergh (1975) and J. A. T. Robinson (1976), as reported by Metzger (1987)"
+summary = """
+Metzger notes that the usual date is disputed. Wilhelm-Hooijbergh dates the letter to 69 and Robinson to early 70."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 40 n. 5" }]
+
+[[provenance]]
+place = "Rome"
+note = "Sent in the name of the church at Rome to the church at Corinth."
+citations = [{ source = "metzger-1987-canon", locator = "p. 40" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+institution = "British Museum"
+note = "Lightfoot and Harmer call it the most ancient and best authority; 1 Clement and 2 Clement stand in it as an appendix to the New Testament. 'Fifth century' converted to 401-500."
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., pp. 3-4" }]
+
+[[witnesses]]
+name = "Constantinopolitan or Hierosolymitan manuscript (C)"
+siglum = "C"
+earliest = 1056
+latest = 1056
+language = "Greek"
+institution = "Library of the Greek Patriarch of Jerusalem, Constantinople"
+note = "First printed in full by Bryennios in 1875; it also holds the Didache."
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., p. 4" }]
+
+[[witnesses]]
+name = "Syriac translation (Cambridge University Library)"
+earliest = 1170
+latest = 1170
+language = "Syriac"
+institution = "Cambridge University Library"
+note = "Lightfoot and Harmer give a date corresponding to 1170."
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., p. 4" }]
+
+[[translations]]
+ledger = "lightfoot-1clement"
+note = "Lightfoot 1891, chapter level (prologue and chapters 1-65); verse numbers are not carried."

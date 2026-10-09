@@ -1,0 +1,44 @@
+id = "gospel-of-the-egyptians"
+title = "Gospel of the Egyptians (Nag Hammadi)"
+also_known_as = ["Coptic Gospel of the Egyptians"]
+canon = "described"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+An esoteric treatise preserved in two Coptic versions in the Nag Hammadi library, as NHC III,2 and IV,2. It is a different book from the Greek Gospel of the Egyptians, which Clement of Alexandria quoted and which Metzger dates after 150 CE; Metzger flags the difference in a footnote. No filed source gives a date for the Coptic work in particular; Metzger's general range for the Greek originals of the Nag Hammadi tractates is the second or third century. It has no verses in the corpus and no full English text in this app; the facsimiles are online."""
+contents = """
+An esoteric treatise, known in two Coptic copies, one in Codex III and one in Codex IV. Not to be confused with the Greek Gospel of the Egyptians quoted by Clement of Alexandria. Photographs of the codices are in the Claremont Colleges Digital Library."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 84, 171 n. 14" },
+  { source = "claremont-nha", locator = "Nag Hammadi Archive collection page" },
+]
+
+[[composed]]
+id = "second-or-third-century"
+label = "Second or third century CE"
+tradition = "critical"
+earliest = 101
+latest = 300
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger says the Greek originals of the Nag Hammadi Gnostic treatises may be as early as the second or third century, and that the Coptic manuscripts date from about 400. This is a general range for the library, not a date for this work in particular."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 84" }]
+
+[[provenance]]
+place = "Nag Hammadi, Egypt"
+note = "Found with the other Nag Hammadi codices in December 1945. Codex III was acquired by the Coptic Museum in Cairo in October 1946."
+citations = [{ source = "dss-nag-hammadi-codices", locator = "pp. 38, 121-122" }]
+
+[[witnesses]]
+name = "Nag Hammadi Codices III,2 and IV,2"
+siglum = "NHC III,2; IV,2"
+earliest = 301
+latest = 400
+language = "Coptic"
+institution = "Coptic Museum, Cairo"
+url = "https://ccdl.claremont.edu/digital/collection/nha"
+note = "Burns and Goff say the Nag Hammadi codices were made probably in the fourth century. Facsimile photographs are in the Claremont Colleges Digital Library."
+citations = [
+  { source = "dss-nag-hammadi-codices", locator = "pp. 3, 121-122" },
+  { source = "claremont-nha", locator = "Nag Hammadi Archive collection page" },
+]

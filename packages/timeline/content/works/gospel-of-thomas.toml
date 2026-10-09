@@ -1,0 +1,91 @@
+id = "gospel-of-thomas"
+title = "Gospel of Thomas"
+also_known_as = ["Coptic Gospel of Thomas", "Nag Hammadi Codex II,2"]
+books = ["GThom"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+A collection of 114 sayings of Jesus, almost all introduced by 'Jesus said', said in its opening line to be the secret words written down by Didymus Judas Thomas. It survives complete in Coptic in Nag Hammadi Codex II and in part in Greek papyri from Oxyrhynchus. Metzger finds parallels mostly with Matthew's Sermon on the Mount and parables and with parts of Luke, and judges Thomas's forms of the sayings usually secondary, some perhaps from a source shared with the Gospels. He dates it to Syria about 140 CE. Eusebius named a Gospel of Thomas among works used by heretics under an apostle's name."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 85-86" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+verses = [
+  { ref = "Matt.5.1-Matt.7.29", link = "alludes", note = "Metzger says many sayings resemble the Sermon on the Mount (p. 85)." },
+  { ref = "Matt.13.3-Matt.13.52", link = "alludes", note = "Metzger notes parallels in the collection of parables in Matthew 13 (p. 85)." },
+  { ref = "Luke.6.1-Luke.6.49", link = "alludes", note = "Metzger says Thomas is closest to the sayings collections in Luke 6, 11 and 12 (p. 85)." },
+  { ref = "Luke.11.1-Luke.11.54", link = "alludes", note = "As above (Metzger p. 85)." },
+  { ref = "Luke.12.1-Luke.12.59", link = "alludes", note = "As above (Metzger p. 85)." },
+  { ref = "John.4.1-John.4.42", link = "alludes", note = "Metzger says the few Johannine parallels centre on the conversation with the woman of Samaria (p. 85)." },
+]
+
+[[composed]]
+id = "syria-about-140"
+label = "About 140 CE, in Syria"
+tradition = "critical"
+earliest = 140
+latest = 140
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger says the compiler seems to have written in Syria about 140 CE, drawing on the Gospel of the Egyptians and the Gospel according to the Hebrews as well as the church's Gospels. He adds that the Greek originals of Nag Hammadi works may be as early as the second or third century, and that the Coptic manuscripts date from about 400. Metzger wrote in 1987; the Greek papyri below show the Greek text existed by about 200."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 84-86" }]
+
+[[provenance]]
+place = "Syria"
+note = "Metzger says the compiler seems to have written in Syria."
+citations = [{ source = "metzger-1987-canon", locator = "p. 86" }]
+
+[[provenance]]
+place = "Nag Hammadi, Egypt"
+note = "The complete Coptic text is the second tractate of Codex II. The Nag Hammadi codices were found in December 1945 and are held at the Coptic Museum in Cairo."
+citations = [
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+  { source = "dss-nag-hammadi-codices", locator = "pp. 38, 121" },
+]
+
+[[witnesses]]
+name = "Nag Hammadi Codex II, tractate 2"
+siglum = "NHC II,2"
+earliest = 301
+latest = 500
+language = "Coptic"
+institution = "Coptic Museum, Cairo"
+note = "Papyrus codex that preserves essentially the complete text. Dated '4th/5th century' on the Manuscript Information page, converted to 301-500."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[witnesses]]
+name = "Oxyrhynchus Papyrus 1"
+siglum = "P.Oxy. 1"
+earliest = 167
+latest = 233
+language = "Greek"
+note = "Papyrus codex with most of sayings 26-30, 77 and 31-33. 'Late 2nd/early 3rd century' converted to 167-233."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[witnesses]]
+name = "Oxyrhynchus Papyrus 654"
+siglum = "P.Oxy. 654"
+earliest = 234
+latest = 300
+language = "Greek"
+note = "Papyrus roll with the prologue and sayings 1-7. 'Middle/late 3rd century' converted to 234-300."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[witnesses]]
+name = "Oxyrhynchus Papyrus 655"
+siglum = "P.Oxy. 655"
+earliest = 201
+latest = 300
+language = "Greek"
+note = "Papyrus roll with fragments of sayings 24 and 36-39. '3rd century' converted to 201-300."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[translations]]
+ledger = "mattison-thomas"
+note = "Mattison's public-domain translation of the Coptic text, sayings 1-114 with prologue and colophon."
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists the Gospel of Thomas among books put forward by heretics under the apostles' names."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.6" }]

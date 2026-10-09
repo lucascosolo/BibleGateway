@@ -1,0 +1,38 @@
+id = "protevangelium-of-james"
+title = "Protevangelium of James"
+also_known_as = ["Infancy Gospel of James", "Birth of Mary"]
+books = ["ProtJas"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+An infancy gospel attributed to James that deals with the history of Joseph and the Virgin Mary before the birth of Christ. Metzger lists it among the apocryphal gospels about Jesus' early years produced in the second, third and following centuries; the translator Walker (1870) reckoned it one of the origins of the infancy traditions and of undoubted antiquity, though no extant book can be shown to be in its present form in the second century. The name Protevangelium was first given by Postel, whose Latin version appeared in 1552. Over 140 Greek manuscripts survive, the most important being Papyrus Bodmer V."""
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 167" },
+  { source = "anf08-ccel", locator = "Translator's Introductory Notice, pp. 351-352" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+
+[[composed]]
+id = "walker-first-four-centuries"
+label = "Within the first four centuries CE"
+tradition = "critical"
+earliest = 1
+latest = 400
+held_by = "Alexander Walker (1870)"
+summary = """
+Walker's introduction to the Ante-Nicene Fathers volume says most authorities assign the Protevangelium to the first four Christian centuries, that the traditions behind it were in circulation in the second century, and that Justin Martyr refers to the cave of the birth while it is unclear whether Origen's 'book of James' is this work. This is the translator's view as of 1870; scholarship has moved since."""
+citations = [{ source = "anf08-ccel", locator = "Translator's Introductory Notice, pp. 351-352" }]
+
+[[witnesses]]
+name = "Papyrus Bodmer V"
+siglum = "P.Bodmer V"
+earliest = 267
+latest = 333
+language = "Greek"
+note = "The most important of over 140 Greek manuscripts; a papyrus codex. 'Late 3rd/early 4th century' converted to 267-333."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[translations]]
+ledger = "walker-protevangelium"
+note = "Walker 1870 (ANF 8), chapters 1-24."

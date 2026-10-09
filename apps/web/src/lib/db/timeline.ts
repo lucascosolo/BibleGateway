@@ -750,6 +750,141 @@ export function getInvestigation(id: string): InvestigationDetail | null {
   return { ...toInvestigationSummary(found), summary: found.gistSource, witnesses, editions, differences, challenges };
 }
 
+// --- Works (outside books) --------------------------------------------------------------------
+
+export type WorkCanon = "deuterocanon" | "pseudepigrapha" | "nt-apocrypha" | "apostolic" | "described";
+
+export interface WorkSummary {
+  id: string;
+  title: string;
+  canon: WorkCanon;
+  status: ReviewStatus;
+  bookIds: number[];
+  /** DERIVED envelope of the scholarly composition positions (the traditional ones only when alone). */
+  composedEarliest: number;
+  composedLatest: number;
+  traditionalEarliest: number | null;
+  traditionalLatest: number | null;
+}
+
+export interface WorkDetail extends WorkSummary {
+  alsoKnownAs: string[];
+  summary: string;
+  contents: string | null;
+  originalLanguage: string;
+  citations: Citation[];
+  composed: { id: string; label: string; tradition: string; earliest: number; latest: number; summary: string; heldBy: string | null; citations: Citation[] }[];
+  provenance: { id: string; place: string; note: string | null; citations: Citation[] }[];
+  witnesses: {
+    id: string; siglum: string | null; name: string; earliest: number; latest: number; language: string;
+    institution: string | null; url: string | null; note: string | null; citations: Citation[];
+  }[];
+  heldCanonicalBy: { id: string; tradition: string; note: string | null; citations: Citation[] }[];
+  translations: { ledger: string; code: string | null; note: string | null }[];
+  excerpts: { id: string; text: string; note: string | null; citations: Citation[] }[];
+  events: { id: string; title: string; note: string; citations: Citation[] }[];
+  verses: VerseLink[];
+}
+
+/** A timeline.db built before works existed has no tables for them; read it as having none. */
+function hasWorks(): boolean {
+  return get<{ n: number }>(`SELECT COUNT(*) AS n FROM sqlite_master WHERE type = 'table' AND name = 'works'`)?.n === 1;
+}
+
+const WORK_SUMMARY_COLUMNS = `w.work_id AS id, w.title, w.canon, w.status,
+  (SELECT json_group_array(book_id) FROM (SELECT book_id FROM work_books b WHERE b.work_id = w.work_id ORDER BY ordinal)) AS bookIdsJson,
+  w.composed_earliest AS composedEarliest, w.composed_latest AS composedLatest,
+  w.traditional_earliest AS traditionalEarliest, w.traditional_latest AS traditionalLatest`;
+const WORK_ORDER = `CASE w.canon WHEN 'deuterocanon' THEN 0 WHEN 'pseudepigrapha' THEN 1 WHEN 'nt-apocrypha' THEN 2
+  WHEN 'apostolic' THEN 3 ELSE 4 END, w.title`;
+
+type WorkSummaryRow = Omit<WorkSummary, "bookIds"> & { bookIdsJson: string };
+const toWorkSummary = ({ bookIdsJson, ...row }: WorkSummaryRow): WorkSummary => ({ ...row, bookIds: JSON.parse(bookIdsJson) });
+
+/** Every work, grouped by canon (deuterocanon first, described works last), then by title. */
+export function getWorkSummaries(): WorkSummary[] {
+  if (!hasWorks()) return [];
+  return all<WorkSummaryRow>(`SELECT ${WORK_SUMMARY_COLUMNS} FROM works w ORDER BY ${WORK_ORDER}`).map(toWorkSummary);
+}
+
+/** The works printed in `bookId` (several books can make one work, as the Testaments do). */
+export function getWorksForBook(bookId: number): WorkSummary[] {
+  if (!hasWorks()) return [];
+  return all<WorkSummaryRow>(
+    `SELECT ${WORK_SUMMARY_COLUMNS} FROM works w
+     WHERE w.work_id IN (SELECT work_id FROM work_books WHERE book_id = ?) ORDER BY ${WORK_ORDER}`,
+    bookId
+  ).map(toWorkSummary);
+}
+
+function workCitations(kind: "work" | "position" | "provenance" | "witness" | "holder" | "excerpt" | "event", id: string): Citation[] {
+  return all<Citation>(
+    `SELECT s.source_id AS sourceId, s.kind, s.title, s.author, s.container, s.publisher, s.year, s.url, c.locator
+     FROM work_citations c JOIN sources s ON s.source_id = c.source_id
+     WHERE c.subject_kind = ? AND c.subject_id = ?
+     ORDER BY c.ordinal`,
+    kind,
+    id
+  );
+}
+
+export function getWork(id: string): WorkDetail | null {
+  if (!hasWorks()) return null;
+  const found = get<WorkSummaryRow & { aliases: string | null; summary: string; contents: string | null; originalLanguage: string }>(
+    `SELECT ${WORK_SUMMARY_COLUMNS}, w.also_known_as AS aliases, w.summary, w.contents, w.original_language AS originalLanguage
+     FROM works w WHERE w.work_id = ?`,
+    id
+  );
+  if (!found) return null;
+  const { aliases, summary, contents, originalLanguage, ...row } = found;
+  const cited = <T extends { id: string }>(kind: Parameters<typeof workCitations>[0], rows: T[]) =>
+    rows.map((r) => ({ ...r, citations: workCitations(kind, r.id) }));
+  return {
+    ...toWorkSummary(row),
+    alsoKnownAs: aliases ? (JSON.parse(aliases) as string[]) : [],
+    summary,
+    contents,
+    originalLanguage,
+    citations: workCitations("work", id),
+    composed: cited("position", all<Omit<WorkDetail["composed"][number], "citations">>(
+      `SELECT position_id AS id, label, tradition, earliest_year AS earliest, latest_year AS latest, summary, held_by AS heldBy
+       FROM work_positions WHERE work_id = ? ORDER BY ordinal`,
+      id
+    )),
+    provenance: cited("provenance", all<Omit<WorkDetail["provenance"][number], "citations">>(
+      `SELECT provenance_id AS id, place, note FROM work_provenance WHERE work_id = ? ORDER BY ordinal`,
+      id
+    )),
+    witnesses: cited("witness", all<Omit<WorkDetail["witnesses"][number], "citations">>(
+      `SELECT witness_id AS id, siglum, name, earliest_year AS earliest, latest_year AS latest, language, institution, url, note
+       FROM work_witnesses WHERE work_id = ? ORDER BY ordinal`,
+      id
+    )),
+    heldCanonicalBy: cited("holder", all<Omit<WorkDetail["heldCanonicalBy"][number], "citations">>(
+      `SELECT holder_id AS id, tradition, note FROM work_holders WHERE work_id = ? ORDER BY ordinal`,
+      id
+    )),
+    translations: all<WorkDetail["translations"][number]>(
+      `SELECT ledger, code, note FROM work_translations WHERE work_id = ? ORDER BY ordinal`,
+      id
+    ),
+    excerpts: cited("excerpt", all<Omit<WorkDetail["excerpts"][number], "citations">>(
+      `SELECT excerpt_id AS id, text, note FROM work_excerpts WHERE work_id = ? ORDER BY ordinal`,
+      id
+    )),
+    events: all<Omit<WorkDetail["events"][number], "citations">>(
+      `SELECT e.event_id AS id, e.title, we.note FROM work_events we JOIN events e ON e.event_id = we.event_id
+       WHERE we.work_id = ? ORDER BY we.ordinal`,
+      id
+    ).map((e) => ({ ...e, citations: workCitations("event", `${id}@${e.id}`) })),
+    verses: all<VerseLink>(
+      `SELECT start_verse_id AS start, end_verse_id AS "end", link_type AS linkType, note
+       FROM work_verses WHERE work_id = ? ORDER BY start_verse_id, rowid`,
+      id
+    ),
+  };
+}
+
 // --- Reader notes -----------------------------------------------------------------------------
 
 export interface ToledotNote {

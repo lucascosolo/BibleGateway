@@ -1,0 +1,59 @@
+id = "war-scroll"
+title = "War Scroll (1QM)"
+also_known_as = ["The War of the Sons of Light against the Sons of Darkness", "War Rule", "Milhamah"]
+canon = "described"
+status = "sources-located"
+original_language = "Hebrew"
+summary = """
+The War Scroll is a sectarian work from Qumran describing a final war between the 'Sons of Light' and the 'Sons of Darkness', fought over forty-nine years and ending with the restoration of the Temple service. Its battle plans draw on Hellenistic and Roman military manuals, but the Israel Museum calls its ideal, priest-led war fictional in character. The Cave 1 copy has nineteen columns; Cave 4 fragments with similar contents may be an earlier version of it or sources it used."""
+contents = """
+According to the Israel Museum, the scroll lays out a seven-stage dualistic confrontation between the Sons of Light under the Prince of Light (also called Michael) and the Sons of Darkness, helped by a nation called the Kittim and led by Belial. It describes battle arrays, weapons, the ages of the fighters and military manoeuvres, set against Ezekiel 38 to 39 and Daniel 7 to 12."""
+citations = [
+  { source = "imj-digital-dss", locator = "War Scroll page" },
+  { source = "mcdonald-2017-vol1", locator = "p. 241" },
+]
+
+[[composed]]
+id = "qumran-occupation-window"
+label = "During the Qumran community's occupation, about 100 BCE to 68 CE"
+tradition = "archaeological"
+earliest = -100
+latest = 68
+held_by = "Southwestern Journal of Theology 53/1 (2010)"
+summary = """
+No filed source dates the writing of the War Scroll itself. McDonald counts it among the sectarian writings of the Qumran community, and a 2010 survey gives that community's span as about 100 BCE to 68 CE; this range is only that window and is not a date given for the text. Lim writes that it is uncertain when the Cave 4 War Rule copies were originally composed, and the Israel Museum says the relationship between those fragments and the Cave 1 scroll is unclear. The Cave 1 copy itself is later still (see its witness entry)."""
+citations = [
+  { source = "swjt-2010-dss", locator = "p. 39" },
+  { source = "mcdonald-2017-vol1", locator = "p. 241" },
+  { source = "lim-2013", locator = "p. 128" },
+  { source = "imj-digital-dss", locator = "War Scroll page" },
+]
+
+[[witnesses]]
+name = "War Scroll (1QM)"
+siglum = "1QM"
+earliest = -50
+latest = 50
+language = "Hebrew"
+institution = "Israel Museum, Jerusalem"
+url = "http://dss.collections.imj.org.il/war"
+note = """
+Qumran Cave 1. The museum dates the square Herodian script to the late first century BCE or early first century CE (read here as 50 BCE to 50 CE). Full photographs with a viewer are online."""
+citations = [{ source = "imj-digital-dss", locator = "War Scroll page" }]
+
+[[witnesses]]
+name = "4Q491 (Cave 4 War Rule fragments)"
+siglum = "4Q491"
+earliest = -30
+latest = -1
+language = "Hebrew"
+institution = "Israel Antiquities Authority"
+url = "https://www.deadseascrolls.org.il/"
+note = """
+Lim dates the script of 4Q491 to the Herodian period, 30 to 1 BCE. The Cave 4 War Rule fragments (4Q491 to 496) are in the Leon Levy library, per the project's source ledger."""
+citations = [{ source = "lim-2013", locator = "p. 128" }]
+
+[[excerpts]]
+text = "contains instructions on the preparations for the great eschatological battle"
+note = "McDonald's description of the scroll."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 241" }]

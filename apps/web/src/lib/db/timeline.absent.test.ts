@@ -18,6 +18,9 @@ describe("timeline accessors with no timeline.db deployed", () => {
     expect(t.getPerson("x")).toBeNull();
     expect(t.getArtifact("x")).toBeNull();
     expect(t.getIssue("x")).toBeNull();
+    expect(t.getWorkSummaries()).toEqual([]);
+    expect(t.getWork("x")).toBeNull();
+    expect(t.getWorksForBook(85)).toEqual([]);
     expect(t.getTimelineForRange({ start: 1_001_001 as never, end: 1_001_002 as never }))
       .toMatchObject({ events: [], issues: [], artifacts: [] });
   });

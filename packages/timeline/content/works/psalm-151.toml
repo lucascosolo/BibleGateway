@@ -1,0 +1,46 @@
+id = "psalm-151"
+title = "Psalm 151"
+books = ["Ps151"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "Psalm 151 is a short psalm outside the 150 of the Hebrew Psalter, in the Greek Psalters. VanderKam reports a Hebrew text in the Cave 11 Psalms Scroll, copied in the first half of the first century CE, and Sanders's view that the Greek depends on it. The Hebrew may have been two psalms, one about David's anointing and one about Goliath. McDonald says the Orthodox include Psalm 151; the Catholic canon does not."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Psalms 151, 154, 155'" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+original_language = "Hebrew (the Greek form depends on it)"
+
+[[composed]]
+id = "third-century-bce-to-100-ce"
+label = "Third century BCE to 100 CE"
+tradition = "critical"
+earliest = -300
+latest = 100
+summary = "This is Charlesworth's range for the category 'More Psalms of David', as McDonald lists it; McDonald's Evans list files Psalm 151 among such psalms, but McDonald does not date Psalm 151 on its own. The Hebrew copy shows it existed by the first half of the first century CE."
+held_by = "James H. Charlesworth, as listed by McDonald (2017)"
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 140" }, { source = "vanderkam-2012", locator = "ch. 4, section 'Psalms 151, 154, 155'" }]
+
+[[witnesses]]
+name = "11QPs^a (11Q5), Psalm 151"
+siglum = "11QPs-a"
+earliest = 1
+latest = 50
+language = "Hebrew"
+note = "Psalm 151 is the final psalm on the scroll, in col. 28; VanderKam dates the copying to the first half of the first century CE."
+citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Psalms 151, 154, 155'" }, { source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }]
+
+[[witnesses]]
+name = "Codex Alexandrinus (A)"
+siglum = "A"
+earliest = 401
+latest = 500
+language = "Greek"
+note = "McDonald dates it to the fifth century (pp. 428, 497), here converted to 401-500. His list of its Old Testament has the Psalms followed by Psalm 151."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 428" }, { source = "mcdonald-2017-vol1", locator = "p. 497" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald says the Orthodox include Ps 151 (p. 9, n. 13; p. 142, n. 49); Catholics do not (p. 10, n. 14)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 10, n. 14" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's own translation (1851); the edition prints no King James text for this book."

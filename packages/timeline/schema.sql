@@ -280,3 +280,117 @@ CREATE TABLE investigation_citations (
   ordinal          INTEGER NOT NULL
 );
 CREATE INDEX investigation_citations_subject_idx ON investigation_citations (subject_kind, subject_id);
+
+-- Works: one record per text outside the Hebrew and Protestant canons (docs/plans/2026-10-09-
+-- outside-books.md). Own citation and verse tables, as investigations have, so a timeline.db
+-- built before works existed simply lacks them and the app reads it as having none.
+CREATE TABLE works (
+  work_id              TEXT PRIMARY KEY,
+  title                TEXT NOT NULL,
+  also_known_as        TEXT,                -- JSON array of strings, or NULL
+  canon                TEXT NOT NULL CHECK (canon IN ('deuterocanon','pseudepigrapha','nt-apocrypha','apostolic','described')),
+  status               TEXT NOT NULL CHECK (status IN ('draft','sources-located','claims-checked','expert-reviewed')),
+  summary              TEXT NOT NULL,
+  contents             TEXT,                -- what a described work (no printed text) contains
+  original_language    TEXT NOT NULL,
+  -- DERIVED from work_positions, as an event's envelope is: the scholarly positions, or the
+  -- traditional ones only when they are all there is.
+  composed_earliest    INTEGER NOT NULL CHECK (composed_earliest <> 0),
+  composed_latest      INTEGER NOT NULL CHECK (composed_latest <> 0),
+  traditional_earliest INTEGER CHECK (traditional_earliest <> 0),
+  traditional_latest   INTEGER CHECK (traditional_latest <> 0),
+  CHECK (composed_earliest <= composed_latest),
+  CHECK ((traditional_earliest IS NULL) = (traditional_latest IS NULL))
+);
+-- The bible.db books that print the work (several for the Testaments and Ignatius); none for a
+-- described work.
+CREATE TABLE work_books (
+  work_id TEXT NOT NULL REFERENCES works,
+  book_id INTEGER NOT NULL,
+  ordinal INTEGER NOT NULL,
+  PRIMARY KEY (work_id, book_id)
+);
+CREATE INDEX work_books_book_idx ON work_books (book_id);
+CREATE TABLE work_positions (
+  position_id   TEXT PRIMARY KEY,           -- '<work id>/<position id>'
+  work_id       TEXT NOT NULL REFERENCES works,
+  ordinal       INTEGER NOT NULL,
+  label         TEXT NOT NULL,
+  tradition     TEXT NOT NULL CHECK (tradition IN ('critical','archaeological','chronological','traditional')),
+  earliest_year INTEGER NOT NULL CHECK (earliest_year <> 0),
+  latest_year   INTEGER NOT NULL CHECK (latest_year <> 0),
+  summary       TEXT NOT NULL,
+  held_by       TEXT,
+  CHECK (earliest_year <= latest_year),
+  UNIQUE (work_id, ordinal)
+);
+CREATE TABLE work_provenance (
+  provenance_id TEXT PRIMARY KEY,           -- '<work id>/provenance-<n>'
+  work_id       TEXT NOT NULL REFERENCES works,
+  ordinal       INTEGER NOT NULL,
+  place         TEXT NOT NULL,
+  note          TEXT
+);
+CREATE TABLE work_witnesses (
+  witness_id    TEXT PRIMARY KEY,           -- '<work id>/witness-<n>'
+  work_id       TEXT NOT NULL REFERENCES works,
+  ordinal       INTEGER NOT NULL,
+  siglum        TEXT,
+  name          TEXT NOT NULL,
+  earliest_year INTEGER NOT NULL CHECK (earliest_year <> 0),
+  latest_year   INTEGER NOT NULL CHECK (latest_year <> 0),
+  language      TEXT NOT NULL,
+  institution   TEXT,
+  url           TEXT,
+  note          TEXT,
+  CHECK (earliest_year <= latest_year)
+);
+CREATE TABLE work_holders (
+  holder_id TEXT PRIMARY KEY,               -- '<work id>/holder-<n>'
+  work_id   TEXT NOT NULL REFERENCES works,
+  ordinal   INTEGER NOT NULL,
+  tradition TEXT NOT NULL,
+  note      TEXT
+);
+CREATE TABLE work_translations (
+  work_id TEXT NOT NULL REFERENCES works,
+  ordinal INTEGER NOT NULL,
+  ledger  TEXT NOT NULL,                    -- the id in docs/sources/outside-books.md
+  code    TEXT,                             -- bible.db translations.code, when ingested
+  note    TEXT,
+  PRIMARY KEY (work_id, ordinal)
+);
+CREATE TABLE work_excerpts (
+  excerpt_id TEXT PRIMARY KEY,              -- '<work id>/excerpt-<n>'
+  work_id    TEXT NOT NULL REFERENCES works,
+  ordinal    INTEGER NOT NULL,
+  text       TEXT NOT NULL,
+  note       TEXT
+);
+CREATE TABLE work_events (
+  work_id  TEXT NOT NULL REFERENCES works,
+  event_id TEXT NOT NULL REFERENCES events,
+  ordinal  INTEGER NOT NULL,
+  note     TEXT NOT NULL,
+  PRIMARY KEY (work_id, event_id)
+);
+CREATE INDEX work_events_event_idx ON work_events (event_id);
+CREATE TABLE work_verses (
+  work_id        TEXT NOT NULL REFERENCES works,
+  start_verse_id INTEGER NOT NULL,
+  end_verse_id   INTEGER NOT NULL,
+  link_type      TEXT NOT NULL CHECK (link_type IN ('describes','alludes','background','dates')),
+  note           TEXT,
+  CHECK (start_verse_id <= end_verse_id)
+);
+CREATE INDEX work_verses_range_idx ON work_verses (start_verse_id, end_verse_id);
+CREATE TABLE work_citations (
+  citation_id  INTEGER PRIMARY KEY,
+  work_id      TEXT NOT NULL REFERENCES works,
+  subject_kind TEXT NOT NULL CHECK (subject_kind IN ('work','position','provenance','witness','holder','excerpt','event')),
+  subject_id   TEXT NOT NULL,
+  source_id    TEXT NOT NULL REFERENCES sources,
+  locator      TEXT,
+  ordinal      INTEGER NOT NULL
+);
+CREATE INDEX work_citations_subject_idx ON work_citations (subject_kind, subject_id);

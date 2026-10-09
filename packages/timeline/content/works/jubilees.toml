@@ -1,0 +1,84 @@
+id = "jubilees"
+title = "Jubilees"
+also_known_as = ["The Little Genesis", "The Book of Jubilees"]
+books = ["Jub"]
+canon = "pseudepigrapha"
+status = "sources-located"
+original_language = "Hebrew"
+summary = """
+Jubilees retells Genesis and the first half of Exodus as a revelation given to Moses on Mount Sinai, dating events by jubilee periods of forty-nine years and defending a 364-day calendar. VanderKam counts fourteen copies among the Qumran manuscripts, and the Damascus Document appears to refer to it as the explanation of the Law's times. The complete text survives only in Ethiopic; the Ethiopian church counts it as Scripture."""
+citations = [
+  { source = "vanderkam-2012", locator = "chapter 2, section on older literature outside the Hebrew Bible; chapter 4, section Jubilees" },
+  { source = "lim-2013", locator = "pp. 131-132" },
+  { source = "charles-1917-jubilees", locator = "intro., p. xii" },
+]
+verses = [
+  { ref = "Gen.1.1-Gen.1.2", link = "background", note = "Jubilees opens its retelling at creation. VanderKam calls it a long interpretation of Genesis 1 to Exodus 24 (chapter 2); the link marks the start of that span only." },
+  { ref = "Exod.19.1-Exod.19.2", link = "background", note = "The Sinai setting of Exodus 19 to 24 frames the whole book as revealed to Moses (VanderKam, chapter 2, and Lim p. 133)." },
+]
+
+[[composed]]
+id = "vanderkam-second-century"
+label = "Second century BCE, earlier rather than later"
+tradition = "critical"
+earliest = -200
+latest = -101
+held_by = "James C. VanderKam (2012)"
+summary = """
+The oldest Qumran copy, 4Q216, is in a hand of about 125 BCE (100 BCE at the latest, to be cautious), so VanderKam says Charles's date of about 110 BCE is too late. He notes several scholars now place the book earlier in the second century BCE, either just before the Maccabean period or slightly after. The range here is the whole second century, converted from that description."""
+citations = [{ source = "vanderkam-2012", locator = "chapter 4, section Jubilees" }]
+
+[[composed]]
+id = "satlow-core-and-revision"
+label = "Core in the early to mid second century BCE, revised later"
+tradition = "critical"
+earliest = -200
+latest = -126
+held_by = "Michael L. Satlow (2014)"
+summary = """
+Satlow thinks Jubilees grew in two stages: an original core from the early to mid second century BCE, then a later revision, perhaps in the time of John Hyrcanus, that gave it its Sadducean slant. The range covers the core only (early to mid century read as 200 to 126)."""
+citations = [{ source = "satlow-2014", locator = "p. 148" }]
+
+[[composed]]
+id = "box-1917"
+label = "Last half of the second century BCE (Box, 1917)"
+tradition = "critical"
+earliest = -150
+latest = -101
+held_by = "G. H. Box (1917), following R. H. Charles"
+summary = """
+This is the translator's introducer's view as of 1917; scholarship has moved since, and the Qumran copies now point earlier. Box says the book falls within the reigns of Simon Maccabaeus or John Hyrcanus, in the last half of the second century BCE."""
+citations = [{ source = "charles-1917-jubilees", locator = "intro., pp. xxxii-xxxiii" }]
+
+[[witnesses]]
+name = "4QJub^a (4Q216)"
+siglum = "4Q216"
+earliest = -125
+latest = -100
+language = "Hebrew"
+note = """
+Qumran Cave 4, the oldest copy. VanderKam dates its earlier hand to about 125 BCE, or 100 BCE to be cautious. Its first columns were later recopied in a late Hasmonean hand and sewn on."""
+citations = [{ source = "vanderkam-2012", locator = "chapter 4, section Jubilees" }]
+
+[[witnesses]]
+name = "11QJub (11Q12)"
+siglum = "11Q12"
+earliest = 50
+latest = 50
+language = "Hebrew"
+note = """
+Qumran Cave 11, the latest copy. VanderKam dates it to the late Herodian period, about 50 CE."""
+citations = [{ source = "vanderkam-2012", locator = "chapter 4, section Jubilees" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = """
+McDonald says the church in Ethiopia added Jubilees and the Ethiopic Enoch to the Old Testament of the Eastern Orthodox. Lim says the Ethiopic Bible includes Jubilees and Enoch."""
+citations = [
+  { source = "mcdonald-2017-vol1", locator = "p. 10" },
+  { source = "lim-2013", locator = "p. 215" },
+]
+
+[[translations]]
+ledger = "charles-jubilees"
+note = "R. H. Charles's translation from the Ethiopic."

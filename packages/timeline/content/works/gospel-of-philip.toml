@@ -1,0 +1,46 @@
+id = "gospel-of-philip"
+title = "Gospel of Philip"
+also_known_as = ["Nag Hammadi Codex II,3"]
+books = ["GPhil"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+A collection of disjointed excerpts, found in Nag Hammadi Codex II after the Gospel of Thomas, that stresses sacraments: 'The Lord did everything in a mystery, a baptism and a chrism and a eucharist and a redemption and a bridal chamber.' Metzger says the original is considered to date from the second century and that it confirms aspects of Irenaeus's account of Valentinianism. Its author never names or formally cites his sources, but on Wilson's count prefers Matthew and John, knows Romans, 1 and 2 Corinthians, Galatians and Philippians, and shows no knowledge of Mark. The only complete copy is the Coptic Codex II."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 86-87" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+
+[[composed]]
+id = "second-century"
+label = "Second century CE"
+tradition = "critical"
+earliest = 101
+latest = 200
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger says the original of the Gospel of Philip is considered to date from the second century. He also gives a general range for the Greek originals of the Nag Hammadi tractates of the second or third century, with the Coptic manuscripts dated about 400."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 84, 86" }]
+
+[[provenance]]
+place = "Nag Hammadi, Egypt"
+note = "The Coptic text is the third tractate of Codex II, found with the other Nag Hammadi codices in December 1945, now in the Coptic Museum, Cairo."
+citations = [
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+  { source = "dss-nag-hammadi-codices", locator = "pp. 38, 121" },
+]
+
+[[witnesses]]
+name = "Nag Hammadi Codex II, tractate 3"
+siglum = "NHC II,3"
+earliest = 301
+latest = 500
+language = "Coptic"
+institution = "Coptic Museum, Cairo"
+note = "Papyrus codex preserving essentially the complete text (pages 51-86). Dated '4th/5th century', converted to 301-500."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[translations]]
+ledger = "mattison-philip"
+note = "Mattison's public-domain translation of the Coptic text from gospels.net."

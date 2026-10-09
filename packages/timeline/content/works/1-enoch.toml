@@ -1,0 +1,92 @@
+id = "1-enoch"
+title = "1 Enoch"
+also_known_as = ["Ethiopic Enoch", "The Book of Enoch"]
+books = ["1En"]
+canon = "pseudepigrapha"
+status = "sources-located"
+original_language = "Aramaic"
+summary = """
+1 Enoch is a collection of five booklets (the Watchers, the Parables, the Astronomical Book, the Dream Visions and the Epistle of Enoch) with three appendices, all put under the name of Enoch, the ancestor of Noah. Lim dates the pieces to between about 350 BCE and 75 CE. The Aramaic fragments from Qumran point to Aramaic as the original language; the complete text survives only in Ethiopic. Jude quotes it, and the Ethiopian church still counts it as Scripture. The English text here is Charles's translation, and the one dating table quoted below is Charles's own, as reported by Oesterley in 1917."""
+citations = [
+  { source = "lim-2013", locator = "p. 143" },
+  { source = "satlow-2014", locator = "p. 118" },
+  { source = "vanderkam-2012", locator = "chapter 2, section on older literature outside the Hebrew Bible, note 14" },
+]
+
+verses = [
+  { ref = "Jude.1.14-Jude.1.15", link = "alludes", note = "Jude quotes 1 Enoch 1:9 and says Enoch prophesied. McDonald (p. 311) and Lim (p. 238, note 35) both say so." },
+  { ref = "2Pet.2.4", link = "alludes", note = "McDonald (p. 311) says 2 Peter 2:4 shows awareness of 1 Enoch." },
+  { ref = "Gen.6.1-Gen.6.4", link = "background", note = "1 Enoch 6 to 11 retell the sons of God and the daughters of men; VanderKam (chapter 2) calls the Watchers the earliest example of that interpretation." },
+]
+
+[[composed]]
+id = "lim-350bce-75ce"
+label = "About 350 BCE to 75 CE (the whole collection)"
+tradition = "critical"
+earliest = -350
+latest = 75
+held_by = "Timothy H. Lim (2013)"
+summary = """
+Lim describes 1 Enoch as a composite document whose parts date to different periods, from about 350 BCE to 75 CE. The latest end is set by the Parables, which have no copy at Qumran."""
+citations = [{ source = "lim-2013", locator = "p. 143" }]
+
+[[composed]]
+id = "charles-oesterley-1917"
+label = "About 200 BCE to 64 BCE, by Charles's table (1917)"
+tradition = "critical"
+earliest = -200
+latest = -64
+held_by = "R. H. Charles, reported by W. O. E. Oesterley (1917)"
+summary = """
+This is the translator's view as of 1917; scholarship has moved since. Oesterley reports Charles's table: the Apocalypse of Weeks and chapters 12 to 36 are the oldest, pre-Maccabean pieces; the Dream Visions date to 165 to 161 BCE; the Astronomical Book is before 110 BCE; the Parables are about 105 to 64 BCE. Oesterley says the earliest portions belong to about 200 to 150 BCE and that the book as a whole is pre-Christian. Chapter 108 is called a later appendix and chapter 105 cannot be dated, so the end date here covers the dated parts only."""
+citations = [{ source = "charles-1917-enoch", locator = "intro., pp. xiii-xv" }]
+
+[[provenance]]
+place = "Northern Palestine, near the sources of the Jordan below Mount Hermon"
+note = """
+Oesterley, following Burkitt, places the author of the earliest portions there (1917 view). He notes this shows the book is Palestinian."""
+citations = [{ source = "charles-1917-enoch", locator = "intro., p. xv" }]
+
+[[witnesses]]
+name = "4QEn^a ar (4Q201)"
+siglum = "4Q201"
+earliest = -200
+latest = -150
+language = "Aramaic"
+note = """
+Qumran Cave 4, Book of the Watchers. Dates are Milik's as given by VanderKam (200 to 150 BCE)."""
+citations = [{ source = "vanderkam-2012", locator = "chapter 4, section Enoch" }]
+
+[[witnesses]]
+name = "4QEnastr^a ar (4Q208)"
+siglum = "4Q208"
+earliest = -200
+latest = -200
+language = "Aramaic"
+note = """
+Qumran Cave 4, Astronomical Book. VanderKam gives about 200 BCE (Milik's date)."""
+citations = [{ source = "vanderkam-2012", locator = "chapter 4, section Enoch" }]
+
+[[witnesses]]
+name = "7Q4 (Greek fragments of the Epistle of Enoch)"
+siglum = "7Q4"
+earliest = -100
+latest = -100
+language = "Greek"
+note = """
+Qumran Cave 7. Some scholars identify 7Q4 with 1 Enoch 103:3-4, 7-8 and 15; VanderKam dates its script to about 100 BCE. The identification is disputed."""
+citations = [{ source = "vanderkam-2012", locator = "chapter 4, section Enoch" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = """
+McDonald says the church in Ethiopia includes the Ethiopic Enoch in its Old Testament and that 1 Enoch has continued as Scripture there. Lim says the Ethiopic Bible includes Jubilees and Enoch."""
+citations = [
+  { source = "mcdonald-2017-vol1", locator = "p. 10" },
+  { source = "mcdonald-2017-vol1", locator = "p. 363" },
+  { source = "lim-2013", locator = "p. 215" },
+]
+
+[[translations]]
+ledger = "charles-1enoch"
+note = "R. H. Charles's translation, as printed in the SPCK edition of 1917."

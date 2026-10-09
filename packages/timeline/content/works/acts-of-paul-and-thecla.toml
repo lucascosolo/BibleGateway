@@ -1,0 +1,63 @@
+id = "acts-of-paul-and-thecla"
+title = "Acts of Paul and Thecla"
+also_known_as = ["Acts of Paul"]
+books = ["PlThec"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+The Thecla section of the longer Acts of Paul, a romance that makes free use of the canonical Acts and Paul's letters. Thecla, a noble virgin of Iconium, follows Paul, preaches like a missionary and baptises. Tertullian said the author was a cleric of the province of Asia who was tried by his peers, convicted of falsifying the facts and dismissed, though the book was popular with ordinary Christians. Metzger dates the Acts of Paul to about 170 CE. Eusebius listed the Acts of Paul among the rejected writings; the list in Codex Claromontanus includes it, with 3,560 lines."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 174-176" },
+  { source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 355" },
+]
+verses = [
+  { ref = "1Cor.15.32", link = "alludes", note = "Metzger suggests the author of the Acts of Paul built the story of Paul and the lion at Ephesus from this verse about fighting wild beasts (p. 175)." },
+  { ref = "2Tim.1.15-2Tim.1.16", link = "alludes", note = "The names Demas, Onesiphorus and Hermogenes in the Acts recall 2 Timothy (Metzger p. 176)." },
+  { ref = "2Tim.4.10", link = "alludes", note = "The name Demas in the Acts recalls this verse (Metzger p. 176)." },
+]
+
+[[composed]]
+id = "about-170"
+label = "About 170 CE"
+tradition = "critical"
+earliest = 170
+latest = 170
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger, relying on Tertullian's report in On Baptism 17, says the Acts of Paul was composed about 170 CE by an Asian cleric. Walker (1870) accepts Tertullian's account too and calls the book of undoubted antiquity."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 174-175" },
+  { source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 355" },
+]
+
+[[provenance]]
+place = "Province of Asia (western Asia Minor)"
+note = "Tertullian, as cited by Metzger, says the author was a cleric in the Roman province of Asia."
+citations = [{ source = "metzger-1987-canon", locator = "p. 174" }]
+
+[[witnesses]]
+name = "Bodmer papyrus codex with the Third Epistle to the Corinthians"
+siglum = "P.Bodmer X"
+earliest = 201
+latest = 300
+language = "Greek"
+note = "A Greek papyrus codex of the third century that carries 3 Corinthians, a piece from the Acts of Paul, separated from its context. 'Third century' converted to 201-300."
+citations = [{ source = "metzger-1987-canon", locator = "p. 176 and n. 30" }]
+
+[[witnesses]]
+name = "Paris manuscripts used by Tischendorf"
+earliest = 1001
+latest = 1100
+language = "Greek"
+note = "Walker says Tischendorf's text is from three Paris manuscripts, each of the eleventh century, converted to 1001-1100."
+citations = [{ source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 355" }]
+
+[[translations]]
+ledger = "walker-thecla"
+note = "Walker 1870 (ANF 8); the source is unnumbered, so the units are editorial ordinals."
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists the Acts of Paul first among the rejected writings."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.4" }]

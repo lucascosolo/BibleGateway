@@ -1589,3 +1589,134 @@ kind = "web"
 author = "Curt Sewell"
 title = "Biblical Chronology and Dating of the Early Bible"
 url = "https://www.ldolphin.org/sewell/"
+
+# --- Outside books (Chitzonim) work records, 2026-10-09. Texts and licences: docs/sources/outside-books.md.
+
+[[source]]
+id = "charles-1917-enoch"
+kind = "book"
+author = "R. H. Charles (trans.), introduction by W. O. E. Oesterley"
+title = "The Book of Enoch (Translations of Early Documents, Series I)"
+publisher = "SPCK"
+year = 1917
+url = "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+
+[[source]]
+id = "charles-1913-apot-2"
+kind = "book"
+author = "R. H. Charles (ed.)"
+title = "The Apocrypha and Pseudepigrapha of the Old Testament in English, vol. 2: Pseudepigrapha"
+publisher = "Clarendon Press"
+year = 1913
+url = "https://archive.org/details/Charles_The-Apocrypha-of-the-Old-Testament-vol-2_1913"
+
+[[source]]
+id = "charles-1917-jubilees"
+kind = "book"
+author = "R. H. Charles (trans.), introduction by G. H. Box"
+title = "The Book of Jubilees or the Little Genesis (Translations of Early Documents, Series I)"
+publisher = "SPCK"
+year = 1917
+url = "https://archive.org/details/bookofjubileesor01char"
+
+[[source]]
+id = "charles-1917-testaments"
+kind = "book"
+author = "R. H. Charles (trans.), introduction by W. O. E. Oesterley"
+title = "The Testaments of the Twelve Patriarchs (Translations of Early Documents, Series I)"
+publisher = "SPCK"
+year = 1917
+url = "https://archive.org/details/testamentsoftwel00char"
+
+[[source]]
+id = "charles-1918-2baruch"
+kind = "book"
+author = "R. H. Charles (trans.), introduction by W. O. E. Oesterley"
+title = "The Apocalypse of Baruch (Translations of Early Documents, Series I)"
+publisher = "SPCK"
+year = 1918
+url = "https://archive.org/details/apocalypseofbaru00cha"
+
+[[source]]
+id = "thackeray-1917-aristeas"
+kind = "book"
+author = "H. St. J. Thackeray (trans.)"
+title = "The Letter of Aristeas (Translations of Early Documents, Series II)"
+publisher = "SPCK"
+year = 1917
+url = "https://archive.org/details/letterofaristeas00thac"
+
+[[source]]
+id = "james-1924-ant"
+kind = "book"
+author = "M. R. James (trans.)"
+title = "The Apocryphal New Testament"
+publisher = "Clarendon Press"
+year = 1924
+url = "https://en.wikisource.org/wiki/The_Apocryphal_New_Testament_(1924)"
+
+[[source]]
+id = "anf08-ccel"
+kind = "book"
+author = "Alexander Walker (trans.), A. Cleveland Coxe (ed.)"
+title = "Ante-Nicene Fathers, vol. 8 (1886), Christian Classics Ethereal Library"
+url = "https://www.ccel.org/ccel/schaff/anf08"
+
+[[source]]
+id = "anf09-ccel"
+kind = "book"
+author = "J. Armitage Robinson (trans., Gospel of Peter), Allan Menzies (ed.)"
+title = "Ante-Nicene Fathers, vol. 9 (1896), Christian Classics Ethereal Library"
+url = "https://www.ccel.org/ccel/schaff/anf09"
+
+[[source]]
+id = "lightfoot-harmer-1891"
+kind = "book"
+author = "J. B. Lightfoot and J. R. Harmer (eds. and trans.)"
+title = "The Apostolic Fathers: Revised Texts with Short Introductions and English Translations"
+publisher = "Macmillan"
+year = 1891
+url = "https://archive.org/details/apostolicfathers00lighuoft"
+
+[[source]]
+id = "mattison-gospels-net"
+kind = "web"
+author = "Mark M. Mattison (trans.)"
+title = "The Gospels of Thomas, Mary, Judas and Philip, public-domain translations (gospels.net)"
+url = "https://www.gospels.net/"
+
+[[source]]
+id = "ebible-brenton"
+kind = "edition"
+author = "Lancelot Charles Lee Brenton (trans.)"
+title = "The Septuagint with Apocrypha: English (1851; eBible.org eng-Brenton)"
+year = 1851
+url = "https://ebible.org/find/details.php?id=eng-Brenton"
+
+[[source]]
+id = "ebible-kjva"
+kind = "edition"
+author = "King James translators"
+title = "King James Version with Apocrypha (1611, standardized text of 1769; eBible.org eng-kjv)"
+url = "https://ebible.org/find/details.php?id=eng-kjv"
+
+[[source]]
+id = "imj-digital-dss"
+kind = "museum"
+author = "The Israel Museum, Jerusalem"
+title = "The Digital Dead Sea Scrolls"
+url = "http://dss.collections.imj.org.il/"
+
+[[source]]
+id = "leon-levy-dss"
+kind = "museum"
+author = "Israel Antiquities Authority"
+title = "The Leon Levy Dead Sea Scrolls Digital Library"
+url = "https://www.deadseascrolls.org.il/"
+
+[[source]]
+id = "claremont-nha"
+kind = "museum"
+author = "Claremont Colleges Digital Library"
+title = "Nag Hammadi Archive (facsimile photographs)"
+url = "https://ccdl.claremont.edu/digital/collection/nha"

@@ -1,0 +1,78 @@
+id = "gospel-of-peter"
+title = "Gospel of Peter"
+also_known_as = ["Akhmim Fragment", "Gospel according to Peter"]
+books = ["GPet"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+A gospel known only from fragments, chiefly a large piece found in 1886-87 in a monk's tomb at Akhmim in Upper Egypt. What survives tells of the passion, death, burial and resurrection of Jesus, lays the blame for his death on the Jews alone and clears Pilate, and shows traces of Docetism, as when Jesus' cry from the cross is given as 'My Power, my Power'. Metzger dates it probably to Syria about the middle of the second century or earlier, and says it knew all four canonical Gospels. Eusebius records Bishop Serapion's rejection of it and lists it among works used by heretics."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 171-173" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+verses = [
+  { ref = "Matt.27.46", link = "alludes", note = "The cry of dereliction appears in the Gospel of Peter as 'My Power, my Power, why have you forsaken me?' (Metzger p. 172 and n. 17)." },
+]
+
+[[composed]]
+id = "syria-mid-second-century"
+label = "About the middle of the second century CE, or earlier"
+tradition = "critical"
+earliest = 100
+latest = 150
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger says the Gospel of Peter was probably written in Syria about the middle of the second century (or even earlier). The range here runs from 100 to 150, taking 'or even earlier' as no earlier than the first century's end; the 1987 text gives no lower bound."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 172" }]
+
+[[composed]]
+id = "denker-vaganay"
+label = "About 100 to 130 CE"
+tradition = "critical"
+earliest = 100
+latest = 130
+held_by = "Jurgen Denker (1975) and Leon Vaganay (1930), as reported by Metzger (1987)"
+summary = """
+Metzger reports that Vaganay dated the work to about 120 and Denker to 100-130, and that Denker saw it as a Jewish-Christian product written between the two Jewish uprisings."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 172 and n. 18" }]
+
+[[provenance]]
+place = "Syria"
+note = "Metzger says it was probably written in Syria."
+citations = [{ source = "metzger-1987-canon", locator = "p. 172" }]
+
+[[provenance]]
+place = "Akhmim, Upper Egypt"
+note = "The Greek fragment was found in the winter of 1886-87 in the tomb of a monk."
+citations = [{ source = "metzger-1987-canon", locator = "pp. 171-172" }]
+
+[[witnesses]]
+name = "Akhmim fragment (P.Cair. 10759)"
+siglum = "P.Cair. 10759"
+earliest = 567
+latest = 600
+language = "Greek"
+note = "Parchment codex preserving verses 1-60. 'Late 6th century' on the Manuscript Information page, converted to 567-600; Metzger gives the eighth century instead (p. 172), so the sources disagree."
+citations = [
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+  { source = "metzger-1987-canon", locator = "p. 172" },
+]
+
+[[witnesses]]
+name = "Oxyrhynchus Papyrus 2949"
+siglum = "P.Oxy. 2949"
+earliest = 167
+latest = 233
+language = "Greek"
+note = "Papyrus roll with text possibly from an alternative version of verses 3-5. 'Late 2nd/early 3rd century' converted to 167-233; Metzger says 'second or third century' (p. 172 n. 16)."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[translations]]
+ledger = "robinson-gospel-peter"
+note = "Robinson 1896 (ANF 9), sections 1-14."
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists the Gospel of Peter among books put forward by heretics under the apostles' names."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.6" }]

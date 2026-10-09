@@ -1,0 +1,44 @@
+id = "additions-to-esther"
+title = "Additions to Esther"
+also_known_as = ["Rest of Esther", "Greek Esther additions"]
+books = ["AddEsth"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "The additions are passages that exist only in the Greek book of Esther. The unsigned preface to the Apocrypha in the Brenton edition says they give Esther a preface and a conclusion and expand the story in three places, to give it a more definite religious character, and that the writer was probably an Egyptian Jew writing in Greek in the first or second century BCE. McDonald counts six additions to Esther. Brenton's Esther prints the whole Greek book with the additions integrated, so the corpus cuts the additions out by verse range."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Esther" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+original_language = "Greek"
+
+[[composed]]
+id = "first-or-second-century-bce"
+label = "First or second century BCE"
+tradition = "critical"
+earliest = -200
+latest = -1
+summary = "The preface says the writer 'wrote in Greek, in the first or second century b.c.' The range 200-1 BCE converts both centuries. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Esther" }]
+
+[[provenance]]
+place = "Egypt"
+note = "The preface says the writer was probably an Egyptian Jew who wrote in Greek."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Esther" }]
+
+[[held_canonical_by]]
+tradition = "Roman Catholic Church"
+note = "McDonald says the Roman Catholic Old Testament has the additions to Daniel and Esther (p. 10, n. 14); he counts six additions to Esther (p. 142, n. 49)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }, { source = "mcdonald-2017-vol1", locator = "p. 10, n. 14" }]
+
+[[held_canonical_by]]
+tradition = "Eastern Orthodox churches"
+note = "McDonald lists the six additions to Esther among the books the Roman Catholic and Orthodox canons include (p. 142, n. 49)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
+
+[[translations]]
+ledger = "brenton-deutero"
+code = "LXX"
+note = "Brenton's Septuagint edition (1851). The corpus note says that for most of these books it reprints the Authorized Version's English under Septuagint numbering."
+
+[[translations]]
+ledger = "kjv-apocrypha"
+code = "KJVA"
+note = "The King James Version Apocrypha (1611, standardized text of 1769)."

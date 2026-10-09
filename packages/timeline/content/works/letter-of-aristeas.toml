@@ -1,0 +1,51 @@
+id = "letter-of-aristeas"
+title = "Letter of Aristeas"
+also_known_as = ["Aristeas to Philocrates"]
+canon = "described"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+The Letter of Aristeas tells how the Jewish Law came to be translated into Greek at Alexandria under Ptolemy II: seventy-two elders, six from each tribe, are said to have finished the work in seventy-two days. Scholars agree it is legendary and is not really a letter. Lim reads it as the 'charter myth' of an Alexandrian Jewish community in the second century BCE, with a possible historical core that the Law was translated into Greek early in the Ptolemaic period. It is the earliest known account of the origin of the Septuagint, and Josephus is the first writer to mention it."""
+contents = """
+A courtier named Aristeas writes to his brother Philocrates. The account covers the king's librarian proposing a Greek copy of the Jewish laws, the sending of envoys to the high priest Eleazar, a description of the Jerusalem Temple, a banquet at which the king questions the translators, and the seventy-two-day translation. Lim notes that the story is a frame for many other pieces, such as descriptions, speeches and questions and answers, and that very little of it is about the translation itself."""
+citations = [
+  { source = "lim-2013", locator = "pp. 77-78" },
+  { source = "lim-2013", locator = "p. 86" },
+]
+
+[[composed]]
+id = "lim-second-century"
+label = "Second century BCE, between about 150 and 100 BCE"
+tradition = "critical"
+earliest = -150
+latest = -100
+held_by = "Timothy H. Lim (2013), reporting Honigman, Hadas and Meecham"
+summary = """
+Lim reports three dates: Honigman puts it in the middle of the second century BCE, Hadas about 130 BCE, and Meecham, on the Greek of the text, about 100 BCE, which Lim says the linguistic evidence is consistent with. All agree it was written before the turn of the era, since Philo seems to have used it. The range converts 'middle of the second century' to 150 BCE and takes 100 BCE as the latest of the three dates."""
+citations = [
+  { source = "lim-2013", locator = "pp. 83-85" },
+]
+
+[[provenance]]
+place = "Alexandria"
+note = """
+Lim argues the author was probably a Jew rather than a Greek, writing for the Alexandrian Jewish community, though the story is set in the court of Ptolemy II."""
+citations = [
+  { source = "lim-2013", locator = "p. 78" },
+  { source = "lim-2013", locator = "p. 87" },
+]
+
+[[witnesses]]
+name = "Codex Regius (Q)"
+siglum = "Q"
+earliest = 1301
+latest = 1400
+language = "Greek"
+note = """
+A fourteenth-century manuscript (read here as 1301 to 1400). Lim says the description of the work as a 'letter' is first attested in it."""
+citations = [{ source = "lim-2013", locator = "p. 77" }]
+
+[[excerpts]]
+text = "a historical diegesis written in epistolary form"
+note = "Sylvie Honigman's description of the work's genre, quoted by Lim."
+citations = [{ source = "lim-2013", locator = "p. 78" }]

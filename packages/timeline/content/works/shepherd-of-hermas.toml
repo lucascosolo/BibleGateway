@@ -1,0 +1,117 @@
+id = "shepherd-of-hermas"
+title = "Shepherd of Hermas"
+also_known_as = ["The Shepherd", "Pastor of Hermas"]
+books = ["Herm"]
+canon = "apostolic"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+A long allegorical call to repentance, written at Rome by a freedman called Hermas. It has five Visions, twelve Mandates and ten Similitudes, and is named for the shepherd who guides Hermas. It was one of the most popular books of the early church and some, such as Irenaeus and Clement of Alexandria, treated it as inspired. Its date is unresolved: its mention of a Clement points to about 96 CE, while the Muratorian Fragment says Hermas was the brother of Pius, bishop of Rome around the middle of the second century. Metzger suggests the book grew over a long period and was gathered toward the middle of the second century. The Muratorian Fragment says it should be read but not read publicly in church; Athanasius and Eusebius both place it outside the canon."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 63-67" },
+  { source = "lightfoot-harmer-1891", locator = "intro., pp. 291-294" },
+]
+verses = [
+  { ref = "John.3.18", link = "alludes", note = "Similitude 9.12, entering the kingdom only by receiving the Name of the Son of God, seems to remember John 3:18 (Metzger p. 66)." },
+  { ref = "Eph.4.3-Eph.4.6", link = "alludes", note = "Similitude 9.13, 17 and 18 on 'one spirit and one body' probably draw on Ephesians 4:3-6 (Metzger p. 66)." },
+  { ref = "Jas.1.8", link = "alludes", note = "Hermas uses James's rare word 'double-minded' dozens of times (Metzger pp. 66-67)." },
+  { ref = "Jas.4.8", link = "alludes", note = "The second place where James uses 'double-minded' (Metzger p. 67)." },
+  { ref = "Rom.16.14", link = "background", note = "Origen and Jerome identified the author with the Hermas greeted here; Metzger says internal and external evidence points to a later author (p. 64)." },
+]
+
+[[composed]]
+id = "gathered-to-mid-second-century"
+label = "About 96 to the middle of the second century CE"
+tradition = "critical"
+earliest = 96
+latest = 150
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger weighs two lines of evidence: the author's contemporary Clement, if the Clement of Rome who wrote about 96, would put the book at the end of the first century, while the Muratorian Fragment puts Hermas under Pius, who died about 154. He offers as the least unsatisfactory solution that Hermas wrote sections over a long period and gathered them toward the middle of the second century, but says the problem is unresolved. The range here runs from his date for Clement (96) to the middle of the second century, read as 150."""
+citations = [{ source = "metzger-1987-canon", locator = "pp. 64-65" }]
+
+[[composed]]
+id = "time-of-pius"
+label = "Bishop Pius of Rome, about 140 to 155 CE"
+tradition = "critical"
+earliest = 140
+latest = 155
+held_by = "J. B. Lightfoot and J. R. Harmer (1891)"
+summary = """
+Lightfoot and Harmer adopt, with some diffidence, the Muratorian Fragment's statement that Hermas wrote while his brother Pius was bishop of Rome, which they date 140 to 155, though they grant that a date about 90 to 100 fits the mention of Clement better. This is the translators' view as of 1891; scholarship has moved since."""
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., p. 293-294" }]
+
+[[provenance]]
+place = "Rome"
+note = "Hermas says he was sold at Rome as a slave and his home and the road to Cumae are named; the work was evidently written there."
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 65" },
+  { source = "lightfoot-harmer-1891", locator = "intro., p. 292" },
+]
+
+[[witnesses]]
+name = "Papyrus Michigan 130"
+siglum = "P.Mich. 130"
+earliest = 171
+latest = 200
+language = "Greek"
+note = "Preserves Mandates. Metzger gives 'late 2nd century', converted here to 171-200."
+citations = [{ source = "metzger-1987-canon", locator = "p. 63 n. 34" }]
+
+[[witnesses]]
+name = "Papyrus Iandanae 4"
+siglum = "P.Iand. 4"
+earliest = 101
+latest = 150
+language = "Greek"
+note = "Preserves Mandates. Palaeographers at a 1984 conference thought 'earlier second century rather than later', per a letter from P. J. Parsons quoted by Metzger; converted here to 101-150."
+citations = [{ source = "metzger-1987-canon", locator = "p. 63 n. 34" }]
+
+[[witnesses]]
+name = "Codex Sinaiticus"
+siglum = "N"
+earliest = 301
+latest = 400
+language = "Greek"
+note = "Only the first quarter of the Shepherd survives, after the Epistle of Barnabas at the end of the volume. 'Fourth century' converted to 301-400."
+citations = [
+  { source = "lightfoot-harmer-1891", locator = "intro., pp. 294-295" },
+  { source = "metzger-1987-canon", locator = "p. 65" },
+]
+
+[[witnesses]]
+name = "Athos manuscript"
+siglum = "A"
+earliest = 1301
+latest = 1400
+language = "Greek"
+note = "Three leaves in the University Library at Leipzig, six still at the Monastery of Gregory on Mount Athos. 'Fourteenth century' converted to 1301-1400."
+institution = "University Library, Leipzig; Monastery of Gregory, Mount Athos"
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., p. 295" }]
+
+[[held_canonical_by]]
+tradition = "Irenaeus and Clement of Alexandria (second and third centuries)"
+note = "Metzger says that in parts of the church in the second and third centuries the Shepherd was sometimes regarded as inspired Scripture, for example by Irenaeus and Clement of Alexandria."
+citations = [{ source = "metzger-1987-canon", locator = "p. 65" }]
+
+[[translations]]
+ledger = "lightfoot-hermas"
+note = "Lightfoot-Harmer 1891, with units at Vision, Mandate and Similitude (Parable) number only; no chapter or verse numbers."
+
+[[events]]
+event = "canon-muratorian-fragment"
+note = "The Fragment says Hermas wrote the Shepherd very recently, in Rome, while his brother Pius was bishop, so it ought to be read but cannot be read publicly in church."
+citations = [
+  { source = "anf05-salmond-muratorian", locator = "Fragments of Caius, Canon Muratorianus" },
+  { source = "metzger-1987-canon", locator = "p. 64" },
+]
+
+[[events]]
+event = "canon-athanasius-festal-letter-39"
+note = "Athanasius lists the Shepherd among books outside the canon appointed to be read by new converts."
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, section 7" }]
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists 'the so-called Shepherd' among the rejected writings."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.4" }]

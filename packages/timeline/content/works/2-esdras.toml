@@ -1,0 +1,49 @@
+id = "2-esdras"
+title = "2 Esdras"
+also_known_as = ["4 Ezra (chapters 3-14)", "Ezra Apocalypse"]
+books = ["2Esd"]
+canon = "deuterocanon"
+status = "sources-located"
+summary = "2 Esdras is three works in one; its core, chapters 3-14, is the Jewish apocalypse 4 Ezra, which the unsigned Brenton preface dates to Domitian's reign (81-96 CE) and Lim to the end of the first century CE. McDonald says the Latin form received final Christian additions. Chapter 14 has Ezra keep 'the seventy last' books for the wise, which McDonald and Lim use in the canon debate. The Ethiopian church and the Greek Orthodox Church (1950) hold it as scripture."
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }, { source = "lim-2013", locator = "p. 169" }]
+original_language = "Disputed; the preface says probably Greek, with no Greek text found"
+
+[[composed]]
+id = "domitian-81-96"
+label = "Reign of Domitian, 81 to 96 CE"
+tradition = "critical"
+earliest = 81
+latest = 96
+summary = "The preface says the seven visions were 'written probably in Domitian's reign (a.d. 81-96)'. It says the book has three distinct works and dates only the apocalypse. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
+held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
+citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }]
+
+[[composed]]
+id = "end-of-first-century"
+label = "End of the first century CE"
+tradition = "critical"
+earliest = 90
+latest = 100
+summary = "Lim gives '2 Esdras (end of first century CE)' and McDonald says 4 Ezra is 'after 70 CE, with final Christian additions later'. The range converts 'end of the first century' to 90-100."
+held_by = "Lim (2013) and McDonald (2017)"
+citations = [{ source = "lim-2013", locator = "p. 169" }, { source = "mcdonald-2017-vol1", locator = "p. 138" }]
+
+[[held_canonical_by]]
+tradition = "Ethiopian Orthodox Tewahedo Church"
+note = "McDonald says the Ethiopian Old Testament adds IV Esdras to the Orthodox books (p. 10, n. 16) and lists the 'Ezra Apocalypse' (p. 457)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 10, n. 16" }, { source = "mcdonald-2017-vol1", locator = "p. 457" }]
+
+[[held_canonical_by]]
+tradition = "Greek Orthodox Church"
+note = "McDonald says the Greek Orthodox canon authorized in 1950 included 2 Esdras; the 1956 Russian Bible omits it (p. 335)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 335" }]
+
+[[translations]]
+ledger = "kjv-apocrypha"
+code = "KJVA"
+note = "The King James Version Apocrypha (1611, standardized text of 1769)."
+
+[[events]]
+event = "canon-4-ezra-twenty-four-books"
+note = "2 Esdras 14:46 has Ezra told to keep 'the seventy last' books for the wise among the people."
+citations = [{ source = "kjv-apocrypha-sacred-texts", locator = "2 Esdras 14:45-46" }]

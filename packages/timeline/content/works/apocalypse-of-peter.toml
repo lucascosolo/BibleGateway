@@ -1,0 +1,66 @@
+id = "apocalypse-of-peter"
+title = "Apocalypse of Peter"
+also_known_as = ["Revelation of Peter"]
+books = ["ApocPet"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+Metzger calls it the most important of the apocryphal books of revelation. Peter and the disciples ask Jesus on the Mount of Olives about the signs of his coming, and are shown heaven and the punishments of hell, with the torments of the damned described at far greater length than the joys of heaven. The Akhmim Greek fragment, an Ethiopic version found in 1910 and a small Bodleian leaf survive; the Greek seems to be a condensed and recast form. Metzger dates it about 125 to 150 CE. The Muratorian Fragment received it but noted that some would not have it read in church, Eusebius rejected it, and Sozomen reports it read each Good Friday in some Palestinian churches in the fifth century."""
+citations = [
+  { source = "metzger-1987-canon", locator = "pp. 184-185" },
+  { source = "james-1924-ant", locator = "intro., p. 505" },
+]
+
+[[composed]]
+id = "about-125-150"
+label = "About 125 to 150 CE"
+tradition = "critical"
+earliest = 125
+latest = 150
+held_by = "Bruce M. Metzger (1987)"
+summary = """
+Metzger dates the Apocalypse of Peter from about 125 to 150 CE. M. R. James (1924) judged it next in popularity to John's Apocalypse and probably also in date, and thought the Gospel of Peter a slightly later book that quoted it almost in full; he gave no figures."""
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 184" },
+  { source = "james-1924-ant", locator = "intro., p. 505" },
+]
+
+[[provenance]]
+place = "Akhmim, Upper Egypt"
+note = "Portions of the Greek text were found in 1886-87 in a Christian tomb at Akhmim; the complete text in Ethiopic came to light in 1910."
+citations = [{ source = "metzger-1987-canon", locator = "p. 185" }]
+
+[[witnesses]]
+name = "Bodleian Greek leaf"
+earliest = 401
+latest = 500
+language = "Greek"
+institution = "Bodleian Library, Oxford"
+note = "A mutilated leaf of a very small Greek manuscript that supplies a few lines of what James takes to be the original Greek text. 'Fifth century' converted to 401-500."
+citations = [{ source = "james-1924-ant", locator = "intro., p. 505" }]
+
+[[held_canonical_by]]
+tradition = "Some churches of Palestine (fifth century)"
+note = "Sozomen reports that in his day some churches of Palestine read from the Apocalypse of Peter every Good Friday."
+citations = [
+  { source = "metzger-1987-canon", locator = "p. 184" },
+  { source = "james-1924-ant", locator = "intro., p. 505" },
+]
+
+[[translations]]
+ledger = "james-apocalypse-peter"
+note = "James 1924. The Akhmim fragment is numbered by James's verses 1-34; the Ethiopic text is numbered by editorial paragraph ordinals."
+
+[[events]]
+event = "canon-muratorian-fragment"
+note = "The Fragment says 'We receive only the apocalypses of John and Peter, though some of us are not willing that the latter be read in church.'"
+citations = [
+  { source = "anf05-salmond-muratorian", locator = "Fragments of Caius, Canon Muratorianus" },
+  { source = "metzger-1987-canon", locator = "p. 184" },
+]
+
+[[events]]
+event = "canon-eusebius-accepted-disputed"
+note = "Eusebius lists the Apocalypse of Peter among the rejected writings."
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.4" }]

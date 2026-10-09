@@ -1,0 +1,49 @@
+id = "infancy-gospel-of-thomas"
+title = "Infancy Gospel of Thomas"
+also_known_as = ["Gospel of Thomas (Greek infancy gospel)", "Childhood Deeds of Jesus"]
+books = ["InfThom"]
+canon = "nt-apocrypha"
+status = "sources-located"
+original_language = "Greek"
+summary = """
+Stories of Jesus as a boy, found in several Greek forms and in Latin. It is a different book from the Coptic Gospel of Thomas, a collection of sayings. Walker (1870) judged it of undoubted antiquity, a work of a Gnostic, Docetic, Marcosian author known to Origen, Irenaeus and the Gnostic Nachashenes of the second century. Metzger notes that the story of the boy Jesus and the teacher who asked him to say 'Alpha', which Irenaeus reports as told by the Marcosians, is also in the Greek Gospel of Thomas. Its earliest Greek manuscript is of the eleventh century, and the earliest manuscripts in other languages come closer to it."""
+citations = [
+  { source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 352" },
+  { source = "metzger-1987-canon", locator = "p. 83 and n. 17" },
+  { source = "mattison-gospels-net", locator = "Manuscript Information page" },
+]
+
+[[composed]]
+id = "second-century"
+label = "Second century CE"
+tradition = "critical"
+earliest = 101
+latest = 200
+held_by = "Alexander Walker (1870)"
+summary = """
+Walker says the book is of undoubted antiquity, was used by a Gnostic sect of the second century and quoted by Irenaeus, and that its author was a Gnostic, a Docetist and a Marcosian. This is the translator's view as of 1870, and the range is Walker's second-century evidence for its use, not a stated date of writing; scholarship has moved since. Metzger (p. 83 n. 17) confirms the Alpha and Beta story known to Irenaeus is also in this Greek Gospel of Thomas."""
+citations = [
+  { source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 352" },
+  { source = "metzger-1987-canon", locator = "p. 83 and n. 17" },
+]
+
+[[witnesses]]
+name = "Hagios Saba 259"
+siglum = "Hagios Saba 259"
+earliest = 1001
+latest = 1100
+language = "Greek"
+note = "The earliest Greek manuscript. 'Eleventh century' converted to 1001-1100. Mattison notes that early manuscripts in other ancient languages more closely approximate it."
+citations = [{ source = "mattison-gospels-net", locator = "Manuscript Information page" }]
+
+[[witnesses]]
+name = "Latin palimpsest"
+earliest = 401
+latest = 500
+language = "Latin"
+note = "Walker reports that Tischendorf assigns it to the fifth century and thinks it nearer the ancient Greek than other copies. 'Fifth century' converted to 401-500."
+citations = [{ source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 352" }]
+
+[[translations]]
+ledger = "walker-infancy-thomas"
+note = "Walker 1870 (ANF 8), three forms (first Greek, second Greek, Latin), chapter level."

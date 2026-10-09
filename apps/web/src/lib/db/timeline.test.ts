@@ -69,6 +69,29 @@ beforeAll(async () => {
       ('person','per-a',19001001,19001001,'describes',NULL),
       ('person','per-a',20001001,20001003,'describes',NULL),
       ('person','per-a',20001001,20001001,'alludes',NULL);
+
+    INSERT INTO works VALUES ('w-enoch','1 Enoch','["Ethiopic Enoch"]','pseudepigrapha','draft','A composite apocalypse.',NULL,'Aramaic',-300,-1,-3000,-2900);
+    INSERT INTO works VALUES ('w-gospel','A Lost Gospel',NULL,'described','claims-checked','Known by report.','Reported sayings.','Greek',100,199,NULL,NULL);
+    INSERT INTO works VALUES ('w-baruch','2 Baruch','[]','deuterocanon','draft','Syriac apocalypse.',NULL,'Hebrew',70,135,NULL,NULL);
+    INSERT INTO work_books VALUES ('w-enoch',85,1),('w-baruch',85,1),('w-baruch',86,2);
+    INSERT INTO work_positions VALUES ('w-enoch/critical-stages','w-enoch',1,'Third to first century BCE','critical',-300,-1,'In stages.','R. H. Charles');
+    INSERT INTO work_positions VALUES ('w-enoch/trad','w-enoch',2,'Antediluvian','traditional',-3000,-2900,'By Enoch.',NULL);
+    INSERT INTO work_provenance VALUES ('w-enoch/provenance-1','w-enoch',1,'Judea','Probable.');
+    INSERT INTO work_witnesses VALUES ('w-enoch/witness-1','w-enoch',1,'4Q201','4QEn^a',-200,-150,'Aramaic','IAA','https://example.org/4q201','Fragments.');
+    INSERT INTO work_holders VALUES ('w-enoch/holder-1','w-enoch',1,'Ethiopian Orthodox Tewahedo Church',NULL);
+    INSERT INTO work_translations VALUES ('w-enoch',1,'charles-1enoch','LXX','Charles 1917');
+    INSERT INTO work_excerpts VALUES ('w-gospel/excerpt-1','w-gospel',1,'A short quoted line','Cited by a father.');
+    INSERT INTO work_events VALUES ('w-enoch','ev-fall',1,'Context for the exile.');
+    INSERT INTO work_verses VALUES ('w-enoch',1001001,1001002,'alludes','Echoed.');
+    INSERT INTO work_citations(work_id,subject_kind,subject_id,source_id,locator,ordinal) VALUES
+      ('w-enoch','work','w-enoch','src-a','p. 1',1),
+      ('w-enoch','position','w-enoch/critical-stages','src-b','p. 3',1),
+      ('w-enoch','provenance','w-enoch/provenance-1','src-a','p. 4',1),
+      ('w-enoch','witness','w-enoch/witness-1','src-b','p. 5',1),
+      ('w-enoch','holder','w-enoch/holder-1','src-a','p. 6',1),
+      ('w-enoch','event','w-enoch@ev-fall','src-b','p. 7',1),
+      ('w-gospel','work','w-gospel','src-a','p. 1',1),
+      ('w-gospel','excerpt','w-gospel/excerpt-1','src-b','p. 2',1);
   `);
   fixture.db = db;
 });
@@ -363,5 +386,103 @@ describe("getTimelineNotesForRange", () => {
     expect(stele.subject).toMatchObject({ relation: "consistent" });
     const [far] = getTimelineNotesForRange(range(27_001_001, 27_001_001));
     expect(far.subject).toMatchObject({ kind: "artifact", id: "art-far", relation: null });
+  });
+});
+
+describe("works", () => {
+  it("getWorkSummaries is with book ids and both envelopes", async () => {
+    const { getWorkSummaries } = await import("./timeline");
+    const all = getWorkSummaries();
+    expect(all.map((w) => w.id).sort()).toEqual(["w-baruch", "w-enoch", "w-gospel"]);
+    expect(all.find((w) => w.id === "w-enoch")).toMatchObject({
+      title: "1 Enoch", canon: "pseudepigrapha", status: "draft", bookIds: [85],
+      composedEarliest: -300, composedLatest: -1, traditionalEarliest: -3000, traditionalLatest: -2900,
+    });
+    expect(all.find((w) => w.id === "w-gospel")).toMatchObject({
+      canon: "described", bookIds: [], traditionalEarliest: null, traditionalLatest: null,
+    });
+    expect(all.find((w) => w.id === "w-baruch")!.bookIds).toEqual([85, 86]);
+  });
+
+  it("getWork returns the full detail with citations per part", async () => {
+    const { getWork } = await import("./timeline");
+    const w = getWork("w-enoch")!;
+    expect(w).toMatchObject({
+      id: "w-enoch", alsoKnownAs: ["Ethiopic Enoch"], summary: "A composite apocalypse.", contents: null,
+      originalLanguage: "Aramaic", bookIds: [85],
+    });
+    expect(w.citations.map((c) => [c.sourceId, c.locator])).toEqual([["src-a", "p. 1"]]);
+    // id is the position slug or the stored "<work>/<slug>"; the contract leaves it open.
+    expect(w.composed.map((p) => p.id.split("/").pop())).toEqual(["critical-stages", "trad"]);
+    expect(w.composed[0]).toMatchObject({
+      label: "Third to first century BCE", tradition: "critical", earliest: -300, latest: -1,
+      summary: "In stages.", heldBy: "R. H. Charles",
+    });
+    expect(w.composed[1].heldBy).toBeNull();
+    expect(w.composed[0].citations.map((c) => c.sourceId)).toEqual(["src-b"]);
+    expect(w.composed[1].citations).toEqual([]);
+    expect(w.provenance[0]).toMatchObject({ place: "Judea", note: "Probable." });
+    expect(w.provenance[0].citations[0]).toMatchObject({ sourceId: "src-a", locator: "p. 4" });
+    expect(w.witnesses[0]).toMatchObject({
+      siglum: "4Q201", name: "4QEn^a", earliest: -200, latest: -150, language: "Aramaic",
+      institution: "IAA", url: "https://example.org/4q201", note: "Fragments.",
+    });
+    expect(w.witnesses[0].citations[0].sourceId).toBe("src-b");
+    expect(w.heldCanonicalBy[0]).toMatchObject({ tradition: "Ethiopian Orthodox Tewahedo Church", note: null });
+    expect(w.heldCanonicalBy[0].citations[0].sourceId).toBe("src-a");
+    expect(w.translations).toEqual([{ ledger: "charles-1enoch", code: "LXX", note: "Charles 1917" }]);
+    expect(w.events).toHaveLength(1);
+    expect(w.events[0]).toMatchObject({ id: "ev-fall", title: "Fall of Jerusalem", note: "Context for the exile." });
+    expect(w.events[0].citations[0].sourceId).toBe("src-b");
+    expect(w.verses).toEqual([{ start: 1_001_001, end: 1_001_002, linkType: "alludes", note: "Echoed." }]);
+    expect(w.excerpts).toEqual([]);
+  });
+
+  it("getWork returns contents and excerpts for a described work", async () => {
+    const { getWork } = await import("./timeline");
+    const w = getWork("w-gospel")!;
+    expect(w).toMatchObject({ canon: "described", contents: "Reported sayings.", alsoKnownAs: [], bookIds: [] });
+    expect(w.excerpts).toHaveLength(1);
+    expect(w.excerpts[0]).toMatchObject({ text: "A short quoted line", note: "Cited by a father." });
+    expect(w.excerpts[0].citations[0]).toMatchObject({ sourceId: "src-b", locator: "p. 2" });
+  });
+
+  it("getWork returns null for an unknown id", async () => {
+    const { getWork } = await import("./timeline");
+    expect(getWork("missing")).toBeNull();
+  });
+
+  it("getWorksForBook returns every work printed in that book, and nothing for other books", async () => {
+    const { getWorksForBook } = await import("./timeline");
+    expect(getWorksForBook(85).map((w) => w.id).sort()).toEqual(["w-baruch", "w-enoch"]);
+    expect(getWorksForBook(86).map((w) => w.id)).toEqual(["w-baruch"]);
+    expect(getWorksForBook(1)).toEqual([]);
+  });
+});
+
+describe("works against a timeline.db built before works existed", () => {
+  it("returns [] / null and never throws", async () => {
+    const { default: Database } = await vi.importActual<typeof import("better-sqlite3")>("better-sqlite3");
+    const fs = await vi.importActual<typeof import("node:fs")>("node:fs");
+    const path = await vi.importActual<typeof import("node:path")>("node:path");
+    const schema = fs.readFileSync(
+      path.resolve(__dirname, "../../../../../packages/timeline/schema.sql"), "utf8");
+    // Cut the works section (it starts at the CREATE TABLE works statement) to model an old schema.
+    const cut = schema.search(/CREATE TABLE works\b/);
+    const old = new Database(":memory:");
+    old.exec(cut === -1 ? schema : schema.slice(0, cut));
+    const prior = fixture.db;
+    fixture.db = old;
+    vi.resetModules();
+    try {
+      const t = await import("./timeline");
+      expect(t.getWorkSummaries()).toEqual([]);
+      expect(t.getWork("w-enoch")).toBeNull();
+      expect(t.getWorksForBook(85)).toEqual([]);
+    } finally {
+      fixture.db = prior;
+      old.close();
+      vi.resetModules();
+    }
   });
 });

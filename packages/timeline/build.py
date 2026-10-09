@@ -37,7 +37,7 @@ from pathlib import Path
 from typing import Any
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
-SCHEMA_VERSION = "2"
+SCHEMA_VERSION = "3"
 
 ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 REF_RE = re.compile(r"^([1-4]?[A-Za-z]+)\.(\d+)\.(\d+)$")
@@ -63,6 +63,10 @@ ISSUE_KINDS = {"chronology", "textual", "historical", "internal"}
 LINK_TYPES = {"describes", "alludes", "background", "dates"}
 # Why a passage reads differently between witnesses or editions (an investigation's differences).
 DIFFERENCE_KINDS = {"textual", "lexical", "grammatical", "stylistic", "interpretive", "editorial"}
+# Where an outside work stands (bible.db books.canon for books 67+); 'described' works have no text.
+WORK_CANONS = {"deuterocanon", "pseudepigrapha", "nt-apocrypha", "apostolic", "described"}
+# The plan's limit on a quotation from a work we do not print.
+EXCERPT_MAX_WORDS = 24
 
 
 # --- Diagnostics -----------------------------------------------------------------------------
@@ -156,6 +160,8 @@ class Corpus:
     book_ids: dict[str, int]
     verse_ids: set[int]
     build_id: str
+    # None when the corpus has no translations table (test fixtures); codes are then unchecked.
+    translation_codes: set[str] | None = None
 
 
 def load_corpus(path: Path) -> Corpus:
@@ -164,9 +170,11 @@ def load_corpus(path: Path) -> Corpus:
         book_ids = {osis: book_id for book_id, osis in db.execute("SELECT book_id, osis_id FROM books")}
         verse_ids = {row[0] for row in db.execute("SELECT verse_id FROM verses")}
         row = db.execute("SELECT value FROM corpus_meta WHERE key = 'build_id'").fetchone()
+        has_translations = db.execute("SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = 'translations'").fetchone()
+        codes = {code for (code,) in db.execute("SELECT code FROM translations")} if has_translations else None
     finally:
         db.close()
-    return Corpus(book_ids, verse_ids, row[0] if row else "unknown")
+    return Corpus(book_ids, verse_ids, row[0] if row else "unknown", codes)
 
 
 def verse_id(book_id: int, chapter: int, verse: int) -> int:
@@ -216,6 +224,7 @@ class Content:
     issues: dict[str, dict[str, Any]] = field(default_factory=dict)
     persons: dict[str, dict[str, Any]] = field(default_factory=dict)
     investigations: dict[str, dict[str, Any]] = field(default_factory=dict)
+    works: dict[str, dict[str, Any]] = field(default_factory=dict)
     cited: set[str] = field(default_factory=set)
 
 
@@ -632,6 +641,124 @@ def load_persons(report: Report, directory: Path, content: Content, corpus: Corp
         }
 
 
+def load_works(report: Report, directory: Path, content: Content, corpus: Corpus) -> None:
+    spec: Spec = {
+        "id": (str, True), "title": (str, True), "also_known_as": (list, False), "books": (list, False),
+        "canon": (str, True), "status": (str, True), "summary": (str, True), "citations": (list, True),
+        "original_language": (str, True), "contents": (str, False), "verses": (list, False),
+        "composed": (list, True), "provenance": (list, False), "witnesses": (list, False),
+        "held_canonical_by": (list, False), "translations": (list, False), "excerpts": (list, False),
+        "events": (list, False),
+    }
+    position_spec: Spec = {
+        "id": (str, True), "label": (str, True), "tradition": (str, True), "earliest": (int, True),
+        "latest": (int, True), "summary": (str, True), "held_by": (str, False), "citations": (list, False),
+    }
+    part_specs: dict[str, Spec] = {
+        "provenance": {"place": (str, True), "note": (str, False), "citations": (list, False)},
+        "witnesses": {
+            "name": (str, True), "siglum": (str, False), "earliest": (int, True), "latest": (int, True),
+            "language": (str, True), "institution": (str, False), "url": (str, False), "note": (str, False),
+            "citations": (list, False),
+        },
+        "held_canonical_by": {"tradition": (str, True), "note": (str, False), "citations": (list, False)},
+        "translations": {"ledger": (str, True), "code": (str, False), "note": (str, False)},
+        "excerpts": {"text": (str, True), "note": (str, False), "citations": (list, False)},
+        "events": {"event": (str, True), "note": (str, True), "citations": (list, False)},
+    }
+
+    for path, raw in entity_files(report, directory / "works"):
+        where = str(path)
+        work = check_table(report, where, raw, spec)
+        if work is None or not check_id(report, where, work["id"]):
+            continue
+        check_enum(report, where, "canon", work["canon"], WORK_CANONS)
+        check_status(report, where, work["status"])
+        described = work["canon"] == "described"
+        aliases = work.get("also_known_as", [])
+        if not all(isinstance(alias, str) and alias for alias in aliases):
+            report.error(where, "'also_known_as' must be an array of non-empty strings")
+
+        book_ids: list[int] = []
+        if described:
+            for key in ("books", "translations"):
+                if key in work:
+                    report.error(where, f"a described work has no printed text: it has no '{key}'")
+            if not work.get("contents"):
+                report.error(where, "a described work needs 'contents' (what the text contains)")
+        else:
+            if not work.get("books"):
+                report.error(where, "needs 'books' (OSIS ids of the books that print it)")
+            if not work.get("translations"):
+                report.error(where, "needs at least one [[translations]] entry (the translation the corpus prints)")
+            if "excerpts" in work:
+                report.error(where, "'excerpts' belong to described works only; a printed work is read in full")
+        for osis in [] if described else work.get("books", []):
+            if not isinstance(osis, str) or osis not in corpus.book_ids:
+                report.error(where, f"unknown OSIS book '{osis}' in 'books'")
+            elif corpus.book_ids[osis] not in book_ids:
+                book_ids.append(corpus.book_ids[osis])
+
+        positions: list[dict[str, Any]] = []
+        if not work["composed"]:
+            report.error(where, "needs at least one [[composed]] entry")
+        seen_positions: set[str] = set()
+        for index, raw_position in enumerate(work["composed"]):
+            here = f"{where} composed {index + 1}"
+            position = check_table(report, here, raw_position, position_spec)
+            if position is None or not check_id(report, here, position["id"]):
+                continue
+            if position["id"] in seen_positions:
+                report.error(here, f"duplicate composed id '{position['id']}'")
+                continue
+            seen_positions.add(position["id"])
+            check_enum(report, here, "tradition", position["tradition"], TRADITIONS)
+            check_years(report, here, position["earliest"], position["latest"])
+            positions.append({**position, "held_by": position.get("held_by"),
+                              "citations": citations(report, here, position.get("citations"), content)})
+        traditions = [p["tradition"] for p in positions]
+        if "traditional" in traditions and any(t != "traditional" for t in traditions[traditions.index("traditional"):]):
+            report.error(where, "a traditional composed position comes before a scholarly one; critical positions lead")
+
+        parts: dict[str, list[dict[str, Any]]] = {}
+        for key, part_spec in part_specs.items():
+            parts[key] = []
+            for index, raw_part in enumerate(work.get(key, [])):
+                here = f"{where} {key} {index + 1}"
+                part = check_table(report, here, raw_part, part_spec)
+                if part is None:
+                    continue
+                entry = {name: part.get(name) for name in part_spec}
+                if "citations" in part_spec:
+                    entry["citations"] = citations(report, here, part.get("citations"), content)
+                parts[key].append(entry)
+        for index, w in enumerate(parts["witnesses"]):
+            check_years(report, f"{where} witnesses {index + 1}", w["earliest"], w["latest"])
+        for index, t in enumerate(parts["translations"]):
+            if t["code"] and corpus.translation_codes is not None and t["code"] not in corpus.translation_codes:
+                report.error(f"{where} translations {index + 1}", f"translation code '{t['code']}' is not in the corpus")
+        for index, x in enumerate(parts["excerpts"]):
+            words = len(x["text"].split())
+            if words > EXCERPT_MAX_WORDS:
+                report.error(f"{where} excerpts {index + 1}", f"an excerpt must be under 25 words; this one has {words}")
+        seen_events: set[str] = set()
+        for index, e in enumerate(parts["events"]):
+            if e["event"] in seen_events:
+                report.error(f"{where} events {index + 1}", f"event '{e['event']}' is linked twice")
+            seen_events.add(e["event"])
+
+        content.works[work["id"]] = {
+            **work,
+            "also_known_as": list(aliases),
+            "contents": work.get("contents"),
+            "book_ids": book_ids,
+            "composed": positions,
+            **parts,
+            "citations": citations(report, where, work["citations"], content),
+            "verses": verses(report, where, work.get("verses"), corpus),
+        }
+
+
 def evidence_grade(attestations: list[dict[str, Any]]) -> tuple[str, bool]:
     """(grade, has_tension) for a person, derived from their attestations — never authored."""
     relations = {a["relation"] for a in attestations}
@@ -677,6 +804,12 @@ def all_citations(content: Content):
         for part in inv["witnesses"] + inv["differences"] + inv["challenges"]:
             for c in part["citations"]:
                 yield where, c
+    for work in content.works.values():
+        where = f"works/{work['id']}.toml"
+        for part in [work, *work["composed"], *work["provenance"], *work["witnesses"],
+                     *work["held_canonical_by"], *work["excerpts"], *work["events"]]:
+            for c in part["citations"]:
+                yield where, c
 
 
 def cross_check(report: Report, content: Content) -> None:
@@ -706,6 +839,10 @@ def cross_check(report: Report, content: Content) -> None:
         for event_id in person["events"]:
             if event_id not in content.events:
                 report.error(where, f"names unknown event '{event_id}'")
+    for work in content.works.values():
+        for link in work["events"]:
+            if link["event"] not in content.events:
+                report.error(f"works/{work['id']}.toml", f"names unknown event '{link['event']}'")
 
 
 # --- Fingerprint -----------------------------------------------------------------------------
@@ -738,6 +875,8 @@ def fingerprint(content: Content) -> str:
         feed("person", content.persons[person_id])
     for investigation_id in sorted(content.investigations):
         feed("investigation", content.investigations[investigation_id])
+    for work_id in sorted(content.works):
+        feed("work", content.works[work_id])
     return digest.hexdigest()[:16]
 
 
@@ -905,6 +1044,59 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
             db.execute("INSERT INTO investigation_challenges VALUES (?, ?, ?, ?)", (challenge_id, iid, ordinal, c["text"]))
             cite_part("challenge", challenge_id, c["citations"])
 
+    for w in content.works.values():
+        wid = w["id"]
+        positions = [{**p, "dates": "event"} for p in w["composed"]]
+        span = envelope(positions)
+        db.execute(
+            """INSERT INTO works (work_id, title, also_known_as, canon, status, summary, contents, original_language,
+                                  composed_earliest, composed_latest, traditional_earliest, traditional_latest)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (wid, w["title"], json.dumps(w["also_known_as"], ensure_ascii=False) if w["also_known_as"] else None,
+             w["canon"], w["status"], w["summary"], w["contents"], w["original_language"],
+             span["earliest"], span["latest"], span["trad_earliest"], span["trad_latest"]),
+        )
+
+        def cite_work(kind: str, subject: str, items: list[dict[str, Any]]) -> None:
+            db.executemany(
+                """INSERT INTO work_citations (work_id, subject_kind, subject_id, source_id, locator, ordinal)
+                   VALUES (?, ?, ?, ?, ?, ?)""",
+                [(wid, kind, subject, c["source"], c["locator"], i) for i, c in enumerate(items)],
+            )
+
+        cite_work("work", wid, w["citations"])
+        db.executemany("INSERT INTO work_books VALUES (?, ?, ?)", [(wid, b, i) for i, b in enumerate(w["book_ids"])])
+        for i, p in enumerate(w["composed"]):
+            pid = f"{wid}/{p['id']}"
+            db.execute("INSERT INTO work_positions VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                       (pid, wid, i, p["label"], p["tradition"], p["earliest"], p["latest"], p["summary"], p["held_by"]))
+            cite_work("position", pid, p["citations"])
+        for i, p in enumerate(w["provenance"]):
+            pid = f"{wid}/provenance-{i + 1}"
+            db.execute("INSERT INTO work_provenance VALUES (?, ?, ?, ?, ?)", (pid, wid, i, p["place"], p["note"]))
+            cite_work("provenance", pid, p["citations"])
+        for i, x in enumerate(w["witnesses"]):
+            xid = f"{wid}/witness-{i + 1}"
+            db.execute("INSERT INTO work_witnesses VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                       (xid, wid, i, x["siglum"], x["name"], x["earliest"], x["latest"], x["language"],
+                        x["institution"], x["url"], x["note"]))
+            cite_work("witness", xid, x["citations"])
+        for i, h in enumerate(w["held_canonical_by"]):
+            hid = f"{wid}/holder-{i + 1}"
+            db.execute("INSERT INTO work_holders VALUES (?, ?, ?, ?, ?)", (hid, wid, i, h["tradition"], h["note"]))
+            cite_work("holder", hid, h["citations"])
+        db.executemany("INSERT INTO work_translations VALUES (?, ?, ?, ?, ?)",
+                       [(wid, i, t["ledger"], t["code"], t["note"]) for i, t in enumerate(w["translations"])])
+        for i, x in enumerate(w["excerpts"]):
+            xid = f"{wid}/excerpt-{i + 1}"
+            db.execute("INSERT INTO work_excerpts VALUES (?, ?, ?, ?, ?)", (xid, wid, i, x["text"], x["note"]))
+            cite_work("excerpt", xid, x["citations"])
+        for i, e in enumerate(w["events"]):
+            db.execute("INSERT INTO work_events VALUES (?, ?, ?, ?)", (wid, e["event"], i, e["note"]))
+            cite_work("event", f"{wid}@{e['event']}", e["citations"])
+        db.executemany("INSERT INTO work_verses VALUES (?, ?, ?, ?, ?)",
+                       [(wid, v["start"], v["end"], v["link"], v["note"]) for v in w["verses"]])
+
     db.executemany(
         "INSERT INTO meta VALUES (?, ?)",
         [("build_id", fingerprint(content)), ("schema_version", SCHEMA_VERSION), ("corpus_build_id", corpus.build_id)],
@@ -948,6 +1140,7 @@ def build(content_dir: Path, corpus_path: Path, out: Path) -> Report:
     load_issues(report, content_dir, content, corpus)
     load_persons(report, content_dir, content, corpus)
     load_investigations(report, content_dir, content, corpus)
+    load_works(report, content_dir, content, corpus)
     cross_check(report, content)
     if report.errors:
         return report
