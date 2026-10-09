@@ -2,12 +2,12 @@ id = "thanksgiving-hymns"
 title = "Thanksgiving Hymns (1QHa)"
 also_known_as = ["Hodayot", "Hymn Scroll", "Thanksgiving Psalms"]
 canon = "described"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Hebrew"
 summary = """
 The Thanksgiving Hymns are about thirty poems of praise and thanks for salvation and knowledge, close in form to the biblical Psalms but more personal. Eight copies survive from Caves 1 and 4. Scholars class them as sectarian, and many see them as songs used in the community's worship, though that is disputed."""
 contents = """
-McDonald describes some thirty hymns, many of them thanksgivings for salvation and knowledge, and says the collection is parallel to the canonical Psalms but more individualistic. Lim reports that the poems divide into 'Teacher-hymns' and 'Community-hymns' and that they probably had a role in the community's liturgy. The best-preserved copy, 1QHa from Cave 1, is held at the Israel Museum's Shrine of the Book and is not part of its digital edition, according to the project's source ledger."""
+McDonald describes some thirty hymns, many of them thanksgivings for salvation and knowledge, and says the collection is parallel to the canonical Psalms but more individualistic. Lim reports that the poems divide into 'Teacher-hymns' and 'Community-hymns' and that they probably had a role in the community's liturgy."""
 citations = [
   { source = "mcdonald-2017-vol1", locator = "p. 241" },
   { source = "lim-2013", locator = "pp. 144-145" },

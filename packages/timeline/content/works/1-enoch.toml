@@ -3,7 +3,7 @@ title = "1 Enoch"
 also_known_as = ["Ethiopic Enoch", "The Book of Enoch"]
 books = ["1En"]
 canon = "pseudepigrapha"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Aramaic"
 summary = """
 1 Enoch is a collection of five booklets (the Watchers, the Parables, the Astronomical Book, the Dream Visions and the Epistle of Enoch) with three appendices, all put under the name of Enoch, the ancestor of Noah. Lim dates the pieces to between about 350 BCE and 75 CE. The Aramaic fragments from Qumran point to Aramaic as the original language; the complete text survives only in Ethiopic. Jude quotes it, and the Ethiopian church still counts it as Scripture. The English text here is Charles's translation, and the one dating table quoted below is Charles's own, as reported by Oesterley in 1917."""
@@ -11,6 +11,7 @@ citations = [
   { source = "lim-2013", locator = "p. 143" },
   { source = "satlow-2014", locator = "p. 118" },
   { source = "vanderkam-2012", locator = "chapter 2, section on older literature outside the Hebrew Bible, note 14" },
+  { source = "charles-1917-enoch", locator = "intro., p. xviii" },
 ]
 
 verses = [

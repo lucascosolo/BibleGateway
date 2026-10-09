@@ -5,9 +5,9 @@ canon = "described"
 status = "sources-located"
 original_language = "Greek"
 summary = """
-An esoteric treatise preserved in two Coptic versions in the Nag Hammadi library, as NHC III,2 and IV,2. It is a different book from the Greek Gospel of the Egyptians, which Clement of Alexandria quoted and which Metzger dates after 150 CE; Metzger flags the difference in a footnote. No filed source gives a date for the Coptic work in particular; Metzger's general range for the Greek originals of the Nag Hammadi tractates is the second or third century. It has no verses in the corpus and no full English text in this app."""
+An esoteric treatise preserved in two Coptic versions in the Nag Hammadi library. It is a different book from the Greek Gospel of the Egyptians, which Clement of Alexandria quoted and which Metzger dates after 150 CE; Metzger flags the difference in a footnote. No filed source gives a date for the Coptic work in particular; Metzger's general range for the Greek originals of the Nag Hammadi tractates is the second or third century. It has no verses in the corpus and no full English text in this app."""
 contents = """
-An esoteric treatise, known in two Coptic copies, one in Codex III and one in Codex IV. Not to be confused with the Greek Gospel of the Egyptians quoted by Clement of Alexandria."""
+An esoteric treatise, known in two Coptic copies. Not to be confused with the Greek Gospel of the Egyptians quoted by Clement of Alexandria."""
 citations = [
   { source = "metzger-1987-canon", locator = "pp. 84, 171 n. 14" },
 ]
@@ -29,8 +29,7 @@ note = "Found with the other Nag Hammadi codices in December 1945. Codex III was
 citations = [{ source = "dss-nag-hammadi-codices", locator = "pp. 38, 121-122" }]
 
 [[witnesses]]
-name = "Nag Hammadi Codices III,2 and IV,2"
-siglum = "NHC III,2; IV,2"
+name = "The two Coptic copies in the Nag Hammadi codices"
 earliest = 301
 latest = 400
 language = "Coptic"

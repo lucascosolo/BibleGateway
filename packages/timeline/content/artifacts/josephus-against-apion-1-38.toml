@@ -1,14 +1,15 @@
 id = "josephus-against-apion-1-38"
 name = "Josephus, Against Apion 1.37-43: the twenty-two books"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 made = { earliest = 94, latest = 100 }
 summary = """
-Writing in Rome about 95 CE, Josephus defends the Jewish records against Greek historians by appealing to a fixed and small collection of sacred books. Jews, he writes, "have not an innumerable multitude of books among us, disagreeing from and contradicting one another, [as the Greeks have,] but only twenty-two books", books "which contain the records of all the past times; which are justly believed to be divine; and of them five belong to Moses". The prophets after Moses, he says, "wrote down what was done in their times in thirteen books", and "The remaining four books contain hymns to God, and precepts for the conduct of human life." He adds that later history has not been held in the same authority "because there hath not been an exact succession of prophets since that time". This is the earliest surviving statement that the Jewish scriptures were a closed, numbered collection, and the twenty-two count, matching the Hebrew alphabet, recurs in Origen, Athanasius and Jerome."""
+Writing at the end of the first century CE, Josephus defends the Jewish records against Greek historians by appealing to a fixed and small collection of sacred books. Jews, he writes, "have not an innumerable multitude of books among us, disagreeing from and contradicting one another, [as the Greeks have,] but only twenty-two books", books "which contain the records of all the past times; which are justly believed to be divine; and of them five belong to Moses". The prophets after Moses, he says, "wrote down what was done in their times in thirteen books", and "The remaining four books contain hymns to God, and precepts for the conduct of human life." He adds that later history has not been held in the same authority "because there hath not been an exact succession of prophets since that time". Whether the passage attests a closed canon is much debated. Josephus does not relate the twenty-two to the Hebrew alphabet; Origen and Athanasius count twenty-two books and tie the number to the Hebrew letters, and Jerome reports twenty-two as the majority count."""
 citations = [
   { source = "josephus-whiston", locator = "Against Apion 1.8 (sections 37-43 in Niese's numbering)" },
-  { source = "lim-2013", locator = "the chapter on Josephus" },
+  { source = "lim-2013", locator = "pp. 43-47" },
+  { source = "npnf2-04-ccel", locator = "Festal Letter 39, section 4" },
 ]
 verses = [
   { ref = "Deut.34.10", link = "background", note = "Deuteronomy 34:10 says no prophet like Moses arose again, the kind of claim Josephus turns into a rule that the prophetic succession ended." },

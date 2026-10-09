@@ -3,7 +3,7 @@ title = "Paul's arrest and trials before Felix and Festus"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Paul is arrested in Jerusalem and held at Caesarea under the governor Felix. After two years he is heard by Felix's successor, Festus, and appeals to Caesar. Scholars disagree on the year Festus took office, anywhere from about 55 to 61 CE. The scholar F. F. Bruce favors 59."""
 verses = [
@@ -42,13 +42,13 @@ citations = [{ source = "carson-moo-2005", locator = "p. 368 n. 45" }]
 
 [[positions]]
 id = "brown-traditional-57-58"
-label = "57-58 CE (Brown, Traditional Chronology)"
+label = "58-60 CE (Brown, Traditional Chronology)"
 tradition = "chronological"
-earliest = 57
-latest = 58
+earliest = 58
+latest = 60
 held_by = "Raymond E. Brown (Traditional Chronology)"
 summary = """
-Brown's Table 6 has Paul arrested in Jerusalem in 57/58 and "imprisoned two years in Caesarea", then a prisoner in Rome for two years, 61-63. Since his Romans chapter has Paul writing from Corinth "in the winter of 57/58" before going up to Jerusalem, the arrest falls in 58 on his reckoning."""
+Brown's Table 6, Traditional column, has Paul winter at Corinth in 57/58 (where it places Romans) and return to Jerusalem; it dates his arrest in Jerusalem and two years imprisoned in Caesarea to 58-60, the sea journey to Rome to 60-61, and two years a prisoner in Rome to 61-63."""
 citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
 
   [[positions.arguments]]
@@ -75,7 +75,7 @@ citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observa
   [[positions.arguments]]
   stance = "for"
   text = """
-  Brown's Observations give each scholar's arrest date, and the spread reflects different dates for the crucifixion and for Paul's long stay at Ephesus."""
+  Brown's Observations give each scholar's arrest date, and he says differences about the date of Jesus' crucifixion and the reliability of the data in Acts are responsible for many of the datings."""
   citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
   verses = [
     { ref = "Acts.24.27", link = "dates" },

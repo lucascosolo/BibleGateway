@@ -2,15 +2,16 @@ id = "community-rule"
 title = "Community Rule (1QS)"
 also_known_as = ["Rule of the Community", "Serekh ha-Yahad", "Manual of Discipline"]
 canon = "described"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Hebrew"
 summary = """
-The Community Rule sets out how the sectarian community at Qumran lived: who could join, how members were ranked, how they shared meals, and the beliefs behind it, including a teaching on two spirits of good and evil. The best-preserved copy, 1QS, was one of the first seven scrolls found in Cave 1 in 1947. Further copies from Cave 4 show that the text circulated in several versions, and the Cave 1 copy is not the oldest form."""
+The Community Rule sets out how the sectarian community at Qumran lived: who could join, how members were ranked, how they shared meals, and the beliefs behind it, including a teaching on two spirits of good and evil. The best-preserved copy, 1QS (then called the Manual of Discipline), was one of the seven scrolls that Bedouin first took from a cave near Qumran and brought to Bethlehem in 1947. Further copies from Cave 4 show that the text circulated in several versions, and the Cave 1 copy is not the oldest form."""
 contents = """
 McDonald lists six parts: the community's aims and ideals; an annual census of members, with a moral charge to humility; a treatise on the spirits of good and evil; rules on obedience; an oath of allegiance; and a closing hymn that mentions calendar details and the secrecy of the community's teaching. VanderKam says it is widely believed to have regulated the life of the Qumran group, which practised a pooling of goods."""
 citations = [
   { source = "mcdonald-2017-vol1", locator = "p. 241" },
   { source = "vanderkam-2012", locator = "chapter 7, section Community of Goods" },
+  { source = "swjt-2010-dss", locator = "pp. 4-6" },
 ]
 
 [[composed]]

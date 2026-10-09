@@ -1,13 +1,15 @@
 id = "melito-old-testament-list"
 name = "Melito of Sardis's list of the Old Testament, quoted by Eusebius"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
-made = { earliest = 160, latest = 180 }
+made = { earliest = 170, latest = 180 }
 summary = """
-Melito, bishop of Sardis about 170 CE, wrote to a fellow Christian named Onesimus who had asked for "an accurate statement of the ancient book, as regards their number and their order". Eusebius preserves his answer: "Accordingly when I went East and came to the place where these things were preached and done, I learned accurately the books of the Old Testament, and send them to thee as written below." The list that follows has the five books of Moses, Joshua, Judges, Ruth, four of Kings, two of Chronicles, the Psalms of David, Proverbs (called Wisdom), Ecclesiastes, Song of Songs, Job, the prophets Isaiah and Jeremiah, the Twelve in one book, Daniel, Ezekiel and Esdras. Esther is absent, and nothing from the Greek additions appears. It is the earliest Christian list of Old Testament books, and it shows a Christian bishop travelling to Palestine to learn the Jewish count rather than taking it from his church's Greek Bible."""
+Melito, bishop of Sardis about 170-180 CE in McDonald's dating, wrote to a fellow Christian named Onesimus who had asked for "an accurate statement of the ancient book, as regards their number and their order". Eusebius preserves his answer: "Accordingly when I went East and came to the place where these things were preached and done, I learned accurately the books of the Old Testament, and send them to thee as written below." The list that follows has the five books of Moses, Joshua, Judges, Ruth, four of Kings, two of Chronicles, the Psalms of David, the Proverbs of Solomon, "Wisdom also", Ecclesiastes, Song of Songs, Job, the prophets Isaiah and Jeremiah, the Twelve in one book, Daniel, Ezekiel and Esdras. Esther is absent. McDonald calls Melito the earliest Christian writer to produce a list of Old Testament books, and thinks he likely consulted Jewish (or Jewish-Christian) authorities in Palestine; Lim says it is uncertain whether the source of his list was Jewish."""
 citations = [
   { source = "npnf2-01-ccel", locator = "Church History 4.26.12-14" },
+  { source = "mcdonald-2017-vol1", locator = "p. 310" },
+  { source = "lim-2013", locator = "pp. 37-38" },
 ]
 verses = [
   { ref = "Ezra.1.1", link = "names", note = "Ezra 1:1 opens the book Melito calls Esdras, which closes his list." },

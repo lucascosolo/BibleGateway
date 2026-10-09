@@ -1,14 +1,15 @@
 id = "2-esdras-14-ezra-rewrites-the-books"
 name = "2 Esdras (4 Ezra) 14: Ezra dictates ninety-four books"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Latin"
 made = { earliest = 70, latest = 100 }
 summary = """
-A Jewish apocalypse written between 70 and 100 CE, after the destruction of the Temple, and preserved in Latin and other versions, 4 Ezra closes with a legend in which Ezra, inspired by God, dictates the lost scriptures afresh to five scribes. In the King James Apocrypha the scribes write for forty days "two hundred and four books", a corruption of the ninety-four of the older versions; God then tells Ezra, "The first that thou hast written publish openly, that the worthy and unworthy may read it" ... "But keep the seventy last, that thou mayest deliver them only to such as be wise among the people" ... "For in them is the spring of understanding, the fountain of wisdom, and the stream of knowledge." Twenty-four books for everyone and seventy for the wise is the earliest explicit count of twenty-four, the number that the rabbis and Jerome also use, and the passage is the classic statement of the tradition that Ezra restored the scriptures after the exile."""
+A Jewish apocalypse written between 70 and 100 CE, after the destruction of the Temple, and preserved in Latin and other versions, 4 Ezra closes with a legend in which Ezra, inspired by God, dictates the lost scriptures afresh to five scribes. In the King James Apocrypha the scribes write for forty days "two hundred and four books", the Vulgate's reading, where the Syriac, Ethiopic, Arabic and Armenian versions read ninety-four, as Ryle (1892) noted; God then tells Ezra, "The first that thou hast written publish openly, that the worthy and unworthy may read it" ... "But keep the seventy last, that thou mayest deliver them only to such as be wise among the people" ... "For in them is the spring of understanding, the fountain of wisdom, and the stream of knowledge." Lim calls the twenty-four public books the twenty-four-book canon "attested for the first time" here, the count that became normative in rabbinic Judaism and that Jerome reports "some" used. Ryle (1892) gives this chapter as the source of the later legend that Ezra dictated from memory the books destroyed with Jerusalem."""
 citations = [
   { source = "kjv-apocrypha-sacred-texts", locator = "2 Esdras 14:23-48" },
-  { source = "lim-2013", locator = "p. 49" },
+  { source = "lim-2013", locator = "pp. 48-49" },
+  { source = "ryle-1892", locator = "pp. 78, 157" },
 ]
 verses = [
   { ref = "Ezra.7.6", link = "background", note = "Ezra 7:6 introduces Ezra as a ready scribe in the law of Moses, the figure the apocalypse makes the restorer of all scripture." },

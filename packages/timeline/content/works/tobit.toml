@@ -3,7 +3,7 @@ title = "Tobit"
 also_known_as = ["Tobias"]
 books = ["Tob"]
 canon = "deuterocanon"
-status = "sources-located"
+status = "claims-checked"
 summary = "Tobit is a narrative found in Greek copies of the scriptures but not in the Hebrew Bible. VanderKam reports five copies from Qumran cave 4, in Aramaic and Hebrew, copied from about 100 BCE into the early first century CE, so the book is older than the earliest of them; he judges Aramaic the more likely original language. The unsigned preface to the Apocrypha in the Brenton edition calls it one of the most perfect Hebrew idylls and dates it probably within the second century BCE. The Church of Rome, the Orthodox churches and the Ethiopian church hold it as scripture, while Athanasius and Jerome placed it outside their canons."
 citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Tobit'" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Tobit" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
 original_language = "Aramaic (probably; Hebrew copies also found at Qumran)"
