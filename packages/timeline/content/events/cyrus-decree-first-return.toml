@@ -41,7 +41,7 @@ citations = [{ source = "satlow-2014", locator = "p. 64" }, { source = "lim-2013
   [[positions.arguments]]
   stance = "against"
   text = """
-The Cyrus Cylinder focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem; its restoration of gods and peoples concerns sacred cities of Babylonia and the east. Its purely Babylonian setting gives no proof for Jewish exiles."""
+The Cyrus Cylinder focuses on Babylon and Mesopotamia and mentions neither Judah nor Jerusalem; its restoration of gods and peoples concerns sacred cities of Babylonia and the east."""
   citations = [{ source = "pritchard-1969", locator = "pp. 315-316, Cyrus Cylinder, trans. A. Leo Oppenheim" }, { source = "kitchen-2003", locator = "p. 76" }]
 
 [[attestations]]

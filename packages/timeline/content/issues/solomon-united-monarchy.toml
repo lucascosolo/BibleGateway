@@ -14,8 +14,8 @@ citations = [
 [[views]]
 label = "No inscription names him"
 text = """
-Kitchen says the sources outside the Bible name almost no biblical figure of the period before 853, David and Solomon included, and explains why (pp. 88, 156). Finkelstein and Silberman likewise say that archaeologically no more can be said of David and Solomon than that they existed (p. 143)."""
-citations = [{ source = "kitchen-2003", locator = "pp. 88, 156" }, { source = "finkelstein-silberman-2002", locator = "p. 143" }]
+Finkelstein and Silberman say that archaeologically no more can be said of David and Solomon than that they existed (p. 143). Kitchen likewise says the sources outside the Bible name almost no biblical figure of the period before 853, David and Solomon included, and explains why (pp. 88, 156)."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 143" }, { source = "kitchen-2003", locator = "pp. 88, 156" }]
 
 [[views]]
 label = "Solomonic gates"

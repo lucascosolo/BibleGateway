@@ -15,7 +15,7 @@ citations = [{ source = "kitchen-2003", locator = "pp. 73-74" }, { source = "pri
 label = "The Babylonian record"
 text = """
 The closing prayer of the Nabonidus Cylinder from Ur names Belshazzar as the eldest son of Nabonidus."""
-citations = [{ source = "kitchen-2003", locator = "p. 517, n. 22" }]
+citations = [{ source = "kitchen-2003", locator = "p. 517, n. 22" }, { source = "livius-nabonidus-cylinder-ur", locator = "col. iii, lines 3–31 (the closing prayer)" }, { source = "rogers-1912", locator = "p. 379 (four clay cylinders of Nabonidus from Ur, closing prayer, lines 24–31 in Rogers' numbering)" }]
 
 [[views]]
 label = "Kingship entrusted to the eldest son"

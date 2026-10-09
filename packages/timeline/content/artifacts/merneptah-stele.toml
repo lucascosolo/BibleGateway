@@ -5,10 +5,11 @@ status = "sources-located"
 made = { earliest = -1208, latest = -1208 }
 language = "Egyptian (hieroglyphic)"
 summary = """
-A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c. 1208 BCE), names Israel among the peoples of Canaan he claims to have defeated; Finkelstein and Silberman call it the first appearance of the name Israel in any text (p. 57). Kitchen says it names Israel as a people in Merneptah's year 5, 1209/1208 (pp. 138, 159)."""
+A granite victory stone of Pharaoh Merneptah, dated to his fifth year as king (c. 1208 BCE), names Israel among the peoples of Canaan he claims to have defeated; Finkelstein and Silberman call it the first appearance of the name Israel in any text (p. 57). Kitchen says it names Israel as a people in Merneptah's year 5, 1209/1208 (pp. 138, 159). In Breasted's 1906 translation the name stands in the closing twelve-line strophe of the hymn, "Israel is desolated, his seed is not" (pp. 257, 264), and Breasted already called it the earliest mention of Israel then known (p. 257)."""
 discovered = { year = 1896, place = "Thebes (Flinders Petrie)" }
 held_by = { institution = "Egyptian Museum, Cairo", accession = "JE 31408" }
 citations = [
+  { source = "breasted-1906-are-3", locator = "pp. 257, 264 (§§ 603, 617)" },
   { source = "wikidata", locator = "Q754378: inventory number JE 31408, Egyptian Museum" },
   { source = "cos-2", locator = "pp. 40–41" },
   { source = "finkelstein-silberman-2002", locator = "p. 57" },

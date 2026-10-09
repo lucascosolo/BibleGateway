@@ -984,3 +984,70 @@ author = "Israel Antiquities Authority"
 title = "The Leon Levy Dead Sea Scrolls Digital Library"
 url = "https://www.deadseascrolls.org.il/"
 
+# Public-domain scholarship filed as page-marked text (~/.cache/jot/sources/<id>/text.txt; ledgers in
+# docs/sources/<id>.md). All published before 1931 and so DATED: cite them for what they report of
+# ancient texts and for the history of a position, never as current critical consensus.
+
+[[source]]
+id = "moore-1895-judges"
+kind = "book"
+author = "George Foot Moore"
+title = "A Critical and Exegetical Commentary on Judges (International Critical Commentary; public domain, dated scholarship)"
+publisher = "Charles Scribner's Sons"
+year = 1895
+
+[[source]]
+id = "batten-1913-ezra"
+kind = "book"
+author = "Loring W. Batten"
+title = "A Critical and Exegetical Commentary on the Books of Ezra and Nehemiah (International Critical Commentary; public domain, dated scholarship)"
+publisher = "T. & T. Clark"
+year = 1913
+
+[[source]]
+id = "rogers-1912"
+kind = "book"
+author = "Robert William Rogers"
+title = "Cuneiform Parallels to the Old Testament (public domain; its 1912 chronology is dated)"
+publisher = "Eaton & Mains; Jennings & Graham"
+year = 1912
+
+[[source]]
+id = "breasted-1906-are-3"
+kind = "book"
+author = "James Henry Breasted"
+title = "Ancient Records of Egypt, Volume III: The Nineteenth Dynasty (public domain; translation and dates of 1906)"
+publisher = "University of Chicago Press"
+year = 1906
+
+[[source]]
+id = "deissmann-1912-paul"
+kind = "book"
+author = "Adolf Deissmann, translated by Lionel R. M. Strachan"
+title = "St. Paul: A Study in Social and Religious History (public domain, dated scholarship)"
+publisher = "Hodder & Stoughton"
+year = 1912
+
+[[source]]
+id = "schurer-1890-i-1"
+kind = "book"
+author = "Emil Schürer"
+title = "A History of the Jewish People in the Time of Jesus Christ, Division I, Volume I (English translation of the second edition; public domain, dated scholarship)"
+publisher = "T. & T. Clark"
+year = 1890
+
+[[source]]
+id = "schurer-1890-i-2"
+kind = "book"
+author = "Emil Schürer"
+title = "A History of the Jewish People in the Time of Jesus Christ, Division I, Volume II (English translation of the second edition; public domain, dated scholarship)"
+publisher = "T. & T. Clark"
+year = 1890
+
+[[source]]
+id = "ramsay-1898-bethlehem"
+kind = "book"
+author = "W. M. Ramsay"
+title = "Was Christ Born at Bethlehem? A Study on the Credibility of St. Luke (second edition; public domain, dated scholarship)"
+publisher = "Hodder & Stoughton"
+year = 1898

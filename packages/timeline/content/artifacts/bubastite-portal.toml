@@ -3,6 +3,6 @@ name = "Bubastite Portal (Shoshenq I's Karnak campaign list)"
 kind = "inscription"
 status = "sources-located"
 language = "Egyptian (hieroglyphic)"
-summary = """At Karnak, a list of cities conquered by Shoshenq I lies in the region of Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel. He is conventionally identified with the Shishak of 1 Kings 14:25; Wilson's ANET note says "Sheshonk I (about 945-924 B.C.) is the Shishak of the Old Testament" (p. 263). Kitchen notes that the list names no Rehoboam, Jeroboam or state, only towns in both Judah and Israel (p. 34), and Finkelstein and Silberman say Jerusalem was hardly the only target (p. 161). No verdict is taken here."""
+summary = """At Karnak, a list of cities conquered by Shoshenq I lies in the region of Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel. He is conventionally identified with the Shishak of 1 Kings 14:25; Wilson's ANET note says "Sheshonk I (about 945-924 B.C.) is the Shishak of the Old Testament" (p. 263). Kitchen notes that the list names no Rehoboam, Jeroboam or state, only towns in both Judah and Israel (p. 34), and Finkelstein and Silberman say Jerusalem was hardly the only target (p. 161)."""
 citations = [{ source = "kitchen-2003", locator = "pp. 33–34" }, { source = "finkelstein-silberman-2002", locator = "p. 161" }, { source = "pritchard-1969", locator = "pp. 263–264 (The Campaign of Sheshonk I; commentary on the list, which ANET does not translate), trans. John A. Wilson" }]
 verses = [{ ref = "1Kgs.14.25-1Kgs.14.26", link = "background" }]

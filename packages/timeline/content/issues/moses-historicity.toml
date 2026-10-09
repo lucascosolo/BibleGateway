@@ -3,7 +3,7 @@ kind = "historical"
 title = "Is there a historical Moses?"
 status = "sources-located"
 summary = """
-Finkelstein and Silberman report that the Egyptian sources of the thirteenth century never mention the Israelites, so no outside record anchors Moses. Scholars split into two camps: some see a figure of tradition with no recoverable history, others a real leader of some kind behind the story."""
+Finkelstein and Silberman report that the Egyptian sources of the thirteenth century never mention the Israelites, so no outside record anchors Moses. Scholars split into two camps: some see a figure of tradition with no recoverable history, others a real leader of some kind behind the story. Of the sources filed here, only Kitchen, a maximalist, argues for the second; the moderate form of it, a Moses-like leader among a small group that left Egypt, has no filed holder."""
 persons = ["moses", "josiah"]
 events = ["exodus"]
 verses = [{ ref = "Exod.2.10", link = "describes" }]
@@ -16,9 +16,9 @@ Finkelstein and Silberman find in the abundant Egyptian sources of the New Kingd
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 59-60" }]
 
 [[views]]
-label = "A leader behind the story"
+label = "A Moses at the Egyptian court: Kitchen's maximalist view"
 text = """
-Kitchen argues that foreigners at the Egyptian court were common in the thirteenth century, so "A Moses would be simply one among many" (p. 297). He also holds that the covenant forms of Exodus-Leviticus and Deuteronomy fit a West Semite in Moses' role at the Egyptian court (p. 331)."""
+Kitchen, who defends the biblical account at most points, argues that foreigners at the Egyptian court were common in the thirteenth century, so "A Moses would be simply one among many" (p. 297). He also holds that the covenant forms of Exodus-Leviticus and Deuteronomy fit a West Semite in Moses' role at the Egyptian court (p. 331)."""
 citations = [{ source = "kitchen-2003", locator = "p. 297" }, { source = "kitchen-2003", locator = "p. 331" }]
 
 [[views]]

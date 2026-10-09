@@ -12,4 +12,4 @@ artifact = "nabonidus-cylinder-ur"
 relation = "corroborates"
 note = """
 Nabonidus's closing prayer at Ur names Belshazzar as his eldest son, which makes him the son of Nabonidus, not of Nebuchadnezzar."""
-citations = [{ source = "kitchen-2003", locator = "p. 517, n. 22" }]
+citations = [{ source = "kitchen-2003", locator = "p. 517, n. 22" }, { source = "livius-nabonidus-cylinder-ur", locator = "col. iii, lines 3–31 (the closing prayer)" }, { source = "rogers-1912", locator = "p. 379 (four clay cylinders of Nabonidus from Ur, closing prayer, lines 24–31 in Rogers' numbering)" }]

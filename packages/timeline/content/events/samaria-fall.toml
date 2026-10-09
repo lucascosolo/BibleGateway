@@ -27,7 +27,7 @@ citations = [{ source = "thiele-1984", locator = "p. 5, table 'Reigns of the Heb
 [[attestations]]
 artifact = "sargon-ii-inscriptions"
 relation = "partially-corroborates"
-note = "Sargon claims the conquest and says he led away 27,290 people. Whether the capture was really his is the question the 723 position above answers differently."
+note = "Sargon claims the conquest and says he led away 27,290 people. Whether the capture was really his is argued by the positions below."
 citations = [{ source = "pritchard-1969", locator = "pp. 284–285 (Annals, first year; Display Inscription), trans. A. Leo Oppenheim" }, { source = "luckenbill-arab-2", locator = "§ 4 (Annals, year 1, restored); § 55 (Display Inscription)" }]
 
 [[positions]]

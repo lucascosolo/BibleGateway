@@ -3,16 +3,10 @@ kind = "historical"
 title = "How historical is the Book of Judges?"
 status = "sources-located"
 summary = """
-Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree about how much of it is history. The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
+Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree about how much of it is history. No judge is named in an inscription from their own time: Kitchen notes that outside sources name almost no biblical figure before 853 BCE, and that Egypt has virtually no historical inscriptions naming Palestinian powers between Ramesses III and Shoshenq I (p. 156). The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
 events = ["judges-period", "deborah-barak", "gideon", "samson"]
 verses = [{ ref = "Judg.2.16-Judg.2.19", link = "describes" }]
-citations = [{ source = "kitchen-2003", locator = "pp. 201-202" }, { source = "finkelstein-silberman-2002", locator = "pp. 99-100" }]
-
-[[views]]
-label = "Real but local figures, selected by the author"
-text = """
-Kitchen treats the judges as real local leaders. He holds that the twelve to fourteen figures in the book are a selection of the deliverers the author had records of and chose for his theme, that most of them acted only locally, and that there were undoubtedly others about whom nothing is known."""
-citations = [{ source = "kitchen-2003", locator = "pp. 201-202" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 99-100" }, { source = "kitchen-2003", locator = "pp. 156, 201-202" }]
 
 [[views]]
 label = "Not a record of a military conquest"
@@ -21,13 +15,19 @@ Finkelstein and Silberman set the heroic tales of Judges beside Joshua's claim o
 citations = [{ source = "finkelstein-silberman-2002", locator = "p. 99" }, { source = "finkelstein-silberman-2002", locator = "p. 118" }]
 
 [[views]]
-label = "Samson and the archaeology"
-text = """
-Kitchen says most of Samson's adventures do not lend themselves to archaeological comment. He notes that Philistine temples, like those at Kition on Cyprus, could have had paired central columns, so a collapse such as the one at Gaza is architecturally conceivable (p. 216)."""
-citations = [{ source = "kitchen-2003", locator = "p. 216" }]
-
-[[views]]
 label = "Israel Finkelstein and Neil Asher Silberman: early Israel grew out of the Canaanite highlands"
 text = """
 Finkelstein and Silberman describe a third wave of highland settlement beginning "around 1200 BCE" with about 250 sites and some 45,000 people (p. 115), after two earlier waves (table, p. 114). They hold that many early Israelites "were thus apparently nomads who gradually became farmers" (p. 113). Their conclusion: "There was no mass Exodus from Egypt. There was no violent conquest of Canaan. Most of the people who formed early Israel were local people" who were "themselves originally Canaanites" (p. 118). The emergence of Israel was "an outcome of the collapse of the Canaanite culture, not its cause" (p. 118)."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 113-118" }]
+
+[[views]]
+label = "Kitchen: real but local figures, selected by the author"
+text = """
+Kitchen treats the judges as real local leaders. He holds that the twelve to fourteen figures in the book are a selection of the deliverers the author had records of and chose for his theme, that most of them acted only locally, and that there were undoubtedly others about whom nothing is known."""
+citations = [{ source = "kitchen-2003", locator = "pp. 201-202" }]
+
+[[views]]
+label = "Samson as a figure of folk-story"
+text = """
+In an older critical commentary, George F. Moore (1895) says Samson "in no way appears as the champion or deliverer of Israel" and calls him "a favourite figure of Israelite folk-story" (p. 313). The main Samson stories "probably belonged to a cycle of folk-tales" before they were written down (p. 314); their humour and lack of a moral prove them, he says, "genuine tales of the people", and "What basis of fact the stories may have, is not easy to tell" (p. 315). Kitchen, from the maximalist side, says most of Samson's adventures do not lend themselves to archaeological comment, though Philistine temples like those at Kition on Cyprus could have had paired central columns, so a collapse such as the one at Gaza is architecturally conceivable (p. 216)."""
+citations = [{ source = "moore-1895-judges", locator = "pp. 313-315" }, { source = "kitchen-2003", locator = "p. 216" }]

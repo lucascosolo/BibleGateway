@@ -3,30 +3,36 @@ kind = "chronology"
 title = "Ezra's seventh year: 458 or 398 BCE?"
 status = "sources-located"
 summary = """
-Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The seventh year of Artaxerxes I gives 458/457 BCE; that of Artaxerxes II gives 398 BCE."""
+Ezra 7:7-8 dates Ezra's arrival to the seventh year of "Artaxerxes the king" but does not say which Artaxerxes. The seventh year of Artaxerxes I gives 458/457 BCE; that of Artaxerxes II gives 398 BCE. A third proposal corrects the number."""
 events = ["ezra-mission"]
 verses = [
   { ref = "Ezra.7.7", link = "dates" },
   { ref = "Ezra.7.8", link = "dates" },
   { ref = "Neh.2.1", link = "dates" },
 ]
-citations = [{ source = "kitchen-2003", locator = "p. 74" }, { source = "lim-2013", locator = "p. 60" }, { source = "mcdonald-2017-vol1", locator = "p. 52" }]
+citations = [{ source = "kitchen-2003", locator = "p. 74" }, { source = "lim-2013", locator = "p. 60" }, { source = "mcdonald-2017-vol1", locator = "p. 52" }, { source = "batten-1913-ezra", locator = "pp. 28-29" }]
 persons = ["ezra", "nehemiah"]
+
+[[views]]
+label = "398 BCE or later (Artaxerxes II; Nehemiah before Ezra)"
+text = """
+McDonald gives 398 BCE, the seventh year of Artaxerxes II, as the alternative to 458, without choosing between them (p. 52). The case for putting Ezra after Nehemiah is made in an older critical commentary by L. W. Batten (1913): the two "could not be contemporaries", since there is "no genuine reference" to Ezra in Nehemiah's own story, Nehemiah meets mixed marriages as a new problem although Ezra had supposedly dissolved them, and Nehemiah's Jerusalem is a desolation while Ezra's is populous (p. 28). Batten dates Nehemiah's governorship from 444 "and Ezra's in 397 or later" (p. 29), though he declines the exact 398 because he thinks "the 7th year" untrustworthy (p. 47)."""
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 52" }, { source = "batten-1913-ezra", locator = "pp. 28-29, 47" }]
 
 [[views]]
 label = "458/457 BCE (Artaxerxes I)"
 text = """
-Kitchen puts Ezra in Year 7 of Artaxerxes I, 458, and Nehemiah's governorship in Years 20-32 of the same king, 445-433. Lim reports Lee's dating of Ezra 7:8 to 458 from the Persian-Egyptian conflict."""
+Kitchen puts Ezra in Year 7 of Artaxerxes I, 458, and Nehemiah's governorship in Years 20-32 of the same king, 445-433; he notes that alternatives to 458 are often proposed and holds that none explains the evidence better. Lim reports Lee's dating of Ezra 7:8 to 458 from the Persian-Egyptian conflict."""
 citations = [{ source = "kitchen-2003", locator = "p. 74" }, { source = "lim-2013", locator = "p. 60" }]
 
 [[views]]
-label = "398 BCE (Artaxerxes II)"
+label = "A copyist's error: the twenty-seventh year"
 text = """
-McDonald gives 398 BCE, the seventh year of Artaxerxes II, as the alternative to 458, without choosing between them. Kitchen notes that alternatives to 458 are often proposed and holds that none explains the evidence better."""
-citations = [{ source = "mcdonald-2017-vol1", locator = "p. 52" }, { source = "kitchen-2003", locator = "p. 74" }]
+Wellhausen proposed reading the twenty-seventh year of Artaxerxes in Ezra 7:7-8 instead of the seventh, which would make Ezra and Nehemiah contemporaries; this is reported by Batten (1913), who rejects it because it would bring Ezra up in the very middle of Nehemiah's governorship (p. 29)."""
+citations = [{ source = "batten-1913-ezra", locator = "p. 29" }]
 
 [[views]]
 label = "Josephus: the seventh year of Xerxes"
 text = """
-Josephus, following the Greek form of the story, has Ezra leave Babylon in the seventh year of "Xerxes" and Nehemiah come in that king's twenty-fifth year, which fits neither the 458 nor the 398 count."""
-citations = [{ source = "josephus-whiston", locator = "Antiquities 11.5.1-2; 11.5.6-7" }]
+Josephus, who here follows the Greek book 1 Esdras as Batten notes (p. 29), has Ezra leave Babylon in the seventh year of "Xerxes" and Nehemiah come in that king's twenty-fifth year, which fits neither the 458 nor the 398 count."""
+citations = [{ source = "josephus-whiston", locator = "Antiquities 11.5.1-2; 11.5.6-7" }, { source = "batten-1913-ezra", locator = "p. 29" }]

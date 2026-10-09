@@ -28,3 +28,14 @@ relation = "corroborates"
 note = """
 The Monolith lists 2,000 chariots and 10,000 soldiers of Ahab the Israelite. Grayson's translation reads: "2,000 chariots (and) 10,000 troops of Ahab (Ahabbu) the Israelite (Sir'alaia)"."""
 citations = [{ source = "pritchard-1969", locator = "p. 279 (Monolith Inscription, sixth year; Ahab the Israelite), trans. A. Leo Oppenheim" }, { source = "grayson-1996", locator = "pp. 23–24, A.0.102.2 ii 89b–102 (Ahab at ii 91–92); introduction p. 11 dates the battle to 853 BC" }]
+
+[[positions]]
+id = "rogers-854"
+label = "854 BCE (the 1912 chronology)"
+tradition = "chronological"
+earliest = -854
+latest = -854
+held_by = "R. W. Rogers (1912), an older reckoning"
+summary = """
+Rogers's 1912 translations date Shalmaneser III's sixth-year campaign, and with it the battle at Qarqar, to 854 BCE, one year earlier than the 853 now used. It is recorded here as an older reckoning, not a rival to the 853 date."""
+citations = [{ source = "rogers-1912", locator = "pp. 289, 293-298 (Shalmaneser III, the 854 campaign; Obelisk, Monolith, Bull and Berlin inscriptions)" }]

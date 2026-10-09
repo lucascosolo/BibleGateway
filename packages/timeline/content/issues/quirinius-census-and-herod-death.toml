@@ -33,6 +33,18 @@ Meier says that no ancient source documents a census under Augustus around 5 BCE
 citations = [{ source = "meier-1991", locator = "pp. 212–213, 235 n. 23" }]
 
 [[views]]
+label = "The older critical case: no Roman census under Herod (Emil Schürer, 1890)"
+text = """
+Schürer's 1890 history, an older critical treatment, set out the case against Luke's dating point by point: a Roman census would not have required Joseph to travel to Bethlehem (p. 120); no Roman census could have been held in Herod's kingdom (p. 122); Josephus treats the census of 6/7 CE as something new (p. 127); and Quirinius was never governor of Syria in Herod's lifetime (p. 133). Schürer dated Herod's death to 4 BCE, shortly before Passover, from Josephus's regnal counts (vol. I.1, pp. 464-466)."""
+citations = [{ source = "schurer-1890-i-2", locator = "pp. 120, 122, 127, 133 (Excursus I, the census of Quirinius)" }, { source = "schurer-1890-i-1", locator = "pp. 464-466" }]
+
+[[views]]
+label = "The older harmonising answer: periodic enrolments (W. M. Ramsay, 1898)"
+text = """
+Ramsay's 1898 reply defended Luke: he argued that Luke knew of a system of periodic enrolments in Syria (p. 126) and that Quirinius governed Syria twice, the second time from 6 CE, while admitting that the proof of an earlier governorship "is incomplete" (p. 109)."""
+citations = [{ source = "ramsay-1898-bethlehem", locator = "pp. 109, 126" }]
+
+[[views]]
 label = "Herod died in 1 BCE (W. E. Filmer; Ernest L. Martin)"
 text = """
 Filmer argued that Herod died in 1 BCE, and Martin revived the theory and placed Jesus's birth in 3 or 2 BCE. Meier rejects it: Herod's successors all counted their reigns from 5-4 BCE, and synchronisms with datable events in Roman history make 1 BCE almost impossible to sustain. Other contributors to the volume Martin wrote in did not support him."""
