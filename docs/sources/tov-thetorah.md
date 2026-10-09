@@ -14,4 +14,5 @@ the citable statement.
 
 ## Used by
 
-- `investigations/deut-32-8-9` (planned), as the secondary citation beside the book.
+- `investigations/deut-32-8-9`: the variant table (MT with SP and Peshitta), notes 2–4 and 6, the "strange"
+  claim and the "conscious intervention" quotation; Tov's standing from the author note.

@@ -1278,6 +1278,34 @@ title = "Gender Equality at Creation: Was Eve Made from Adam's Rib or Side?"
 url = "https://www.thetorah.com/article/gender-equality-at-creation"
 
 [[source]]
+id = "oshb-wlc"
+kind = "edition"
+author = "Open Scriptures Hebrew Bible Project"
+title = "Westminster Leningrad Codex with morphology (OSHB morphhb), as ingested into Jot's corpus"
+url = "https://github.com/openscriptures/morphhb"
+
+[[source]]
+id = "oshb-hebrew-lexicon"
+kind = "edition"
+author = "Open Scriptures Hebrew Bible Project"
+title = "HebrewLexicon: Strong's Hebrew Dictionary with the Brown-Driver-Briggs index, as ingested into Jot's lexicon"
+url = "https://github.com/openscriptures/HebrewLexicon"
+
+[[source]]
+id = "brenton-lxx-greek"
+kind = "edition"
+author = "Lancelot C. L. Brenton (compiler)"
+title = "The Greek Septuagint with Apocrypha (eBible.org edition, grcbrent)"
+url = "https://ebible.org/grcbrent"
+
+[[source]]
+id = "vulgate-clementine"
+kind = "edition"
+author = "Jerome"
+title = "Clementine Vulgate of 1598 (eBible.org edition, latVUC)"
+url = "https://ebible.org/latVUC"
+
+[[source]]
 id = "metzger-textual-commentary"
 kind = "book"
 author = "Bruce M. Metzger"

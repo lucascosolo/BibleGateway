@@ -22,5 +22,5 @@ and the Sons of God 53").
 
 ## Used by
 
-- `investigations/deut-32-8-9` (planned): the divine-council explanation, attributed to Heiser,
-  beside Tov's text-critical account.
+- `investigations/deut-32-8-9`: the witnesses (pp. 52–53, 55), the divine-council explanation (pp. 59–61,
+  71–74) beside Tov's account, and the MT defence of Stevens 1997 (p. 55 n. 12).

@@ -1,0 +1,132 @@
+id = "deut-32-8-9"
+title = "Sons of Israel or sons of God? Deuteronomy 32:8-9"
+status = "claims-checked"
+ref = "Deut.32.8-Deut.32.9"
+summary = """
+When the Most High divided the nations, he fixed their boundaries by the number of someone: the sons of Israel in the Masoretic Hebrew, the sons of God in a Qumran scroll and in the Greek. Six of Jot's eight English editions follow the Hebrew; the Berean Standard Bible prints the Qumran reading and Brenton's Septuagint the Greek majority, angels of God."""
+
+[[witnesses]]
+siglum = "MT"
+name = "Masoretic Text (Leningrad Codex)"
+reading = "בְּנֵי יִשְׂרָאֵל"
+translation = "the sons of Israel"
+language = "hbo"
+note = "Tov lists the Samaritan Pentateuch and the Peshitta with it; Heiser adds the later Greek revisions of Aquila, Symmachus and Theodotion."
+citations = [
+  { source = "oshb-wlc", locator = "Deut 32:8" },
+  { source = "tov-thetorah", locator = "table of variants" },
+  { source = "heiser-2001", locator = "p. 52" },
+]
+
+[[witnesses]]
+siglum = "4QDeut^j"
+name = "Deuteronomy scroll j from Qumran Cave 4"
+reading = "בני אלוהים"
+translation = "the sons of God"
+language = "hbo"
+note = "Heiser counts the Qumran support as “very ancient manuscript evidence”. Tov thinks the scroll's longer word may have grown from an earlier בני אל, sons of El."
+citations = [
+  { source = "tov-2012", locator = "p. 248 (table) and p. 249 n. 78" },
+  { source = "tov-thetorah", locator = "table of variants and n. 6" },
+  { source = "heiser-2001", locator = "p. 55" },
+]
+
+[[witnesses]]
+siglum = "LXX"
+name = "Septuagint, most manuscripts"
+reading = "ἀγγέλων θεοῦ"
+translation = "the angels of God"
+language = "grc"
+note = "The majority Greek reading and the one Brenton prints. Heiser calls it “interpretive”: like the minority reading it presupposes a Hebrew sons of God, which the Greek of Job 1:6 and 2:1 also renders as angels of God (οἱ ἄγγελοι τοῦ θεοῦ)."
+citations = [
+  { source = "tov-2012", locator = "p. 248 (table)" },
+  { source = "tov-thetorah", locator = "table of variants and n. 4" },
+  { source = "heiser-2001", locator = "pp. 52–53" },
+  { source = "brenton-lxx-greek", locator = "Deut 32:8" },
+]
+
+[[witnesses]]
+siglum = "LXX 848"
+name = "Septuagint, papyrus 848 (P. Fouad Inv. 266) and manuscript 106 corrected"
+reading = "υἱῶν θεοῦ"
+translation = "the sons of God"
+language = "grc"
+note = "A minority Greek reading in an early papyrus; Wevers adopted it in the Göttingen critical edition of Deuteronomy despite its fewer attestations."
+citations = [
+  { source = "tov-2012", locator = "p. 248 (table)" },
+  { source = "tov-thetorah", locator = "table of variants and n. 2" },
+  { source = "heiser-2001", locator = "p. 53 n. 4" },
+]
+
+[[witnesses]]
+siglum = "Vg"
+name = "Latin Vulgate (Clementine edition of 1598)"
+reading = "juxta numerum filiorum Israël"
+translation = "according to the number of the sons of Israel"
+language = "la"
+note = "Agrees with the Masoretic Text. The Old Latin, which rests on the Greek, read angels of God (angelorum Dei) instead."
+citations = [
+  { source = "vulgate-clementine", locator = "Deut 32:8" },
+  { source = "tov-thetorah", locator = "n. 3 (Old Latin)" },
+]
+
+[[editions]]
+code = "WEB"
+follows = "MT"
+
+[[editions]]
+code = "BSB"
+follows = "4QDeut^j"
+
+[[editions]]
+code = "KJV"
+follows = "MT"
+
+[[editions]]
+code = "ASV"
+follows = "MT"
+
+[[editions]]
+code = "DBY"
+follows = "MT"
+
+[[editions]]
+code = "YLT"
+follows = "MT"
+
+[[editions]]
+code = "JPS"
+follows = "MT"
+
+[[editions]]
+code = "LXX"
+follows = "LXX"
+
+[[differences]]
+kind = "textual"
+text = """
+The witnesses differ in one word, and Emanuel Tov, emeritus J. L. Magnes Professor of Bible at the Hebrew University and editor of the Discoveries in the Judean Desert series, explains the difference as a deliberate scribal change. In his reconstruction the original Song spoke of an assembly of the gods, as in Psalm 82 and 1 Kings 22:19, and a scribe who “did not feel at ease with this polytheistic picture” replaced sons of El with sons of Israel, changing the passage's direction with one word. He calls MT's wording “a conscious intervention in the text by a scribe uncomfortable with the polytheistic picture of divine beings”. If the scroll's longer word (Elohim) is original rather than El, he would class the change as “theological in a general sense” rather than anti-polytheistic."""
+held_by = "Emanuel Tov"
+citations = [
+  { source = "tov-2012", locator = "pp. 248–249 and p. 249 n. 78" },
+  { source = "tov-thetorah", locator = "body text and author note" },
+]
+
+[[differences]]
+kind = "interpretive"
+text = """
+Read with sons of God, verses 8-9 describe the Most High allotting the nations among divine beings while keeping Jacob as his own portion. Michael S. Heiser, writing in Bibliotheca Sacra as a PhD candidate in Hebrew and Semitic Studies at the University of Wisconsin–Madison, argues that the Old Testament's divine council (1 Kings 22:19-23; Psalm 82) “provides a decisive argument in favor of the Septuagint/Qumran reading”: after Babel God assigned each of the seventy nations of Genesis 10 to the sons of God, whom he reads as fallen, and who match the seventy sons of El at Ugarit. Unlike Tov, who reconstructs an originally polytheistic picture, Heiser holds that the reading “in no way requires one to view Israelite religion as polytheistic”."""
+held_by = "Michael S. Heiser"
+citations = [
+  { source = "heiser-2001", locator = "pp. 52–55, 59–61, 71–74" },
+  { source = "tov-2012", locator = "pp. 248–249" },
+]
+
+[[challenges]]
+text = """
+That sons of Israel is the original wording. Heiser grants it “a preponderance of the support”: the Masoretic Text with the Samaritan Pentateuch and the Peshitta, the later Greek revisions and the Vulgate. Its traditional explanation ties the number to the seventy of Jacob's household who went down to Egypt (Genesis 46:27; Exodus 1:5; Deuteronomy 10:22); Targum Pseudo-Jonathan already read it both of angels and of those seventy. David E. Stevens defended the Masoretic reading in Bibliotheca Sacra in 1997 and later accepted sons of God. None of the filed sources holds this view now: it is reported here through Tov, who calls the Masoretic claim “strange”, and Heiser, who answers it at length; a current defence of the Masoretic reading has not been filed."""
+citations = [
+  { source = "tov-thetorah", locator = "table of variants, body text and n. 4" },
+  { source = "tov-2012", locator = "p. 249 n. 79" },
+  { source = "heiser-2001", locator = "pp. 52–55 and p. 55 n. 12" },
+]

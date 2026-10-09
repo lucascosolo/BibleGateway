@@ -1,0 +1,87 @@
+id = "gen-2-21-23"
+title = "Rib or side? Genesis 2:21-23"
+status = "claims-checked"
+ref = "Gen.2.21-Gen.2.23"
+summary = """
+God takes one of the man's tsela'ot and builds the woman from it. Every English edition in Jot says rib; elsewhere in the Hebrew Bible the same word means the side of the ark, the tabernacle, a hill or a building. The question is what it means here, and what the answer does to the story."""
+
+[[witnesses]]
+siglum = "MT"
+name = "Masoretic Text (Leningrad Codex)"
+reading = "אַחַת מִצַּלְעֹתָיו … הַצֵּלָע"
+translation = "one of his tsela'ot … the tsela'"
+language = "hbo"
+note = "A plural noun in verse 21 (one of several, or one of two) and the singular in verse 22."
+citations = [{ source = "oshb-wlc", locator = "Gen 2:21–22" }]
+
+[[witnesses]]
+siglum = "LXX"
+name = "Septuagint (Brenton's Greek text)"
+reading = "μίαν τῶν πλευρῶν αὐτοῦ … τὴν πλευρὰν"
+translation = "one of his pleurai … the pleura"
+language = "grc"
+note = "Jot's Septuagint edition does not yet carry Genesis; the Greek is read from Brenton's printed text."
+citations = [{ source = "brenton-lxx-greek", locator = "Gen 2:21–22" }]
+
+[[witnesses]]
+siglum = "Vg"
+name = "Latin Vulgate (Clementine edition of 1598)"
+reading = "unam de costis ejus … costam"
+translation = "one of his costae … the costa"
+language = "la"
+citations = [{ source = "vulgate-clementine", locator = "Gen 2:21–22" }]
+
+[[editions]]
+code = "WEB"
+follows = "MT"
+
+[[editions]]
+code = "BSB"
+follows = "MT"
+
+[[editions]]
+code = "KJV"
+follows = "MT"
+
+[[editions]]
+code = "ASV"
+follows = "MT"
+
+[[editions]]
+code = "DBY"
+follows = "MT"
+
+[[editions]]
+code = "YLT"
+follows = "MT"
+
+[[editions]]
+code = "JPS"
+follows = "MT"
+
+[[differences]]
+kind = "lexical"
+text = """
+The witnesses agree on the text; the question is the word. Jot's lexicon entry H6763 glosses ṣēlāʿ as “rib” and gives the range “a rib (as curved), literally (of the body) or figuratively (of a door, i.e. leaf); hence, a side”, then planks and timbers; its Brown-Driver-Briggs index reads “rib, side” (BDB p. 854). The word occurs 41 times in Jot's Hebrew text, and outside Genesis 2:21-22 the KJV never renders it rib: it is a side of the ark and of the altars (Exodus 25, 27, 30, 37, 38), a side of the tabernacle (Exodus 26 and 36), a hillside (2 Samuel 16:13), and the boards, leaves, beams and side chambers of the temple (1 Kings 6-7; Ezekiel 41). Raanan Eichler, Associate Professor of Bible at Bar-Ilan University, draws the conclusion: “Nowhere in the Bible does it refer to an anatomical rib.”"""
+held_by = "Raanan Eichler"
+citations = [
+  { source = "oshb-hebrew-lexicon", locator = "entry H6763 (Strong's) and BDB index r.cf.ab" },
+  { source = "oshb-wlc", locator = "every occurrence of H6763" },
+  { source = "eichler-thetorah", locator = "section צלע and author note" },
+]
+
+[[differences]]
+kind = "interpretive"
+text = """
+If tsela' means side, the man is not robbed of a small bone: he is divided. Eichler follows the rabbinic reading, which he attributes to R. Samuel b. Nahman or R. Simeon b. Lakish (Genesis Rabbah; Leviticus Rabbah), that the first human was two-faced and the tsela' one of two equal sides, so that the woman and the man “each seem to be made from half of the original body”. For him the equality of rank is reflected in physical equivalence, and it belongs to a wider argument that the second creation account is fundamentally egalitarian. He notes that Hamilton accepts side but not the idea of two equal sides."""
+held_by = "Raanan Eichler"
+citations = [{ source = "eichler-thetorah", locator = "sections צלע and A Story about the Monogamous Coupling of Equals; n. 14" }]
+
+[[challenges]]
+text = """
+The ancient translations made the same choice the English ones did. The Greek reads one of his pleurai and the Latin one of his costae, each keeping the Hebrew's one-of-several construction, and every English edition in Jot renders it ribs. Eichler himself grants that “It is not entirely impossible that this word was really meant to denote a rib here”, pointing to the architectural uses that English can also call ribs. No filed source argues the case for rib against him, and Jot has no Greek or Latin lexicon filed to say how wide pleura and costa were; this challenge sets out the evidence rather than an attributed argument."""
+citations = [
+  { source = "brenton-lxx-greek", locator = "Gen 2:21–22" },
+  { source = "vulgate-clementine", locator = "Gen 2:21–22" },
+  { source = "eichler-thetorah", locator = "section צלע" },
+]
