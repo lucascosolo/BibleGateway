@@ -1,0 +1,5 @@
+# 1 Clement (Hoole translation, Early Christian Writings)
+
+1 Clement, translated by Charles H. Hoole, 1885, as printed on Early Christian Writings. Fetched 2026-10-09 (plain request with a browser User-Agent returned HTTP 200) from http://www.earlychristianwritings.com/text/1clement-hoole.html; sha256 `f2433de6654f50f48dee0b87f92e92fcd4faaede5333090490d0649931d046e8` (107,102 bytes). The URL named in the brief, `1clement-roberts.html`, is the Roberts-Donaldson text and is filed unextracted beside it (sha256 `add739e99b57702b3f682f40158b4978ad3c0a59673ad243ec0d14c5e4c5831a`). `text.txt` sha256 `1a2fb051e1d94cef5e490d258151711b904527eb432fbb19b645d2d81a4abfbf`. Rights: Hoole translation 1885, public domain (translator d. 1904); site copyright covers only its own layout. Marker scheme: chapter.verse as printed on the page (5.4); no page markers. Page offset: none, the site carries no print pages. Folder: `~/.cache/jot/sources/ecw-1-clement-hoole/`.
+
+How to open a citation: "ch. 5" is `cd ~/.cache/jot/sources/ecw-1-clement-hoole && grep -P '^5\.[0-9]+\t' text.txt`; 5.4 is Peter and 5.5-5.7 are Paul, ending with the journey "to the extremity of the West".

@@ -11,6 +11,18 @@ Web page cited as `mattison-gospels-net` (Mark M. Mattison (trans.)). A fallback
 - **Page markers:** none; a web page has no printed pages. Locate a claim by section heading (the `##` lines in `text.txt`) or by the URL fragment if the citation carries one. No printed-page offset applies.
 - **Capture limitation:** a site home page; the text is the landing page only.
 
+## Filed edition (added 2026-10-09)
+
+The citations to this id are to the **Manuscript Information** page, and the translation itself is
+filed at **`~/.cache/jot/sources/outside/mattison-thomas/`**: `manuscript.html` (sha256
+`9884405de38063ca4447154de95cf78fd05a7fd2bb3e19a3f937b45848b274fb`), `index.html`
+(https://www.gospels.net/thomas/, `362f84da9e043387…`) and `text.txt` (Gospel of Thomas by logion:
+prologue, 1-114, colophon; `36417c4cd1671561…`). Rights correction: the translations carry
+Mattison's own public-domain dedication ("committed to the public domain and may be freely copied
+and used"), quoted in that folder's `meta.json`, so the translation text is not merely
+verification-only. Marker scheme: logion number; the Manuscript Information page has no internal
+numbering, cite it whole. How to open a citation: open `outside/mattison-thomas/manuscript.html`.
+
 ## Used by
 
 (to be filled by the next agent)
