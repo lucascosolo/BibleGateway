@@ -297,3 +297,17 @@ Success criteria: all three test reports show 0 failures; the public routes retu
 
 ## Deferred to the next release
 Related ancient texts (six works, 20-30 connections), the canon and collections view, full VarApp witness parsing with NTVMR links, the synopsis for Gospel parallels, and lemma-to-phrase alignment in Lashon.
+
+## Execution notes, chunk 9
+
+2026-10-08. `packages/ingest/scripts/check-brenton-identity.ts` run against `eng-Brenton_usfx.zip` (sha256 15b551aa…) and `bible.db.new`, with content-shift detection: a label present in both whose Brenton words match a different KJV verse of the book clearly better (Jaccard ≥0.30 and ≥0.15 above the same label). The method was checked on the existing pilot first: Habakkuk and Haggai come out identity; Nehemiah and Lamentations show only missing labels (the 21 recorded versification omissions), no extra or shifted ones.
+
+| Book | Non-identity chapters | Label differences that are real numbering shifts |
+|---|---|---|
+| Genesis | 12 of 50 | 31:55 is Brenton 32:1, chapter 32 shifted by one (32:33 extra); 31:51,55 and 35:21 missing |
+| Exodus | 21 of 40 | 8:1-4 is Brenton 7:26-29 and chapter 8 shifted by four; 22:1 split; 28:23-29 and 35:8,15,17,18 missing; chapters 36-39 reordered (tabernacle account), 39:24-43 missing |
+| Leviticus | 12 of 27 | 6:1-7 is Brenton 5:20-26, chapter 6 shifted by seven |
+| Numbers | 16 of 36 | 16:36-50 is Brenton 17:1-15, chapter 17 shifted by fifteen; 29:40 is Brenton 30:1, chapter 30 shifted by one |
+| Deuteronomy | 12 of 34 | 12:32 is Brenton 13:1, chapter 13 shifted by one (13:19 extra); 22:30 is Brenton 23:1, chapter 23 shifted by one (23:26 extra); 14:14 missing |
+
+Isolated single-verse "shifted" hits (e.g. Deut 2:2→12:4, Lev 11:40→15:5) are phrase-reuse noise; the chunk-level shifts above are not. Result: **0 of 5 books identity**, including Deuteronomy. Under the label-only map the ingest uses, adding any of them would print Brenton's 13:1 beside Hebrew-English 13:1 (which is a different verse). `includedBookIds` was left at `[16, 25, 35, 37]`, no re-ingest was run, and `brenton-map.test.ts` was not written: its contract (book 5 included) contradicts the evidence. Deuteronomy 32, which chunk 10 needs, is itself clean. The options are a user decision: (a) a reviewed offset map for Deuteronomy (four ranges: 12:32, 13:1-18, 22:30, 23:1-25, plus 14:14 as a versification omission), which needs `ingest.ts` to insert non-identity `versification_map` rows; (b) chapter-level inclusion; (c) leave the Pentateuch withheld and quote Brenton's Deuteronomy 32:8 in chunk 10 from the source with a citation.
