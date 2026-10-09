@@ -2,7 +2,7 @@
 
 Scan supplied by the user on 2026-10-07 (290 PDF pages, good text layer). On disk at
 `~/.cache/jot/sources/grayson-1996/rima-3-assyrian-rulers-858-745.pdf` with `embedded.txt`
-(form-feed separated by PDF page). **Printed page = PDF page − 25.** The scan covers the front
+(form-feed separated by PDF page). **Printed page = PDF page − 25** (rechecked 2026-10-09 against the running heads, steady from p. 6 to p. 236: PDF 31 is p. 6, PDF 36 is p. 11, PDF 251 is p. 226). The scan covers the front
 matter, all of Shalmaneser III (A.0.102) and Adad-nārārī III (A.0.104); check before relying
 on anything after p. 265.
 

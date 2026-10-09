@@ -3,7 +3,7 @@ kind = "historical"
 title = "Did Peter write the letters in his name?"
 status = "sources-located"
 summary = """
-Two New Testament letters name Peter as their author, and Ehrman argues that neither was written by Peter. Only 1 and 2 Peter are entered here; Jude has not been entered."""
+Two New Testament letters name Peter as their author, and Ehrman argues that neither was written by Peter. Only 1 and 2 Peter are entered here; Jude is treated in the issue james-and-jude-authorship."""
 events = ["1-peter-composition", "2-peter-composition"]
 citations = [{ source = "ehrman-2013", locator = "ebook pp. 293, 295" }]
 

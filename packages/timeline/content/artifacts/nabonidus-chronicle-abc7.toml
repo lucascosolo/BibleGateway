@@ -1,9 +1,9 @@
 id = "nabonidus-chronicle-abc7"
 name = "Nabonidus Chronicle (ABC 7)"
 kind = "chronicle"
-status = "sources-located"
+status = "claims-checked"
 language = "Akkadian (cuneiform)"
 summary = """
-A Babylonian chronicle of the reign of Nabonidus records, for his seventeenth year, the battle at Opis and the capture of Sippar "without a battle". It says "Ugbaru, governor of Gutium, and the army of Cyrus, without battle they entered Babylon", and that Cyrus himself entered Babylon on the third of Arahsamna. Oppenheim's ANET translation reads: "Gobryas (Ugbaru), the governor of Gutium and the army of Cyrus entered Babylon without battle" (p. 306). The tablet's museum number was not shown on the page read."""
-citations = [{ source = "livius-abc7" }, { source = "pritchard-1969", locator = "pp. 305–306, trans. A. Leo Oppenheim" }]
+A Babylonian chronicle of the reign of Nabonidus records, for his seventeenth year, Cyrus attacking the army of Akkad at Opis in the month of Tashritu, then: "The 14th day, Sippar was seized without battle." and "The 16th day, Gobryas (Ugbaru), the governor of Gutium and the army of Cyrus entered Babylon without battle." Cyrus himself came later: "In the month of Arahshamnu, the 3rd day, Cyrus entered Babylon." These are Oppenheim's words in ANET (p. 306). The tablet's museum number was not shown on the page read."""
+citations = [{ source = "pritchard-1969", locator = "p. 306 (the chronicle begins on p. 305), trans. A. Leo Oppenheim" }]
 verses = [{ ref = "Dan.5.30-Dan.5.31", link = "background", note = "Daniel 5:30–31 tells of the night Babylon fell, the event the Nabonidus Chronicle also records." }]

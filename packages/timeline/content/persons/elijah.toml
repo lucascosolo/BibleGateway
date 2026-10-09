@@ -4,7 +4,7 @@ also_known_as = ["Elijah the Tishbite"]
 role = "prophet in the northern kingdom under Ahab and Ahaziah (as Kings tells it)"
 summary = """
 Kings sets Elijah against Ahab and Jezebel: he announces a drought, defeats the prophets of Baal on Mount Carmel, flees to Horeb, where he is told to anoint Hazael, Jehu and Elisha, and condemns Ahab over Naboth's vineyard before being taken up in a whirlwind. Finkelstein and Silberman call the fall of the house of Omri, in which his prophecies are fulfilled "to the letter", a literary classic, and say that once the anachronisms and the stories of threats issued and prophecies fulfilled are removed, little verifiable history is left beyond the sequence of kings, their building and their wars. They say the cycle of Elijah and Elisha stories was set down in writing long after the fall of the Omrides, and that it expresses the insistence on the worship of YHWH alone that arose in the late eighth century. Malachi and the Gospels look for his return."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "1Kgs.17.1", link = "describes", note = "1 Kings 17:1 introduces Elijah the Tishbite announcing a drought to Ahab." },
   { ref = "1Kgs.18.17-1Kgs.18.40", link = "describes", note = "1 Kings 18:17–40 tells of the contest with the prophets of Baal on Mount Carmel." },
@@ -14,6 +14,7 @@ verses = [
   { ref = "2Kgs.2.1-2Kgs.2.12", link = "describes", note = "2 Kings 2:1–12 tells of Elijah taken up in a whirlwind before Elisha." },
   { ref = "Mal.4.5", link = "alludes", note = "Malachi promises that Elijah the prophet will be sent before the day of the Lord." },
   { ref = "Mark.9.2-Mark.9.4", link = "alludes", note = "Mark 9:2–4 has Elijah appear with Moses at the transfiguration." },
+  { ref = "Mark.9.11-Mark.9.13", link = "alludes", note = "Mark 9:11–13 has Jesus answer the scribes' teaching that Elijah must come first: Elijah indeed comes first." },
 ]
 # F&S pp. 172-176 and 247 read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/
 # page-185.txt to page-189.txt and page-260.txt; p. 197 at page-210.txt (printed = PDF − 13).

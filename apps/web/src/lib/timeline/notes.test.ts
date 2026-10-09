@@ -98,11 +98,16 @@ describe("toledotSentence: events", () => {
 
 describe("toledotSentence: arguments", () => {
   const arg = (stance: "for" | "against"): Subject => ({
-    kind: "argument", eventId: "ev-exodus", eventTitle: "The Exodus", eventStatus: "claims-checked", positionLabel: "Early date", stance,
+    kind: "argument", eventId: "ev-exodus", eventTitle: "The Exodus", eventStatus: "claims-checked", positionLabel: "Early date", stance, datesWriting: false,
   });
   it("for", () => {
     expect(toledotSentence(note(arg("for")))).toEqual({
       lead: "Cited in dating", body: "The Exodus: this passage is cited for the dating “Early date”.", href: "/toledot/events/ev-exodus", draft: false,
+    });
+  });
+  it("datesWriting leads 'Cited in dating the writing', rest unchanged", () => {
+    expect(toledotSentence(note({ ...arg("for"), datesWriting: true }))).toEqual({
+      lead: "Cited in dating the writing", body: "The Exodus: this passage is cited for the dating “Early date”.", href: "/toledot/events/ev-exodus", draft: false,
     });
   });
   it("against, then the link note", () => {
@@ -174,7 +179,7 @@ describe("toledotSentence: link note and draft", () => {
     expect(toledotSentence(note(p)).body).toBe("Belshazzar: no outside evidence.");
   });
   it("flags draft for every subject kind that is draft", () => {
-    expect(toledotSentence(note({ kind: "argument", eventId: "e", eventTitle: "E", eventStatus: "draft", positionLabel: "P", stance: "for" })).draft).toBe(true);
+    expect(toledotSentence(note({ kind: "argument", eventId: "e", eventTitle: "E", eventStatus: "draft", positionLabel: "P", stance: "for", datesWriting: false })).draft).toBe(true);
     expect(toledotSentence(note({ kind: "issue", id: "i", title: "T", issueKind: "textual", status: "draft" })).draft).toBe(true);
     expect(toledotSentence(note({ kind: "person", id: "p", name: "N", evidence: "none", hasTension: false, status: "draft" })).draft).toBe(true);
     expect(toledotSentence(note({ kind: "artifact", id: "a", name: "N", status: "draft", relation: null })).draft).toBe(true);

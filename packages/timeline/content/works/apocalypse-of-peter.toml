@@ -3,7 +3,7 @@ title = "Apocalypse of Peter"
 also_known_as = ["Revelation of Peter"]
 books = ["ApocPet"]
 canon = "nt-apocrypha"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 Metzger calls it the most important of the apocryphal books of revelation. Peter and the disciples ask Jesus on the Mount of Olives about the signs of his coming, and are shown heaven and the punishments of hell, with the torments of the damned described at far greater length than the joys of heaven. The Akhmim Greek fragment, an Ethiopic version found in 1910 and a small Bodleian leaf survive; the Greek seems to be a condensed and recast form. Metzger dates it about 125 to 150 CE. The Muratorian Fragment received it but noted that some would not have it read in church, Eusebius rejected it, and Sozomen reports it read each Good Friday in some Palestinian churches in the fifth century."""
@@ -58,6 +58,7 @@ note = "The Fragment says 'We receive only the apocalypses of John and Peter, th
 citations = [
   { source = "anf05-salmond-muratorian", locator = "Fragments of Caius, Canon Muratorianus" },
   { source = "metzger-1987-canon", locator = "p. 184" },
+  { source = "metzger-1987-canon", locator = "Appendix IV, p. 307 (lines 71-73)" },
 ]
 
 [[events]]

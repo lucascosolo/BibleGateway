@@ -39,7 +39,7 @@ The Gospel of Matthew sets the limit. Matthew 2 places the birth in the days of 
   stance = "against"
   text = """
 The census in Luke pulls the other way. Luke 2:2 links the birth to a registration under Quirinius, which Josephus dates to the removal of Archelaus in 6 CE, about ten years later."""
-  citations = [{ source = "wikipedia-census-of-quirinius" }, { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" }]
+  citations = [{ source = "wikipedia-census-of-quirinius" }, { source = "josephus-whiston", locator = "Antiquities 18.1.1" }]
   verses = [{ ref = "Luke.2.2", link = "dates" }]
 
 [[positions]]
@@ -59,7 +59,7 @@ relation = "in-tension"
 note = """
 Josephus says Cyrenius came to Syria to assess Judea after Archelaus's removal, and he places that census in 6 CE. That is after the death of Herod, the king under whom Matthew sets the birth, which is why the two accounts are in tension."""
 citations = [
-  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
+  { source = "josephus-whiston", locator = "Antiquities 18.1.1" },
   { source = "wikipedia-census-of-quirinius" },
 ]
 

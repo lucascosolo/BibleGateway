@@ -2,7 +2,7 @@ id = "psalms-of-solomon"
 title = "Psalms of Solomon"
 books = ["PssSol"]
 canon = "pseudepigrapha"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Hebrew"
 summary = """
 The Psalms of Solomon are eighteen psalms. McDonald, after Charlesworth, dates them about 55-50 BCE, and Brown to 65-40 BCE, composed in Hebrew in Jerusalem. Gray, the translator, said in 1913 that they were composed in the middle of the first century BCE: the state of society they reflect, and their allusions to Pompey's actions in Palestine and his death in Egypt in 48 BCE, fit that period. Only Greek and Syriac texts survive.

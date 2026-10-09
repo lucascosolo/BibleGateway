@@ -906,7 +906,7 @@ export interface ToledotNote {
   linkType: VerseLink["linkType"];
   subject:
     | { kind: "event"; id: string; title: string; axis: Axis; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; traditional: { earliest: number; latest: number } | null; positions: { label: string; tradition: string }[] }
-    | { kind: "argument"; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }
+    | { kind: "argument"; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against"; datesWriting: boolean }
     | { kind: "issue"; id: string; title: string; issueKind: IssueSummary["kind"]; status: ReviewStatus }
     | { kind: "person"; id: string; name: string; evidence: EvidenceGrade; hasTension: boolean; status: ReviewStatus }
     | { kind: "artifact"; id: string; name: string; status: ReviewStatus; relation: Relation | null }
@@ -978,15 +978,15 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
   const argumentIds = idsOf("argument");
   const argumentsById = new Map(
     (argumentIds.length
-      ? all<{ id: string; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }>(
+      ? all<{ id: string; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against"; datesWriting: number }>(
           `SELECT a.argument_id AS id, e.event_id AS eventId, e.title AS eventTitle, e.status AS eventStatus,
-                  p.label AS positionLabel, a.stance
+                  p.label AS positionLabel, a.stance, (e.axis = 'composition' OR p.dates = 'composition') AS datesWriting
            FROM arguments a JOIN positions p ON p.position_id = a.position_id JOIN events e ON e.event_id = p.event_id
            WHERE a.argument_id IN (${placeholders(argumentIds)})`,
           ...argumentIds
         )
       : []
-    ).map(({ id, ...rest }) => [id, { kind: "argument" as const, ...rest }])
+    ).map(({ id, datesWriting, ...rest }) => [id, { kind: "argument" as const, ...rest, datesWriting: datesWriting === 1 }])
   );
 
   const issueIds = idsOf("issue");

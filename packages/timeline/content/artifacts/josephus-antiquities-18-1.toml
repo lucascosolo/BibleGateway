@@ -6,7 +6,7 @@ language = "Greek"
 summary = """
 Josephus says Cyrenius (Quirinius), a Roman senator, came into Syria, and that Caesar sent him "to take an account of their substance". Coponius was sent to hold supreme power over the Jews, since Judea had been added to the province of Syria after Archelaus was removed. Antiquities 17.342–355 puts that removal in the tenth year of Archelaus's rule."""
 citations = [
-  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
-  { source = "lexundria-josephus-ant-17-342", locator = "17.342–355" },
+  { source = "josephus-whiston", locator = "Antiquities 18.1.1" },
+  { source = "josephus-whiston", locator = "Antiquities 17.13.2" },
 ]
 verses = [{ ref = "Luke.2.1-Luke.2.2", link = "background", note = "Luke 2:1–2 places the census when Quirinius was governor of Syria, the point this passage of Josephus is set beside." }]

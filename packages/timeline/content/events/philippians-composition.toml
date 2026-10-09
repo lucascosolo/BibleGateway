@@ -3,7 +3,7 @@ title = "Composition of Philippians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 books = ["Phil"]
 summary = """
 Paul wrote Philippians to the church at Philippi, the Roman colony where he had founded his first church in Europe, while he was in prison. Its authorship is not seriously disputed, but scholars disagree on where he was held. Raymond Brown favours Ephesus around 56, and treats Rome (61-63) and Caesarea (58-60) as the alternatives. Whether it is one letter or several joined is also unsettled."""
@@ -58,4 +58,4 @@ latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook counts Philippians among the undisputed letters, written by Paul himself from prison in an undisclosed location. It gives no year, so the span of 50 to 59 shown here is the editor's reading of his "50s of the Common Era" for Paul's letters."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 246 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 188, 246" }]

@@ -3,12 +3,12 @@ title = "Composition of 1 Corinthians"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 books = ["1Cor"]
 summary = """
 Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church he had founded at Corinth, answering a letter and reports that had reached him from there. He says he will stay at Ephesus until Pentecost, which puts the writing in late 56 or very early 57. Its authorship is not seriously disputed, though a revisionist chronology would move it to 54-55."""
 verses = [
-  { ref = "1Cor.1.1", link = "describes", note = "Paul and Sosthenes write to the church of God at Corinth." },
+  { ref = "1Cor.1.1-1Cor.1.2", link = "describes", note = "Paul and Sosthenes write to the church of God at Corinth." },
   { ref = "1Cor.5.9", link = "background", note = "1 Corinthians 5:9 mentions an earlier letter to the Corinthians that is now lost, so this is not Paul's first letter to them." },
   { ref = "1Cor.16.8", link = "dates", note = "Paul says he will stay in Ephesus until Pentecost, which places the writing in Ephesus before that feast." },
 ]
@@ -58,4 +58,4 @@ latest = 56
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook says Paul wrote 1 Corinthians from Ephesus, and elsewhere describes the Last Supper tradition in it as something that "was written in the mid-50s" by Paul. He gives no exact years, so the span shown here, 54 to 56, is the editor's reading of the phrase "mid-50s." """
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 232 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 154, 232-233" }]

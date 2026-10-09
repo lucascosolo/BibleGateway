@@ -3,7 +3,7 @@ title = "Epistle of Barnabas"
 also_known_as = ["Letter of Barnabas"]
 books = ["Barn"]
 canon = "apostolic"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 An anonymous theological tract in letter form, arguing that the Old Testament points to Christ and that Jewish sacrifice, the temple and the food laws were misunderstood from the start. Clement of Alexandria and Origen attributed it to Paul's companion Barnabas, but Metzger rejects that because the letter looks back on the fall of Jerusalem in 70 CE. It was probably written in or near Alexandria. Metzger places it in the first half of the second century; Lightfoot and Harmer (1891) argued for 70 to 79. Eusebius listed it among the rejected writings, and Codex Sinaiticus puts it after the New Testament."""

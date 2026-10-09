@@ -2,7 +2,7 @@ id = "1-maccabees"
 title = "1 Maccabees"
 books = ["1Macc"]
 canon = "deuterocanon"
-status = "sources-located"
+status = "claims-checked"
 summary = "1 Maccabees is a history of the Maccabean revolt. Satlow reads it as a court history written in John Hyrcanus's reign (135-104 BCE); McDonald dates it about 135 BCE in one place and about 100 BCE in another. The unsigned preface to the Apocrypha in the Brenton edition calls it a trustworthy record written originally in Hebrew by an orthodox Jew, in the early first century BCE. Jerome says he found it in Hebrew and 2 Maccabees in Greek. The Catholic, Orthodox and Ethiopian churches hold it as scripture."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }, { source = "mcdonald-2017-vol1", locator = "p. 179" }, { source = "satlow-2014", locator = "p. 124" }, { source = "satlow-2014", locator = "p. 144" }]
 original_language = "Hebrew (the Greek text survives)"

@@ -3,7 +3,7 @@ title = "Jubilees"
 also_known_as = ["The Little Genesis", "The Book of Jubilees"]
 books = ["Jub"]
 canon = "pseudepigrapha"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Hebrew"
 summary = """
 Jubilees retells Genesis and the first half of Exodus as a revelation given to Moses on Mount Sinai, dating events by jubilee periods of forty-nine years and defending a 364-day calendar. VanderKam counts fourteen copies among the Qumran manuscripts, and the Damascus Document appears to refer to it as the explanation of the Law's times. The complete text survives only in Ethiopic; the Ethiopian church counts it as Scripture."""

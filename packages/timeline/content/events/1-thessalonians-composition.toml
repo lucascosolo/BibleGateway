@@ -39,7 +39,7 @@ earliest = 50
 latest = 50
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Thessalonians, a letter whose authorship is not in doubt. They place it at Corinth in 50 CE, four to six months after his ministry in Thessalonica, concluding that "1 Thessalonians will have been written in A.D. 50"."""
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that Paul wrote 1 Thessalonians. They place it at Corinth in 50 CE, four to six months after his ministry in Thessalonica, concluding that "1 Thessalonians will have been written in A.D. 50"."""
 citations = [{ source = "carson-moo-2005", locator = "p. 543" }]
 
   [[positions.arguments]]

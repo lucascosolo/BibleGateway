@@ -17,7 +17,6 @@ events = ["second-temple-destruction"]
 citations = [
   { source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD and the Beginning of the 2d" },
   { source = "josephus-whiston", locator = "Jewish War, Preface 4; 6.4.5–6" },
-  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
   { source = "streeter-1924", locator = "p. 540" },
   { source = "carson-moo-2005", locator = "pp. 208–209" },
 ]
@@ -36,5 +35,4 @@ note = """
 Josephus's account of the temple's last day names Titus throughout: retiring to the Antonia fortress, resolving to storm the temple, and running to stop the fire."""
 citations = [
   { source = "josephus-whiston", locator = "Jewish War 6.4.5–6" },
-  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
 ]

@@ -103,7 +103,7 @@ latest = 65
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
 Carson and Moo write the standard evangelical introduction to the New Testament, and they argue for Peter as the author of 2 Peter as well as 1 Peter. If Peter wrote it, they say, the letter "must be dated before about A.D. 65", the year of his martyrdom under Nero, and he writes from Rome because he senses his death is near. The start of the span, 63, is the editor's, set by their dating of 1 Peter."""
-citations = [{ source = "carson-moo-2005", locator = "pp. 659–663" }]
+citations = [{ source = "carson-moo-2005", locator = "pp. 659–663" }, { source = "carson-moo-2005", locator = "pp. 646-647" }]
 
   [[positions.arguments]]
   stance = "for"

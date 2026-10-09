@@ -20,7 +20,7 @@ relation = "corroborates"
 note = """
 Josephus names Joseph called Caiaphas as high priest, made so after Gratus's appointee (18.35), and records that Vitellius removed him and appointed Jonathan son of Ananus (18.95)."""
 citations = [
-  { source = "lexundria-josephus-ant-18", locator = "18.35; 18.95" },
+  { source = "josephus-whiston", locator = "Antiquities 18.2.2; 18.4.3" },
   { source = "ej-2007-caiaphas" },
 ]
 

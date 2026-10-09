@@ -4,7 +4,7 @@ Scan supplied by the user on 2026-10-07 (351 PDF pages, OmniPage text layer, goo
 disk at `~/.cache/jot/sources/pritchard-1969/ancient-near-eastern-texts-3rd-ed-1969.pdf` with
 `embedded.txt` (form-feed separated by PDF page).
 
-**Printed page = PDF page − 25.** The scan covers the front matter and printed pages 1 to
+**Printed page = PDF page − 24 up to p. 275, − 25 from p. 276 on** (page 275 is scanned twice, at PDF 299 and 300; checked 2026-10-09 against the running heads: PDF 51 is p. 27 and PDF 276 is p. 252, but PDF 331 is p. 306 and PDF 347 is p. 322, so the Nabonidus Chronicle at p. 306 and the Lachish ostraca at pp. 321–322 are at − 25). The scan covers the front matter and printed pages 1 to
 about 327, which is the first half of the book: Egyptian, Sumerian, Akkadian and Hittite myths,
 laws, and the Egyptian and Mesopotamian historical texts up through the Persian period. **It
 does not include** the Merneptah "Israel Stela" (p. 376), the Palestinian inscriptions section

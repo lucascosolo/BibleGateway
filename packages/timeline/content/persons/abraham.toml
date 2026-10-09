@@ -17,6 +17,6 @@ citations = [
   { source = "finkelstein-silberman-2002", locator = "pp. 35-36" },
   { source = "finkelstein-silberman-2002", locator = "pp. 37-38" },
   { source = "wikipedia-abraham", locator = "section 'Historicity'" },
-  { source = "kitchen-2003", locator = "pp. 316-327" },
+  { source = "kitchen-2003", locator = "pp. 353, 358-359" },
   { source = "ussher-annals", locator = "paragraphs 70-71" },
 ]

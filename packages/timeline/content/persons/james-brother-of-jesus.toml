@@ -27,4 +27,8 @@ artifact = "josephus-antiquities-20-200"
 relation = "corroborates"
 note = """
 Josephus narrates the stoning of James, "the brother of Jesus who was called the Messiah", under the high priest Ananus. It is an outside source, written within a generation or so of the event."""
-citations = [{ source = "brown-1997", locator = "ch. 34, The Background" }]
+citations = [
+  { source = "brown-1997", locator = "ch. 34, The Background" },
+  { source = "josephus-whiston", locator = "Antiquities 20.9.1" },
+  { source = "josephus-whiston", locator = "Antiquities 20.11.2 (thirteenth year of Domitian)" },
+]

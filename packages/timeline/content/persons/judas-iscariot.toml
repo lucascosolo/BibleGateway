@@ -2,12 +2,12 @@ id = "judas-iscariot"
 name = "Judas Iscariot"
 role = "one of the Twelve who handed Jesus over to the authorities"
 summary = """
-Judas is named last in the lists of the Twelve (Mark 3:19, Matt 10:4, Luke 6:16), described as the one who handed Jesus over. Acts 1:13 lists the Eleven without him, and Acts 1:15-26 tells of Matthias taking his place. Meier says only two basic facts are known: Jesus chose him as one of the Twelve, and he handed Jesus over to the Jerusalem authorities. Both are supported by multiple attestation (Mark, John, and separate traditions behind Matthew's and Luke's accounts of his death) and by the criterion of embarrassment, since the church had no reason to invent a traitor among the Twelve. Meier argues this also supports the existence of the Twelve during the ministry. He notes the Greek verb means "hand over", and probably refers to telling the authorities where to arrest Jesus quietly.
+Judas is named last in the lists of the Twelve (Mark 3:19, Matt 10:4, Luke 6:16), described as the one who handed Jesus over. Acts 1:13 lists the Eleven without him, and Acts 1:15-26 tells of Matthias taking his place. Meier says only two basic facts are known: Jesus chose him as one of the Twelve, and he handed Jesus over to the Jerusalem authorities. Both are supported by multiple attestation (Mark, John, and separate traditions behind Matthew's and Luke's accounts of his death) and by the criterion of embarrassment, since the church had no reason to invent a traitor among the Twelve. Meier argues this also supports the existence of the Twelve during the ministry. He notes the Greek verb means "hand over", and probably refers to his cooperation in telling the authorities when and where they could most easily arrest Jesus without public notice or uproar (so Brown).
 
 The motives and the death are expanded later. Mark gives no motive (14:10-11). Matthew adds money (26:15) and a suicide (27:3-5), Luke and John add Satan's entry into him (Luke 22:3, John 13:2, 27), John calls him a thief (12:4-6), and Acts has a different death account (1:16-20). Meier says these reflect theology and imagination, and that rehabilitating Judas is as imaginative as demonizing him. The name Iscariot is unexplained. Meier discusses the dagger-men (sicarii), "liar", "hand over", a trade, and a place such as Kerioth. He thinks the John tradition of "Judas, son of Simon Iscariot" slightly favours a place name, and concludes the nickname, like the man, remains an enigma."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
-  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists Judas Iscariot last among the Twelve, as the one 'who handed him over'." },
+  { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists Judas Iscariot last among the Twelve, as the one 'who also betrayed him' (WEB)." },
   { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists Judas Iscariot last among the Twelve." },
   { ref = "Luke.6.14-Luke.6.16", link = "describes", note = "Luke 6:14–16 lists Judas Iscariot last among the Twelve and calls him the betrayer." },
   { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven, and Judas is absent from it." },
@@ -20,4 +20,5 @@ verses = [
 citations = [
   { source = "meier-2001", locator = "pp. 142–145" },
   { source = "meier-2001", locator = "pp. 208–211" },
+  { source = "meier-2001", locator = "p. 178 n. 67 (continues p. 179)" },
 ]

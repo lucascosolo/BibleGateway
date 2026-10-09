@@ -3,7 +3,7 @@ title = "Composition of the letter to the Colossians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 books = ["Col"]
 summary = """
 This asks who wrote Colossians and when. The letter names Paul as author and twice has him say "I, Paul". Ehrman argues it is a forgery by someone "wanting his readers to think he is Paul", but says "there is really no way to date its appearance precisely", and he allows that forgeries in Paul's name could appear in Paul's own lifetime. The year bounds of 55 and 100 are therefore the editor's: 55 is a point inside Paul's ministry, and 100 is set because Ephesians, which Ehrman says copies Colossians, is the later letter."""
@@ -169,11 +169,11 @@ latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook says "Paul may well have written this letter" on its Pauline features but concludes "it is hard to accept that he wrote the letter to the Colossians," ascribing it to an unknown member of one of Paul's churches. He gives no date beyond after Paul's death, so the span shown, 65 to 100, is the editor's."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman argues that Colossians is emphatic that "believers have already been raised with Christ," whereas in the undisputed letters Paul insists the resurrection with Christ is still future."""
-  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274 approx." }]
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 274" }]
   verses = [{ ref = "Col.2.12", link = "describes", note = "Colossians 2:12 says believers were raised with Christ in baptism." }, { ref = "Col.3.1", link = "describes", note = "Colossians 3:1 says believers have already been raised with Christ." }]

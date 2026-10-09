@@ -3,7 +3,7 @@ title = "Didache"
 also_known_as = ["The Teaching of the Twelve Apostles", "The Teaching of the Lord to the Gentiles through the Twelve Apostles"]
 books = ["Did"]
 canon = "apostolic"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 A short church manual in sixteen chapters. The first six describe the Way of Life and the Way of Death, chapters 7 to 15 give instructions on baptism, fasting, prayer, the Eucharist and the treatment of prophets, bishops and deacons, and chapter 16 looks ahead to the Second Coming. No copy was known until 1875, when a manuscript was found in Constantinople; its date is disputed. Most scholars in Metzger's survey place it in the first half of the second century, while several argue for the first century. Eusebius counted it among the rejected writings and Athanasius among the books to be read but not canonical."""

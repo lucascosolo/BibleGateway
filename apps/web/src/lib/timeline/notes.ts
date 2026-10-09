@@ -88,7 +88,7 @@ function sentence(note: MarginNote, linkNote: string | null): ToledotSentence {
       return { lead: EVENT_LEAD[s.axis], body: joined(linkNote, eventDate(s)), href: `/toledot/events/${s.id}`, draft: unchecked(s.status) };
     case "argument":
       return {
-        lead: "Cited in dating",
+        lead: s.datesWriting ? "Cited in dating the writing" : "Cited in dating",
         body: joined(`${s.eventTitle}: this passage is cited ${s.stance === "against" ? "against" : "for"} the dating “${s.positionLabel}”.`, linkNote),
         href: `/toledot/events/${s.eventId}`,
         draft: unchecked(s.eventStatus),

@@ -3,7 +3,7 @@ title = "Eusebius sorts the Christian writings into accepted, disputed and spuri
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 In the Church History, Eusebius of Caesarea counts the votes of the writers he had read. The accepted books are the four Gospels, Acts, Paul's letters, 1 Peter and 1 John, and, if it seems proper, Revelation. The disputed but widely known books are James, Jude, 2 Peter and 2 and 3 John. The spurious include the Acts of Paul, the Shepherd, the Apocalypse of Peter, Barnabas and the Didache, and Revelation appears here too. Metzger reads the muddle as the uncertainty of a historian working before any synod had issued a canon. Eusebius issued the History in several editions, so the passage is dated to a span, not a year."""
 verses = [
@@ -22,7 +22,7 @@ latest = 325
 held_by = "Bruce M. Metzger"
 summary = """
 Metzger says Eusebius issued the History, with revisions and additions, several times during the first quarter of the fourth century, and refers to the classification as Eusebius's in 325."""
-citations = [{ source = "metzger-1987-canon", locator = "p. 202; p. 140" }]
+citations = [{ source = "metzger-1987-canon", locator = "pp. 202-203; p. 140" }]
 
   [[positions.arguments]]
   stance = "for"

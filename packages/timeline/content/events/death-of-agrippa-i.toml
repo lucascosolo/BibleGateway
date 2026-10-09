@@ -21,7 +21,7 @@ summary = """
 The Wikipedia article on Herod Agrippa dates the death to 44 CE. That fits Josephus, who counts four years of reign under Caius and three under Claudius."""
 citations = [
   { source = "wikipedia-herod-agrippa" },
-  { source = "lexundria-josephus-ant-19-343", locator = "19.351" },
+  { source = "josephus-whiston", locator = "Antiquities 19.8.2" },
 ]
 
 [[attestations]]
@@ -30,6 +30,6 @@ relation = "partially-corroborates"
 note = """
 Both accounts have a crowd hailing Agrippa as a god at Caesarea, followed at once by a fatal illness, though they differ on the details. Josephus describes a silver garment, an owl as an omen, and five days of stomach pain, whereas Acts has an angel and worms."""
 citations = [
-  { source = "lexundria-josephus-ant-19-343", locator = "19.344–350" },
+  { source = "josephus-whiston", locator = "Antiquities 19.8.2" },
   { source = "wikipedia-herod-agrippa" },
 ]

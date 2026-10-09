@@ -4,7 +4,7 @@ kind = "literary-text"
 status = "sources-located"
 language = "Greek"
 summary = """
-Josephus writes: "Now when Porcius Festus was sent as successor to Felix by Nero, the principal of the Jewish inhabitants of Caesarea went up to Rome to accuse Felix; and he had certainly been brought to punishment, unless Nero had yielded to the importunate solicitations of his brother Pallas" (Whiston). The passage states who followed whom, and Nero's part in it, but it gives no year."""
+Josephus writes: "Now when Porcius Festus was sent as successor to Felix by Nero, the principal of the Jewish inhabitants of Cesarea went up to Rome to accuse Felix; and he had certainly been brought to punishment, unless Nero had yielded to the importunate solicitations of his brother Pallas" (Whiston). The passage states who followed whom, and Nero's part in it, but it gives no year."""
 citations = [
-  { source = "lexundria-josephus-ant-20", locator = "20.182" },
+  { source = "josephus-whiston", locator = "Antiquities 20.8.9" },
 ]

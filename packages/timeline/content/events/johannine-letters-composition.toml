@@ -68,5 +68,5 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 336 approx." }]
   stance = "for"
   text = """
 Ehrman points to themes the letters share with the Fourth Gospel, often in the same words (light and darkness, the commandment to love one another). He takes this to show that all four books come from one community."""
-  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 330 approx." }]
-  verses = [{ ref = "1John.2.7", link = "describes", note = "First John speaks of the commandment as both old and new, as in John 13:34, which links the letter to the Gospel." }, { ref = "John.13.34", link = "describes", note = "John 13:34 gives the new commandment that 1 John shares, which links the two writings." }]
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 331" }]
+  verses = [{ ref = "1John.2.7-1John.2.8", link = "describes", note = "First John speaks of an old commandment, which verse 8 calls new, as in John 13:34, which links the letter to the Gospel." }, { ref = "John.13.34", link = "describes", note = "John 13:34 gives the new commandment that 1 John shares, which links the two writings." }]

@@ -25,7 +25,6 @@ note = """
 The Jewish War is Josephus's own account of the war in which he served, first on the Jewish side and then in the Roman camp. Its narrative of the temple's burning is that of a witness, written from the Roman side."""
 citations = [
   { source = "josephus-whiston", locator = "Jewish War, Preface 1; 6.4.5" },
-  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
 ]
 
 [[attestations]]

@@ -20,7 +20,7 @@ artifact = "josephus-antiquities-18-116"
 relation = "consistent"
 note = """
 Josephus reports on John the Baptist independently. He tells of John's call to baptism and good living, and of his execution by Herod at Machaerus. He does not date John to Tiberius's fifteenth year, and he names no year and no Pilate. So he neither confirms nor contradicts Luke 3:1-2."""
-citations = [{ source = "lexundria-josephus-ant-18-116", locator = "18.116-119" }]
+citations = [{ source = "josephus-whiston", locator = "Antiquities 18.5.2" }]
 
 [[positions]]
 id = "28-29"

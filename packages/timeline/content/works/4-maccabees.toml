@@ -2,7 +2,7 @@ id = "4-maccabees"
 title = "4 Maccabees"
 books = ["4Macc"]
 canon = "deuterocanon"
-status = "sources-located"
+status = "claims-checked"
 summary = "4 Maccabees retells the story of the Maccabean martyrs as a philosophical treatise on the triumph of reason over the passions. The preface to the Apocrypha in the Brenton edition says Eusebius and Jerome attributed it to Josephus, but it does not resemble his style. McDonald calls it hard to date and gives several views, from the mid-first century CE to about 100 CE or later."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }, { source = "mcdonald-2017-vol1", locator = "p. 384, n. 32" }]
 original_language = "Greek"

@@ -3,7 +3,7 @@ title = "1 Clement"
 also_known_as = ["The Epistle of Clement to the Corinthians", "First Epistle of Clement"]
 books = ["1Clem"]
 canon = "apostolic"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 A long letter sent in the name of the church at Rome to the church at Corinth, where some younger members had ousted certain presbyters. The writer, traditionally Clement of Rome, calls the factions to repentance and tells the Corinthians to reinstate the deposed leaders. Metzger dates it about 95 to 96 CE. For the history of the canon its value is that it quotes the Old Testament as Scripture more than a hundred times, recalls the words of the Lord Jesus twice without naming a written gospel, and knows several of Paul's letters and Hebrews without calling them Scripture."""
@@ -70,7 +70,7 @@ latest = 1056
 language = "Greek"
 institution = "Library of the Greek Patriarch of Jerusalem, Constantinople"
 note = "First printed in full by Bryennios in 1875; it also holds the Didache."
-citations = [{ source = "lightfoot-harmer-1891", locator = "intro., p. 4" }]
+citations = [{ source = "lightfoot-harmer-1891", locator = "intro., p. 4; Didache intro., p. 216 n. 1" }]
 
 [[witnesses]]
 name = "Syriac translation (Cambridge University Library)"

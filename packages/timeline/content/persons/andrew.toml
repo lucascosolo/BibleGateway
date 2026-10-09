@@ -4,8 +4,8 @@ role = "one of the Twelve; brother of Simon Peter"
 summary = """
 Andrew is named in all four lists of the Twelve (Mark 3:16-19, Matt 10:2-4, Luke 6:14-16, Acts 1:13), always among the first four, and the lists agree on him. Meier notes that the New Testament rarely puts him in Peter's company. In Mark he is called together with Peter (1:16-18), appears with Peter, James and John at the healing of Peter's mother-in-law (1:29) and again at the start of the discourse in chapter 13. Luke's catch-of-fish story leaves him out, and Acts never mentions him after the list of the Eleven.
 
-The Gospel of John gives him more to do. There he and an unnamed companion, probably Philip, are disciples of John the Baptist who follow Jesus, and Andrew brings his brother Simon to Jesus (John 1:35-42). He also appears in John's feeding story and in the request of the Greek pilgrims (6:8-9; 12:20-22). Meier thinks the detail that Peter, Andrew and Philip first met Jesus among the Baptist's disciples may well be historical, since the Fourth Gospel's circle had reasons to play down a link between Jesus and the Baptist. Beyond that, Meier says that except in John, Andrew remains practically a cipher. Stories of Andrew's later mission and death come from much later tradition and are not discussed as history."""
-status = "sources-located"
+The Gospel of John gives him more to do. There he and an unnamed companion, probably Philip, are disciples of John the Baptist who follow Jesus, and Andrew brings his brother Simon to Jesus (John 1:35-42). He also appears in John's feeding story and in the request of the Greek pilgrims (6:8-9; 12:20-22). Meier thinks the detail that Peter, Andrew and Philip first met Jesus among the Baptist's disciples may well be historical, since the Fourth Gospel's circle had reasons to play down a link between Jesus and the Baptist. Beyond that, Meier says that except in John, Andrew remains practically a cipher. Meier's general point that later legends yield no historical data for the members of the Twelve applies to Andrew as well (p. 199)."""
+status = "claims-checked"
 verses = [
   { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve, and Andrew is among them." },
   { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve, and Andrew is among them." },
@@ -16,5 +16,5 @@ verses = [
   { ref = "John.12.20-John.12.22", link = "describes", note = "John 12:20–22 shows Andrew and Philip bringing the Greek pilgrims' request to see Jesus." },
 ]
 citations = [
-  { source = "meier-2001", locator = "pp. 202–203" },
+  { source = "meier-2001", locator = "pp. 199, 201–203" },
 ]

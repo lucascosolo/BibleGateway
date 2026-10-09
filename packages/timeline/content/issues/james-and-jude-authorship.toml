@@ -5,7 +5,7 @@ status = "sources-located"
 summary = """
 The letters of James and Jude name brothers of Jesus as their authors, but Ehrman argues that neither brother did the writing. Other scholars, set out below, defend the traditional authors."""
 events = ["james-composition", "jude-composition"]
-citations = [{ source = "ehrman-2013", locator = "ebook pp. 379, 383, 384" }]
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 379, 383, 384, 422" }]
 
 [[views]]
 label = "Forgeries in the names of Jesus's brothers"
@@ -17,7 +17,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 379, 383, 385, 393, 
 label = "James wrote it (Luke Timothy Johnson)"
 text = """
 Ehrman reports that Luke Johnson, a supporter of authenticity, has made a strong case that there is no hard evidence of real animosity between James and Paul; Ehrman disagrees. For Jude he notes that Richard Bauckham makes a spirited defense of authenticity."""
-citations = [{ source = "ehrman-2013", locator = "ebook pp. 379, 383, 384" }]
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 379, 383, 384, 422" }]
 
 [[views]]
 label = "Carson and Moo: James and Jude, the Lord's brothers, wrote them"
@@ -32,4 +32,4 @@ citations = [
 label = "Ehrman (Brief Introduction): doubtful that the brothers wrote either"
 text = """
 In his textbook, Ehrman says there is "little reason to think" the author of James means James the brother of Jesus. Of Jude he says "many critical scholars" regard it as pseudepigraphy and that Jesus' brother is unlikely to have written it, given the Greek and the learning."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 323, 326 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 326-327 approx." }]

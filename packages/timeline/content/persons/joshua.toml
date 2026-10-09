@@ -2,7 +2,7 @@ id = "joshua"
 name = "Joshua"
 role = "successor of Moses, leader of the conquest"
 summary = """
-Joshua son of Nun succeeds Moses and leads Israel across the Jordan; the book named after him tells of Jericho's fall and the conquest of Canaan. Whether that conquest happened is argued in the conquest issue. William Dever states the mainstream position: "No mainstream biblicist or archaeologist any longer espouses the conquest model." Finkelstein and Silberman found no thirteenth-century settlement at Jericho, and they read the book as shaped under King Josiah, with Joshua evoking that king. Among those who defend a conquest, Kitchen reads Joshua's campaigns as "disabling raids" and dates the conquest to 1220–1210 BCE, while Wood argues for about 1406–1400 BCE. Ussher's traditional count puts the fall of Jericho in 1451 BC."""
+Joshua son of Nun succeeds Moses and leads Israel across the Jordan; the book named after him tells of Jericho's fall and the conquest of Canaan. Whether that conquest happened is argued in the conquest issue. William Dever states the mainstream position: "No mainstream biblicist or archaeologist any longer espouses the conquest model." Finkelstein and Silberman found no thirteenth-century settlement at Jericho, and they read the book as shaped under King Josiah, with Joshua evoking that king. Among those who defend a conquest, Kitchen reads Joshua's campaigns as "disabling raids" and puts the entry of Hebrew raiding bands into Canaan "ca. 1220/1210", while Wood argues for about 1406–1400 BCE. Ussher's traditional count puts the fall of Jericho in 1451 BC."""
 status = "sources-located"
 verses = [
   { ref = "Josh.1.1-Josh.1.9", link = "describes", note = "Joshua 1:1–9 tells how Joshua is commissioned as Moses' successor." },
@@ -17,6 +17,7 @@ citations = [
   { source = "finkelstein-silberman-2002", locator = "pp. 81-82" },
   { source = "finkelstein-silberman-2002", locator = "pp. 92-95" },
   { source = "kitchen-2003", locator = "pp. 160–162" },
+  { source = "kitchen-2003", locator = "p. 237" },
   { source = "wood-2005", locator = "pp. 476, 478" },
   { source = "wood-2005", locator = "pp. 488–489" },
   { source = "ussher-annals", locator = "paragraph 312" },

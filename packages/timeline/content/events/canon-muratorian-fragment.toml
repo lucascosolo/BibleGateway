@@ -3,11 +3,11 @@ title = "The Muratorian Fragment lists the New Testament writings"
 axis = "canon"
 category = "canon"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 An anonymous Latin list of the Christian books one church received, copied carelessly into an eighth-century manuscript at Milan and published by Muratori in 1740. It begins mid-sentence, names four Gospels, Acts, thirteen letters of Paul, Jude, two letters of John, Wisdom and the apocalypses of John and Peter, and says the Shepherd of Hermas may be read but not in church. Hebrews, James and the letters of Peter are absent. Its remark that Hermas wrote very recently, while his brother Pius was bishop of Rome, is why most scholars, with Metzger, date it to the late second century in or near Rome. A minority, following Sundberg, place it in the fourth century in the East; Metzger counts that view refuted."""
 verses = [
-  { ref = "Luke.1.1-Luke.1.4", link = "background", note = "The fragment paraphrases this preface when it describes Luke's Gospel." },
+  { ref = "Luke.1.1-Luke.1.4", link = "background", note = "The fragment echoes this preface: Luke wrote in order, and did not himself see the Lord." },
   { ref = "John.21.24", link = "background", note = "The fragment repeats this verse's claim that the disciple wrote the Gospel." },
   { ref = "Jude.1.1", link = "names", note = "Jude, one of the letters the fragment receives." },
 ]
@@ -21,7 +21,7 @@ latest = 200
 held_by = "Bruce M. Metzger"
 summary = """
 Metzger holds that a member of the Roman church, or one near Rome, drew up the list in Greek toward the close of the second century, certainly not later than 200. The earliest year, 170, is the editor's rendering of 'the latter part of the second century'."""
-citations = [{ source = "metzger-1987-canon", locator = "pp. 193-194" }]
+citations = [{ source = "metzger-1987-canon", locator = "pp. 192-194" }]
 
   [[positions.arguments]]
   stance = "for"

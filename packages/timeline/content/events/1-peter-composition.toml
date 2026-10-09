@@ -3,7 +3,7 @@ title = "Composition of 1 Peter"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 books = ["1Pet"]
 summary = """
 This asks who wrote 1 Peter and when. The letter names Peter as its author, but Bart Ehrman argues Peter did not write it and says it is "best located" between Nero and Trajan. He cites the view that "Babylon", a code name for Rome, points to a date after 70 CE, while warning that this does not tie the letter to the time of Pliny's letter, around 112 CE. The year bounds shown are the editor's reading of that argument; the traditional date falls in Peter's own life, which Ehrman places before 70 CE."""
@@ -23,7 +23,7 @@ latest = 112
 held_by = "Bart D. Ehrman"
 summary = """
 Ehrman holds that Peter did not write 1 Peter and that it belongs somewhere between Nero and Trajan. The span shown here is the editor's reading of his argument: 70 is the CE year behind the "Babylon" argument, and 112 marks the Pliny correspondence, which Ehrman says should not be used to pin the letter down."""
-citations = [{ source = "ehrman-2013", locator = "ebook pp. 295, 320" }]
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 294, 320" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -114,11 +114,11 @@ latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook repeats his 2013 view in simpler form: it is "probably best to regard 1 Peter as yet another example of Christian pseudepigraphy". He finds the date hard to fix but says that, if the letter belongs to Asia Minor, it "should probably be assigned to the first century, possibly near its end". The span shown here is the editor's reading; 65 is just after Peter's death, around 64, as the textbook gives it elsewhere."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 320-322 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 322" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman reads "Babylon" in 1 Peter 5:13 as a code word for Rome. He also argues that the letter's polished Greek and its use of the Greek Old Testament are hard to credit to a Galilean fisherman, since few in Roman Palestine could read and far fewer could write literary Greek."""
-  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 320 approx." }]
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 320" }]
   verses = [{ ref = "1Pet.5.13", link = "dates", note = "1 Peter 5:13 sends greetings from 'Babylon', which this argument reads as a name for Rome and so as a clue to the letter's date." }]

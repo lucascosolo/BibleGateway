@@ -3,7 +3,7 @@ title = "Gospel of Thomas"
 also_known_as = ["Coptic Gospel of Thomas", "Nag Hammadi Codex II,2"]
 books = ["GThom"]
 canon = "nt-apocrypha"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 A collection of 114 sayings of Jesus, almost all introduced by 'Jesus said', said in its opening line to be the secret words written down by Didymus Judas Thomas. It survives complete in Coptic in Nag Hammadi Codex II and in part in Greek papyri from Oxyrhynchus. Metzger finds parallels mostly with Matthew's Sermon on the Mount and parables and with parts of Luke, and judges Thomas's forms of the sayings usually secondary, some perhaps from a source shared with the Gospels. He dates it to Syria about 140 CE. Eusebius named a Gospel of Thomas among works used by heretics under an apostle's name."""

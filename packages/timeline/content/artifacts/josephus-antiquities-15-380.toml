@@ -5,5 +5,5 @@ status = "sources-located"
 language = "Greek"
 summary = """
 Josephus dates the start of Herod's temple rebuilding: "And now Herod, in the eighteenth year of his reign, and after the acts already mentioned, undertook a very great work, that is, to build of himself the temple of God" (Whiston's translation)."""
-citations = [{ source = "lexundria-josephus-ant-15-380" }]
+citations = [{ source = "josephus-whiston", locator = "Antiquities 15.11.1" }]
 verses = [{ ref = "John.2.20", link = "background", note = "John 2:20 has the Jews say the temple had been under construction for forty-six years, a figure compared with Josephus's date for the rebuilding." }]

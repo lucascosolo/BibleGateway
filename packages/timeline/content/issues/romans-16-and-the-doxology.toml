@@ -1,7 +1,7 @@
 id = "romans-16-and-the-doxology"
 kind = "textual"
 title = "Do Romans 16 and the closing doxology belong to Paul's letter?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Some scholars have argued that chapter 16, with its long list of greetings, was added later or was a separate note to Ephesus. The doxology in 16:25-27 is missing from many manuscripts. Brown defends chapter 16 as part of Romans and treats the doxology as a probable liturgical addition."""
 verses = [

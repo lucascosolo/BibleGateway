@@ -24,7 +24,7 @@ summary = """
 The siege lasted from 13 April to 8 September 70 CE. The Second Temple was destroyed on 10 Av. Josephus says it burned on the tenth of Lous. That was the same day the king of Babylon had burned the first temple."""
 citations = [
   { source = "wikipedia-siege-of-jerusalem-70" },
-  { source = "lexundria-josephus-war-6-249", locator = "6.249–250" },
+  { source = "josephus-whiston", locator = "Jewish War 6.4.5" },
 ]
 
 [[attestations]]
@@ -32,7 +32,7 @@ artifact = "josephus-war-6-249"
 relation = "corroborates"
 note = """
 In the Jewish War, Josephus, who saw it, describes the burning of the temple on the tenth of Lous. This corroborates the destruction dated here."""
-citations = [{ source = "lexundria-josephus-war-6-249", locator = "6.249–250" }]
+citations = [{ source = "josephus-whiston", locator = "Jewish War 6.4.5" }]
 
 [[attestations]]
 artifact = "arch-of-titus"

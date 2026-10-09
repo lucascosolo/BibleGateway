@@ -3,14 +3,14 @@ title = "Composition of 2 Corinthians"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 books = ["2Cor"]
 summary = """
 Paul wrote 2 Corinthians from Macedonia to the Corinthian church, after Titus brought word of how it had received Paul's earlier tearful letter. Raymond Brown dates it to late summer or early autumn 57. Its authorship is not seriously disputed, though most scholars think the book joins two to five separate letters, and a revisionist chronology would put it in 55-56."""
 verses = [
   { ref = "2Cor.1.1", link = "describes", note = "Paul and Timothy write to the church of God at Corinth." },
   { ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Paul leaves Troas for Macedonia to meet Titus, the journey that places the writing in Macedonia." },
-  { ref = "2Cor.7.5", link = "background", note = "In Macedonia, Paul awaits word from Titus." },
+  { ref = "2Cor.7.5-2Cor.7.6", link = "background", note = "Paul is in Macedonia, afflicted on every side, and God comforts him by the coming of Titus." },
 ]
 
 [[positions]]
@@ -40,14 +40,14 @@ latest = 56
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
 Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that 2 Corinthians is Paul's own and reject partition theories. They say it was "complete within the next year or so" after 1 Corinthians, with Paul by then in Macedonia, and note that all the dates could be moved a year earlier. The span 55 to 56 is the editor's reading of "within the next year or so" after early 55."""
-citations = [{ source = "carson-moo-2005", locator = "pp. 448-449" }]
+citations = [{ source = "carson-moo-2005", locator = "pp. 440-443" }, { source = "carson-moo-2005", locator = "pp. 448-449" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Carson and Moo place the writing in Macedonia from Paul's own itinerary, which they find in 2 Corinthians 2:12-13, 7:5, 8:1-5 and 9:2."""
   citations = [{ source = "carson-moo-2005", locator = "p. 448" }]
-  verses = [{ ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Here Paul leaves Troas for Macedonia to meet Titus, the move that places the writing in Macedonia." }, { ref = "2Cor.7.5", link = "dates", note = "Here Paul says he is in Macedonia, awaiting word from Titus." }]
+  verses = [{ ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Here Paul leaves Troas for Macedonia to meet Titus, the move that places the writing in Macedonia." }, { ref = "2Cor.7.5", link = "dates", note = "Here Paul says he is in Macedonia, afflicted on every side." }]
 
 [[positions]]
 id = "ehrman-intro-50s"
@@ -58,4 +58,4 @@ latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook counts 2 Corinthians among the undisputed letters, written by Paul himself in the 40s-50s period of his activity, and treats it as possibly a combination of letters, with chapters 10-13 partly the "painful" letter. It gives no single year; the span shown here, 50 to 59, is the editor's."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 234 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 188, 232-234" }]

@@ -3,7 +3,7 @@ title = "Sirach"
 also_known_as = ["Ecclesiasticus", "Wisdom of Jesus ben Sira", "Wisdom of Ben Sira"]
 books = ["Sir"]
 canon = "deuterocanon"
-status = "sources-located"
+status = "claims-checked"
 summary = "Sirach was written in Hebrew by Jesus ben Sira and translated into Greek by his grandson, who says in his prologue that he came to Egypt in the thirty-eighth year of Euergetes. Lim reads that as 132 BCE and dates the book itself, by the high priest Simon's death and the silence about Antiochus Epiphanes, after 196 and before 175 BCE. It survives in two Hebrew forms and two Greek ones; medieval Hebrew copies from the Cairo Geniza were joined by first-century BCE copies from Masada and Qumran, so about 68 percent of the Hebrew is now available. The Catholic, Orthodox and Ethiopian churches hold it as scripture; Athanasius lists it among books to be read and Jerome places it outside the canon. The rabbis debated it and in the end rejected it."
 citations = [{ source = "lim-2013", locator = "pp. 95-96" }, { source = "vanderkam-2012", locator = "ch. 4, section 'The Wisdom of Ben Sira (Sirach)'" }, { source = "mcdonald-2017-vol1", locator = "p. 135" }]
 original_language = "Hebrew"

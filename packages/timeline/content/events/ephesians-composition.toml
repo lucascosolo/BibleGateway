@@ -24,8 +24,8 @@ earliest = 60
 latest = 110
 held_by = "Bart D. Ehrman"
 summary = """
-Ehrman holds that Paul did not write Ephesians and that a later follower forged it using Colossians as a model. He gives no date, so both year bounds are the editor's."""
-citations = [{ source = "ehrman-2013", locator = "ebook pp. 238-246" }]
+Ehrman holds that Paul did not write Ephesians and that a later follower forged it using Colossians as a model. He gives no date, so both year bounds are the editor's. He says the author of the Pastoral Epistles appears to be familiar with Ephesians, which is why the upper bound allows for them."""
+citations = [{ source = "ehrman-2013", locator = "ebook pp. 238-246" }, { source = "ehrman-2013", locator = "ebook pp. 287" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -107,9 +107,9 @@ Ehrman reports Barth's answer on style, that a different style is no argument ag
   verses = [{ ref = "Eph.1.3", link = "background", note = "Ephesians 1:3 begins one of the long sentences Ehrman cites as evidence against Paul's authorship." }]
 
   [[positions.arguments]]
-  stance = "against"
+  stance = "for"
   text = """
-Ehrman answers Barth on the letter's lack of a specific setting, which he says does not count against Paul: "But this scarcely speaks against Pauline authorship""""
+Ehrman agrees that the letter's lack of a concrete setting, and its colourless picture of the author, are weak arguments against Paul: "But this scarcely speaks against Pauline authorship". He then turns to what he calls "compelling reasons" for rejecting Paul, chiefly the letter's dependence on Colossians."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 238" }]
 
 [[positions]]
@@ -127,7 +127,7 @@ citations = [{ source = "brown-1997", locator = "ch. 28, Summary of Basic Inform
   stance = "for"
   text = """
 Brown reads the way Ephesians uses the other letters as a sign of a later writer. He quotes the view that "Most scholars would interpret the reuse of Pauline letters in Eph as a more secondary procedure" than Paul refining his own ideas. He dates it to the 90s partly by an echo of Eph 5:25 in Ignatius, ca. 110."""
-  citations = [{ source = "brown-1997", locator = "ch. 28, Ephesians and Colossians, by whom" }]
+  citations = [{ source = "brown-1997", locator = "ch. 28, (3) By whom? The relationship to the other Pauline letters; ch. 28, Ephesus school paragraph" }]
   verses = [{ ref = "Eph.5.25", link = "background", note = "Ephesians 5:25 is echoed in Ignatius to Polycarp, the control Brown names for a date in the 90s." }]
 
 [[positions]]
@@ -157,11 +157,11 @@ latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook says "the majority of critical scholars are convinced that Paul did not write this letter," and that its author "lived at a later time, perhaps near the end of the first century." He gives no exact years, so the span shown, 80 to 100, is the editor's."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 278 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 274, 278" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman notes that the author has believers "not only died with Christ, they have also been raised up with him to enjoy the benefits of a heavenly existence," unlike Paul's undisputed letters."""
-  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 278 approx." }]
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 276-277" }]
   verses = [{ ref = "Eph.2.5-Eph.2.6", link = "describes", note = "Ephesians 2:5-6 says believers were made alive and raised up with Christ." }]

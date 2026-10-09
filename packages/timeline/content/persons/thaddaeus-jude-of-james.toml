@@ -6,7 +6,7 @@ summary = """
 The lists of the Twelve differ here. Mark 3:18 and Matt 10:3 name Thaddaeus in the last group of four. Luke 6:16 and Acts 1:13 instead name "Jude of James" (Judas, Jude or Judah) in the same slot, and Thaddaeus does not appear. Meier thinks "of James" most likely means "son of James", though some have supplied "brother"; of this James we know nothing, and there is no reason to identify him with any other James in the New Testament.
 
 Jude of James may be the "Judas, not the Iscariot" who asks Jesus a question at the Last Supper (John 14:22), but that is possible and not certain. Christian imagination harmonized the lists into a single "Jude Thaddaeus", which Meier says has no basis in reality; if the two are not the same, there is nothing to be said about Thaddaeus. Meier rejects identifying Jude of James with Jude the brother of Jesus, who is probably the author named in the Epistle of Jude: John 7:5 and Mark 3:21-35 say Jesus' brothers did not believe in him during the ministry. Later tradition also merged Jude with Thomas, and "Jude Thaddaeus" became the saint of the impossible. Meier's answer is "We do not know"."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve and names Thaddaeus in this place." },
   { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve and names Thaddaeus in this place." },

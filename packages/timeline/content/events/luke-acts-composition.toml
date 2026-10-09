@@ -25,6 +25,7 @@ Brown, a critical scholar, dates Luke with a margin: "85, give or take five to t
 citations = [
   { source = "brown-1997", locator = "ch. 9, Summary of Basic Information" },
   { source = "brown-1997", locator = "ch. 10, Summary of Basic Information" },
+  { source = "brown-1997", locator = "ch. 9, Date of Writing" },
 ]
 
   [[positions.arguments]]
@@ -85,7 +86,7 @@ latest = 90
 held_by = "B. H. Streeter (1924)"
 summary = """
 Streeter's The Four Gospels (1924) is the landmark 1924 study of the Gospels' sources. He dates the Gospel of Luke to "not later than A.D. 85, more likely about A.D. 80" and thinks Acts is not likely to be later than 90; the range runs from the Gospel's likely date to the Acts limit. He suggests the Gospel was written at Corinth, as a hypothesis, and that Acts took shape at Rome. He accepts Luke, the companion of Paul, as the author, reading the "we" passages as the author's own claim to be an eyewitness."""
-citations = [{ source = "streeter-1924", locator = "pp. 532–535, 540, 548–553" }]
+citations = [{ source = "streeter-1924", locator = "pp. 529, 532–535, 540, 548–553" }]
 
   [[positions.arguments]]
   stance = "for"

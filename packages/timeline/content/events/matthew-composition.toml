@@ -75,11 +75,11 @@ latest = 88
 held_by = "B. H. Streeter (1924)"
 summary = """
 Streeter's The Four Gospels (1924) is the landmark 1924 study of how the Gospels relate. He places Matthew at Antioch in Syria and dates it to 85, "not as a date mathematically demonstrated" but as one that fits all the evidence. Because 85 is offered as an approximate fixed year, the span shown here is plus or minus three years, which is the editor's reading. He treats the author as an unnamed compiler who reworked Mark and the sayings source Q, not the apostle."""
-citations = [{ source = "streeter-1924", locator = "pp. 516–524" }]
+citations = [{ source = "streeter-1924", locator = "pp. 500–501, 516–524" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Streeter argues that the changed ending of the Marriage Feast parable, where the king sends armies and destroys the murderers, would be natural only after Jerusalem fell. Luke has the parable in a more original form. He adds that Mark, written about 65, would be about twenty years old, and that the Didache's use of Matthew puts it before about 100."""
-  citations = [{ source = "streeter-1924", locator = "pp. 516, 524" }]
+  citations = [{ source = "streeter-1924", locator = "pp. 507, 516, 524" }]
   verses = [{ ref = "Matt.22.7", link = "dates", note = "The king's armies destroy the murderers, read as a reflection of 70 CE." }]

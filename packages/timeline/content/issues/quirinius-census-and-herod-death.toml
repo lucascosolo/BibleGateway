@@ -12,7 +12,7 @@ verses = [
 citations = [
   { source = "wikipedia-census-of-quirinius" },
   { source = "wikipedia-herod-the-great" },
-  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
+  { source = "josephus-whiston", locator = "Antiquities 18.1.1; 18.2.1" },
 ]
 persons = ["josephus", "herod-the-great"]
 
@@ -21,8 +21,8 @@ label = "The two anchors conflict"
 text = """
 Josephus says Quirinius was sent to Syria to assess Judea after Archelaus was removed, in the tenth year of Archelaus's rule, 6 CE. Schürer's chronology puts Herod's death in 4 BCE by working back from that same date, so, read plainly, Luke's census comes after Herod's death."""
 citations = [
-  { source = "lexundria-josephus-ant-17-342", locator = "17.342–355" },
-  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
+  { source = "josephus-whiston", locator = "Antiquities 17.13.2" },
+  { source = "josephus-whiston", locator = "Antiquities 18.1.1" },
   { source = "wikipedia-herod-the-great" },
 ]
 

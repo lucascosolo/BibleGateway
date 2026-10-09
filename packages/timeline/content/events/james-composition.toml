@@ -114,7 +114,7 @@ Ehrman rejects Johnson's reading of the passage on faith and works: "Johnson is 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman adds a second objection, about whether James could have written at all: "The first, as already mentioned, is that James of Nazareth could almost certainly not write.""""
+Ehrman gives a further reason against authenticity, his first reason that James could not have written the letter: "The first, as already mentioned, is that James of Nazareth could almost certainly not write.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 379" }]
 
   [[positions.arguments]]
@@ -168,11 +168,11 @@ latest = 110
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook argues that the author did not mean to be the brother of Jesus, since James was a common name: "there is little reason to think that the author is claiming to be that particular James". He gives no date in the chapter text, so the span shown here follows his timeline chart, which places the General Epistles at "80-110". This is the same view as his 2013 book, in textbook form."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 323 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 326 approx." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman notes it is "somewhat strange" that the letter never refers to personal knowledge of its author's brother Jesus or of his teachings. He also reads the letter as arguing against a misreading of Paul's faith without works (James 2:24)."""
-  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 323 approx." }]
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 326 approx." }]
   verses = [{ ref = "Jas.1.1", link = "describes", note = "The author names himself James, with no claim to be the Lord's brother." }, { ref = "Jas.2.24", link = "background", note = "The verse is read as aimed at a misreading of Paul, which bears on the letter's date." }]

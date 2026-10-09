@@ -3,7 +3,7 @@ title = "Composition of 2 Thessalonians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 books = ["2Thess"]
 summary = """
 This asks who wrote 2 Thessalonians and when. The letter names Paul as its author, but Bart Ehrman argues it is a forgery written by someone else in Paul's name, and he gives no year for it in the passages read. The range shown below is therefore the editor's bracket: it starts after 1 Thessalonians, which Ehrman dates "say, 49 CE", and stops at 100 CE, the limit in a claim by Robert Jewett that Ehrman answers. Jewett and Abraham Malherbe defend Paul as author."""
@@ -124,11 +124,11 @@ latest = 100
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook calls 2 Thessalonians the letter "whose authorship remains in greatest doubt," but argues that "difficulties make it hard to see how Paul could have written both letters." He supposes the author wrote "sometime after Paul had died, possibly near the end of the first century." He names no years, so the span shown, 65 to 100, is the editor's."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
 Ehrman contrasts the two letters on the end of the age. In the first, the end comes "like a thief in the night," while in the second the man of lawlessness must appear first. He also reads the claim in 2 Thess 3:17 and the warning about a forged letter in 2:2 as the work of an imitator."""
-  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272 approx." }]
+  citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 272" }]
   verses = [{ ref = "2Thess.2.2", link = "background", note = "2 Thessalonians 2:2 warns against a letter forged in Paul's name." }, { ref = "2Thess.2.3-2Thess.2.4", link = "describes", note = "2 Thessalonians 2:3-4 describes the antichrist figure who must appear before the end." }, { ref = "1Thess.5.2", link = "describes", note = "1 Thessalonians 5:2 says the day comes like a thief in the night." }]

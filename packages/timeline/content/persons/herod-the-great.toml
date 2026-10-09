@@ -22,8 +22,7 @@ citations = [
   { source = "brown-1997", locator = "Table 1 (Chronology of People and Events)" },
   { source = "meier-1991", locator = "pp. 373–376" },
   { source = "josephus-whiston", locator = "Antiquities 15.11.1" },
-  { source = "lexundria-josephus-ant-15-380" },
-  { source = "lexundria-josephus-ant-18-1", locator = "18.1–2" },
+  { source = "josephus-whiston", locator = "Antiquities 18.1.1; 18.2.1" },
 ]
 
 [[attestations]]
@@ -32,6 +31,5 @@ relation = "corroborates"
 note = """
 Josephus names Herod and dates his undertaking "to build of himself the temple of God" to the eighteenth year of his reign."""
 citations = [
-  { source = "lexundria-josephus-ant-15-380" },
   { source = "josephus-whiston", locator = "Antiquities 15.11.1" },
 ]

@@ -6,7 +6,7 @@ work, split into two volumes). Supplied by the user on 2026-10-08 as a PDF (577 
 layer), filed at `~/.cache/jot/sources/mcdonald-2017-vol1/` with `embedded.txt`. Copyrighted; the
 PDF stays out of the repository.
 
-**Printed page = PDF page − 34 early in the book, − 32 from about printed p. 187 onward** (the offset drifts, found 2026-10-08 while citing the canon events; cite the page in the running head) (PDF 60 carries the running head "26 THE FORMATION OF THE
+**Printed page = PDF page − 34 from p. 4 to p. 117, − 32 from p. 122 onward** (chapter 4 opens in the PDF at 152–153, so pp. 118–121 are not in the scan; checked 2026-10-09: PDF 38 is p. 4, PDF 151 is p. 117, PDF 154 is p. 122, PDF 168 is p. 136, PDF 366 is p. 334, PDF 529 is p. 497) (the offset drifts, found 2026-10-08 while citing the canon events; cite the page in the running head) (PDF 60 carries the running head "26 THE FORMATION OF THE
 BIBLICAL CANON"; PDF 150 is p. 116).
 
 ## What it gives

@@ -43,7 +43,7 @@ latest = -19
 summary = """
 Josephus dates the start of the rebuilding to Herod's eighteenth year, 20-19 BCE. Building the Temple itself took about a year and a half, and the porches and outer walls took another eight years."""
 citations = [
-  { source = "lexundria-josephus-ant-15-380" },
+  { source = "josephus-whiston", locator = "Antiquities 15.11.1" },
   { source = "wikipedia-herods-temple" },
   { source = "wikipedia-herod-the-great" },
 ]
@@ -64,4 +64,4 @@ artifact = "josephus-antiquities-15-380"
 relation = "corroborates"
 note = """
 Josephus places the start of the rebuilding in the eighteenth year of Herod's reign, which agrees with the 20-19 BCE start."""
-citations = [{ source = "lexundria-josephus-ant-15-380" }]
+citations = [{ source = "josephus-whiston", locator = "Antiquities 15.11.1" }]

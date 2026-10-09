@@ -3,7 +3,7 @@ title = "Athanasius's Festal Letter 39 lists the twenty-seven books"
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Each year the bishop of Alexandria sent a letter announcing the date of Easter. In the letter for 367 Athanasius listed the canonical books. His Old Testament has twenty-two books, matching the Hebrew letters, with Baruch and the Letter counted with Jeremiah and Esther left out. His New Testament is the four Gospels, Acts, seven general letters, fourteen letters of Paul and Revelation: the twenty-seven books in use today, listed exactly for the first time. Wisdom, Sirach, Esther, Judith, Tobit, the Didache and the Shepherd may be read by new converts but are not canonical. The date is given by the letter series itself and is not in dispute; Metzger also notes that not everyone in the church was ready to follow it."""
 verses = [

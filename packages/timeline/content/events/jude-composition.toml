@@ -133,8 +133,8 @@ earliest = 80
 latest = 110
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
-Ehrman's textbook repeats the view of his 2013 book: Jude "appears to be pseudonymous", "many critical scholars" see early Christian pseudepigraphy, and it "does not appear to be likely that Jesus' own brother wrote the book". He gives no firm year, so the span shown here follows his timeline chart, which places the General Epistles at "80-110", together with his remark that Jude may date "near the end of the first century"."""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 326, 328 approx." }]
+Ehrman's textbook repeats the view of his 2013 book: Jude and 2 Peter "appear to be pseudonymous", "many critical scholars" see early Christian pseudepigraphy, and it "does not appear to be likely that Jesus' own brother wrote the book". He gives no firm year, so the span shown here follows his timeline chart, which places the General Epistles at "80-110", together with his remark that "If Jude can be dated near the end of the first century, 2 Peter must be somewhat later"."""
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 326, 336 approx." }]
 
   [[positions.arguments]]
   stance = "for"

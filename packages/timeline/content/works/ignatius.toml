@@ -3,7 +3,7 @@ title = "The Seven Letters of Ignatius"
 also_known_as = ["Letters of Ignatius of Antioch", "Epistles of Ignatius"]
 books = ["IgnEph", "IgnMagn", "IgnTrall", "IgnRom", "IgnPhld", "IgnSmyrn", "IgnPol"]
 canon = "apostolic"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 Seven letters written by Ignatius, bishop of Antioch, while under guard on his way to martyrdom in Rome. From Smyrna he wrote to the churches of Ephesus, Magnesia, Tralles and Rome, and from Troas to the churches of Philadelphia and Smyrna and to Polycarp. Metzger dates the journey about 110 CE. The letters rarely quote, and echo Paul's letters often, especially 1 Corinthians. Metzger judges it probable that Ignatius knew Matthew and John, and perhaps Luke, and finds no sign he called any of them Scripture."""

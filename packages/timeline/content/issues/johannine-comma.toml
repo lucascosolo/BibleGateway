@@ -1,7 +1,7 @@
 id = "johannine-comma"
 kind = "textual"
 title = "Did 1 John 5:7-8 originally speak of the Father, the Word and the Spirit?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Some Bibles, especially older ones, print a sentence in 1 John 5:7-8 about three who testify in heaven, Father, Word and Holy Spirit, and are one. It is known as the Johannine Comma. Brown treats it as a later Latin addition to a shorter original text."""
 verses = [{ ref = "1John.5.7-1John.5.8", link = "describes" }]

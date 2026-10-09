@@ -2,7 +2,7 @@ id = "psalm-151"
 title = "Psalm 151"
 books = ["Ps151"]
 canon = "deuterocanon"
-status = "sources-located"
+status = "claims-checked"
 summary = "Psalm 151 is a short psalm outside the 150 of the Hebrew Psalter, in the Greek Psalters. VanderKam reports a Hebrew text in the Cave 11 Psalms Scroll, copied in the first half of the first century CE, and Sanders's view that the Greek depends on it. The Hebrew may have been two psalms, one about David's anointing and one about Goliath. McDonald says the Orthodox include Psalm 151; the Catholic canon does not."
 citations = [{ source = "vanderkam-2012", locator = "ch. 4, section 'Psalms 151, 154, 155'" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
 original_language = "Hebrew (the Greek form depends on it)"

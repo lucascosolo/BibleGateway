@@ -1,7 +1,7 @@
 id = "ephesians-in-ephesus"
 kind = "textual"
 title = "Was Ephesians originally addressed to Christians in Ephesus?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 The words "in Ephesus" in Ephesians 1:1 are missing from important manuscripts. The letter also lacks the personal greetings and memories Paul would be expected to include for a church where he had spent about three years. Brown concludes that the phrase was probably added."""
 verses = [{ ref = "Eph.1.1", link = "describes" }]

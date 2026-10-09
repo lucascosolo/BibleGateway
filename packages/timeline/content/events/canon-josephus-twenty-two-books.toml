@@ -3,7 +3,7 @@ title = "Josephus counts twenty-two sacred books (Against Apion 1.37-43)"
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 In Rome, after finishing the Jewish War and the Antiquities, Josephus wrote Against Apion, a defence of the Jewish people. In it he says the Jews have only twenty-two trusted books: five of Moses, thirteen by the prophets after Moses down to Artaxerxes, and four of hymns and counsel for living. He names no individual book, so Lim treats the passage as a summary of a canon rather than a list. It is the earliest surviving statement that the Jewish scriptures were a fixed, counted collection. Critical scholars date it toward the end of the first century CE; the date itself is not in dispute, but what it proves is: Lim reads it as the count most Jews of Josephus's own day would recognise, not as proof of a canon officially closed in his time."""
 verses = [

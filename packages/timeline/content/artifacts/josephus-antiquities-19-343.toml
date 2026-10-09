@@ -5,5 +5,5 @@ status = "sources-located"
 language = "Greek"
 summary = """
 At Caesarea, Agrippa appears in a garment made wholly of silver, and flatterers cry that he is a god. He then sees an owl on a rope and takes it for a messenger of bad news, a violent pain seizes his belly, and he dies after five days, in the fifty-fourth year of his age. He had reigned four years under Caius and three under Claudius (Whiston's translation)."""
-citations = [{ source = "lexundria-josephus-ant-19-343", locator = "19.343–351" }]
+citations = [{ source = "josephus-whiston", locator = "Antiquities 19.8.2" }]
 verses = [{ ref = "Acts.12.21-Acts.12.23", link = "background", note = "Acts 12:21–23 gives Luke's parallel account of the death of Herod Agrippa I that Josephus also narrates." }]

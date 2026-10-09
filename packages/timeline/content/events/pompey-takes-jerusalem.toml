@@ -16,11 +16,11 @@ latest = -63
 held_by = "Flavius Josephus"
 summary = """
 Josephus, Antiquities 14.66 (Whiston): "the city was taken on the third month, on the day of the fast, upon the hundred and seventy-ninth olympiad, when Caius Antonius and Marcus Tullius Cicero were consuls". Wikipedia gives the year as 63 BC. Turning the consuls' names into a year is the cataloguer's own reading. Pompey besieged Jerusalem in 63 BCE. The siege lasted three months before the Temple area was broken into."""
-citations = [{ source = "lexundria-josephus-ant-14-66", locator = "Ant. 14.66" }, { source = "wikipedia-siege-jerusalem-63bc" }]
+citations = [{ source = "josephus-whiston", locator = "Antiquities 14.4.3" }, { source = "wikipedia-siege-jerusalem-63bc" }]
 
 [[attestations]]
 artifact = "josephus-antiquities-14-61"
 relation = "corroborates"
 note = """
 This passage of Josephus's Antiquities describes the Temple's defences and the bridge Pompey used to get in. It corroborates the account of the siege dated here."""
-citations = [{ source = "lexundria-josephus-ant-14-61" }]
+citations = [{ source = "josephus-whiston", locator = "Antiquities 14.4.2" }]

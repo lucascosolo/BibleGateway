@@ -82,7 +82,7 @@ latest = 95
 held_by = "B. H. Streeter (1924)"
 summary = """
 Streeter's The Four Gospels (1924) is the landmark 1924 study of the Gospels' origins. He argues the Fourth Gospel was written in Asia, at Ephesus, about 90 to 95, by John the Elder, a disciple of the Lord and not the apostle John. He thinks the apostle was probably martyred earlier and that the Beloved Disciple is the apostle idealised."""
-citations = [{ source = "streeter-1924", locator = "pp. 427–429, 456" }]
+citations = [{ source = "streeter-1924", locator = "pp. 427–429, 449, 456" }]
 
   [[positions.arguments]]
   stance = "for"

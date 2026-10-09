@@ -3,7 +3,7 @@ title = "Gospel of Philip"
 also_known_as = ["Nag Hammadi Codex II,3"]
 books = ["GPhil"]
 canon = "nt-apocrypha"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 A collection of disjointed excerpts, found in Nag Hammadi Codex II after the Gospel of Thomas, that stresses sacraments: 'The Lord did everything in a mystery, a baptism and a chrism and a eucharist and a redemption and a bridal chamber.' Metzger says the original is considered to date from the second century and that it confirms aspects of Irenaeus's account of Valentinianism. Its author never names or formally cites his sources, but on Wilson's count prefers Matthew and John, knows Romans, 1 and 2 Corinthians, Galatians and Philippians, and shows no knowledge of Mark. The only complete copy is the Coptic Codex II."""

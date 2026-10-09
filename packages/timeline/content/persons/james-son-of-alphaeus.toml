@@ -5,7 +5,7 @@ summary = """
 James "of Alphaeus", probably meaning James the son of Alphaeus, always begins the third group of four names in the lists of the Twelve (Mark 3:18, Matt 10:3, Luke 6:15, Acts 1:13), and the lists agree on him. Meier says that is all we know about him.
 
 Because so many New Testament people are named James (the English name renders Greek Iakobos, "Jacob"), critics have identified him with several of them. Meier finds no grounds for the church tradition that makes him "James the Less" of Mark 15:40. A more tantalizing suggestion is that he and Levi the toll collector, who is also called "of Alphaeus" in Mark 2:14, were brothers. Meier says that is possible but not provable, and that it tells us nothing more unless one assumes Levi is the same man as Matthew."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve, and James son of Alphaeus is among them." },
   { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve, and James son of Alphaeus is among them." },

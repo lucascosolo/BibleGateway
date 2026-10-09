@@ -3,7 +3,7 @@ title = "Composition of Romans"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 books = ["Rom"]
 summary = """
 Paul wrote Romans from Corinth, in the winter of 57/58, to Christians in Rome, a church he had never visited but where he had friends. He was about to carry the collection to Jerusalem and hoped to go on to Spain by way of Rome. Its authorship is not seriously disputed. A revisionist chronology would put it in 55-56."""
@@ -58,4 +58,4 @@ latest = 59
 held_by = "Bart D. Ehrman (Brief Introduction)"
 summary = """
 Ehrman's textbook counts Romans among the undisputed letters and says Paul wrote it from Corinth. It gives no year in the passages read, so the span of 50 to 59 shown here is the editor's reading of his "50s of the Common Era.""""
-citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 267 approx." }]
+citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 188, 267" }]

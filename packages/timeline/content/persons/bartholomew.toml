@@ -5,7 +5,7 @@ summary = """
 Bartholomew appears in all four lists of the Twelve (Mark 3:18, Matt 10:3, Luke 6:14, Acts 1:13) and nowhere else in the New Testament. The lists agree on him; he stands in the second group of four, next to Philip in Matthew and Luke. His name is possibly a patronymic, Aramaic Bar Talmai, "son of Tolmi", which Meier says tells us nothing.
 
 From about the ninth century Christian writers often identified him with Nathanael, who appears only in John (1:45-51; 21:2). Meier calls this a late tradition and says there is no basis for it unless one wrongly assumes that John thinks of most disciples as members of the Twelve. Meier's verdict on Bartholomew is that he is an absolute dead end: nothing is known of him as an individual, and the legends that fill the gap are later."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "Mark.3.16-Mark.3.19", link = "describes", note = "Mark 3:16–19 lists the Twelve, and Bartholomew is among them." },
   { ref = "Matt.10.2-Matt.10.4", link = "describes", note = "Matthew 10:2–4 lists the Twelve, and Bartholomew is among them." },

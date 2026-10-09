@@ -1,9 +1,9 @@
 id = "pauline-pseudepigrapha"
 kind = "historical"
 title = "Are the disputed letters of Paul forgeries?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-Some letters that name Paul as their author may have been written by others, and Ehrman argues that 2 Thessalonians is a deliberate forgery. Only 2 Thessalonians has been entered so far."""
+Some letters that name Paul as their author may have been written by others, and Ehrman argues that 2 Thessalonians is a deliberate forgery. Composition entries exist for 2 Thessalonians, Colossians, Ephesians and the Pastoral Epistles; the views below cover Ehrman's argument about 2 Thessalonians and Carson and Moo's general case."""
 events = ["2-thessalonians-composition", "colossians-composition", "ephesians-composition", "pastoral-epistles-composition"]
 citations = [{ source = "ehrman-2013", locator = "ebook pp. 211, 225" }]
 
