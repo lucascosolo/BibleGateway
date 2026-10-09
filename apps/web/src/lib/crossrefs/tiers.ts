@@ -37,14 +37,14 @@ export const TIER_META: Record<XrefTier, TierMeta> = {
   // not a scholar proposing the connection, and no count of them is a consensus.
   strong: {
     label: "Strong",
-    description: `${STRONG_MIN}+ votes — rated highly relevant by many OpenBible.info visitors.`,
+    description: `${STRONG_MIN}+ votes from OpenBible readers — rated highly relevant by many of them.`,
   },
   moderate: {
     label: "Moderate",
-    description: `${MODERATE_MIN}-${STRONG_MIN - 1} votes — rated relevant by a moderate number of visitors.`,
+    description: `${MODERATE_MIN}-${STRONG_MIN - 1} votes from OpenBible readers — rated relevant by a moderate number of them.`,
   },
   light: {
     label: "Light",
-    description: `Under ${MODERATE_MIN} votes — few visitor ratings. Sparse evidence of relevance, not evidence against it.`,
+    description: `Under ${MODERATE_MIN} votes from OpenBible readers — few ratings. Sparse evidence of relevance, not evidence against it.`,
   },
 };

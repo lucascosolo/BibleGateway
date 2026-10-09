@@ -65,7 +65,7 @@ export function CorpusDoorways({
               className="flex flex-col gap-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-3 transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)]"
             >
               <span className="font-sans text-[var(--text-xs)] font-medium text-[var(--color-ink-faint)]">
-                {references.get(v.verseId) ?? v.osisRef} · cited by {v.inboundCount} other passages
+                {references.get(v.verseId) ?? v.osisRef} · linked from {v.inboundCount} other passages
               </span>
               <PassageRenderer
                 verses={[v]}

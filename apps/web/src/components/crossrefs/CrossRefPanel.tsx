@@ -125,7 +125,7 @@ export function CrossRefPanel({ reference, translationCode, translationId, class
         </p>
       )}
 
-      <div className="xref-panel__filters" role="group" aria-label="Minimum confidence">
+      <div className="xref-panel__filters" role="group" aria-label="Minimum community relevance">
         {(["all", "moderate", "strong"] as VoteFilter[]).map((f) => (
           <button
             key={f}
@@ -150,7 +150,7 @@ export function CrossRefPanel({ reference, translationCode, translationId, class
           {active.groups.length === 0 && (
             <p className="xref-panel__empty">
               No {direction === "outbound" ? "outbound" : "inbound"} cross-references
-              {voteFilter !== "all" ? ` at ${TIER_META[voteFilter === "strong" ? "strong" : "moderate"].label.toLowerCase()} confidence or above` : ""}.
+              {voteFilter !== "all" ? ` at ${TIER_META[voteFilter === "strong" ? "strong" : "moderate"].label.toLowerCase()} community relevance or above` : ""}.
             </p>
           )}
 
