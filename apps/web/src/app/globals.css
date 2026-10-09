@@ -138,7 +138,11 @@
   --border-strong: 1px solid var(--color-border-strong);
 
   /* ---- type scale: fluid, tuned 320px -> 1920px ---- */
-  --text-xs: clamp(0.72rem, 0.69rem + 0.15vw, 0.78rem);
+  /* 0.75rem floor: 12px is the smallest body copy this site sets. The size classes were
+     inert until 2026-10-09 (they compiled to colour), so this token was never seen at
+     its old 11.5px floor until then, and at that size the search hint and the epigraph
+     read cramped on a phone. */
+  --text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8rem);
   --text-sm: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
   --text-base: clamp(0.98rem, 0.94rem + 0.2vw, 1.06rem);
   --text-md: clamp(1.1rem, 1.04rem + 0.28vw, 1.22rem);
