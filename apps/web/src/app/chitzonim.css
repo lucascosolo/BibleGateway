@@ -16,6 +16,10 @@
   letter-spacing: 0;
 }
 
+/* The gloss under a heading stays in the reading face: EB Garamond ships upright only, and a
+   synthesised italic of it at heading weight is exactly the heaviness the brand rules out. */
+.outside-world :is(h1, h2, h3) .gloss-subtitle { font-family: var(--font-serif); font-weight: 400; }
+
 /* A rubric hairline over a faint one, four pixels apart: the ruling of a scribe's page. */
 .outside-world .reader__header,
 .outside-page__header {

@@ -5,7 +5,7 @@ import {
   countInboundReferences,
   countOutboundReferences,
   countUniqueReferences,
-  getBookIndex,
+  getOutsideBookIndex,
   getInboundReferencesLimited,
   getOutboundReferencesLimited,
   getTranslationByCode,
@@ -55,7 +55,8 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const books = getBookIndex();
+  // Every book: an outside book has no cross-references yet, and says so with an empty list, not a 400.
+  const books = getOutsideBookIndex();
 
   let range;
   try {

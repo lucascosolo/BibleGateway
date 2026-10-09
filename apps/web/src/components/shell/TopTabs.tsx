@@ -23,7 +23,7 @@ export function TopTabs({ active }: { active: Workspace["key"] }) {
       </Link>
       <nav
         aria-label="Workspaces"
-        className="flex h-full min-w-0 flex-1 items-stretch gap-1 overflow-x-auto"
+        className="flex h-full min-w-0 flex-1 items-stretch gap-0 overflow-x-auto lg:gap-1"
       >
         {WORKSPACES.map((ws) => {
           const Icon = WORKSPACE_ICONS[ws.icon];
@@ -34,7 +34,9 @@ export function TopTabs({ active }: { active: Workspace["key"] }) {
               href={ws.href}
               aria-current={isActive ? "page" : undefined}
               className={clsx(
-                "flex h-full shrink-0 items-center gap-2 border-b-2 px-2.5 text-[length:var(--text-sm)] font-medium whitespace-nowrap",
+                // px-2 below 1024px: six labelled tabs at 768px measured 414px in a 379px nav with
+                // px-2.5 and gap-1 when Chitzonim joined (2026-10-09), scrolling Notes out of reach.
+                "flex h-full shrink-0 items-center gap-2 border-b-2 px-2 text-[length:var(--text-sm)] font-medium whitespace-nowrap lg:px-2.5",
                 isActive
                   ? "border-[var(--color-brand)] text-[var(--color-ink)]"
                   : "border-transparent text-[var(--color-ink-muted)] hover:text-[var(--color-ink)]",
