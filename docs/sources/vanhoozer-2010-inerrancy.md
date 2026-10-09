@@ -17,3 +17,7 @@ so that the position is described in its own best words rather than by its criti
 
 - Not yet cited. Candidate for the pentateuch-authorship and textual issues as the stated
   traditional position, and for any future "how to read the apparatus" page.
+
+## Link check 2026-10-09
+
+The cited URL returned HTTP 404 on 2026-10-09T21:55Z and the Wayback Machine availability API returned no capture, so no copy of the page is filed. The response body is kept at `~/.cache/jot/sources/vanhoozer-2010-inerrancy/page.html` only as evidence of the 404.
