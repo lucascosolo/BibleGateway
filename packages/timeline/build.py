@@ -37,7 +37,7 @@ from pathlib import Path
 from typing import Any
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
-SCHEMA_VERSION = "3"
+SCHEMA_VERSION = "4"
 DEFAULT_LEDGER = Path(__file__).resolve().parents[2] / "docs" / "sources" / "outside-books.md"
 LEDGER_ID_RE = re.compile(r"^(?:\| |### )`([a-z0-9-]+)`", re.MULTILINE)
 
@@ -648,7 +648,7 @@ def load_works(report: Report, directory: Path, content: Content, corpus: Corpus
         "id": (str, True), "title": (str, True), "also_known_as": (list, False), "books": (list, False),
         "canon": (str, True), "status": (str, True), "summary": (str, True), "citations": (list, True),
         "original_language": (str, True), "contents": (str, False), "verses": (list, False),
-        "composed": (list, True), "provenance": (list, False), "witnesses": (list, False),
+        "composed": (list, False), "composed_undated": (str, False), "provenance": (list, False), "witnesses": (list, False),
         "held_canonical_by": (list, False), "translations": (list, False), "excerpts": (list, False),
         "events": (list, False),
     }
@@ -702,10 +702,15 @@ def load_works(report: Report, directory: Path, content: Content, corpus: Corpus
                 book_ids.append(corpus.book_ids[osis])
 
         positions: list[dict[str, Any]] = []
-        if not work["composed"]:
-            report.error(where, "needs at least one [[composed]] entry")
+        undated = work.get("composed_undated")
+        if undated is not None and "composed" in work:
+            report.error(where, "declares both composed_undated and [[composed]]; a work is dated or undated, not both")
+        elif undated is None and not work.get("composed"):
+            report.error(where, "needs at least one [[composed]] entry or composed_undated (why no date, and what is known)")
+        elif undated is not None and not undated.strip():
+            report.error(where, "composed_undated is empty; say why the work is undated and what is known")
         seen_positions: set[str] = set()
-        for index, raw_position in enumerate(work["composed"]):
+        for index, raw_position in enumerate(work.get("composed", [])):
             here = f"{where} composed {index + 1}"
             position = check_table(report, here, raw_position, position_spec)
             if position is None or not check_id(report, here, position["id"]):
@@ -755,6 +760,7 @@ def load_works(report: Report, directory: Path, content: Content, corpus: Corpus
             "contents": work.get("contents"),
             "book_ids": book_ids,
             "composed": positions,
+            "composed_undated": undated,
             **parts,
             "citations": citations(report, where, work["citations"], content),
             "verses": verses(report, where, work.get("verses"), corpus),
@@ -1049,14 +1055,14 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
     for w in content.works.values():
         wid = w["id"]
         positions = [{**p, "dates": "event"} for p in w["composed"]]
-        span = envelope(positions)
+        span = envelope(positions) if positions else dict.fromkeys(("earliest", "latest", "trad_earliest", "trad_latest"))
         db.execute(
             """INSERT INTO works (work_id, title, also_known_as, canon, status, summary, contents, original_language,
-                                  composed_earliest, composed_latest, traditional_earliest, traditional_latest)
-               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                                  composed_earliest, composed_latest, composed_undated, traditional_earliest, traditional_latest)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (wid, w["title"], json.dumps(w["also_known_as"], ensure_ascii=False) if w["also_known_as"] else None,
              w["canon"], w["status"], w["summary"], w["contents"], w["original_language"],
-             span["earliest"], span["latest"], span["trad_earliest"], span["trad_latest"]),
+             span["earliest"], span["latest"], w["composed_undated"], span["trad_earliest"], span["trad_latest"]),
         )
 
         def cite_work(kind: str, subject: str, items: list[dict[str, Any]]) -> None:

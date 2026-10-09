@@ -7,17 +7,7 @@ status = "draft"
 summary = "1 Esdras is largely a free version of parts of 2 Chronicles and Ezra-Nehemiah. No filed critical source dates it. The unsigned preface to the Apocrypha in the Brenton edition dates it within the first century BCE and singles out 'The Three Wise Sayings' (3:1-5:6) as its peculiar part. McDonald lists it among books the Orthodox include in their Old Testament and calls it 3 Esdras in one list."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }, { source = "mcdonald-2017-vol1", locator = "p. 9, n. 13" }]
 original_language = "Greek (possibly from a Hebrew source)"
-
-
-[[composed]]
-id = "first-century-bce-preface"
-label = "First century BCE, per the unsigned preface (no filed critical dating)"
-tradition = "critical"
-earliest = -100
-latest = -1
-held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
-summary = "No filed critical source dates 1 Esdras, so this record stays a draft. The preface says the book 'was written some time within the first century b.c.' The preface mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Esdras" }]
+composed_undated = "Not dated by any source filed here, and no filed source dates a manuscript of it. An unsigned, undated preface to the Apocrypha in the eBible Brenton edition says 'some time within the first century b.c.'"
 
 [[held_canonical_by]]
 tradition = "Eastern Orthodox churches"

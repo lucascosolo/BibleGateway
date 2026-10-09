@@ -294,12 +294,17 @@ CREATE TABLE works (
   contents             TEXT,                -- what a described work (no printed text) contains
   original_language    TEXT NOT NULL,
   -- DERIVED from work_positions, as an event's envelope is: the scholarly positions, or the
-  -- traditional ones only when they are all there is.
-  composed_earliest    INTEGER NOT NULL CHECK (composed_earliest <> 0),
-  composed_latest      INTEGER NOT NULL CHECK (composed_latest <> 0),
+  -- traditional ones only when they are all there is. NULL for an undated work.
+  composed_earliest    INTEGER CHECK (composed_earliest <> 0),
+  composed_latest      INTEGER CHECK (composed_latest <> 0),
+  -- Why no filed source dates the work, and what is known (e.g. its earliest copy). Set exactly
+  -- when there are no positions, so the page states the gap instead of drawing a span.
+  composed_undated     TEXT CHECK (composed_undated <> ''),
   traditional_earliest INTEGER CHECK (traditional_earliest <> 0),
   traditional_latest   INTEGER CHECK (traditional_latest <> 0),
   CHECK (composed_earliest <= composed_latest),
+  CHECK ((composed_earliest IS NULL) = (composed_latest IS NULL)),
+  CHECK ((composed_undated IS NULL) = (composed_earliest IS NOT NULL)),
   CHECK ((traditional_earliest IS NULL) = (traditional_latest IS NULL))
 );
 -- The bible.db books that print the work (several for the Testaments and Ignatius); none for a

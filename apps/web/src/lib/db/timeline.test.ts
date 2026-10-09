@@ -70,9 +70,9 @@ beforeAll(async () => {
       ('person','per-a',20001001,20001003,'describes',NULL),
       ('person','per-a',20001001,20001001,'alludes',NULL);
 
-    INSERT INTO works VALUES ('w-enoch','1 Enoch','["Ethiopic Enoch"]','pseudepigrapha','draft','A composite apocalypse.',NULL,'Aramaic',-300,-1,-3000,-2900);
-    INSERT INTO works VALUES ('w-gospel','A Lost Gospel',NULL,'described','claims-checked','Known by report.','Reported sayings.','Greek',100,199,NULL,NULL);
-    INSERT INTO works VALUES ('w-baruch','2 Baruch','[]','deuterocanon','draft','Syriac apocalypse.',NULL,'Hebrew',70,135,NULL,NULL);
+    INSERT INTO works(work_id,title,also_known_as,canon,status,summary,contents,original_language,composed_earliest,composed_latest,traditional_earliest,traditional_latest) VALUES ('w-enoch','1 Enoch','["Ethiopic Enoch"]','pseudepigrapha','draft','A composite apocalypse.',NULL,'Aramaic',-300,-1,-3000,-2900);
+    INSERT INTO works(work_id,title,also_known_as,canon,status,summary,contents,original_language,composed_earliest,composed_latest,traditional_earliest,traditional_latest) VALUES ('w-gospel','A Lost Gospel',NULL,'described','claims-checked','Known by report.','Reported sayings.','Greek',100,199,NULL,NULL);
+    INSERT INTO works(work_id,title,also_known_as,canon,status,summary,contents,original_language,composed_earliest,composed_latest,traditional_earliest,traditional_latest) VALUES ('w-baruch','2 Baruch','[]','deuterocanon','draft','Syriac apocalypse.',NULL,'Hebrew',70,135,NULL,NULL);
     INSERT INTO work_books VALUES ('w-enoch',85,1),('w-baruch',85,1),('w-baruch',86,2);
     INSERT INTO work_positions VALUES ('w-enoch/critical-stages','w-enoch',1,'Third to first century BCE','critical',-300,-1,'In stages.','R. H. Charles');
     INSERT INTO work_positions VALUES ('w-enoch/trad','w-enoch',2,'Antediluvian','traditional',-3000,-2900,'By Enoch.',NULL);
@@ -483,6 +483,78 @@ describe("works against a timeline.db built before works existed", () => {
       fixture.db = prior;
       old.close();
       vi.resetModules();
+    }
+  });
+});
+
+describe("works with no composition date (composed_undated)", () => {
+  const REASON = "No scholar has proposed a date; the only witness is undated.";
+  const WORK_COLS =
+    "work_id,title,canon,status,summary,original_language,composed_undated,composed_earliest,composed_latest";
+
+  async function withDb(setup: (db: import("better-sqlite3").Database) => void) {
+    const { default: Database } = await vi.importActual<typeof import("better-sqlite3")>("better-sqlite3");
+    const fs = await vi.importActual<typeof import("node:fs")>("node:fs");
+    const path = await vi.importActual<typeof import("node:path")>("node:path");
+    const schema = fs.readFileSync(
+      path.resolve(__dirname, "../../../../../packages/timeline/schema.sql"), "utf8");
+    const db = new Database(":memory:");
+    db.exec(schema);
+    setup(db);
+    const prior = fixture.db;
+    fixture.db = db;
+    vi.resetModules();
+    return {
+      t: await import("./timeline"),
+      done() { fixture.db = prior; db.close(); vi.resetModules(); },
+    };
+  }
+
+  it("getWork and getWorkSummaries return the reason, null envelope and empty composed", async () => {
+    const h = await withDb((db) => {
+      db.exec(`
+        INSERT INTO sources(source_id,kind,title) VALUES ('src-a','book','Book A');
+        INSERT INTO works(${WORK_COLS}) VALUES ('w-undated','Undated','pseudepigrapha','draft','s','Greek','${REASON}',NULL,NULL);
+        INSERT INTO works(${WORK_COLS}) VALUES ('w-dated','Dated','pseudepigrapha','draft','s','Greek',NULL,-300,-1);
+      `);
+    });
+    try {
+      const w = h.t.getWork("w-undated")!;
+      expect(w).toMatchObject({ composedUndated: REASON, composedEarliest: null, composedLatest: null, composed: [] });
+      const all = h.t.getWorkSummaries();
+      expect(all.find((x) => x.id === "w-undated")).toMatchObject({
+        composedUndated: REASON, composedEarliest: null, composedLatest: null,
+        traditionalEarliest: null, traditionalLatest: null,
+      });
+      expect(all.find((x) => x.id === "w-dated")).toMatchObject({
+        composedUndated: null, composedEarliest: -300, composedLatest: -1,
+      });
+    } finally {
+      h.done();
+    }
+  });
+
+  it("a works table without the composed_undated column yields composedUndated null and still works", async () => {
+    const h = await withDb((db) => {
+      // Model a timeline.db built before this change: same schema, old works table.
+      db.exec(`
+        DROP TABLE works;
+        CREATE TABLE works (
+          work_id TEXT PRIMARY KEY, title TEXT NOT NULL, also_known_as TEXT, canon TEXT NOT NULL,
+          status TEXT NOT NULL, summary TEXT NOT NULL, contents TEXT, original_language TEXT NOT NULL,
+          composed_earliest INTEGER NOT NULL, composed_latest INTEGER NOT NULL,
+          traditional_earliest INTEGER, traditional_latest INTEGER
+        );
+        INSERT INTO works(work_id,title,canon,status,summary,original_language,composed_earliest,composed_latest)
+          VALUES ('w-old','Old','pseudepigrapha','draft','s','Greek',-300,-1);
+      `);
+    });
+    try {
+      expect(h.t.getWork("w-old")).toMatchObject({ composedUndated: null, composedEarliest: -300, composedLatest: -1 });
+      expect(h.t.getWorkSummaries()).toHaveLength(1);
+      expect(h.t.getWorkSummaries()[0]).toMatchObject({ id: "w-old", composedUndated: null, composedEarliest: -300 });
+    } finally {
+      h.done();
     }
   });
 });

@@ -760,9 +760,12 @@ export interface WorkSummary {
   canon: WorkCanon;
   status: ReviewStatus;
   bookIds: number[];
-  /** DERIVED envelope of the scholarly composition positions (the traditional ones only when alone). */
-  composedEarliest: number;
-  composedLatest: number;
+  /** DERIVED envelope of the scholarly composition positions (the traditional ones only when alone);
+   *  null when no filed source dates the work. */
+  composedEarliest: number | null;
+  composedLatest: number | null;
+  /** Why the work is undated and what is known (e.g. its earliest copy); set exactly when the span is null. */
+  composedUndated: string | null;
   traditionalEarliest: number | null;
   traditionalLatest: number | null;
 }
@@ -791,10 +794,16 @@ function hasWorks(): boolean {
   return get<{ n: number }>(`SELECT COUNT(*) AS n FROM sqlite_master WHERE type = 'table' AND name = 'works'`)?.n === 1;
 }
 
-const WORK_SUMMARY_COLUMNS = `w.work_id AS id, w.title, w.canon, w.status,
+/** A timeline.db built before undated works existed has no composed_undated column; read it as NULL. */
+function workSummaryColumns(): string {
+  const hasUndated =
+    get<{ n: number }>(`SELECT COUNT(*) AS n FROM pragma_table_info('works') WHERE name = 'composed_undated'`)?.n === 1;
+  return `w.work_id AS id, w.title, w.canon, w.status,
   (SELECT json_group_array(book_id) FROM (SELECT book_id FROM work_books b WHERE b.work_id = w.work_id ORDER BY ordinal)) AS bookIdsJson,
   w.composed_earliest AS composedEarliest, w.composed_latest AS composedLatest,
+  ${hasUndated ? "w.composed_undated" : "NULL"} AS composedUndated,
   w.traditional_earliest AS traditionalEarliest, w.traditional_latest AS traditionalLatest`;
+}
 const WORK_ORDER = `CASE w.canon WHEN 'deuterocanon' THEN 0 WHEN 'pseudepigrapha' THEN 1 WHEN 'nt-apocrypha' THEN 2
   WHEN 'apostolic' THEN 3 ELSE 4 END, w.title`;
 
@@ -804,14 +813,14 @@ const toWorkSummary = ({ bookIdsJson, ...row }: WorkSummaryRow): WorkSummary => 
 /** Every work, grouped by canon (deuterocanon first, described works last), then by title. */
 export function getWorkSummaries(): WorkSummary[] {
   if (!hasWorks()) return [];
-  return all<WorkSummaryRow>(`SELECT ${WORK_SUMMARY_COLUMNS} FROM works w ORDER BY ${WORK_ORDER}`).map(toWorkSummary);
+  return all<WorkSummaryRow>(`SELECT ${workSummaryColumns()} FROM works w ORDER BY ${WORK_ORDER}`).map(toWorkSummary);
 }
 
 /** The works printed in `bookId` (several books can make one work, as the Testaments do). */
 export function getWorksForBook(bookId: number): WorkSummary[] {
   if (!hasWorks()) return [];
   return all<WorkSummaryRow>(
-    `SELECT ${WORK_SUMMARY_COLUMNS} FROM works w
+    `SELECT ${workSummaryColumns()} FROM works w
      WHERE w.work_id IN (SELECT work_id FROM work_books WHERE book_id = ?) ORDER BY ${WORK_ORDER}`,
     bookId
   ).map(toWorkSummary);
@@ -831,7 +840,7 @@ function workCitations(kind: "work" | "position" | "provenance" | "witness" | "h
 export function getWork(id: string): WorkDetail | null {
   if (!hasWorks()) return null;
   const found = get<WorkSummaryRow & { aliases: string | null; summary: string; contents: string | null; originalLanguage: string }>(
-    `SELECT ${WORK_SUMMARY_COLUMNS}, w.also_known_as AS aliases, w.summary, w.contents, w.original_language AS originalLanguage
+    `SELECT ${workSummaryColumns()}, w.also_known_as AS aliases, w.summary, w.contents, w.original_language AS originalLanguage
      FROM works w WHERE w.work_id = ?`,
     id
   );
