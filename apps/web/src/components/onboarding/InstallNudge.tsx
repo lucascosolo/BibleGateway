@@ -36,7 +36,7 @@ export function InstallNudge() {
     <aside
       data-chrome
       aria-labelledby={titleId}
-      className="fixed inset-x-4 bottom-[calc(var(--shell-tabbar-height)+env(safe-area-inset-bottom)+var(--space-3))] z-50 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-4 md:inset-x-auto md:right-6 md:bottom-6 md:w-[22rem]"
+      className="fixed inset-x-4 bottom-[calc(var(--shell-tabbar-height)+env(safe-area-inset-bottom)+var(--space-3))] z-40 [html[data-audio-bar]_&]:bottom-[calc(var(--shell-tabbar-height)+env(safe-area-inset-bottom)+var(--shell-audiobar-height,5.5rem)+var(--space-3))] rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-4 md:inset-x-auto md:right-6 md:bottom-6 md:w-[22rem]"
       style={{ boxShadow: "var(--shadow-lg)" }}
     >
       <div className="flex items-start gap-2">
