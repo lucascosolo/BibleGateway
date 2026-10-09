@@ -1,7 +1,7 @@
 id = "solomon-united-monarchy"
 kind = "historical"
 title = "Solomon's kingdom: an empire or a highland chiefdom?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 The Bible describes Solomon ruling a wealthy, united kingdom from Jerusalem, but no inscription names him. The debate therefore turns on archaeology, above all on the date of the large gates and buildings once credited to him."""
 persons = ["solomon", "david", "rehoboam"]
@@ -20,13 +20,13 @@ citations = [{ source = "finkelstein-silberman-2002", locator = "p. 143" }, { so
 [[views]]
 label = "Solomonic gates"
 text = """
-Yigael Yadin dug up large gates and buildings at Hazor, Megiddo and Gezer and credited them to Solomon's building programme, reading them alongside 1 Kings 9:15."""
+Yigael Yadin uncovered a six-chambered city gate at Hazor and recognized the same plan in a gate found earlier at Megiddo. He went to Gezer "not in the field but in the library", finding one side of such a gate in Macalister's plan, and credited all three to Solomon's building programme, reading them alongside 1 Kings 9:15."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 137–138" }]
 
 [[views]]
 label = "A modest chiefdom; the gates are later"
 text = """
-Finkelstein and Silberman move those buildings to the Omride kings of the 9th century BCE. They see 10th-century Jerusalem as the rough hilltop stronghold of a local family of tribal chiefs, not the capital of an empire."""
+Finkelstein and Silberman move the "Solomonic" gates and palaces at Megiddo, Hazor and Gezer to the early ninth century BCE (p. 141) and credit the Megiddo palaces to the Omride kings (p. 187). They see tenth-century Jerusalem as "at best, no more than a typical highland village" and Judah as "a remote and undeveloped region" at that time (p. 142)."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 141–142" }, { source = "finkelstein-silberman-2002", locator = "p. 187" }]
 
 [[views]]

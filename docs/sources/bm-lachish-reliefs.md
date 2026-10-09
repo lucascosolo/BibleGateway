@@ -14,3 +14,7 @@ Web page cited as `bm-lachish-reliefs` (British Museum). A fallback citation; a 
 ## Used by
 
 (to be filled by the next agent)
+
+## Text re-extracted 2026-10-09
+
+The first `text.txt` was defective (it held 15 words of page chrome), so claims could not be read from it. It is archived at `~/.archive/2026-10-09/jot-sources/bm-lachish-reliefs-text-defective.txt`. The new `text.txt` (sha256 `9627ed6a31abd478973fea24d4ab4421c7c84d596bbcc6f2c1de33d345ca9ce4`) is the visible text of the unchanged `page.html`, extracted with `~/.cache/scratch/jot-tools/html_text.py`, which keeps `<noscript>` content: the saved page leaves a `<noscript>` unclosed before the object record, and the first extractor dropped everything after it. `fetch.json`'s `text_sha256` describes the archived file, not this one; `html_sha256` still matches `page.html`.

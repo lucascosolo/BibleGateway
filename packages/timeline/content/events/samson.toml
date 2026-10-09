@@ -3,9 +3,9 @@ title = "Samson"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "speculative"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue). The Introduction to Thiele's book offers one anchor: the incidents behind the Samson stories "must have occurred, it is apparent, subsequent to the settlement of the Philistines on the coastal plain in the first decade of the twelfth century"."""
+Samson of the tribe of Dan is a Nazirite, set apart to God from birth. He fights the Philistines alone, is betrayed by Delilah, and dies pulling down the temple of Dagon at Gaza. His story is set in the years the Philistines ruled over Israel. The sources read give no scholarly date for him, and scholars debate whether he was a real person (see the linked issue)."""
 verses = [
   { ref = "Judg.13.1-Judg.13.25", link = "describes", note = "Judges tells how Samson's birth is announced and describes the Nazirite vow." },
   { ref = "Judg.14.1-Judg.15.20", link = "describes", note = "Judges describes the Timnah wedding, the riddle, the foxes and the jawbone." },
@@ -16,11 +16,11 @@ verses = [
 
 [[positions]]
 id = "ussher-1155"
-label = "Ussher, Annals: Samson born, 1155 BC"
+label = "Ussher, Annals: Samson born, Year of the World 2849 (1155 BC)"
 tradition = "traditional"
 earliest = -1155
 latest = -1155
 held_by = "James Ussher"
 summary = """
-The chronologist James Ussher has the angel appear to Manoah's wife in 2848d AM (year of the world), which is 1156 BC. He has Samson born in 2849b AM, which is 1155 BC."""
-citations = [{ source = "ussher-annals", locator = "paragraphs 379-380" }]
+The chronologist James Ussher tells the angel's appearance to Manoah's wife after the start of the Philistine oppression, which his margin labels "Year before Christ 1156". He has Samson born in the Year of the World 2849, beside which the margin prints "Year before Christ 1155"."""
+citations = [{ source = "ussher-annals", locator = "1658 printing, the second page numbered 29 (TCP page 42, following p. 30; Year before Christ 1156; Year of the World 2849, Year before Christ 1155)" }]

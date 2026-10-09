@@ -3,7 +3,7 @@ title = "Herod the Great: reign and the rebuilding of the temple"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 On the usual count, Herod reigns from 37 BCE until his death in 4 BCE. In his eighteenth year (20-19 BCE) he sets out to rebuild the temple, and John 2:20 says the work had taken forty-six years, so it was still going."""
 verses = [
@@ -23,7 +23,7 @@ summary = """
 Meier gives Herod's reign as 37-4 BCE and rejects the proposals for a death in 1 BCE, since his successors counted their reigns from 5-4 BCE. Brown dates Herod's kingship from 37 BC and his death to about 4 BC."""
 citations = [
   { source = "meier-1991", locator = "p. 375; p. 414 n. 18" },
-  { source = "brown-1997", locator = "ch. 4, What Preceded the 1st Century AD (63–4 BC: Roman Dominance, Herod the Great, Augustus); ch. 4, The First Third of the 1st Century AD" },
+  { source = "brown-1997", locator = "ch. 4, '63–4 BC: Roman Dominance, Herod the Great, Augustus' (PDF p. 107: 'By 37 BC ... he became undisputed king of Judea'; 'the death of Herod (ca. 4 BC)'); ch. 4, 'The First Third of the 1st Century AD' (PDF p. 108)" },
 ]
 
 [[positions]]

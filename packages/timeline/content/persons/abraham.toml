@@ -3,8 +3,8 @@ name = "Abraham"
 also_known_as = ["Abram"]
 role = "patriarch"
 summary = """
-Abraham, first called Abram, is the ancestor with whom Genesis begins Israel's story: called from Haran to Canaan, promised land and descendants in a covenant, and father of Isaac. Whether he was a historical person is argued in the patriarchs issue. Since the 1970s most scholars have read the patriarchal stories as literature of the kingdoms of Israel and Judah; Finkelstein and Silberman date their writing to the eighth and seventh centuries BCE from anachronisms such as camels as pack animals and Philistines at Gerar. Albright placed the patriarchs in the 2nd millennium BCE, and Kitchen still argues that many details fit 1900 to 1600 BCE. Ussher's traditional count, which adds up the Bible's own life-spans, has Abraham called from Ur in 1922 BC."""
-status = "sources-located"
+Abraham, first called Abram, is the ancestor with whom Genesis begins Israel's story: called from Haran to Canaan, promised land and descendants in a covenant, and father of Isaac. Whether he was a historical person is argued in the patriarchs issue. Critical textual scholars long held that the patriarchal stories were written down under the monarchy or later; Finkelstein and Silberman date their writing to the eighth and seventh centuries BCE from anachronisms such as camels as pack animals and Philistines at Gerar. Albright placed the patriarchs in the 2nd millennium BCE, and Kitchen still argues that many details fit 1900 to 1600 BCE. Ussher's traditional count, which adds up the Bible's own life-spans, has Abraham called from Ur in the Year of the World 2083, the year its margin labels 1921 before Christ."""
+status = "claims-checked"
 verses = [
   { ref = "Gen.12.1-Gen.12.9", link = "describes", note = "Genesis 12:1–9 tells the call of Abram and his journey into Canaan." },
   { ref = "Gen.15.1-Gen.15.21", link = "describes", note = "Genesis 15 tells the covenant ritual in which Abram is promised land and descendants." },
@@ -17,5 +17,5 @@ citations = [
   { source = "finkelstein-silberman-2002", locator = "pp. 35-36" },
   { source = "finkelstein-silberman-2002", locator = "pp. 37-38" },
   { source = "kitchen-2003", locator = "pp. 353, 358-359" },
-  { source = "ussher-annals", locator = "paragraphs 70-71" },
+  { source = "ussher-annals", locator = "p. 5 (1658 printing; Year of the World 2083, Year before Christ 1921)" },
 ]

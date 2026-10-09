@@ -1051,3 +1051,41 @@ author = "W. M. Ramsay"
 title = "Was Christ Born at Bethlehem? A Study on the Credibility of St. Luke (second edition; public domain, dated scholarship)"
 publisher = "Hodder & Stoughton"
 year = 1898
+
+[[source]]
+id = "bm-lachish-reliefs"
+kind = "web"
+author = "British Museum"
+title = "Collection online: wall panel, relief, the assault on Lachish (museum number 124905, registration 1856,0909.14)"
+url = "https://www.britishmuseum.org/collection/object/W_1856-0909-14"
+
+[[source]]
+id = "bm-taylor-prism"
+kind = "web"
+author = "British Museum"
+title = "Collection online: prism, the Taylor Prism (museum number 91032, registration 1855,1003.1)"
+url = "https://www.britishmuseum.org/collection/object/W_1855-1003-1"
+
+[[source]]
+id = "gregory-1907"
+kind = "book"
+author = "Caspar René Gregory"
+title = "Canon and Text of the New Testament (International Theological Library; public domain, dated scholarship)"
+publisher = "T. & T. Clark"
+year = 1907
+
+[[source]]
+id = "westcott-1896-canon"
+kind = "book"
+author = "Brooke Foss Westcott"
+title = "A General Survey of the History of the Canon of the New Testament (7th edition; public domain, dated scholarship)"
+publisher = "Macmillan"
+year = 1896
+
+[[source]]
+id = "ryle-1892"
+kind = "book"
+author = "Herbert Edward Ryle"
+title = "The Canon of the Old Testament: An Essay on the Gradual Growth and Formation of the Hebrew Canon of Scripture (public domain, dated scholarship)"
+publisher = "Macmillan"
+year = 1892

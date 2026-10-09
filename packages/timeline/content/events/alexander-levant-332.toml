@@ -3,9 +3,9 @@ title = "Alexander's conquest of the Levant"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-Alexander besieges and takes Tyre from January to July 332 BCE, then moves south against Gaza in October 332 BCE. Josephus (Antiquities 11.8) says the book of Daniel was shown to Alexander at Jerusalem, and the Whiston edition's note reads Daniel 7-8 and 11:3 as predictions of his conquests; Satlow reads the horns of Daniel 7 as Alexander's successors. Arrian does not mention a visit to Jerusalem; Josephus alone tells it, and it is not confirmed here."""
+Alexander takes Tyre in the month Hecatombaion of 332 BCE (late July or early August, in Chinnock's note) after a siege that Diodorus gives as seven months, then moves south and takes Gaza after a siege of two months. Josephus (Antiquities 11.8) says the book of Daniel was shown to Alexander at Jerusalem, and the Whiston edition's note reads Daniel 7-8 and 11:3 as predictions of his conquests; Satlow reads the horns of Daniel 7 as Alexander's successors. Arrian does not mention a visit to Jerusalem; Chinnock's note points to Josephus for it, and it is not confirmed here."""
 verses = [
   { ref = "Dan.8.5-Dan.8.8", link = "alludes", note = "Daniel 8:5-8 shows a goat with one notable horn, broken and replaced by four, which the note in the Whiston edition of Josephus (Antiquities 11.8.5, n. 363) reads as Alexander's conquests and successors." },
   { ref = "Dan.11.3", link = "alludes", note = "Daniel 11:3 speaks of a mighty king who rules with great power; Whiston's note on Antiquities 11.8.5 (n. 363) lists Daniel 11:3 among the passages he takes to predict Alexander's conquests." },
@@ -13,12 +13,12 @@ verses = [
 
 [[positions]]
 id = "332"
-label = "332 BCE (Tyre January-July; Gaza October)"
+label = "332 BCE (Tyre in Hecatombaion; Gaza after two months)"
 tradition = "chronological"
 earliest = -332
 latest = -332
 summary = """
-The siege of Tyre lasted from January to July 332 BCE. Alexander then moved south to Gaza, which was besieged in October 332 BCE (Diodorus gives the siege of Gaza two months; Josephus gives seven months for Tyre and two for Gaza)."""
+Arrian has Tyre taken in Hecatombaion, when Anicetus was archon at Athens, which Chinnock's note puts at the end of July and beginning of August 332 BCE. Alexander then moved south to Gaza (Diodorus gives the siege of Gaza two months; Josephus gives seven months for Tyre and two for Gaza)."""
 citations = [
   { source = "arrian-chinnock-1884", locator = "pp. 134–135: Tyre taken in Hecatombaion, archon Anicetus (= late July/early August 332), with Diodorus 17.46 for the seven months; p. 139 n. 1 (Diodorus 17.48: Gaza besieged two months); p. 140 for the march from Gaza to Pelusium" },
   { source = "josephus-whiston", locator = "Antiquities 11.8.4 (seven months of the siege of Tyre and two of Gaza); 11.8.5 (the book of Daniel shown to Alexander; Whiston's note 363)" },
@@ -29,5 +29,5 @@ citations = [
 artifact = "arrian-anabasis-2-24"
 relation = "corroborates"
 note = """
-Arrian gives the one firm date in the campaign: Tyre fell "in the month Hecatombaion, when Anicetus was archon at Athens", that is in the summer of 332 BCE. He then has Alexander move south to Gaza and on to Egypt. Arrian is a second-century writer working from the lost memoirs of Ptolemy and Aristobulus, so the date is secondhand, though it is the earliest surviving one. He does not mention Jerusalem; the visit to the city is told only by Josephus."""
-citations = [{ source = "arrian-chinnock-1884", locator = "pp. 134–135, 140" }]
+Arrian gives the one firm date in the campaign: Tyre fell "in the month Hecatombaion, when Anicetus was archon at Athens", that is in the summer of 332 BCE. He then has Alexander move south to Gaza and on to Egypt. Arrian is a second-century writer working from the histories of Ptolemy and Aristobulus, neither of which survives, so the date is secondhand. He does not mention Jerusalem; Chinnock's note points to Josephus for the visit."""
+citations = [{ source = "arrian-chinnock-1884", locator = "pp. 134–135, 140" }, { source = "arrian-chinnock-1884", locator = "pp. 1–3 (Chinnock's introduction: Arrian born near the end of the first century, active under Hadrian; his chief sources Ptolemy and Aristobulus); pp. 6–7 (Arrian's preface and Chinnock's notes: neither history survives)" }]

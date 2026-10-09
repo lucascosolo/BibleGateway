@@ -1,7 +1,7 @@
 id = "western-text-of-acts"
 kind = "textual"
 title = "Which Greek text of Acts is the original, the shorter or the longer Western one?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 The Western family of Greek manuscripts gives Acts a text about one-tenth longer than the Egyptian (Alexandrian) text, with extra phrases, clauses and whole verses. Brown calls this the most acute textual problem of any New Testament book. Most commentaries are based on the shorter text."""
 verses = [
@@ -45,7 +45,7 @@ citations = [
 [[views]]
 label = "Hixson and Gurry's contributors: longer by small additions, with a measurable bias"
 text = """
-Writing from an evangelical standpoint, Cole says the Western text of Acts is a bit longer than the received form not because of added scenes or stories but because of minor additions within existing verses, and he reports Gurry's calculation that Codex Bezae is just short of 8 percent longer than Codex Sinaiticus in Acts. Marcello, answering claims of widespread orthodox corruption, nevertheless accepts Epp's study of Bezae in Acts as a clear case of scribal change for theological reasons: Epp found an anti-Judaic tendency in 40 percent of the variants he examined."""
+Cole says the Western text of Acts is a bit longer than the received form not because of added scenes or stories but because of minor additions within existing verses, and he reports Gurry's calculation that Codex Bezae is just short of 8 percent longer than Codex Sinaiticus in Acts. Marcello, answering claims of widespread orthodox corruption, nevertheless accepts Epp's study of Bezae in Acts as a clear case of scribal change for theological reasons: Epp found an anti-Judaic tendency in 40 percent of the variants he examined."""
 citations = [
   { source = "hixson-gurry-2019", locator = "pp. 148–149 and n. 44 (Cole)" },
   { source = "hixson-gurry-2019", locator = "pp. 220–221 (Marcello)" },

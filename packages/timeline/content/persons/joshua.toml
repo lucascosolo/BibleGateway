@@ -2,8 +2,8 @@ id = "joshua"
 name = "Joshua"
 role = "successor of Moses, leader of the conquest"
 summary = """
-Joshua son of Nun succeeds Moses and leads Israel across the Jordan; the book named after him tells of Jericho's fall and the conquest of Canaan. Whether that conquest happened is argued in the conquest issue. Finkelstein and Silberman conclude that "There was no violent conquest of Canaan" (p. 118). They find no thirteenth-century settlement at Jericho, and they read the book as shaped under King Josiah, with Joshua evoking that king. Among those who defend a conquest, Kitchen reads Joshua's campaigns as "disabling raids" and puts the entry of Hebrew raiding bands into Canaan "ca. 1220/1210", while Wood argues for about 1406–1400 BCE. Ussher's traditional count puts the fall of Jericho in 1451 BC."""
-status = "sources-located"
+Joshua son of Nun succeeds Moses and leads Israel across the Jordan; the book named after him tells of Jericho's fall and the conquest of Canaan. Whether that conquest happened is argued in the conquest issue. Finkelstein and Silberman conclude that "There was no violent conquest of Canaan" (p. 118). They find no thirteenth-century settlement at Jericho, and they read the book as shaped under King Josiah, with Joshua evoking that king. Among those who defend a conquest, Kitchen reads Joshua's campaigns as "disabling raids" and puts the entry of Hebrew raiding bands into Canaan "ca. 1220/1210", while Wood argues for about 1406–1400 BCE. Ussher's traditional count puts the fall of Jericho in the Year of the World 2553; his margin labels the following year 1450 before Christ."""
+status = "claims-checked"
 verses = [
   { ref = "Josh.1.1-Josh.1.9", link = "describes", note = "Joshua 1:1–9 tells how Joshua is commissioned as Moses' successor." },
   { ref = "Josh.6.1-Josh.6.27", link = "describes", note = "Joshua 6 tells the fall of Jericho." },
@@ -20,5 +20,5 @@ citations = [
   { source = "kitchen-2003", locator = "p. 237" },
   { source = "wood-2005", locator = "pp. 476, 478" },
   { source = "wood-2005", locator = "pp. 488–489" },
-  { source = "ussher-annals", locator = "paragraph 312" },
+  { source = "ussher-annals", locator = "1658 printing, p. 22 (Year of the World 2553 begins) and the page printed 28 (TCP page 37, between pp. 25 and 27: Jericho taken; the year 2553 ends; Year of the World 2554, Year before Christ 1450)" },
 ]

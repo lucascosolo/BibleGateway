@@ -14,3 +14,7 @@ Web page cited as `bm-taylor-prism` (British Museum). A fallback citation; a boo
 ## Used by
 
 (to be filled by the next agent)
+
+## Text re-extracted 2026-10-09
+
+The first `text.txt` was defective (it held the raw gzip bytes of the page), so claims could not be read from it. It is archived at `~/.archive/2026-10-09/jot-sources/bm-taylor-prism-text-defective.txt`. The new `text.txt` (sha256 `9f01bc223181cc88fa1c605212b04679474f17773f7ac4666d126c4aeb70e8f0`) is the visible text of the unchanged `page.html` (gzip-compressed as served by the Wayback Machine, decompressed before extraction), extracted with `~/.cache/scratch/jot-tools/html_text.py`, which keeps `<noscript>` content: the saved page leaves a `<noscript>` unclosed before the object record, and the first extractor dropped everything after it. `fetch.json`'s `text_sha256` describes the archived file, not this one; `html_sha256` still matches `page.html`.

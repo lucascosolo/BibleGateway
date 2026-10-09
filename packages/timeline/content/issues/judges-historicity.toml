@@ -1,9 +1,9 @@
 id = "judges-historicity"
 kind = "historical"
 title = "How historical is the Book of Judges?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree about how much of it is history. No judge is named in an inscription from their own time: Kitchen notes that outside sources name almost no biblical figure before 853 BCE, and that Egypt has virtually no historical inscriptions naming Palestinian powers between Ramesses III and Shoshenq I (p. 156). The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
+Do the stories of Deborah, Gideon, Samson and the other judges keep real memories from before the kings? Scholars disagree about how much of it is history. Outside sources give no check on them: Kitchen notes that outside sources name almost no biblical figure before 853 BCE, and that Egypt has virtually no historical inscriptions naming Palestinian powers between Ramesses III and Shoshenq I (p. 156). The dating views on the individual events therefore only record the date ranges offered by those who accept the setting."""
 events = ["judges-period", "deborah-barak", "gideon", "samson"]
 verses = [{ ref = "Judg.2.16-Judg.2.19", link = "describes" }]
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 99-100" }, { source = "kitchen-2003", locator = "pp. 156, 201-202" }]

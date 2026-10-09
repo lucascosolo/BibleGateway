@@ -1,7 +1,7 @@
 id = "quirinius-census-and-herod-death"
 kind = "chronology"
 title = "Can Herod's death and Quirinius's census both date the birth of Jesus?"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Matthew places Jesus's birth in the days of Herod the king, while Luke 2:1–2 ties it to a registration "while Quirinius was governor of Syria". Josephus dates Quirinius's census to 6 CE, when Archelaus was removed, and the usual date for Herod's death is 4 BCE. The two Gospel clues are therefore about ten years apart."""
 events = ["birth-of-jesus"]
@@ -24,24 +24,25 @@ citations = [
   { source = "josephus-whiston", locator = "Antiquities 17.13.2" },
   { source = "josephus-whiston", locator = "Antiquities 18.1.1" },
   { source = "brown-1997", locator = "ch. 4, The First Third of the 1st Century AD" },
+  { source = "meier-1991", locator = "pp. 213, 375" },
 ]
 
 [[views]]
 label = "Luke 2:1–2 is historically unreliable (John P. Meier, 1991)"
 text = """
-Meier says that no ancient source documents a census under Augustus around 5 BCE, the time Luke's story would need. Quirinius became governor of Syria in 6 CE and conducted a census of Judea, not Galilee, in 6–7 CE, and Meier calls attempts to reconcile Luke 2:1 with ancient history "hopelessly contrived". He sides with Raymond Brown that Luke is inaccurate, and doubts that the Infancy Narratives can fix the date of Jesus's birth."""
-citations = [{ source = "meier-1991", locator = "pp. 212–213, 235 n. 23" }]
+Meier says that no ancient source documents a census under Augustus around 5 BCE, the time Luke's story would need. Quirinius became governor of Syria in 6 CE and conducted a census of Judea, not Galilee, in 6–7 CE, and Meier calls attempts to reconcile Luke 2:1 with ancient history "hopelessly contrived". He sides with Raymond Brown that Luke is inaccurate, and says the Infancy Narratives must be used with extreme caution for chronology."""
+citations = [{ source = "meier-1991", locator = "pp. 212–213, 235 n. 23, 375" }]
 
 [[views]]
 label = "The older critical case: no Roman census under Herod (Emil Schürer, 1890)"
 text = """
-Schürer's 1890 history, an older critical treatment, set out the case against Luke's dating point by point: a Roman census would not have required Joseph to travel to Bethlehem (p. 120); no Roman census could have been held in Herod's kingdom (p. 122); Josephus treats the census of 6/7 CE as something new (p. 127); and Quirinius was never governor of Syria in Herod's lifetime (p. 133). Schürer dated Herod's death to 4 BCE, shortly before Passover, from Josephus's regnal counts (vol. I.1, pp. 464-466)."""
+Schürer's 1890 history, an older critical treatment, set out the case against Luke's dating point by point: a Roman census would not have required Joseph to travel to Bethlehem (p. 120); no Roman census could have been held in Herod's kingdom (p. 122); Josephus treats the census of 7 CE as something new (p. 127); and Quirinius was never governor of Syria in Herod's lifetime (p. 133). Schürer dated Herod's death to 4 BCE, shortly before Passover (vol. I.1, pp. 464-466)."""
 citations = [{ source = "schurer-1890-i-2", locator = "pp. 120, 122, 127, 133 (Excursus I, the census of Quirinius)" }, { source = "schurer-1890-i-1", locator = "pp. 464-466" }]
 
 [[views]]
 label = "The older harmonising answer: periodic enrolments (W. M. Ramsay, 1898)"
 text = """
-Ramsay's 1898 reply defended Luke: he argued that Luke knew of a system of periodic enrolments in Syria (p. 126) and that Quirinius governed Syria twice, the second time from 6 CE, while admitting that the proof of an earlier governorship "is incomplete" (p. 109)."""
+Ramsay's 1898 reply defended Luke: he argued that Quirinius governed Syria twice, the second from 6 CE, while admitting that the proof that his first governorship fell as late as 2 or 1 BCE "is incomplete" (p. 109). He argued that if Luke is trustworthy, Syria had periodic enrolments (p. 126)."""
 citations = [{ source = "ramsay-1898-bethlehem", locator = "pp. 109, 126" }]
 
 [[views]]
