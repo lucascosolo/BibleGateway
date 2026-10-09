@@ -35,10 +35,16 @@
       "name": "King James Version, read by Michael Armenta (LibriVox)",
       "source_url": "https://archive.org/details/bible_kjv_complete_2001_librivox",
       "license": "Public domain (CC0 public domain mark)",
-      "attribution": "LibriVox recording of the King James Version (1769 Oxford edition), read by Michael Armenta. LibriVox recordings are in the public domain.",
+      "attribution": "LibriVox recording of the King James Version (1769 Oxford edition), read by Michael Armenta. Three chapters his recording skips come from other LibriVox readers: Exodus 22 read by Darren L. Slider; 2 Chronicles 4 and 8 from the 2 Chronicles recording by Joy Chan and Kimberly Krause. LibriVox recordings are in the public domain.",
       "layout": "multi-chapter-files",
       "raw_dir": "kjv",
-      "file_map": "kjv-files.json"
+      "file_map": "kjv-files.json",
+      "fill": [
+        {"book_id": 2, "chapter": 22, "file": "bible_02d_kjv_64kb.mp3", "position": "last", "reader": "Darren L. Slider", "source_url": "https://archive.org/details/bible_kjv_01_02_03_0908_librivox"},
+        {"book_id": 14, "chapter": 4, "file": "2chronicles_04_kjv_64kb.mp3", "reader": "Joy Chan and Kimberly Krause", "source_url": "https://archive.org/details/2chronicleskjv_1403_librivox"},
+        {"book_id": 14, "chapter": 8, "file": "2chronicles_08_kjv_64kb.mp3", "reader": "Joy Chan and Kimberly Krause", "source_url": "https://archive.org/details/2chronicleskjv_1403_librivox"},
+        {"book_id": 18, "chapter": 14, "file": "bookofjob_14_kjv_64kb.mp3", "reader": "Peter Tucker", "excluded": "published recording starts partway into the chapter", "source_url": "https://archive.org/details/bible_kjv_18_job_version_2_1507_librivox"}
+      ]
     },
     {
       "code": "WLC-beeri",
