@@ -21,7 +21,7 @@ citations = [{ source = "satlow-2014", locator = "p. 124" }, { source = "satlow-
 [[composed]]
 id = "first-century-bce-opening"
 label = "Early first century BCE, about 100 BCE (unsigned preface)"
-tradition = "critical"
+tradition = "traditional"
 earliest = -100
 latest = -81
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"

@@ -7,7 +7,7 @@ Jewish and Christian tradition held that Moses wrote the first five books of the
 events = ["sinai-covenant", "exodus"]
 verses = [
   { ref = "Deut.34.5-Deut.34.6", link = "describes", note = "This reports Moses's death and burial, though tradition says Moses wrote the book." },
-  { ref = "Gen.1.1-Gen.2.3", link = "describes", note = "This is the first of two creation accounts: plants, animals, then man and woman; Genesis 2:4-25 tells it in a different order." },
+  { ref = "Gen.1.1-Gen.2.3", link = "describes", note = "This first creation account is one of the clues scholars use for more than one author: it orders plants, animals, then man and woman and calls the creator God throughout, while Genesis 2:4-25 tells it in another order and names him Yahweh God (Friedman pp. 50-51; Baden p. 17)." },
   { ref = "Gen.2.4-Gen.2.25", link = "describes", note = "This second creation account tells the events in a different order from Genesis 1:1-2:3." },
   { ref = "Gen.6.19-Gen.6.20", link = "describes", note = "Noah is told to take a pair of every kind of animal; Genesis 7:2-3 says seven pairs of the clean ones." },
   { ref = "Gen.7.2-Gen.7.3", link = "describes", note = "Noah is told to take seven pairs of clean animals, unlike the single pair of Genesis 6:19-20." },

@@ -55,7 +55,7 @@ held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman give Solomon's reign as c. 970-931 BCE (dates they attribute to Galil) and say no trace of the temple or palace has ever been identified. They do not date the foundation itself.
 """
-citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131" }, { source = "finkelstein-silberman-2002", locator = "p. 135" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131 (Table 2: Solomon ca. 970-931)" }, { source = "finkelstein-silberman-2002", locator = "p. 135 (no trace of the temple or palace identified)" }]
 
   [[positions.arguments]]
   stance = "for"

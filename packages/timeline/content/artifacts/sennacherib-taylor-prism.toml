@@ -5,13 +5,14 @@ status = "sources-located"
 made = { earliest = -691, latest = -691 }
 language = "Akkadian (cuneiform)"
 summary = """
-A clay prism records Sennacherib's campaigns, including his third campaign into Judah, and two matching copies survive: the Oriental Institute (Chicago) Prism and the Jerusalem Prism (Israel Museum). The annals say he besieged and took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not claim that Jerusalem was taken. Oppenheim's ANET translation, from the Oriental Institute Prism, reads: "Himself I made a prisoner in Jerusalem, his royal residence, like a bird in a cage" (p. 288)."""
+A clay prism records Sennacherib's campaigns, including his third campaign into Judah, and two matching copies survive: the Oriental Institute (Chicago) Prism and the Jerusalem Prism (Israel Museum). The annals say he besieged and took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". They claim tribute from Hezekiah but do not claim that Jerusalem was taken. Oppenheim's ANET translation, from the Oriental Institute Prism, reads: "Himself I made a prisoner in Jerusalem, his royal residence, like a bird in a cage" (p. 288). Luckenbill dates the Taylor Prism by its eponym, Bel-emuranni, to 691 BC (and the Oriental Institute Prism to 689 BC, eponym Gahilu), in Ancient Records of Assyria II, section 232."""
 held_by = { institution = "British Museum", accession = "BM 91032" }
 citations = [
   { source = "bm-taylor-prism" },
   { source = "cojs-sennacherib-prisms" },
   { source = "wikipedia-sennacherib-annals" },
-  { source = "pritchard-1969", locator = "pp. 287–288, trans. A. Leo Oppenheim (Oriental Institute Prism; ANET notes the Taylor Prism contains the same account)" },
+  { source = "luckenbill-arab-2", locator = "§ 232 (Taylor Prism dated in the eponymy of Bel-emuranni, 691 B.C.)" },
+  { source = "pritchard-1969", locator = "pp. 287–288 (text only; no date for the prism), trans. A. Leo Oppenheim (Oriental Institute Prism; ANET notes the Taylor Prism contains the same account)" },
 ]
 verses = [
   { ref = "2Kgs.18.13-2Kgs.18.16", link = "background", note = "2 Kings 18:13–16 tells of the payment Hezekiah made to Sennacherib, the tribute the Taylor Prism also reports." },

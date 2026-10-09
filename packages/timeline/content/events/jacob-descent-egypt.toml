@@ -71,7 +71,7 @@ latest = -550
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman accept that immigration from Canaan to the eastern Nile delta is well attested, as at Tell ed-Daba, but find no evidence of Israelites there. They place the writing of the descent and Goshen traditions in the seventh and sixth centuries."""
-citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 52-55" }, { source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
 
   [[positions.arguments]]
   stance = "for"

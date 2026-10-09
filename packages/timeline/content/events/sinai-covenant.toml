@@ -34,14 +34,14 @@ citations = [{ source = "wood-2005", locator = "p. 477" }]
 
 [[positions]]
 id = "late"
-label = "With a 13th-century exodus (c. 1260 BCE)"
+label = "With a 13th-century exodus (c. 1260/1250 BCE)"
 tradition = "chronological"
 earliest = -1260
-latest = -1260
+latest = -1250
 held_by = "K. A. Kitchen"
 summary = """
-The scholar K. A. Kitchen dates the exodus to 1260 BC, early in the reign of Rameses II. Sinai follows within months. Kitchen also argues that the covenant texts match the form of Hittite treaties from about 1400 to 1200 BC."""
-citations = [{ source = "wood-2005", locator = "pp. 478–479" }]
+The scholar K. A. Kitchen dates the exodus to about 1260/1250 BC (Kitchen p. 307; Wood reports 1260), early in the reign of Rameses II. Sinai follows within months. Kitchen also argues that the covenant texts match the form of Hittite treaties from about 1400 to 1200 BC."""
+citations = [{ source = "wood-2005", locator = "pp. 478–479" }, { source = "kitchen-2003", locator = "p. 307 (exodus about 1260/1250, minimum)" }]
 
 [[positions]]
 id = "ussher-1491"

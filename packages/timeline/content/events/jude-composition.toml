@@ -91,13 +91,13 @@ Ehrman extends the point to Jude's family, arguing that nothing sets Jude apart 
 
 [[positions]]
 id = "brown-90-100"
-label = "Perhaps 90 to 100 CE, authorship very difficult to decide"
+label = "Virtually impossible to tell: a few scholars say the 50s, many 90 to 100"
 tradition = "critical"
-earliest = 90
+earliest = 50
 latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown, a critical scholar, is cautious about the date: "Virtually impossible to tell. A few scholars place it in the 50s; many in 90–100." On authenticity he says: "Very difficult to decide." He adds that dating may slightly favor pseudonymity."""
+Brown, a critical scholar, is cautious about the date: "Virtually impossible to tell. A few scholars place it in the 50s; many in 90–100." The span shown, 50 to 100, takes in both camps he reports, and he himself says 90-100 "may be the most plausible date". On authenticity he says: "Very difficult to decide." He adds that dating may slightly favor pseudonymity."""
 citations = [{ source = "brown-1997", locator = "ch. 35, Summary of Basic Information" }]
 
   [[positions.arguments]]
@@ -109,13 +109,13 @@ Brown argues that if Jude himself wrote it, he was one of the youngest brothers 
 
 [[positions]]
 id = "carson-moo-mid-to-late-60s"
-label = "The middle to late 60s, by Jude the Lord's brother"
-tradition = "critical"
+label = "Probably the middle to late 60s, no later than about 90, by Jude the Lord's brother"
+tradition = "traditional"
 earliest = 64
-latest = 69
+latest = 90
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to Jude, the brother of the Lord and of James. They say the letter cannot be later than about 90, and that if Jude used 2 Peter it comes after 64-65. They conclude: "We should probably date Jude also in the middle-to-late 60s". The year span shown here is the editor's reading of those dates."""
+Carson and Moo write the standard evangelical introduction to the New Testament, and they defend the traditional attribution to Jude, the brother of the Lord and of James. They say that if Jude the brother of the Lord wrote it, "the letter cannot be dated after about A.D. 90", and that if Jude used 2 Peter it comes after 64-65 (they note Bauckham's case for the 50s as well). They conclude: "We should probably date Jude also in the middle-to-late 60s". The span shown here runs from 64-65 to their outer limit of about 90, and is the editor's reading of those dates."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 690–692" }]
 
   [[positions.arguments]]

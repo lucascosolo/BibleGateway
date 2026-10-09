@@ -10,7 +10,6 @@ verses = [
   { ref = "Luke.1.1-Luke.1.4", link = "background", note = "The fragment paraphrases this preface when it describes Luke's Gospel." },
   { ref = "John.21.24", link = "background", note = "The fragment repeats this verse's claim that the disciple wrote the Gospel." },
   { ref = "Jude.1.1", link = "names", note = "Jude, one of the letters the fragment receives." },
-  { ref = "Heb.1.1", link = "names", note = "Hebrews, which the fragment does not mention." },
 ]
 
 [[positions]]

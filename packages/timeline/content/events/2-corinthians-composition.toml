@@ -39,7 +39,7 @@ earliest = 55
 latest = 56
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that 2 Corinthians is Paul's own and reject partition theories. They say it was "complete within the next year or so" after 1 Corinthians, with Paul by then in Macedonia, and note that all the dates could be moved a year earlier."""
+Carson and Moo, authors of the standard evangelical introduction to the New Testament, hold that 2 Corinthians is Paul's own and reject partition theories. They say it was "complete within the next year or so" after 1 Corinthians, with Paul by then in Macedonia, and note that all the dates could be moved a year earlier. The span 55 to 56 is the editor's reading of "within the next year or so" after early 55."""
 citations = [{ source = "carson-moo-2005", locator = "pp. 448-449" }]
 
   [[positions.arguments]]

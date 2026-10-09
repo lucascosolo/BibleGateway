@@ -3,12 +3,13 @@ name = "Babylonian Talmud, Bava Batra 14b-15a: the order and authors of the book
 kind = "literary-text"
 status = "sources-located"
 language = "Hebrew and Aramaic"
-made = { earliest = 100, latest = 220 }
+made = { earliest = 150, latest = 200 }
 summary = """
 A baraita, a teaching from the period of the Mishnah, is quoted in the Babylonian Talmud with the earliest rabbinic statement of the order of the prophetic books and the Writings and of who wrote each book. "The order of the books of the Prophets when they are attached together is as follows: Joshua and Judges, Samuel and Kings, Jeremiah and Ezekiel, and Isaiah and the Twelve Prophets." Then: "The order of the Writings is: Ruth and the book of Psalms, and Job and Proverbs; Ecclesiastes, Song of Songs, and Lamentations; Daniel and the Scroll of Esther; and Ezra and Chronicles." On authorship it says that "Moses wrote his own book, i.e., the Torah, and the portion of Balaam in the Torah, and the book of Job. Joshua wrote his own book and eight verses in the Torah, which describe the death of Moses. Samuel wrote his own book, the book of Judges, and the book of Ruth", and that Hezekiah's circle and the Men of the Great Assembly wrote out Isaiah, Proverbs, Ezekiel, the Twelve, Daniel and Esther. The Talmud then records the dispute whether Moses or Joshua wrote the last eight verses of the Torah. The list has twenty-four books and no sign of any dispute about which books belong."""
 citations = [
   { source = "sefaria-davidson-talmud", locator = "Bava Batra 14b-15a" },
-  { source = "lim-2013", locator = "the chapter on the rabbinic evidence" },
+  { source = "lim-2013", locator = "p. 37; p. 180 (before 200 CE)" },
+  { source = "mcdonald-2017-vol1", locator = "p. 187; p. 390 (before 200 CE, perhaps as early as 150-180 CE)" },
 ]
 verses = [
   { ref = "Deut.34.5-Deut.34.8", link = "background", note = "Deuteronomy 34:5-8 reports the death of Moses, the eight verses the Talmud debates whether Moses or Joshua wrote." },

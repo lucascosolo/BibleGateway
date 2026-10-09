@@ -10,7 +10,7 @@ This asks who wrote the Gospel of John and when. Church tradition from the secon
 verses = [
   { ref = "John.21.24", link = "describes", note = "This verse says the disciple who testifies to these things wrote them, the Gospel's own claim about its author." },
   { ref = "John.21.15-John.21.17", link = "background", note = "Peter is given the task of feeding the sheep, read as a later pastoral development." },
-  { ref = "John.1.1", link = "describes", note = "The Gospel opens here without naming its author." },
+  { ref = "John.1.1", link = "names", note = "This entry asks who wrote the Gospel of John, which names no author." },
 ]
 
 [[positions]]
@@ -34,7 +34,7 @@ Brown places the writing of III John and the redactor's addition of chapter 21 l
 [[positions]]
 id = "carson-moo-80-85"
 label = "About 80 to 85 CE, by John the son of Zebedee"
-tradition = "critical"
+tradition = "traditional"
 earliest = 80
 latest = 85
 held_by = "D. A. Carson and Douglas J. Moo"

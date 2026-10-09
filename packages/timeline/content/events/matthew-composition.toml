@@ -10,7 +10,7 @@ This asks who wrote the Gospel of Matthew and when. It was written after Mark, w
 verses = [
   { ref = "Matt.22.7", link = "dates", note = "The king burns the murderers' city, which may reflect the destruction of Jerusalem." },
   { ref = "Matt.23.36", link = "dates", note = "'All these things will come upon this generation' is read as fulfilled in 70 CE." },
-  { ref = "Matt.1.1", link = "describes", note = "The Gospel opens here without naming its author." },
+  { ref = "Matt.1.1", link = "names", note = "This entry asks who wrote the Gospel of Matthew, which names no author." },
 ]
 
 [[positions]]
@@ -34,7 +34,7 @@ Brown's main argument is that Matthew depends on Mark: "Probably the best argume
 [[positions]]
 id = "carson-moo-before-70"
 label = "Before 70 CE, but not long before; probably Syria"
-tradition = "critical"
+tradition = "traditional"
 earliest = 60
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
@@ -65,7 +65,6 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 92 approx." }]
   text = """
 Ehrman says scholars now hold that "Matthew used Mark as one of its sources", and he lists Mark, Q and M among them. That puts Matthew after Mark, which he dates to about 70."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 92 approx." }]
-  verses = [{ ref = "Matt.1.1", link = "describes", note = "The Gospel itself names no author." }]
 
 [[positions]]
 id = "streeter-antioch-85"

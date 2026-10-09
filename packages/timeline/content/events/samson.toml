@@ -15,16 +15,6 @@ verses = [
 ]
 
 [[positions]]
-id = "iron-age-i"
-label = "Iron Age I horizon (12th-11th century BCE)"
-tradition = "archaeological"
-earliest = -1200
-latest = -1001
-summary = """
-This range comes from one object. It is not a date for Samson. A round seal about 15 mm across, found at Beth Shemesh and dated to the 11th-12th century BCE, shows a long-haired figure with a lion. That suggests hero stories like Samson's were told then. Scholars say plainly that it does not prove Samson was a real person."""
-citations = [{ source = "thiele-1983-introduction", locator = "p. 26" }, { source = "wikipedia-samson" }]
-
-[[positions]]
 id = "ussher-1155"
 label = "Ussher, Annals: Samson born, 1155 BC"
 tradition = "traditional"
@@ -34,3 +24,9 @@ held_by = "James Ussher"
 summary = """
 The chronologist James Ussher has the angel appear to Manoah's wife in 2848d AM (year of the world), which is 1156 BC. He has Samson born in 2849b AM, which is 1155 BC."""
 citations = [{ source = "ussher-annals", locator = "paragraphs 379-380" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  A round seal about 15 mm across, found at Beth Shemesh and dated to the 12th-11th century BCE, shows a long-haired figure with a lion, which suggests that hero stories like Samson's were told in roughly the period this count gives. It is a date for the seal, not for Samson, and scholars say plainly that it does not show he was a real person."""
+  citations = [{ source = "wikipedia-samson" }]

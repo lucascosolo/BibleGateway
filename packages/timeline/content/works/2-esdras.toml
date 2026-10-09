@@ -32,7 +32,7 @@ citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 886" }, { s
 [[composed]]
 id = "domitian-81-96"
 label = "Reign of Domitian, 81 to 96 CE (unsigned preface)"
-tradition = "critical"
+tradition = "traditional"
 earliest = 81
 latest = 96
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"

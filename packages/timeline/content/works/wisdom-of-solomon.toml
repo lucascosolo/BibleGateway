@@ -28,7 +28,7 @@ citations = [{ source = "meier-1994", locator = "p. 244" }, { source = "brown-19
 [[composed]]
 id = "preface-before-christian-era"
 label = "Shortly before the Christian era (unsigned preface)"
-tradition = "critical"
+tradition = "traditional"
 earliest = -100
 latest = -1
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"

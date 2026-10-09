@@ -20,12 +20,13 @@ tradition = "chronological"
 earliest = -445
 latest = -444
 summary = """
-Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name. Thiele reads Nehemiah 1:1 and 2:1 as counting Artaxerxes' years from Tishri: Kislev fell in the twentieth year and the following Nisan "was still in the same twentieth year", which Persia's own Nisan reckoning would not allow. He notes the double-dated Aramaic papyri from Elephantine also date Persian kings by Judean Tishri years (Horn and Wood, JNES 13, 1954)."""
+Artaxerxes I ruled from August 465 to December 424 BCE. His twentieth year is therefore 445 or 444 BCE, and the wall went up within 52 days. Kitchen dates Nehemiah's Years 20-32 of Artaxerxes I to 445-433 (p. 74); the alternative 444 is the editor's count from the accession year, not a figure on a page read. Wikipedia's Nehemiah article points to p. 140 of the Westminster John Knox Ezra-Nehemiah commentary (1988) for this date. That page was not read, and the article does not show the author's name. Thiele reads Nehemiah 1:1 and 2:1 as counting Artaxerxes' years from Tishri: Kislev fell in the twentieth year and the following Nisan "was still in the same twentieth year", which Persia's own Nisan reckoning would not allow. He notes the double-dated Aramaic papyri from Elephantine also date Persian kings by Judean Tishri years (Horn and Wood, JNES 13, 1954)."""
 citations = [
   { source = "wikipedia-nehemiah", locator = "n. 5" },
   { source = "ezra-nehemiah-commentary-1988", locator = "p. 140, as cited by Wikipedia 'Nehemiah' n. 5" },
   { source = "wikipedia-artaxerxes-i" },
-  { source = "thiele-1983", locator = "p. 53" },
+  { source = "kitchen-2003", locator = "p. 74" },
+  { source = "thiele-1983", locator = "p. 53 (Kislev and Nisan in the same twentieth year; no year numbers)" },
 ]
 
 [[attestations]]
@@ -37,7 +38,7 @@ citations = [{ source = "wikipedia-elephantine-papyri" }, { source = "wikipedia-
 
 [[positions]]
 id = "fs-445"
-label = "Around 445 BCE"
+label = "About 445 BCE"
 tradition = "archaeological"
 earliest = -445
 latest = -445
@@ -45,4 +46,4 @@ held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman put Nehemiah's night inspection of Jerusalem around 445 BCE (a line read from the chapter; the surrounding page was not read in full). They present him as the Persian king's cupbearer.
 """
-citations = [{ source = "finkelstein-silberman-2002", locator = "p. 301" }, { source = "finkelstein-silberman-2002", locator = "p. 300" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 301" }]

@@ -33,13 +33,13 @@ const ALL_TIME = { from: -4000, to: 400 };
 const AXIS_HEADING: Record<Axis, string> = {
   narrative: "What happened",
   composition: "When the books were written",
-  canon: "When they became scripture",
+  canon: "When the lists were made",
 };
 
 export function generateMetadata() {
   const metadata = shareMetadata(
     "Toledot: Bible timeline with dated ranges and evidence · Jot",
-    "When the events of the Bible happened, when its books were written and when they became scripture: every date a range, with the scholarly positions, arguments and outside evidence behind it.",
+    "When the events of the Bible happened, when its books were written and when lists and judgements of scripture were made: every date a range, with the scholarly positions, arguments and outside evidence behind it.",
     "/toledot",
     { card: { kind: "page", page: "toledot" } },
   );
@@ -67,7 +67,7 @@ export default async function ToledotPage({ searchParams }: { searchParams: Prom
         <p className="toledot-home__lede">
           Scholars often disagree about dates, so each date here is a span of years, not a single year. Click
           any date to see who argues what, and why. Three questions get their own line: when things
-          happened, when the books were written, and when people began treating them as scripture.
+          happened, when the books were written, and when lists and judgements of which books count as scripture were made.
         </p>
       </header>
 

@@ -15,12 +15,12 @@ verses = [
 id = "domitian"
 label = "End of Domitian's reign"
 tradition = "traditional"
-earliest = 81
+earliest = 95
 latest = 96
 held_by = "Irenaeus of Lyons"
 summary = """
 Irenaeus (Against Heresies 5.30.3, read directly: "towards the end of Domitian's reign"; Eusebius quotes him similarly) says the Apocalypse "was seen not long ago, but almost in our \
-own generation, at the end of the reign of Domitian". The years given here are simply the years of Domitian's reign, 81 to 96."""
+own generation, at the end of the reign of Domitian". Domitian reigned from 81 to 96; the span shown, 95 to 96, is the editor's reading of "the end of the reign"."""
 citations = [
   { source = "newadvent-irenaeus-ah-5", locator = "5.30.3" },
   { source = "newadvent-eusebius-he-5", locator = "5.8.6" },
@@ -74,7 +74,7 @@ Brown explains why the Domitian date has long been the scholarly majority view: 
 [[positions]]
 id = "carson-moo-late-domitian"
 label = "The last years of Domitian, about 95-96 CE"
-tradition = "critical"
+tradition = "traditional"
 earliest = 93
 latest = 96
 held_by = "D. A. Carson and Douglas J. Moo"

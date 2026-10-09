@@ -17,18 +17,28 @@ citations = [
 
 [[composed]]
 id = "second-century"
-label = "Second century CE (McDonald, 2017; Brown, 1997)"
+label = "Second century CE (McDonald, 2017)"
 tradition = "critical"
 earliest = 101
 latest = 200
-held_by = "Lee Martin McDonald (2017); Raymond E. Brown (1997)"
-summary = "McDonald calls it 'the second-century CE Protevangelium of James' (p. 289) and in his foreword one of the earliest books of the New Testament Apocrypha, which may contain first-century sources (p. xviii). Brown says it was in circulation by the middle of the second century, with Greek manuscripts beginning in the third."
-citations = [{ source = "mcdonald-2017-vol1", locator = "p. 289" }, { source = "mcdonald-2017-vol1", locator = "p. xviii" }, { source = "brown-1997", locator = "Appendix II, PDF p. 888" }]
+held_by = "Lee Martin McDonald (2017)"
+summary = "McDonald calls it 'the second-century CE Protevangelium of James' (p. 289) and in his foreword one of the earliest books of the New Testament Apocrypha, which may contain first-century sources (p. xviii)."
+citations = [{ source = "mcdonald-2017-vol1", locator = "p. 289" }, { source = "mcdonald-2017-vol1", locator = "p. xviii" }]
+
+[[composed]]
+id = "brown-mid-second-century"
+label = "In circulation by the middle of the second century CE (Brown, 1997)"
+tradition = "critical"
+earliest = 150
+latest = 150
+held_by = "Raymond E. Brown (1997)"
+summary = "Brown says the work, preserved in many Greek manuscripts beginning in the third century, 'was in circulation by mid-2d century'. That is an upper bound on its date of writing, stored as the single year 150."
+citations = [{ source = "brown-1997", locator = "Appendix II, PDF p. 888" }]
 
 [[composed]]
 id = "walker-first-four-centuries"
 label = "Within the first four centuries CE (Walker, 1870)"
-tradition = "critical"
+tradition = "traditional"
 earliest = 1
 latest = 400
 held_by = "Alexander Walker (1870)"

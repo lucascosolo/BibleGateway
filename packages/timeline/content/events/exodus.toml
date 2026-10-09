@@ -41,15 +41,15 @@ Exodus 1:11 has the Israelites building a store city called Raamses, a name link
 
 [[positions]]
 id = "late"
-label = "Late date (13th century BCE, reign of Ramesses II)"
-tradition = "critical"
-earliest = -1279
-latest = -1213
+label = "Late date (13th century BCE, about 1260/1250 at the earliest minimum, under Ramesses II)"
+tradition = "traditional"
+earliest = -1260
+latest = -1250
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen places the Exodus in the 13th century BCE under Ramesses II, who reigned about 1279-1213 BCE on the dating most Egyptologists follow. Kitchen's own figure is an exodus "about 1260/1250 (minimum)", with the oppression running "circa 1320-1260/1250", and he calls a thirteenth-century exodus "at present the least objectionable dating". Critical here means the date that leans on Egyptian evidence."""
+Kitchen places the Exodus in the 13th century BCE under Ramesses II, who reigned about 1279-1213 BCE on the dating most Egyptologists follow (the reign dates are not Kitchen's range for the Exodus). Kitchen's own figure is an exodus "about 1260/1250 (minimum)" (p. 307), with the oppression running "circa 1320-1260/1250" from Ramesses II's work on Pi-Ramesse "from 1279 onward" (p. 310), and he calls a thirteenth-century exodus "at present the least objectionable dating". Traditional here means a date that keeps the Bible's exodus as a historical event; the range is the 1260/1250 minimum Kitchen states."""
 citations = [
-  { source = "kitchen-2003", locator = "pp. 255–259; the date on pp. 307 and 310" },
+  { source = "kitchen-2003", locator = "pp. 255–259; p. 307 (exodus about 1260/1250); p. 310 (from 1279; oppression circa 1320-1260/1250)" },
   { source = "wikipedia-ramesses-ii" },
 ]
 
@@ -91,7 +91,7 @@ latest = -550
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman do not date an exodus event. They find no Egyptian or Sinai evidence for one and date the story's final form to the Twenty-sixth Dynasty, the second half of the seventh and first half of the sixth century BCE. They set this against the mainstream 13th-century view, based on the name Raamses and the Merneptah Stele."""
-citations = [{ source = "finkelstein-silberman-2002", locator = "p. 57" }, { source = "finkelstein-silberman-2002", locator = "p. 68" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 68" }]
 
   [[positions.arguments]]
   stance = "for"

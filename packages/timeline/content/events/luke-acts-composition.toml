@@ -36,16 +36,16 @@ Brown reasons from Luke's use of Mark: "if Mark is to be dated in the period 68�
 
 [[positions]]
 id = "carson-moo-mid-60s"
-label = "The mid- to late 60s for Luke, the mid-60s for Acts"
-tradition = "critical"
+label = "The 60s for Luke (mid- to late 60s at the latest), the mid-60s for Acts"
+tradition = "traditional"
 earliest = 62
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"
 summary = """
-Carson and Moo write the standard evangelical introduction to the New Testament. They defend Luke, Paul's companion, as the author of Acts, and prefer the 60s for the Gospel over the 75-85 CE range most scholars hold. They conclude that "Acts should be dated in the mid–60s". They are uncertain where Luke wrote, and Achaia in Greece is a reasonable conjecture. The year span shown here is the editor's reading of their dates."""
+Carson and Moo write the standard evangelical introduction to the New Testament. They defend Luke, Paul's companion, as the author of Acts, and prefer a date in the 60s for the Gospel over the 75-85 CE range they call the dominant critical view (pp. 207-208); if Mark is dated in the early 60s, they say, Luke could well be from the "mid- or late-60s" (p. 210). For Acts they say the evidence suggests "a date not long after A.D. 62" and conclude that "Acts should be dated in the mid–60s" (p. 300). They are uncertain where Luke wrote, and Achaia in Greece is a reasonable conjecture. The year span shown here is the editor's reading of those dates."""
 citations = [
-  { source = "carson-moo-2005", locator = "pp. 207–210" },
-  { source = "carson-moo-2005", locator = "pp. 296–300" },
+  { source = "carson-moo-2005", locator = "pp. 207–208, 210" },
+  { source = "carson-moo-2005", locator = "pp. 296, 300" },
 ]
 
   [[positions.arguments]]

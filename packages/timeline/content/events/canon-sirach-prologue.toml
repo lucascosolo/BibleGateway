@@ -16,10 +16,10 @@ id = "after-132-bce"
 label = "After 132 BCE, probably after 117 BCE"
 tradition = "critical"
 earliest = -132
-latest = -110
+latest = -117
 held_by = "Timothy H. Lim (reporting the usual reckoning)"
 summary = """
-Lim sets out the usual reckoning: the grandson reached Egypt in 132 BCE, and it has been conjectured that he spent about fifteen years translating and published the prologue after 117 BCE. The latest year, 110, is the editor's round limit; the sources give no end date."""
+Lim sets out the usual reckoning: the grandson reached Egypt in 132 BCE, and it has been conjectured that he spent about fifteen years translating and published the prologue after 117 BCE. The range stops at 117 BCE, the last year Lim names; on that conjecture the prologue came after it, and no source gives an end date."""
 citations = [{ source = "lim-2013", locator = "p. 95" }]
 
   [[positions.arguments]]

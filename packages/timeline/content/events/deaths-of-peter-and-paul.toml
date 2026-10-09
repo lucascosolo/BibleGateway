@@ -55,14 +55,18 @@ citations = [{ source = "newadvent-eusebius-he-2", locator = "2.25.5–8" }]
 
 [[positions]]
 id = "brown-after-summer-64"
-label = "After summer 64 CE (Brown, Traditional Chronology)"
+label = "After summer 64 CE, no later than 67 or 68 (Brown, Traditional Chronology)"
 tradition = "chronological"
 earliest = 64
 latest = 68
 held_by = "Raymond E. Brown (Traditional Chronology)"
 summary = """
-Raymond Brown's Table 6 ends: "after summer 64 Death in Rome under Nero." The upper year of 68, the end of Nero's reign, is the cataloguer's bound, not Brown's."""
-citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
+Raymond Brown's Table 6 ends: "after summer 64 Death in Rome under Nero." In the text he says Paul was martyred "either about the same time as Peter (AD 64) or somewhat later (67)", and that Peter died "sometime between 64 and 68 during Nero's persecution". The upper year of 68 is Brown's bound for Peter, not for Paul, and the Table itself gives only "after summer 64"."""
+citations = [
+  { source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" },
+  { source = "brown-1997", locator = "ch. 16, PDF p. 481" },
+  { source = "brown-1997", locator = "ch. 33, PDF p. 759" },
+]
 
   [[positions.arguments]]
   stance = "for"

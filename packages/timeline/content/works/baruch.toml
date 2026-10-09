@@ -22,7 +22,7 @@ citations = [{ source = "van-der-toorn-2007", locator = "p. 226" }]
 [[composed]]
 id = "pieces-first-century-bce"
 label = "Component writings, first century BCE (unsigned preface)"
-tradition = "critical"
+tradition = "traditional"
 earliest = -100
 latest = -1
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
@@ -32,7 +32,7 @@ citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the
 [[composed]]
 id = "compiled-first-century-ce"
 label = "Compiled with its introduction, first century CE (unsigned preface)"
-tradition = "critical"
+tradition = "traditional"
 earliest = 1
 latest = 100
 held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"

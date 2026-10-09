@@ -15,13 +15,13 @@ verses = [
 
 [[positions]]
 id = "brown-around-100"
-label = "About 100 CE, after the Gospel, during a schism"
+label = "About 100 CE (3 John shortly after), after the Gospel, during a schism"
 tradition = "critical"
-earliest = 95
-latest = 110
+earliest = 100
+latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown, a critical scholar, dates 1 John after the Gospel: "Most likely after the Gospel according to John; thus ca. AD 100." Of 1 John's author he says "probably not" the Gospel's writer. He places 2 John at about the same time and 3 John shortly after AD 100, and the span shown here is the editor's reading of those dates."""
+Brown, a critical scholar, dates 1 John after the Gospel: "Most likely after the Gospel according to John; thus ca. AD 100." Of 1 John's author he says "probably not" the Gospel's writer. He places 2 John at about the same time ("ca. AD 100") and 3 John "shortly after AD 100". Brown gives no span, so the single year shown here is his "ca. AD 100"."""
 citations = [
   { source = "brown-1997", locator = "ch. 12, Summary of Basic Information" },
   { source = "brown-1997", locator = "ch. 13, Summary of Basic Information" },
@@ -38,7 +38,7 @@ Brown ties the letters to a break inside the Johannine community: "The phase dur
 [[positions]]
 id = "carson-moo-early-90s"
 label = "The early 90s, by the apostle John, probably at Ephesus"
-tradition = "critical"
+tradition = "traditional"
 earliest = 90
 latest = 93
 held_by = "D. A. Carson and Douglas J. Moo"

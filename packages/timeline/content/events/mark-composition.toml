@@ -10,7 +10,7 @@ This asks who wrote the Gospel of Mark and when. Most scholars place it around t
 verses = [
   { ref = "Mark.13.2", link = "dates", note = "Jesus foretells that not one stone of the Temple will be left on another." },
   { ref = "Mark.13.14", link = "background", note = "Mark's 'abomination of desolation' is read against the revolt of 66-70 CE." },
-  { ref = "Mark.1.1", link = "describes", note = "The Gospel opens here without naming its author." },
+  { ref = "Mark.1.1", link = "names", note = "This entry asks who wrote the Gospel of Mark, which names no author." },
 ]
 
 [[positions]]
@@ -52,7 +52,7 @@ Brown reports that, for this dating, the Gospel's silence counts as internal sup
 [[positions]]
 id = "carson-moo-late-50s-or-60s"
 label = "Late 50s or the 60s, probably in Rome"
-tradition = "critical"
+tradition = "traditional"
 earliest = 57
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"

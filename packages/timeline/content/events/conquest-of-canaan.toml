@@ -50,16 +50,16 @@ A problem for any conquest date comes from Kathleen Kenyon, who dated Jericho's 
 
 [[positions]]
 id = "c-1220"
-label = "Conquest 1220-1210 BCE"
+label = "Conquest in the decade or so before 1210 BCE"
 tradition = "chronological"
 earliest = -1220
 latest = -1210
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen dates the conquest to 1220-1210 BC and the exodus to 1260 BC (as reported in Wood's account of Kitchen's Reliability, pp. 159, 307, 359). Israel is already in Canaan by Merneptah's fourth year, about 1210 BC (Wood p. 476), so the conquest must come before that."""
+Kitchen sets the latest setting of the book of Joshua "in the decade or so before 1210", with any Israelite entry into Canaan, since Israel is in Canaan by 1210 at the latest (Kitchen p. 183); he gives 1215-1200 for Joshua and the elders (p. 207). The range 1220-1210 is that decade. Kitchen's pages on Jericho and Ai (pp. 187-188) discuss the sites and do not give a conquest date; Ai's renewed settlement is put at about 1220/1200. Wood reports the exodus at 1260 BC (Wood's account of Kitchen's Reliability, pp. 159, 307, 359) and Merneptah's fourth year at about 1210 BC (Wood p. 476)."""
 citations = [
   { source = "wood-2005", locator = "pp. 476, 478" },
-  { source = "kitchen-2003", locator = "pp. 187–188" },
+  { source = "kitchen-2003", locator = "p. 183; p. 207" },
 ]
 
   [[positions.arguments]]

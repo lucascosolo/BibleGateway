@@ -53,10 +53,10 @@ citations = [
 name = "Papyrus Michigan 130"
 siglum = "P.Mich. 130"
 earliest = 171
-latest = 200
+latest = 300
 language = "Greek"
-note = "Preserves Mandates. Metzger gives 'late 2nd century', converted here to 171-200."
-citations = [{ source = "metzger-1987-canon", locator = "p. 63 n. 34" }]
+note = "Preserves Mandates. Metzger gives P. Mich. 130 as 'late 2nd cent.' (p. 63 n. 34), but on p. 65 dates 'the Michigan codex of Hermas' to the 'second half of 3rd cent.'; he does not say there whether these are the same manuscript. The range, 171-300, spans late second century to the second half of the third."
+citations = [{ source = "metzger-1987-canon", locator = "p. 63 n. 34" }, { source = "metzger-1987-canon", locator = "p. 65" }]
 
 [[witnesses]]
 name = "Papyrus Iandanae 4"

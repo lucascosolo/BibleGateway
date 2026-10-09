@@ -3,7 +3,7 @@ title = "The Second Temple: foundation and completion"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "claims-checked"
+status = "sources-located"
 summary = """
 The exiles return, and in the second year Zerubbabel and Jeshua lay the foundation (Ezra 3). Work then stops. It starts again under the prophets Haggai and Zechariah, in the second year of King Darius. The house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), in spring 516 BCE. Some scholars date the building later."""
 verses = [
@@ -49,10 +49,10 @@ citations = [
   [[positions.arguments]]
   stance = "for"
   text = """
-  Ezra 6:15 dates the completion to the third of Adar in Darius's sixth year, and Haggai 1:1 and Zechariah 1:1 date the resumption of work to his second year. Darius I came to the throne in 522 BCE, so his second year is 520 and his sixth year runs 516/515."""
+  Ezra 6:15 itself dates the completion to the third of Adar in Darius's sixth year (a biblical detail, with no filed page repeating the month and day), and Haggai 1:1 and Zechariah 1:1 date the resumption of work to his second year. Darius I came to the throne in 522 BCE, so his second year is 520 and his sixth year runs 516/515."""
   citations = [
-    { source = "kitchen-2003", locator = "p. 71" },
-    { source = "finkelstein-silberman-2002", locator = "p. 300" },
+    { source = "kitchen-2003", locator = "p. 71 (sixth year of Darius I, 516); p. 73 (Darius I, 522-486); p. 376 (Haggai 1:1 and Zechariah 1:1, second year of Darius I)" },
+    { source = "finkelstein-silberman-2002", locator = "p. 300 (finished in 516 BCE)" },
   ]
   verses = [
     { ref = "Ezra.6.15", link = "dates" },

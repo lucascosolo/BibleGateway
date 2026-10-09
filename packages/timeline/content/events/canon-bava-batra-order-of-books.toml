@@ -7,7 +7,7 @@ status = "sources-located"
 summary = """
 A baraita, a teaching of the early rabbis left out of the Mishnah, is quoted in the Babylonian Talmud at Bava Batra 14b-15a. It gives the first itemised list of the Prophets and the Writings in three divisions, and says who wrote each book: Moses the Torah and Job, Joshua his own book and the last eight verses of the Torah, Samuel his book with Judges and Ruth, and so on. The Talmud that preserves it was compiled centuries later, but critical scholars date the teaching itself to the second century CE. McDonald puts it at 150-180 CE and doubts it spoke for most Jews of that time; Philip Alexander, as Lim reports, dates it before 200 CE. Some scholars use it as evidence of a three-part canon centuries earlier; McDonald calls that an overstatement."""
 verses = [
-  { ref = "Deut.34.5-Deut.34.12", link = "describes", note = "The baraita assigns these last verses of the Torah to Joshua, and the Talmud then debates it." },
+  { ref = "Deut.34.5-Deut.34.12", link = "background", note = "The baraita assigns these last verses of the Torah to Joshua, and the Talmud then debates it." },
   { ref = "Num.22.2-Num.22.6", link = "background", note = "The baraita says Moses wrote the Balaam story, which begins here." },
   { ref = "Ruth.1.1", link = "names", note = "Ruth, which the baraita assigns to Samuel and places first among the Writings." },
   { ref = "Job.1.1", link = "names", note = "Job, which the baraita assigns to Moses." },
@@ -40,12 +40,12 @@ McDonald rejects the use of the baraita as evidence for a widespread three-part 
 id = "before-200"
 label = "Before 200 CE, inside a much later Talmudic discussion"
 tradition = "critical"
-earliest = 100
+earliest = 200
 latest = 200
 held_by = "Philip S. Alexander (as reported by Timothy H. Lim)"
 summary = """
-Lim reports that Alexander dates the baraita before 200 CE but notes that it is embedded in a Talmudic discussion of a much later date. The earliest year, 100, is the editor's bound, not Alexander's."""
-citations = [{ source = "lim-2013", locator = "p. 180; p. 37" }]
+Lim reports that Alexander dates the baraita before 200 CE but notes that it is embedded in a Talmudic discussion of a much later date. Alexander gives no earliest year, so only his upper limit is stored, and the label carries the word "before"."""
+citations = [{ source = "lim-2013", locator = "p. 180; p. 37 (Leiman, the same date)" }]
 
 [[attestations]]
 artifact = "bava-batra-14b-order-of-the-books"

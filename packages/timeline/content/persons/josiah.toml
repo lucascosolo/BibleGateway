@@ -9,7 +9,7 @@ verses = [
   { ref = "2Kgs.23.1-2Kgs.23.25", link = "describes", note = "2 Kings 23:1–25 tells of the covenant, the purge and the Passover of Josiah's eighteenth year." },
   { ref = "2Kgs.23.29-2Kgs.23.30", link = "describes", note = "2 Kings 23:29–30 tells of Josiah's death at Megiddo." },
 ]
-events = ["josiah-reform", "josiah-death-megiddo", "conquest-of-canaan"]
+events = ["josiah-reform", "josiah-death-megiddo"]
 # Locators carried over from events/josiah-reform.toml, josiah-death-megiddo.toml and conquest-of-canaan.toml.
 # F&S p. 144 ("a new David") read in the OCR at ~/.cache/jot/sources/finkelstein-silberman-2001/ocr/page-157.txt.
 citations = [

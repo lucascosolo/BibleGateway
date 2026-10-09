@@ -59,7 +59,7 @@ latest = -538
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman say Persia conquered Babylon in 539 BCE and Cyrus issued his decree in his first year; they also write of the proclamation in 538. They read it as Persian policy, not sympathy, and hold the biblical figure of about 50,000 returnees to be exaggerated."""
-citations = [{ source = "finkelstein-silberman-2002", locator = "p. 298" }, { source = "finkelstein-silberman-2002", locator = "p. 307" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 298 (Persians in 539)" }, { source = "finkelstein-silberman-2002", locator = "p. 307 (538)" }]
 
   [[positions.arguments]]
   stance = "for"

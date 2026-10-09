@@ -10,7 +10,7 @@ verses = [
   { ref = "Dan.6.16-Dan.6.23", link = "describes", note = "Daniel 6:16–23 tells of the lions' den." },
   { ref = "Dan.7.1", link = "describes", note = "Daniel 7:1 dates the first vision to Belshazzar's first year." },
 ]
-events = ["daniel-composition", "babylon-falls-539"]
+events = ["babylon-falls-539"]
 # Citations carried over from events/daniel-composition.toml and issues/belshazzar-king-and-father.toml (no locators there either).
 citations = [
   { source = "collins-1993" },

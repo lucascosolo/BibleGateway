@@ -7,7 +7,7 @@ status = "sources-located"
 summary = """
 Irenaeus, bishop of Lyons, wrote Against Heresies to refute the Gnostics. In book 3 he argues that there cannot be more or fewer than four Gospels, as there are four regions of the world, four principal winds and four living creatures, which he matches to the four evangelists. Metzger takes this as the moment the Gospel canon is closed for him, while the rest of his New Testament stays open. Irenaeus quotes over a thousand New Testament passages, and Metzger concludes that by about 180 a three-part New Testament of about twenty-two books was known in southern Gaul. The work's date is not seriously disputed."""
 verses = [
-  { ref = "Rev.4.6-Rev.4.8", link = "describes", note = "Irenaeus matches these four living creatures to the four Gospels." },
+  { ref = "Rev.4.6-Rev.4.8", link = "background", note = "Irenaeus matches these four living creatures to the four Gospels." },
   { ref = "Ezek.1.10", link = "background", note = "These four faces of the living creatures are the older image behind Irenaeus's argument." },
   { ref = "Matt.1.1", link = "names", note = "Matthew, one of the four." },
   { ref = "John.1.1", link = "names", note = "John, one of the four." },
@@ -18,11 +18,11 @@ id = "about-180"
 label = "About 180 CE, when Irenaeus was bishop of Lyons"
 tradition = "critical"
 earliest = 178
-latest = 190
+latest = 180
 held_by = "Bruce M. Metzger"
 summary = """
-Metzger has Irenaeus succeed Pothinus as bishop of Lyons in 178 and dates his evidence for the four Gospels by the year 180. McDonald gives Irenaeus as about 170-180. The latest year, 190, is the editor's margin; neither source gives one."""
-citations = [{ source = "metzger-1987-canon", locator = "pp. 153-155" }, { source = "mcdonald-2017-vol1", locator = "p. 32" }]
+Metzger has Irenaeus succeed Pothinus as bishop of Lyons in 178 and dates his evidence for the four Gospels by the year 180. McDonald gives Irenaeus as about 170-180. The range runs from Irenaeus's succession in 178 to Metzger's "by the year 180"."""
+citations = [{ source = "metzger-1987-canon", locator = "p. 153; p. 155" }, { source = "mcdonald-2017-vol1", locator = "p. 32" }]
 
   [[positions.arguments]]
   stance = "for"

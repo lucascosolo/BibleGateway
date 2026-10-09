@@ -18,7 +18,7 @@ citations = [
 [[composed]]
 id = "second-century"
 label = "Second century CE (Walker, 1870)"
-tradition = "critical"
+tradition = "traditional"
 earliest = 101
 latest = 200
 held_by = "Alexander Walker (1870)"

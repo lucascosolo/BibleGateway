@@ -19,6 +19,7 @@ verses = [
 ]
 citations = [
   { source = "brown-1997", locator = "ch. 16, section The Life of Paul" },
+  { source = "brown-1997", locator = "ch. 16, PDF pp. 468, 481" },
   { source = "ehrman-paul-2000", locator = "p. 96 approx." },
   { source = "ehrman-paul-2000", locator = "p. 173 approx." },
 ]
