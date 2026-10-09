@@ -151,10 +151,10 @@ describe("outside books: OSIS form and formatting", () => {
   });
 });
 
-describe("bookBounds includes the verse-0 slot", () => {
+describe("bookBounds includes the verse-0 slot when the book has a prologue", () => {
   it("starts at chapter 1 verse 0", () => {
-    expect(bookBounds(71).start).toBe(71_001_000);
-    expect(bookBounds(71).end).toBe(71_999_999);
+    expect(bookBounds(71, true).start).toBe(71_001_000);
+    expect(bookBounds(71, true).end).toBe(71_999_999);
   });
   it("whole-book parse equals bookBounds and formats as the book name", () => {
     const r = parse("Sirach");
@@ -190,5 +190,34 @@ describe("outside books: real chapter counts and page numbering", () => {
     expectChapter(["Gospel of Mary 9"], 107, 9);
     expectChapter(["Gospel of Judas 33"], 108, 33);
     expectVerse(["Gospel of Philip 86:2"], 109_086_002);
+  });
+});
+
+describe("short OSIS form for single-chapter books", () => {
+  it("reads Book.verse as chapter 1 verse N", () => {
+    for (const [s, id] of [["GThom.42", 101_001_042], ["GThom.1.42", 101_001_042], ["GPet.9", 102_001_009], ["Jude.5", 65_001_005], ["GThom 42", 101_001_042]] as const) {
+      const r = parse(s);
+      expect([s, r.start, r.end, r.isWhole]).toEqual([s, id, id, null]);
+    }
+  });
+  it("keeps Book.1 on a one-chapter book as the whole chapter", () => {
+    const r = parse("GThom.1");
+    expect([r.start, r.isWhole]).toEqual([101_001_001, "chapter"]);
+  });
+});
+
+describe("hasPrologue drives whole-book bounds", () => {
+  const withPrologue = new BookIndex(BOOKS.map((b) => (b.bookId === 71 ? { ...b, hasPrologue: true } : b)));
+  it("bookBounds starts at verse 0 only for a book with a prologue", () => {
+    expect(bookBounds(1).start).toBe(1_001_001);
+    expect(bookBounds(71).start).toBe(71_001_001);
+    expect(bookBounds(71, true).start).toBe(71_001_000);
+    expect(bookBounds(71, true).end).toBe(71_999_999);
+  });
+  it("a whole-book parse uses the record's flag", () => {
+    const sir = parseReference("Sirach", withPrologue);
+    expect([sir.start, sir.isWhole]).toEqual([71_001_000, "book"]);
+    expect(parseReference("Genesis", withPrologue).start).toBe(1_001_001);
+    expect(parseReference("Gen", withPrologue).start).toBe(1_001_001);
   });
 });

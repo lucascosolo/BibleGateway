@@ -117,13 +117,16 @@ export const chapterEnd = (book: number, chapter: number): VerseId =>
 /** Chapter 1 verse 0: the slot for a book's prologue. */
 export const prologueId = (book: number): VerseId => (book * BOOK_FACTOR + CHAPTER_FACTOR) as VerseId;
 
-/** Bounds covering an entire book. Safe as SQL `BETWEEN` endpoints. */
-export function bookBounds(book: number): VerseRange {
+/**
+ * Bounds covering an entire book. Safe as SQL `BETWEEN` endpoints. Verse 0 is included only for
+ * a book whose corpus has a prologue row, so the 66 keep starting at verse 1.
+ */
+export function bookBounds(book: number, hasPrologue = false): VerseRange {
   if (!Number.isInteger(book) || book < 1) {
     throw new InvalidReferenceError(`book must be a positive integer, got ${book}`);
   }
   return {
-    start: prologueId(book),
+    start: hasPrologue ? prologueId(book) : toVerseId(book, 1, 1),
     end: (book * BOOK_FACTOR + MAX_CHAPTER * CHAPTER_FACTOR + MAX_VERSE) as VerseId,
   };
 }

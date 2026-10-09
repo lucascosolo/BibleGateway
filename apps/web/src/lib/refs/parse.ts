@@ -100,7 +100,7 @@ function parseOutsideForms(raw: string, books: BookIndex): ParsedReference | nul
   const psalm = raw.match(/^(?:ps|psa|psalm|psalms)\.?\s*151(?:\s*:\s*(\d+))?$/i);
   const psalmBook = psalm && books.find("Ps151");
   if (psalm && psalmBook) {
-    if (psalm[1] === undefined) return { ...bookBounds(psalmBook.bookId), raw, isWhole: "book" };
+    if (psalm[1] === undefined) return { ...bookBounds(psalmBook.bookId, psalmBook.hasPrologue), raw, isWhole: "book" };
     const id = toVerseId(psalmBook.bookId, 1, Number(psalm[1]));
     return { start: id, end: id, raw, isWhole: null };
   }
@@ -123,8 +123,13 @@ function parseOsis(raw: string, books: BookIndex): ParsedReference | null {
   // so "Mt. 5" style input is handled by the normal parser.
   if (!book || (!m[2] && !raw.includes("."))) return null;
 
-  if (!m[2]) return { ...bookBounds(book.bookId), raw, isWhole: "book" };
+  if (!m[2]) return { ...bookBounds(book.bookId, book.hasPrologue), raw, isWhole: "book" };
   const chapter = Number(m[2]);
+  // "GThom.42" is logion 42, as "GThom 42" is: a single-chapter book has no chapter 42.
+  if (book.chapterCount === 1 && !m[3] && chapter > 1) {
+    const id = toVerseId(book.bookId, 1, chapter);
+    return { start: id, end: id, raw, isWhole: null };
+  }
   requireChapter(book, chapter, raw);
   if (!m[3]) {
     return {
@@ -151,7 +156,7 @@ function expandSingle(text: string, books: BookIndex, raw: string): ParsedRefere
   const book = books.require(bookText.trim());
 
   if (chapterStr === undefined) {
-    return { ...bookBounds(book.bookId), raw, isWhole: "book" };
+    return { ...bookBounds(book.bookId, book.hasPrologue), raw, isWhole: "book" };
   }
 
   const chapter = Number(chapterStr);
@@ -293,7 +298,7 @@ export function formatRange(range: VerseRange, books: BookIndex, opts: FormatOpt
   const ev = verseOf(range.end);
 
   // Whole book.
-  const wholeBook = bookBounds(startBook.bookId);
+  const wholeBook = bookBounds(startBook.bookId, startBook.hasPrologue);
   if (range.start === wholeBook.start && range.end === wholeBook.end) return name;
 
   // Crosses books.

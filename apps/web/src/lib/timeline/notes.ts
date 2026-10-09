@@ -1,4 +1,4 @@
-import type { IssueSummary, ToledotNote } from "@/lib/db/timeline";
+import type { IssueSummary, ToledotNote, VerseLink, WorkNote } from "@/lib/db/timeline";
 
 import { getLexiconEntry } from "@/lib/lexicon";
 
@@ -17,7 +17,12 @@ export interface ToledotSentence {
   note?: string;
   href: string;
   draft: boolean;
+  /** What following the link does, for its accessible name; the timeline when absent. */
+  opens?: string;
 }
+
+/** A margin note beside a verse: a timeline subject, or a work that quotes, echoes or records it. */
+export type MarginNote = ToledotNote | WorkNote;
 
 const ISSUE_LEAD: Record<IssueSummary["kind"], string> = {
   chronology: "Chronology question",
@@ -33,6 +38,13 @@ const countWord = (n: number) => (n < WORDS.length ? WORDS[n] : String(n));
 const counted = (n: number, one: string, many: string) => `${countWord(n)} ${n === 1 ? one : many}`;
 const asSentence = (s: string) => (/[.!?]$/.test(s.trim()) ? s.trim() : `${s.trim()}.`);
 
+const WORK_LINK: Record<VerseLink["linkType"], [lead: string, body: (title: string) => string]> = {
+  alludes: ["Parallel in an outside work", (t) => `${t} shares wording or a saying with this passage.`],
+  background: ["Retold in an outside work", (t) => `${t} retells or builds on this passage.`],
+  describes: ["Named in an outside work", (t) => `${t} attaches itself to this passage.`],
+  dates: ["Outside work", (t) => `${t} is dated by reference to this passage.`],
+};
+
 const ARTIFACT_VERB: Record<string, string> = {
   corroborates: "corroborates",
   "partially-corroborates": "partly corroborates",
@@ -41,9 +53,16 @@ const ARTIFACT_VERB: Record<string, string> = {
   "in-tension": "contradicts",
 };
 
-function sentence(note: ToledotNote): ToledotSentence {
+function sentence(note: MarginNote): ToledotSentence {
   const s = note.subject;
   switch (s.kind) {
+    case "work": {
+      const [lead, body] =
+        s.role === "record"
+          ? ["Work record", `${s.title}: its dating, surviving copies and who reads it as scripture.`]
+          : [WORK_LINK[note.linkType][0], WORK_LINK[note.linkType][1](s.title)];
+      return { lead, body, href: `/chitzonim/works/${s.id}`, draft: unchecked(s.status), opens: "open the work record" };
+    }
     case "event": {
       const href = `/toledot/events/${s.id}`;
       const draft = unchecked(s.status);
@@ -102,7 +121,7 @@ function unchecked(status: string): boolean {
   return status !== "claims-checked" && status !== "expert-reviewed";
 }
 
-export function toledotSentence(note: ToledotNote): ToledotSentence {
+export function toledotSentence(note: MarginNote): ToledotSentence {
   const out = sentence(note);
   return note.note ? { ...out, note: asSentence(note.note) } : out;
 }

@@ -21,7 +21,7 @@ import {
 import { usePreferencesStore } from "@/lib/store/preferences";
 import type { InsightNote } from "@/lib/insights/notes";
 import { InsightNotes } from "./InsightNotes";
-import type { ToledotNote } from "@/lib/db/timeline";
+import type { MarginNote } from "@/lib/timeline/notes";
 import { ToledotNotes } from "./ToledotNotes";
 import { Interlinear } from "./Interlinear";
 import { OmittedVerse, type OmittedVerseNote } from "./OmittedVerse";
@@ -239,7 +239,7 @@ export interface PassageRendererProps {
    */
   insightNotes?: ReadonlyMap<VerseId, readonly InsightNote[]>;
   /** Timeline notes keyed by the rendered verse they sit under, supplied by the server page. */
-  toledotNotes?: ReadonlyMap<VerseId, readonly ToledotNote[]>;
+  toledotNotes?: ReadonlyMap<VerseId, readonly MarginNote[]>;
   /** Preformatted "verses 1–3" disclosure per note id, for links spanning several verses. */
   toledotSpans?: ReadonlyMap<string, string>;
   /** Edition-level Greek differences, supplied by the server page and rendered in this surface. */

@@ -191,3 +191,38 @@ describe("toledotSentence: investigations", () => {
     expect(s.draft).toBe(false);
   });
 });
+
+describe("toledotSentence: works", () => {
+  type WorkNote = import("@/lib/db/timeline").WorkNote;
+  const wnote = (role: "link" | "record", linkType: ToledotNote["linkType"], over: Record<string, unknown> = {}, extra: Partial<WorkNote> = {}): WorkNote => ({
+    id: "work:1-enoch@65001014", anchor: 65_001_014 as never, start: 65_001_014 as never, end: 65_001_015 as never,
+    linkType, note: null,
+    subject: { kind: "work", id: "1-enoch", title: "1 Enoch", status: "claims-checked", role, ...over },
+    ...extra,
+  });
+
+  it("a record is a work record, opening the work", () => {
+    expect(toledotSentence(wnote("record", "describes"))).toEqual({
+      lead: "Work record",
+      body: "1 Enoch: its dating, surviving copies and who reads it as scripture.",
+      href: "/chitzonim/works/1-enoch", opens: "open the work record", draft: false,
+    });
+  });
+  it.each([
+    ["alludes", "Parallel in an outside work", "1 Enoch shares wording or a saying with this passage."],
+    ["background", "Retold in an outside work", "1 Enoch retells or builds on this passage."],
+    ["describes", "Named in an outside work", "1 Enoch attaches itself to this passage."],
+    ["dates", "Outside work", "1 Enoch is dated by reference to this passage."],
+  ] as const)("a %s link reads as its own sentence", (linkType, lead, body) => {
+    expect(toledotSentence(wnote("link", linkType))).toMatchObject({ lead, body, href: "/chitzonim/works/1-enoch", opens: "open the work record" });
+  });
+  it("appends the link note as a sentence", () => {
+    expect(toledotSentence(wnote("link", "alludes", {}, { note: "Jude quotes 1 Enoch 1:9" }))).toMatchObject({
+      lead: "Parallel in an outside work", note: "Jude quotes 1 Enoch 1:9.",
+    });
+  });
+  it("is draft unless claims-checked or expert-reviewed", () => {
+    expect(toledotSentence(wnote("link", "alludes", { status: "sources-located" })).draft).toBe(true);
+    expect(toledotSentence(wnote("link", "alludes", { status: "expert-reviewed" })).draft).toBe(false);
+  });
+});

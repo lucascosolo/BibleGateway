@@ -1091,3 +1091,40 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
   }
   return notes.sort((a, b) => a.anchor - b.anchor);
 }
+
+// --- Work notes -------------------------------------------------------------------------------
+
+export interface WorkNoteSubject { kind: "work"; id: string; title: string; status: ReviewStatus; role: "link" | "record" }
+export type WorkNote = Omit<ToledotNote, "subject"> & { subject: WorkNoteSubject };
+
+/** Book 67 onward is outside the 66; a work's links there are its own text, not a parallel. */
+const FIRST_OUTSIDE_VERSE_ID = 67_000_000;
+
+/**
+ * One note per work verse link (`work_verses`) intersecting `range` in the 66 books: the passage
+ * a work quotes, echoes or retells. Interval intersection on link endpoints, as above.
+ */
+export function getWorkNotesForRange(range: VerseRange): WorkNote[] {
+  if (!hasWorks()) return [];
+  return all<{ workId: string; title: string; status: ReviewStatus; start: VerseId; end: VerseId; linkType: VerseLink["linkType"]; note: string | null }>(
+    `SELECT v.work_id AS workId, w.title, w.status, v.start_verse_id AS start, v.end_verse_id AS "end",
+            v.link_type AS linkType, v.note
+     FROM work_verses v JOIN works w ON w.work_id = v.work_id
+     WHERE v.start_verse_id <= ? AND v.end_verse_id >= ? AND v.start_verse_id < ?
+     ORDER BY v.start_verse_id, v.rowid`,
+    range.end,
+    range.start,
+    FIRST_OUTSIDE_VERSE_ID
+  ).map(({ workId, title, status, start, end, linkType, note }) => {
+    const anchor = Math.max(start, range.start) as VerseId;
+    return {
+      id: `work:${workId}@${anchor}`,
+      anchor,
+      start,
+      end,
+      linkType,
+      note,
+      subject: { kind: "work", id: workId, title, status, role: "link" },
+    };
+  });
+}

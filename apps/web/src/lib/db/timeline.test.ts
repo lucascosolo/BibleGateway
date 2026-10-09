@@ -558,3 +558,53 @@ describe("works with no composition date (composed_undated)", () => {
     }
   });
 });
+
+describe("getWorkNotesForRange", () => {
+  async function withWorks(setup: string | null) {
+    const { default: Database } = await vi.importActual<typeof import("better-sqlite3")>("better-sqlite3");
+    const fs = await vi.importActual<typeof import("node:fs")>("node:fs");
+    const path = await vi.importActual<typeof import("node:path")>("node:path");
+    const schema = fs.readFileSync(path.resolve(__dirname, "../../../../../packages/timeline/schema.sql"), "utf8");
+    const db = new Database(":memory:");
+    const cut = schema.search(/CREATE TABLE works\b/);
+    db.exec(setup === null ? schema.slice(0, cut) : schema);
+    if (setup) db.exec(setup);
+    const prior = fixture.db;
+    fixture.db = db;
+    vi.resetModules();
+    return { t: await import("./timeline"), done() { fixture.db = prior; db.close(); vi.resetModules(); } };
+  }
+  const SETUP = `
+    INSERT INTO works(work_id,title,also_known_as,canon,status,summary,contents,original_language,composed_earliest,composed_latest,traditional_earliest,traditional_latest)
+      VALUES ('1-enoch','1 Enoch',NULL,'pseudepigrapha','sources-located','s',NULL,'Aramaic',-300,-1,NULL,NULL);
+    INSERT INTO work_verses(work_id,start_verse_id,end_verse_id,link_type,note) VALUES
+      ('1-enoch',65001014,65001015,'alludes','Jude quotes 1 Enoch 1:9.'),
+      ('1-enoch',85001009,85001009,'background',NULL);
+  `;
+  const range = (start: number, end: number) => ({ start: start as never, end: end as never });
+
+  it("returns one anchored note per intersecting link in books 1-66, with the work as subject", async () => {
+    const h = await withWorks(SETUP);
+    try {
+      const notes = h.t.getWorkNotesForRange(range(65_001_001, 65_001_025));
+      expect(notes).toEqual([{
+        id: "work:1-enoch@65001014", anchor: 65_001_014, start: 65_001_014, end: 65_001_015,
+        linkType: "alludes", note: "Jude quotes 1 Enoch 1:9.",
+        subject: { kind: "work", id: "1-enoch", title: "1 Enoch", status: "sources-located", role: "link" },
+      }]);
+      expect(h.t.getWorkNotesForRange(range(65_001_015, 65_001_025))[0].anchor).toBe(65_001_015);
+    } finally { h.done(); }
+  });
+  it("never returns a link anchored in an outside book", async () => {
+    const h = await withWorks(SETUP);
+    try {
+      expect(h.t.getWorkNotesForRange(range(85_001_001, 85_001_020))).toEqual([]);
+    } finally { h.done(); }
+  });
+  it("returns [] against a db with no works table", async () => {
+    const h = await withWorks(null);
+    try {
+      expect(h.t.getWorkNotesForRange(range(65_001_001, 65_001_025))).toEqual([]);
+    } finally { h.done(); }
+  });
+});

@@ -63,7 +63,7 @@ describe("verse id encoding", () => {
 
   it("gives book bounds that contain every verse of the book but no other book", () => {
     const gen = bookBounds(1);
-    expect(gen.start).toBe(1_001_000);
+    expect(gen.start).toBe(1_001_001);
     expect(gen.end).toBeGreaterThanOrEqual(toVerseId(1, 50, 26));
     expect(gen.end).toBeLessThan(toVerseId(2, 1, 1));
   });
@@ -269,4 +269,13 @@ describe("chapterSpan", () => {
     expect(chapterSpan(parseReference("Gen 1:1-Exod 2:3", books))).toBe(Infinity);
   });
 
+});
+
+describe("bookBounds and the prologue slot", () => {
+  it("starts at verse 1 unless the book has a prologue", () => {
+    expect(bookBounds(1).start).toBe(1_001_001);
+    expect(bookBounds(71).start).toBe(71_001_001);
+    expect(bookBounds(71, true).start).toBe(71_001_000);
+    expect(bookBounds(1, false).end).toBe(bookBounds(1, true).end);
+  });
 });

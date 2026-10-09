@@ -19,6 +19,8 @@ export interface BookRecord {
   chapterCount: number;
   canon?: Canon;
   numbering?: Numbering;
+  /** True when the corpus has a chapter 1 verse 0 (prologue) row for this book. */
+  hasPrologue?: boolean;
 }
 
 export type Canon = "hebrew" | "nt" | "deuterocanon" | "pseudepigrapha" | "nt-apocrypha" | "apostolic";
