@@ -86,6 +86,45 @@
       "layout": "multi-chapter-files",
       "raw_dir": "asv",
       "file_map": "asv-files.json"
+    },
+    {
+      "code": "KJVA-librivox",
+      "translation": "KJVA",
+      "language": "eng",
+      "reader": "LibriVox volunteers (per book in the attribution)",
+      "name": "King James Version Apocrypha, read by LibriVox volunteers",
+      "source_url": "https://librivox.org/",
+      "license": "Public domain (LibriVox)",
+      "attribution": "LibriVox recordings of the King James Version Apocrypha, each book a separate recording: Tobit read by Glenn O'Brien (archive.org/details/tobit_kjv_1512_librivox); Judith, 1 Maccabees and 2 Maccabees read by ancientchristian (bookofjudith_2007_librivox, 1maccabees_2005_librivox, 2maccabees_2005_librivox); the Wisdom of Solomon read by a LibriVox volunteer (wisdom_of_solomon_kjv_1407_librivox); the Prayer of Azariah, Susanna and Bel and the Dragon read by David Shamp (additions_daniel_ds_librivox); the Prayer of Manasseh read by Sam Stinson (prayer_manasseh_ss_librivox). LibriVox recordings are in the public domain.",
+      "layout": "multi-chapter-files",
+      "raw_dir": "kjva",
+      "file_map": "kjva-files.json"
+    },
+    {
+      "code": "CHARLES-librivox",
+      "translation": "CHARLES",
+      "language": "eng",
+      "reader": "LibriVox volunteers (per book in the attribution)",
+      "name": "R. H. Charles's 1 Enoch and Jubilees, read by LibriVox volunteers",
+      "source_url": "https://librivox.org/",
+      "license": "Public domain (LibriVox)",
+      "attribution": "LibriVox recordings of R. H. Charles's translations. 1 Enoch read by CJ Plogue (archive.org/details/bookofenoch_1812_librivox). Jubilees read by LibriVox volunteers (book_jubilees_2108_librivox): chapters 1-6 by timetravel718, 7 and 29-48 by Jim Locke, 8 by nzk13, 9-15 by Kristine Bekere, 16-20 by Kaitybg7, 21-25 by Daryl Hanson, 26-28 by Michele Eaton, 49-50 by KevinS. LibriVox recordings are in the public domain.",
+      "layout": "multi-chapter-files",
+      "raw_dir": "charles",
+      "file_map": "charles-files.json"
+    },
+    {
+      "code": "ANF-librivox",
+      "translation": "ANF",
+      "language": "eng",
+      "reader": "KevinS",
+      "name": "Protevangelium of James and Infancy Gospel of Thomas, read by KevinS (LibriVox)",
+      "source_url": "https://archive.org/details/ante-nicene1_ks_2004_librivox",
+      "license": "Public domain (LibriVox)",
+      "attribution": "From the LibriVox recording of the Ante-Nicene Christian Library's apocryphal infancy narratives (Alexander Walker's translation), read by KevinS: the Protevangelium of James and the three forms of the Infancy Gospel of Thomas. LibriVox recordings are in the public domain.",
+      "layout": "multi-chapter-files",
+      "raw_dir": "anf",
+      "file_map": "anf-files.json"
     }
   ]
 }

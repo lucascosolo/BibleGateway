@@ -21,6 +21,11 @@ def run(titles):
         db = sqlite3.connect(":memory:")
         db.execute("CREATE TABLE books (book_id INTEGER, name TEXT, chapter_count INTEGER)")
         db.execute("INSERT INTO books VALUES (15, 'Ezra', 10)")
+        db.execute("CREATE TABLE verses (verse_id INTEGER, book_id INTEGER, chapter INTEGER, verse INTEGER)")
+        db.executemany(
+            "INSERT INTO verses VALUES (?, 15, ?, 1)",
+            [(15_000_000 + c * 1_000 + 1, c) for c in range(1, 11)],
+        )
         edition = {"file_map": str(map_path), "raw_dir": "ed"}
         return units_multi_chapter_files(edition, tmp_path / "raw", NAMES, db), tmp_path / "raw"
 
