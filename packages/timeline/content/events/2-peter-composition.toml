@@ -29,7 +29,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 294, 295" }]
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman points first to the letter's unusual vocabulary, which sets it apart from the rest of the New Testament: "By Elliott’s count, there are proportionally more hapax legomena in 2 Peter than in any other writing of the New Testament: 58 of its 402 words (14.4 percent).""""
+Ehrman points first to the letter's unusual vocabulary, which sets it apart from the rest of the New Testament: "By Elliott’s count, there are proportionally more hapax legomena in 2 Peter than in any other writing of the New Testament": 58 of its 402 words, or 14.4 percent."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 294" }]
 
   [[positions.arguments]]

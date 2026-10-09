@@ -22,7 +22,7 @@ held_by = "Edwin R. Thiele"
 summary = """
 Thiele's chronology fits Shalmaneser's record of Jehu's tribute in 841, and Young's tables, which follow the same system, begin Jehu's reign in 841n/841t, meaning the Nisan and Tishri counts."""
 citations = [
-  { source = "thiele-1983", locator = "pp. 17–18 and p. 37. On pp. 17–18 Thiele recounts finding that \"841 rather than 842 was the true date for the eighteenth year of Shalmaneser III\". On p. 37, Thiele: \"There are only 120 years from 841 B.C., the eighteenth year of Shalmaneser III, when the latter reported having received tribute from Jehu—usually conceded to be very early in Jehu's reign—to the accession of Sargon in 722/21, when the latter claimed to have captured Samaria.\"" },
+  { source = "thiele-1983", locator = "pp. 17–18 and p. 37. On pp. 17–18 Thiele recounts finding that \"841 rather than 842 was the true date for the eighteenth year of Shalmaneser III\". On p. 37 Thiele counts \"only 120 years\" from Jehu's tribute in 841 B.C., the eighteenth year of Shalmaneser III and usually conceded to be very early in Jehu's reign, to the accession of Sargon in 722/21, when Sargon claimed to have captured Samaria." },
   { source = "young-2005", locator = "p. 232; Table 1, p. 245" },
 ]
 

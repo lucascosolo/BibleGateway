@@ -21,17 +21,6 @@ verses = [
 ]
 
 [[positions]]
-id = "wood-frame"
-label = "Early-date framework (c. 1300-1073 BCE anchors)"
-tradition = "chronological"
-earliest = -1300
-latest = -1073
-held_by = "Bryant G. Wood"
-summary = """
-In Wood's early-date scheme, Eglon's palace at Jericho dates to about 1300 BC (Judges 3:12-30) and Deborah and Barak to about 1230 BC. Estimates for the start of Jephthah's time as judge run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range is the editor's bracket, running from the first of these anchors to the last estimate; Wood does not state it as a range. It is not a claim about where the period ends."""
-citations = [{ source = "wood-2005", locator = "pp. 477, 488" }]
-
-[[positions]]
 id = "fs-highland-settlement"
 label = "Highland villages c. 1200-1000 BCE (Finkelstein and Silberman)"
 tradition = "archaeological"
@@ -41,3 +30,14 @@ held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman describe a third wave of highland settlement beginning around 1200 BCE, with about 250 sites and 45,000 people. They give the Iron Age I period as about 1150-900 BCE. They say the first Israelites were mostly local people who settled after the Canaanite collapse. This is an archaeological horizon, not a date for the book of Judges."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 114-115" }]
+
+[[positions]]
+id = "wood-frame"
+label = "Early-date framework (c. 1300-1073 BCE anchors)"
+tradition = "chronological"
+earliest = -1300
+latest = -1073
+held_by = "Bryant G. Wood"
+summary = """
+In Wood's early-date scheme, Eglon's palace at Jericho dates to about 1300 BC (Judges 3:12-30) and Deborah and Barak to about 1230 BC. Estimates for the start of Jephthah's time as judge run from 1130 BC (Bimson) through 1086 (Walton) and 1078 (L. Wood) to 1073 (Kitchen). The range is the editor's bracket, running from the first of these anchors to the last estimate; Wood does not state it as a range. It is not a claim about where the period ends."""
+citations = [{ source = "wood-2005", locator = "pp. 477, 488" }]

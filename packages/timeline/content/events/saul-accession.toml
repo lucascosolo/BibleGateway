@@ -15,6 +15,17 @@ verses = [
 ]
 
 [[positions]]
+id = "fs-galil-1025"
+label = "c. 1025 BCE (Finkelstein and Silberman, after Galil)"
+tradition = "archaeological"
+earliest = -1025
+latest = -1025
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman's table of the kings of the united monarchy gives Saul's reign as ca. 1025-1005 BCE, dates they take from Gershon Galil's chronology, so his accession falls about 1025. Beside the Bible's picture of Saul as the first king, appointed by Samuel, the same table sets the archaeological one: in the highlands the Iron I settlement system simply continues."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131 (Table Two: Saul ca. 1025-1005, after Galil)" }]
+
+[[positions]]
 id = "young-1051"
 label = "c. 1051 BCE (conjectural)"
 tradition = "chronological"

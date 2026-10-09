@@ -75,7 +75,7 @@ Ehrman reads the personal details in 2 Timothy as part of the forger's method: "
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman suggests the forger drew on another letter that he also counts as a forgery: "There is some reason to suspect, on the other hand, that the author was intimately familiar with another Pauline letter, but this one too a forgery.""""
+Ehrman suggests the forger drew on another letter that he also counts as a forgery: there is "some reason to suspect" that the author "was intimately familiar with another Pauline letter"."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 281" }]
 
 [[positions]]
@@ -99,7 +99,7 @@ Ehrman reports the defenders' argument that the letters' lifelike detail speaks 
   [[positions.arguments]]
   stance = "against"
   text = """
-Ehrman answers Johnson's defence by joint composition: "when it comes to the Deutero-Pauline letters, Johnson wants to argue that the key to their interpretation is a phenomenon for which he cannot—or at least does not—cite a single parallel or analogy from antiquity: joint composition of letters". He asks why that should be preferred to an explanation "for which there are abundant parallels and analogies scattered throughout all of antiquity, the use of literary forgery"."""
+Ehrman answers Johnson's defence by joint composition of letters, a phenomenon for which, he says, Johnson "cannot—or at least does not—cite a single parallel or analogy from antiquity". He asks why that should be preferred to an explanation "for which there are abundant parallels and analogies scattered throughout all of antiquity, the use of literary forgery"."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 282" }]
 
 [[positions]]
@@ -110,7 +110,7 @@ earliest = 80
 latest = 100
 held_by = "Raymond E. Brown"
 summary = """
-Brown, a critical scholar, dates Titus and 1 Timothy this way: "If by Paul, ca. AD 65. If pseudonymous (80 to 90 percent of critical scholarship), toward the end of the 1st century, or (less probably) early 2d century." For 2 Timothy he allows the late 60s if it was written first."""
+Brown, a critical scholar, dates Titus and 1 Timothy this way: "If by Paul, ca. AD 65." If pseudonymous, the view he gives as that of 80 to 90 percent of critical scholarship, "toward the end of the 1st century, or (less probably) early 2d century." For 2 Timothy he allows the late 60s if it was written first."""
 citations = [{ source = "brown-1997", locator = "ch. 29, Summary of Basic Information about Titus" }, { source = "brown-1997", locator = "ch. 30, Summary of Basic Information" }, { source = "brown-1997", locator = "ch. 31, Summary of Basic Information" }]
 
   [[positions.arguments]]

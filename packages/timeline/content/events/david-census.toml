@@ -13,6 +13,17 @@ verses = [
 ]
 
 [[positions]]
+id = "fs-david-reign"
+label = "Within David's reign, c. 1005-970 BCE (bounds, after Finkelstein and Silberman)"
+tradition = "archaeological"
+earliest = -1005
+latest = -970
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman give no date for the census, so these bounds are only the limits of David's reign as their table of the kings of the united monarchy gives it, ca. 1005-970 BCE after Gershon Galil's chronology. The same table finds no archaeological evidence for David's conquests or his empire."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131 (Table Two: David ca. 1005-970, after Galil)" }]
+
+[[positions]]
 id = "david-reign"
 label = "Within David's reign, 1009-969 BCE (bounds)"
 tradition = "chronological"

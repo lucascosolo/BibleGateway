@@ -29,7 +29,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 382, 383, 390" }]
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman argues from the letter's Greek that it is not the work of the James the Gospels describe: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes.""""
+Ehrman argues from the letter's Greek that it is not the work of the James the Gospels describe: "Whoever produced this letter was a highly literate native speaker of Greek", grounded in Hellenistic modes of discourse and skilled in rhetorical devices."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 379" }]
   verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter names James as its author." }]
 

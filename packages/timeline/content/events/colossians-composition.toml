@@ -77,7 +77,7 @@ Ehrman reads the household code as a sign of a later church that expects to last
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman concludes from all this that the letter is not Paul's: "it is clear that with Colossians we are not dealing with a letter of Paul, but a letter of someone wanting his readers to think he is Paul.""""
+Ehrman concludes from all this that the letter is not Paul's: "it is clear that with Colossians we are not dealing with a letter of Paul", but with one by someone who wanted readers to think he was Paul."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 234" }]
   verses = [{ ref = "Col.1.1", link = "describes", note = "Colossians 1:1 makes the claim of authorship by naming Paul as the sender." }]
 
@@ -101,7 +101,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 227, 250, 251" }]
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman reports the argument of Barth and Blanke that the letter's opening and closing differ too much from Paul's style to be forged: "Col. 1:1–2 and 4:18 differ so widely from Paul’s epistolary style, they cannot be forged, as a forger would be sure to follow the style""""
+Ehrman reports the argument of Barth and Blanke that the letter's opening and closing differ too much from Paul's style to be forged: "Col. 1:1–2 and 4:18 differ so widely from Paul’s epistolary style, they cannot be forged", since a forger would be sure to follow the style."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 250" }]
   verses = [{ ref = "Col.4.18", link = "describes", note = "Colossians 4:18 ends with a signature in Paul's own hand." }]
 
@@ -132,7 +132,7 @@ earliest = 80
 latest = 89
 held_by = "Raymond E. Brown"
 summary = """
-Raymond Brown holds that Colossians is more likely pseudonymous, which he says about 60 percent of critical scholarship accepts, and dates it to the 80s from Ephesus. His summary line reads: "If by Paul (or by Timothy while Paul was still alive or had just died), 61–63 (or slightly later) from Rome, or 54–56 from Ephesus. If pseudonymous (about 60 percent of critical scholarship), in the 80s from Ephesus.""""
+Raymond Brown holds that Colossians is more likely pseudonymous, which he says about 60 percent of critical scholarship accepts, and dates it to the 80s from Ephesus. His summary line gives "61–63 (or slightly later) from Rome, or 54–56 from Ephesus" if Paul wrote it (or Timothy, while Paul was alive or just after his death), and "in the 80s from Ephesus" if it is pseudonymous."""
 citations = [{ source = "brown-1997", locator = "ch. 27, Summary of Basic Information" }]
 
   [[positions.arguments]]

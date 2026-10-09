@@ -28,14 +28,14 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 294, 320" }]
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman argues from the kind of persecution the letter describes. Believers are suffering simply for bearing the name of Christ, which he sees as later than Peter's day: "By the time this letter was written, it had become commonplace for followers of Jesus to suffer persecution “as a Christian,” simply “for the name” (4:12–17).""""
+Ehrman argues from the kind of persecution the letter describes. Believers are suffering simply for bearing the name of Christ, which he sees as later than Peter's day: "By the time this letter was written, it had become commonplace for followers of Jesus to suffer persecution", as Christians and simply for the name (4:12–17)."""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 320" }]
   verses = [{ ref = "1Pet.4.12-1Pet.4.17", link = "background", note = "1 Peter 4:12-17 speaks of suffering because one bears the name Christian, the persecution this argument uses to date the letter." }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Ehrman follows C. Hunzinger in reading the letter's place of writing as a code name for Rome, and he treats that as a dating clue. In his words, "the veiled reference to Rome in the epithet “Babylon,” named as the place from which the author writes (5:13), makes sense only after 70 CE, years after Peter’s death.""""
+Ehrman follows C. Hunzinger in reading the letter's place of writing as a code name for Rome, and he treats that as a dating clue. In his view the veiled reference to Rome in the epithet "Babylon", named as the place the author writes from (5:13), "makes sense only after 70 CE, years after Peter’s death.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 320" }]
   verses = [{ ref = "1Pet.5.13", link = "background", note = "1 Peter 5:13 sends greetings from Babylon, which this argument reads as a name for Rome and so as a clue to the letter's date." }]
 

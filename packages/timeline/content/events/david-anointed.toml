@@ -16,6 +16,17 @@ verses = [
 ]
 
 [[positions]]
+id = "fs-within-saul"
+label = "Between c. 1025 and 1005 BCE (bounds, after Finkelstein and Silberman)"
+tradition = "archaeological"
+earliest = -1025
+latest = -1005
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman give no date for the anointing, so the bounds shown are the editor's. They are Saul's reign as their table of the kings of the united monarchy gives it, ca. 1025-1005 BCE after Gershon Galil's chronology, the period in which 1 Samuel 16 places the anointing."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 131 (Table Two: Saul ca. 1025-1005, after Galil)" }]
+
+[[positions]]
 id = "within-saul"
 label = "Between 1051 and 1009 BCE (bounds)"
 tradition = "chronological"

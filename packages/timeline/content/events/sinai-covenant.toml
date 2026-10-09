@@ -5,7 +5,7 @@ category = "biblical-narrative"
 confidence = "contested"
 status = "claims-checked"
 summary = """
-Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue)."""
+Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue). Critical scholars doubt that the exodus and Sinai can be dated as events at all: Finkelstein and Silberman, asking whether the exodus, the wandering and the giving of the Law on Sinai hold even a kernel of truth, find no trace of the wandering in Sinai and say the story holds elements from so many periods that it is hard to decide on a single one in which something like it might have occurred (The Bible Unearthed, pp. 62-65)."""
 verses = [
   { ref = "Exod.19.1-Exod.19.25", link = "describes", note = "Exodus describes the arrival at Sinai in the third month, where God appears on the mountain." },
   { ref = "Exod.20.1-Exod.20.21", link = "describes", note = "Exodus gives the Ten Commandments at Sinai." },
@@ -24,7 +24,7 @@ verses = [
 [[positions]]
 id = "early"
 label = "With a 15th-century exodus (c. 1446 BCE)"
-tradition = "traditional"
+tradition = "chronological"
 earliest = -1450
 latest = -1440
 held_by = "Bryant G. Wood"
@@ -51,5 +51,5 @@ earliest = -1491
 latest = -1491
 held_by = "James Ussher"
 summary = """
-The chronologist James Ussher dates the exodus to 2513 AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year."""
+The chronologist James Ussher dates the exodus to 2513 AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year, so in 1491 BC as well. His 1650s count adds up the Bible's own life-spans and reign-lengths, so it is an older count and not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "1658 printing, pp. 13-15 (Year of the World 2513; Sinai on the third day of the third month)" }]

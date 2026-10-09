@@ -21,7 +21,7 @@ earliest = 50
 latest = 51
 held_by = "Raymond E. Brown"
 summary = """
-Raymond Brown dates the letter to 50 or 51, during Paul's second missionary journey, and treats it as unquestionably Paul's. His summary line reads: "The oldest preserved Christian document: 50 or 51 in the Traditional Chronology, during Paul's (Second Missionary) journey, undertaken after the meeting in Jerusalem (or 41–43 in the Revisionist Chronology,* before the Jerusalem meeting)." On authenticity he writes: "Not seriously doubted today.""""
+Raymond Brown dates the letter to 50 or 51, during Paul's second missionary journey, and treats it as unquestionably Paul's. His summary line calls it "The oldest preserved Christian document" and dates it "50 or 51 in the Traditional Chronology", after the meeting in Jerusalem, or 41–43 in the Revisionist Chronology, before it. On authenticity he writes: "Not seriously doubted today.""""
 citations = [{ source = "brown-1997", locator = "ch. 18, Summary of Basic Information" }]
 
   [[positions.arguments]]

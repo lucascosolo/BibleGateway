@@ -18,9 +18,28 @@ verses = [
 ]
 
 [[positions]]
+id = "finkelstein-silberman"
+label = "Descent to Egypt written in the 7th-6th centuries BCE (Finkelstein and Silberman)"
+tradition = "critical"
+dates = "composition"
+earliest = -700
+latest = -550
+held_by = "Israel Finkelstein and Neil Asher Silberman"
+summary = """
+Finkelstein and Silberman do not date the descent itself. They place the Goshen tradition and details of the Joseph story in the seventh and sixth centuries."""
+citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Goshen is a Semitic, not an Egyptian, name. They follow Redford in deriving it from Geshem, a Qedarite dynastic name, and the Qedarites reached the delta only from the sixth century."""
+  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
+  verses = [{ ref = "Gen.45.10", link = "alludes" }]
+
+[[positions]]
 id = "mid-19th-century"
 label = "Mid-19th century BCE (with a 15th-century exodus)"
-tradition = "archaeological"
+tradition = "chronological"
 earliest = -1860
 latest = -1840
 held_by = "Bryant G. Wood"
@@ -49,22 +68,3 @@ held_by = "James Ussher"
 summary = """
 Ussher has Jacob, aged 130, go down into Egypt at the start of the third year of the famine, in 1706 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
 citations = [{ source = "ussher-annals", locator = "p. 10 (1658 printing; Year of the World 2298, Year before Christ 1706)" }]
-
-[[positions]]
-id = "finkelstein-silberman"
-label = "Descent to Egypt written in the 7th-6th centuries BCE (Finkelstein and Silberman)"
-tradition = "critical"
-dates = "composition"
-earliest = -700
-latest = -550
-held_by = "Israel Finkelstein and Neil Asher Silberman"
-summary = """
-Finkelstein and Silberman do not date the descent itself. They place the Goshen tradition and details of the Joseph story in the seventh and sixth centuries."""
-citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
-
-  [[positions.arguments]]
-  stance = "for"
-  text = """
-  Goshen is a Semitic, not an Egyptian, name. They follow Redford in deriving it from Geshem, a Qedarite dynastic name, and the Qedarites reached the delta only from the sixth century."""
-  citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
-  verses = [{ ref = "Gen.45.10", link = "alludes" }]

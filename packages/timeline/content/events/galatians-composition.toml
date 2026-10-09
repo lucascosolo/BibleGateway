@@ -27,7 +27,7 @@ citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Inform
   [[positions.arguments]]
   stance = "for"
   text = """
-Brown reasons from the North Galatian theory. Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56). Word could have reached him that teachers had come and “quickly” (Gal 1:6) won over the Galatians to “another gospel”", prompting the angry writing of Gal in 54 or 55."""
+Brown reasons from the North Galatian theory. Paul "went to Ephesus (Acts 19:1) where he stayed three years (54–56)", and word could have reached him there that teachers had "quickly" (Gal 1:6) won the Galatians over to "another gospel", prompting the angry writing of Gal in 54 or 55."""
   citations = [{ source = "brown-1997", locator = "ch. 19, Dating" }]
   verses = [{ ref = "Gal.1.6", link = "describes", note = "Galatians 1:6 says the Galatians were quickly won over to another gospel." }]
 
