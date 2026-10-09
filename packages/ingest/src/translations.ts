@@ -21,7 +21,7 @@
 //     piece of work with its own gate, not a line in this table.
 //   * The full Brenton LXX and the Clementine Vulgate (`latVUC`) remain withheld: their source
 //     systems contain many chapter/verse divergences and deuterocanonical books that this
-//     66-book canon has no addresses for. A five-book Brenton selection below is loaded only where
+//     66-book canon has no addresses for. A nine-book Brenton selection below is loaded only where
 //     an identity map, or a reviewed offset table, has been independently verified; it must not be expanded by assumption.
 //
 // A wrong versification map is worse than an absent translation, because absence is visible
@@ -46,6 +46,15 @@ export function mapSourceVerse(
     (e) => e.bookId === bookId && e.chapter === chapter && verse >= e.fromVerse && verse <= e.toVerse,
   );
   return o ? { chapter: o.canonicalChapter, verse: o.canonicalFirstVerse + verse - o.fromVerse } : { chapter, verse };
+}
+
+export function isUnplacedSourceVerse(
+  t: Pick<TranslationSource, "unplacedSourceVerses">,
+  bookId: number,
+  chapter: number,
+  verse: number,
+): boolean {
+  return t.unplacedSourceVerses?.some((u) => u.bookId === bookId && u.chapter === chapter && u.verse === verse) ?? false;
 }
 
 export interface TranslationSource {
@@ -81,6 +90,13 @@ export interface TranslationSource {
    */
   verseOffsets?: readonly VerseOffset[];
   /**
+   * Reviewed source verses with no one-to-one canonical counterpart. Not stored and counted in
+   * the build log; any other source verse without an address still fails the build.
+   */
+  unplacedSourceVerses?: readonly { bookId: number; chapter: number; verse: number }[];
+  /** Exact count of `versification` omission rows the reviewed map produces. Gated in ingest. */
+  versificationOmissions?: number;
+  /**
    * Source-specific text repair, applied before the shared normalization.
    *
    * Only one text needs it and the reason is specific, so it is a per-source field rather
@@ -111,28 +127,124 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
     scope: "OT",
     scopeNote:
       "This is a selection from Brenton's public-domain English translation of the Septuagint: " +
-      "Deuteronomy, Nehemiah, Lamentations, Habakkuk, and Haggai. Deuteronomy is included under a " +
-      "reviewed verse map, because the Septuagint numbers two of its passages differently. Genesis, " +
-      "Exodus, Leviticus, and Numbers are withheld because their numbering differs in more than a " +
-      "verse or two. The remaining books are withheld until their differing Greek verse systems " +
-      "have a separately reviewed mapping.",
-    expectedVerses: [1_400, 1_800],
+      "Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Nehemiah, Lamentations, Habakkuk, and " +
+      "Haggai. The five books of the Pentateuch are included under a reviewed verse map, because " +
+      "the Septuagint numbers some passages differently and, in Exodus 36-39, orders the account " +
+      "of the tabernacle differently. Sixteen Brenton verses in Exodus, Leviticus and Numbers have " +
+      "no single Hebrew-numbered counterpart and are not shown. The remaining books are withheld " +
+      "until their differing Greek verse systems have a separately reviewed mapping.",
+    expectedVerses: [6_300, 6_500],
     versification: "brenton",
     // Brenton's distribution uses a genuinely different LXX verse system across many books.
-    // Nehemiah, Lamentations, Habakkuk and Haggai are identity; Deuteronomy is identity except
-    // the runs in `verseOffsets`, each checked against KJV wording
-    // (scripts/check-brenton-identity.ts, 2026-10-08). The Septuagint opens chapter 13 with
-    // Hebrew 12:32 and chapter 23 with Hebrew 22:30, and prints the corn-field law (23:25)
-    // before the vineyard law (Hebrew 23:24). Deut 14:14 has no Brenton label and is recorded
-    // as a versification omission. Excluding the rest is visible in translation_books and safer
-    // than putting a beautiful but wrong verse beside the Hebrew.
-    includedBookIds: [5, 16, 25, 35, 37],
+    // Nehemiah, Lamentations, Habakkuk and Haggai are identity; the Pentateuch is identity except
+    // the runs in `verseOffsets`, each checked against KJV wording (Jaccard on content words,
+    // scripts/check-brenton-identity.ts plus a pair-by-pair probe, 2026-10-08; see the execution
+    // notes for chunk 9 in docs/plans/2026-10-08-follow-the-evidence.md). Source labels with no
+    // counterpart (Gen 31:51, 35:21; Exod 25:6, 28:23-28 ...) become versification omissions.
+    // `unplacedSourceVerses` are Brenton verses with no one-to-one Hebrew counterpart: split
+    // remnants of a re-divided verse, or Exodus 36-39 material the wording check could not match.
+    // Excluding the rest is visible in translation_books and safer than putting a beautiful but
+    // wrong verse beside the Hebrew.
+    includedBookIds: [1, 2, 3, 4, 5, 16, 25, 35, 37],
+    // Gen 2, Exod 63, Lev 1, Num 2, Deut 1, Nehemiah and Lamentations 21.
+    versificationOmissions: 90,
     verseOffsets: [
+      // Genesis: Brenton opens chapter 32 with Hebrew 31:55.
+      { bookId: 1, chapter: 32, fromVerse: 1, toVerse: 1, canonicalChapter: 31, canonicalFirstVerse: 55 },
+      { bookId: 1, chapter: 32, fromVerse: 2, toVerse: 33, canonicalChapter: 32, canonicalFirstVerse: 1 },
+      // Exodus: 7:26-29 is Hebrew 8:1-4; 20:13-15 orders adultery, theft, murder; 21:16-17 swap;
+      // 21:37 is Hebrew 22:1; chapters 36-39 follow the Septuagint order of the tabernacle account.
+      { bookId: 2, chapter: 7, fromVerse: 26, toVerse: 29, canonicalChapter: 8, canonicalFirstVerse: 1 },
+      { bookId: 2, chapter: 8, fromVerse: 1, toVerse: 28, canonicalChapter: 8, canonicalFirstVerse: 5 },
+      { bookId: 2, chapter: 20, fromVerse: 13, toVerse: 14, canonicalChapter: 20, canonicalFirstVerse: 14 },
+      { bookId: 2, chapter: 20, fromVerse: 15, toVerse: 15, canonicalChapter: 20, canonicalFirstVerse: 13 },
+      { bookId: 2, chapter: 21, fromVerse: 16, toVerse: 16, canonicalChapter: 21, canonicalFirstVerse: 17 },
+      { bookId: 2, chapter: 21, fromVerse: 17, toVerse: 17, canonicalChapter: 21, canonicalFirstVerse: 16 },
+      { bookId: 2, chapter: 21, fromVerse: 37, toVerse: 37, canonicalChapter: 22, canonicalFirstVerse: 1 },
+      { bookId: 2, chapter: 22, fromVerse: 1, toVerse: 30, canonicalChapter: 22, canonicalFirstVerse: 2 },
+      { bookId: 2, chapter: 36, fromVerse: 9, toVerse: 10, canonicalChapter: 39, canonicalFirstVerse: 2 },
+      { bookId: 2, chapter: 36, fromVerse: 12, toVerse: 23, canonicalChapter: 39, canonicalFirstVerse: 5 },
+      { bookId: 2, chapter: 36, fromVerse: 26, toVerse: 38, canonicalChapter: 39, canonicalFirstVerse: 19 },
+      { bookId: 2, chapter: 37, fromVerse: 1, toVerse: 2, canonicalChapter: 36, canonicalFirstVerse: 8 },
+      { bookId: 2, chapter: 37, fromVerse: 3, toVerse: 6, canonicalChapter: 36, canonicalFirstVerse: 35 },
+      { bookId: 2, chapter: 37, fromVerse: 7, toVerse: 21, canonicalChapter: 38, canonicalFirstVerse: 9 },
+      { bookId: 2, chapter: 38, fromVerse: 1, toVerse: 3, canonicalChapter: 37, canonicalFirstVerse: 1 },
+      { bookId: 2, chapter: 38, fromVerse: 4, toVerse: 8, canonicalChapter: 37, canonicalFirstVerse: 5 },
+      { bookId: 2, chapter: 38, fromVerse: 9, toVerse: 9, canonicalChapter: 37, canonicalFirstVerse: 10 },
+      { bookId: 2, chapter: 38, fromVerse: 10, toVerse: 10, canonicalChapter: 37, canonicalFirstVerse: 13 },
+      { bookId: 2, chapter: 38, fromVerse: 11, toVerse: 14, canonicalChapter: 37, canonicalFirstVerse: 15 },
+      { bookId: 2, chapter: 38, fromVerse: 15, toVerse: 15, canonicalChapter: 37, canonicalFirstVerse: 19 },
+      { bookId: 2, chapter: 38, fromVerse: 17, toVerse: 17, canonicalChapter: 37, canonicalFirstVerse: 23 },
+      { bookId: 2, chapter: 38, fromVerse: 18, toVerse: 18, canonicalChapter: 36, canonicalFirstVerse: 34 },
+      { bookId: 2, chapter: 38, fromVerse: 23, toVerse: 23, canonicalChapter: 38, canonicalFirstVerse: 3 },
+      { bookId: 2, chapter: 38, fromVerse: 24, toVerse: 24, canonicalChapter: 38, canonicalFirstVerse: 4 },
+      { bookId: 2, chapter: 38, fromVerse: 25, toVerse: 25, canonicalChapter: 37, canonicalFirstVerse: 29 },
+      { bookId: 2, chapter: 38, fromVerse: 26, toVerse: 26, canonicalChapter: 38, canonicalFirstVerse: 8 },
+      { bookId: 2, chapter: 38, fromVerse: 27, toVerse: 27, canonicalChapter: 40, canonicalFirstVerse: 31 },
+      { bookId: 2, chapter: 39, fromVerse: 1, toVerse: 4, canonicalChapter: 38, canonicalFirstVerse: 24 },
+      { bookId: 2, chapter: 39, fromVerse: 6, toVerse: 7, canonicalChapter: 38, canonicalFirstVerse: 28 },
+      { bookId: 2, chapter: 39, fromVerse: 8, toVerse: 8, canonicalChapter: 38, canonicalFirstVerse: 30 },
+      { bookId: 2, chapter: 39, fromVerse: 9, toVerse: 9, canonicalChapter: 38, canonicalFirstVerse: 31 },
+      { bookId: 2, chapter: 39, fromVerse: 11, toVerse: 11, canonicalChapter: 39, canonicalFirstVerse: 32 },
+      { bookId: 2, chapter: 39, fromVerse: 13, toVerse: 13, canonicalChapter: 39, canonicalFirstVerse: 1 },
+      { bookId: 2, chapter: 39, fromVerse: 14, toVerse: 14, canonicalChapter: 39, canonicalFirstVerse: 33 },
+      { bookId: 2, chapter: 39, fromVerse: 16, toVerse: 16, canonicalChapter: 39, canonicalFirstVerse: 38 },
+      { bookId: 2, chapter: 39, fromVerse: 17, toVerse: 17, canonicalChapter: 39, canonicalFirstVerse: 37 },
+      { bookId: 2, chapter: 39, fromVerse: 18, toVerse: 18, canonicalChapter: 39, canonicalFirstVerse: 36 },
+      { bookId: 2, chapter: 39, fromVerse: 19, toVerse: 19, canonicalChapter: 39, canonicalFirstVerse: 41 },
+      { bookId: 2, chapter: 39, fromVerse: 20, toVerse: 20, canonicalChapter: 39, canonicalFirstVerse: 40 },
+      { bookId: 2, chapter: 39, fromVerse: 21, toVerse: 21, canonicalChapter: 39, canonicalFirstVerse: 34 },
+      { bookId: 2, chapter: 39, fromVerse: 22, toVerse: 23, canonicalChapter: 39, canonicalFirstVerse: 42 },
+      // Leviticus: 5:20-26 is Hebrew 6:1-7; Brenton 8:18 holds Hebrew 8:18-19.
+      { bookId: 3, chapter: 5, fromVerse: 20, toVerse: 26, canonicalChapter: 6, canonicalFirstVerse: 1 },
+      { bookId: 3, chapter: 6, fromVerse: 1, toVerse: 23, canonicalChapter: 6, canonicalFirstVerse: 8 },
+      { bookId: 3, chapter: 8, fromVerse: 19, toVerse: 29, canonicalChapter: 8, canonicalFirstVerse: 20 },
+      // Numbers: census order in 1 and 26; 10:34-36 rotate; 16:36-50 is Brenton 17:1-15;
+      // 21:19 and 27:3 hold two Hebrew verses each; 29:40 is Brenton 30:1.
+      { bookId: 4, chapter: 1, fromVerse: 24, toVerse: 35, canonicalChapter: 1, canonicalFirstVerse: 26 },
+      { bookId: 4, chapter: 1, fromVerse: 36, toVerse: 37, canonicalChapter: 1, canonicalFirstVerse: 24 },
+      { bookId: 4, chapter: 10, fromVerse: 34, toVerse: 35, canonicalChapter: 10, canonicalFirstVerse: 35 },
+      { bookId: 4, chapter: 10, fromVerse: 36, toVerse: 36, canonicalChapter: 10, canonicalFirstVerse: 34 },
+      { bookId: 4, chapter: 17, fromVerse: 1, toVerse: 15, canonicalChapter: 16, canonicalFirstVerse: 36 },
+      { bookId: 4, chapter: 17, fromVerse: 16, toVerse: 28, canonicalChapter: 17, canonicalFirstVerse: 1 },
+      { bookId: 4, chapter: 21, fromVerse: 20, toVerse: 20, canonicalChapter: 21, canonicalFirstVerse: 21 },
+      { bookId: 4, chapter: 26, fromVerse: 15, toVerse: 18, canonicalChapter: 26, canonicalFirstVerse: 19 },
+      { bookId: 4, chapter: 26, fromVerse: 19, toVerse: 21, canonicalChapter: 26, canonicalFirstVerse: 23 },
+      { bookId: 4, chapter: 26, fromVerse: 22, toVerse: 23, canonicalChapter: 26, canonicalFirstVerse: 26 },
+      { bookId: 4, chapter: 26, fromVerse: 24, toVerse: 27, canonicalChapter: 26, canonicalFirstVerse: 15 },
+      { bookId: 4, chapter: 26, fromVerse: 28, toVerse: 31, canonicalChapter: 26, canonicalFirstVerse: 44 },
+      { bookId: 4, chapter: 26, fromVerse: 32, toVerse: 38, canonicalChapter: 26, canonicalFirstVerse: 28 },
+      { bookId: 4, chapter: 26, fromVerse: 39, toVerse: 41, canonicalChapter: 26, canonicalFirstVerse: 35 },
+      { bookId: 4, chapter: 26, fromVerse: 42, toVerse: 45, canonicalChapter: 26, canonicalFirstVerse: 38 },
+      { bookId: 4, chapter: 26, fromVerse: 46, toVerse: 47, canonicalChapter: 26, canonicalFirstVerse: 42 },
+      { bookId: 4, chapter: 27, fromVerse: 4, toVerse: 6, canonicalChapter: 27, canonicalFirstVerse: 5 },
+      { bookId: 4, chapter: 30, fromVerse: 1, toVerse: 1, canonicalChapter: 29, canonicalFirstVerse: 40 },
+      { bookId: 4, chapter: 30, fromVerse: 2, toVerse: 17, canonicalChapter: 30, canonicalFirstVerse: 1 },
+      // Deuteronomy: Hebrew 12:32 and 22:30 open Brenton 13 and 23; the corn-field law (23:25)
+      // precedes the vineyard law (Hebrew 23:24); 14:14 has no Brenton label.
       { bookId: 5, chapter: 13, fromVerse: 1, toVerse: 1, canonicalChapter: 12, canonicalFirstVerse: 32 },
       { bookId: 5, chapter: 13, fromVerse: 2, toVerse: 19, canonicalChapter: 13, canonicalFirstVerse: 1 },
       { bookId: 5, chapter: 23, fromVerse: 1, toVerse: 1, canonicalChapter: 22, canonicalFirstVerse: 30 },
       { bookId: 5, chapter: 23, fromVerse: 2, toVerse: 24, canonicalChapter: 23, canonicalFirstVerse: 1 },
       { bookId: 5, chapter: 23, fromVerse: 26, toVerse: 26, canonicalChapter: 23, canonicalFirstVerse: 24 },
+    ],
+    unplacedSourceVerses: [
+      { bookId: 2, chapter: 36, verse: 8 },
+      { bookId: 2, chapter: 36, verse: 11 },
+      { bookId: 2, chapter: 36, verse: 24 },
+      { bookId: 2, chapter: 36, verse: 25 },
+      { bookId: 2, chapter: 38, verse: 16 },
+      { bookId: 2, chapter: 38, verse: 19 },
+      { bookId: 2, chapter: 38, verse: 20 },
+      { bookId: 2, chapter: 38, verse: 21 },
+      { bookId: 2, chapter: 38, verse: 22 },
+      { bookId: 2, chapter: 39, verse: 5 },
+      { bookId: 2, chapter: 39, verse: 10 },
+      { bookId: 2, chapter: 39, verse: 12 },
+      { bookId: 2, chapter: 39, verse: 15 },
+      { bookId: 3, chapter: 8, verse: 30 },
+      { bookId: 4, chapter: 21, verse: 21 },
+      { bookId: 4, chapter: 27, verse: 7 },
     ],
   },
   {

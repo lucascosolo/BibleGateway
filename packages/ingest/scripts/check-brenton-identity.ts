@@ -11,11 +11,17 @@
  *            same book clearly better than the same-labelled one. Labels alone cannot see the
  *            Septuagint's reordering of Exodus 36-39: the labels exist, the content moved.
  * A chapter is `identity` only when all three are empty; a book only when every chapter is.
+ *
+ * With --mapped, Brenton labels are first passed through the reviewed `verseOffsets` and the
+ * `unplacedSourceVerses` are dropped, so the report shows what the map leaves unexplained.
  */
 import Database from "better-sqlite3";
+import { isUnplacedSourceVerse, mapSourceVerse, TRANSLATION_SOURCES } from "../src/translations.ts";
 import { parseUsfx } from "../src/usfx.ts";
 
-const [zipPath, dbPath, bookArg] = process.argv.slice(2);
+const args = process.argv.slice(2);
+const mapped = args.includes("--mapped");
+const [zipPath, dbPath, bookArg] = args.filter((a) => a !== "--mapped");
 if (!zipPath || !dbPath) throw new Error("usage: check-brenton-identity.ts <brenton usfx zip> <bible.db>");
 
 const BOOKS = (bookArg ?? "1,2,3,4,5").split(",").map(Number);
@@ -40,7 +46,11 @@ const canonical = db
      WHERE v.book_id IN (${BOOKS.join(",")})`,
   )
   .all() as { osis: string; b: number; c: number; v: number; text: string | null }[];
-const brenton = (await parseUsfx(zipPath, { allowVerseSuffix: true })).verses.filter((v) => BOOKS.includes(v.bookId));
+const lxx = TRANSLATION_SOURCES.find((t) => t.code === "LXX")!;
+const brenton = (await parseUsfx(zipPath, { allowVerseSuffix: true })).verses
+  .filter((v) => BOOKS.includes(v.bookId))
+  .filter((v) => !mapped || !isUnplacedSourceVerse(lxx, v.bookId, v.chapter, v.verse))
+  .map((v) => (mapped ? { ...v, ...mapSourceVerse(lxx, v.bookId, v.chapter, v.verse) } : v));
 
 const key = (b: number, c: number, v: number) => `${b}.${c}.${v}`;
 let failed = 0;

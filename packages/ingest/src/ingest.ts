@@ -48,6 +48,7 @@ import {
   CANONICAL_EXTRA_VERSES,
   omissionExplanation,
   mapSourceVerse,
+  isUnplacedSourceVerse,
   TRANSLATION_SOURCES,
 } from "./translations.js";
 import { parseUsfx, type UsfxResult } from "./usfx.js";
@@ -1147,6 +1148,8 @@ async function main() {
     code: string;
     printed: number;
     unmapped: string[];
+    /** Reviewed source verses with no one-to-one canonical counterpart; not stored. */
+    unplaced: number;
     omittedManuscript: number;
     /** Verses in books this edition does not include. Reported, never stored per verse. */
     outOfScopeVerses: number;
@@ -1158,7 +1161,8 @@ async function main() {
 
   // Divergent USFX editions enter the same canonical address space only through an explicit
   // map. The first supported case is Brenton's LXX selection: its selected protocanonical books
-  // use the canonical labels except the reviewed runs in `verseOffsets` (Deuteronomy 13 and 23).
+  // use the canonical labels except the reviewed runs in `verseOffsets` (the Pentateuch).
+  // Reviewed `unplacedSourceVerses` get no row: they have no one-to-one canonical counterpart.
   // Identity is written as a row, never inferred at query time, so the completeness gate can
   // prove what was actually mapped and a future source cannot silently fall through to `org`.
   const insertBrentonMap = sqlite.prepare(
@@ -1172,6 +1176,7 @@ async function main() {
     const mapBrentonTx = sqlite.transaction(() => {
       for (const v of usfx.get("LXX")?.verses ?? []) {
         if (!included.has(v.bookId)) continue;
+        if (isUnplacedSourceVerse(brenton, v.bookId, v.chapter, v.verse)) continue;
         const to = mapSourceVerse(brenton, v.bookId, v.chapter, v.verse);
         const canonicalId = verseIdByOsisKey.get(`${v.bookId}.${to.chapter}.${to.verse}`);
         if (canonicalId === undefined) continue;
@@ -1204,6 +1209,7 @@ async function main() {
       booksCovered: 0,
       emptyClaimedBooks: [],
       quirkReplacements: 0,
+      unplaced: 0,
     };
     const printedIds = new Set<number>();
     const includedBooks = t.includedBookIds ? new Set(t.includedBookIds) : null;
@@ -1211,6 +1217,10 @@ async function main() {
     const loadTx = sqlite.transaction(() => {
       for (const v of parsed.verses) {
         if (includedBooks && !includedBooks.has(v.bookId)) continue;
+        if (isUnplacedSourceVerse(t, v.bookId, v.chapter, v.verse)) {
+          stats.unplaced += 1;
+          continue;
+        }
         const scheme = t.versification ?? "org";
         const vid = scheme !== "org"
           ? sqlite
@@ -1974,6 +1984,12 @@ async function main() {
           `the 'org' versification it declares.`,
       );
     }
+    if (stats.unplaced !== (t.unplacedSourceVerses?.length ?? 0)) {
+      errors.push(`${t.code}: skipped ${stats.unplaced} unplaced source verse(s), the reviewed list has ${t.unplacedSourceVerses?.length ?? 0}`);
+    }
+    if (stats.unplaced > 0) {
+      console.log(`  ${t.code}: ${stats.unplaced} reviewed source verse(s) with no one-to-one canonical counterpart, not stored`);
+    }
     if (parsed.outsideCanon.length > 0) {
       console.log(
         `  ${t.code}: ${parsed.outsideCanon.length} reference(s) in books outside the 66-book ` +
@@ -1998,7 +2014,7 @@ async function main() {
     const share = stats.printed / scopedCanonicalCount;
     // A selected divergent pilot may legitimately omit source verse labels that have no
     // counterpart in the canonical scheme; the per-book census and omission rows disclose
-    // those 22 cases. The 95% floor still catches a broken parse without pretending this is a
+    // those cases (90 for the nine-book selection). The 95% floor still catches a broken parse without pretending this is a
     // complete LXX edition.
     const minShare = t.scope === "all" ? 0.985 : t.includedBookIds ? 0.95 : 0.7;
     if (share < minShare || share > 1.0) {
@@ -2073,12 +2089,23 @@ async function main() {
   {
     const omissionCounts = sqlite
       .prepare(
-        `SELECT t.code, t.translation_id AS translationId, COUNT(vo.verse_id) AS n
+        `SELECT t.code, t.translation_id AS translationId,
+                COUNT(vo.verse_id) - COUNT(CASE WHEN vo.kind = 'versification' THEN 1 END) AS n,
+                COUNT(CASE WHEN vo.kind = 'versification' THEN 1 END) AS numbering
          FROM translations t LEFT JOIN verse_omissions vo USING (translation_id)
          GROUP BY t.translation_id ORDER BY t.translation_id`,
       )
-      .all() as { code: string; translationId: number; n: number }[];
+      .all() as { code: string; translationId: number; n: number; numbering: number }[];
     for (const r of omissionCounts) {
+      // Numbering gaps are structure by definition, so they are not held to the textual cap;
+      // they are held to the exact count the reviewed verse map produces instead, which is
+      // tighter: one row more or fewer than the review recorded fails the build.
+      const reviewed = TRANSLATION_SOURCES.find((t) => t.code === r.code)?.versificationOmissions ?? 0;
+      if (r.numbering !== reviewed) {
+        errors.push(
+          `${r.code}: ${r.numbering} versification omission(s), the reviewed verse map accounts for ${reviewed}`,
+        );
+      }
       if (r.n > MAX_TEXTUAL_OMISSIONS_PER_TRANSLATION) {
         errors.push(
           `${r.code}: ${r.n} rows in verse_omissions, over the reviewed cap of ` +
