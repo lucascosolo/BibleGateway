@@ -2,7 +2,7 @@
   <!--
     The app icon: the jot and its tittle, the smallest stroke of the text drawn large as one
     brush stroke, parchment on the brand's bronze green. This is the display cut of the mark;
-    the wordmark in components/Wordmark.tsx keeps its stroked letterforms, and the two share the
+    the wordmark in components/Wordmark.tsx is written in the same hand and shares this exact j path; the two share the
     tittle as a separate dot that is never fused with the letter. Colours are the globals.css
     tokens resolved from oklch (see app/og/route.tsx): color-brand #14655d, color-bg #fbf6ee.
     Everything important sits inside the central 80 percent so a maskable crop keeps it whole.

@@ -147,39 +147,88 @@ export default function StylePage() {
         </p>
       </header>
 
-      {/* Wordmark */}
-      <Section eyebrow="Brand" title="Wordmark">
-        <div className="flex flex-wrap items-end gap-10">
-          <div className="flex flex-col items-center gap-2">
-            <Wordmark size="sm" />
-            <span className="font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">sm</span>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <Wordmark size="md" />
-            <span className="font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">md</span>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <Wordmark size="lg" />
-            <span className="font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">lg</span>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <Wordmark size="xl" />
-            <span className="font-mono text-[var(--text-xs)] text-[var(--color-ink-faint)]">xl</span>
+      {/* Brand */}
+      <Section eyebrow="Brand" title="The mark">
+        <p id="brand" className="max-w-prose font-serif text-[length:var(--text-base)] text-[var(--color-ink-muted)]">
+          Written in one scribe&rsquo;s hand: a broad pen held at about thirty degrees, pressing
+          thick on the downstrokes and lifting thin across, with the tittle set apart as its own
+          dot. The icon&rsquo;s j and the wordmark&rsquo;s j are the same stroke.
+        </p>
+
+        <div className="mt-10 grid gap-10 lg:grid-cols-[auto_1fr] lg:items-start">
+          <figure className="flex flex-col gap-3">
+            {/* eslint-disable-next-line @next/next/no-img-element -- the shipped asset itself, at its own size */}
+            <img src="/icon.svg" alt="Jot app icon" width={512} height={512} className="h-auto w-full max-w-[512px]" />
+            <figcaption className="font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
+              icon · 512 · public/icon.svg
+            </figcaption>
+          </figure>
+
+          <div className="flex flex-col gap-10">
+            <div className="flex flex-wrap items-end gap-10">
+              {(["sm", "md", "lg", "xl"] as const).map((size) => (
+                <div key={size} className="flex flex-col items-center gap-2">
+                  <Wordmark size={size} />
+                  <span className="font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">{size}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <Wordmark variant="tile" size="lg" className="items-start" />
+              <span className="font-mono text-[length:var(--text-xs)] text-[var(--color-ink-faint)]">
+                variant=&quot;tile&quot; · the lockup
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-6">
+              {[
+                { name: "--color-brand", role: "the letters", hex: "#14655d" },
+                { name: "--color-rubric", role: "the tittle", hex: "#be260b" },
+              ].map((c) => (
+                <div key={c.name} className="flex items-center gap-3">
+                  <span
+                    className="h-12 w-12 rounded-[var(--radius-md)] border border-[var(--color-border)]"
+                    style={{ background: `var(${c.name})` }}
+                  />
+                  <span className="flex flex-col font-sans text-[length:var(--text-sm)]">
+                    <code className="font-mono text-[length:var(--text-xs)] text-[var(--color-ink)]">{c.name}</code>
+                    <span className="text-[var(--color-ink-muted)]">
+                      {c.role} · {c.hex} light
+                    </span>
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <p className="mt-6 max-w-prose font-sans text-[var(--text-sm)] text-[var(--color-ink-muted)]">
-          The dot on the “j” is a tittle, rendered as its own SVG element in{" "}
-          <code className="rounded bg-[var(--color-bg-sunken)] px-1.5 py-0.5 font-mono text-[var(--text-xs)]">
-            --color-rubric
-          </code>{" "}
-          — a scribal rubrication red — set against the letterforms in{" "}
-          <code className="rounded bg-[var(--color-bg-sunken)] px-1.5 py-0.5 font-mono text-[var(--text-xs)]">
-            --color-brand
-          </code>
-          , an oxidised bronze-verdigris. Matthew 5:18: “not one jot or one tittle.”
-        </p>
+
+        {/* Both themes side by side, whatever the page's own theme. The dark values mirror the
+            [data-theme="dark"] block in globals.css; the tile tokens are theme-invariant. */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          {[
+            { label: "Light", vars: { "--color-bg": "oklch(97.5% 0.012 78)", "--color-brand": "oklch(46% 0.075 185)", "--color-rubric": "oklch(52% 0.19 32)", "--color-ink-faint": "oklch(50% 0.018 55)" } },
+            { label: "Dark", vars: { "--color-bg": "oklch(19% 0.014 55)", "--color-brand": "oklch(72% 0.09 182)", "--color-rubric": "oklch(70% 0.17 30)", "--color-ink-faint": "oklch(68% 0.017 65)" } },
+          ].map((theme) => (
+            <div
+              key={theme.label}
+              className="flex flex-col gap-6 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg)] p-6"
+              style={theme.vars as React.CSSProperties}
+            >
+              <span
+                className="font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide"
+                style={{ color: "var(--color-ink-faint)" }}
+              >
+                {theme.label}
+              </span>
+              <Wordmark size="xl" />
+              <Wordmark variant="tile" size="md" />
+            </div>
+          ))}
+        </div>
+
         <div className="mt-8 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-6">
-          <p className="mb-4 font-sans text-[var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
+          <p className="mb-4 font-sans text-[length:var(--text-xs)] font-semibold uppercase tracking-wide text-[var(--color-ink-faint)]">
             withVerse — for places with room: about panels, empty states
           </p>
           <Wordmark size="lg" withVerse />

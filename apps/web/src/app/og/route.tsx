@@ -95,10 +95,9 @@ function Wordmark({ height }: { height: number }) {
   return (
     <svg width={(height * g.width) / g.height} height={height} viewBox={g.viewBox}>
       {g.paths.map((d) => (
-        <path key={d} d={d} fill="none" stroke={C.brand} strokeWidth={g.strokeWidth} strokeLinecap="round" strokeLinejoin="round" />
+        <path key={d} d={d} fill={C.brand} />
       ))}
-      <circle {...g.bowl} fill="none" stroke={C.brand} strokeWidth={g.strokeWidth} />
-      <circle {...g.tittle} fill={C.rubric} />
+      <circle cx={g.tittle.cx} cy={g.tittle.cy} r={g.tittle.r} fill={C.rubric} />
     </svg>
   );
 }
@@ -135,7 +134,7 @@ function Frame({ kicker, footer, children }: { kicker: string; footer?: string; 
         >
           {kicker}
         </div>
-        <Wordmark height={46} />
+        <Wordmark height={64} />
       </div>
       <div style={{ display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: "center", minHeight: 0 }}>
         {children}

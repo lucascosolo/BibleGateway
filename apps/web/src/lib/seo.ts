@@ -46,7 +46,7 @@ export const CARD_HEIGHT = 630;
  * parameter, which is what lets `/og` claim `immutable`: the address names the exact version of
  * both inputs, so a changed card is a different URL (see the `immutable` trap in AGENTS.md).
  */
-export const CARD_VERSION = "1";
+export const CARD_VERSION = "2";
 
 export function cardVersion(buildId: string): string {
   return `${CARD_VERSION}.${buildId.slice(0, 12)}`;

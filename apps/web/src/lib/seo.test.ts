@@ -46,7 +46,7 @@ describe("pageMetadata", () => {
     const meta = pageMetadata("Notes & highlights · Jot", "Your notes.", "/notes", { buildId: "b" });
     const og = meta.openGraph as { images: { url: string; width: number; height: number }[]; title: string };
     expect(og.title).toBe("Notes & highlights");
-    expect(og.images[0]).toMatchObject({ url: "/og?kind=page&page=home&v=1.b", width: 1200, height: 630 });
+    expect(og.images[0]).toMatchObject({ url: `/og?kind=page&page=home&v=${CARD_VERSION}.b`, width: 1200, height: 630 });
     expect(meta.twitter).toMatchObject({ card: "summary_large_image" });
     expect((meta.twitter as { images: unknown[] }).images).toHaveLength(1);
   });

@@ -53,6 +53,11 @@
   --color-rubric: oklch(52% 0.19 32);           /* rubric red */
   --color-rubric-strong: oklch(44% 0.19 30);
   --color-rubric-soft: oklch(92% 0.05 30);
+  /* The app-icon tile and the letter on it. Deliberately NOT redefined for dark: the tile is the
+     icon, and the icon on a home screen does not change with the theme. Parchment on the tile
+     is 6.4:1; rubric would be 1.1:1, which is why the tile's tittle is parchment too. */
+  --color-tile: oklch(46% 0.075 185);
+  --color-on-tile: oklch(97.5% 0.012 78);
 
   /* ---- semantic ---- */
   --color-accent: var(--color-brand);
