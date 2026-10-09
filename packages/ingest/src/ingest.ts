@@ -50,6 +50,8 @@ import {
   mapSourceVerse,
   isUnplacedSourceVerse,
   TRANSLATION_SOURCES,
+  unexplainedGaps,
+  unplacedGateErrors,
 } from "./translations.js";
 import { parseUsfx, type UsfxResult } from "./usfx.js";
 import { XREF_BOOK_MAP } from "./xref-book-map.js";
@@ -1122,6 +1124,31 @@ async function main() {
     }
   });
   insertBsbTx();
+
+  // WEB and BSB express an omitted verse as an empty string, but a verse the source skips
+  // entirely — WEB has no Acts 8:37, its chapter runs 36, 38 — never reaches loadVerseText,
+  // so the canonical address got neither text nor apparatus. Every canonical verse these two
+  // full-Bible sources leave unwritten gets the same explanation an empty string would.
+  const fillUnwrittenTx = sqlite.transaction((translationId: number) => {
+    const written = new Set(
+      (sqlite
+        .prepare(
+          `SELECT verse_id AS v FROM verse_texts WHERE translation_id = ?
+           UNION SELECT verse_id FROM verse_omissions WHERE translation_id = ?`,
+        )
+        .all(translationId, translationId) as { v: number }[]).map((r) => r.v),
+    );
+    let filled = 0;
+    for (const v of canonicalVerses) {
+      if (written.has(v.verseId)) continue;
+      const explanation = omissionExplanation(undefined, v.verseId);
+      insertOmission.run(translationId, v.verseId, explanation.kind, explanation.reason, explanation.history);
+      filled++;
+    }
+    return filled;
+  });
+  console.log(`  WEB: ${fillUnwrittenTx(1)} canonical verse(s) absent from the source recorded as omitted`);
+  console.log(`  BSB: ${fillUnwrittenTx(2)} canonical verse(s) absent from the source recorded as omitted`);
   console.log(
     `  BSB mapped: ${bsbMapped}, dropped (no canonical verse_id match): ${bsbDropped}, ` +
       `recorded as omitted-by-translation: ${bsbOmitted}`
@@ -1984,9 +2011,7 @@ async function main() {
           `the 'org' versification it declares.`,
       );
     }
-    if (stats.unplaced !== (t.unplacedSourceVerses?.length ?? 0)) {
-      errors.push(`${t.code}: skipped ${stats.unplaced} unplaced source verse(s), the reviewed list has ${t.unplacedSourceVerses?.length ?? 0}`);
-    }
+    errors.push(...unplacedGateErrors(t, stats.unplaced));
     if (stats.unplaced > 0) {
       console.log(`  ${t.code}: ${stats.unplaced} reviewed source verse(s) with no one-to-one canonical counterpart, not stored`);
     }
@@ -2176,6 +2201,34 @@ async function main() {
               `has text for it. The scope declaration and the source disagree.`,
           );
         }
+      }
+    }
+  }
+
+  // Every canonical verse in a book a translation prints, within its declared scope, has a text
+  // row or an omission row. A gap with neither renders as nothing at all — the empty verse
+  // AGENTS.md forbids, reached by a different route. Checked against the finished corpus, so it
+  // covers WEB and BSB as well as the USFX loader.
+  {
+    const canonicalIds = (sqlite.prepare(`SELECT verse_id AS v FROM verses ORDER BY verse_id`).all() as { v: number }[]).map((r) => r.v);
+    const translations = sqlite
+      .prepare(`SELECT translation_id AS id, code, scope FROM translations ORDER BY translation_id`)
+      .all() as { id: number; code: string; scope: "all" | "OT" | "NT" }[];
+    for (const tr of translations) {
+      const ids = (sql: string) => new Set((sqlite.prepare(sql).all(tr.id) as { v: number }[]).map((r) => r.v));
+      const gaps = unexplainedGaps(canonicalIds, {
+        scope: tr.scope,
+        printedBookIds: ids(`SELECT book_id AS v FROM translation_books WHERE translation_id = ? AND status = 'printed'`),
+        explained: new Set([
+          ...ids(`SELECT verse_id AS v FROM verse_texts WHERE translation_id = ?`),
+          ...ids(`SELECT verse_id AS v FROM verse_omissions WHERE translation_id = ?`),
+        ]),
+      });
+      if (gaps.length > 0) {
+        errors.push(
+          `${tr.code}: ${gaps.length} canonical verse(s) in printed books have neither text nor an ` +
+            `omission row, e.g. ${gaps.slice(0, 8).join(", ")}. A gap must be explained.`,
+        );
       }
     }
   }

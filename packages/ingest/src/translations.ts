@@ -57,6 +57,40 @@ export function isUnplacedSourceVerse(
   return t.unplacedSourceVerses?.some((u) => u.bookId === bookId && u.chapter === chapter && u.verse === verse) ?? false;
 }
 
+export function unplacedGateErrors(
+  t: Pick<TranslationSource, "code" | "unplacedSourceVerses" | "reviewedUnplacedCount">,
+  skipped: number,
+): string[] {
+  const errors: string[] = [];
+  const reviewed = t.reviewedUnplacedCount ?? 0;
+  const listed = t.unplacedSourceVerses?.length ?? 0;
+  if (skipped !== reviewed) {
+    errors.push(
+      `${t.code}: skipped ${skipped} unplaced source verse(s), the review accounts for ${reviewed}. ` +
+        `Unplaced verses are not stored, so a change here hides or reveals source text; ` +
+        `re-review and update reviewedUnplacedCount.`,
+    );
+  }
+  if (skipped !== listed) {
+    errors.push(`${t.code}: skipped ${skipped} unplaced source verse(s), the list names ${listed}; an entry is not in the source`);
+  }
+  return errors;
+}
+
+/** Canonical ids in a printed, in-scope book that have neither text nor an omission row. */
+export function unexplainedGaps(
+  canonicalVerseIds: Iterable<number>,
+  t: { scope: "all" | "OT" | "NT"; printedBookIds: ReadonlySet<number>; explained: ReadonlySet<number> },
+): number[] {
+  const gaps: number[] = [];
+  for (const id of canonicalVerseIds) {
+    const book = Math.floor(id / 1_000_000);
+    const inScope = t.scope === "all" || (t.scope === "OT" ? book <= 39 : book >= 40);
+    if (inScope && t.printedBookIds.has(book) && !t.explained.has(id)) gaps.push(id);
+  }
+  return gaps.sort((a, b) => a - b);
+}
+
 export interface TranslationSource {
   /** Fixed. Ends up in verse_texts, verse_omissions and user annotations — never renumber. */
   translationId: number;
@@ -94,6 +128,12 @@ export interface TranslationSource {
    * the build log; any other source verse without an address still fails the build.
    */
   unplacedSourceVerses?: readonly { bookId: number; chapter: number; verse: number }[];
+  /**
+   * Exact number of unplaced source verses the review accounts for. Held apart from the list so
+   * that adding an entry cannot raise both sides of the gate at once: unplaced verses write no
+   * omission row, so a list allowed to grow would hide source text silently.
+   */
+  reviewedUnplacedCount?: number;
   /** Exact count of `versification` omission rows the reviewed map produces. Gated in ingest. */
   versificationOmissions?: number;
   /**
@@ -148,6 +188,7 @@ export const TRANSLATION_SOURCES: readonly TranslationSource[] = [
     includedBookIds: [1, 2, 3, 4, 5, 16, 25, 35, 37],
     // Gen 2, Exod 63, Lev 1, Num 2, Deut 1, Nehemiah and Lamentations 21.
     versificationOmissions: 90,
+    reviewedUnplacedCount: 16,
     verseOffsets: [
       // Genesis: Brenton opens chapter 32 with Hebrew 31:55.
       { bookId: 1, chapter: 32, fromVerse: 1, toVerse: 1, canonicalChapter: 31, canonicalFirstVerse: 55 },
