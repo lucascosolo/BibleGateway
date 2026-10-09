@@ -171,7 +171,10 @@ export interface EventAttestation {
 
 export interface EventDetail extends EventSummary {
   summary: string;
+  /** Positions that date the event itself; the envelope is theirs alone. */
   positions: Position[];
+  /** Positions that date the writing of the story, not the event. */
+  compositionPositions: Position[];
   attestations: EventAttestation[];
   verses: VerseLink[];
   issueIds: string[];
@@ -426,9 +429,9 @@ export function getEvent(id: string): EventDetail | null {
   if (!found) return null;
   const row = toSummary(found);
 
-  const positions = all<Omit<Position, "citations" | "arguments">>(
+  const rows = all<Omit<Position, "citations" | "arguments"> & { dates: "event" | "composition" }>(
     `SELECT position_id AS id, label, tradition, earliest_year AS earliest, latest_year AS latest,
-            summary, held_by AS heldBy
+            summary, held_by AS heldBy, dates
      FROM positions WHERE event_id = ? ORDER BY ordinal`,
     id
   ).map((position) => ({
@@ -457,7 +460,10 @@ export function getEvent(id: string): EventDetail | null {
     id
   ).map((issue) => issue.id);
 
-  return { ...row, positions, attestations, verses: versesFor("event", id), issueIds };
+  const positions = rows.filter((p) => p.dates === "event");
+  const compositionPositions = rows.filter((p) => p.dates === "composition");
+
+  return { ...row, positions, compositionPositions, attestations, verses: versesFor("event", id), issueIds };
 }
 
 export function getArtifact(id: string): ArtifactDetail | null {

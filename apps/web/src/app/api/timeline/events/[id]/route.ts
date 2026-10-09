@@ -33,6 +33,12 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       ...withDisplay(position),
       arguments: position.arguments.map((argument) => ({ ...argument, verses: labelVerses(argument.verses) })),
     })),
+    // Positions that date the writing of the story, not the event; kept apart so a client
+    // computing a span from `positions` gets the same envelope the page and the strip show.
+    compositionPositions: event.compositionPositions.map((position) => ({
+      ...withDisplay(position),
+      arguments: position.arguments.map((argument) => ({ ...argument, verses: labelVerses(argument.verses) })),
+    })),
     attestations: event.attestations.map((attestation) => ({
       ...attestation,
       href: `/api/timeline/artifacts/${attestation.artifactId}`,

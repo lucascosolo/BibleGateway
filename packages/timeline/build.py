@@ -49,6 +49,8 @@ CONFIDENCE = {"firm", "contested", "speculative"}
 STATUSES = {"draft", "reviewed"}
 STANCES = {"for", "against"}
 TRADITIONS = {"critical", "archaeological", "chronological", "traditional"}
+# What a position dates: the event itself, or the writing of the story about it.
+DATES = {"event", "composition"}
 RELATIONS = {"corroborates", "partially-corroborates", "consistent", "silent", "in-tension"}
 ARTIFACT_KINDS = {"inscription", "chronicle", "relief", "papyrus", "ostracon", "manuscript", "seal", "coin", "site", "literary-text"}
 
@@ -382,7 +384,7 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
     position_spec: Spec = {
         "id": (str, True), "label": (str, True), "tradition": (str, True), "earliest": (int, True),
         "latest": (int, True), "summary": (str, True), "held_by": (str, False),
-        "citations": (list, True), "arguments": (list, False),
+        "citations": (list, True), "arguments": (list, False), "dates": (str, False),
     }
     argument_spec: Spec = {"stance": (str, True), "text": (str, True), "citations": (list, True), "verses": (list, False)}
     attestation_spec: Spec = {"artifact": (str, True), "relation": (str, True), "note": (str, True), "citations": (list, True)}
@@ -428,6 +430,8 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
             seen_positions.add(position["id"])
             check_enum(report, here, "tradition", position["tradition"], TRADITIONS)
             check_years(report, here, position["earliest"], position["latest"])
+            position.setdefault("dates", "event")
+            check_enum(report, here, "dates", position["dates"], DATES)
             arguments: list[dict[str, Any]] = []
             for a_index, raw_argument in enumerate(position.get("arguments", [])):
                 there = f"{here} argument {a_index + 1}"
@@ -447,6 +451,8 @@ def load_events(report: Report, directory: Path, content: Content, corpus: Corpu
                 "citations": citations(report, here, position["citations"], content),
             })
 
+        if positions and event["axis"] != "composition" and all(p["dates"] == "composition" for p in positions):
+            report.error(where, f'event \'{event["id"]}\' has only composition-dated positions; set axis = "composition"')
         if positions and all(p["tradition"] == "traditional" for p in positions):
             report.warn(where, f"event '{event['id']}' has only traditional positions; its envelope is the traditional count")
 
@@ -656,6 +662,22 @@ def fingerprint(content: Content) -> str:
 # --- Write -----------------------------------------------------------------------------------
 
 
+def envelope(positions: list[dict[str, Any]], include_composition: bool = False) -> dict[str, int | None]:
+    """The ranges are DERIVED from the positions — there is no second copy to drift. Only
+    positions that date the event count; a date for the writing of its story never widens it. The
+    scholarly envelope leads; the traditional count is a separate lens, and stands in for the
+    envelope only when it is all there is."""
+    dated = [p for p in positions if include_composition or p.get("dates", "event") == "event"]
+    traditional = [p for p in dated if p["tradition"] == "traditional"]
+    scholarly = [p for p in dated if p["tradition"] != "traditional"] or traditional
+    return {
+        "earliest": min((p["earliest"] for p in scholarly), default=None),
+        "latest": max((p["latest"] for p in scholarly), default=None),
+        "trad_earliest": min((p["earliest"] for p in traditional), default=None),
+        "trad_latest": max((p["latest"] for p in traditional), default=None),
+    }
+
+
 def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
     db = sqlite3.connect(":memory:")
     db.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
@@ -692,30 +714,25 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
         cite("artifact", a["id"], a["citations"])
         link("artifact", a["id"], a["verses"])
     for e in content.events.values():
-        # The ranges are DERIVED from the positions — there is no second copy to drift. The
-        # scholarly envelope leads; the traditional count is a separate lens, and stands in for
-        # the envelope only when it is all there is.
-        traditional = [p for p in e["positions"] if p["tradition"] == "traditional"]
-        scholarly = [p for p in e["positions"] if p["tradition"] != "traditional"] or traditional
-        earliest = min(p["earliest"] for p in scholarly)
-        latest = max(p["latest"] for p in scholarly)
-        trad_earliest = min((p["earliest"] for p in traditional), default=None)
-        trad_latest = max((p["latest"] for p in traditional), default=None)
+        # On the composition axis the writing IS the event, so every position counts there.
+        span = envelope(e["positions"], include_composition=e["axis"] == "composition")
         db.execute(
             """INSERT INTO events (event_id, title, axis, category, confidence, status, summary,
                                    segment_label, earliest_year, latest_year,
                                    traditional_earliest, traditional_latest)
                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
             (e["id"], e["title"], e["axis"], e["category"], e["confidence"], e["status"], e["summary"],
-             e.get("segment"), earliest, latest, trad_earliest, trad_latest),
+             e.get("segment"), span["earliest"], span["latest"], span["trad_earliest"], span["trad_latest"]),
         )
         db.executemany("INSERT INTO event_books VALUES (?, ?)", [(e["id"], book_id) for book_id in e["book_ids"]])
         link("event", e["id"], e["verses"])
         for ordinal, p in enumerate(e["positions"]):
             position_id = f"{e['id']}/{p['id']}"
             db.execute(
-                "INSERT INTO positions VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                (position_id, e["id"], ordinal, p["label"], p["tradition"], p["earliest"], p["latest"], p["summary"], p.get("held_by")),
+                """INSERT INTO positions (position_id, event_id, ordinal, label, tradition, earliest_year,
+                                          latest_year, summary, held_by, dates)
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                (position_id, e["id"], ordinal, p["label"], p["tradition"], p["earliest"], p["latest"], p["summary"], p.get("held_by"), p["dates"]),
             )
             cite("position", position_id, p["citations"])
             for a_ordinal, argument in enumerate(p["arguments"]):

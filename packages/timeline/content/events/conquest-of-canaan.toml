@@ -141,6 +141,7 @@ They also explain why the conquest once seemed proven. For much of the twentieth
 id = "fs-composition"
 label = "Book of Joshua composed under Josiah (Finkelstein and Silberman)"
 tradition = "critical"
+dates = "composition"
 earliest = -640
 latest = -609
 held_by = "Israel Finkelstein and Neil Asher Silberman"

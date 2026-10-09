@@ -85,6 +85,7 @@ citations = [{ source = "cos-2", locator = "pp. 40–41" }]
 id = "finkelstein-silberman"
 label = "Exodus story written in the 7th-6th centuries BCE (Finkelstein and Silberman)"
 tradition = "critical"
+dates = "composition"
 earliest = -650
 latest = -550
 held_by = "Israel Finkelstein and Neil Asher Silberman"

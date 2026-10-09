@@ -65,6 +65,7 @@ citations = [{ source = "ussher-annals", locator = "paragraphs 135-138" }]
 id = "finkelstein-silberman"
 label = "Descent to Egypt written in the 7th-6th centuries BCE (Finkelstein and Silberman)"
 tradition = "critical"
+dates = "composition"
 earliest = -700
 latest = -550
 held_by = "Israel Finkelstein and Neil Asher Silberman"

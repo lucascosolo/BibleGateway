@@ -11,7 +11,7 @@ import { VerseLinks } from "@/components/toledot/VerseLinks";
 import { getEvent, getIssueSummaries, type Position } from "@/lib/db/timeline";
 import { bookNames, labelVerses } from "@/lib/db/timeline-present";
 import { excerpt } from "@/lib/seo";
-import { splitPositions } from "@/lib/timeline/lens";
+import { orderPositions, splitPositions } from "@/lib/timeline/lens";
 import { formatRange } from "@/lib/timeline/years";
 
 export const dynamic = "force-dynamic";
@@ -81,6 +81,8 @@ export default async function EventPage({ params }: Props) {
   const books = bookNames(event.bookIds);
   const issues = getIssueSummaries(event.issueIds);
   const { scholarly, traditional } = splitPositions(event.positions);
+  // Dates for the writing of the story, on their own scale: they never widen the event's.
+  const written = orderPositions(event.compositionPositions);
   // The tracks share one scale across both sections, so a traditional count far from the
   // evidence reads as far.
   const trackFrom = Math.min(event.earliest, event.traditional?.earliest ?? event.earliest);
@@ -114,6 +116,16 @@ export default async function EventPage({ params }: Props) {
         <EntitySection title="Traditional chronology">
           <p className="toledot-draft toledot-lens-caveat">{TRADITIONAL_CAVEAT}</p>
           <PositionList positions={traditional} from={trackFrom} to={trackTo} />
+        </EntitySection>
+      ) : null}
+
+      {written.length ? (
+        <EntitySection title="When the story was written">
+          <PositionList
+            positions={written}
+            from={Math.min(...written.map((p) => p.earliest))}
+            to={Math.max(...written.map((p) => p.latest))}
+          />
         </EntitySection>
       ) : null}
 

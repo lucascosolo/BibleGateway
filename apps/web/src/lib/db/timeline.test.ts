@@ -26,8 +26,8 @@ beforeAll(async () => {
     INSERT INTO event_books VALUES ('ev-dan',27),('ev-dan',26);
     INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year) VALUES ('ev-canon','Torah closed','canon','canon','speculative','draft','sum',NULL,-450,-400);
 
-    INSERT INTO positions VALUES ('ev-exodus/late','ev-exodus',2,'Late','Critical',-1290,-1200,'late sum','Scholars B');
-    INSERT INTO positions VALUES ('ev-exodus/early','ev-exodus',1,'Early','Conservative',-1446,-1406,'early sum',NULL);
+    INSERT INTO positions VALUES ('ev-exodus/late','ev-exodus',2,'Late','Critical',-1290,-1200,'late sum','Scholars B','event');
+    INSERT INTO positions VALUES ('ev-exodus/early','ev-exodus',1,'Early','Conservative',-1446,-1406,'early sum',NULL,'event');
     INSERT INTO arguments VALUES ('ev-exodus/early/argument-1','ev-exodus/early',1,'for','Because 1 Kings 6:1');
     INSERT INTO arguments VALUES ('ev-exodus/early/argument-2','ev-exodus/early',2,'against','But Raamses');
     INSERT INTO citations(subject_kind,subject_id,source_id,locator,ordinal) VALUES

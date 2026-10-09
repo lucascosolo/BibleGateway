@@ -29,6 +29,7 @@ citations = [{ source = "young-2004", locator = "p. 27" }]
 id = "fs-josiah-dtr"
 label = "Deuteronomistic history composed under Josiah (c. 639-609 BCE)"
 tradition = "critical"
+dates = "composition"
 earliest = -639
 latest = -609
 held_by = "Israel Finkelstein and Neil Asher Silberman"

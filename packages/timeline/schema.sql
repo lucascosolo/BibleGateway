@@ -79,6 +79,9 @@ CREATE TABLE positions (
   latest_year   INTEGER NOT NULL CHECK (latest_year <> 0),
   summary       TEXT NOT NULL,
   held_by       TEXT,
+  -- Whether the range dates the event itself or the writing of its story. Only 'event'
+  -- positions enter the event's envelope (except on the composition axis).
+  dates         TEXT NOT NULL DEFAULT 'event' CHECK (dates IN ('event','composition')),
   CHECK (earliest_year <= latest_year),
   UNIQUE (event_id, ordinal)
 );

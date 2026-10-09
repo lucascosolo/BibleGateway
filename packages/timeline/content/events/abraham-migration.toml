@@ -44,6 +44,7 @@ citations = [{ source = "ussher-annals", locator = "paragraphs 70-71" }]
 id = "finkelstein-silberman"
 label = "Patriarchal stories written in the 8th-7th centuries BCE (Finkelstein and Silberman)"
 tradition = "critical"
+dates = "composition"
 earliest = -700
 latest = -600
 held_by = "Israel Finkelstein and Neil Asher Silberman"
