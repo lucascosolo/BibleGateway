@@ -12,9 +12,9 @@ citations = [
   { source = "anf08-ccel", locator = "Translator's Introductory Notice, p. 355" },
 ]
 verses = [
-  { ref = "1Cor.15.32", link = "alludes", note = "Metzger suggests the author of the Acts of Paul built the story of Paul and the lion at Ephesus from this verse about fighting wild beasts (p. 175)." },
-  { ref = "2Tim.1.15-2Tim.1.16", link = "alludes", note = "The names Demas, Onesiphorus and Hermogenes in the Acts recall 2 Timothy (Metzger p. 176)." },
-  { ref = "2Tim.4.10", link = "alludes", note = "The name Demas in the Acts recalls this verse (Metzger p. 176)." },
+  { ref = "1Cor.15.32", link = "alludes", note = "The Acts of Paul's story of Paul and the lion at Ephesus may have been built from this verse about fighting wild beasts (Metzger p. 175)." },
+  { ref = "2Tim.1.15-2Tim.1.16", link = "alludes", note = "The Acts of Paul and Thecla uses the names Demas, Onesiphorus and Hermogenes, which recall these verses (Metzger p. 176)." },
+  { ref = "2Tim.4.10", link = "alludes", note = "The Acts of Paul and Thecla uses the name Demas, which recalls this verse (Metzger p. 176)." },
 ]
 
 [[composed]]

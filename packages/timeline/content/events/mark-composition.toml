@@ -9,8 +9,8 @@ summary = """
 This asks who wrote the Gospel of Mark and when. Most scholars place it around the time of the First Jewish Revolt against Rome, either just before or just after the Temple fell in 70 CE, and treat it as the earliest Gospel. Whether it shows knowledge of the Temple's destruction, and whether its author was the Mark of church tradition, are not settled."""
 verses = [
   { ref = "Mark.13.2", link = "dates", note = "Jesus foretells that not one stone of the Temple will be left on another." },
-  { ref = "Mark.13.14", link = "background", note = "The 'abomination of desolation', read against the revolt of 66-70 CE." },
-  { ref = "Mark.1.1", link = "describes", note = "This is the opening of the Gospel, the text whose composition is discussed here." },
+  { ref = "Mark.13.14", link = "background", note = "Mark's 'abomination of desolation' is read against the revolt of 66-70 CE." },
+  { ref = "Mark.1.1", link = "describes", note = "The Gospel opens here without naming its author." },
 ]
 
 [[positions]]
@@ -83,7 +83,7 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
   text = """
 Ehrman suggests current events shaped Mark: the war with Rome and the Temple's destruction would make the end seem near, as Jesus predicts in Mark 8:38 to 9:1 and chapter 13. He treats this as a suggestion ("many scholars believe"), not proof."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 74 approx." }]
-  verses = [{ ref = "Mark.13.2", link = "dates", note = "Jesus' prediction about the Temple is read against the war of 66-70 CE." }, { ref = "Mark.9.1", link = "background", note = "The end said to come within the lifetime of some hearers." }]
+  verses = [{ ref = "Mark.13.2", link = "dates", note = "Jesus' prediction about the Temple is read against the war of 66-70 CE." }, { ref = "Mark.9.1", link = "background", note = "Jesus says the end will come within the lifetime of some hearers." }]
 
 [[positions]]
 id = "streeter-rome-c65"
@@ -101,4 +101,4 @@ citations = [{ source = "streeter-1924", locator = "pp. 489–495, 524" }]
   text = """
 Streeter argues that Mark 13 expects the Anti-Christ to appear in the Temple, which presumes the Temple still stood. The same expectation is in 2 Thessalonians, so the chapter is more naturally explained as written before 70 than after it. For Rome he points to 1 Peter 5:13, where "Babylon" can only mean the Roman church, and to a belief that Peter and Mark were together there."""
   citations = [{ source = "streeter-1924", locator = "pp. 489–490, 493" }]
-  verses = [{ ref = "Mark.13.14", link = "dates", note = "Mark speaks of the Anti-Christ expected in the Temple, which implies the Temple still stood." }, { ref = "1Pet.5.13", link = "background", note = "'Babylon' read as Rome, linking Peter and Mark there." }]
+  verses = [{ ref = "Mark.13.14", link = "dates", note = "Mark speaks of the Anti-Christ expected in the Temple, which implies the Temple still stood." }, { ref = "1Pet.5.13", link = "background", note = "'Babylon' is read as Rome, placing Peter and Mark there." }]

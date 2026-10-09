@@ -12,11 +12,11 @@ citations = [
   { source = "lightfoot-harmer-1891", locator = "intro., pp. 291-294" },
 ]
 verses = [
-  { ref = "John.3.18", link = "alludes", note = "Similitude 9.12, entering the kingdom only by receiving the Name of the Son of God, seems to remember John 3:18 (Metzger p. 66)." },
-  { ref = "Eph.4.3-Eph.4.6", link = "alludes", note = "Similitude 9.13, 17 and 18 on 'one spirit and one body' probably draw on Ephesians 4:3-6 (Metzger p. 66)." },
-  { ref = "Jas.1.8", link = "alludes", note = "Hermas uses James's rare word 'double-minded' dozens of times (Metzger pp. 66-67)." },
-  { ref = "Jas.4.8", link = "alludes", note = "The second place where James uses 'double-minded' (Metzger p. 67)." },
-  { ref = "Rom.16.14", link = "background", note = "Origen and Jerome identified the author with the Hermas greeted here; Metzger says internal and external evidence points to a later author (p. 64)." },
+  { ref = "John.3.18", link = "alludes", note = "Hermas, Similitude 9.12, seems to remember this verse: one enters the kingdom only by receiving the Name of the Son of God (Metzger p. 66)." },
+  { ref = "Eph.4.3-Eph.4.6", link = "alludes", note = "Hermas, Similitudes 9.13, 17 and 18, probably draws on these verses for “one spirit and one body” (Metzger p. 66)." },
+  { ref = "Jas.1.8", link = "alludes", note = "Hermas uses this verse's rare word “double-minded” dozens of times (Metzger pp. 66-67)." },
+  { ref = "Jas.4.8", link = "alludes", note = "Hermas uses this verse's rare word “double-minded” dozens of times (Metzger p. 67)." },
+  { ref = "Rom.16.14", link = "background", note = "Origen and Jerome identified the author of the Shepherd with the Hermas greeted here, but Metzger (p. 64) says the evidence points to a later author." },
 ]
 
 [[composed]]

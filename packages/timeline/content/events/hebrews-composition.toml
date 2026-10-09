@@ -30,7 +30,7 @@ citations = [{ source = "brown-1997", locator = "ch. 32, Summary of Basic Inform
   text = """
 Brown finds the strongest support for the later date in the letter's theme: "A supporting factor for a writing date in the 80s is the strong emphasis on the replacement of the Jewish feasts, sacrifices, priesthood, and earthly place of worship""""
   citations = [{ source = "brown-1997", locator = "ch. 32, From and to whom, where, and when" }]
-  verses = [{ ref = "Heb.8.7-Heb.8.13", link = "dates", note = "The old covenant is being replaced by the new." }]
+  verses = [{ ref = "Heb.8.7-Heb.8.13", link = "dates", note = "Hebrews says the old covenant is being replaced by the new." }]
 
 [[positions]]
 id = "carson-moo-before-70"
@@ -66,4 +66,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 310 approx." }]
   text = """
 Ehrman says present-tense talk of Temple sacrifice does not prove a date before 70, because later Jewish writers did the same and the sacrifices described come from the Old Testament, not current practice. He adds that the readers had earlier suffered persecution but were now complacent, which suggests a later date."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 310 approx." }]
-  verses = [{ ref = "Heb.10.32-Heb.10.34", link = "background", note = "The readers' earlier suffering, which Ehrman reads as a past episode in the community's history." }]
+  verses = [{ ref = "Heb.10.32-Heb.10.34", link = "background", note = "The letter recalls the readers' earlier suffering, which Ehrman reads as a past episode in the community's history." }]

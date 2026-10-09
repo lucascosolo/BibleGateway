@@ -10,7 +10,7 @@ Paul wrote Galatians in anger to churches in Galatia that had been won over to a
 verses = [
   { ref = "Gal.1.1", link = "describes", note = "Paul names himself as the sender." },
   { ref = "Gal.1.6", link = "describes", note = "Paul is astonished that the Galatians so quickly turned to another gospel." },
-  { ref = "Gal.1.18-Gal.2.1", link = "dates", note = "The three and fourteen years that anchor Paul's career and so the date of the letter." },
+  { ref = "Gal.1.18-Gal.2.1", link = "dates", note = "Paul's three years and fourteen years here anchor his career and so the date of the letter." },
 ]
 
 [[positions]]

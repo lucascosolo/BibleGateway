@@ -54,6 +54,16 @@ whose primary text names it, and, for described works only, a contents summary a
 under 25 words. Every part is cited. Where the filed scholarship is silent, a position cites the
 public-domain translator's introduction and says it is that translator's view and its date.
 
+## Verse link kinds
+
+Every verse link (events, arguments, artifacts, issues, persons, works) has a `link`:
+`describes`, `alludes`, `background`, `dates`, or `names`. `names` is book-level: the source names
+or lists the book (Origen's Hebrew title for Genesis, Melito leaving out Esther) and says nothing
+about the verses themselves. Such a link is shown on the event, artifact or work page but never
+becomes a reader margin note, so a book's first verse is not loaded with every list that mentions
+the book. If the source does say something about the passage, use one of the other kinds and
+write a note that states it, relationship first, in one sentence.
+
 ## Review notes for the seed content
 
 The seed (5 events, 5 artifacts, 3 issues, 18 sources) was drafted by Claude from checked

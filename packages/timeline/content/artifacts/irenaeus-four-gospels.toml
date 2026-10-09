@@ -12,5 +12,5 @@ citations = [
 verses = [
   { ref = "Rev.4.6-Rev.4.8", link = "background", note = "Revelation 4:6-8 describes the four living creatures that Irenaeus matches to the four Gospels." },
   { ref = "Ezek.1.10", link = "background", note = "Ezekiel 1:10 gives the four faces of the living creatures, the older image behind Irenaeus's fourfold Gospel." },
-  { ref = "Matt.1.1", link = "background", note = "Matthew 1:1 opens the Gospel the Ebionites used alone, one of the single-gospel practices Irenaeus argues against." },
+  { ref = "Matt.1.1", link = "names", note = "Matthew 1:1 opens the Gospel the Ebionites used alone, one of the single-gospel practices Irenaeus argues against." },
 ]

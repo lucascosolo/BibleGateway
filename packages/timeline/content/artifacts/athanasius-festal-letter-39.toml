@@ -12,5 +12,5 @@ citations = [
 verses = [
   { ref = "Matt.22.29", link = "background", note = "Athanasius quotes Jesus' rebuke in Matthew 22:29, 'Ye do err, not knowing the Scriptures', to close his list." },
   { ref = "John.5.39", link = "background", note = "Athanasius quotes John 5:39, 'Search the Scriptures', as the warrant for the books he lists." },
-  { ref = "Esth.1.1", link = "background", note = "Esther is placed by Athanasius among the books to be read but outside the canon." },
+  { ref = "Esth.1.1", link = "names", note = "Esther is placed by Athanasius among the books to be read but outside the canon." },
 ]

@@ -10,7 +10,7 @@ Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church he 
 verses = [
   { ref = "1Cor.1.1", link = "describes", note = "Paul and Sosthenes write to the church of God at Corinth." },
   { ref = "1Cor.5.9", link = "background", note = "1 Corinthians 5:9 mentions an earlier letter to the Corinthians that is now lost, so this is not Paul's first letter to them." },
-  { ref = "1Cor.16.8", link = "dates", note = "I will stay in Ephesus until Pentecost, placing the writing in Ephesus before that feast." },
+  { ref = "1Cor.16.8", link = "dates", note = "Paul says he will stay in Ephesus until Pentecost, which places the writing in Ephesus before that feast." },
 ]
 
 [[positions]]

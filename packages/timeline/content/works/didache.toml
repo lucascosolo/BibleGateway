@@ -12,10 +12,10 @@ citations = [
   { source = "lightfoot-harmer-1891", locator = "intro., pp. 215-216" },
 ]
 verses = [
-  { ref = "Matt.6.5-Matt.6.13", link = "alludes", note = "Didache 8.2 tells readers to pray as the Lord commanded in his gospel, and gives the Lord's Prayer; Metzger p. 50 identifies it as drawn from Matthew." },
-  { ref = "Matt.7.6", link = "alludes", note = "Didache 9.5 quotes the saying about giving what is holy to the dogs to bar the unbaptised from the Eucharist (Metzger p. 50)." },
-  { ref = "Mal.1.11", link = "alludes", note = "Metzger p. 50 lists Malachi 1:11 and 1:14 as the Old Testament quotation in Didache 14." },
-  { ref = "Zech.14.5", link = "alludes", note = "Metzger p. 50 lists Zechariah 14:5 as quoted in Didache 16." },
+  { ref = "Matt.6.5-Matt.6.13", link = "alludes", note = "Didache 8.2 gives the Lord's Prayer, which Metzger (p. 50) identifies as drawn from Matthew here." },
+  { ref = "Matt.7.6", link = "alludes", note = "Didache 9.5 quotes this saying about giving what is holy to the dogs to bar the unbaptised from the Eucharist (Metzger p. 50)." },
+  { ref = "Mal.1.11", link = "alludes", note = "Didache 14 quotes this verse and 1:14 (Metzger p. 50)." },
+  { ref = "Zech.14.5", link = "alludes", note = "Didache 16 quotes this verse (Metzger p. 50)." },
 ]
 
 [[composed]]

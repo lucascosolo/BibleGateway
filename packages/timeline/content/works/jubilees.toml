@@ -13,8 +13,8 @@ citations = [
   { source = "charles-1917-jubilees", locator = "intro., p. xii" },
 ]
 verses = [
-  { ref = "Gen.1.1-Gen.1.2", link = "background", note = "Jubilees opens its retelling at creation. VanderKam calls it a long interpretation of Genesis 1 to Exodus 24 (chapter 2); the link marks the start of that span only." },
-  { ref = "Exod.19.1-Exod.19.2", link = "background", note = "The Sinai setting of Exodus 19 to 24 frames the whole book as revealed to Moses (VanderKam, chapter 2, and Lim p. 133)." },
+  { ref = "Gen.1.1-Gen.1.2", link = "background", note = "Jubilees retells Genesis 1 to Exodus 24, beginning here (VanderKam, ch. 2)." },
+  { ref = "Exod.19.1-Exod.19.2", link = "background", note = "Jubilees presents itself as revealed to Moses at the Sinai of this chapter (VanderKam, ch. 2; Lim p. 133)." },
 ]
 
 [[composed]]

@@ -13,5 +13,5 @@ citations = [
 verses = [
   { ref = "Deut.34.5-Deut.34.8", link = "background", note = "Deuteronomy 34:5-8 reports the death of Moses, the eight verses the Talmud debates whether Moses or Joshua wrote." },
   { ref = "Num.22.2-Num.22.6", link = "background", note = "Numbers 22 begins the Balaam story, the portion the baraita singles out as written by Moses." },
-  { ref = "Ruth.1.1", link = "background", note = "Ruth 1:1 opens the book the baraita assigns to Samuel and places first among the Writings." },
+  { ref = "Ruth.1.1", link = "names", note = "Ruth 1:1 opens the book the baraita assigns to Samuel and places first among the Writings." },
 ]

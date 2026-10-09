@@ -7,10 +7,10 @@ status = "sources-located"
 summary = """
 Eusebius quotes several passages of Origen, the Alexandrian scholar who later taught at Caesarea. From his commentary on the first Psalm comes the statement that the canonical books, as the Hebrews hand them down, are twenty-two, the number of letters in their alphabet, with a list of Hebrew titles. From the commentary on Matthew comes his judgement that only four Gospels are undisputed in the church; from the commentary on John, that Peter's second letter and John's second and third are disputed; from the homilies on Hebrews, that only God knows who wrote it. Origen died in 253 or 254, and Metzger dates the John commentary to about 230-231 and the Matthew commentary after 244. Lim argues that by 'the Hebrews' Origen could mean the Jews of his own day."""
 verses = [
-  { ref = "Gen.1.1", link = "background", note = "In the beginning, the Hebrew title Origen transliterates for Genesis." },
-  { ref = "Heb.1.1", link = "background", note = "Hebrews, whose author Origen leaves to God." },
-  { ref = "2Pet.1.1", link = "background", note = "2 Peter, which Origen calls disputed." },
-  { ref = "Matt.1.1", link = "background", note = "Matthew, the Gospel Origen places first." },
+  { ref = "Gen.1.1", link = "names", note = "In the beginning, the Hebrew title Origen transliterates for Genesis." },
+  { ref = "Heb.1.1", link = "names", note = "Hebrews, whose author Origen leaves to God." },
+  { ref = "2Pet.1.1", link = "names", note = "2 Peter, which Origen calls disputed." },
+  { ref = "Matt.1.1", link = "names", note = "Matthew, the Gospel Origen places first." },
 ]
 
 [[positions]]

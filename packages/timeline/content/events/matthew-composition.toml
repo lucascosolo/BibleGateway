@@ -9,8 +9,8 @@ summary = """
 This asks who wrote the Gospel of Matthew and when. It was written after Mark, which it draws on, and most critical scholars date it to the 80s or 90s, after the destruction of the Temple in 70 CE. The church tradition that the tax-collector Matthew wrote it is not accepted by most critical scholars, and the exact date is not settled."""
 verses = [
   { ref = "Matt.22.7", link = "dates", note = "The king burns the murderers' city, which may reflect the destruction of Jerusalem." },
-  { ref = "Matt.23.36", link = "dates", note = "'All these things will come upon this generation', seen as fulfilled in 70 CE." },
-  { ref = "Matt.1.1", link = "describes", note = "This is the opening of the Gospel, the text whose composition is discussed here." },
+  { ref = "Matt.23.36", link = "dates", note = "'All these things will come upon this generation' is read as fulfilled in 70 CE." },
+  { ref = "Matt.1.1", link = "describes", note = "The Gospel opens here without naming its author." },
 ]
 
 [[positions]]
@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 152–156" }]
   text = """
 They say the burning of the city in Matthew 22:7 is the standard language for a punished rebel city, not knowledge of 70 CE. They add that the temple-tax story (17:24-27) would be hard to leave without comment after 70, when the tax went to the temple of Jupiter in Rome."""
   citations = [{ source = "carson-moo-2005", locator = "pp. 153–156" }]
-  verses = [{ ref = "Matt.22.7", link = "dates", note = "Read as stock language for punishing a rebel city, so no proof of a date after 70." }]
+  verses = [{ ref = "Matt.22.7", link = "dates", note = "The burning of the city is read as stock language for punishing a rebel city, so no proof of a date after 70." }]
 
 [[positions]]
 id = "ehrman-intro-80-85"

@@ -11,5 +11,5 @@ citations = [
 verses = [
   { ref = "Luke.1.1-Luke.1.4", link = "background", note = "Luke 1:1-4 is the preface in which Luke explains his method, which the fragment paraphrases when it says he wrote in order after the ascension." },
   { ref = "John.21.24", link = "background", note = "John 21:24 identifies the disciple who wrote the Gospel, the claim the fragment repeats when it calls the fourth Gospel John's." },
-  { ref = "2Pet.1.1", link = "background", note = "2 Peter is among the letters the fragment does not mention, one of the gaps that mark it as an early and partial list." },
+  { ref = "2Pet.1.1", link = "names", note = "2 Peter is among the letters the fragment does not mention, one of the gaps that mark it as an early and partial list." },
 ]

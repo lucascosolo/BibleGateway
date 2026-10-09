@@ -13,7 +13,7 @@ verses = [
   { ref = "Acts.1.13", link = "describes", note = "Acts 1:13 lists the Eleven after Judas is gone, and Philip is among them." },
   { ref = "John.1.43-John.1.44", link = "describes", note = "John 1:43–44 tells how Jesus called Philip, who is from Bethsaida." },
   { ref = "John.12.20-John.12.22", link = "describes", note = "John 12:20–22 shows the Greek pilgrims approaching Philip with their request to see Jesus." },
-  { ref = "John.14.8-John.14.9", link = "describes", note = "John 14:8–9 has Philip ask to be shown the Father, which sets up a theological statement in John." },
+  { ref = "John.14.8-John.14.9", link = "describes", note = "John 14:8–9 has Philip ask Jesus to show them the Father." },
 ]
 citations = [
   { source = "meier-2001", locator = "pp. 201–202" },

@@ -62,7 +62,7 @@ ARTIFACT_KINDS = {"inscription", "chronicle", "relief", "papyrus", "ostracon", "
 # corroborates (Belshazzar's parentage), so tension is flagged separately, never graded.
 EVIDENCE_ORDER = ["corroborates", "partially-corroborates", "consistent", "silent"]
 ISSUE_KINDS = {"chronology", "textual", "historical", "internal"}
-LINK_TYPES = {"describes", "alludes", "background", "dates"}
+LINK_TYPES = {"describes", "alludes", "background", "dates", "names"}
 # Why a passage reads differently between witnesses or editions (an investigation's differences).
 DIFFERENCE_KINDS = {"textual", "lexical", "grammatical", "stylistic", "interpretive", "editorial"}
 # Where an outside work stands (bible.db books.canon for books 67+); 'described' works have no text.

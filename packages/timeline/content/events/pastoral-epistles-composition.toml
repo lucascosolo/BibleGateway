@@ -9,9 +9,9 @@ summary = """
 This entry asks who wrote 1 Timothy, 2 Timothy and Titus, and when. Each letter names Paul as author, but Ehrman treats the three as one group forged by a later follower, and places them "at the end of the first century at the very earliest". He gives no latest date, so the span of 90 to 130 shown here is editorial: 90 renders his earliest date, and 130 is a round limit before the middle of the second century."""
 verses = [
   { ref = "1Tim.1.1", link = "describes", note = "Paul is named as apostle, the letter's claim to authorship." },
-  { ref = "Titus.1.1", link = "describes", note = "Paul named as author, the opening Ehrman compares with 1 Timothy 1:1-4." },
-  { ref = "1Tim.6.20", link = "describes", note = "Guard what has been entrusted, a phrase shared with 2 Timothy." },
-  { ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "Personal requests to Timothy, which Ehrman calls verisimilitudes." },
+  { ref = "Titus.1.1", link = "describes", note = "Titus opens by naming Paul as author, an opening Ehrman compares with 1 Timothy 1:1-4." },
+  { ref = "1Tim.6.20", link = "describes", note = "The charge to guard what has been entrusted is a phrase shared with 2 Timothy." },
+  { ref = "2Tim.4.9-2Tim.4.13", link = "describes", note = "The letter closes with personal requests to Timothy, which Ehrman calls verisimilitudes." },
   { ref = "1Tim.3.1-1Tim.3.13", link = "background", note = "Ehrman reads these qualifications for overseers and deacons as a church order already in place." },
 ]
 

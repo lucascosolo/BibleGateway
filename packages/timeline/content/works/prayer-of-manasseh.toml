@@ -8,7 +8,7 @@ summary = "The Prayer of Manasseh purports to be the penitential prayer of King 
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 140" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Prayer of Manasseh" }]
 original_language = "Not stated in the sources read; it survives in Greek"
 verses = [
-  { ref = "2Chr.33.18-2Chr.33.19", link = "describes", note = "The preface says the prayer purports to be the one mentioned in 2 Chronicles 33:18." },
+  { ref = "2Chr.33.18-2Chr.33.19", link = "describes", note = "The Prayer of Manasseh presents itself as the prayer these verses mention." },
 ]
 
 [[composed]]

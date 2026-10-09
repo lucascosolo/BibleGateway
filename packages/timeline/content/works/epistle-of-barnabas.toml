@@ -12,13 +12,13 @@ citations = [
   { source = "lightfoot-harmer-1891", locator = "intro., pp. 239-241" },
 ]
 verses = [
-  { ref = "Matt.27.34", link = "alludes", note = "Barnabas 7.3 says Jesus was given vinegar and gall; Metzger notes only Matthew has gall, though Psalm 69:21 may lie behind it (p. 57)." },
-  { ref = "Matt.22.14", link = "alludes", note = "Barnabas 4.14 quotes 'many are called, but few are chosen' with 'as it is written' (Metzger p. 57)." },
-  { ref = "Matt.9.13", link = "alludes", note = "Barnabas 5.9 says Jesus came not to call the righteous but sinners, as in Matthew 9:13 and Mark 2:17 (Metzger p. 57)." },
-  { ref = "John.3.14", link = "alludes", note = "Barnabas 12.7 on the bronze serpent may allude to John 3:14 (Metzger p. 58)." },
-  { ref = "1Tim.1.15", link = "alludes", note = "Barnabas 5.9 may echo 1 Timothy 1:15 (Metzger p. 58)." },
-  { ref = "Rev.1.13", link = "alludes", note = "Barnabas 7.9 describes Jesus in a robe 'down to the feet', which Metzger thinks may come from Revelation 1:13 (p. 58)." },
-  { ref = "Num.21.7-Num.21.8", link = "background", note = "The bronze serpent passage that Barnabas 12 reads as a type of Christ (Metzger p. 58)." },
+  { ref = "Matt.27.34", link = "alludes", note = "Barnabas 7.3 says Jesus was given vinegar and gall, a detail only Matthew has here, though Psalm 69:21 may lie behind it (Metzger p. 57)." },
+  { ref = "Matt.22.14", link = "alludes", note = "Barnabas 4.14 quotes “many are called, but few are chosen” as scripture (Metzger p. 57)." },
+  { ref = "Matt.9.13", link = "alludes", note = "Barnabas 5.9 says Jesus came not to call the righteous but sinners, as here and in Mark 2:17 (Metzger p. 57)." },
+  { ref = "John.3.14", link = "alludes", note = "Barnabas 12.7 on the bronze serpent may allude to this verse (Metzger p. 58)." },
+  { ref = "1Tim.1.15", link = "alludes", note = "Barnabas 5.9 may echo this verse (Metzger p. 58)." },
+  { ref = "Rev.1.13", link = "alludes", note = "Barnabas 7.9 describes Jesus in a robe “down to the feet”, which Metzger (p. 58) thinks may come from this verse." },
+  { ref = "Num.21.7-Num.21.8", link = "background", note = "Barnabas 12 reads this bronze serpent as a type of Christ (Metzger p. 58)." },
 ]
 
 [[composed]]

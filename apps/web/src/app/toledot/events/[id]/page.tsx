@@ -12,6 +12,7 @@ import { getEvent, getIssueSummaries, type Position } from "@/lib/db/timeline";
 import { bookNames, labelVerses } from "@/lib/db/timeline-present";
 import { excerpt } from "@/lib/seo";
 import { orderPositions, splitPositions } from "@/lib/timeline/lens";
+import { AXIS_DATE_LABEL } from "@/lib/timeline/axes";
 import { formatRange } from "@/lib/timeline/years";
 
 export const dynamic = "force-dynamic";
@@ -19,8 +20,6 @@ export const dynamic = "force-dynamic";
 interface Props {
   params: Promise<{ id: string }>;
 }
-
-const AXIS_PHRASE = { narrative: "When it happened", composition: "When it was written", canon: "When it became scripture" } as const;
 
 const TRADITIONAL_CAVEAT =
   "These dates come from adding up the Bible's own numbers, such as reign lengths and life spans. They are a long-standing way of reading the text, not evidence from archaeology or from records outside the Bible. Each one says whose count it is.";
@@ -94,7 +93,7 @@ export default async function EventPage({ params }: Props) {
       status={event.status}
       meta={
         <>
-          {AXIS_PHRASE[event.axis]}: <strong>{formatRange(event.earliest, event.latest)}</strong>
+          {AXIS_DATE_LABEL[event.axis]}: <strong>{formatRange(event.earliest, event.latest)}</strong>
           {scholarly.length === 0 ? " (traditional count)" : null} · {event.confidence} dating
           {books.length ? <> · {books.join(", ")}</> : null}
         </>

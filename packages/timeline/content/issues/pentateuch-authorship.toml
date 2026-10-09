@@ -6,15 +6,15 @@ summary = """
 Jewish and Christian tradition held that Moses wrote the first five books of the Bible. From the Middle Ages readers noticed passages Moses could not have written, such as the report of his own death, and critical scholars came to see the books as several sources combined over centuries. The Documentary Hypothesis, in Wellhausen's classic form, names four: J (which uses the name Yahweh), E, D (Deuteronomy) and P (the priestly source). Most critical scholars still accept that the Pentateuch is composite and largely post-Mosaic, but the dates, the number of sources and the idea of separate continuous documents are now disputed, with some placing the main shaping of the narrative in the seventh century or later."""
 events = ["sinai-covenant", "exodus"]
 verses = [
-  { ref = "Deut.34.5-Deut.34.6", link = "describes", note = "Moses's death and burial, reported in a book tradition says he wrote." },
-  { ref = "Gen.1.1-Gen.2.3", link = "describes", note = "The first creation account, in which plants, animals, then man and woman are made." },
-  { ref = "Gen.2.4-Gen.2.25", link = "describes", note = "The second creation account, which tells the events in a different order." },
-  { ref = "Gen.6.19-Gen.6.20", link = "describes", note = "Noah takes a pair of every kind of animal, male and female." },
-  { ref = "Gen.7.2-Gen.7.3", link = "describes", note = "Noah takes seven pairs of clean animals, a different instruction." },
+  { ref = "Deut.34.5-Deut.34.6", link = "describes", note = "This reports Moses's death and burial, though tradition says Moses wrote the book." },
+  { ref = "Gen.1.1-Gen.2.3", link = "describes", note = "This is the first of two creation accounts: plants, animals, then man and woman; Genesis 2:4-25 tells it in a different order." },
+  { ref = "Gen.2.4-Gen.2.25", link = "describes", note = "This second creation account tells the events in a different order from Genesis 1:1-2:3." },
+  { ref = "Gen.6.19-Gen.6.20", link = "describes", note = "Noah is told to take a pair of every kind of animal; Genesis 7:2-3 says seven pairs of the clean ones." },
+  { ref = "Gen.7.2-Gen.7.3", link = "describes", note = "Noah is told to take seven pairs of clean animals, unlike the single pair of Genesis 6:19-20." },
   { ref = "Exod.6.2-Exod.6.3", link = "describes", note = "God says the name Yahweh was not made known to the patriarchs, which sits oddly with Genesis stories that use it." },
-  { ref = "Gen.12.6", link = "alludes", note = "\"The Canaanite was then in the land\", a remark that reads as written when the Canaanites were gone." },
-  { ref = "Num.12.3", link = "alludes", note = "Moses called the humblest man on earth, a statement critics doubt he wrote of himself." },
-  { ref = "Gen.37.18-Gen.37.36", link = "describes", note = "The sale of Joseph: Ishmaelites in one thread, Midianites in the other; Baden's first case study." },
+  { ref = "Gen.12.6", link = "alludes", note = "\"The Canaanite was then in the land\" reads as written after the Canaanites were gone." },
+  { ref = "Num.12.3", link = "alludes", note = "Moses is called the humblest man on earth, which critics doubt he wrote of himself." },
+  { ref = "Gen.37.18-Gen.37.36", link = "describes", note = "In this sale of Joseph one thread has Ishmaelites and another Midianites; Baden takes it as his first case study." },
   { ref = "2Kgs.23.1-2Kgs.23.3", link = "describes", note = "Josiah reads the scroll of the covenant, which van der Toorn takes as the first edition of Deuteronomy." },
   { ref = "Neh.8.1-Neh.8.18", link = "describes", note = "Ezra reads the book of the law of Moses; Satlow argues the scroll held only part of the Pentateuch." },
 ]

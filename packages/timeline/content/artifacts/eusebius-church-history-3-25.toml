@@ -10,7 +10,7 @@ citations = [
   { source = "npnf2-01-ccel", locator = "Church History 3.25.1-7" },
 ]
 verses = [
-  { ref = "Jas.1.1", link = "background", note = "James is the first of the letters Eusebius lists as disputed yet recognized by many." },
-  { ref = "Rev.1.1", link = "background", note = "Revelation is the book Eusebius places both among the accepted and among the spurious writings." },
-  { ref = "Jude.1.1", link = "background", note = "Jude is among the disputed letters in Eusebius's classification." },
+  { ref = "Jas.1.1", link = "names", note = "James is the first of the letters Eusebius lists as disputed yet recognized by many." },
+  { ref = "Rev.1.1", link = "names", note = "Revelation is the book Eusebius places both among the accepted and among the spurious writings." },
+  { ref = "Jude.1.1", link = "names", note = "Jude is among the disputed letters in Eusebius's classification." },
 ]

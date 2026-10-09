@@ -10,7 +10,7 @@ Paul wrote Romans from Corinth, in the winter of 57/58, to Christians in Rome, a
 verses = [
   { ref = "Rom.1.1", link = "describes", note = "Paul names himself as the sender." },
   { ref = "Rom.15.25-Rom.15.26", link = "dates", note = "Paul is about to go to Jerusalem with the collection from Macedonia and Achaia." },
-  { ref = "Rom.16.1", link = "describes", note = "Phoebe of Cenchreae, near Corinth, commended to the Romans." },
+  { ref = "Rom.16.1", link = "describes", note = "Paul commends Phoebe of Cenchreae, near Corinth, to the Romans." },
 ]
 
 [[positions]]

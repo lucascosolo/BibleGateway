@@ -92,6 +92,7 @@ beforeAll(async () => {
       ('w-enoch','event','w-enoch@ev-fall','src-b','p. 7',1),
       ('w-gospel','work','w-gospel','src-a','p. 1',1),
       ('w-gospel','excerpt','w-gospel/excerpt-1','src-b','p. 2',1);
+
   `);
   fixture.db = db;
 });
@@ -389,6 +390,81 @@ describe("getTimelineNotesForRange", () => {
   });
 });
 
+describe("getTimelineNotesForRange: names, axis and canon", () => {
+  async function withNotes(setup: string) {
+    const { default: Database } = await vi.importActual<typeof import("better-sqlite3")>("better-sqlite3");
+    const fs = await vi.importActual<typeof import("node:fs")>("node:fs");
+    const path = await vi.importActual<typeof import("node:path")>("node:path");
+    const db = new Database(":memory:");
+    db.exec(fs.readFileSync(path.resolve(__dirname, "../../../../../packages/timeline/schema.sql"), "utf8"));
+    db.exec(`
+      INSERT INTO meta VALUES ('build_id','abcd1234abcd1234'),('schema_version','1'),('corpus_build_id','c');
+      INSERT INTO events(event_id,title,axis,category,confidence,status,summary,segment_label,earliest_year,latest_year,traditional_earliest,traditional_latest) VALUES
+        ('ev-a','Event A','narrative','political','firm','draft','s',NULL,-587,-586,NULL,NULL),
+        ('ev-b','Event B','narrative','political','firm','draft','s',NULL,-1279,-1213,-1446,-1446),
+        ('ev-canon','Canon List','canon','canon','firm','draft','s',NULL,200,250,NULL,NULL);
+      INSERT INTO artifacts VALUES ('art-1','Artifact One','inscription','draft',200,250,'Greek','s',NULL,NULL,NULL,NULL);
+      INSERT INTO attestations VALUES ('ev-canon@art-1','art-1','ev-canon','consistent','x'),('ev-a@art-1','art-1','ev-a','consistent','x');
+    `);
+    db.exec(setup);
+    const prior = fixture.db;
+    fixture.db = db;
+    vi.resetModules();
+    return { t: await import("./timeline"), done() { fixture.db = prior; db.close(); vi.resetModules(); } };
+  }
+  const L = (kind: string, id: string, v: number, type: string) =>
+    `INSERT INTO verse_links(subject_kind,subject_id,start_verse_id,end_verse_id,link_type,note) VALUES ('${kind}','${id}',${v},${v},'${type}',NULL);`;
+  const r = (v: number) => ({ start: v as never, end: v as never });
+  const ids = (ns: { subject: { kind: string } & Record<string, unknown> }[]) => ns.map((n) => `${n.subject.kind}:${n.subject.id}`).sort();
+
+  it("never returns a 'names' link; a 'background' link at the same verse stays", async () => {
+    const h = await withNotes(L("event", "ev-a", 5_001_001, "names") + L("event", "ev-b", 5_001_001, "background"));
+    try {
+      expect(ids(h.t.getTimelineNotesForRange(r(5_001_001)))).toEqual(["event:ev-b"]);
+    } finally { h.done(); }
+  });
+
+  it("event subjects carry axis and traditional (null when there is no traditional count)", async () => {
+    const h = await withNotes(L("event", "ev-a", 6_001_001, "describes") + L("event", "ev-b", 6_001_001, "describes"));
+    try {
+      const by = Object.fromEntries(h.t.getTimelineNotesForRange(r(6_001_001)).map((n) => [(n.subject as { id: string }).id, n.subject]));
+      expect(by["ev-a"]).toMatchObject({ axis: "narrative", traditional: null });
+      expect(by["ev-b"]).toMatchObject({ axis: "narrative", traditional: { earliest: -1446, latest: -1446 } });
+    } finally { h.done(); }
+  });
+
+  it("an artifact attesting only a canon event gets relation null", async () => {
+    const h = await withNotes(`DELETE FROM attestations WHERE event_id='ev-a';` + L("artifact", "art-1", 8_001_001, "background"));
+    try {
+      const [n] = h.t.getTimelineNotesForRange(r(8_001_001));
+      expect(n.subject).toMatchObject({ kind: "artifact", id: "art-1", relation: null });
+    } finally { h.done(); }
+  });
+
+  it("omits an artifact note when a canon event it attests is linked at the same verse", async () => {
+    const h = await withNotes(L("event", "ev-canon", 7_001_001, "background") + L("artifact", "art-1", 7_001_001, "background"));
+    try {
+      expect(ids(h.t.getTimelineNotesForRange(r(7_001_001)))).toEqual(["event:ev-canon"]);
+    } finally { h.done(); }
+  });
+
+  it("a 'names' link on the canon event does not suppress the artifact note", async () => {
+    const h = await withNotes(L("event", "ev-canon", 9_002_001, "names") + L("artifact", "art-1", 9_002_001, "background"));
+    try {
+      expect(ids(h.t.getTimelineNotesForRange(r(9_002_001)))).toEqual(["artifact:art-1"]);
+    } finally { h.done(); }
+  });
+
+  it("keeps an artifact note when the attested event is a narrative one linked there", async () => {
+    const h = await withNotes(L("event", "ev-a", 4_001_001, "describes") + L("artifact", "art-1", 4_001_001, "background"));
+    try {
+      const notes = h.t.getTimelineNotesForRange(r(4_001_001));
+      expect(ids(notes)).toEqual(["artifact:art-1", "event:ev-a"]);
+      expect(notes.find((n) => n.subject.kind === "artifact")!.subject).toMatchObject({ relation: "consistent" });
+    } finally { h.done(); }
+  });
+});
+
 describe("works", () => {
   it("getWorkSummaries is with book ids and both envelopes", async () => {
     const { getWorkSummaries } = await import("./timeline");
@@ -593,6 +669,16 @@ describe("getWorkNotesForRange", () => {
         subject: { kind: "work", id: "1-enoch", title: "1 Enoch", status: "sources-located", role: "link" },
       }]);
       expect(h.t.getWorkNotesForRange(range(65_001_015, 65_001_025))[0].anchor).toBe(65_001_015);
+    } finally { h.done(); }
+  });
+  it("never returns a 'names' link; a 'background' one at the same verse stays", async () => {
+    const h = await withWorks(SETUP + `
+      INSERT INTO works(work_id,title,also_known_as,canon,status,summary,contents,original_language,composed_earliest,composed_latest,traditional_earliest,traditional_latest)
+        VALUES ('w-list','A List',NULL,'described','draft','s',NULL,'Greek',100,199,NULL,NULL);
+      INSERT INTO work_verses(work_id,start_verse_id,end_verse_id,link_type,note) VALUES
+        ('1-enoch',66001001,66001001,'names',NULL),('w-list',66001001,66001001,'background',NULL);`);
+    try {
+      expect(h.t.getWorkNotesForRange(range(66_001_001, 66_001_001)).map((n) => n.subject.id)).toEqual(["w-list"]);
     } finally { h.done(); }
   });
   it("never returns a link anchored in an outside book", async () => {

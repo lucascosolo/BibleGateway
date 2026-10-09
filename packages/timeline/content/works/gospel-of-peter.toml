@@ -12,7 +12,7 @@ citations = [
   { source = "mattison-gospels-net", locator = "Manuscript Information page" },
 ]
 verses = [
-  { ref = "Matt.27.46", link = "alludes", note = "The cry of dereliction appears in the Gospel of Peter as 'My Power, my Power, why have you forsaken me?' (Metzger p. 172 and n. 17)." },
+  { ref = "Matt.27.46", link = "alludes", note = "The Gospel of Peter gives this cry as “My Power, my Power, why have you forsaken me?” (Metzger p. 172 n. 17)." },
 ]
 
 [[composed]]

@@ -8,10 +8,10 @@ summary = "Wisdom of Solomon is a Greek book that McDonald calls clearly pseudon
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 136" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Book of Wisdom" }, { source = "meier-1994", locator = "p. 244" }, { source = "brown-1997", locator = "ch. 25, PDF p. 635" }]
 original_language = "Greek"
 verses = [
-  { ref = "1Pet.1.6-1Pet.1.7", link = "alludes", note = "McDonald (p. 334), reporting Stendebach, cites the allusion to Wisdom 3:5-7 in 1 Peter 1:6-7." },
-  { ref = "Heb.1.3", link = "alludes", note = "McDonald (p. 335), reporting Stendebach, cites the parallel of Wisdom 7:26 with Hebrews 1:3 and Colossians 1:15." },
-  { ref = "Col.1.15", link = "alludes", note = "McDonald (p. 335), reporting Stendebach, cites the parallel of Wisdom 7:26 with Hebrews 1:3 and Colossians 1:15." },
-  { ref = "Rom.1.18-Rom.1.21", link = "alludes", note = "McDonald (p. 335), reporting Stendebach, cites the parallel of Wisdom 13:1-9 with Romans 1:18-21." },
+  { ref = "1Pet.1.6-1Pet.1.7", link = "alludes", note = "These verses allude to Wisdom 3:5-7, a parallel McDonald (p. 334) reports from Stendebach." },
+  { ref = "Heb.1.3", link = "alludes", note = "This verse parallels Wisdom 7:26, as does Colossians 1:15 (McDonald p. 335, reporting Stendebach)." },
+  { ref = "Col.1.15", link = "alludes", note = "This verse parallels Wisdom 7:26, as does Hebrews 1:3 (McDonald p. 335, reporting Stendebach)." },
+  { ref = "Rom.1.18-Rom.1.21", link = "alludes", note = "These verses parallel Wisdom 13:1-9 (McDonald p. 335, reporting Stendebach)." },
 ]
 
 

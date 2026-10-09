@@ -12,15 +12,15 @@ citations = [
   { source = "lightfoot-harmer-1891", locator = "intro., p. 99" },
 ]
 verses = [
-  { ref = "1Cor.4.13", link = "alludes", note = "Ephesians 8.1 and 18.1 apply Paul's 'offscouring of all things' to Ignatius himself (Metzger p. 44-45)." },
-  { ref = "1Cor.9.27", link = "alludes", note = "Trallians 12.3 uses 'lest I be found a castaway' (Metzger p. 45)." },
-  { ref = "1Cor.4.4", link = "alludes", note = "Romans 5.1 reuses 'but not by this am I justified' (Metzger p. 45)." },
-  { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "Echoed in five letters: Romans 9.1, Ephesians 21.2, Trallians 13.1, Magnesians 4.1, Smyrnaeans 11.1 (Metzger p. 45)." },
-  { ref = "Matt.3.15", link = "alludes", note = "Smyrnaeans 1.1: Jesus 'baptized by John so that all righteousness might be fulfilled'; only Matthew has the phrase (Metzger pp. 45-46)." },
-  { ref = "Matt.19.12", link = "alludes", note = "Smyrnaeans 6.1 'let him receive it' echoes Matthew's wording (Metzger p. 46)." },
-  { ref = "Matt.10.16", link = "alludes", note = "Polycarp 2.2 echoes Matthew (Metzger p. 46)." },
-  { ref = "Matt.18.19-Matt.18.20", link = "alludes", note = "Ephesians 5.2 echoes Matthew (Metzger p. 46)." },
-  { ref = "Luke.24.39", link = "alludes", note = "Smyrnaeans 3.1-2 resembles Luke's 'handle me and see'; Metzger says it is hard to decide whether Ignatius depends on Luke (p. 46)." },
+  { ref = "1Cor.4.13", link = "alludes", note = "Ignatius applies this verse's “offscouring of all things” to himself in Ephesians 8.1 and 18.1 (Metzger pp. 44-45)." },
+  { ref = "1Cor.9.27", link = "alludes", note = "Ignatius uses this verse's “lest I be found a castaway” in Trallians 12.3 (Metzger p. 45)." },
+  { ref = "1Cor.4.4", link = "alludes", note = "Ignatius reuses this verse's “but not by this am I justified” in Romans 5.1 (Metzger p. 45)." },
+  { ref = "1Cor.15.8-1Cor.15.10", link = "alludes", note = "Ignatius echoes these verses in five of his letters (Metzger p. 45)." },
+  { ref = "Matt.3.15", link = "alludes", note = "Ignatius, Smyrnaeans 1.1, says Jesus was baptized by John “so that all righteousness might be fulfilled”, a phrase only Matthew has (Metzger pp. 45-46)." },
+  { ref = "Matt.19.12", link = "alludes", note = "Ignatius, Smyrnaeans 6.1, echoes this verse's “let him receive it” (Metzger p. 46)." },
+  { ref = "Matt.10.16", link = "alludes", note = "Ignatius, To Polycarp 2.2, echoes this verse (Metzger p. 46)." },
+  { ref = "Matt.18.19-Matt.18.20", link = "alludes", note = "Ignatius, Ephesians 5.2, echoes these verses (Metzger p. 46)." },
+  { ref = "Luke.24.39", link = "alludes", note = "Ignatius, Smyrnaeans 3.1-2, resembles this “handle me and see”, though Metzger (p. 46) finds it hard to say whether he depends on Luke." },
 ]
 
 [[composed]]

@@ -47,7 +47,7 @@ citations = [{ source = "carson-moo-2005", locator = "pp. 448-449" }]
   text = """
 Carson and Moo place the writing in Macedonia from Paul's own itinerary, which they find in 2 Corinthians 2:12-13, 7:5, 8:1-5 and 9:2."""
   citations = [{ source = "carson-moo-2005", locator = "p. 448" }]
-  verses = [{ ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Here Paul leaves Troas for Macedonia to meet Titus, the move that places the writing in Macedonia." }, { ref = "2Cor.7.5", link = "dates", note = "Here Paul says he is in Macedonia, where he awaits word from Titus." }]
+  verses = [{ ref = "2Cor.2.12-2Cor.2.13", link = "dates", note = "Here Paul leaves Troas for Macedonia to meet Titus, the move that places the writing in Macedonia." }, { ref = "2Cor.7.5", link = "dates", note = "Here Paul says he is in Macedonia, awaiting word from Titus." }]
 
 [[positions]]
 id = "ehrman-intro-50s"

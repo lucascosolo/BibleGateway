@@ -8,8 +8,8 @@ summary = "Moab, led by King Mesha, rebels against Israel, and King Jehoram marc
 verses = [
   { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Kings describes Mesha's revolt and the war that follows." },
   { ref = "2Kgs.1.1", link = "background", note = "Kings says Moab revolted after Ahab's death, which gives context for the revolt dated here." },
-  { ref = "Isa.15.1-Isa.16.14", link = "alludes", note = "The oracle on Moab alludes to the nation involved in the revolt." },
-  { ref = "Jer.48.1-Jer.48.47", link = "alludes", note = "The oracle on Moab alludes to the nation involved in the revolt." },
+  { ref = "Isa.15.1-Isa.16.14", link = "alludes", note = "This oracle against Moab names the nation, though not the revolt itself." },
+  { ref = "Jer.48.1-Jer.48.47", link = "alludes", note = "This oracle against Moab names the nation, though not the revolt itself." },
 ]
 
 [[positions]]

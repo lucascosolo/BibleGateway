@@ -197,7 +197,7 @@ CREATE TABLE verse_links (
   subject_id     TEXT NOT NULL,
   start_verse_id INTEGER NOT NULL,
   end_verse_id   INTEGER NOT NULL,
-  link_type      TEXT NOT NULL CHECK (link_type IN ('describes','alludes','background','dates')),
+  link_type      TEXT NOT NULL CHECK (link_type IN ('describes','alludes','background','dates','names')),
   note           TEXT,
   CHECK (start_verse_id <= end_verse_id)
 );
@@ -384,7 +384,7 @@ CREATE TABLE work_verses (
   work_id        TEXT NOT NULL REFERENCES works,
   start_verse_id INTEGER NOT NULL,
   end_verse_id   INTEGER NOT NULL,
-  link_type      TEXT NOT NULL CHECK (link_type IN ('describes','alludes','background','dates')),
+  link_type      TEXT NOT NULL CHECK (link_type IN ('describes','alludes','background','dates','names')),
   note           TEXT,
   CHECK (start_verse_id <= end_verse_id)
 );

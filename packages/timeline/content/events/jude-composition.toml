@@ -50,7 +50,7 @@ Ehrman argues from the quality of the Greek that the author was not a peasant mi
   text = """
 Ehrman therefore concludes about the author's identity: "he was not the Aramaicspeaking peasant of Nazareth, the brother of Jesus and James.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 395" }]
-  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter names Jude as its author, which is the claim discussed here." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter names Jude as its author." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -75,7 +75,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 393, 422" }]
   text = """
 Ehrman first grants what the letter claims for itself: "The author of this short text, therefore, is almost certainly claiming to be a brother of both James and Jesus""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 391" }]
-  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter names Jude as its author, which is the claim discussed here." }]
+  verses = [{ ref = "Jude.1.1", link = "describes", note = "The letter names Jude as its author." }]
 
   [[positions.arguments]]
   stance = "against"

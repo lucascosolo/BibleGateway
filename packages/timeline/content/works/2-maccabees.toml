@@ -7,7 +7,7 @@ summary = "2 Maccabees is a Greek abridgement of a five-volume history by Jason 
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 62" }, { source = "lim-2013", locator = "pp. 109-111" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
 original_language = "Greek"
 verses = [
-  { ref = "Heb.11.35", link = "alludes", note = "McDonald (p. 334), reporting Stendebach, cites the parallel of 2 Maccabees 7:9-36 (the mother and her sons) in Hebrews 11:35." },
+  { ref = "Heb.11.35", link = "alludes", note = "This verse recalls the martyrdom of the mother and her sons in 2 Maccabees 7, a parallel McDonald (p. 334) reports from Stendebach." },
 ]
 
 [[composed]]

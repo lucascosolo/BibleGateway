@@ -10,6 +10,6 @@ citations = [
   { source = "npnf2-01-ccel", locator = "Church History 4.26.12-14" },
 ]
 verses = [
-  { ref = "Esth.1.1", link = "background", note = "Esther is the one book of the later Hebrew canon that Melito's list leaves out." },
-  { ref = "Ezra.1.1", link = "background", note = "Ezra 1:1 opens the book Melito calls Esdras, which closes his list." },
+  { ref = "Esth.1.1", link = "names", note = "Esther is the one book of the later Hebrew canon that Melito's list leaves out." },
+  { ref = "Ezra.1.1", link = "names", note = "Ezra 1:1 opens the book Melito calls Esdras, which closes his list." },
 ]

@@ -104,7 +104,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 240, 238" }]
   text = """
 Ehrman reports Barth's answer on style, that a different style is no argument against Paul: "Paul himself is the man who could best afford to write in a non-Paulinistic way.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 240" }]
-  verses = [{ ref = "Eph.1.3", link = "background", note = "Ephesians 1:3 begins one of the long sentences Ehrman cites as evidence." }]
+  verses = [{ ref = "Eph.1.3", link = "background", note = "Ephesians 1:3 begins one of the long sentences Ehrman cites as evidence against Paul's authorship." }]
 
   [[positions.arguments]]
   stance = "against"

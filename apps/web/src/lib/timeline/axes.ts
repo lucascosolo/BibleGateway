@@ -14,3 +14,11 @@ export type Axis = (typeof AXES)[number];
 export function isAxis(value: string): value is Axis {
   return (AXES as readonly string[]).includes(value);
 }
+
+/** The date label on an event's page, one per axis: a canon event is a list or a judgement
+ *  someone made, not the moment a book "became scripture". */
+export const AXIS_DATE_LABEL: Record<Axis, string> = {
+  narrative: "When it happened",
+  composition: "When it was written",
+  canon: "When this list or judgement was made",
+};

@@ -29,7 +29,7 @@ citations = [{ source = "brown-1997", locator = "ch. 21, Summary of Basic Inform
   text = """
 Brown argues that Ephesus deserves a hearing here as it does for Philippians, since several of the factors favouring Ephesus for Philippians are met here too: "if Ephesus was the more probable candidate there, it might be considered that here as well.""""
   citations = [{ source = "brown-1997", locator = "ch. 21, Place of writing" }]
-  verses = [{ ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul writes as a prisoner, which is the imprisonment under discussion." }]
+  verses = [{ ref = "Phlm.1.9-Phlm.1.10", link = "describes", note = "Paul writes as a prisoner; where he was held bears on the date." }]
 
 [[positions]]
 id = "carson-moo-rome-early-60s"

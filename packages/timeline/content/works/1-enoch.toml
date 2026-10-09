@@ -14,9 +14,9 @@ citations = [
 ]
 
 verses = [
-  { ref = "Jude.1.14-Jude.1.15", link = "alludes", note = "Jude quotes 1 Enoch 1:9 and says Enoch prophesied. McDonald (p. 311) and Lim (p. 238, note 35) both say so." },
-  { ref = "2Pet.2.4", link = "alludes", note = "McDonald (p. 311) says 2 Peter 2:4 shows awareness of 1 Enoch." },
-  { ref = "Gen.6.1-Gen.6.4", link = "background", note = "1 Enoch 6 to 11 retell the sons of God and the daughters of men; VanderKam (chapter 2) calls the Watchers the earliest example of that interpretation." },
+  { ref = "Jude.1.14-Jude.1.15", link = "alludes", note = "Jude quotes 1 Enoch 1:9 here and says Enoch prophesied (McDonald p. 311; Lim p. 238 n. 35)." },
+  { ref = "2Pet.2.4", link = "alludes", note = "2 Peter 2:4 shows awareness of 1 Enoch's fallen angels, according to McDonald (p. 311)." },
+  { ref = "Gen.6.1-Gen.6.4", link = "background", note = "1 Enoch 6–11 tell this story of the sons of God at length; VanderKam (ch. 2) reads it as the earliest interpretation of these verses, though which text came first is disputed." },
 ]
 
 [[composed]]

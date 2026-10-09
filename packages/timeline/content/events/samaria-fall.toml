@@ -8,7 +8,7 @@ summary = "Assyria takes Samaria after a siege and carries the people of Israel 
 verses = [
   { ref = "2Kgs.17.1-2Kgs.17.41", link = "describes", note = "Kings describes Hoshea's reign, the siege of Samaria, and the exile." },
   { ref = "2Kgs.18.9-2Kgs.18.12", link = "describes", note = "Kings dates the fall to the sixth year of Hezekiah and the ninth of Hoshea." },
-  { ref = "Isa.20.1", link = "background", note = "Isaiah names Sargon as king of Assyria, which gives background for who ruled Assyria then." },
+  { ref = "Isa.20.1", link = "background", note = "Isaiah names Sargon as king of Assyria, the king whose inscriptions claim the capture of Samaria." },
   { ref = "Hos.13.16", link = "alludes", note = "Hosea says 'Samaria will bear her guilt,' which alludes to the city's fall." },
   { ref = "Mic.1.6", link = "alludes", note = "Micah describes Samaria turned into a heap of rubble, which alludes to the city's fall." },
 ]

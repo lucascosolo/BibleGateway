@@ -8,7 +8,7 @@ summary = """
 Acts 2 tells of the first Pentecost after the resurrection. The apostles speak in other languages, and Peter preaches in Jerusalem. Its year depends on the year given to the crucifixion, which is unsettled. Both positions below simply take the crucifixion year and have the same holders. No scholar read dates Pentecost on its own."""
 verses = [
   { ref = "Acts.2.1-Acts.2.41", link = "describes", note = "Acts describes the day of Pentecost, the speaking in other languages, and Peter's sermon." },
-  { ref = "Joel.2.28-Joel.2.32", link = "background", note = "Joel contains the prophecy that Peter quotes in his sermon, which gives background to the event." },
+  { ref = "Joel.2.28-Joel.2.32", link = "background", note = "Peter quotes this prophecy of Joel in his Pentecost sermon." },
   { ref = "Acts.11.15-Acts.11.16", link = "alludes", note = "Peter recalls the Spirit coming down at the start, which refers back to Pentecost." },
 ]
 

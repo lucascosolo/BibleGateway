@@ -10,7 +10,7 @@ citations = [
   { source = "npnf2-01-ccel", locator = "Church History 6.25.1-14" },
 ]
 verses = [
-  { ref = "Heb.1.1", link = "background", note = "Hebrews is the letter whose authorship Origen leaves to God, the earliest record of the doubt." },
-  { ref = "2Pet.1.1", link = "background", note = "2 Peter is the letter Origen calls doubtful." },
-  { ref = "Matt.1.1", link = "background", note = "Matthew is the Gospel Origen places first, written for converts from Judaism." },
+  { ref = "Heb.1.1", link = "names", note = "Hebrews is the letter whose authorship Origen leaves to God, the earliest record of the doubt." },
+  { ref = "2Pet.1.1", link = "names", note = "2 Peter is the letter Origen calls doubtful." },
+  { ref = "Matt.1.1", link = "names", note = "Matthew is the Gospel Origen places first, written for converts from Judaism." },
 ]

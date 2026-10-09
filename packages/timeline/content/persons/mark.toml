@@ -6,7 +6,7 @@ summary = """
 The Gospel of Mark is anonymous; the title was added later. From the early second century Papias, as Eusebius quotes him, called its author Mark, Peter's "interpreter", and later writers identified him with the John Mark of Acts and the letters. Critical scholarship leads with the Gospel itself: Brown finds its author a Greek-speaker who was not an eyewitness and was unsure of Palestinian geography, which is hard to square with a Jerusalem Jew, and he notes that many dismiss the Papias tradition entirely; Ehrman calls the author anonymous. Carson and Moo, the evangelical position, accept the tradition, finding nothing in the Gospel that stands in its way. The Gospel is dated about 70 CE by most critical scholars, Brown most likely 68–73."""
 status = "sources-located"
 verses = [
-  { ref = "Mark.1.1", link = "background", note = "Mark 1:1 opens the Gospel whose authorship is the question here; the text names no author." },
+  { ref = "Mark.1.1", link = "background", note = "Mark 1:1 opens the Gospel tradition ascribes to Mark; the text itself names no author." },
   { ref = "Acts.12.12", link = "describes", note = "Acts 12:12 introduces John called Mark, whose mother's house in Jerusalem was a meeting place." },
   { ref = "Acts.13.13", link = "describes", note = "Acts 13:13 has John leave Paul and Barnabas at Perga and return to Jerusalem." },
   { ref = "Acts.15.37-Acts.15.39", link = "describes", note = "Acts 15:37–39 tells how Paul and Barnabas split over taking Mark with them." },

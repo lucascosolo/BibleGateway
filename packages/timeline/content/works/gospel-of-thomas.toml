@@ -12,12 +12,12 @@ citations = [
   { source = "mattison-gospels-net", locator = "Manuscript Information page" },
 ]
 verses = [
-  { ref = "Matt.5.1-Matt.7.29", link = "alludes", note = "Metzger says many sayings resemble the Sermon on the Mount (p. 85)." },
-  { ref = "Matt.13.3-Matt.13.52", link = "alludes", note = "Metzger notes parallels in the collection of parables in Matthew 13 (p. 85)." },
-  { ref = "Luke.6.1-Luke.6.49", link = "alludes", note = "Metzger says Thomas is closest to the sayings collections in Luke 6, 11 and 12 (p. 85)." },
-  { ref = "Luke.11.1-Luke.11.54", link = "alludes", note = "As above (Metzger p. 85)." },
-  { ref = "Luke.12.1-Luke.12.59", link = "alludes", note = "As above (Metzger p. 85)." },
-  { ref = "John.4.1-John.4.42", link = "alludes", note = "Metzger says the few Johannine parallels centre on the conversation with the woman of Samaria (p. 85)." },
+  { ref = "Matt.5.1-Matt.7.29", link = "alludes", note = "Many sayings in the Gospel of Thomas resemble this Sermon on the Mount (Metzger p. 85)." },
+  { ref = "Matt.13.3-Matt.13.52", link = "alludes", note = "The Gospel of Thomas has parallels to this chapter of parables (Metzger p. 85)." },
+  { ref = "Luke.6.1-Luke.6.49", link = "alludes", note = "The Gospel of Thomas is closest to the sayings collected in this chapter and in Luke 11 and 12 (Metzger p. 85)." },
+  { ref = "Luke.11.1-Luke.11.54", link = "alludes", note = "The Gospel of Thomas is closest to the sayings collected in this chapter and in Luke 6 and 12 (Metzger p. 85)." },
+  { ref = "Luke.12.1-Luke.12.59", link = "alludes", note = "The Gospel of Thomas is closest to the sayings collected in this chapter and in Luke 6 and 11 (Metzger p. 85)." },
+  { ref = "John.4.1-John.4.42", link = "alludes", note = "The Gospel of Thomas's few parallels to John centre on this conversation with the woman of Samaria (Metzger p. 85)." },
 ]
 
 [[composed]]

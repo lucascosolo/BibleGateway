@@ -1,4 +1,4 @@
-import type { IssueSummary, ToledotNote, VerseLink, WorkNote } from "@/lib/db/timeline";
+import type { Relation, ToledotNote, VerseLink, WorkNote } from "@/lib/db/timeline";
 
 import { getLexiconEntry } from "@/lib/lexicon";
 
@@ -7,14 +7,13 @@ import { isTraditional } from "./lens";
 import { formatRange } from "./years";
 
 /**
- * One timeline note as a sentence: a lead, a body and the page it opens. Every word comes from
- * data the subject already carries; this never writes a claim of its own.
+ * One timeline note as text: a lead naming how the subject bears on this passage, a body that
+ * says it (relationship first, then the date where there is one) and the page it opens. Every
+ * word comes from data the subject already carries; this never writes a claim of its own.
  */
 export interface ToledotSentence {
   lead: string;
   body: string;
-  /** The verse link's own note, as a sentence; kept apart from `body` so the link's accessible name stays short. */
-  note?: string;
   href: string;
   draft: boolean;
   /** What following the link does, for its accessible name; the timeline when absent. */
@@ -24,94 +23,96 @@ export interface ToledotSentence {
 /** A margin note beside a verse: a timeline subject, or a work that quotes, echoes or records it. */
 export type MarginNote = ToledotNote | WorkNote;
 
-const ISSUE_LEAD: Record<IssueSummary["kind"], string> = {
-  chronology: "Chronology question",
-  textual: "Textual question",
-  historical: "Historical question",
-  internal: "Internal question",
+type EventSubject = Extract<ToledotNote["subject"], { kind: "event" }>;
+
+const EVENT_LEAD: Record<EventSubject["axis"], string> = {
+  narrative: "Dated event",
+  composition: "Date of writing",
+  canon: "Book list",
 };
 
 const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
-const inProse = (title: string) => (title.startsWith("The ") || title.startsWith("Composition ") ? lowerFirst(title) : title);
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 const countWord = (n: number) => (n < WORDS.length ? WORDS[n] : String(n));
 const counted = (n: number, one: string, many: string) => `${countWord(n)} ${n === 1 ? one : many}`;
 const asSentence = (s: string) => (/[.!?]$/.test(s.trim()) ? s.trim() : `${s.trim()}.`);
+const joined = (...parts: (string | null | undefined)[]) => parts.filter(Boolean).join(" ");
 
-const WORK_LINK: Record<VerseLink["linkType"], [lead: string, body: (title: string) => string]> = {
-  alludes: ["Parallel in an outside work", (t) => `${t} shares wording or a saying with this passage.`],
+const WORK_BODY: Record<VerseLink["linkType"], (title: string) => string> = {
+  alludes: (t) => `${t} shares wording or a saying with this passage.`,
   // Neutral on purpose: a background link records a connection, not its direction. 1 Enoch 6-11
-  // and Genesis 6:1-4 have a disputed priority, and the Hermas link to Romans 16:14 is an old
-  // identification of the author, not a retelling. The link's own note says what the link is.
-  background: ["Linked outside work", (t) => `${t} is linked to this passage; the note says how.`],
-  describes: ["Named in an outside work", (t) => `${t} attaches itself to this passage.`],
-  dates: ["Outside work", (t) => `${t} is dated by reference to this passage.`],
+  // and Genesis 6:1-4 have a disputed priority; the link's own note says what the link is.
+  background: (t) => `${t} is linked to this passage.`,
+  describes: (t) => `${t} presents itself as connected to this passage.`,
+  dates: (t) => `${t} is dated by reference to this passage.`,
+  names: (t) => `${t} names this book.`,
 };
 
-const ARTIFACT_VERB: Record<string, string> = {
-  corroborates: "corroborates",
-  "partially-corroborates": "partly corroborates",
-  consistent: "is consistent with",
-  silent: "is silent on",
-  "in-tension": "contradicts",
+const ARTIFACT_VERB: Record<Relation, string> = {
+  corroborates: " corroborates this passage",
+  "partially-corroborates": " partly corroborates this passage",
+  consistent: " fits this passage",
+  silent: " does not mention what this passage reports",
+  "in-tension": " conflicts with this passage",
 };
 
-function sentence(note: MarginNote): ToledotSentence {
+/** The event's date as one sentence, its title kept verbatim as a label: titles are often
+ *  sentences ("David takes Jerusalem"), so they are never embedded in prose. */
+function eventDate(s: EventSubject): string {
+  const range = formatRange(s.earliest, s.latest);
+  if (s.axis === "canon") return `${s.title.trim().replace(/\.$/, "")} (${range}).`;
+  const n = s.positions.filter((p) => !isTraditional(p.tradition)).length;
+  if (n === 0) return `${s.title}: only a traditional count dates it, to ${range}; no outside evidence fixes it.`;
+  const claim =
+    n === 1
+      ? `scholars date it ${range}${s.confidence === "firm" ? "" : ` (${s.confidence})`}`
+      : s.earliest === s.latest
+        ? `${n === 2 ? "both" : `all ${countWord(n)}`} scholarly positions fall in ${range}`
+        : `scholars disagree, with ${countWord(n)} positions spanning ${range}`;
+  const sameAsScholars = s.traditional && s.traditional.earliest === s.earliest && s.traditional.latest === s.latest;
+  const traditional = s.traditional && !sameAsScholars ? `; the traditional count gives ${formatRange(s.traditional.earliest, s.traditional.latest)}` : "";
+  return `${s.title}: ${claim}${traditional}.`;
+}
+
+function sentence(note: MarginNote, linkNote: string | null): ToledotSentence {
   const s = note.subject;
   switch (s.kind) {
     case "work": {
       const [lead, body] =
         s.role === "record"
           ? ["Work record", `${s.title}: its dating, surviving copies and who reads it as scripture.`]
-          : [WORK_LINK[note.linkType][0], WORK_LINK[note.linkType][1](s.title)];
+          : [note.linkType === "alludes" ? "Parallel in an outside work" : "Outside work", linkNote ?? WORK_BODY[note.linkType](s.title)];
       return { lead, body, href: `/chitzonim/works/${s.id}`, draft: unchecked(s.status), opens: "open the work record" };
     }
-    case "event": {
-      const href = `/toledot/events/${s.id}`;
-      const draft = unchecked(s.status);
-      const scholarly = s.positions.filter((p) => !isTraditional(p.tradition));
-      const traditional = s.positions.filter((p) => isTraditional(p.tradition));
-      if (scholarly.length >= 2) {
-        return { lead: "Dating disputed", body: `Scholars disagree about the date of ${inProse(s.title)}: ${countWord(scholarly.length)} positions, spanning ${formatRange(s.earliest, s.latest)}.`, href, draft };
-      }
-      if (scholarly.length === 0 && traditional.length > 0) {
-        return { lead: "Traditional date", body: `Only a traditional count dates ${inProse(s.title)}, to ${traditional.map((p) => p.label).join(" or ")}; no outside evidence fixes it.`, href, draft };
-      }
-      const lead = s.confidence === "firm" ? "Dated" : `Dated, ${s.confidence}`;
-      return { lead, body: `Scholars place ${inProse(s.title)} in ${formatRange(s.earliest, s.latest)}.`, href, draft };
-    }
+    case "event":
+      return { lead: EVENT_LEAD[s.axis], body: joined(linkNote, eventDate(s)), href: `/toledot/events/${s.id}`, draft: unchecked(s.status) };
     case "argument":
       return {
         lead: "Cited in dating",
-        body: `This passage is cited ${s.stance === "against" ? "against" : "for"} one dating of ${inProse(s.eventTitle)}: “${s.positionLabel}”.`,
+        body: joined(`${s.eventTitle}: this passage is cited ${s.stance === "against" ? "against" : "for"} the dating “${s.positionLabel}”.`, linkNote),
         href: `/toledot/events/${s.eventId}`,
         draft: unchecked(s.eventStatus),
       };
     case "issue":
-      return { lead: ISSUE_LEAD[s.issueKind], body: s.title.trim().endsWith("?") ? s.title : `An open question: ${s.title}.`, href: `/toledot/issues/${s.id}`, draft: unchecked(s.status) };
+      return { lead: "Open question", body: joined(asSentence(s.title), linkNote), href: `/toledot/issues/${s.id}`, draft: unchecked(s.status) };
     case "person":
       return {
-        lead: `${EVIDENCE_MEANING[s.evidence]}${s.hasTension ? "; a source contradicts a detail" : ""}`,
-        body: `${s.name} appears here; ${lowerFirst(EVIDENCE_MEANING[s.evidence])}.`,
+        lead: "Person in this passage",
+        body: joined(`${s.name}: ${lowerFirst(EVIDENCE_MEANING[s.evidence])}${s.hasTension ? ", though a source contradicts a detail" : ""}.`, linkNote),
         href: `/toledot/people/${s.id}`,
         draft: unchecked(s.status),
       };
     case "artifact":
       return {
-        lead:
-          s.relation === "in-tension"
-            ? "Outside source in tension with this passage"
-            : s.relation === "corroborates" || s.relation === "partially-corroborates"
-              ? "Outside source corroborates this passage"
-              : "Outside source",
-        body: `${s.name} is an outside source that ${ARTIFACT_VERB[s.relation ?? "silent"]} this passage.`,
+        lead: "Outside source",
+        body: joined(`${s.name}${s.relation ? ARTIFACT_VERB[s.relation] : ""}.`, linkNote),
         href: `/toledot/artifacts/${s.id}`,
         draft: unchecked(s.status),
       };
     case "investigation":
       return {
         lead: getLexiconEntry("investigation").term,
-        body: `An investigation looks at the wording of ${s.passage}: ${counted(s.witnesses, "witness", "witnesses")}, ${counted(s.explanations, "explanation", "explanations")}.`,
+        body: joined(`An investigation looks at the wording of ${s.passage}: ${counted(s.witnesses, "witness", "witnesses")}, ${counted(s.explanations, "explanation", "explanations")}.`, linkNote),
         href: `/toledot/investigations/${s.id}`,
         draft: unchecked(s.status),
       };
@@ -125,6 +126,5 @@ function unchecked(status: string): boolean {
 }
 
 export function toledotSentence(note: MarginNote): ToledotSentence {
-  const out = sentence(note);
-  return note.note ? { ...out, note: asSentence(note.note) } : out;
+  return sentence(note, note.note ? asSentence(note.note) : null);
 }

@@ -31,7 +31,7 @@ citations = [{ source = "ehrman-2013", locator = "ebook pp. 382, 383, 390" }]
   text = """
 Ehrman argues from the letter's Greek that it is not the work of the James the Gospels describe: "Whoever produced this letter was a highly literate native speaker of Greek, grounded in Hellenistic modes of discourse and able to use abundant rhetorical devices and flourishes.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 379" }]
-  verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter names James as its author, which is the claim under discussion here." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter names James as its author." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -72,7 +72,7 @@ Ehrman notes that the letter's church order looks later than the Jerusalem of Ja
   text = """
 Ehrman sums up the problem of authorship plainly: "This book, in short, claims to be written by someone who did not write it.""""
   citations = [{ source = "ehrman-2013", locator = "ebook pp. 383" }]
-  verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter opens by naming James as its author, which is the claim the authorship question turns on." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The letter opens by naming James as its author." }]
 
   [[positions.arguments]]
   stance = "for"
@@ -175,4 +175,4 @@ citations = [{ source = "ehrman-brief-intro-2017", locator = "pp. 20, 323 approx
   text = """
 Ehrman notes it is "somewhat strange" that the letter never refers to personal knowledge of its author's brother Jesus or of his teachings. He also reads the letter as arguing against a misreading of Paul's faith without works (James 2:24)."""
   citations = [{ source = "ehrman-brief-intro-2017", locator = "p. 323 approx." }]
-  verses = [{ ref = "Jas.1.1", link = "describes", note = "The author names himself James, with no claim to be the Lord's brother." }, { ref = "Jas.2.24", link = "background", note = "The verse is read as aimed at a misreading of Paul, which is why it is background for the letter's date." }]
+  verses = [{ ref = "Jas.1.1", link = "describes", note = "The author names himself James, with no claim to be the Lord's brother." }, { ref = "Jas.2.24", link = "background", note = "The verse is read as aimed at a misreading of Paul, which bears on the letter's date." }]

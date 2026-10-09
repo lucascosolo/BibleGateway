@@ -7,10 +7,10 @@ status = "sources-located"
 summary = """
 Irenaeus, bishop of Lyons, wrote Against Heresies to refute the Gnostics. In book 3 he argues that there cannot be more or fewer than four Gospels, as there are four regions of the world, four principal winds and four living creatures, which he matches to the four evangelists. Metzger takes this as the moment the Gospel canon is closed for him, while the rest of his New Testament stays open. Irenaeus quotes over a thousand New Testament passages, and Metzger concludes that by about 180 a three-part New Testament of about twenty-two books was known in southern Gaul. The work's date is not seriously disputed."""
 verses = [
-  { ref = "Rev.4.6-Rev.4.8", link = "describes", note = "The four living creatures that Irenaeus matches to the four Gospels." },
-  { ref = "Ezek.1.10", link = "background", note = "The four faces of the living creatures, the older image behind his argument." },
-  { ref = "Matt.1.1", link = "background", note = "Matthew, one of the four." },
-  { ref = "John.1.1", link = "background", note = "John, one of the four." },
+  { ref = "Rev.4.6-Rev.4.8", link = "describes", note = "Irenaeus matches these four living creatures to the four Gospels." },
+  { ref = "Ezek.1.10", link = "background", note = "These four faces of the living creatures are the older image behind Irenaeus's argument." },
+  { ref = "Matt.1.1", link = "names", note = "Matthew, one of the four." },
+  { ref = "John.1.1", link = "names", note = "John, one of the four." },
 ]
 
 [[positions]]

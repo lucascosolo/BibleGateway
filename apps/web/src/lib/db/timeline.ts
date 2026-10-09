@@ -102,7 +102,7 @@ export interface Citation {
 export interface VerseLink {
   start: VerseId;
   end: VerseId;
-  linkType: "describes" | "alludes" | "background" | "dates";
+  linkType: "describes" | "alludes" | "background" | "dates" | "names";
   note: string | null;
 }
 
@@ -905,7 +905,7 @@ export interface ToledotNote {
   end: VerseId;
   linkType: VerseLink["linkType"];
   subject:
-    | { kind: "event"; id: string; title: string; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; positions: { label: string; tradition: string }[] }
+    | { kind: "event"; id: string; title: string; axis: Axis; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; traditional: { earliest: number; latest: number } | null; positions: { label: string; tradition: string }[] }
     | { kind: "argument"; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }
     | { kind: "issue"; id: string; title: string; issueKind: IssueSummary["kind"]; status: ReviewStatus }
     | { kind: "person"; id: string; name: string; evidence: EvidenceGrade; hasTension: boolean; status: ReviewStatus }
@@ -939,7 +939,7 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
   const links = all<LinkRow>(
     `SELECT subject_kind AS kind, subject_id AS subjectId, start_verse_id AS start, end_verse_id AS "end",
             link_type AS linkType, note, link_id AS ord
-     FROM verse_links WHERE start_verse_id <= ? AND end_verse_id >= ?
+     FROM verse_links WHERE start_verse_id <= ? AND end_verse_id >= ? AND link_type <> 'names'
      ${hasInvestigations() ? `UNION ALL
      SELECT 'investigation', investigation_id, start_verse_id, end_verse_id, 'describes', NULL, NULL
      FROM investigation_verses WHERE start_verse_id <= ? AND end_verse_id >= ?` : ""}
@@ -952,13 +952,19 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
   const eventIds = idsOf("event");
   const events = new Map(
     (eventIds.length
-      ? all<{ id: string; title: string; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number }>(
-          `SELECT event_id AS id, title, status, confidence, earliest_year AS earliest, latest_year AS latest
+      ? all<{ id: string; title: string; axis: Axis; status: ReviewStatus; confidence: EventSummary["confidence"]; earliest: number; latest: number; tradEarliest: number | null; tradLatest: number | null }>(
+          `SELECT event_id AS id, title, axis, status, confidence, earliest_year AS earliest, latest_year AS latest,
+                  traditional_earliest AS tradEarliest, traditional_latest AS tradLatest
            FROM events WHERE event_id IN (${placeholders(eventIds)})`,
           ...eventIds
         )
       : []
-    ).map((e) => [e.id, { kind: "event" as const, ...e, positions: [] as { label: string; tradition: string }[] }])
+    ).map(({ tradEarliest, tradLatest, ...e }) => [e.id, {
+      kind: "event" as const,
+      ...e,
+      traditional: tradEarliest === null || tradLatest === null ? null : { earliest: tradEarliest, latest: tradLatest },
+      positions: [] as { label: string; tradition: string }[],
+    }])
   );
   if (eventIds.length) {
     for (const p of all<{ eventId: string; label: string; tradition: string }>(
@@ -1021,14 +1027,28 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
         `SELECT artifact_id AS artifactId, 'person' AS subjectKind, person_id AS subjectId, relation
          FROM person_attestations WHERE artifact_id IN (${placeholders(artifactIds)})
          UNION ALL
-         SELECT artifact_id, 'event', event_id, relation
-         FROM attestations WHERE artifact_id IN (${placeholders(artifactIds)})`,
+         SELECT a.artifact_id, 'event', a.event_id, a.relation
+         FROM attestations a JOIN events e ON e.event_id = a.event_id
+         WHERE a.artifact_id IN (${placeholders(artifactIds)}) AND e.axis <> 'canon'`,
         ...artifactIds,
         ...artifactIds
       )
     : [];
 
-  /** The strongest relation the artifact has to a person or event linked to a verse it shares. */
+  /** Canon-axis events each artifact attests. A canon event's note at the same verse already
+   *  says what the artifact (its own source) says, with the date, so the artifact note is dropped. */
+  const canonAttested = artifactIds.length
+    ? all<{ artifactId: string; eventId: string }>(
+        `SELECT a.artifact_id AS artifactId, a.event_id AS eventId FROM attestations a JOIN events e ON e.event_id = a.event_id
+         WHERE a.artifact_id IN (${placeholders(artifactIds)}) AND e.axis = 'canon'`,
+        ...artifactIds
+      )
+    : [];
+  const restatesCanonEvent = (link: LinkRow, anchor: number) =>
+    canonAttested.some((c) => c.artifactId === link.subjectId &&
+      links.some((o) => o.kind === "event" && o.subjectId === c.eventId && o.start <= anchor && o.end >= anchor));
+
+  /** The strongest relation the artifact has to a person or narrative/composition event linked to a verse it shares. */
   function relationFor(link: LinkRow): Relation | null {
     const lo = Math.max(link.start, range.start);
     const hi = Math.min(link.end, range.end);
@@ -1085,7 +1105,7 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
     if (!subject) continue;
     const anchor = Math.max(link.start, range.start) as VerseId;
     const id = `${link.kind}:${link.subjectId}@${anchor}`;
-    if (seen.has(id)) continue;
+    if (seen.has(id) || (link.kind === "artifact" && restatesCanonEvent(link, anchor))) continue;
     seen.add(id);
     notes.push({ id, anchor, start: link.start, end: link.end, linkType: link.linkType, subject, note: link.note });
   }
@@ -1110,7 +1130,7 @@ export function getWorkNotesForRange(range: VerseRange): WorkNote[] {
     `SELECT v.work_id AS workId, w.title, w.status, v.start_verse_id AS start, v.end_verse_id AS "end",
             v.link_type AS linkType, v.note
      FROM work_verses v JOIN works w ON w.work_id = v.work_id
-     WHERE v.start_verse_id <= ? AND v.end_verse_id >= ? AND v.start_verse_id < ?
+     WHERE v.start_verse_id <= ? AND v.end_verse_id >= ? AND v.start_verse_id < ? AND v.link_type <> 'names'
      ORDER BY v.start_verse_id, v.rowid`,
     range.end,
     range.start,

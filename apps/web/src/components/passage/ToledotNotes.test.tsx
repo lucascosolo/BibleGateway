@@ -24,10 +24,10 @@ describe("<ToledotNotes>", () => {
     const { container } = render(<ToledotNotes notes={[issueNote()]} />);
     const item = container.querySelector("li.toledot-note") as HTMLElement;
     expect(item).not.toBeNull();
-    expect(item.querySelector("strong")!.textContent).toBe("Historical question");
+    expect(item.querySelector("strong")!.textContent).toBe("Open question");
     expect(item.textContent).toContain("Is there a historical Moses?");
     const link = within(item).getByRole("link", {
-      name: "Historical question: Is there a historical Moses? — open on the timeline",
+      name: "Open question: Is there a historical Moses? — open on the timeline",
     });
     expect(link.getAttribute("href")).toBe("/toledot/issues/iss-1");
   });
@@ -39,14 +39,15 @@ describe("<ToledotNotes>", () => {
     });
     render(<ToledotNotes notes={[issueNote(), second]} />);
     expect(screen.getAllByRole("listitem")).toHaveLength(2);
-    expect(screen.getByRole("link", { name: "Named by a source outside the Bible: Hezekiah appears here; named by a source outside the Bible. — open on the timeline" })
+    expect(screen.getByRole("link", { name: "Person in this passage: Hezekiah: named by a source outside the Bible. — open on the timeline" })
       .getAttribute("href")).toBe("/toledot/people/per-h");
   });
 
-  it("prints the verse-link note as its own sentence, outside the link's accessible name", () => {
+  it("renders 'lead — body' with the link note merged into the body, and no separate note span", () => {
     const { container } = render(<ToledotNotes notes={[issueNote({ note: "Asked of Exodus 3" })]} />);
-    expect(container.querySelector(".toledot-note__text")!.textContent).toContain("Moses? Asked of Exodus 3.");
-    expect(screen.getByRole("link", { name: "Historical question: Is there a historical Moses? — open on the timeline" })).toBeTruthy();
+    expect(container.querySelector(".toledot-note__text")!.textContent).toContain("Open question — Is there a historical Moses? Asked of Exodus 3.");
+    expect(container.querySelector(".toledot-note__note")).toBeNull();
+    expect(screen.getByRole("link", { name: "Open question: Is there a historical Moses? Asked of Exodus 3. — open on the timeline" })).toBeTruthy();
   });
 
   it("shows an 'unchecked' caption only for subjects whose claims are unchecked", () => {
@@ -84,6 +85,6 @@ describe("<ToledotNotes> work notes", () => {
   it("no unchecked marker for a checked work; other kinds keep 'open on the timeline'", () => {
     render(<ToledotNotes notes={[workNote("claims-checked"), issueNote()]} />);
     expect(screen.queryByText("unchecked")).toBeNull();
-    expect(screen.getByRole("link", { name: "Historical question: Is there a historical Moses? — open on the timeline" })).toBeTruthy();
+    expect(screen.getByRole("link", { name: "Open question: Is there a historical Moses? — open on the timeline" })).toBeTruthy();
   });
 });

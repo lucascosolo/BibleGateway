@@ -11,5 +11,5 @@ citations = [
 ]
 verses = [
   { ref = "Rev.4.4", link = "background", note = "Revelation 4:4 shows the twenty-four elders, whom Jerome takes as a figure of the twenty-four books of the old law." },
-  { ref = "1Sam.1.1", link = "background", note = "1 Samuel opens the books whose translation Jerome's prologue introduces." },
+  { ref = "1Sam.1.1", link = "names", note = "1 Samuel opens the books whose translation Jerome's prologue introduces." },
 ]

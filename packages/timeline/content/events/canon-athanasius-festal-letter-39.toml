@@ -7,10 +7,10 @@ status = "sources-located"
 summary = """
 Each year the bishop of Alexandria sent a letter announcing the date of Easter. In the letter for 367 Athanasius listed the canonical books. His Old Testament has twenty-two books, matching the Hebrew letters, with Baruch and the Letter counted with Jeremiah and Esther left out. His New Testament is the four Gospels, Acts, seven general letters, fourteen letters of Paul and Revelation: the twenty-seven books in use today, listed exactly for the first time. Wisdom, Sirach, Esther, Judith, Tobit, the Didache and the Shepherd may be read by new converts but are not canonical. The date is given by the letter series itself and is not in dispute; Metzger also notes that not everyone in the church was ready to follow it."""
 verses = [
-  { ref = "Esth.1.1", link = "background", note = "Esther, placed among the books to be read but outside the canon." },
-  { ref = "Matt.22.29", link = "background", note = "Ye do err, not knowing the Scriptures, quoted by Athanasius to close his list." },
-  { ref = "John.5.39", link = "background", note = "Search the Scriptures, quoted by Athanasius as warrant for the list." },
-  { ref = "Rev.1.1", link = "describes", note = "Revelation, the last book of his New Testament." },
+  { ref = "Esth.1.1", link = "names", note = "Esther, placed among the books to be read but outside the canon." },
+  { ref = "Matt.22.29", link = "background", note = "Athanasius closes his list by quoting this verse: “Ye do err, not knowing the Scriptures.”" },
+  { ref = "John.5.39", link = "background", note = "Athanasius quotes this verse, “Search the Scriptures,” as warrant for his list." },
+  { ref = "Rev.1.1", link = "names", note = "Revelation, the last book of his New Testament." },
 ]
 
 [[positions]]
