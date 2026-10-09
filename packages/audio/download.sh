@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Fetch the raw recordings named in sources.json into $CACHE/raw/<raw_dir>/. Idempotent and
 # resumable: every transfer uses `curl -C -`, so rerunning after an interruption continues.
-# Never deletes anything. Usage: ./download.sh web|bsb|kjv|asv|heb|all
+# Never deletes anything. Usage: ./download.sh web|bsb|kjv|asv|heb|kjva|charles|anf|all
 set -euo pipefail
 
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -100,8 +100,38 @@ heb() {
   echo "heb done: $(find "$RAW/heb" -name '*.mp3' | wc -l) files"
 }
 
+outside() { # list file, raw dir: LibriVox files from several archive.org items, named <item>/<base>.mp3
+  # in the list; each lands at $RAW/<raw dir>/<item>/<base>.mp3 and is checked against the md5 the
+  # item's own metadata gives for its 64 kb/s variant. A file that already verifies is not refetched.
+  local list="$HERE/$1" dir="$RAW/${2:?}" failed=0
+  mkdir -p "$CACHE/meta"
+  python3 -I - "$list" > "$CACHE/$2.list" <<'PY'
+import json, sys
+for name, _title, _dur in json.load(open(sys.argv[1])):
+    print(name)
+PY
+  while read -r name; do
+    local item="${name%%/*}" base="${name#*/}"
+    local meta="$CACHE/meta/$item.files.json" dest="$dir/$name"
+    mkdir -p "$dir/$item"
+    [ -s "$meta" ] || curl -fsS -A "$UA" "https://archive.org/metadata/$item/files" -o "$meta"
+    local md5; md5="$(python3 -I -c 'import json,sys; print(next(f["md5"] for f in json.load(open(sys.argv[1]))["result"] if f["name"] == sys.argv[2]))' "$meta" "${base%.mp3}_64kb.mp3")"
+    if [ -s "$dest" ] && [ "$(md5sum < "$dest" | cut -d' ' -f1)" = "$md5" ]; then continue; fi
+    if fetch "https://archive.org/download/$item/${base%.mp3}_64kb.mp3" "$dest" \
+       && [ "$(md5sum < "$dest" | cut -d' ' -f1)" = "$md5" ]; then :; else
+      echo "$2: $name failed or does not match md5 $md5" >&2; failed=$((failed + 1))
+    fi
+  done < "$CACHE/$2.list"
+  [ "$failed" -eq 0 ] || { echo "$2: $failed files failed; rerun to retry" >&2; return 1; }
+  echo "$2 done: $(wc -l < "$CACHE/$2.list") files, md5 verified"
+}
+
+kjva() { outside kjva-files.json kjva; }       # KJV Apocrypha, nine LibriVox items
+charles() { outside charles-files.json charles; } # Charles's 1 Enoch and Jubilees
+anf() { outside anf-files.json anf; }          # KevinS's Ante-Nicene infancy gospels, four tracks
+
 case "${1:-}" in
-  web|bsb|kjv|asv|heb) "$1" ;;
-  all) heb; web; kjv; asv; bsb ;;
-  *) echo "usage: download.sh web|bsb|kjv|asv|heb|all" >&2; exit 2 ;;
+  web|bsb|kjv|asv|heb|kjva|charles|anf) "$1" ;;
+  all) heb; web; kjv; asv; bsb; kjva; charles; anf ;;
+  *) echo "usage: download.sh web|bsb|kjv|asv|heb|kjva|charles|anf|all" >&2; exit 2 ;;
 esac
