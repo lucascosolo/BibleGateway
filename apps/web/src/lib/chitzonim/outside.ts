@@ -89,7 +89,8 @@ export function canonNotice(canon: string | undefined, holders: readonly string[
   const lower = holders.map((h) => h.toLowerCase());
   const absent = NOT_IN.filter((name) => !lower.some((h) => h.includes(name.toLowerCase())));
   const notIn = absent.length ? `; not in ${joinList(absent, "or")} Bibles` : "";
-  return `Outside the canon: read in ${joinList(holders, "and")}${notIn}.`;
+  const named = holders.map((h) => (/^the /i.test(h) ? h : `the ${h}`));
+  return `Outside the canon: read in ${joinList(named, "and")}${notIn}.`;
 }
 
 const BANDS: Record<string, { names: readonly string[]; chaptered: boolean }> = {

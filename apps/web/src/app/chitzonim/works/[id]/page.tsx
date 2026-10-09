@@ -7,11 +7,11 @@ import { PassageRenderer } from "@/components/passage/PassageRenderer";
 import { Citations } from "@/components/toledot/Citations";
 import { EntitySection } from "@/components/toledot/EntityShell";
 import { canonNotice, getArea } from "@/lib/chitzonim/outside";
-import { getOutsideBookIndex, getPassage, getTranslationByCode } from "@/lib/db/corpus";
+import { getPassage, getTranslationByCode } from "@/lib/db/corpus";
 import { getFirstChapter, getOutsideBook } from "@/lib/db/outside";
 import { getWork } from "@/lib/db/timeline";
-import { toVerseId } from "@/lib/refs";
-import { canonicalReferenceSlug, excerpt } from "@/lib/seo";
+import { toVerseId, type VerseId } from "@/lib/refs";
+import { excerpt } from "@/lib/seo";
 import { formatRange } from "@/lib/timeline/years";
 
 export const dynamic = "force-dynamic";
@@ -36,10 +36,10 @@ export default async function WorkPage({ params }: Props) {
   const book = work.bookIds.map(getOutsideBook).find((b) => b && b.translations.length > 0);
   const translation = book ? getTranslationByCode(book.translations[0]) : undefined;
   const chapter = book ? getFirstChapter(book.bookId) : null;
+  // Starts at verse 0 so a prologue (Thomas, Sirach) is included; toVerseId rejects 0 by design.
   const range =
-    book && chapter !== null ? { start: toVerseId(book.bookId, chapter, 0), end: toVerseId(book.bookId, chapter, 999) } : null;
+    book && chapter !== null ? { start: (toVerseId(book.bookId, chapter, 1) - 1) as VerseId, end: toVerseId(book.bookId, chapter, 999) } : null;
   const verses = range && translation ? getPassage(range, translation.translationId) : [];
-  const books = getOutsideBookIndex();
 
   return (
     <div className="outside-page">
@@ -113,11 +113,11 @@ export default async function WorkPage({ params }: Props) {
             range={range}
             density="reader"
             translationId={translation.translationId}
-            passageSlug={canonicalReferenceSlug(range, books)}
+            passageSlug={`${book.osisId}.${chapter}`}
             bookLabels={{ [book.bookId]: book.name }}
           />
           <p className="outside-page__continue">
-            <Link href={`/read/${canonicalReferenceSlug(range, books)}?t=${translation.code}`}>
+            <Link href={`/read/${`${book.osisId}.${chapter}`}?t=${translation.code}`}>
               Continue reading {book.name} in {translation.name}
             </Link>
           </p>
