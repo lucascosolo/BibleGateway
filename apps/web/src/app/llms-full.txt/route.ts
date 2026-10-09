@@ -35,6 +35,8 @@ Jot is a public, read-only Bible research API for retrieval by search engines, a
 
 \`GET ${BASE}/api/corpus\`
 
+Also returns \`canonicalVerseCount\` (31,102: the 66-book address space) and \`outside.canons\`: per outside canon (\`deuterocanon\`, \`pseudepigrapha\`, \`nt-apocrypha\`, \`apostolic\`, \`described\`) the \`books\` and stored \`verses\`, with a \`bookList\` giving each book's \`numbering\` scheme, verse count and the \`translations\` that print it. Never add the outside verses to 31,102 or call them part of the Bible's verse count.
+
 Returns the content-derived \`buildId\` of the text corpus, \`audioBuildId\` (the separately built recordings artifact, or \`null\` when this deployment has no audio), and a public manifest of every upstream input archive with its source URL, filename, and SHA-256 checksum. Store this alongside a research citation; the build ID identifies the derived corpus, while the manifest identifies its inputs.
 
 ### Passage
@@ -58,6 +60,8 @@ With \`footnotes=1\` the response also has \`footnotes\`: the requested translat
 
 Worked example: \`GET ${BASE}/api/passage?ref=Deut.23&t=LXX&footnotes=1\` returns Brenton's Deuteronomy 23 at canonical addresses (the Septuagint's 23:1 is canonical 22:30, so it appears in Deuteronomy 22, not here), Brenton's footnotes for those verses, and any \`versification\` omission in range. Quote the text with the LXX copyright notice and say it is Brenton's English translation of the Greek, not the Hebrew.
 
+Outside references resolve here too (see Outside books below): \`GET ${BASE}/api/passage?ref=Thomas%2042&translation=MATTISON\` returns logion 42 of the Gospel of Thomas, and \`GET ${BASE}/api/passage?ref=Sir%201:1&translation=KJVA\` Sirach 1:1. The response has \`book\` (\`bookId\`, \`osisId\`, \`canon\`, \`numbering\`). Ask for an outside book in a translation that does not print it (WEB, for instance) and the answer is a 404: do not fill the gap from another edition.
+
 ### Original language
 
 \`GET ${BASE}/api/originals?ref=John%203%3A16\`
@@ -68,7 +72,7 @@ Returns token-level surface text, lemma, Strong's key, morphology, language, sou
 
 \`GET ${BASE}/api/search?q=grace&translation=WEB&page=1&pageSize=20\`
 
-Searches translation text and returns hits, total, pagination, and book distribution.
+Searches translation text and returns hits, total, pagination, and book distribution. \`canon\` = \`bible\` (default) searches only the 66 books; \`canon=all\` also searches the outside books (\`GET ${BASE}/api/search?q=kingdom&canon=all\`; add \`translation=MATTISON\` or \`KJVA\` to search an outside edition). The response echoes \`canon\`. An outside \`book\` id implies \`all\`. Report which canon you searched.
 
 ### Original-language search
 
@@ -96,6 +100,8 @@ Returns translation codes, names, rights, license/attribution, scope, \`scopeNot
 
 Partial editions say what they hold. \`LXX\` is Brenton's 1851 English translation of the Septuagint, loaded only for the books named in its \`scopeNote\` (read it live from /api/translations; as of this build it is the Pentateuch plus Nehemiah, Lamentations, Habakkuk and Haggai). Books whose numbering differs from the Hebrew scheme are loaded under reviewed verse maps checked by wording (for example the Septuagint opens Deuteronomy 13 with Hebrew 12:32 and Numbers 17 with Hebrew 16:36); verses with no counterpart are recorded as \`versification\` omissions, and the few Septuagint-only verses are left unplaced rather than forced to a wrong address. Every other book is withheld until it has such a map. A wrong verse map would put a well-formed but wrong verse beside the Hebrew at every address, which is worse than an absent book. Do not claim Jot has Brenton text for a book not in \`scopeNote\`, and do not fill the gap from elsewhere under the LXX label.
 
+Outside-book editions have \`scope: "outside"\` and a \`books\` list (\`bookId\`, \`osisId\`, \`name\`, \`canon\`, \`numbering\`) of exactly the books each prints. The seven are KJVA (the KJV Apocrypha), CHARLES (1 Enoch, Jubilees, the Testaments of the Twelve Patriarchs, 2 Baruch), GRAY (Psalms of Solomon), MATTISON (Gospels of Thomas, Mary, Judas, Philip), ANF (Gospel of Peter, Protevangelium of James, Infancy Gospel of Thomas, Acts of Paul and Thecla), JAMES1924 (Apocalypse of Peter) and LIGHTFOOT (Didache, 1 Clement, Ignatius, Barnabas, Hermas). Read each one's \`license\`, \`copyrightNotice\` and \`scopeNote\` live and carry them with any quotation.
+
 ### Concordance export
 
 \`GET ${BASE}/api/concordance?key=H2617a&format=tsv&limit=5000\`
@@ -108,10 +114,23 @@ Returns UTF-8 TSV. Comment lines provide total/exported/truncated counts, follow
 
 Exactly one chapter: a ref spanning more than one chapter is a 400, a chapter with no recording is a 404. Returns no verse text. \`audio.editions\` lists the recordings (reader, language, license, attribution, source URL); editions currently include \`BSB-souer\`, \`WEB-williams\`, \`KJV-librivox\` and the Hebrew \`WLC-beeri\`, and the response, not this list, is authoritative. \`audio.chapters[].byEdition[code]\` gives the chapter file \`url\`, \`durationMs\`, and \`verses\` as \`{ verseId, startMs, endMs }\` within that file. \`t\` selects \`translationCode\` and \`nextHref\` (the reader path of the next chapter, null at the end of a book). Carry the edition's attribution when citing a recording; timings come from automatic alignment, not hand-placed cues.
 
+## Outside books (Chitzonim)
+
+Books 67-120 are addressed by the same \`verse_id\` and printed by the same renderer, but they are not part of the 66 and no default query returns them. Never describe one as in "the Bible" without saying whose.
+
+- Canons and who reads them. None of these books is in the Hebrew or the Protestant canon. \`deuterocanon\` (the Septuagint's extra books: Tobit, Judith, Wisdom, Sirach, the Maccabees…): Catholic and Orthodox Bibles include most of them and differ on exactly which; older Protestant Bibles printed them between the Testaments as the Apocrypha. \`pseudepigrapha\` (1 Enoch, Jubilees, the Testaments of the Twelve Patriarchs, Psalms of Solomon, 2 Baruch): the Ethiopian Orthodox Tewahedo Church reads 1 Enoch and Jubilees as scripture; no other church does. \`nt-apocrypha\` (Gospels of Thomas, Mary, Judas, Philip and Peter, the Protevangelium, Acts of Paul and Thecla, Apocalypse of Peter): in no church's New Testament today. \`apostolic\` (Didache, 1 Clement, Ignatius, Barnabas, Hermas): read in some churches in the first centuries, in no New Testament today. \`described\` (Qumran and Nag Hammadi works): no free complete translation; described and excerpted, not printed, and scripture in no living tradition. Each work's \`heldCanonicalBy\` is the authority for who reads it.
+- Numbering schemes (\`numbering\`, in \`/api/corpus\` \`bookList\`, \`/api/translations\` \`books\` and the passage \`book\`): \`chapter-verse\`; \`logion\` (Thomas: sayings 1-114, prologue as 0); \`section\` (Gospel of Peter, 1-14); \`chapter\`; \`part-chapter\` (a book of several forms or parts, e.g. Hermas as Vision/Mandate/Parable, the Infancy Gospel of Thomas as three forms); \`paragraph\`; \`page\` (Mary, Judas, Philip: the manuscript page, with the verse a counted place on that page). Some units are editorial ordinals counted in order because the source prints none (Acts of Paul and Thecla, the Ethiopic Apocalypse of Peter); say so when citing. Verse 0 is a prologue or greeting. The verse-id space is sparse here too: walk real verses only.
+- Licences and proofreading. Every edition is public domain on a stated basis: KJVA by the eBible statement (with the UK letters-patent notice); CHARLES, GRAY, ANF, JAMES1924 and LIGHTFOOT by date of first publication (1913-1924, 1870-1896, 1891) with the translator's death year; MATTISON by the translator's own public-domain dedication. Proofread status: CHARLES's Testaments and 2 Baruch and all of GRAY were OCR drafts proofread against the printed pages in 2026; say "proofread against print" only for what the \`copyrightNotice\` says. The licence basis of each is in its \`license\` and \`copyrightNotice\`.
+- Worked examples. \`GET ${BASE}/api/passage?ref=Thomas%2042&translation=MATTISON\` (logion 42); \`GET ${BASE}/api/passage?ref=Sir%201:1&translation=KJVA\` (Sirach, chapter-verse); \`GET ${BASE}/api/search?q=kingdom&canon=all&translation=MATTISON\`; \`GET ${BASE}/api/timeline/works?canon=nt-apocrypha\`; \`GET ${BASE}/api/timeline/works/gospel-of-thomas\`.
+
+### Work records
+
+\`GET ${BASE}/api/timeline/works\` lists the 43 works (filter with \`canon\`; an unknown canon is a 400); \`GET ${BASE}/api/timeline/works/{id}\` returns one in full: \`positions\` (cited dating positions with who holds each), \`witnesses\` (surviving copies), \`heldCanonicalBy\`, \`translations\`, \`excerpts\`, \`provenance\`, \`verses\` (links to Bible passages with reader paths), \`href\` and the human \`page\` (${BASE}/chitzonim/works/{id}). \`composed\` is a range (negative = BCE) derived from the positions, quoted as a range with its positions. Eight works are undated (Judith, Susanna, Bel and the Dragon, the Prayer of Azariah, 1 Esdras, the Letter of Jeremiah, the Gospel of Mary, the Gospel of Judas): for them \`composed\` is null and \`composedUndated\` states why and what is known, such as the earliest dated copy. Say "undated"; never turn a copy's date or a guess into a composition range. The same review \`status\` rule applies: below claims-checked is unchecked.
+
 ## Historical scholarship
 
 - Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}, ${BASE}/toledot/investigations/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
-- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/investigations\`, \`GET /api/timeline/investigations/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`. Every list item carries an \`href\` to its full record.
+- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/investigations\`, \`GET /api/timeline/investigations/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`, \`GET /api/timeline/works\`, \`GET /api/timeline/works/{id}\`. Every list item carries an \`href\` to its full record.
 - Every date is a RANGE (\`earliest\`, \`latest\`; negative = BCE, no year 0) with a confidence (firm, contested, speculative) and the scholarly positions behind it, each with arguments for and against and their citations. Quote the range and the positions, never a single year.
 - Three axes are separate questions: \`narrative\` (when events happened), \`composition\` (when texts were written), \`canon\` (when collections were recognised as scripture, e.g. the closing of the Hebrew Bible or the fixing of the New Testament list). Do not merge them. The \`/api/timeline\` response returns them as separate \`tracks\`.
 - Each position on an event's date says what it dates. \`positions\` date the event itself and alone make \`earliest\`/\`latest\`; \`compositionPositions\` date when the story was written. "The exodus narrative was written in the 6th century BCE" and "the exodus happened in the 13th century BCE" are different claims; never report one as the other.

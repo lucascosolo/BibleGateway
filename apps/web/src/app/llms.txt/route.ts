@@ -24,7 +24,7 @@ const body = `# Jot Bible Research API
 ## Historical scholarship
 
 - Timeline pages: ${BASE}/toledot (the strip), ${BASE}/toledot/events/{id}, ${BASE}/toledot/people/{id}, ${BASE}/toledot/artifacts/{id}, ${BASE}/toledot/issues/{id}, ${BASE}/toledot/investigations/{id}. Ids are content slugs such as \`exodus\` or \`hezekiah\`; the full list is in ${BASE}/sitemaps/toledot.xml.
-- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/investigations\`, \`GET /api/timeline/investigations/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`.
+- Endpoints: \`GET /api/timeline?from=-1500&to=-500&axis=narrative\`, \`GET /api/timeline/events/{id}\`, \`GET /api/timeline/persons\`, \`GET /api/timeline/persons/{id}\`, \`GET /api/timeline/artifacts/{id}\`, \`GET /api/timeline/issues/{id}\`, \`GET /api/timeline/investigations\`, \`GET /api/timeline/investigations/{id}\`, \`GET /api/timeline/passage?ref=2Kgs.18\`, \`GET /api/timeline/works\`, \`GET /api/timeline/works/{id}\`.
 - Every date is a RANGE (\`earliest\`, \`latest\`; negative = BCE, no year 0) with a confidence (firm, contested, speculative) and the scholarly positions behind it, each with arguments for and against and their citations. Quote the range and the positions, never a single year.
 - Three axes are separate questions: \`narrative\` (when events happened), \`composition\` (when texts were written), \`canon\` (when collections were recognised as scripture). Do not merge them.
 - Evidence grades for people are derived from outside sources: corroborates (named by a source outside the Bible), partially-corroborates (partly confirmed; the reading is disputed), consistent (fits an outside source without naming them), silent (outside sources exist but say nothing), none (no outside evidence). A separate tension flag means an outside source contradicts a biblical detail about them.
@@ -32,6 +32,13 @@ const body = `# Jot Bible Research API
 - Every claim carries citations; quote them with it.
 - Review \`status\`: draft < sources-located < claims-checked < expert-reviewed. Anything below claims-checked is UNCHECKED; say so when citing it.
 - Investigations (e.g. \`deut-32-8-9\`, \`gen-2-21-23\`) set out how ancient witnesses read one passage, which editions follow which witness, and the cited explanations of each difference with who holds them.
+
+## Outside books (Chitzonim)
+
+- Books 67-120 sit outside the Hebrew and Protestant canons, addressed by the same \`verse_id\`. Five canons: \`deuterocanon\`, \`pseudepigrapha\`, \`nt-apocrypha\`, \`apostolic\`, \`described\`. Seven editions carry them (\`scope: "outside"\` in ${BASE}/api/translations): KJVA, CHARLES, GRAY, MATTISON, ANF, JAMES1924, LIGHTFOOT. \`/api/corpus\` gives the 66-book count (31,102) and the outside counts per canon, kept separate.
+- Refs: \`GET /api/passage?ref=Thomas%2042&translation=MATTISON\`, \`ref=Sir%201:1&translation=KJVA\`. Numbering varies by book (chapter-verse, logion, section, chapter, part-chapter, paragraph, page); the response \`book.numbering\` says which. Search them with \`GET /api/search?q=kingdom&canon=all\` (default \`bible\` = the 66).
+- Work records: \`GET /api/timeline/works[?canon=nt-apocrypha]\`, \`GET /api/timeline/works/{id}\` (page: ${BASE}/chitzonim/works/{id}). Eight works are undated: \`composed\` is null and \`composedUndated\` says why. Never supply a date for them.
+- None of these books is in the Hebrew or Protestant canon. Catholic and Orthodox Bibles include most deuterocanonical books (they differ); only the Ethiopian Orthodox Tewahedo Church reads 1 Enoch and Jubilees as scripture; no New Testament includes the rest.
 
 ## Rules
 

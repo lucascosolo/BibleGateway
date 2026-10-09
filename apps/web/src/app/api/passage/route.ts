@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { corpusCacheHeaders, notModified } from "@/lib/db/cache";
 import { getFootnotes, getOmissions } from "@/lib/db/apparatus";
 import {
-  getBookIndex,
+  getOutsideBookIndex,
   getPassage,
   getTranslationByCode,
   getTranslations,
@@ -18,7 +18,8 @@ export const dynamic = "force-dynamic";
 /**
  * GET /api/passage?ref=John+3:16-18&translation=WEB[&footnotes=1]
  *
- * `t` is accepted as an alias for `translation`, matching reader URLs. `footnotes=1` adds the
+ * Outside books (ids 67-120) resolve too: `ref=Thomas+42`, `ref=Sir+1:1`; the response `book` says
+ * which canon and numbering scheme the address uses. `t` is accepted as an alias for `translation`, matching reader URLs. `footnotes=1` adds the
  * translation's own notes on the returned verses; it is off by default so the payload every
  * reading surface already parses does not change shape.
  *
@@ -58,7 +59,8 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const books = getBookIndex();
+  // The full index: outside references such as "Thomas 42" or "Sir 1:1" resolve like any other.
+  const books = getOutsideBookIndex();
 
   let range;
   try {
@@ -69,6 +71,11 @@ export async function GET(request: NextRequest) {
     }
     throw error;
   }
+
+  const startBook = books.get(Math.floor(range.start / 1_000_000));
+  const bookInfo = startBook
+    ? { bookId: startBook.bookId, osisId: startBook.osisId, canon: startBook.canon ?? "bible", numbering: startBook.numbering ?? "chapter-verse" }
+    : null;
 
   const verses = getPassage(range, translation.translationId);
 
@@ -106,6 +113,7 @@ export async function GET(request: NextRequest) {
         // somewhere the reader never scrolls to.
         copyright: translation.copyrightNotice,
       },
+      book: bookInfo,
       verses,
       omissions,
       ...(footnotesFlag === "1"

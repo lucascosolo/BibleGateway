@@ -2,11 +2,21 @@ import { NextResponse, type NextRequest } from "next/server";
 
 import { corpusCacheHeaders, notModified } from "@/lib/db/cache";
 import { getTranslations } from "@/lib/db/corpus";
+import { getOutsideBooks } from "@/lib/db/outside";
 
 // NOT `force-static` — see apps/web/src/app/api/passage/route.ts. This route takes no query
 // params, but `notModified` reads a request header, and a statically rendered handler is
 // evaluated once at build time with no request at all.
 export const dynamic = "force-dynamic";
+
+/** A translation of scope "outside" also lists the outside books it prints, with their numbering. */
+function withOutsideBooks<T extends { code: string; scope: string }>(translation: T) {
+  if (translation.scope !== "outside") return translation;
+  const books = getOutsideBooks()
+    .filter((book) => book.translations.includes(translation.code))
+    .map(({ bookId, osisId, name, canon, numbering }) => ({ bookId, osisId, name, canon, numbering }));
+  return { ...translation, books };
+}
 
 /**
  * GET /api/translations
@@ -30,7 +40,7 @@ export async function GET(request: NextRequest) {
   // The corpus is an immutable build artifact, so this is cacheable against the build id in
   // exactly the way user data would not be.
   return NextResponse.json(
-    { translations: getTranslations() },
+    { translations: getTranslations().map(withOutsideBooks) },
     { headers: corpusCacheHeaders(request) },
   );
 }

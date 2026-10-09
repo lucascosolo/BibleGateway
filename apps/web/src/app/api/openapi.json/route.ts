@@ -33,6 +33,10 @@ const REVIEW_STATUS_NOTE =
   "`status` is the review grade: draft < sources-located < claims-checked < expert-reviewed. " +
   "Anything below claims-checked is UNCHECKED: its claims have not yet been verified against the cited sources, and a citing client must say so.";
 
+const OUTSIDE_NOTE =
+  "Outside books (ids 67-120) are not in the Hebrew or the Protestant canon. They fall in five canons: deuterocanon (read in Catholic and Orthodox Bibles, which differ on exactly which), " +
+  "pseudepigrapha (1 Enoch and Jubilees are scripture only in the Ethiopian Orthodox Tewahedo Church), nt-apocrypha and apostolic (in no New Testament today), and described (no free translation; described, not printed). ";
+
 const openapi = {
   openapi: "3.1.0",
   info: {
@@ -51,16 +55,20 @@ const openapi = {
     },
     "/api/corpus": {
       get: {
-        summary: "Identify the corpus and audio builds and the upstream inputs",
+        summary: "Identify the corpus and audio builds, count the verses, and list the outside books by canon",
+        description:
+          "`canonicalVerseCount` is 31,102, the 66-book address space. `outside.canons` has one entry per outside canon (deuterocanon, pseudepigrapha, nt-apocrypha, apostolic, described) with `books`, `verses` stored, and `bookList` (each book's `numbering` scheme and the `translations` that print it). The outside verses are never added to the 31,102. " + OUTSIDE_NOTE,
         responses: { "200": jsonOf("Content-derived build IDs and public source archive checksums.", "CorpusResponse") },
       },
     },
     "/api/passage": {
       get: {
         summary: "Read a translated passage with its omission apparatus and, optionally, translator footnotes",
+        description:
+          "Outside books resolve too: `ref=Thomas 42` (Gospel of Thomas, logion 42), `ref=Sir 1:1` (Sirach), `ref=Enoch 1:1`. `book` reports the book's `canon` and `numbering` scheme (chapter-verse, logion, section, chapter, part-chapter, paragraph, page); read the numbering before citing, because the unit is not always a verse (a logion, a manuscript page, an editorial ordinal). Use the translation that carries the book (see `books` in /api/translations); an outside book in WEB is a 404. " + OUTSIDE_NOTE,
         parameters: [
           referenceParameter,
-          translationParameter,
+          { ...translationParameter, description: "Translation code from /api/translations; defaults to WEB. Outside books need a translation that prints them, such as KJVA (Apocrypha), CHARLES, GRAY, MATTISON, ANF, JAMES1924 or LIGHTFOOT.", schema: { type: "string", default: "WEB", example: "MATTISON" } },
           { name: "t", in: "query", description: "Alias for `translation`, as in reader URLs. `translation` wins when both are given.", schema: { type: "string", example: "LXX" } },
           { name: "footnotes", in: "query", description: "`1` adds `footnotes`: the translation's own notes on the returned verses. Off by default so the payload shape is stable. Any value other than 0 or 1 is a 400.", schema: { type: "string", enum: ["0", "1"], default: "0" } },
         ],
@@ -81,12 +89,13 @@ const openapi = {
     "/api/search": {
       get: {
         summary: "Search translation text",
+        description: "Example: `/api/search?q=kingdom&canon=all&translation=MATTISON` searches the Gospel of Thomas and its siblings as well as the 66. The response echoes `canon`.",
         parameters: [
           { name: "q", in: "query", required: true, schema: { type: "string", example: "grace" } },
           translationParameter,
           { name: "testament", in: "query", schema: { type: "string", enum: ["OT", "NT", "DC"] } },
           { name: "book", in: "query", description: "Numeric book id (1-66; any book id when canon=all).", schema: { type: "integer", example: 45 } },
-          { name: "canon", in: "query", description: "`bible` (default) searches the 66 books; `all` also searches the outside books.", schema: { type: "string", enum: ["bible", "all"], default: "bible" } },
+          { name: "canon", in: "query", description: "`bible` (default) searches only the 66 books of the Hebrew and Protestant canon; `all` also searches the outside books (ids 67-120), which then carry `canon` in their hits. Anything else is read as `bible`. An outside `book` id implies `all`. Search the translation that prints the book, e.g. `translation=KJVA`.", schema: { type: "string", enum: ["bible", "all"], default: "bible" } },
           { name: "limit", in: "query", schema: { type: "integer", minimum: 1, maximum: 100, default: 20 } },
           { name: "offset", in: "query", schema: { type: "integer", minimum: 0, default: 0 } },
         ],
@@ -135,7 +144,7 @@ const openapi = {
     "/api/translations": {
       get: {
         summary: "List translation metadata",
-        description: "Codes, licensing, attribution, scope and `scopeNote`. A partial edition (such as LXX, Brenton's Septuagint) states which books it prints and why the others are withheld.",
+        description: "Codes, licensing, attribution, scope and `scopeNote`. A partial edition (such as LXX, Brenton's Septuagint) states which books it prints and why the others are withheld. The seven outside-book editions have `scope: \"outside\"` (KJVA, CHARLES, GRAY, MATTISON, ANF, JAMES1924, LIGHTFOOT) and carry a `books` list (`bookId`, `osisId`, `name`, `canon`, `numbering`) naming every book they print. Each one's `license` is its basis in the source ledger (age of publication and the translator's death year, a source's own public-domain statement, or the translator's dedication); its `copyrightNotice` says whether it was proofread against the printed pages (CHARLES's Testaments and 2 Baruch and GRAY were, in 2026). Quote the notice with the text.",
         responses: { "200": { description: "Translation codes, scope, licensing, and attribution." } },
       },
     },
@@ -247,6 +256,27 @@ const openapi = {
         responses: { "200": jsonOf("The investigation in full, with citations.", "InvestigationDetail"), "404": errorResponse },
       },
     },
+    "/api/timeline/works": {
+      get: {
+        summary: "List the outside-book work records (Chitzonim), filterable by canon",
+        description:
+          "43 works across five canons, in the order deuterocanon, pseudepigrapha, nt-apocrypha, apostolic, described. `composed` is the derived envelope of the scholarly dating positions as a range with `display`, or null. Eight works are explicitly undated: for them `composed` is null and `composedUndated` states why and what is known (for example the earliest dated copy). Never supply a date for an undated work. `traditional` is the separate traditional-chronology envelope, or null. Each work lists its `books` and an `href` (this API) and `page` (the human page under /chitzonim/works). " +
+          OUTSIDE_NOTE + REVIEW_STATUS_NOTE,
+        parameters: [
+          { name: "canon", in: "query", description: "Only works of this canon. Omit for all five. An unknown value is a 400.", schema: { type: "string", enum: ["deuterocanon", "pseudepigrapha", "nt-apocrypha", "apostolic", "described"], example: "nt-apocrypha" } },
+        ],
+        responses: { "200": jsonOf("Works with total, the canon filter used, and each work's dating or its stated reason for having none.", "WorkList"), "400": errorResponse },
+      },
+    },
+    "/api/timeline/works/{id}": {
+      get: {
+        summary: "Read one outside-book work: dating positions, witnesses, who reads it as scripture, translations",
+        description:
+          "`positions` are the cited scholarly dating positions with who holds each; `composed`/`composedUndated` are as in the list. `witnesses` are surviving copies (manuscript, date range, institution); `heldCanonicalBy` names the traditions that read it as scripture (empty for most); `translations` names the ledger entries and codes that print it; `excerpts` are short cited quotations (the only text of a `described` work); `verses` link it to Bible passages. " + REVIEW_STATUS_NOTE,
+        parameters: [idParameter("gospel-of-thomas")],
+        responses: { "200": jsonOf("The work in full, with citations.", "WorkDetail"), "404": errorResponse },
+      },
+    },
     "/api/annotations": {
       get: {
         summary: "PRIVATE: the signed-in user's annotations in a verse-id range",
@@ -291,10 +321,27 @@ const openapi = {
       },
       CorpusResponse: {
         type: "object",
-        required: ["buildId", "audioBuildId", "sources"],
+        required: ["buildId", "audioBuildId", "canonicalVerseCount", "outside", "sources"],
         properties: {
           buildId: { type: "string", description: "Content-derived id of bible.db." },
           audioBuildId: { type: ["string", "null"], description: "Content-derived id of the audio artifact; null when this deployment has none." },
+          canonicalVerseCount: { type: "integer", example: 31102, description: "Verses in the 66-book address space." },
+          outside: {
+            type: "object",
+            properties: {
+              canons: {
+                type: "array",
+                items: {
+                  type: "object",
+                  properties: {
+                    canon: { type: "string", enum: ["deuterocanon", "pseudepigrapha", "nt-apocrypha", "apostolic", "described"] },
+                    books: { type: "integer" }, verses: { type: "integer" },
+                    bookList: { type: "array", items: { type: "object", properties: { bookId: { type: "integer" }, osisId: { type: "string" }, name: { type: "string" }, numbering: { type: "string", enum: ["chapter-verse", "logion", "section", "chapter", "part-chapter", "paragraph", "page"] }, verses: { type: "integer" }, translations: { type: "array", items: { type: "string" } } } } },
+                  },
+                },
+              },
+            },
+          },
           sources: { type: "array", items: { type: "object", description: "Upstream archive: URL, filename, SHA-256." } },
         },
       },
@@ -342,6 +389,7 @@ const openapi = {
           reference: { type: "string" },
           range: { $ref: "#/components/schemas/Range" },
           translation: { type: "object", properties: { code: { type: "string" }, name: { type: "string" }, copyright: { type: "string" } } },
+          book: { type: ["object", "null"], description: "The first book of the range: its canon and numbering scheme.", properties: { bookId: { type: "integer" }, osisId: { type: "string" }, canon: { type: "string" }, numbering: { type: "string", enum: ["chapter-verse", "logion", "section", "chapter", "part-chapter", "paragraph", "page"] } } },
           verses: { type: "array", items: { $ref: "#/components/schemas/Verse" } },
           omissions: { type: "array", items: { $ref: "#/components/schemas/Omission" } },
           footnotes: { type: "array", items: { $ref: "#/components/schemas/Footnote" }, description: "Present only with footnotes=1; the requested translation's notes on the returned verses, in verse then printed order." },
@@ -421,6 +469,44 @@ const openapi = {
           attestations: { type: "array", items: { type: "object" } },
           issues: { type: "array", items: { type: "object" } },
         },
+      },
+      WorkSummary: {
+        type: "object",
+        required: ["id", "title", "canon", "status", "composed", "composedUndated", "books", "href", "page"],
+        properties: {
+          id: { type: "string" }, title: { type: "string" },
+          canon: { type: "string", enum: ["deuterocanon", "pseudepigrapha", "nt-apocrypha", "apostolic", "described"] },
+          status: { $ref: "#/components/schemas/ReviewStatus" },
+          composed: { type: ["object", "null"], description: "Derived envelope of the dating positions; null exactly when composedUndated is set.", properties: { earliest: { type: "integer" }, latest: { type: "integer" }, display: { type: "string" } } },
+          composedUndated: { type: ["string", "null"], description: "Why the work is undated and what is known; set exactly when composed is null. No range is ever invented." },
+          traditional: { type: ["object", "null"], properties: { earliest: { type: "integer" }, latest: { type: "integer" }, display: { type: "string" } } },
+          books: { type: "array", items: { type: "object", properties: { bookId: { type: "integer" }, osisId: { type: "string" }, name: { type: "string" } } } },
+          href: { type: "string" }, page: { type: "string", description: "Human page, /chitzonim/works/{id}." },
+        },
+      },
+      WorkList: {
+        type: "object",
+        properties: { canon: { type: ["string", "null"] }, total: { type: "integer" }, works: { type: "array", items: { $ref: "#/components/schemas/WorkSummary" } } },
+      },
+      WorkDetail: {
+        allOf: [
+          { $ref: "#/components/schemas/WorkSummary" },
+          {
+            type: "object",
+            properties: {
+              alsoKnownAs: { type: "array", items: { type: "string" } }, summary: { type: "string" }, contents: { type: ["string", "null"] }, originalLanguage: { type: "string" },
+              citations: { type: "array", items: { $ref: "#/components/schemas/Citation" } },
+              positions: { type: "array", items: { $ref: "#/components/schemas/Position" } },
+              provenance: { type: "array", items: { type: "object" } },
+              witnesses: { type: "array", items: { type: "object" } },
+              heldCanonicalBy: { type: "array", items: { type: "object", properties: { tradition: { type: "string" }, note: { type: ["string", "null"] } } } },
+              translations: { type: "array", items: { type: "object", properties: { ledger: { type: "string" }, code: { type: ["string", "null"] }, note: { type: ["string", "null"] } } } },
+              excerpts: { type: "array", items: { type: "object" } },
+              events: { type: "array", items: { type: "object" } },
+              verses: { type: "array", items: { type: "object", properties: { start: { $ref: "#/components/schemas/VerseId" }, end: { $ref: "#/components/schemas/VerseId" }, linkType: { type: "string" }, note: { type: ["string", "null"] }, label: { type: "string" }, path: { type: "string" } } } },
+            },
+          },
+        ],
       },
       InvestigationPassage: {
         type: "object",

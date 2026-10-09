@@ -71,8 +71,28 @@ const endpoints = [
   },
   {
     method: "GET",
+    path: "/api/passage?ref=Thomas+42&translation=MATTISON",
+    description: "An outside book (not in the Hebrew or Protestant canon): logion 42 of the Gospel of Thomas. The response names the book's canon and numbering scheme. Also Sir 1:1 in KJVA.",
+  },
+  {
+    method: "GET",
+    path: "/api/search?q=kingdom&canon=all&translation=MATTISON",
+    description: "Search including the outside books. canon=bible (default) is the 66 books only; all adds books 67-120.",
+  },
+  {
+    method: "GET",
+    path: "/api/timeline/works?canon=nt-apocrypha",
+    description: "Work records for the outside books, filterable by canon. Undated works say so (composed is null, composedUndated says why); no range is invented.",
+  },
+  {
+    method: "GET",
+    path: "/api/timeline/works/gospel-of-thomas",
+    description: "One work: cited dating positions, surviving copies, who reads it as scripture, translations, excerpts and a link to its page.",
+  },
+  {
+    method: "GET",
     path: "/api/translations",
-    description: "Translation codes, licensing, attribution, scope, and copyright notices. Partial editions such as Brenton's Septuagint state which books they hold and why the rest are withheld.",
+    description: "Translation codes, licensing, attribution, scope, and copyright notices. Partial editions such as Brenton's Septuagint state which books they hold and why the rest are withheld. The seven outside-book editions (KJVA, CHARLES, GRAY, MATTISON, ANF, JAMES1924, LIGHTFOOT) have scope outside and list their books.",
   },
   {
     method: "GET",
@@ -82,7 +102,7 @@ const endpoints = [
   {
     method: "GET",
     path: "/api/corpus",
-    description: "Content-derived build IDs for the corpus and the audio artifact, and checksums of every upstream input.",
+    description: "Content-derived build IDs, the canonical verse count (31,102), outside-book counts and books by canon, and checksums of every upstream input.",
   },
   {
     method: "GET",
@@ -132,6 +152,16 @@ export default function ApiPage() {
           as such. Every position, argument, attestation and difference carries its citations.
           An event&rsquo;s <code>positions</code> date the event; its
           <code>compositionPositions</code> date when its story was written.
+        </p>
+        <p>
+          Outside books (ids 67&ndash;120) are in none of the Hebrew or Protestant canons: the
+          Septuagint&rsquo;s extra books (Catholic and Orthodox Bibles include most, and differ),
+          Second Temple writings (only the Ethiopian Orthodox church reads 1 Enoch and Jubilees as
+          scripture), New Testament apocrypha and the Apostolic Fathers (in no New Testament), and
+          described works. Each carries its numbering scheme (chapter-verse, logion, section,
+          chapter, part-chapter, paragraph or page). Every edition is public domain on a stated
+          basis, in its <code>license</code> and notice, with proofreading status. Eight works are
+          undated; their records say so rather than carrying a range.
         </p>
         <p>
           The original-language endpoint identifies each source and its license. VarApp is a

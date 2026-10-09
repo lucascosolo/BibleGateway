@@ -9,7 +9,7 @@ vi.mock("@/lib/db/corpus", () => ({
   getTranslationByCode: (code: string) =>
     code === "KJV" ? tr(3, "KJV", "King James") : code === "WEB" ? tr(1, "WEB", "World English Bible") : undefined,
   getTranslations: () => [tr(3, "KJV", "King James"), tr(1, "WEB", "World English Bible")],
-  getBookIndex: () => new Map(),
+  getOutsideBookIndex: () => new Map(),
   getPassage: () => [
     { verseId: 43003016, chapter: 3, verse: 16, text: "a", heatBucket: 0 },
     { verseId: 43003017, chapter: 3, verse: 17, text: "b", heatBucket: 0 },
