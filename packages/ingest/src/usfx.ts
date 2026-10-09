@@ -35,6 +35,7 @@
 
 import { createHash } from "node:crypto";
 import unzipper from "unzipper";
+import { decodeEntities, parseFootnotes, type Footnote } from "./footnotes.js";
 
 /**
  * USFM/USFX book codes in canonical order, so the index is `book_id - 1`.
@@ -78,6 +79,8 @@ export interface UsfxVerse {
   ref: string;
   /** Verse text with all markup removed. NOT yet normalized — the caller does that. */
   text: string;
+  /** Translator notes read from the raw verse before the spans were deleted from the text. */
+  footnotes: Footnote[];
 }
 
 /** A site where removing markup would have joined two word characters. See the header. */
@@ -102,17 +105,6 @@ export interface UsfxResult {
 export interface ParseUsfxOptions {
   /** Some historical LXX distributions split one printed verse into labelled segments (2a/2b). */
   allowVerseSuffix?: boolean;
-}
-
-const XML_ENTITIES: Readonly<Record<string, string>> = {
-  "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'", "&nbsp;": " ",
-};
-
-function decodeEntities(s: string): string {
-  return s
-    .replace(/&(?:amp|lt|gt|quot|apos|nbsp);/g, (m) => XML_ENTITIES[m])
-    .replace(/&#(\d+);/g, (_, d: string) => String.fromCodePoint(Number(d)))
-    .replace(/&#x([0-9a-fA-F]+);/g, (_, h: string) => String.fromCodePoint(Number.parseInt(h, 16)));
 }
 
 const WORD_CHAR = /[\p{L}\p{N}]/u;
@@ -144,6 +136,27 @@ function deleteAll(input: string, pattern: RegExp, onWeld: (context: string) => 
   return out.join("");
 }
 
+/**
+ * Every verse milestone in document order, with the markup between it and the verse's end.
+ *
+ * A verse ends at the first of: its verse-end milestone, the next verse, the next chapter, or
+ * the end of the book. `<ve/>` alone is not enough — not every USFX file emits it, and a
+ * missing one would swallow the rest of the chapter into one verse.
+ */
+function* verseSlices(doc: string): Generator<{ usfmCode: string; ref: string; raw: string }> {
+  for (const bookMatch of doc.matchAll(/<book id="([^"]+)"[^>]*>([\s\S]*?)<\/book>/g)) {
+    const usfmCode = bookMatch[1];
+    const body = bookMatch[2];
+    const marks = [...body.matchAll(/<v id="[^"]*"[^>]*bcv="([^"]+)"[^>]*\/>/g)];
+    for (let i = 0; i < marks.length; i++) {
+      const m = marks[i];
+      const rest = body.slice(m.index + m[0].length, marks[i + 1]?.index ?? body.length);
+      const stop = rest.search(/<ve\b[^>]*\/>|<c\b[^>]*\/>/);
+      yield { usfmCode, ref: m[1], raw: stop === -1 ? rest : rest.slice(0, stop) };
+    }
+  }
+}
+
 /** Reads one named member out of a zip. Throws if it is not there. */
 async function readZipMember(zipPath: string, predicate: (name: string) => boolean, what: string) {
   const directory = await unzipper.Open.file(zipPath);
@@ -169,6 +182,11 @@ export async function parseUsfx(zipPath: string, options: ParseUsfxOptions = {})
   const pendingWelds: string[] = [];
   const noteWeld = (context: string) => pendingWelds.push(context);
 
+  // Footnotes are read from the raw document, verse by verse, before the spans are deleted.
+  // Removed spans never contain a verse milestone, so both walks see the same verses in the
+  // same order; the ref check below holds that to be true rather than assuming it.
+  const rawNotes = [...verseSlices(xml)].map((v) => ({ ref: v.ref, notes: parseFootnotes(v.raw) }));
+
   // Remove apparatus spans first, from the whole document, so a footnote can never be mistaken
   // for verse text no matter how the verse boundaries fall around it.
   let doc = xml;
@@ -185,61 +203,57 @@ export async function parseUsfx(zipPath: string, options: ParseUsfxOptions = {})
   const verses: UsfxVerse[] = [];
   const outsideCanon = new Set<string>();
 
-  // One pass per book, so the `bcv` cross-check has something to check against.
-  for (const bookMatch of doc.matchAll(/<book id="([^"]+)"[^>]*>([\s\S]*?)<\/book>/g)) {
-    const usfmCode = bookMatch[1];
+  let index = 0;
+  for (const { usfmCode, ref, raw } of verseSlices(doc)) {
     const bookId = USFM_BOOK_ID[usfmCode];
-    const body = bookMatch[2];
-
-    const boundary = /<v id="[^"]*"[^>]*bcv="([^"]+)"[^>]*\/>/g;
-    const marks = [...body.matchAll(boundary)];
-    for (let i = 0; i < marks.length; i++) {
-      const m = marks[i];
-      const ref = m[1];
-      const start = m.index + m[0].length;
-      // A verse ends at the first of: its verse-end milestone, the next verse, the next
-      // chapter, or the end of the book. `<ve/>` alone is not enough — not every USFX file
-      // emits it, and a missing one would swallow the rest of the chapter into one verse.
-      const rest = body.slice(start, marks[i + 1]?.index ?? body.length);
-      const stop = rest.search(/<ve\b[^>]*\/>|<c\b[^>]*\/>/);
-      const raw = stop === -1 ? rest : rest.slice(0, stop);
-
-      const parts = ref.split(".");
-      if (parts.length !== 3) throw new Error(`[usfx] malformed bcv "${ref}" in ${zipPath}`);
-      const [refBook, chapterStr, verseStr] = parts;
-      if (bookId === undefined) {
-        outsideCanon.add(ref);
-        continue;
-      }
-      if (refBook !== usfmCode) {
-        throw new Error(
-          `[usfx] verse ${ref} is inside <book id="${usfmCode}">. The bcv attribute and the ` +
-            `enclosing book disagree; every verse id derived from this file would be a guess.`,
-        );
-      }
-      const chapter = Number(chapterStr);
-      const verseMatch = options.allowVerseSuffix ? verseStr.match(/^(\d+)[a-z]?$/i) : null;
-      const verse = Number(verseMatch?.[1] ?? verseStr);
-      if (!Number.isInteger(chapter) || !Number.isInteger(verse)) {
-        throw new Error(`[usfx] non-numeric chapter/verse in bcv "${ref}" (${zipPath})`);
-      }
-
-      // Strip the remaining tags with NO substitution — see the header comment. This is where
-      // "give</w>n." becomes "given" rather than "give n.".
-      const text = decodeEntities(raw.replace(/<[^>]*>/g, ""))
-        // The pilcrow is USFM's paragraph mark rendered into the text stream by the KJV
-        // typesetting, not a character of scripture.
-        .replace(/¶/g, " ");
-
-      const prior = options.allowVerseSuffix
-        ? verses.findIndex((v) => v.bookId === bookId && v.chapter === chapter && v.verse === verse)
-        : -1;
-      if (prior >= 0) {
-        verses[prior] = { ...verses[prior], text: `${verses[prior].text} ${text}`.trim() };
-      } else {
-        verses.push({ bookId, chapter, verse, ref, text });
-      }
+    const footnotes = rawNotes[index]?.ref === ref ? rawNotes[index].notes : null;
+    index += 1;
+    if (footnotes === null) {
+      throw new Error(`[usfx] verse ${ref} is not at the same position before and after span removal in ${zipPath}`);
     }
+
+    const parts = ref.split(".");
+    if (parts.length !== 3) throw new Error(`[usfx] malformed bcv "${ref}" in ${zipPath}`);
+    const [refBook, chapterStr, verseStr] = parts;
+    if (bookId === undefined) {
+      outsideCanon.add(ref);
+      continue;
+    }
+    if (refBook !== usfmCode) {
+      throw new Error(
+        `[usfx] verse ${ref} is inside <book id="${usfmCode}">. The bcv attribute and the ` +
+          `enclosing book disagree; every verse id derived from this file would be a guess.`,
+      );
+    }
+    const chapter = Number(chapterStr);
+    const verseMatch = options.allowVerseSuffix ? verseStr.match(/^(\d+)[a-z]?$/i) : null;
+    const verse = Number(verseMatch?.[1] ?? verseStr);
+    if (!Number.isInteger(chapter) || !Number.isInteger(verse)) {
+      throw new Error(`[usfx] non-numeric chapter/verse in bcv "${ref}" (${zipPath})`);
+    }
+
+    // Strip the remaining tags with NO substitution — see the header comment. This is where
+    // "give</w>n." becomes "given" rather than "give n.".
+    const text = decodeEntities(raw.replace(/<[^>]*>/g, ""))
+      // The pilcrow is USFM's paragraph mark rendered into the text stream by the KJV
+      // typesetting, not a character of scripture.
+      .replace(/¶/g, " ");
+
+    const prior = options.allowVerseSuffix
+      ? verses.findIndex((v) => v.bookId === bookId && v.chapter === chapter && v.verse === verse)
+      : -1;
+    if (prior >= 0) {
+      verses[prior] = {
+        ...verses[prior],
+        text: `${verses[prior].text} ${text}`.trim(),
+        footnotes: [...verses[prior].footnotes, ...footnotes],
+      };
+    } else {
+      verses.push({ bookId, chapter, verse, ref, text, footnotes });
+    }
+  }
+  if (index !== rawNotes.length) {
+    throw new Error(`[usfx] ${rawNotes.length} verses before span removal but ${index} after, in ${zipPath}`);
   }
 
   return {

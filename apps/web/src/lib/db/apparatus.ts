@@ -252,3 +252,29 @@ const getFirstPrinterOfVerse = cache((verseId: VerseId): { code: string; name: s
      LIMIT 1`,
   ).get(verseId) as { code: string; name: string } | undefined;
 });
+
+/** Mirrors the CHECK on `verse_footnotes.kind`. */
+export type FootnoteKind = "footnote" | "endnote" | "crossref";
+
+/** A translator's own note on a verse, as the publisher printed it in the margin. */
+export interface Footnote {
+  verseId: VerseId;
+  noteOrder: number;
+  caller: string | null;
+  kind: FootnoteKind;
+  text: string;
+}
+
+/**
+ * One translation's notes on the given verses, in verse then printed order. Takes ids rather
+ * than a range because the verse-id space is sparse: callers already hold the real verses.
+ */
+export function getFootnotes(verseIds: VerseId[], translationId: number): Footnote[] {
+  if (verseIds.length === 0) return [];
+  return prepared(
+    `SELECT f.verse_id AS verseId, f.note_order AS noteOrder, f.caller, f.kind, f.text
+     FROM verse_footnotes f
+     WHERE f.translation_id = ? AND f.verse_id IN (SELECT value FROM json_each(?))
+     ORDER BY f.verse_id, f.note_order`,
+  ).all(translationId, JSON.stringify(verseIds)) as Footnote[];
+}

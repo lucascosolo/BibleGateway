@@ -570,6 +570,20 @@ async function main() {
       PRIMARY KEY (translation_id, verse_id)
     );
 
+    -- Translator footnotes, endnotes and cross-reference notes, kept out of verse_texts so the
+    -- text stays plain (highlight offsets depend on it). Only the USFX sources carry them; the
+    -- WEB and BSB sources were published with their notes already stripped. A note can sit on
+    -- a verse the translation omits, so it is keyed to the canonical address, not to a text row.
+    CREATE TABLE verse_footnotes (
+      translation_id INTEGER NOT NULL REFERENCES translations(translation_id),
+      verse_id       INTEGER NOT NULL REFERENCES verses(verse_id),
+      note_order     INTEGER NOT NULL,
+      caller         TEXT,
+      kind           TEXT NOT NULL CHECK (kind IN ('footnote','endnote','crossref')),
+      text           TEXT NOT NULL,
+      PRIMARY KEY (translation_id, verse_id, note_order)
+    );
+
     -- Which books each translation actually prints. One row per (translation, book): 66 rows
     -- per text, not 31,102.
     --
@@ -1045,6 +1059,9 @@ async function main() {
   const insertText = sqlite.prepare(
     `INSERT OR REPLACE INTO verse_texts (translation_id, verse_id, text, formatting) VALUES (?, ?, ?, NULL)`
   );
+  const insertFootnote = sqlite.prepare(
+    `INSERT INTO verse_footnotes (translation_id, verse_id, note_order, caller, kind, text) VALUES (?, ?, ?, ?, ?, ?)`
+  );
   const insertOmission = sqlite.prepare(
     `INSERT OR REPLACE INTO verse_omissions (translation_id, verse_id, kind, reason, history) VALUES (?, ?, ?, ?, ?)`
   );
@@ -1208,6 +1225,9 @@ async function main() {
           stats.unmapped.push(v.ref);
           continue;
         }
+        v.footnotes.forEach((n, i) =>
+          insertFootnote.run(t.translationId, mappedVerseId, i + 1, n.caller, n.kind, n.text),
+        );
         let raw = v.text;
         if (t.quirks) {
           const before = raw;
@@ -2131,16 +2151,18 @@ async function main() {
         `SELECT t.code, t.scope,
                 (SELECT COUNT(*) FROM verse_texts vt WHERE vt.translation_id = t.translation_id) AS printed,
                 (SELECT COUNT(*) FROM verse_omissions vo WHERE vo.translation_id = t.translation_id) AS omitted,
+                (SELECT COUNT(*) FROM verse_footnotes vf WHERE vf.translation_id = t.translation_id) AS footnotes,
                 (SELECT COUNT(DISTINCT vt.verse_id / 1000000) FROM verse_texts vt
                    WHERE vt.translation_id = t.translation_id) AS books
          FROM translations t ORDER BY t.translation_id`
       )
-      .all() as { code: string; scope: string; printed: number; omitted: number; books: number }[];
+      .all() as { code: string; scope: string; printed: number; omitted: number; footnotes: number; books: number }[];
     console.log(`  translations (canonical address space: ${canonicalCount} verses):`);
     for (const r of census) {
       console.log(
         `    ${r.code.padEnd(4)} scope=${r.scope.padEnd(3)} printed=${String(r.printed).padStart(6)} ` +
-          `omitted=${String(r.omitted).padStart(5)} books=${r.books}`,
+          `omitted=${String(r.omitted).padStart(5)} footnotes=${String(r.footnotes).padStart(5)} books=${r.books}` +
+          (r.footnotes === 0 && (r.code === "WEB" || r.code === "BSB") ? " (source ships with notes stripped)" : ""),
       );
     }
     // Nothing may print more verses than the canon addresses; that would mean a duplicate row
@@ -2947,8 +2969,8 @@ async function main() {
     fingerprint.update(`${line}\n`);
   };
 
-  // Bumped to 3 when corpus_sources made the upstream input manifest public.
-  feed("schema", [3]);
+  // Bumped to 3 when corpus_sources made the upstream input manifest public; 4 for verse_footnotes.
+  feed("schema", [4]);
 
   type Row = Record<string, string | number | null>;
   const stream = (sql: string) => sqlite.prepare(sql).iterate() as Iterable<Row>;
@@ -2993,6 +3015,12 @@ async function main() {
     `SELECT translation_id, verse_id, kind, reason, history FROM verse_omissions ORDER BY translation_id, verse_id`
   )) {
     feed("om", [r.translation_id, r.verse_id, r.kind, r.reason, r.history]);
+  }
+  for (const r of stream(
+    `SELECT translation_id, verse_id, note_order, caller, kind, text FROM verse_footnotes
+     ORDER BY translation_id, verse_id, note_order`
+  )) {
+    feed("fn", [r.translation_id, r.verse_id, r.note_order, r.caller, r.kind, r.text]);
   }
   // Book coverage is RENDERED — it is what decides whether /read/John.3?t=JPS shows scripture
   // or a scope banner naming the translations that do print the book. A corrected scope that
@@ -3158,6 +3186,7 @@ async function main() {
     "greek_lexicon",
     "verse_texts",
     "verse_omissions",
+    "verse_footnotes",
     "translation_books",
     "verse_texts_fts",
     "cross_references",
