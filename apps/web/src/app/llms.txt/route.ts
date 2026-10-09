@@ -52,7 +52,7 @@ const body = `# Jot Bible Research API
 - \`GET /api/original-search?q=agape&language=grc&morph=V\` — original-language lemma/surface/Strong's search with filters.
 - \`GET /api/xrefs?ref=John%203%3A16&limit=40\` — ranked inbound and outbound cross-references, with totals and caps.
 - \`GET /api/graph?ref=John%203%3A16&depth=2\` — capped reference graph for research visualizations.
-- \`GET /api/translations\` — translation codes, licensing, attribution, scope, and copyright notices. LXX (Brenton's Septuagint) covers only Deuteronomy, Nehemiah, Lamentations, Habakkuk and Haggai, under a reviewed verse map; other books are withheld until their numbering is mapped.
+- \`GET /api/translations\` — translation codes, licensing, attribution, scope, and copyright notices. LXX (Brenton's Septuagint) covers only the books named in its scopeNote, under reviewed verse maps; other books are withheld until their numbering is mapped.
 - \`GET /api/audio/passage?ref=John.3&t=WEB\` — one chapter's recordings (BSB, WEB, KJV, Hebrew WLC editions) with per-verse millisecond timings; no text. 400 for more than one chapter, 404 when unrecorded.
 - \`GET /api/concordance?key=H2617a&format=tsv&limit=5000\` — bounded TSV occurrence export with IDs, references, source references, and morphology.
 

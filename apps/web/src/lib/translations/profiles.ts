@@ -272,7 +272,7 @@ export const PROFILES: readonly TranslationProfile[] = [
     otSource: "Masoretic Text",
     ntSource: "Textus Receptus",
     sourcePolicy: {
-      text: "His New Testament follows the received Greek text: it prints the verses the King James prints, such as Acts 8:37.",
+      text: "His New Testament follows the received Greek text: it prints the verses the King James prints, such as Acts 8:37, though he sets that verse in square brackets to mark it as doubtful.",
       citations: [cite(TEXT, "Acts 8:37 (/read/Acts.8.37?t=YLT)")],
     },
     approach: "formal",
@@ -324,7 +324,7 @@ export const PROFILES: readonly TranslationProfile[] = [
     name: "Brenton's Septuagint",
     year: "1851",
     lineage: {
-      text: "Sir Lancelot Brenton's English translation of the Septuagint, the ancient Greek translation of the Hebrew scriptures. This site includes five books whose verse numbering has been checked.",
+      text: "Sir Lancelot Brenton's English translation of the Septuagint, the ancient Greek translation of the Hebrew scriptures. This site includes only the books whose verse numbering has been checked against the Hebrew scheme; the current list is the edition's scope note on its reader page and in /api/translations.",
       citations: [publisher("Brenton Septuagint, eBible.org distribution notice", "copyright page", "https://ebible.org/eng-Brenton/")],
     },
     otSource: "Septuagint (Greek)",
