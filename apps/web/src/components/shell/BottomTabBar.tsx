@@ -9,8 +9,12 @@ import { LayerControlsTab } from "./LayerControls";
 import { PlannedMarker, plannedSrText } from "./PlannedMarker";
 
 // Home isn't in `WORKSPACES` itself (see the note on `HOME_WORKSPACE`) — it's spliced into the
-// middle of the bar's own render order only, between Derash and Lashon.
-const TABS: Workspace[] = [...WORKSPACES.slice(0, 2), HOME_WORKSPACE, ...WORKSPACES.slice(2)];
+// exact centre of the bar's own render order, so the raised tab sits under the thumb's resting
+// position whatever the workspace count. The bar also ends in the layer-controls cell
+// (`<LayerControlsTab>`), which counts: five workspaces plus that cell make six, so home goes
+// after the third and is the fourth of seven.
+const HOME_AT = Math.ceil((WORKSPACES.length + 1) / 2);
+const TABS: Workspace[] = [...WORKSPACES.slice(0, HOME_AT), HOME_WORKSPACE, ...WORKSPACES.slice(HOME_AT)];
 
 /**
  * <768px: single column, bottom tab bar. Touch targets are the full 56px-tall cell.
@@ -52,11 +56,18 @@ export function BottomTabBar({ active }: { active: Workspace["key"] }) {
               href={ws.href}
               aria-current={isActive ? "page" : undefined}
               className={clsx(
-                "flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-0.5 text-[10px] leading-tight font-medium",
-                isActive ? "text-[var(--color-brand-strong)]" : "text-[var(--color-ink-faint)]",
+                "flex min-w-0 flex-1 flex-col items-center justify-center gap-1 px-0.5 text-[10px] leading-tight",
+                isActive ? "font-semibold text-[var(--color-brand-strong)]" : "font-medium text-[var(--color-ink-faint)]",
               )}
             >
-              <span className="relative flex shrink-0">
+              {/* The current workspace gets a filled pill behind its icon, not only a colour
+                  change: at 10px a tint alone is hard to tell from the resting state. */}
+              <span
+                className={clsx(
+                  "relative flex shrink-0 items-center justify-center rounded-[var(--radius-full)] px-3 py-0.5 transition-colors",
+                  isActive ? "bg-[var(--color-brand-soft)]" : "bg-transparent",
+                )}
+              >
                 <Icon className="h-5 w-5" />
                 {ws.status === "planned" && <PlannedMarker />}
               </span>
