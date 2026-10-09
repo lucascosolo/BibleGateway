@@ -57,7 +57,7 @@ const openapi = {
       get: {
         summary: "Identify the corpus and audio builds, count the verses, and list the outside books by canon",
         description:
-          "`canonicalVerseCount` is 31,102, the 66-book address space. `outside.canons` has one entry per outside canon (deuterocanon, pseudepigrapha, nt-apocrypha, apostolic, described) with `books`, `verses` stored, and `bookList` (each book's `numbering` scheme and the `translations` that print it). The outside verses are never added to the 31,102. " + OUTSIDE_NOTE,
+          "`canonicalVerseCount` is 31,102, the 66-book address space. `outside.canons` has one entry per outside canon that has printed books (deuterocanon, pseudepigrapha, nt-apocrypha, apostolic; `described` works have work records but no book text, so no entry) with `books`, `verses` stored, and `bookList` (each book's `numbering` scheme and the `translations` that print it). The outside verses are never added to the 31,102. " + OUTSIDE_NOTE,
         responses: { "200": jsonOf("Content-derived build IDs and public source archive checksums.", "CorpusResponse") },
       },
     },

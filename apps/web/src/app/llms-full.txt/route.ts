@@ -35,7 +35,7 @@ Jot is a public, read-only Bible research API for retrieval by search engines, a
 
 \`GET ${BASE}/api/corpus\`
 
-Also returns \`canonicalVerseCount\` (31,102: the 66-book address space) and \`outside.canons\`: per outside canon (\`deuterocanon\`, \`pseudepigrapha\`, \`nt-apocrypha\`, \`apostolic\`, \`described\`) the \`books\` and stored \`verses\`, with a \`bookList\` giving each book's \`numbering\` scheme, verse count and the \`translations\` that print it. Never add the outside verses to 31,102 or call them part of the Bible's verse count.
+Also returns \`canonicalVerseCount\` (31,102: the 66-book address space) and \`outside.canons\`: per outside canon that has printed books (\`deuterocanon\`, \`pseudepigrapha\`, \`nt-apocrypha\`, \`apostolic\`; \`described\` works have records but no book text) the \`books\` and stored \`verses\`, with a \`bookList\` giving each book's \`numbering\` scheme, verse count and the \`translations\` that print it. Never add the outside verses to 31,102 or call them part of the Bible's verse count.
 
 Returns the content-derived \`buildId\` of the text corpus, \`audioBuildId\` (the separately built recordings artifact, or \`null\` when this deployment has no audio), and a public manifest of every upstream input archive with its source URL, filename, and SHA-256 checksum. Store this alongside a research citation; the build ID identifies the derived corpus, while the manifest identifies its inputs.
 
