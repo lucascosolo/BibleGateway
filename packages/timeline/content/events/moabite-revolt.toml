@@ -3,7 +3,7 @@ title = "The Moabite revolt"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = "Moab, led by King Mesha, rebels against Israel, and King Jehoram marches against it. A stone monument called the Mesha Stele tells the story from Moab's side."
 verses = [
   { ref = "2Kgs.3.4-2Kgs.3.27", link = "describes", note = "Kings describes Mesha's revolt and the war that follows." },
@@ -19,7 +19,7 @@ tradition = "chronological"
 earliest = -852
 latest = -841
 held_by = "Rodger C. Young"
-summary = "These dates are only outer limits. They are the years of Joram's reign from Rodger C. Young's Table 1. The Mesha Stele itself is dated to about 840."
+summary = "These dates are only outer limits. They are the years of Joram's reign from Rodger C. Young's Table 1."
 citations = [{ source = "young-2005", locator = "Table 1, p. 245" }]
 
 [[attestations]]

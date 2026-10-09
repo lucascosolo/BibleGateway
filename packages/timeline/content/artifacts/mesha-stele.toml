@@ -1,11 +1,11 @@
 id = "mesha-stele"
 name = "Mesha Stele (Moabite Stone)"
 kind = "inscription"
-status = "sources-located"
+status = "claims-checked"
 made = { earliest = -840, latest = -820 }
 language = "Moabite"
 summary = """A Moabite royal inscription, dated between 840 and 820 BCE, perhaps about 830 (Albright, ANET p. 320-321), and found at Dibon in 1868, says Omri was king of Israel and oppressed Moab for many days; in Albright's ANET translation, "As for Omri, king of Israel, he humbled Moab many years (lit., days)" (p. 320). It credits the god Chemosh with Mesha's victories and names Yahweh (Albright's translation, p. 320). Line 31 is disputed: Lemaire read 'House of David' there (Kitchen, pp. 92-93, 453), whereas Albright's translation leaves the line open (p. 321)."""
-discovered = { year = 1868, place = "Dibon (modern Dhiban), Jordan (F. A. Klein)" }
+discovered = { year = 1868, place = "Dibon (modern Dhiban), Jordan" }
 held_by = { institution = "Louvre, Paris", accession = "AO 5066" }
 citations = [{ source = "kitchen-2003", locator = "pp. 34–35, 92–93" }, { source = "wikidata", locator = "Q724954: inventory number AO 5066, Department of Near Eastern Antiquities of the Louvre" }, { source = "finkelstein-silberman-2002", locator = "p. 129 (ninth century BCE); p. 177 (the stele described); the 835 BCE on p. 178 belongs to the Tel Dan inscription, not to this stele)" }, { source = "pritchard-1969", locator = "pp. 320–321, trans. W. F. Albright (\"between 840 and 820, perhaps about 830 B.C. in round numbers\")" }]
 verses = [{ ref = "2Kgs.3.4-2Kgs.3.27", link = "background" }]

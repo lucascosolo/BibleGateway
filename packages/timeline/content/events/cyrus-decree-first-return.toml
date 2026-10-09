@@ -3,7 +3,7 @@ title = "Cyrus's decree and the first return"
 axis = "narrative"
 category = "political"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 In his first year Cyrus announces that Yahweh has told him to build a house in Jerusalem, and exiles may go up (Ezra 1; 2 Chronicles 36). The usual chronology dates the return to 538 BCE. The Cyrus Cylinder shows a Babylonian policy of restoring gods and peoples, but it names no Jews, and some scholars deny the decree is genuine."""
 verses = [
@@ -60,7 +60,7 @@ latest = -538
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
 Finkelstein and Silberman say Persia conquered Babylon in 539 BCE and Cyrus issued his decree in his first year; they also write of the proclamation in 538. They read it as Persian policy, not sympathy, and hold the biblical figure of about 50,000 returnees to be exaggerated."""
-citations = [{ source = "finkelstein-silberman-2002", locator = "p. 298 (Persians in 539)" }, { source = "finkelstein-silberman-2002", locator = "p. 307 (538)" }]
+citations = [{ source = "finkelstein-silberman-2002", locator = "p. 298 (Persians in 539)" }, { source = "finkelstein-silberman-2002", locator = "pp. 307-308 (538; Persian policy; returnee figures)" }]
 
   [[positions.arguments]]
   stance = "for"

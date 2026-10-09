@@ -3,7 +3,7 @@ title = "The conversion of Paul"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Paul, who had persecuted Christians, meets the risen Jesus near Damascus and becomes an apostle. Acts tells the story three times, and Paul refers to it in Galatians and 1 Corinthians. Scholars date it between about 30 and 36 CE."""
 verses = [
@@ -35,7 +35,7 @@ earliest = 36
 latest = 36
 held_by = "Raymond E. Brown (Traditional Chronology)"
 summary = """
-Raymond Brown follows the Traditional Chronology and puts the conversion at ca. 36. He writes: "many would date Paul's conversion ca. 36, and his escape from Damascus and going to Jerusalem ca. 39." His Table 6 gives 36 (escape and Jerusalem visit 39)."""
+Raymond Brown follows the Traditional Chronology and puts the conversion at ca. 36. He writes: "many would date Paul's conversion ca. 36, and his escape from Damascus and going to Jerusalem ca. 39." His Table 6 gives 39 for the escape and Jerusalem visit."""
 citations = [{ source = "brown-1997", locator = "ch. 16, Table 6 and its Observations" }]
 
   [[positions.arguments]]

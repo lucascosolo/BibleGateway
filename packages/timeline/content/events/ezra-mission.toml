@@ -3,7 +3,7 @@ title = "Ezra's mission to Jerusalem"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Ezra goes up to Jerusalem in the seventh year of "Artaxerxes the king", and the text does not say which Artaxerxes. Artaxerxes I gives 458 BCE, the date Kitchen defends; Artaxerxes II gives 398 BCE, the alternative McDonald records and the reign to which Batten (1913) assigned Ezra; Josephus reads the king as "Xerxes"."""
 verses = [
@@ -17,15 +17,15 @@ label = "398 BCE (Artaxerxes II, seventh year)"
 tradition = "critical"
 earliest = -398
 latest = -398
-held_by = "Lee Martin McDonald (as the alternative); L. W. Batten (1913), an older critical view (Artaxerxes II, 397 or later)"
+held_by = "Lee Martin McDonald (as the alternative)"
 summary = """
-McDonald dates Ezra and Nehemiah to about 458 BCE if the king is Artaxerxes I, or to 398 BCE if he is Artaxerxes II, and leaves the choice open. Batten's 1913 commentary puts Ezra after Nehemiah, in the reign of Artaxerxes II, "in 397 or later", without fixing the year."""
+McDonald dates Ezra and Nehemiah to about 458 BCE if the king is Artaxerxes I, or to 398 BCE if he is Artaxerxes II, and leaves the choice open."""
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 52" }, { source = "batten-1913-ezra", locator = "pp. 29, 47" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Batten argues that Ezra and Nehemiah could not have worked at the same time: Nehemiah's story makes "no genuine reference" to Ezra, Nehemiah meets mixed marriages as a new problem, and his Jerusalem is empty while Ezra's is full of people. Ezra's prayer thanks God for a wall in Jerusalem, which Batten takes to be Nehemiah's."""
+Batten argues that Ezra and Nehemiah could not have worked at the same time: Nehemiah's story makes "no genuine reference" to Ezra, Nehemiah meets mixed marriages as a new problem, and his Jerusalem is empty while Ezra's is full of people. Ezra's prayer thanks God for a wall in Jerusalem, which Batten takes to be Nehemiah's. He puts Ezra in the reign of Artaxerxes II, "in 397 or later", without fixing the year."""
   citations = [{ source = "batten-1913-ezra", locator = "pp. 28-29" }]
 
 [[positions]]

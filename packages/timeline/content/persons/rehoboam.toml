@@ -3,7 +3,7 @@ name = "Rehoboam"
 role = "king of Judah (930–913 BCE in Thiele)"
 summary = """
 Kings makes Rehoboam, Solomon's son, the king under whom the north broke away: he refused to lighten his father's burdens and the northern tribes made Jeroboam king. Thiele dates his reign 930–913 BCE; Young starts it in the autumn-reckoned year 932t. In his fifth year Shishak of Egypt took the treasures of the temple, the earliest point at which the biblical text can be matched with an outside record, Shoshenq I's list at Karnak; Kitchen puts the campaign in 927 or 926. Finkelstein and Silberman read the same evidence against the story's frame: there is no archaeological sign that north and south grew out of one kingdom, Jerusalem in Rehoboam's time was no more than a modest highland village, and Shoshenq's list shows that Jerusalem was hardly his main target."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "1Kgs.12.1-1Kgs.12.24", link = "describes", note = "1 Kings 12:1–24 tells of the assembly at Shechem, Rehoboam's answer and the secession of the north." },
   { ref = "1Kgs.14.21-1Kgs.14.31", link = "describes", note = "1 Kings 14:21–31 gives the summary of Rehoboam's reign." },

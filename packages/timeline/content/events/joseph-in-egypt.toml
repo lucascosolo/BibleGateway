@@ -3,7 +3,7 @@ title = "Joseph in Egypt"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "speculative"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Joseph is sold by his brothers to traders. He rises from slavery and prison to become Pharaoh's vizier, and he saves Egypt and his own family from famine. Many scholars read the story as a late wisdom novella (see the patriarchs issue). The one dating position here sets limits only on when his family arrived."""
 verses = [
@@ -39,7 +39,7 @@ latest = -1715
 held_by = "James Ussher"
 summary = """
 Ussher has Joseph, aged 30, explain Pharaoh's dreams and be made governor in 1715 BC. The seven years of famine begin in 1708 BC. Ussher's 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
-citations = [{ source = "ussher-annals", locator = "paragraphs 131-133" }]
+citations = [{ source = "ussher-annals", locator = "1658 printing, p. 10 (Year of the World 2289 and 2296)" }]
 
 [[positions]]
 id = "finkelstein-silberman"

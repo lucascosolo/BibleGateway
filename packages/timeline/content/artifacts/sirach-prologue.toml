@@ -1,14 +1,14 @@
 id = "sirach-prologue"
 name = "The prologue to Sirach (Ecclesiasticus): the law, the prophets and the other books"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 made = { earliest = -132, latest = -117 }
 summary = """
-The grandson of Jesus ben Sira translated his grandfather's Hebrew wisdom book into Greek in Egypt, and his short preface is the earliest witness to a Jewish scripture in three parts. He opens: "Whereas many and great things have been delivered unto us by the law and the prophets, and by others that have followed their steps", and says his grandfather "had much given himself to the reading of the law, and the prophets, and other books of our fathers". He dates his own arrival in Egypt to "the eight and thirtieth year" of King Euergetes, which on the usual reckoning is 132 BCE, and remarks that "the law itself, and the prophets, and the rest of the books, have no small difference, when they are spoken in their own language", an early comment on translating scripture. The third group is still unnamed, which is why most scholars read the prologue as evidence that the Writings were not yet a fixed collection."""
+The grandson of Jesus ben Sira translated his grandfather's Hebrew wisdom book into Greek in Egypt, and his short preface names the law, the prophets and a third group of other books. He opens: "Whereas many and great things have been delivered unto us by the law and the prophets, and by others that have followed their steps", and says his grandfather "had much given himself to the reading of the law, and the prophets, and other books of our fathers". He dates his own arrival in Egypt to "the eight and thirtieth year" of King Euergetes, which on the usual reckoning is 132 BCE, and remarks that "the law itself, and the prophets, and the rest of the books, have no small difference, when they are spoken in their own language", an early comment on translating scripture. The third group has no fixed name: the prologue calls it three slightly different things, and Lim reads it as an open-ended category rather than a closed third division."""
 citations = [
   { source = "kjv-apocrypha-sacred-texts", locator = "Sirach, prologue" },
-  { source = "lim-2013", locator = "the chapter on Ben Sira" },
+  { source = "lim-2013", locator = "p. 95 (132 BCE); pp. 100–101 (the third category)" },
 ]
 verses = [
   { ref = "Luke.24.44", link = "background", note = "Luke 24:44 names the law, the prophets and the psalms, a later form of the threefold grouping the prologue already assumes." },

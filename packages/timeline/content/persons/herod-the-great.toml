@@ -4,7 +4,7 @@ also_known_as = ["Herod"]
 role = "king of Judea (37–4 BCE in Brown's chronology)"
 summary = """
 Herod, son of the Idumean Antipater, became undisputed king of Judea by 37 BCE through, in Brown's words, "brutality and expeditious marriage into the Hasmonean family", with Rome's backing. He built Caesarea Maritima, Sebaste, the Antonia fortress and fortress palaces such as Machaerus, and Josephus dates his rebuilding of the temple to his eighteenth year. Brown and Meier date his death to 4 BCE, the date most of the chronology of Jesus's birth hangs on: Matthew and Luke both place the birth in his reign, while Luke's census under Quirinius, which Josephus dates to 6 CE, falls after it (see the Quirinius issue). Brown traces Matthew's massacre of the children of Bethlehem to the remembered cruelty of Herod's last years, and Meier counts the Magi and flight-into-Egypt stories as highly questionable history."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "Matt.2.1-Matt.2.18", link = "describes", note = "Matthew 2:1–18 tells of the Magi, Herod's fear and the killing of the children of Bethlehem." },
   { ref = "Matt.2.19-Matt.2.22", link = "dates", note = "Matthew 2:19–22 has Herod die and Archelaus succeed him in Judea, the anchor for dating Jesus's birth before 4 BCE." },

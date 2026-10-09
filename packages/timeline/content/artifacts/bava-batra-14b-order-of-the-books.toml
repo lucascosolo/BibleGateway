@@ -1,7 +1,7 @@
 id = "bava-batra-14b-order-of-the-books"
 name = "Babylonian Talmud, Bava Batra 14b-15a: the order and authors of the books"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Hebrew and Aramaic"
 made = { earliest = 150, latest = 200 }
 summary = """
@@ -12,7 +12,7 @@ citations = [
   { source = "mcdonald-2017-vol1", locator = "p. 187; p. 390 (before 200 CE, perhaps as early as 150-180 CE)" },
 ]
 verses = [
-  { ref = "Deut.34.5-Deut.34.8", link = "background", note = "Deuteronomy 34:5-8 reports the death of Moses, the eight verses the Talmud debates whether Moses or Joshua wrote." },
+  { ref = "Deut.34.5-Deut.34.8", link = "background", note = "Deuteronomy 34:5-8 reports the death of Moses and opens the last eight verses of the Torah, which the Talmud debates whether Moses or Joshua wrote." },
   { ref = "Num.22.2-Num.22.6", link = "background", note = "Numbers 22 begins the Balaam story, the portion the baraita singles out as written by Moses." },
   { ref = "Ruth.1.1", link = "names", note = "Ruth 1:1 opens the book the baraita assigns to Samuel and places first among the Writings." },
 ]

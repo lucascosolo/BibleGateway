@@ -3,9 +3,9 @@ title = "4 Ezra 14: twenty-four public books and seventy hidden ones"
 axis = "canon"
 category = "canon"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-4 Ezra, preserved in English Bibles as 2 Esdras 3-14, is a Jewish apocalypse that tries to make sense of Rome's destruction of the Temple. In its seventh vision the burnt law is given again: Ezra dictates for forty days to five scribes, and God tells him to publish the first twenty-four books for everyone and keep the last seventy for the wise. It is the earliest explicit count of twenty-four, the number the rabbis also use, and the source of the later tradition that Ezra restored the scriptures after the exile. Lim dates the book between 70 and 100 CE and treats the passage as one of three notices on the canon from around the end of the first century."""
+4 Ezra, preserved in English Bibles as 2 Esdras 3-14, is a Jewish apocalypse that tries to make sense of Rome's destruction of the Temple. In its seventh vision the burnt law is given again: Ezra dictates for forty days to five scribes, and God tells him to publish the first twenty-four books for everyone and keep the last seventy for the wise. Lim notes that the twenty-four public books are widely taken to correspond to the Hebrew Bible. Lim dates the book between 70 and 100 CE and treats the passage as one of three notices on the canon from around the end of the first century."""
 verses = [
   { ref = "Ezra.7.6", link = "background", note = "4 Ezra makes the Ezra introduced here, a scribe skilled in the law of Moses, the restorer of scripture." },
   { ref = "Neh.8.1-Neh.8.3", link = "background", note = "Ezra reads the law to the people here, the public reading behind the apocalypse's public books." },

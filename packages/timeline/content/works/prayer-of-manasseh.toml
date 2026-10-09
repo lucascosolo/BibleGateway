@@ -3,8 +3,8 @@ title = "Prayer of Manasseh"
 also_known_as = ["Prayer of Manasses"]
 books = ["PrMan"]
 canon = "deuterocanon"
-status = "sources-located"
-summary = "The Prayer of Manasseh purports to be the penitential prayer of King Manasseh of Judah, mentioned in 2 Chronicles 33:18. The unsigned preface to the Apocrypha in the Brenton edition says its phrasing is largely drawn from the Old Testament and that in Septuagint manuscripts it appears only among the Ecclesiastical Canticles. McDonald lists it as Jewish, about the early first century CE, and says some include it with the deuterocanon."
+status = "claims-checked"
+summary = "The Prayer of Manasseh purports to be the penitential prayer of King Manasseh of Judah, mentioned in 2 Chronicles 33:18. The unsigned preface to the Apocrypha in the Brenton edition says its phrasing is largely drawn from the Old Testament and that in Septuagint manuscripts it appears only among the Ecclesiastical Canticles. McDonald lists it as Jewish, about the early first century CE, and notes it is sometimes listed in the Apocrypha."
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 140" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Prayer of Manasseh" }]
 original_language = "Not stated in the sources read; it survives in Greek"
 verses = [

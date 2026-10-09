@@ -3,7 +3,7 @@ title = "The deaths of Peter and Paul"
 axis = "narrative"
 category = "political"
 confidence = "speculative"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 This rests on tradition only. 1 Clement says both men were martyred, and Eusebius reports that Paul was beheaded at Rome and Peter was crucified there under Nero. Brown dates both deaths to Nero's persecution after the Great Fire of July 64, but the New Testament does not tell of either death."""
 verses = [
@@ -43,7 +43,7 @@ citations = [
 artifact = "one-clement-5"
 relation = "consistent"
 note = """
-1 Clement says both men were martyred, Paul "under the prefects", but it gives no place or date."""
+1 Clement says both men were martyred, Paul "having borne witness before rulers", but it gives no place or date."""
 citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]
 
 [[attestations]]

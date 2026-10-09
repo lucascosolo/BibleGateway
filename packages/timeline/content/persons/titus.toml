@@ -3,8 +3,8 @@ name = "Titus"
 also_known_as = ["Titus Caesar"]
 role = "son of the emperor Vespasian; Roman commander at the siege of Jerusalem (70 CE)"
 summary = """
-Titus was the son of Vespasian, the first Flavian emperor. When the legions proclaimed his father emperor in 69 CE, Titus was left to finish the war in Judea; Jerusalem was taken and the temple destroyed in 70, and the arch of Titus in the Roman forum shows the temple vessels and captives carried in his triumph of 71. Josephus, who watched the siege from the Roman camp and wrote under Flavian patronage, calls him "Titus Caesar, who destroyed it", yet says the fire began without orders and that Titus ran to have it put out. The account comes from a client of the family it praises. The Gospels never name him, but Jesus's sayings about the temple and the city surrounded by armies are read against his siege, and they bear on the dating of Mark and Luke."""
-status = "sources-located"
+Titus was the son of Vespasian, the first Flavian emperor. When the legions proclaimed his father emperor in 69 CE, Titus was left to finish the war in Judea; Jerusalem was taken and the temple destroyed in 70, and the arch of Titus in the Roman forum shows the temple vessels and captives carried in his triumph of 71. Josephus, who watched the siege from the Roman camp and wrote under Flavian patronage, calls him "Titus Caesar, who destroyed it", yet says the fire began without orders and that Titus ran to have it put out. The account comes from a client of the family it praises. The Gospels never name him, but Jesus's sayings about the temple and the city surrounded by armies are read against his siege, and they bear on the dating of Luke."""
+status = "claims-checked"
 verses = [
   { ref = "Luke.21.20-Luke.21.24", link = "alludes", note = "Luke 21:20–24 speaks of Jerusalem surrounded by armies, which Streeter reads as written after the siege and Carson and Moo as stock siege language." },
   { ref = "Luke.19.43-Luke.19.44", link = "alludes", note = "Luke 19:43–44 says enemies will build a siege work and leave no stone on another." },
@@ -25,7 +25,7 @@ citations = [
 artifact = "arch-of-titus"
 relation = "corroborates"
 note = """
-The arch was raised in his honour, and its panels show the spoils of the Jerusalem temple and Titus in his triumph. Brown dates the triumph it commemorates to 71 CE."""
+The arch depicts the sacred objects of the Jerusalem temple and the captives brought to Rome in triumph. Brown dates that triumph to 71 CE."""
 citations = [{ source = "brown-1997", locator = "ch. 4, The Last Third of the 1st Century AD and the Beginning of the 2d" }]
 
 [[attestations]]

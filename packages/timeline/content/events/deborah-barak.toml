@@ -3,7 +3,7 @@ title = "Deborah and Barak"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 The prophet Deborah and Barak of Naphtali defeat the Canaanite general Sisera at the Kishon. Sisera served Jabin, king of Hazor; Jael kills him, and Judges 5 celebrates the victory in verse. The date is disputed, from the late 13th century to the 11th."""
 verses = [
@@ -34,4 +34,4 @@ latest = -1285
 held_by = "James Ussher"
 summary = """
 Ussher's entry for Deborah the prophetess judging Israel in Mount Ephraim is under 1285 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths, so it is not an archaeological date."""
-citations = [{ source = "ussher-annals", locator = "paragraph 351" }]
+citations = [{ source = "ussher-annals", locator = "p. 29 (1658 printing; Year of the World 2719, Year before Christ 1285)" }]

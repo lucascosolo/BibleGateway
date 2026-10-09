@@ -2,8 +2,8 @@ id = "2-maccabees"
 title = "2 Maccabees"
 books = ["2Macc"]
 canon = "deuterocanon"
-status = "sources-located"
-summary = "2 Maccabees is a Greek abridgement of a five-volume history by Jason of Cyrene, made by an unnamed epitomist. Lim describes a diaspora epitome later given a Jerusalemite final form by adding the opening festal letters and 10:1-8. McDonald dates the text to about 104-63 BCE. Its mention of Judas collecting books (2:13-15) is much discussed in canon studies. Jerome says it is Greek; the Catholic, Orthodox and Ethiopian churches hold it as scripture."
+status = "claims-checked"
+summary = "2 Maccabees is a Greek abridgement of a five-volume history by Jason of Cyrene, made by an unnamed epitomist. Lim describes a diaspora epitome later given a Jerusalemite final form by adding the opening festal letters and 10:1-8. McDonald dates the text to about 104-63 BCE. Jerome says it is Greek; the Catholic, Orthodox and Ethiopian churches hold it as scripture."
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 62" }, { source = "lim-2013", locator = "pp. 109-111" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
 original_language = "Greek"
 verses = [

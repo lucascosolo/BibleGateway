@@ -3,7 +3,7 @@ name = "Saul"
 role = "first king of Israel"
 summary = """
 Saul, a Benjaminite, is anointed by Samuel, chosen by lot at Mizpah and acclaimed king, and dies with his son Jonathan fighting the Philistines on Mount Gilboa. The Hebrew of 1 Samuel 13:1 is hard to read, so even the length of his reign is disputed. Rodger Young conjectures a reign of 1051–1009 BCE and marks the dates as guesses. Finkelstein and Silberman's table, following Galil, gives about 1025–1005 BCE and sets beside his reign, as its archaeological finds, only the continuation of the highland settlement system of the preceding period. They count the deaths of Saul and Jonathan among stories whose details are in part "clearly legendary" but whose geography is "quite accurate"."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "1Sam.10.17-1Sam.10.24", link = "describes", note = "1 Samuel 10:17–24 tells how Saul is chosen by lot at Mizpah." },
   { ref = "1Sam.13.1", link = "describes", note = "1 Samuel 13:1 gives Saul's age and reign length in a Hebrew text that is hard to read." },

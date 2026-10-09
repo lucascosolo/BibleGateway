@@ -2,15 +2,15 @@ id = "letter-of-aristeas"
 title = "Letter of Aristeas"
 also_known_as = ["Aristeas to Philocrates"]
 canon = "described"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
-The Letter of Aristeas tells how the Jewish Law came to be translated into Greek at Alexandria under Ptolemy II: seventy-two elders, six from each tribe, are said to have finished the work in seventy-two days. Scholars agree it is legendary and is not really a letter. Lim reads it as the 'charter myth' of an Alexandrian Jewish community in the second century BCE, with a possible historical core that the Law was translated into Greek early in the Ptolemaic period. It is the earliest known account of the origin of the Septuagint, and Josephus is the first writer to mention it."""
+The Letter of Aristeas tells how the Jewish Law came to be translated into Greek at Alexandria under Ptolemy II: seventy-two elders are said to have finished the work in seventy-two days. Scholars agree it is legendary and is not really a letter. Lim reads it as the 'charter myth' of an Alexandrian Jewish community in the second century BCE, with a possible historical core that the Law was translated into Greek early in the Ptolemaic period. It is the earliest known account of the origin of the Septuagint, and Josephus is the first writer to mention it."""
 contents = """
-A courtier named Aristeas writes to his brother Philocrates. The account covers the king's librarian proposing a Greek copy of the Jewish laws, the sending of envoys to the high priest Eleazar, a description of the Jerusalem Temple, a banquet at which the king questions the translators, and the seventy-two-day translation. Lim notes that the story is a frame for many other pieces, such as descriptions, speeches and questions and answers, and that very little of it is about the translation itself."""
+A courtier named Aristeas writes to his brother Philocrates. The account covers the king's librarian proposing a Greek copy of the Jewish laws, a description of the Jerusalem Temple, a banquet at which the king questions the translators, and the seventy-two-day translation. Lim notes that the story is a frame for many other pieces, such as descriptions, speeches and questions and answers, and that very little of it is about the translation itself."""
 citations = [
-  { source = "lim-2013", locator = "pp. 77-78" },
-  { source = "lim-2013", locator = "p. 86" },
+  { source = "lim-2013", locator = "pp. 77-78, 83" },
+  { source = "lim-2013", locator = "pp. 86-87" },
 ]
 
 [[composed]]

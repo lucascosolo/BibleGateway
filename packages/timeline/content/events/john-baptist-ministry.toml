@@ -3,9 +3,9 @@ title = "The ministry of John the Baptist"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-Luke dates the moment God's word came to John to the fifteenth year of Tiberius. Counting from Augustus's death in September 14 CE, scholars place the start of John's ministry in late 28 or early 29 CE."""
+Luke dates the moment God's word came to John to the fifteenth year of Tiberius. Counting from Augustus's death in 14 CE, scholars place the start of John's ministry in late 28 or early 29 CE."""
 verses = [
   { ref = "Luke.3.1-Luke.3.2", link = "dates", note = "Luke dates the start of John's ministry to the fifteenth year of Tiberius, with Pilate governor of Judea." },
   { ref = "Luke.3.3-Luke.3.20", link = "describes", note = "Luke describes John's preaching, his baptizing and his imprisonment." },
@@ -29,7 +29,7 @@ tradition = "chronological"
 earliest = 28
 latest = 29
 summary = """
-Tiberius's reign began at Augustus's death in September 14 CE. So Luke 3:1-2 implies that John's ministry began in late 28 or early 29 CE. Meier discusses the calendars Luke might have used and shows that most ways of counting put part of 28 CE in the fifteenth year."""
+Tiberius's reign began at Augustus's death in 14 CE. So Luke 3:1-2 implies that John's ministry began in late 28 or early 29 CE. Meier discusses the calendars Luke might have used and shows that most ways of counting put part of 28 CE in the fifteenth year."""
 citations = [{ source = "meier-1991", locator = "pp. 385–386" }]
 
   [[positions.arguments]]

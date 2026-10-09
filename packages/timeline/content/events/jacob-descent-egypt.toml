@@ -3,7 +3,7 @@ title = "Jacob's family descends into Egypt"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "speculative"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Jacob and his household, seventy people in all, move to Egypt at Joseph's invitation during the famine. They settle in Goshen. The date depends on how the exodus is dated. Whether this happened historically is a separate question (see the patriarchs issue)."""
 verses = [
@@ -48,7 +48,7 @@ latest = -1706
 held_by = "James Ussher"
 summary = """
 Ussher has Jacob, aged 130, go down into Egypt at the start of the third year of the famine, in 1706 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths. It is not an archaeological date."""
-citations = [{ source = "ussher-annals", locator = "paragraphs 135-138" }]
+citations = [{ source = "ussher-annals", locator = "p. 10 (1658 printing; Year of the World 2298, Year before Christ 1706)" }]
 
 [[positions]]
 id = "finkelstein-silberman"
@@ -59,7 +59,7 @@ earliest = -700
 latest = -550
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman accept that immigration from Canaan to the eastern Nile delta is well attested, as at Tell ed-Daba, but find no evidence of Israelites there. They place the writing of the descent and Goshen traditions in the seventh and sixth centuries."""
+Finkelstein and Silberman do not date the descent itself. They place the Goshen tradition and details of the Joseph story in the seventh and sixth centuries."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 66-67" }]
 
   [[positions.arguments]]

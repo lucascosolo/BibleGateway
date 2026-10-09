@@ -3,9 +3,9 @@ title = "Paul before Gallio at Corinth"
 axis = "narrative"
 category = "political"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-Paul's opponents bring him before Gallio, the Roman governor of Achaia, at Corinth. Gallio refuses to judge the case. A stone inscription from Delphi, carrying a letter of Emperor Claudius, dates Gallio's time in office to about 51 to 52 CE. That is the best-known date in Paul's life."""
+Paul's opponents bring him before Gallio, the Roman governor of Achaia, at Corinth. Gallio refuses to judge the case. An inscription dates Gallio's time in office to about 51 to 52 CE. That is the best-known date in Paul's life."""
 verses = [
   { ref = "Acts.18.12-Acts.18.17", link = "describes", note = "Acts says the Jews bring Paul before Gallio's judgment seat, which is the event dated here." },
   { ref = "Acts.18.1-Acts.18.11", link = "background", note = "Acts says Paul stayed eighteen months in Corinth, which gives background to the hearing before Gallio." },
@@ -28,7 +28,7 @@ citations = [
 artifact = "gallio-inscription"
 relation = "corroborates"
 note = """
-Claudius calls Gallio "my friend and proconsul". This confirms that Gallio governed Achaia, and roughly when. The stone was found at Delphi and is published as Fouilles de Delphes III 4:286 and SIG II 801d. Brown notes it places Gallio at Corinth in the twelfth year of Claudius."""
+This confirms that Gallio governed Achaia, and roughly when. Brown notes it places Gallio at Corinth in the twelfth year of Claudius."""
 citations = [
   { source = "carson-moo-2005", locator = "p. 366 and n. 38" },
   { source = "brown-1997", locator = "ch. 16, Second and Third Missionary Journeys" },

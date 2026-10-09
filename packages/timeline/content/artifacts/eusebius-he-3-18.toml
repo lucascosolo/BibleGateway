@@ -1,7 +1,7 @@
 id = "eusebius-he-3-18"
 name = "Eusebius, Church History 3.18 and 5.8 (John on Patmos, Irenaeus on the Apocalypse)"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 summary = """
 Eusebius says John was condemned to live on Patmos during Domitian's persecution (3.18.1), and he quotes Irenaeus that the Apocalypse "was seen not long ago, but almost in our own generation, at the end of the reign of Domitian" (3.18.3; also 5.8.6)."""

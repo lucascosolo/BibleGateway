@@ -4,7 +4,7 @@ also_known_as = ["Jeroboam I", "Jeroboam son of Nebat"]
 role = "first king of the northern kingdom of Israel (930–909 BCE in Thiele)"
 summary = """
 In Kings, Jeroboam son of Nebat is an Ephraimite official of Solomon whom the prophet Ahijah promises ten tribes. He flees to Shishak in Egypt, returns when Solomon dies, is made king of the seceding north, and sets up golden calves at Bethel and Dan as rivals to Jerusalem. Thiele dates his reign 930–909 BCE; Young puts his accession in the spring-reckoned year 931n. Finkelstein and Silberman read his story as the foil of the Deuteronomistic History: a would-be "second David" whose sin dooms the north, so that Josiah, three centuries later, must undo it by destroying the altar at Bethel. They note that the prophecy naming Josiah at Jeroboam's altar reads like a passage in a colonial history predicting Martin Luther King. On their reading the north was in any case the stronger, more populous state."""
-status = "sources-located"
+status = "claims-checked"
 verses = [
   { ref = "1Kgs.11.26-1Kgs.11.40", link = "describes", note = "1 Kings 11:26–40 tells of Ahijah's prophecy to Jeroboam and his flight to Shishak." },
   { ref = "1Kgs.12.20", link = "describes", note = "1 Kings 12:20 says all Israel made Jeroboam king." },

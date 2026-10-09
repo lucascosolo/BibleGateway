@@ -2,8 +2,8 @@ id = "nehemiah"
 name = "Nehemiah"
 role = "cupbearer to Artaxerxes, governor of Judah"
 summary = """
-Nehemiah, cupbearer to the Persian king Artaxerxes, hears of Jerusalem's ruin and in the king's twentieth year is sent to rebuild its wall, which is finished in fifty-two days despite Sanballat the Horonite. Artaxerxes I ruled from 465 to 424 BCE, so the twentieth year is 445 or 444. Finkelstein and Silberman accept the setting: the king appointed him governor, and he inspected the city by night around 445 BCE. A letter from Elephantine of 407 BCE does not name Nehemiah, but it appeals to Sanballat, and the Elephantine Jews had earlier appealed to Johanan, both figures of his book. Kitchen dates his governorship to 445-433 under Artaxerxes I and Ezra's visit to 458 (see the Ezra issue)."""
-status = "sources-located"
+Nehemiah, cupbearer to the Persian king Artaxerxes, hears of Jerusalem's ruin and in the king's twentieth year is sent to rebuild its wall, which is finished in fifty-two days despite Sanballat the Horonite. Artaxerxes I ruled from 465 to 424 BCE, so the twentieth year is 445 or 444. Finkelstein and Silberman accept the setting: the king appointed him governor, and he inspected the city by night around 445 BCE. A letter from Elephantine of 407 BCE does not name Nehemiah, but it appeals to Sanballat, and the Elephantine Jews had also appealed to Johanan, both figures of his book. Kitchen dates his governorship to 445-433 under Artaxerxes I and Ezra's visit to 458 (see the Ezra issue)."""
+status = "claims-checked"
 verses = [
   { ref = "Neh.1.1-Neh.1.4", link = "describes", note = "Nehemiah 1:1–4 tells how Nehemiah hears of Jerusalem's ruin." },
   { ref = "Neh.2.1-Neh.2.8", link = "describes", note = "Nehemiah 2:1–8 tells how Artaxerxes sends his cupbearer to rebuild the city." },

@@ -3,7 +3,7 @@ title = "The destruction of the Second Temple"
 axis = "narrative"
 category = "political"
 confidence = "firm"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 The Roman army under Titus took Jerusalem in 70 CE. The Second Temple burned on the tenth of Lous (Av). Jesus's words about the temple, in Matthew, Mark and Luke, point to this event. Josephus tells it from the Roman side, and the Arch of Titus in Rome depicts the sacred objects carried in triumph."""
 verses = [

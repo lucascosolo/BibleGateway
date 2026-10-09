@@ -3,7 +3,7 @@ title = "The fall of Jericho and the conquest of Canaan"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "speculative"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Israel crosses the Jordan under Joshua, and Jericho falls, followed by Ai, Gibeon, the southern and northern coalitions and Hazor. People who accept a conquest argue for two dates, about 1400 and about 1220-1210 BCE, while most archaeologists reject the conquest model altogether. That dispute is kept in the linked issue on historicity and is not turned into a date here."""
 verses = [
@@ -31,13 +31,13 @@ earliest = -1406
 latest = -1400
 held_by = "Bryant G. Wood"
 summary = """
-Bryant Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He puts the destruction of Jericho at about 1400, and he works the Jubilee count (Israel's cycle of 50-year release years) backward to 1406."""
+Bryant Wood argues that 1 Kings 6:1, Judges 11:26 and 1 Chronicles 6:33-37 point to an exodus in the 15th century and a conquest in 1406-1400 BC. He says the destructions at Jericho, Ai and Hazor fit that date, and he works the Jubilee count (Israel's cycle of 50-year release years) backward to 1406."""
 citations = [{ source = "wood-2005", locator = "pp. 488–489" }]
 
   [[positions.arguments]]
   stance = "for"
   text = """
-Wood builds on the Jericho evidence, including Kitchen's own account of the site, which admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery, which he says suits a destruction around 1400 better than a 13th-century one."""
+Wood builds on the Jericho evidence, including Kitchen's own account of the site, which admits there are remains from about 1400-1275 BC above the Middle Bronze city. Wood holds that the Spring Hill sequence has a gap from about 1320 to 1100 BC and no 13th-century pottery, so nothing at the site supports a 13th-century Jericho."""
   citations = [{ source = "wood-2005", locator = "p. 487" }]
   verses = [{ ref = "Josh.6.20", link = "describes" }]
 
@@ -56,10 +56,10 @@ earliest = -1220
 latest = -1210
 held_by = "K. A. Kitchen"
 summary = """
-Kitchen sets the latest setting of the book of Joshua "in the decade or so before 1210", with any Israelite entry into Canaan, since Israel is in Canaan by 1210 at the latest (Kitchen p. 183); he gives 1215-1200 for Joshua and the elders (p. 207). The range 1220-1210 is that decade. Kitchen's pages on Jericho and Ai (pp. 187-188) discuss the sites and do not give a conquest date; Ai's renewed settlement is put at about 1220/1200. Wood reports the exodus at 1260 BC (Wood's account of Kitchen's Reliability, pp. 159, 307, 359) and Merneptah's fourth year at about 1210 BC (Wood p. 476)."""
+Kitchen sets the latest setting of the book of Joshua "in the decade or so before 1210", with any Israelite entry into Canaan, since Israel is in Canaan by 1210 at the latest (Kitchen p. 159); he gives 1215-1200 for Joshua and the elders (p. 207). The range 1220-1210 is that decade. Kitchen's pages on Jericho and Ai (pp. 187-188) discuss the sites and do not give a conquest date; Ai's renewed settlement is put at about 1220/1200. Wood reports the exodus at 1260 BC (Wood's account of Kitchen's Reliability, pp. 159, 307, 359) and Merneptah's fourth year at about 1210 BC (Wood p. 476)."""
 citations = [
   { source = "wood-2005", locator = "pp. 476, 478" },
-  { source = "kitchen-2003", locator = "p. 183; p. 207" },
+  { source = "kitchen-2003", locator = "p. 159; p. 207" },
 ]
 
   [[positions.arguments]]
@@ -104,7 +104,7 @@ latest = -1451
 held_by = "James Ussher"
 summary = """
 Ussher puts the fall of Jericho in 1451 BC. His 1650s count adds up the Bible's own life-spans and reign-lengths, so it is not an archaeological date."""
-citations = [{ source = "ussher-annals", locator = "paragraph 312" }]
+citations = [{ source = "ussher-annals", locator = "pp. 22, 25 (1658 printing; Year of the World 2553, before the 2554 heading)" }]
 
 [[positions]]
 id = "fs-archaeology"
@@ -114,7 +114,7 @@ earliest = -1250
 latest = -1130
 held_by = "Israel Finkelstein and Neil Asher Silberman"
 summary = """
-Finkelstein and Silberman say excavations show no Late Bronze Jericho or Ai to conquer and no single campaign. Hazor, Aphek, Lachish and Megiddo were destroyed at different times across more than a century, with Lachish after Ramesses III and Megiddo in the second half of the twelfth century, and the span shown covers those destructions."""
+Finkelstein and Silberman say excavations show no thirteenth-century Jericho and no Late Bronze Ai to conquer and no single campaign. Hazor, Aphek, Lachish and Megiddo were destroyed at different times across more than a century, with Lachish after Ramesses III and Megiddo in the second half of the twelfth century, and the span shown covers those destructions."""
 citations = [{ source = "finkelstein-silberman-2002", locator = "pp. 81-82" }, { source = "finkelstein-silberman-2002", locator = "p. 90" }]
 
   [[positions.arguments]]

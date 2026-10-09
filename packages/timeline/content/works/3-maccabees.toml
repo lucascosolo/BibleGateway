@@ -2,8 +2,8 @@ id = "3-maccabees"
 title = "3 Maccabees"
 books = ["3Macc"]
 canon = "deuterocanon"
-status = "sources-located"
-summary = "3 Maccabees contains no reference to the Maccabees; the preface to the Apocrypha in the Brenton edition places its events at 217-209 BCE and its author as an Alexandrian Jew writing in Greek, perhaps in the first century BCE, though some scholars give a much later date. McDonald dates it about the first century BCE. It is in the Orthodox canon and Codex Alexandrinus but not the Latin Apocrypha."
+status = "claims-checked"
+summary = "3 Maccabees contains no reference to the Maccabees; the preface to the Apocrypha in the Brenton edition places its events at 217-209 BCE and its author as an Alexandrian Jew writing in Greek, perhaps in the first century BCE, though some scholars give a much later date. McDonald dates it about the first century BCE. It is in the Orthodox canon and Codex Alexandrinus."
 citations = [{ source = "mcdonald-2017-vol1", locator = "p. 139" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Maccabees" }]
 original_language = "Greek"
 

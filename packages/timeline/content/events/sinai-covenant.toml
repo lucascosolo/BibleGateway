@@ -3,7 +3,7 @@ title = "The Sinai covenant and the giving of the law"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
 Three months after leaving Egypt, Israel stands at Mount Sinai and enters a covenant, a binding agreement, with God. It includes the Ten Commandments, the Book of the Covenant (a set of laws), the plans for the tabernacle (the portable sanctuary), and the sealing of the agreement. Its date follows the date of the exodus. Scholars dispute whether the form of the covenant can itself be dated (see the linked issue)."""
 verses = [
@@ -51,5 +51,5 @@ earliest = -1491
 latest = -1491
 held_by = "James Ussher"
 summary = """
-The chronologist James Ussher dates the exodus to 2513b AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year."""
-citations = [{ source = "ussher-annals", locator = "paragraph 192 and preceding exodus entries" }]
+The chronologist James Ussher dates the exodus to 2513 AM (year of the world), which is 1491 BC. He puts the arrival at Sinai on the third day of the third month of that first year."""
+citations = [{ source = "ussher-annals", locator = "1658 printing, pp. 13-15 (Year of the World 2513; Sinai on the third day of the third month)" }]

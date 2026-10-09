@@ -3,9 +3,9 @@ title = "The Second Temple: foundation and completion"
 axis = "narrative"
 category = "biblical-narrative"
 confidence = "contested"
-status = "sources-located"
+status = "claims-checked"
 summary = """
-The exiles return, and in the second year Zerubbabel and Jeshua lay the foundation (Ezra 3). Work then stops. It starts again under the prophets Haggai and Zechariah, in the second year of King Darius. The house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), in spring 516 BCE."""
+The exiles return, and in the second year Zerubbabel and Jeshua lay the foundation (Ezra 3). Work then stops. It starts again under the prophets Haggai and Zechariah, in the second year of King Darius. The house is finished on 3 Adar in Darius's sixth year (Ezra 6:15), in 516 BCE."""
 verses = [
   { ref = "Ezra.3.8", link = "describes", note = "Ezra says that in the second year after they came, Zerubbabel and Jeshua begin the work." },
   { ref = "Ezra.3.10", link = "describes", note = "Ezra says the builders lay the foundation of Yahweh's temple." },
@@ -20,7 +20,7 @@ verses = [
 
 [[positions]]
 id = "516"
-label = "Completed spring 516 BCE (sixth year of Darius)"
+label = "Completed 516 BCE (sixth year of Darius)"
 tradition = "traditional"
 earliest = -516
 latest = -516
@@ -36,7 +36,7 @@ earliest = -516
 latest = -515
 held_by = "Israel Finkelstein and Neil Asher Silberman; K. A. Kitchen"
 summary = """
-The date is one that scholars across the spectrum accept, because it rests on a synchronism with a Persian king whose reign is fixed from Babylonian and Persian records. Finkelstein and Silberman write that the construction of the Temple "was then finished in the year 516 BCE. Thus began the era of Second Temple Judaism." Kitchen, from the other end of the debate, summarizes Ezra 1-6 as running from Cyrus's accession in 539 "down to completion of rebuilding the temple at Jerusalem in the sixth year of Darius I (516)", and elsewhere speaks of "the opening of the Second Temple in 515"; the difference is only whether Adar of Darius's sixth year is placed in early 516 or early 515."""
+The date is one that scholars at both ends of the debate accept, because it rests on a synchronism with the reign of a Persian king. Finkelstein and Silberman write that the construction of the Temple "was then finished in the year 516 BCE. Thus began the era of Second Temple Judaism." Kitchen, from the other end of the debate, summarizes Ezra 1-6 as running from Cyrus's accession in 539 "down to completion of rebuilding the temple at Jerusalem in the sixth year of Darius I (516)", and elsewhere speaks of "the opening of the Second Temple in 515"; the difference is only whether Adar of Darius's sixth year is placed in early 516 or early 515."""
 citations = [
   { source = "finkelstein-silberman-2002", locator = "p. 300" },
   { source = "kitchen-2003", locator = "p. 71; p. 107" },

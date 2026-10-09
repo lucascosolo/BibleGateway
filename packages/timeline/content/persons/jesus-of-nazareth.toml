@@ -4,9 +4,9 @@ also_known_as = ["Jesus Christ"]
 role = "Jewish teacher from Galilee, crucified under Pontius Pilate"
 summary = """
 Meier writes that the Gospels, Acts, Josephus and Tacitus all agree that Jesus was put to death under Pontius Pilate, with no competing tradition in Jewish, Christian or pagan sources. Two Roman-era writers outside the Christian tradition mention him: Tacitus does so directly, and Josephus does so in two passages, one of which later Christian copyists expanded."""
-status = "sources-located"
+status = "claims-checked"
 verses = [{ ref = "Mark.15.1-Mark.15.15", link = "describes", note = "Mark 15:1–15 tells how Jesus was handed over by Pilate to be crucified, the Gospel account of the event outside sources also mention." }]
-citations = [{ source = "meier-1991", locator = "p. 373" }]
+citations = [{ source = "meier-1991", locator = "p. 373; pp. 57–62" }]
 
 [[attestations]]
 artifact = "tacitus-annals-15-44"

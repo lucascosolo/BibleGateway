@@ -1,7 +1,7 @@
 id = "eusebius-he-2-25"
 name = "Eusebius, Church History 2.25"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 summary = """
 Eusebius records "that Paul was beheaded in Rome itself, and that Peter likewise was crucified under Nero". To support this he cites Dionysius of Corinth, who says they "suffered martyrdom at the same time", and Gaius, who mentions their trophies at the Vatican and on the Ostian way."""

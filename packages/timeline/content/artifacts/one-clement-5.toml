@@ -1,8 +1,8 @@
 id = "one-clement-5"
 name = "1 Clement 5–6"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 summary = """
-A letter to the church at Corinth names Peter, who "endured not one or two, but numerous labours" and died as a martyr, and Paul, who preached in east and west and "suffered martyrdom under the prefects" (Hoole translation). It gives no place or year."""
+A letter to the church at Corinth names Peter, who "endured not one or two but many labours" and, "having delivered his testimony, departed unto the place of glory due to him", and Paul, a herald "both in the East and in the West", who "having borne witness before rulers, he departed at length out of the world" (Hoole translation). It gives no place or year."""
 citations = [{ source = "ecw-1-clement-hoole", locator = "ch. 5" }]

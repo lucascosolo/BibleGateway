@@ -3,7 +3,7 @@ title = "Additions to Esther"
 also_known_as = ["Rest of Esther", "Greek Esther additions"]
 books = ["AddEsth"]
 canon = "deuterocanon"
-status = "sources-located"
+status = "claims-checked"
 summary = "The additions are passages that exist only in the Greek book of Esther. The unsigned preface to the Apocrypha in the Brenton edition says they give Esther a preface and a conclusion and expand the story in three places, to give it a more definite religious character, and that the writer was probably an Egyptian Jew writing in Greek in the first or second century BCE. McDonald counts six additions to Esther. Brenton's Esther prints the whole Greek book with the additions integrated, so the corpus cuts the additions out by verse range."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Esther" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
 original_language = "Greek"

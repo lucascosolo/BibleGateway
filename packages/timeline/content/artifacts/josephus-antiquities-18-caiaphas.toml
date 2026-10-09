@@ -1,7 +1,7 @@
 id = "josephus-antiquities-18-caiaphas"
 name = "Josephus, Antiquities book 18 (Joseph Caiaphas)"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 summary = """
 Josephus records that the Roman prefect Valerius Gratus appointed Joseph, called Caiaphas, as high priest, and that the Syrian legate Vitellius later removed him."""

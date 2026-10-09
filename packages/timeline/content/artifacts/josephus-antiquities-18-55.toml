@@ -1,7 +1,7 @@
 id = "josephus-antiquities-18-55"
 name = "Josephus, Antiquities 18.55 and following (Pilate)"
 kind = "literary-text"
-status = "sources-located"
+status = "claims-checked"
 language = "Greek"
 summary = """
 Josephus tells of Pilate's time as governor of Judaea, beginning with Pilate bringing the army's standards, which bore Caesar's image, from Caesarea into Jerusalem: "BUT now Pilate, the procurator of Judea, removed the army from Cesarea to Jerusalem…" (Whiston's translation)."""

@@ -2,7 +2,7 @@ id = "apocryphon-of-john"
 title = "Apocryphon of John"
 also_known_as = ["Secret Book of John"]
 canon = "described"
-status = "sources-located"
+status = "claims-checked"
 original_language = "Greek"
 summary = """
 A Gnostic revelation text with a cosmic myth that includes a version of the story of the watchers of Genesis 6 and 1 Enoch. It is the most prominent Nag Hammadi text and survives in four Coptic copies: three in the Nag Hammadi codices (II,1, III,1, IV,1) and one in the Berlin Codex (BG 8502,2). Irenaeus reports a version of its myth in Against Heresies 1.29. No filed source dates the Greek original more narrowly than the second or third century CE that Metzger gives for the Greek originals of the Nag Hammadi tractates. It has no verses in the corpus and no full English text in this app."""
