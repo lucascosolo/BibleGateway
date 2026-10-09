@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import type { EvidenceGrade, Relation, ToledotNote } from "@/lib/db/timeline";
 import { EVIDENCE_MEANING } from "@/lib/timeline/evidence";
 import { getLexiconEntry } from "@/lib/lexicon";
-import { toledotSentence } from "./notes";
+import { marginNoteKey, toledotSentence, workRecordNotes } from "./notes";
 
 type Subject = ToledotNote["subject"];
 
@@ -316,5 +316,53 @@ describe("toledotSentence: works", () => {
   it("is draft unless claims-checked or expert-reviewed", () => {
     expect(toledotSentence(wnote("link", "alludes", { status: "sources-located" })).draft).toBe(true);
     expect(toledotSentence(wnote("link", "alludes", { status: "expert-reviewed" })).draft).toBe(false);
+  });
+});
+
+describe("workRecordNotes and marginNoteKey", () => {
+  type WorkNote = import("@/lib/db/timeline").WorkNote;
+  const wlink = (linkType: string, id = "work:1-enoch@65001014"): WorkNote => ({
+    id, anchor: 65_001_014 as never, start: 65_001_014 as never, end: 65_001_015 as never,
+    linkType: linkType as never, note: null,
+    subject: { kind: "work", id: "1-enoch", title: "1 Enoch", status: "claims-checked", role: "link" },
+  });
+  const first = 65_001_001 as never;
+
+  it("workRecordNotes: one record note per work, in order, all at the first verse", () => {
+    const works = [
+      { id: "1-enoch", title: "1 Enoch", status: "claims-checked" as const },
+      { id: "jubilees", title: "Jubilees", status: "draft" as const },
+    ];
+    const notes = workRecordNotes(works, first);
+    expect(notes.map((n) => n.id)).toEqual(["work-record:1-enoch@65001001", "work-record:jubilees@65001001"]);
+    expect(notes[1]).toEqual({
+      id: "work-record:jubilees@65001001", anchor: first, start: first, end: first,
+      linkType: "describes", note: null,
+      subject: { kind: "work", id: "jubilees", title: "Jubilees", status: "draft", role: "record" },
+    });
+  });
+  it("workRecordNotes: nothing without a first verse or without works", () => {
+    expect(workRecordNotes([{ id: "a", title: "A", status: "draft" }], undefined)).toEqual([]);
+    expect(workRecordNotes([], first)).toEqual([]);
+  });
+  it("marginNoteKey: link kinds of one work at one anchor get different keys", () => {
+    const a = marginNoteKey(wlink("alludes"), 65_001_015 as never);
+    expect(a).toBe("work:1-enoch:alludes@65001015");
+    expect(marginNoteKey(wlink("background"), 65_001_015 as never)).not.toBe(a);
+  });
+  it("marginNoteKey: same work and kind from different source anchors collapse", () => {
+    const k = (id: string) => marginNoteKey(wlink("alludes", id), 65_001_015 as never);
+    expect(k("work:1-enoch@65001014")).toBe(k("work:1-enoch@65001020"));
+  });
+  it("marginNoteKey: a work record keeps work-record:<id>@<anchor>", () => {
+    const rec = wlink("describes", "work-record:1-enoch@65001001");
+    rec.subject = { ...rec.subject, role: "record" } as never;
+    expect(marginNoteKey(rec, 65_001_015 as never)).toBe("work-record:1-enoch@65001015");
+  });
+  it("marginNoteKey: timeline notes ignore link kind", () => {
+    const ev = (linkType: string) => note(event(), { id: "event:ev-exodus@1001001", linkType: linkType as never });
+    const a = marginNoteKey(ev("describes"), 1_001_002 as never);
+    expect(a).toBe("event:ev-exodus@1001002");
+    expect(marginNoteKey(ev("dates"), 1_001_002 as never)).toBe(a);
   });
 });

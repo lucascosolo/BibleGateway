@@ -19,6 +19,8 @@ export interface BookRecord {
   chapterCount: number;
   canon?: Canon;
   numbering?: Numbering;
+  /** Highest chapter number in the corpus; above `chapterCount` where chapters start past 1 (Additions to Esther: 10-16). */
+  lastChapter?: number;
   /** True when the corpus has a chapter 1 verse 0 (prologue) row for this book. */
   hasPrologue?: boolean;
 }
@@ -255,6 +257,6 @@ export class BookIndex {
     if (!book) return false;
     const chapter = chapterOf(id);
     const labelled = book.numbering === "part-chapter" || book.numbering === "page";
-    return chapter >= 1 && (labelled || chapter <= book.chapterCount);
+    return chapter >= 1 && (labelled || chapter <= (book.lastChapter ?? book.chapterCount));
   }
 }

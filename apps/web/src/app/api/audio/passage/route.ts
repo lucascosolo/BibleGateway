@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 import { getPassageAudio } from "@/lib/db/audio";
 import { audioCacheHeaders, audioNotModified } from "@/lib/db/cache";
-import { getBookIndex, getChapterCount, getExistingVerseIds, getTranslationByCode } from "@/lib/db/corpus";
+import { getAdjacentChapters, getExistingVerseIds, getOutsideBookIndex, getTranslationByCode } from "@/lib/db/corpus";
 import { InvalidReferenceError, bookOf, chapterOf, formatRange, parseReference } from "@/lib/refs";
 import { canonicalReferenceSlug } from "@/lib/seo";
 import type { ReaderPassage } from "@/lib/store/audio";
@@ -30,7 +30,8 @@ export async function GET(request: NextRequest) {
   const translation = getTranslationByCode(code);
   if (!translation) return NextResponse.json({ error: `unknown translation "${code}"` }, { status: 404 });
 
-  const books = getBookIndex();
+  // Every book, 67+ included, as the reader parses it: the outside books have recordings too.
+  const books = getOutsideBookIndex();
   let range;
   try {
     range = parseReference(ref, books);
@@ -60,13 +61,14 @@ export async function GET(request: NextRequest) {
   const bookId = bookOf(range.start) as number;
   const book = books.get(bookId);
   const chapter = chapterOf(range.start);
+  const { next } = getAdjacentChapters(bookId, chapter);
   const body: ReaderPassage = {
     slug: canonicalReferenceSlug(range, books),
     label: formatRange(range, books),
     bookName: book?.name ?? formatRange(range, books),
     translationCode: translation.code,
     renderedVerseIds: verseIds,
-    nextHref: chapter < getChapterCount(bookId) ? `/read/${book?.osisId}.${chapter + 1}?t=${translation.code}` : null,
+    nextHref: next === null ? null : `/read/${book?.osisId}.${next}?t=${translation.code}`,
     audio,
   };
   return NextResponse.json(body, { headers: audioCacheHeaders(request) });

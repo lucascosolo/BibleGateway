@@ -1,4 +1,5 @@
-import type { Relation, ToledotNote, VerseLink, WorkNote } from "@/lib/db/timeline";
+import type { Relation, ReviewStatus, ToledotNote, VerseLink, WorkNote } from "@/lib/db/timeline";
+import type { VerseId } from "@/lib/refs/verse-id";
 
 import { getLexiconEntry } from "@/lib/lexicon";
 
@@ -22,6 +23,31 @@ export interface ToledotSentence {
 
 /** A margin note beside a verse: a timeline subject, or a work that quotes, echoes or records it. */
 export type MarginNote = ToledotNote | WorkNote;
+
+/** On an outside book's page, a note at the first verse on screen for every work that prints it. */
+export function workRecordNotes(works: readonly { id: string; title: string; status: ReviewStatus }[], first: VerseId | undefined): WorkNote[] {
+  if (first === undefined) return [];
+  return works.map(({ id, title, status }) => ({
+    id: `work-record:${id}@${first}`,
+    anchor: first,
+    start: first,
+    end: first,
+    linkType: "describes",
+    note: null,
+    subject: { kind: "work", id, title, status, role: "record" },
+  }));
+}
+
+/**
+ * Which notes placed at `anchor` are one note. Links of one timeline subject collapse whatever
+ * their kind (the sentence ignores it); a work's links do not, since each kind says something
+ * different about the passage.
+ */
+export function marginNoteKey(note: MarginNote, anchor: VerseId): string {
+  const prefix = note.id.slice(0, note.id.lastIndexOf("@"));
+  const kind = note.subject.kind === "work" && note.subject.role === "link" ? `:${note.linkType}` : "";
+  return `${prefix}${kind}@${anchor}`;
+}
 
 type EventSubject = Extract<ToledotNote["subject"], { kind: "event" }>;
 
