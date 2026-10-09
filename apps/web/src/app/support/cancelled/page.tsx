@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-const SUPPORT_URL = process.env.NEXT_PUBLIC_SUPPORT_URL ?? "https://paypal.me/trophonix";
+const SUPPORT_URL = process.env.NEXT_PUBLIC_SUPPORT_URL ?? "https://www.paypal.com/donate/?hosted_button_id=EQK7PQ72S49K2";
 
 const NEXT: { href: string; label: string; hint: string; external?: boolean }[] = [
   { href: "/read/Gen.1", label: "Back to reading", hint: "Pick up where you left off, or start at Genesis 1" },
