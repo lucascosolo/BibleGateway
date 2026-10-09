@@ -1,0 +1,11 @@
+import { chromium } from "playwright";
+import { readFileSync } from "node:fs";
+const svg = readFileSync("public/icon.svg", "utf8");
+const b = await chromium.launch();
+const page = await b.newPage({ viewport: { width: 512, height: 512 }, deviceScaleFactor: 2 });
+const html = (bg, pad) => `<html><body style="margin:0;background:${bg}"><div style="width:512px;height:512px;display:grid;place-items:center"><div style="width:${512 - 2 * pad}px;height:${512 - 2 * pad}px">${svg.replace("<svg ", '<svg width="100%" height="100%" ')}</div></div></body></html>`;
+await page.setContent(html("transparent", 0));
+await page.screenshot({ path: "public/icons/icon-1024.png", omitBackground: true, clip: { x: 0, y: 0, width: 512, height: 512 } });
+await page.setContent(html("#fbf6ee", 51));
+await page.screenshot({ path: "public/icons/icon-maskable-1024.png", clip: { x: 0, y: 0, width: 512, height: 512 } });
+await b.close();
