@@ -563,6 +563,8 @@ async function main() {
     CREATE TABLE verse_omissions (
       translation_id INTEGER NOT NULL REFERENCES translations(translation_id),
       verse_id       INTEGER NOT NULL REFERENCES verses(verse_id),
+      kind           TEXT NOT NULL
+                     CHECK (kind IN ('critical-text','versification','coverage','unexplained')),
       reason         TEXT NOT NULL,
       history        TEXT NOT NULL,
       PRIMARY KEY (translation_id, verse_id)
@@ -1044,7 +1046,7 @@ async function main() {
     `INSERT OR REPLACE INTO verse_texts (translation_id, verse_id, text, formatting) VALUES (?, ?, ?, NULL)`
   );
   const insertOmission = sqlite.prepare(
-    `INSERT OR REPLACE INTO verse_omissions (translation_id, verse_id, reason, history) VALUES (?, ?, ?, ?)`
+    `INSERT OR REPLACE INTO verse_omissions (translation_id, verse_id, kind, reason, history) VALUES (?, ?, ?, ?, ?)`
   );
 
   /**
@@ -1063,8 +1065,8 @@ async function main() {
       // label, so it must not repeat that lead-in — it explains why, and nothing else.
       // Wording lives in translations.ts, shared with the USFX loader, so the two routes to
       // "this translation does not print this verse" cannot drift into two explanations.
-      const explanation = omissionExplanation(verseId);
-      insertOmission.run(translationId, verseId, explanation.reason, explanation.history);
+      const explanation = omissionExplanation(undefined, verseId);
+      insertOmission.run(translationId, verseId, explanation.kind, explanation.reason, explanation.history);
       return "omitted" as const;
     }
     insertText.run(translationId, verseId, text);
@@ -1259,8 +1261,8 @@ async function main() {
         }
         for (const vid of verseIds) {
           if (printedIds.has(vid)) continue;
-          const explanation = omissionExplanation(vid);
-          insertOmission.run(t.translationId, vid, explanation.reason, explanation.history);
+          const explanation = omissionExplanation(t, vid);
+          insertOmission.run(t.translationId, vid, explanation.kind, explanation.reason, explanation.history);
           stats.omittedManuscript += 1;
         }
       }
@@ -2079,6 +2081,24 @@ async function main() {
       );
     }
 
+    // Only the Greek New Testament tradition is explained by "the oldest Greek copies omit it".
+    // A critical-text row anywhere else would tell a reader that a Hebrew Bible gap is a
+    // New Testament manuscript question, which is exactly the mislabel `kind` exists to stop.
+    const misplacedCritical = sqlite
+      .prepare(
+        `SELECT t.code, vo.verse_id AS verseId
+         FROM verse_omissions vo JOIN translations t USING (translation_id)
+         WHERE vo.kind = 'critical-text' AND vo.verse_id / 1000000 NOT BETWEEN 40 AND 66
+         ORDER BY vo.translation_id, vo.verse_id`,
+      )
+      .all() as { code: string; verseId: number }[];
+    for (const r of misplacedCritical) {
+      errors.push(
+        `${r.code}: verse ${r.verseId} is recorded as a critical-text omission outside the ` +
+          `New Testament. Classify it in omissionExplanation (translations.ts).`,
+      );
+    }
+
     for (const t of TRANSLATION_SOURCES) {
       const wrong = sqlite
         .prepare(
@@ -2131,6 +2151,15 @@ async function main() {
       }
       if (r.printed === 0) errors.push(`${r.code} has zero verses.`);
     }
+    const kinds = sqlite
+      .prepare(
+        `SELECT t.code, vo.kind, COUNT(*) AS n
+         FROM verse_omissions vo JOIN translations t USING (translation_id)
+         GROUP BY vo.translation_id, vo.kind ORDER BY vo.translation_id, vo.kind`,
+      )
+      .all() as { code: string; kind: string; n: number }[];
+    console.log(`  omissions by kind:`);
+    for (const r of kinds) console.log(`    ${r.code.padEnd(4)} ${r.kind.padEnd(13)} ${r.n}`);
   }
 
   // Every canonical extra address is actually printed by somebody. If none of the shipped
@@ -2961,9 +2990,9 @@ async function main() {
     feed("vt", [r.translation_id, r.verse_id, r.text]);
   }
   for (const r of stream(
-    `SELECT translation_id, verse_id, reason, history FROM verse_omissions ORDER BY translation_id, verse_id`
+    `SELECT translation_id, verse_id, kind, reason, history FROM verse_omissions ORDER BY translation_id, verse_id`
   )) {
-    feed("om", [r.translation_id, r.verse_id, r.reason, r.history]);
+    feed("om", [r.translation_id, r.verse_id, r.kind, r.reason, r.history]);
   }
   // Book coverage is RENDERED — it is what decides whether /read/John.3?t=JPS shows scripture
   // or a scope banner naming the translations that do print the book. A corrected scope that

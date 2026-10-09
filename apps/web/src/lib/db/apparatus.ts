@@ -154,9 +154,13 @@ export function getTranslationsPrintingVerse(
   ).all(verseId, excludeTranslationId) as { code: string; name: string }[];
 }
 
+/** Mirrors the CHECK on `verse_omissions.kind`; classified at ingest by `omissionExplanation`. */
+export type OmissionKind = "critical-text" | "versification" | "coverage" | "unexplained";
+
 export interface OmittedVerse {
   verseId: VerseId;
   osisRef: string;
+  kind: OmissionKind;
   reason: string;
   history: string;
   /** Codes of the loaded translations that leave this verse out. */
@@ -188,6 +192,7 @@ export function getAllOmissions(): OmittedVerse[] {
     `SELECT o.verse_id AS verseId,
             v.osis_ref  AS osisRef,
             v.book_id   AS bookId,
+            o.kind      AS kind,
             -- Reasons are per-translation rows but describe the manuscript evidence, which is a
             -- property of the verse; they are identical across translations in practice, so the
             -- lowest translation_id's wins rather than concatenating a dozen copies.
@@ -197,13 +202,24 @@ export function getAllOmissions(): OmittedVerse[] {
      FROM verse_omissions o
      JOIN verses v ON v.verse_id = o.verse_id
      JOIN translations t ON t.translation_id = o.translation_id AND t.is_licensed = 1
-     GROUP BY o.verse_id
+     -- Grouped by kind as well: a verse one edition omits on manuscript grounds and another
+     -- lacks only by numbering is two different facts, and a MIN() would hide one of them.
+     GROUP BY o.verse_id, o.kind
      ORDER BY v.canon_order`,
-  ).all() as { verseId: VerseId; osisRef: string; bookId: number; reason: string; history: string; omittedBy: string }[];
+  ).all() as {
+    verseId: VerseId;
+    osisRef: string;
+    bookId: number;
+    kind: OmissionKind;
+    reason: string;
+    history: string;
+    omittedBy: string;
+  }[];
 
   return rows.map((row) => ({
     verseId: row.verseId,
     osisRef: row.osisRef,
+    kind: row.kind,
     reason: row.reason,
     history: row.history,
     omittedBy: row.omittedBy.split(","),

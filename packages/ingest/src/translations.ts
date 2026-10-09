@@ -260,7 +260,24 @@ export const OMISSION_REASON_MANUSCRIPT =
   "copies made later. Translators disagree about which reading to follow, so some Bibles print " +
   "it and others leave it out.";
 
+/**
+ * What kind of gap a row in `verse_omissions` records. `coverage` is reserved for whole books a
+ * translation does not include; that fact lives in `translation_books` and is never written per
+ * verse.
+ */
+export type OmissionKind = "critical-text" | "versification" | "coverage" | "unexplained";
+
+export const OMISSION_REASON_VERSIFICATION =
+  "This edition follows the Septuagint's chapter and verse numbering, which differs from the " +
+  "Hebrew numbering used for addresses here; this verse has no counterpart in it. The text is " +
+  "not missing from the translation, only from this numbering.";
+
+export const OMISSION_REASON_UNEXPLAINED =
+  "This edition does not print this verse and the source data gives no explanation. It is " +
+  "recorded so the gap is visible, not hidden.";
+
 export interface OmissionExplanation {
+  kind: OmissionKind;
   reason: string;
   /** A short, reader-facing account of the verse's likely transmission history. */
   history: string;
@@ -315,26 +332,44 @@ const OMISSION_HISTORY: Record<string, string> = {
     "but is absent from the earliest witnesses supporting the shorter ending.",
 };
 
+const DEFAULT_CRITICAL_TEXT_HISTORY =
+  "The surviving manuscripts do not tell us the exact year this wording entered the tradition. " +
+  "It is found in later witnesses, while earlier witnesses omit it; the difference reflects " +
+  "centuries of hand-copying in which harmonizing, explanatory, and liturgical expansions could " +
+  "be preserved alongside shorter readings. Modern editions weigh those witnesses rather than " +
+  "assuming that a later reading was simply deleted.";
+
 /**
- * Return the explanation stored beside an omitted verse. The key is the canonical BBCCCVVV
- * address decomposed into book/chapter/verse, so the explanation remains translation-independent.
- * No exact insertion year is claimed: manuscripts can date the surviving evidence, not the moment
- * a reading first entered the tradition.
+ * Return the explanation stored beside an omitted verse, classified by kind. Only verses on a
+ * reviewed list (`OMISSION_HISTORY`, `CANONICAL_EXTRA_VERSES`) are attributed to the Greek
+ * manuscript tradition; a gap in an edition with its own numbering is a numbering difference;
+ * anything else is recorded as unexplained rather than given a story it has not earned.
+ * `translation` is undefined for WEB and BSB, which are not USFX sources and use canonical
+ * numbering. No exact insertion year is claimed: manuscripts can date the surviving evidence,
+ * not the moment a reading first entered the tradition.
  */
-export function omissionExplanation(verseId: number): OmissionExplanation {
+export function omissionExplanation(
+  translation: Pick<TranslationSource, "versification"> | undefined,
+  verseId: number,
+): OmissionExplanation {
   const book = Math.floor(verseId / 1_000_000);
   const chapter = Math.floor((verseId % 1_000_000) / 1_000);
   const verse = verseId % 1_000;
-  return {
-    reason: OMISSION_REASON_MANUSCRIPT,
-    history:
-      OMISSION_HISTORY[`${book}.${chapter}.${verse}`] ??
-      "The surviving manuscripts do not tell us the exact year this wording entered the tradition. " +
-      "It is found in later witnesses, while earlier witnesses omit it; the difference reflects " +
-      "centuries of hand-copying in which harmonizing, explanatory, and liturgical expansions could " +
-      "be preserved alongside shorter readings. Modern editions weigh those witnesses rather than " +
-      "assuming that a later reading was simply deleted.",
-  };
+  const history = OMISSION_HISTORY[`${book}.${chapter}.${verse}`];
+  const reviewedExtra = CANONICAL_EXTRA_VERSES.some(
+    (e) => e.bookId === book && e.chapter === chapter && e.verse === verse,
+  );
+  if (history !== undefined || reviewedExtra) {
+    return {
+      kind: "critical-text",
+      reason: OMISSION_REASON_MANUSCRIPT,
+      history: history ?? DEFAULT_CRITICAL_TEXT_HISTORY,
+    };
+  }
+  if ((translation?.versification ?? "org") !== "org" && book < 40) {
+    return { kind: "versification", reason: OMISSION_REASON_VERSIFICATION, history: "" };
+  }
+  return { kind: "unexplained", reason: OMISSION_REASON_UNEXPLAINED, history: "" };
 }
 
 /*

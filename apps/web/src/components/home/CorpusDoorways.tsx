@@ -6,6 +6,7 @@ import { singleton } from "@/lib/refs/verse-id";
 interface OmissionRow {
   verseId: number;
   osisRef: string;
+  kind: "critical-text" | "versification" | "coverage" | "unexplained";
   reason: string;
   omittedBy: string[];
   printedBy: { code: string; name: string } | undefined;
@@ -47,6 +48,9 @@ export function CorpusDoorways({
   omissions,
   references,
 }: CorpusDoorwaysProps) {
+  const critical = omissions.filter((o) => o.kind === "critical-text");
+  const versification = omissions.filter((o) => o.kind === "versification");
+  const unexplained = omissions.filter((o) => o.kind === "unexplained");
   return (
     <div className="flex flex-col gap-8">
       <section aria-label="Most cross-referenced verses">
@@ -75,52 +79,97 @@ export function CorpusDoorways({
         </div>
       </section>
 
-      {omissions.length > 0 && (
+      {critical.length > 0 && (
         <section aria-label="Textual criticism: omitted verses">
           {/* Rewritten for someone who has never heard the words "critical text" or "Byzantine
-              tradition". The old copy used both, plus "textual criticism", in three sentences —
-              which meant the one place on the home page that explains why verse numbers
-              sometimes jump was legible only to people who already knew. Nothing has been
-              softened: the same facts are here, in words that do not need a glossary. */}
-          <h3 className="mb-1 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-ink-muted)]">
-            {omissions.length} verses that some Bibles leave out
+              tradition". Only rows the ingest classified as critical-text are counted here: a
+              Septuagint numbering gap in Nehemiah is not a New Testament manuscript question. */}
+          <h3 className={HEADING}>
+            {critical.length} New Testament {plural(critical.length)} that some Bibles leave out
           </h3>
-          <p className="mb-3 font-serif text-[var(--text-sm)] italic text-[var(--color-ink-faint)]">
+          <p className={NOTE}>
             The New Testament was copied by hand for centuries before printing, and the oldest
-            copies that survive do not contain these {omissions.length} verses — they first appear
-            in copies made later. Most modern Bibles therefore leave them out, which is why the
-            verse numbers sometimes jump; the King James and Bibles in its line print them. Open
-            one and you can read it either way.
+            copies that survive do not contain{" "}
+            {critical.length === 1 ? "this verse" : `these ${critical.length} verses`} — they first
+            appear in copies made later. Most modern Bibles therefore leave them out, which is why
+            the verse numbers sometimes jump; the King James and Bibles in its line print them.
+            Open one and you can read it either way.
           </p>
-          <ul className="flex flex-wrap gap-1.5">
-            {omissions.map((o) => {
-              // `printedBy` is resolved in the query against the omission rows themselves. It
-              // used to be "the first translation whose code differs from the omitting one",
-              // which with five critical-text editions loaded usually named another edition that
-              // omits the same verse — so the link offering to show you the verse landed on the
-              // identical gap.
-              const href = o.printedBy
-                ? `/read/${o.osisRef}?t=${o.printedBy.code}`
-                : `/read/${o.osisRef}`;
-              return (
-                <li key={o.verseId}>
-                  <Link
-                    href={href}
-                    title={
-                      o.printedBy
-                        ? `${o.reason} Left out of ${o.omittedBy.join(", ")}; printed in ${o.printedBy.name}.`
-                        : o.reason
-                    }
-                    className="inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border border-[var(--color-rubric)] bg-[var(--color-rubric-soft)] px-3 font-sans text-[var(--text-sm)] text-[var(--color-rubric-strong)] transition-opacity hover:opacity-85"
-                  >
-                    {references.get(o.verseId) ?? o.osisRef}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+          <OmissionList rows={critical} references={references} accent />
+        </section>
+      )}
+
+      {versification.length > 0 && (
+        <section aria-label="Septuagint numbering differences">
+          <h3 className={HEADING}>
+            {versification.length} {plural(versification.length)} with a different numbering in
+            Brenton&apos;s Septuagint
+          </h3>
+          <p className={NOTE}>
+            The Septuagint divides some chapters differently from the Hebrew numbering this site
+            uses for addresses, so these numbers have no counterpart in Brenton&apos;s edition.
+            Nothing is missing from his translation, only from this numbering.
+          </p>
+          <OmissionList rows={versification} references={references} />
+        </section>
+      )}
+
+      {unexplained.length > 0 && (
+        <section aria-label="Unexplained gaps">
+          <h3 className={HEADING}>Gaps the source data does not explain</h3>
+          <p className={NOTE}>
+            These verses are not printed in the editions named on each link, and the source data
+            gives no reason. They are listed so the gap is visible, not hidden.
+          </p>
+          <OmissionList rows={unexplained} references={references} />
         </section>
       )}
     </div>
+  );
+}
+
+const HEADING =
+  "mb-1 font-sans text-[var(--text-sm)] font-semibold text-[var(--color-ink-muted)]";
+const NOTE = "mb-3 font-serif text-[var(--text-sm)] italic text-[var(--color-ink-faint)]";
+
+const plural = (n: number) => (n === 1 ? "verse" : "verses");
+
+function OmissionList({
+  rows,
+  references,
+  accent = false,
+}: {
+  rows: OmissionRow[];
+  references: ReadonlyMap<number, string>;
+  accent?: boolean;
+}) {
+  return (
+    <ul className="flex flex-wrap gap-1.5">
+      {rows.map((o) => {
+        // `printedBy` is resolved in the query against the omission rows themselves, so the
+        // link never lands on another edition that omits the same verse.
+        const href = o.printedBy ? `/read/${o.osisRef}?t=${o.printedBy.code}` : `/read/${o.osisRef}`;
+        return (
+          <li key={o.verseId}>
+            <Link
+              href={href}
+              title={
+                o.printedBy
+                  ? `${o.reason} Left out of ${o.omittedBy.join(", ")}; printed in ${o.printedBy.name}.`
+                  : o.reason
+              }
+              className={
+                "inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border px-3 font-sans text-[var(--text-sm)] transition-opacity hover:opacity-85 " +
+                (accent
+                  ? "border-[var(--color-rubric)] bg-[var(--color-rubric-soft)] text-[var(--color-rubric-strong)]"
+                  : "border-[var(--color-border)] bg-[var(--color-bg-raised)] text-[var(--color-ink-muted)]")
+              }
+            >
+              {references.get(o.verseId) ?? o.osisRef}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
