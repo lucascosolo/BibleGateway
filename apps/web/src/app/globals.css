@@ -127,6 +127,10 @@
   --shadow-lg: 0 12px 32px oklch(var(--shadow-color) / var(--shadow-alpha-deep)),
     0 2px 6px oklch(var(--shadow-color) / var(--shadow-alpha-soft));
   --shadow-focus: 0 0 0 3px var(--color-focus-ring);
+  /* The raised home button when the reader is on the home page: a soft halo in the brand
+     colour plus a lifted shadow, so "you are here" reads from across the room and not only
+     from a 2px ring. Both layers derive from brand tokens, so the dark theme follows. */
+  --shadow-glow-brand: 0 0 0 4px var(--color-brand-soft), 0 6px 18px oklch(from var(--color-brand) l c h / 0.45);
 
   /* ---- borders as tokens ---- */
   --border-hairline: 1px solid var(--color-border);

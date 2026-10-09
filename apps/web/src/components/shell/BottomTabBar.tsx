@@ -64,7 +64,7 @@ export function BottomTabBar({ active }: { active: Workspace["key"] }) {
                   change: at 10px a tint alone is hard to tell from the resting state. */}
               <span
                 className={clsx(
-                  "relative flex shrink-0 items-center justify-center rounded-[var(--radius-full)] px-3 py-0.5 transition-colors",
+                  "relative flex shrink-0 items-center justify-center rounded-[var(--radius-full)] px-2.5 py-0.5 transition-colors",
                   isActive ? "bg-[var(--color-brand-soft)]" : "bg-transparent",
                 )}
               >
@@ -101,12 +101,15 @@ function HomeTab({ ws, isActive }: { ws: Workspace; isActive: boolean }) {
       aria-label="Home"
       className="flex flex-1 items-end justify-center pb-2"
     >
+      {/* On the home page the button lights up: the lighter brand fill and a brand halo
+          (`--shadow-glow-brand`) instead of the resting shadow. The 48px box and the icon do
+          not change size, so nothing beside it moves. */}
       <span
         className={clsx(
-          "-mt-2 flex h-12 w-12 items-center justify-center rounded-[var(--radius-xl)] bg-[var(--color-brand-strong)] text-[var(--color-ink-on-accent)]",
-          isActive && "ring-2 ring-[var(--color-brand)] ring-offset-2 ring-offset-[var(--color-bg-raised)]",
+          "-mt-2 flex h-12 w-12 items-center justify-center rounded-[var(--radius-xl)] text-[var(--color-ink-on-accent)] transition-[background-color,box-shadow]",
+          isActive ? "bg-[var(--color-brand)]" : "bg-[var(--color-brand-strong)]",
         )}
-        style={{ boxShadow: "var(--shadow-md)" }}
+        style={{ boxShadow: isActive ? "var(--shadow-glow-brand)" : "var(--shadow-md)" }}
       >
         <Icon className="h-6 w-6" />
       </span>
