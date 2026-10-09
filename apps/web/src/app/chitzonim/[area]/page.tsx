@@ -51,7 +51,10 @@ function cards(books: OutsideBook[], works: WorkSummary[]): Card[] {
       key: work.id,
       title: work.title,
       href: `/chitzonim/works/${work.id}`,
-      dates: formatRange(work.composedEarliest, work.composedLatest),
+      dates:
+        work.composedEarliest !== null && work.composedLatest !== null
+          ? formatRange(work.composedEarliest, work.composedLatest)
+          : work.composedUndated,
       translations: [...new Set(own.flatMap((b) => b.translations))],
       verses: own.reduce((n, b) => n + b.verses, 0),
       unit: unitFor(own[0]),

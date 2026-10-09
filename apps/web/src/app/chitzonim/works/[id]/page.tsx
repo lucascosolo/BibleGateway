@@ -55,7 +55,11 @@ export default async function WorkPage({ params }: Props) {
       <header className="outside-page__header">
         <h1 className="outside-page__title">{work.title}</h1>
         <p className="outside-page__meta">
-          Written <strong>{formatRange(work.composedEarliest, work.composedLatest)}</strong>
+          {work.composedEarliest !== null && work.composedLatest !== null ? (
+            <>Written <strong>{formatRange(work.composedEarliest, work.composedLatest)}</strong></>
+          ) : (
+            work.composedUndated ?? "Not dated"
+          )}
           {" · "}
           {work.originalLanguage}
           {work.alsoKnownAs.length ? <> · also {work.alsoKnownAs.join(", ")}</> : null}
