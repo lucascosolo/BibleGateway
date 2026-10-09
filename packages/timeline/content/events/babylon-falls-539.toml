@@ -30,10 +30,10 @@ citations = [
 
 [[attestations]]
 artifact = "nabonidus-chronicle-abc7"
-relation = "partially-corroborates"
+relation = "in-tension"
 note = """
-The Chronicle records Cyrus entering Babylon without a battle in Nabonidus's seventeenth year, which matches the fall of Babylon in Daniel 5. It does not mention Belshazzar's death on the page read, so it supports the event but not that detail."""
-citations = [{ source = "livius-abc7" }]
+The Chronicle dates the fall but tells it differently from Daniel 5:30-31. In it Gobryas (Ugbaru), governor of Gutium, and the army of Cyrus enter Babylon "without battle", Nabonidus is arrested when he returns, and Cyrus himself enters on the 3rd of Arahshamnu and installs Gobryas's governors. Daniel instead has Belshazzar, whom it calls king, killed that night and "Darius the Mede" receiving the kingdom; the Chronicle has no king killed and no Darius. No critical discussion of the difference is filed here."""
+citations = [{ source = "pritchard-1969", locator = "p. 306, Nabonidus Chronicle iii, trans. A. Leo Oppenheim" }, { source = "livius-abc7" }]
 
 [[attestations]]
 artifact = "cyrus-cylinder"

@@ -15,5 +15,5 @@ citations = [
   { source = "pritchard-1969", locator = "pp. 287–288 (text only; no date for the prism), trans. A. Leo Oppenheim (Oriental Institute Prism; ANET notes the Taylor Prism contains the same account)" },
 ]
 verses = [
-  { ref = "2Kgs.18.13-2Kgs.18.16", link = "background", note = "2 Kings 18:13–16 tells of the payment Hezekiah made to Sennacherib, the tribute the Taylor Prism also reports." },
+  { ref = "2Kgs.18.13-2Kgs.18.16", link = "background", note = "2 Kings 18:13–16 tells of the payment Hezekiah made to Sennacherib; the prism reports it too, but with 800 talents of silver where 2 Kings 18:14 has 300." },
 ]

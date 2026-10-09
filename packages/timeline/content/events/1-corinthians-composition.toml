@@ -3,7 +3,7 @@ title = "Composition of 1 Corinthians"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "claims-checked"
+status = "sources-located"
 books = ["1Cor"]
 summary = """
 Paul wrote 1 Corinthians from Ephesus to the mixed Jewish and Gentile church he had founded at Corinth, answering a letter and reports that had reached him from there. He says he will stay at Ephesus until Pentecost, which puts the writing in late 56 or very early 57. Its authorship is not seriously disputed, though a revisionist chronology would move it to 54-55."""
@@ -22,7 +22,7 @@ latest = 57
 held_by = "Raymond E. Brown"
 summary = """
 Raymond Brown dates the letter to late 56 or very early 57, written from Ephesus, and notes the revisionist alternative of 54/55. His summary line reads: "Late 56 or very early 57 from Ephesus (or 54/55 in the Revisionist Chronology)." He treats Pauline authorship as settled ("Not seriously disputed.") and adds that an increasing majority favours the letter's unity, though some see two or more letters interwoven."""
-citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 22, Summary of Basic Information, PDF p. 562" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -34,7 +34,7 @@ Brown takes the setting from the end of the letter. Paul wants to stay at Ephesu
 [[positions]]
 id = "carson-moo-ephesus-55"
 label = "Carson and Moo: from Ephesus in early 55"
-tradition = "critical"
+tradition = "traditional"
 earliest = 55
 latest = 55
 held_by = "D. A. Carson and Douglas J. Moo"

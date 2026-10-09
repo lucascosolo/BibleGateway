@@ -3,7 +3,7 @@ title = "Composition of Philippians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "claims-checked"
+status = "sources-located"
 books = ["Phil"]
 summary = """
 Paul wrote Philippians to the church at Philippi, the Roman colony where he had founded his first church in Europe, while he was in prison. Its authorship is not seriously disputed, but scholars disagree on where he was held. Raymond Brown favours Ephesus around 56, and treats Rome (61-63) and Caesarea (58-60) as the alternatives. Whether it is one letter or several joined is also unsettled."""
@@ -22,7 +22,7 @@ latest = 63
 held_by = "Raymond E. Brown"
 summary = """
 Brown, a critical scholar, dates the letter by where Paul was held: "Ca. 56 if from Ephesus. (Or 61–63 from Rome, or 58–60 from Caesarea.)" On authenticity he writes: "Not seriously disputed." The span of 56 to 63 shown here covers his three options, with 56 as his lead date; on unity, scholarship is "about evenly divided"."""
-citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 20, Summary of Basic Information, PDF p. 533" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -34,7 +34,7 @@ Brown argues that Paul may well have been imprisoned at Ephesus: "imprisonment a
 [[positions]]
 id = "carson-moo-mid-50s-to-early-60s"
 label = "Carson and Moo: between the mid-50s and the early 60s"
-tradition = "critical"
+tradition = "traditional"
 earliest = 55
 latest = 62
 held_by = "D. A. Carson and Douglas J. Moo"

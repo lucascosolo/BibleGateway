@@ -3,7 +3,7 @@ title = "Composition of Philemon"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "claims-checked"
+status = "sources-located"
 books = ["Phlm"]
 summary = """
 Paul wrote this short letter from prison to Philemon, with Apphia, Archippus and the church in Philemon's house, urging him to receive back the slave Onesimus. Its authorship is not seriously disputed. Where Paul was held, and so when, is open: Raymond Brown gives about 55 from Ephesus, and 61-63 from Rome or 58-60 from Caesarea as alternatives."""
@@ -22,7 +22,7 @@ latest = 63
 held_by = "Raymond E. Brown"
 summary = """
 Brown, a critical scholar, dates the letter by where Paul was held: "ca. 55 if from Ephesus; 58–60 if from Caesarea (unlikely); 61–63 if from Rome." On authenticity, unity and integrity he writes: "Not seriously disputed." The span of 55 to 63 shown here covers his three options, with 55 as his lead date."""
-citations = [{ source = "brown-1997", locator = "ch. 21, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 21, Summary of Basic Information, PDF p. 552" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -34,7 +34,7 @@ Brown argues that Ephesus deserves a hearing here as it does for Philippians, si
 [[positions]]
 id = "carson-moo-rome-early-60s"
 label = "Carson and Moo: probably from Rome in the early 60s, with Colossians"
-tradition = "critical"
+tradition = "traditional"
 earliest = 60
 latest = 62
 held_by = "D. A. Carson and Douglas J. Moo"

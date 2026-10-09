@@ -3,20 +3,11 @@ title = "Additions to Esther"
 also_known_as = ["Rest of Esther", "Greek Esther additions"]
 books = ["AddEsth"]
 canon = "deuterocanon"
-status = "claims-checked"
+status = "sources-located"
 summary = "The additions are passages that exist only in the Greek book of Esther. The unsigned preface to the Apocrypha in the Brenton edition says they give Esther a preface and a conclusion and expand the story in three places, to give it a more definite religious character, and that the writer was probably an Egyptian Jew writing in Greek in the first or second century BCE. McDonald counts six additions to Esther. Brenton's Esther prints the whole Greek book with the additions integrated, so the corpus cuts the additions out by verse range."
 citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Esther" }, { source = "mcdonald-2017-vol1", locator = "p. 142, n. 49" }]
 original_language = "Greek"
-
-[[composed]]
-id = "first-or-second-century-bce"
-label = "First or second century BCE"
-tradition = "critical"
-earliest = -200
-latest = -1
-summary = "The preface says the writer 'wrote in Greek, in the first or second century b.c.' The range 200-1 BCE converts both centuries. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach; scholarship has moved since."
-held_by = "Unsigned preface to the Apocrypha in the eBible Brenton edition (undated; not Brenton's own 1851 text)"
-citations = [{ source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on the Additions to Esther" }]
+composed_undated = "Not dated by any critical source filed here; McDonald and Lim list the additions without a date. An unsigned, undated preface to the Apocrypha in the eBible Brenton edition, a popular editorial note rather than critical scholarship, says the writer was probably an Egyptian Jew who wrote in Greek in the first or second century BCE."
 
 [[provenance]]
 place = "Egypt"

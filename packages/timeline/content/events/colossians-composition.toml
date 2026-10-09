@@ -3,7 +3,7 @@ title = "Composition of the letter to the Colossians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "claims-checked"
+status = "sources-located"
 books = ["Col"]
 summary = """
 This asks who wrote Colossians and when. The letter names Paul as author and twice has him say "I, Paul". Ehrman argues it is a forgery by someone "wanting his readers to think he is Paul", but says "there is really no way to date its appearance precisely", and he allows that forgeries in Paul's name could appear in Paul's own lifetime. The year bounds of 55 and 100 are therefore the editor's: 55 is a point inside Paul's ministry, and 100 is set because Ephesians, which Ehrman says copies Colossians, is the later letter."""

@@ -22,7 +22,7 @@ latest = 55
 held_by = "Raymond E. Brown"
 summary = """
 Raymond Brown prefers 54-55 from Ephesus to 57 from Macedonia, and he treats the letter's authenticity, unity and integrity as settled. His summary line reads: "54–55 from Ephesus is more likely than 57 from Macedonia (Traditional Chronology; see Table 6 in Chapter 16 above for Revisionist Chronology)." On authenticity, unity and integrity he writes: "Not seriously disputed.""""
-citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 19, Summary of Basic Information, PDF p. 516" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -34,7 +34,7 @@ Brown reasons from the North Galatian theory. Paul "went to Ephesus (Acts 19:1) 
 [[positions]]
 id = "carson-moo-before-council-48"
 label = "Carson and Moo: just before the Jerusalem Council, A.D. 48 if the council is so dated"
-tradition = "critical"
+tradition = "traditional"
 earliest = 48
 latest = 48
 held_by = "D. A. Carson and Douglas J. Moo"

@@ -8,7 +8,7 @@ summary = """
 In Rome, after finishing the Jewish War and the Antiquities, Josephus wrote Against Apion, a defence of the Jewish people. In it he says the Jews have only twenty-two trusted books: five of Moses, thirteen by the prophets after Moses down to Artaxerxes, and four of hymns and counsel for living. He names no individual book, so Lim treats the passage as a summary of a canon rather than a list. It is the earliest surviving statement that the Jewish scriptures were a fixed, counted collection. Critical scholars date it toward the end of the first century CE; the date itself is not in dispute, but what it proves is: Lim reads it as the count most Jews of Josephus's own day would recognise, not as proof of a canon officially closed in his time."""
 verses = [
   { ref = "Deut.34.5-Deut.34.8", link = "background", note = "Josephus ends the five books of Moses with the death of Moses told here." },
-  { ref = "Ezra.7.1", link = "background", note = "Josephus says the exact succession of prophets ended with Artaxerxes, the king named here." },
+  { ref = "Ezra.7.1", link = "background", note = "Josephus ends the exact succession of prophets with the reign of Artaxerxes; his own Antiquities, though, sets Ezra's mission under Xerxes and makes Artaxerxes the king of Esther (11.5.1, 11.6.1), so his Artaxerxes need not be the king named here." },
   { ref = "Luke.24.44", link = "background", note = "This verse groups the scriptures as the law, the prophets and the psalms, comparable to Josephus's three classes." },
 ]
 

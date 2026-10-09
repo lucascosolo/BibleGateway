@@ -3,7 +3,7 @@ title = "Composition of 2 Thessalonians"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "claims-checked"
+status = "sources-located"
 books = ["2Thess"]
 summary = """
 This asks who wrote 2 Thessalonians and when. The letter names Paul as its author, but Bart Ehrman argues it is a forgery written by someone else in Paul's name, and he gives no year for it in the passages read. The range shown below is therefore the editor's bracket: it starts after 1 Thessalonians, which Ehrman dates "say, 49 CE", and stops at 100 CE, the limit in a claim by Robert Jewett that Ehrman answers. Jewett and Abraham Malherbe defend Paul as author."""

@@ -17,9 +17,9 @@ label = "After 196 and before 175 BCE"
 tradition = "critical"
 earliest = -196
 latest = -175
-summary = "Lim reaches this from the grandson's arrival in Egypt in 132 BCE (the thirty-eighth year of Ptolemy VII Euergetes II), from a generation gap that gives 222-197 BCE, from Sirach's praise of the high priest Simon (high priest 219-196 BCE) as already dead, and from the absence of any mention of Antiochus Epiphanes, whose policies began in 175. He calls the dating 'relatively straightforward' and a scholarly consensus. The Brenton preface agrees, placing it a few years before the Maccabean persecution."
+summary = "Lim reaches this from the grandson's arrival in Egypt in 132 BCE (the thirty-eighth year of Ptolemy VII Euergetes II), from a generation gap that gives 222-197 BCE, from Sirach's praise of the high priest Simon (high priest 219-196 BCE) as already dead, and from the absence of any mention of Antiochus Epiphanes, whose policies began in 175. He calls the dating 'relatively straightforward' and a scholarly consensus."
 held_by = "Timothy H. Lim (2013)"
-citations = [{ source = "lim-2013", locator = "pp. 95-96" }, { source = "ebible-brenton", locator = "Appendix, 'The Books of the Apocrypha' (Apoc. Pref.), paragraph on Ecclesiasticus" }]
+citations = [{ source = "lim-2013", locator = "pp. 95-96" }]
 
 [[provenance]]
 place = "Jerusalem"

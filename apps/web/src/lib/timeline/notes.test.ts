@@ -55,9 +55,63 @@ describe("toledotSentence: events", () => {
     const s = body(note(event({ confidence: "firm", earliest: -587, latest: -586, title: "Fall of Jerusalem", positions: [pos("Only", "critical")] })));
     expect(s).toBe("Fall of Jerusalem: scholars date it 587–586 BCE.");
   });
-  it("one scholarly position, not firm: confidence in parentheses", () => {
+  it("one scholarly position, not firm: confidence as a 'though' clause", () => {
     const s = body(note(event({ confidence: "contested", earliest: -1005, latest: -970, title: "David takes Jerusalem", positions: [pos("Only", "critical")] })));
-    expect(s).toBe("David takes Jerusalem: scholars date it 1005–970 BCE (contested).");
+    expect(s).toBe("David takes Jerusalem: scholars date it 1005–970 BCE, though the date is contested.");
+  });
+  it("one archaeological position, speculative, with a differing traditional count", () => {
+    const s = body(note(event({
+      title: "The covenant with Abraham", confidence: "speculative", earliest: -2000, latest: -1001,
+      positions: [pos("Only", "archaeological")], traditional: { earliest: -1912, latest: -1912 },
+    })));
+    expect(s).toBe("The covenant with Abraham: scholars date it 2000–1001 BCE, though the date is speculative; the traditional count gives 1912 BCE.");
+  });
+  it.each(["contested", "speculative", "firm"])("no body contains a parenthesised confidence (%s)", (confidence) => {
+    for (const positions of [[pos("O", "critical")], [pos("O", "chronological")], [pos("O", "critical"), pos("P", "critical")]]) {
+      const b = body(note(event({ confidence, positions })));
+      expect(b).not.toContain("(contested)");
+      expect(b).not.toContain("(speculative)");
+      expect(b).not.toContain("(firm)");
+    }
+  });
+  it("chronological only, one position, speculative", () => {
+    const s = body(note(event({ title: "Ruth", confidence: "speculative", earliest: -1400, latest: -1073, positions: [pos("Only", "chronological")] })));
+    expect(s).toBe("Ruth: a chronological reckoning dates it to 1400–1073 BCE, though the date is speculative.");
+  });
+  it("chronological only, one position, contested, with a differing traditional count", () => {
+    const s = body(note(event({
+      title: "Gideon", confidence: "speculative", earliest: -1230, latest: -1073,
+      positions: [pos("Only", "chronological"), pos("Ussher", "traditional")], traditional: { earliest: -1245, latest: -1245 },
+    })));
+    expect(s).toBe("Gideon: a chronological reckoning dates it to 1230–1073 BCE, though the date is speculative; the traditional count gives 1245 BCE.");
+  });
+  it("chronological only, one position, firm: no confidence clause", () => {
+    const s = body(note(event({ title: "Second Temple destroyed", confidence: "firm", earliest: 70, latest: 70, positions: [pos("Only", "chronological")] })));
+    expect(s).toBe("Second Temple destroyed: a chronological reckoning dates it to 70 CE.");
+  });
+  it("chronological only, two positions in one year: both reckonings", () => {
+    const s = body(note(event({ title: "Ruth", earliest: -1100, latest: -1100, positions: [pos("A", "chronological"), pos("B", "chronological")] })));
+    expect(s).toBe("Ruth: both chronological reckonings date it to 1100 BCE.");
+  });
+  it("chronological only, three positions in one year: all three reckonings", () => {
+    const s = body(note(event({ title: "Ruth", earliest: -1100, latest: -1100, positions: [pos("A", "chronological"), pos("B", "chronological"), pos("C", "chronological")] })));
+    expect(s).toBe("Ruth: all three chronological reckonings date it to 1100 BCE.");
+  });
+  it("chronological only, two positions spanning years, no confidence clause", () => {
+    const s = body(note(event({ title: "Ruth", confidence: "speculative", earliest: -1400, latest: -1073, positions: [pos("A", "chronological"), pos("B", "chronological")] })));
+    expect(s).toBe("Ruth: two chronological reckonings span 1400–1073 BCE.");
+  });
+  it("chronological only, spanning, with a differing traditional count", () => {
+    const s = body(note(event({
+      title: "Ruth", earliest: -1400, latest: -1073,
+      positions: [pos("A", "chronological"), pos("B", "chronological"), pos("T", "traditional")], traditional: { earliest: -1245, latest: -1245 },
+    })));
+    expect(s).toBe("Ruth: two chronological reckonings span 1400–1073 BCE; the traditional count gives 1245 BCE.");
+  });
+  it("chronological only: the body never says 'scholar'", () => {
+    for (const positions of [[pos("A", "chronological")], [pos("A", "chronological"), pos("B", "chronological")]]) {
+      expect(body(note(event({ positions, earliest: -1400, latest: -1073 })))).not.toMatch(/scholar/i);
+    }
   });
   it("one scholarly position with a traditional count", () => {
     const s = body(note(event({ confidence: "firm", earliest: -1279, latest: -1213, positions: [pos("Only", "critical")], traditional: { earliest: -1446, latest: -1446 } })));
@@ -68,7 +122,7 @@ describe("toledotSentence: events", () => {
       title: "The deaths of Peter and Paul", confidence: "speculative", earliest: 64, latest: 68,
       positions: [pos("Only", "critical")], traditional: { earliest: 64, latest: 68 },
     })));
-    expect(s).toBe("The deaths of Peter and Paul: scholars date it 64–68 CE (speculative).");
+    expect(s).toBe("The deaths of Peter and Paul: scholars date it 64–68 CE, though the date is speculative.");
   });
   it("no scholarly position: only a traditional count", () => {
     const s = body(note(event({ earliest: -1446, latest: -1446, positions: [pos("Ussher", "traditional")] })));
@@ -89,6 +143,27 @@ describe("toledotSentence: events", () => {
   it("canon axis: title with its range in parentheses, trailing period stripped", () => {
     const s = body(note(event({ axis: "canon", title: "Origen counts twenty-two Hebrew books and only four Gospels.", earliest: 230, latest: 254, positions: [] })));
     expect(s).toBe("Origen counts twenty-two Hebrew books and only four Gospels (230–254 CE).");
+  });
+  it("canon axis: a title ending in a parenthesis takes the range inside it", () => {
+    const s = body(note(event({ axis: "canon", title: "Josephus counts twenty-two sacred books (Against Apion 1.37-43)", earliest: 90, latest: 100, positions: [] })));
+    expect(s).toBe("Josephus counts twenty-two sacred books (Against Apion 1.37-43; 90–100 CE).");
+    expect(s).not.toContain(") (");
+  });
+  it("canon axis: a parenthesised title with a trailing period is handled the same", () => {
+    const s = body(note(event({ axis: "canon", title: "Josephus counts twenty-two sacred books (Against Apion 1.37-43).", earliest: 90, latest: 100, positions: [] })));
+    expect(s).toBe("Josephus counts twenty-two sacred books (Against Apion 1.37-43; 90–100 CE).");
+  });
+  it("a link note already ending in closing quotes gets no extra period", () => {
+    const text = "Athanasius closes his list by quoting this verse: “Ye do err, not knowing the Scriptures.”";
+    const b = body(note(event({ confidence: "firm", positions: [pos("O", "critical")] }), { note: text }));
+    expect(b.startsWith(`${text} The Exodus:`)).toBe(true);
+    expect(b).not.toContain("”.");
+  });
+  it.each(["Said it!)", "Why?]", "He said 'no.'", "It is (so.)"])("terminal punctuation before a closer: %s", (text) => {
+    expect(body(note({ kind: "issue", id: "i", title: "T", issueKind: "textual", status: "claims-checked" }, { note: text }))).toBe(`T. ${text}`);
+  });
+  it("a link note with no terminal punctuation still gets a period", () => {
+    expect(body(note({ kind: "issue", id: "i", title: "T", issueKind: "textual", status: "claims-checked" }, { note: "Plain note" }))).toBe("T. Plain note.");
   });
   it("draft stays true for sources-located, false for claims-checked", () => {
     expect(toledotSentence(note(event({ status: "sources-located" }))).draft).toBe(true);

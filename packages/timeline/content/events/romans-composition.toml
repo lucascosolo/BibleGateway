@@ -3,7 +3,7 @@ title = "Composition of Romans"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "claims-checked"
+status = "sources-located"
 books = ["Rom"]
 summary = """
 Paul wrote Romans from Corinth, in the winter of 57/58, to Christians in Rome, a church he had never visited but where he had friends. He was about to carry the collection to Jerusalem and hoped to go on to Spain by way of Rome. Its authorship is not seriously disputed. A revisionist chronology would put it in 55-56."""
@@ -22,7 +22,7 @@ latest = 58
 held_by = "Raymond E. Brown"
 summary = """
 Brown, a critical scholar, gives his dating in one line: "In the winter of 57/58 from Corinth (55/56 in the Revisionist Chronology)." On authenticity he writes: "Not seriously disputed." He notes that a larger minority holds that chapter 16 was added later."""
-citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 24, Summary of Basic Information, PDF p. 608" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -34,7 +34,7 @@ Brown takes the place of writing from the letter's own details: Phoebe, "a woman
 [[positions]]
 id = "carson-moo-corinth-57"
 label = "Carson and Moo: from Corinth, A.D. 57"
-tradition = "critical"
+tradition = "traditional"
 earliest = 57
 latest = 57
 held_by = "D. A. Carson and Douglas J. Moo"

@@ -23,7 +23,7 @@ citations = [{ source = "mcdonald-2017-vol1", locator = "p. 62" }]
 [[composed]]
 id = "epitomist-first-century-bce"
 label = "Epitome, first century BCE"
-tradition = "critical"
+tradition = "traditional"
 earliest = -100
 latest = -1
 summary = "The preface says the epitomiser was perhaps an Alexandrian Jew of the first century BCE who wrote in Greek. This is the view of that unsigned preface, which mentions the recovery of Hebrew Sirach and so is later than Brenton's 1851 translation; scholarship has moved since."

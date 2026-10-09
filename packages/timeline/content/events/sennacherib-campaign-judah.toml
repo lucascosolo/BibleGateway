@@ -25,10 +25,11 @@ citations = [{ source = "wikipedia-sennacherib-levant" }, { source = "thiele-198
 
 [[attestations]]
 artifact = "sennacherib-taylor-prism"
-relation = "corroborates"
+relation = "in-tension"
 note = """
-Sennacherib's own account says he took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". It claims payment from Hezekiah but not the capture of the city. That agrees with 2 Kings 18:13–16, where Hezekiah pays and Jerusalem is not taken."""
+Sennacherib's own account says he took 46 walled cities of Judah and shut Hezekiah up in Jerusalem "like a bird in a cage". It claims payment from Hezekiah but not the capture of the city, as in 2 Kings 18:13–16. But it gives the payment as 30 talents of gold and 800 talents of silver, sent later to Nineveh, where 2 Kings 18:14 has 30 talents of gold and 300 of silver."""
 citations = [
+  { source = "pritchard-1969", locator = "p. 288, trans. A. Leo Oppenheim (Oriental Institute Prism)" },
   { source = "cojs-sennacherib-prisms" },
   { source = "wikipedia-sennacherib-annals" },
 ]

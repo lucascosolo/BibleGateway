@@ -23,7 +23,7 @@ latest = 89
 held_by = "Raymond E. Brown"
 summary = """
 Raymond Brown dates Hebrews to the 60s or, more likely, the 80s, and he does not name an author. His summary line reads: "60s or more likely 80s." Of authorship he writes: "Author not identified; later church attribution to Paul now abandoned." The upper bound of the span is the editor's reading of "80s"."""
-citations = [{ source = "brown-1997", locator = "ch. 32, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 32, Summary of Basic Information, PDF p. 735" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -35,7 +35,7 @@ Brown finds the strongest support for the later date in the letter's theme: "A s
 [[positions]]
 id = "carson-moo-before-70"
 label = "Before 70 CE, after about 60"
-tradition = "critical"
+tradition = "traditional"
 earliest = 60
 latest = 69
 held_by = "D. A. Carson and Douglas J. Moo"

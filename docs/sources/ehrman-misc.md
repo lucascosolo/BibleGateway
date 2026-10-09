@@ -15,6 +15,12 @@ approximately by the nearest preceding page number, and should be marked "approx
 | `heaven-and-hell.txt` | *Heaven and Hell: A History of the Afterlife* (Simon & Schuster, 2020) | Not a chronology source |
 | `reliability-of-nt.txt` | Ehrman–Licona dialogue on the historical reliability of the NT (TheBestSchools.org, 2016) | A web dialogue; not cited |
 
-None is cited yet. The *Brief Introduction* is queued for a pass over the composition events
-once the Brown 1997 positions are merged, so that each New Testament book carries Brown's
-moderate date beside Ehrman's.
+The *Brief Introduction* is cited (`ehrman-brief-intro-2017`) by the New Testament composition
+events, two issues, two persons and one work. **Its page locators cannot be re-checked**: no PDF
+of it is filed under `~/.cache/jot/sources` (checked 2026-10-09), the OCR has no page breaks, and
+the bare-number lines that stand for printed pages run in sequence but with gaps and stray
+numbers, so no page offset is established. Every locator to it is therefore approximate, and no
+entity may be graded claims-checked on its strength; the nine composition events that had been
+(Romans, 1 and 2 Corinthians, Philippians, Philemon, Colossians, 2 Thessalonians, the Pastorals,
+1 Peter) were returned to sources-located on 2026-10-09. A filed PDF, extracted per page, would
+let them be checked.

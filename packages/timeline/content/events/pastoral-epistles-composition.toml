@@ -3,7 +3,7 @@ title = "Composition of the Pastoral Epistles (1 Timothy, 2 Timothy, Titus)"
 axis = "composition"
 category = "composition"
 confidence = "contested"
-status = "claims-checked"
+status = "sources-located"
 books = ["1Tim", "2Tim", "Titus"]
 summary = """
 This entry asks who wrote 1 Timothy, 2 Timothy and Titus, and when. Each letter names Paul as author, but Ehrman treats the three as one group forged by a later follower, and places them "at the end of the first century at the very earliest". He gives no latest date, so the span of 90 to 130 shown here is editorial: 90 renders his earliest date, and 130 is a round limit before the middle of the second century."""

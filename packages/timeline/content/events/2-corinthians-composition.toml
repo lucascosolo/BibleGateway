@@ -3,7 +3,7 @@ title = "Composition of 2 Corinthians"
 axis = "composition"
 category = "composition"
 confidence = "firm"
-status = "claims-checked"
+status = "sources-located"
 books = ["2Cor"]
 summary = """
 Paul wrote 2 Corinthians from Macedonia to the Corinthian church, after Titus brought word of how it had received Paul's earlier tearful letter. Raymond Brown dates it to late summer or early autumn 57. Its authorship is not seriously disputed, though most scholars think the book joins two to five separate letters, and a revisionist chronology would put it in 55-56."""
@@ -22,7 +22,7 @@ latest = 57
 held_by = "Raymond E. Brown"
 summary = """
 Raymond Brown dates 2 Corinthians to late summer or early autumn 57, written in Macedonia, and gives the revisionist alternative of 55/56. His summary line reads: "Late summer/early autumn 57 from Macedonia (55/56 in the Revisionist Chronology)." He accepts Paul as author ("Not seriously disputed.") but notes that scholars doubt the book is a single letter: "Most scholars think that several (two to five) letters have been combined.""""
-citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information" }]
+citations = [{ source = "brown-1997", locator = "ch. 23, Summary of Basic Information, PDF p. 590" }]
 
   [[positions.arguments]]
   stance = "for"
@@ -34,7 +34,7 @@ Brown takes the setting from the journey behind the letter. Paul "interrupted hi
 [[positions]]
 id = "carson-moo-macedonia-55-56"
 label = "Carson and Moo: from Macedonia, within a year of 1 Corinthians (55-56)"
-tradition = "critical"
+tradition = "traditional"
 earliest = 55
 latest = 56
 held_by = "D. A. Carson and Douglas J. Moo"

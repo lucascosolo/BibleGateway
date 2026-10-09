@@ -35,7 +35,7 @@ const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 const countWord = (n: number) => (n < WORDS.length ? WORDS[n] : String(n));
 const counted = (n: number, one: string, many: string) => `${countWord(n)} ${n === 1 ? one : many}`;
-const asSentence = (s: string) => (/[.!?]$/.test(s.trim()) ? s.trim() : `${s.trim()}.`);
+const asSentence = (s: string) => (/[.!?][”’"')\]]*$/.test(s.trim()) ? s.trim() : `${s.trim()}.`);
 const joined = (...parts: (string | null | undefined)[]) => parts.filter(Boolean).join(" ");
 
 const WORK_BODY: Record<VerseLink["linkType"], (title: string) => string> = {
@@ -60,15 +60,26 @@ const ARTIFACT_VERB: Record<Relation, string> = {
  *  sentences ("David takes Jerusalem"), so they are never embedded in prose. */
 function eventDate(s: EventSubject): string {
   const range = formatRange(s.earliest, s.latest);
-  if (s.axis === "canon") return `${s.title.trim().replace(/\.$/, "")} (${range}).`;
+  if (s.axis === "canon") {
+    const title = s.title.trim().replace(/\.$/, "");
+    return title.endsWith(")") ? `${title.slice(0, -1)}; ${range}).` : `${title} (${range}).`;
+  }
   const n = s.positions.filter((p) => !isTraditional(p.tradition)).length;
   if (n === 0) return `${s.title}: only a traditional count dates it, to ${range}; no outside evidence fixes it.`;
-  const claim =
-    n === 1
-      ? `scholars date it ${range}${s.confidence === "firm" ? "" : ` (${s.confidence})`}`
+  const scholarly = s.positions.some((p) => p.tradition === "critical" || p.tradition === "archaeological");
+  const doubt = s.confidence === "firm" ? "" : `, though the date is ${s.confidence}`;
+  const all = n === 2 ? "both" : `all ${countWord(n)}`;
+  const claim = scholarly
+    ? n === 1
+      ? `scholars date it ${range}${doubt}`
       : s.earliest === s.latest
-        ? `${n === 2 ? "both" : `all ${countWord(n)}`} scholarly positions fall in ${range}`
-        : `scholars disagree, with ${countWord(n)} positions spanning ${range}`;
+        ? `${all} scholarly positions fall in ${range}`
+        : `scholars disagree, with ${countWord(n)} positions spanning ${range}`
+    : n === 1
+      ? `a chronological reckoning dates it to ${range}${doubt}`
+      : s.earliest === s.latest
+        ? `${all} chronological reckonings date it to ${range}`
+        : `${countWord(n)} chronological reckonings span ${range}`;
   const sameAsScholars = s.traditional && s.traditional.earliest === s.earliest && s.traditional.latest === s.latest;
   const traditional = s.traditional && !sameAsScholars ? `; the traditional count gives ${formatRange(s.traditional.earliest, s.traditional.latest)}` : "";
   return `${s.title}: ${claim}${traditional}.`;

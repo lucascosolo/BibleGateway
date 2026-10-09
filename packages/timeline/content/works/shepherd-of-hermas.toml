@@ -33,7 +33,7 @@ citations = [{ source = "metzger-1987-canon", locator = "pp. 64-65" }]
 [[composed]]
 id = "time-of-pius"
 label = "Bishop Pius of Rome, about 140 to 155 CE"
-tradition = "critical"
+tradition = "traditional"
 earliest = 140
 latest = 155
 held_by = "J. B. Lightfoot and J. R. Harmer (1891)"

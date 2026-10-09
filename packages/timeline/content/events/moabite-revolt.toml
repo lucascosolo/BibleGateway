@@ -24,9 +24,9 @@ citations = [{ source = "young-2005", locator = "Table 1, p. 245" }]
 
 [[attestations]]
 artifact = "mesha-stele"
-relation = "partially-corroborates"
-note = "It says Omri oppressed Moab and credits the god Chemosh with Mesha's victories. Wikipedia says it runs parallel to 2 Kings 3:4-27, but the two accounts differ."
-citations = [{ source = "wikipedia-mesha-stele" }]
+relation = "in-tension"
+note = "Mesha records the same revolt but contradicts Kings on when and how it ended. He says Israel held Medeba in Omri's time and half the time of his son, forty years, before Chemosh restored it in Mesha's own time, where 2 Kings 1:1 and 3:5 put the revolt after Ahab's death; and he says Israel 'hath perished for ever', where 2 Kings 3:24-27 has Israel defeat Moab before withdrawing."
+citations = [{ source = "pritchard-1969", locator = "p. 320, Moabite Stone, trans. W. F. Albright" }, { source = "wikipedia-mesha-stele" }]
 
 [[positions]]
 id = "kitchen-mesha-840"
