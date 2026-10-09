@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import type { EvidenceGrade, Relation, ToledotNote } from "@/lib/db/timeline";
 import { EVIDENCE_MEANING } from "@/lib/timeline/evidence";
+import { getLexiconEntry } from "@/lib/lexicon";
 import { toledotSentence } from "./notes";
 
 type Subject = ToledotNote["subject"];
@@ -166,5 +167,27 @@ describe("toledotSentence: link note and draft", () => {
   it("still flags an event whose sources are located but whose claims are unchecked", () => {
     expect(toledotSentence(note(event({ status: "sources-located" }))).draft).toBe(true);
     expect(toledotSentence(note(event({ status: "claims-checked" }))).draft).toBe(false);
+  });
+});
+
+describe("toledotSentence: investigations", () => {
+  const inv = (over: Record<string, unknown> = {}): Subject => ({
+    kind: "investigation", id: "deut-32-8-9", title: "Sons of God", passage: "Deuteronomy 32:8–9",
+    witnesses: 2, explanations: 3, status: "draft", ...over,
+  }) as Subject;
+
+  it("plural counts, draft", () => {
+    expect(toledotSentence(note(inv()))).toEqual({
+      lead: getLexiconEntry("investigation").term,
+      body: "An investigation looks at the wording of Deuteronomy 32:8–9: two witnesses, three explanations.",
+      href: "/toledot/investigations/deut-32-8-9",
+      draft: true,
+    });
+  });
+
+  it("singular counts, claims-checked is not draft", () => {
+    const s = toledotSentence(note(inv({ witnesses: 1, explanations: 1, status: "claims-checked" })));
+    expect(s.body).toBe("An investigation looks at the wording of Deuteronomy 32:8–9: one witness, one explanation.");
+    expect(s.draft).toBe(false);
   });
 });

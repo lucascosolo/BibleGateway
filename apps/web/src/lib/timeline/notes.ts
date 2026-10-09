@@ -1,5 +1,7 @@
 import type { IssueSummary, ToledotNote } from "@/lib/db/timeline";
 
+import { getLexiconEntry } from "@/lib/lexicon";
+
 import { EVIDENCE_MEANING } from "./evidence";
 import { isTraditional } from "./lens";
 import { formatRange } from "./years";
@@ -28,6 +30,7 @@ const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 const inProse = (title: string) => (title.startsWith("The ") || title.startsWith("Composition ") ? lowerFirst(title) : title);
 const WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
 const countWord = (n: number) => (n < WORDS.length ? WORDS[n] : String(n));
+const counted = (n: number, one: string, many: string) => `${countWord(n)} ${n === 1 ? one : many}`;
 const asSentence = (s: string) => (/[.!?]$/.test(s.trim()) ? s.trim() : `${s.trim()}.`);
 
 const ARTIFACT_VERB: Record<string, string> = {
@@ -81,6 +84,13 @@ function sentence(note: ToledotNote): ToledotSentence {
               : "Outside source",
         body: `${s.name} is an outside source that ${ARTIFACT_VERB[s.relation ?? "silent"]} this passage.`,
         href: `/toledot/artifacts/${s.id}`,
+        draft: unchecked(s.status),
+      };
+    case "investigation":
+      return {
+        lead: getLexiconEntry("investigation").term,
+        body: `An investigation looks at the wording of ${s.passage}: ${counted(s.witnesses, "witness", "witnesses")}, ${counted(s.explanations, "explanation", "explanations")}.`,
+        href: `/toledot/investigations/${s.id}`,
         draft: unchecked(s.status),
       };
   }

@@ -6,7 +6,8 @@ import path from "node:path";
 
 import type { VerseId, VerseRange } from "@/lib/refs/verse-id";
 
-import { getBooks } from "./corpus";
+import { getBookIndex, getBooks } from "./corpus";
+import { formatRange as formatVerseRange } from "@/lib/refs";
 import { getCorpusBuildId } from "./client";
 import { firstSentence } from "@/lib/timeline/catalogue";
 
@@ -249,6 +250,39 @@ export interface IssueDetail extends IssueSummary {
   views: { id: string; label: string; text: string; citations: Citation[] }[];
   eventIds: string[];
   verses: VerseLink[];
+}
+
+export type DifferenceKind = "textual" | "lexical" | "grammatical" | "stylistic" | "interpretive" | "editorial";
+
+export interface InvestigationSummary {
+  id: string;
+  title: string;
+  status: ReviewStatus;
+  gist: string;
+  start: VerseId;
+  end: VerseId;
+  witnessCount: number;
+  differenceCount: number;
+}
+
+export interface InvestigationWitness {
+  id: string;
+  siglum: string;
+  name: string;
+  reading: string;
+  translation: string;
+  language: string;
+  note: string | null;
+  citations: Citation[];
+}
+
+export interface InvestigationDetail extends InvestigationSummary {
+  summary: string;
+  witnesses: InvestigationWitness[];
+  /** `follows` is the siglum of one of `witnesses`. */
+  editions: { code: string; follows: string }[];
+  differences: { id: string; kind: DifferenceKind; text: string; heldBy: string | null; citations: Citation[] }[];
+  challenges: { id: string; text: string; citations: Citation[] }[];
 }
 
 export interface TimelineWindow {
@@ -643,6 +677,79 @@ export function getTimelineForRange(range: VerseRange): {
   return { events, issues, artifacts, persons };
 }
 
+// --- Investigations ---------------------------------------------------------------------------
+
+const INVESTIGATION_SUMMARY_COLUMNS = `i.investigation_id AS id, i.title, i.status, i.summary AS gistSource,
+  v.start_verse_id AS start, v.end_verse_id AS "end",
+  (SELECT COUNT(*) FROM investigation_witnesses w WHERE w.investigation_id = i.investigation_id) AS witnessCount,
+  (SELECT COUNT(*) FROM investigation_differences d WHERE d.investigation_id = i.investigation_id) AS differenceCount`;
+const INVESTIGATION_FROM = `investigations i JOIN investigation_verses v ON v.investigation_id = i.investigation_id`;
+
+/** A timeline.db built before investigations existed has no tables for them; read it as having none. */
+function hasInvestigations(): boolean {
+  return get<{ n: number }>(`SELECT COUNT(*) AS n FROM sqlite_master WHERE type = 'table' AND name = 'investigation_verses'`)?.n === 1;
+}
+
+type InvestigationSummaryRow = Omit<InvestigationSummary, "gist"> & { gistSource: string };
+const toInvestigationSummary = ({ gistSource, ...row }: InvestigationSummaryRow): InvestigationSummary => ({
+  ...row,
+  gist: firstSentence(gistSource),
+});
+
+/** Every investigation, by id. */
+export function getInvestigationSummaries(): InvestigationSummary[] {
+  if (!hasInvestigations()) return [];
+  return all<InvestigationSummaryRow>(`SELECT ${INVESTIGATION_SUMMARY_COLUMNS} FROM ${INVESTIGATION_FROM} ORDER BY i.investigation_id`).map(
+    toInvestigationSummary
+  );
+}
+
+/** The investigations whose passage contains any of `verseIds`. */
+export function getInvestigationsForVerses(verseIds: readonly VerseId[]): InvestigationSummary[] {
+  if (verseIds.length === 0) return [];
+  const wanted = new Set<number>(verseIds);
+  return getInvestigationSummaries().filter((inv) => [...wanted].some((id) => id >= inv.start && id <= inv.end));
+}
+
+function investigationCitations(kind: "witness" | "difference" | "challenge", id: string): Citation[] {
+  return all<Citation>(
+    `SELECT s.source_id AS sourceId, s.kind, s.title, s.author, s.container, s.publisher, s.year, s.url, c.locator
+     FROM investigation_citations c JOIN sources s ON s.source_id = c.source_id
+     WHERE c.subject_kind = ? AND c.subject_id = ?
+     ORDER BY c.ordinal`,
+    kind,
+    id
+  );
+}
+
+export function getInvestigation(id: string): InvestigationDetail | null {
+  if (!hasInvestigations()) return null;
+  const found = get<InvestigationSummaryRow>(
+    `SELECT ${INVESTIGATION_SUMMARY_COLUMNS} FROM ${INVESTIGATION_FROM} WHERE i.investigation_id = ?`,
+    id
+  );
+  if (!found) return null;
+  const witnesses = all<Omit<InvestigationWitness, "citations">>(
+    `SELECT witness_id AS id, siglum, name, reading, translation, language, note
+     FROM investigation_witnesses WHERE investigation_id = ? ORDER BY ordinal`,
+    id
+  ).map((w) => ({ ...w, citations: investigationCitations("witness", w.id) }));
+  const editions = all<{ code: string; follows: string }>(
+    `SELECT code, follows FROM investigation_editions WHERE investigation_id = ? ORDER BY ordinal`,
+    id
+  );
+  const differences = all<{ id: string; kind: DifferenceKind; text: string; heldBy: string | null }>(
+    `SELECT difference_id AS id, kind, text, held_by AS heldBy
+     FROM investigation_differences WHERE investigation_id = ? ORDER BY ordinal`,
+    id
+  ).map((d) => ({ ...d, citations: investigationCitations("difference", d.id) }));
+  const challenges = all<{ id: string; text: string }>(
+    `SELECT challenge_id AS id, text FROM investigation_challenges WHERE investigation_id = ? ORDER BY ordinal`,
+    id
+  ).map((c) => ({ ...c, citations: investigationCitations("challenge", c.id) }));
+  return { ...toInvestigationSummary(found), summary: found.gistSource, witnesses, editions, differences, challenges };
+}
+
 // --- Reader notes -----------------------------------------------------------------------------
 
 export interface ToledotNote {
@@ -658,7 +765,8 @@ export interface ToledotNote {
     | { kind: "argument"; eventId: string; eventTitle: string; eventStatus: ReviewStatus; positionLabel: string; stance: "for" | "against" }
     | { kind: "issue"; id: string; title: string; issueKind: IssueSummary["kind"]; status: ReviewStatus }
     | { kind: "person"; id: string; name: string; evidence: EvidenceGrade; hasTension: boolean; status: ReviewStatus }
-    | { kind: "artifact"; id: string; name: string; status: ReviewStatus; relation: Relation | null };
+    | { kind: "artifact"; id: string; name: string; status: ReviewStatus; relation: Relation | null }
+    | { kind: "investigation"; id: string; title: string; passage: string; witnesses: number; explanations: number; status: ReviewStatus };
   /** The link's own note text when the author wrote one. */
   note: string | null;
 }
@@ -668,7 +776,7 @@ export interface ToledotNote {
 const RELATION_RANK: Relation[] = ["in-tension", "corroborates", "partially-corroborates", "consistent", "silent"];
 
 interface LinkRow {
-  kind: "event" | "argument" | "artifact" | "issue" | "person";
+  kind: "event" | "argument" | "artifact" | "issue" | "person" | "investigation";
   subjectId: string;
   start: VerseId;
   end: VerseId;
@@ -686,11 +794,13 @@ const placeholders = (ids: readonly string[]) => ids.map(() => "?").join(",");
 export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
   const links = all<LinkRow>(
     `SELECT subject_kind AS kind, subject_id AS subjectId, start_verse_id AS start, end_verse_id AS "end",
-            link_type AS linkType, note
+            link_type AS linkType, note, link_id AS ord
      FROM verse_links WHERE start_verse_id <= ? AND end_verse_id >= ?
-     ORDER BY start_verse_id, link_id`,
-    range.end,
-    range.start
+     ${hasInvestigations() ? `UNION ALL
+     SELECT 'investigation', investigation_id, start_verse_id, end_verse_id, 'describes', NULL, NULL
+     FROM investigation_verses WHERE start_verse_id <= ? AND end_verse_id >= ?` : ""}
+     ORDER BY start, ord`,
+    ...(hasInvestigations() ? [range.end, range.start, range.end, range.start] : [range.end, range.start])
   );
   if (links.length === 0) return [];
   const idsOf = (kind: LinkRow["kind"]) => [...new Set(links.filter((l) => l.kind === kind).map((l) => l.subjectId))];
@@ -792,6 +902,24 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
     return best;
   }
 
+  const investigationIds = idsOf("investigation");
+  const books = investigationIds.length ? getBookIndex() : null;
+  const investigations = new Map(
+    (investigationIds.length
+      ? all<{ id: string; title: string; status: ReviewStatus; start: VerseId; end: VerseId; witnesses: number; explanations: number }>(
+          `SELECT i.investigation_id AS id, i.title, i.status, v.start_verse_id AS start, v.end_verse_id AS "end",
+                  (SELECT COUNT(*) FROM investigation_witnesses w WHERE w.investigation_id = i.investigation_id) AS witnesses,
+                  (SELECT COUNT(*) FROM investigation_differences d WHERE d.investigation_id = i.investigation_id) AS explanations
+           FROM ${INVESTIGATION_FROM} WHERE i.investigation_id IN (${placeholders(investigationIds)})`,
+          ...investigationIds
+        )
+      : []
+    ).map(({ start, end, ...i }) => [
+      i.id,
+      { kind: "investigation" as const, ...i, passage: formatVerseRange({ start, end }, books!) },
+    ])
+  );
+
   function subjectFor(link: LinkRow): ToledotNote["subject"] | undefined {
     switch (link.kind) {
       case "event": return events.get(link.subjectId);
@@ -802,6 +930,7 @@ export function getTimelineNotesForRange(range: VerseRange): ToledotNote[] {
         const a = artifacts.get(link.subjectId);
         return a && { kind: "artifact", ...a, relation: relationFor(link) };
       }
+      case "investigation": return investigations.get(link.subjectId);
     }
   }
 

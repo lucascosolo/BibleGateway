@@ -6,6 +6,7 @@ const timeline = vi.hoisted(() => ({
   listEventIds: vi.fn(),
   listArtifactIds: vi.fn(),
   listIssueIds: vi.fn(),
+  getInvestigationSummaries: vi.fn(),
 }));
 vi.mock("@/lib/db/timeline", () => timeline);
 
@@ -17,6 +18,7 @@ beforeEach(() => {
   timeline.listEventIds.mockReturnValue(["exodus", "fall-of-samaria"]);
   timeline.listArtifactIds.mockReturnValue(["taylor-prism"]);
   timeline.listIssueIds.mockReturnValue(["long-chronology"]);
+  timeline.getInvestigationSummaries.mockReturnValue([{ id: "deut-32-8-9" }]);
 });
 
 describe("toledotSitemapPaths", () => {
@@ -31,9 +33,10 @@ describe("toledotSitemapPaths", () => {
         "/toledot/people/belshazzar",
         "/toledot/artifacts/taylor-prism",
         "/toledot/issues/long-chronology",
+        "/toledot/investigations/deut-32-8-9",
       ]),
     );
-    expect(paths).toHaveLength(10);
+    expect(paths).toHaveLength(11);
   });
 
   it("returns nothing when no timeline is deployed", async () => {

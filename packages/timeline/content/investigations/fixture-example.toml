@@ -1,0 +1,51 @@
+# A probe for the investigation page, not reviewed content: every statement below is copied from
+# issues/johannine-comma.toml and its citations; the edition rows are read off this corpus's own
+# verse text for 1 John 5:7. Chunk 10 replaces it with the reviewed case studies.
+id = "fixture-example"
+title = "Fixture: three witnesses in heaven? 1 John 5:7-8"
+status = "draft"
+ref = "1John.5.7-1John.5.8"
+summary = """
+A test entry for the investigation page. Some Bibles print a sentence in 1 John 5:7-8 about three who testify in heaven, Father, Word and Holy Spirit; others print only the Spirit, the water and the blood."""
+
+[[witnesses]]
+siglum = "Greek"
+name = "Greek and Oriental witnesses before AD 1400"
+reading = "the Spirit, the water and the blood"
+translation = "the shorter text: three witnesses on earth only"
+language = "en"
+note = "Brown says the heavenly witnesses are missing from these witnesses."
+citations = [{ source = "brown-1997", locator = "ch. 12, n. 14" }]
+
+[[witnesses]]
+siglum = "Latin"
+name = "Late recension of the Latin Vulgate"
+reading = "Father, Word and Holy Spirit, and these three are one"
+translation = "the longer text: three witnesses in heaven"
+language = "en"
+note = "Absent from the early Old Latin, Jerome's Vulgate and Alcuin's revision."
+citations = [{ source = "metzger-textual-commentary", locator = "pp. 647–649 (5.7-8)" }]
+
+[[editions]]
+code = "WEB"
+follows = "Greek"
+
+[[editions]]
+code = "BSB"
+follows = "Greek"
+
+[[editions]]
+code = "KJV"
+follows = "Latin"
+
+[[differences]]
+kind = "textual"
+text = """
+Brown's judgment is that the longer wording is a "3d–4th-century Latin theological gloss" on the shorter original text."""
+held_by = "Raymond E. Brown"
+citations = [{ source = "brown-1997", locator = "ch. 12, Summary of Basic Information (Integrity) and n. 14" }]
+
+[[challenges]]
+text = """
+Gurry notes that the Nicene Creed was formulated before the words existed in any Greek manuscript, so no doctrine depends on the longer text; this argues against reading the variant as theologically decisive, not against Brown's dating."""
+citations = [{ source = "hixson-gurry-2019", locator = "pp. 207–208 (Gurry)" }]

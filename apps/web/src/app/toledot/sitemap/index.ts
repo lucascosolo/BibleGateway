@@ -1,4 +1,4 @@
-import { getPersons, getTimelineBuildId, listArtifactIds, listEventIds, listIssueIds } from "@/lib/db/timeline";
+import { getInvestigationSummaries, getPersons, getTimelineBuildId, listArtifactIds, listEventIds, listIssueIds } from "@/lib/db/timeline";
 
 /**
  * Every Toledot page a crawler should know about, or nothing when no timeline is deployed.
@@ -17,5 +17,6 @@ export async function toledotSitemapPaths(): Promise<string[]> {
     ...getPersons().map((person) => `/toledot/people/${person.id}`),
     ...listArtifactIds().map((id) => `/toledot/artifacts/${id}`),
     ...listIssueIds().map((id) => `/toledot/issues/${id}`),
+    ...getInvestigationSummaries().map((inv) => `/toledot/investigations/${inv.id}`),
   ];
 }

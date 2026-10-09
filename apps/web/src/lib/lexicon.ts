@@ -24,7 +24,14 @@ export type LexiconId =
   | "review-draft"
   | "review-sources-located"
   | "review-claims-checked"
-  | "review-expert-reviewed";
+  | "review-expert-reviewed"
+  | "investigation"
+  | "difference-textual"
+  | "difference-lexical"
+  | "difference-grammatical"
+  | "difference-stylistic"
+  | "difference-interpretive"
+  | "difference-editorial";
 
 export interface LexiconEntry {
   id: LexiconId;
@@ -157,6 +164,50 @@ export const lexicon: Record<LexiconId, LexiconEntry> = {
     term: "Expert reviewed",
     plainLabel: "Expert reviewed",
     gloss: "Reviewed by a subject expert.",
+  },
+  // Investigations and the kinds of difference they explain. Plain English already, so the term
+  // and the plain label are the same words; the gloss says what the word means here.
+  investigation: {
+    id: "investigation",
+    term: "Investigation",
+    plainLabel: "Investigation",
+    gloss: "A close look at one passage: what each ancient copy says, which English editions follow which, and the explanations scholars give, each with its sources.",
+  },
+  "difference-textual": {
+    id: "difference-textual",
+    term: "Textual",
+    plainLabel: "Textual",
+    gloss: "The ancient copies themselves say different things, so editions that follow different copies print different words.",
+  },
+  "difference-lexical": {
+    id: "difference-lexical",
+    term: "Lexical",
+    plainLabel: "Lexical",
+    gloss: "The copies agree, but a word can mean more than one thing and translators choose differently.",
+  },
+  "difference-grammatical": {
+    id: "difference-grammatical",
+    term: "Grammatical",
+    plainLabel: "Grammatical",
+    gloss: "The copies agree, but the grammar allows more than one way to construe the sentence.",
+  },
+  "difference-stylistic": {
+    id: "difference-stylistic",
+    term: "Stylistic",
+    plainLabel: "Stylistic",
+    gloss: "A choice of English style; the meaning is the same.",
+  },
+  "difference-interpretive": {
+    id: "difference-interpretive",
+    term: "Interpretive",
+    plainLabel: "Interpretive",
+    gloss: "The words are agreed; readers disagree about what the passage means by them.",
+  },
+  "difference-editorial": {
+    id: "difference-editorial",
+    term: "Editorial",
+    plainLabel: "Editorial",
+    gloss: "An editor's decision, such as punctuation, verse division or which reading to print in the main text.",
   },
 };
 

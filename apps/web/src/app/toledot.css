@@ -699,3 +699,15 @@
   .toledot-chip,
   .toledot-era__summary::before { transition: none; }
 }
+
+/* Investigations: the witness table scrolls inside its own box so a long reading never widens the page. */
+.toledot-witnesses { overflow-x: auto; }
+.toledot-witnesses table { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink); }
+.toledot-witnesses th, .toledot-witnesses td { text-align: start; vertical-align: top; padding: var(--space-2) var(--space-3); border-bottom: 1px solid var(--color-border); }
+.toledot-witnesses thead th { color: var(--color-ink-muted); font-weight: 600; }
+.toledot-witnesses__reading { font-family: var(--font-serif); font-size: var(--text-base); }
+.toledot-witnesses__note { color: var(--color-ink-muted); margin-top: var(--space-1); }
+.toledot-editions { display: flex; flex-direction: column; gap: var(--space-2); font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink); }
+.toledot-editions__witness { font-weight: 600; }
+.toledot-gloss { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }
+.toledot-position__held { font-family: var(--font-sans); font-size: var(--text-sm); color: var(--color-ink-muted); }

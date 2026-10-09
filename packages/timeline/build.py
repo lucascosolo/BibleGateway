@@ -61,6 +61,8 @@ ARTIFACT_KINDS = {"inscription", "chronicle", "relief", "papyrus", "ostracon", "
 EVIDENCE_ORDER = ["corroborates", "partially-corroborates", "consistent", "silent"]
 ISSUE_KINDS = {"chronology", "textual", "historical", "internal"}
 LINK_TYPES = {"describes", "alludes", "background", "dates"}
+# Why a passage reads differently between witnesses or editions (an investigation's differences).
+DIFFERENCE_KINDS = {"textual", "lexical", "grammatical", "stylistic", "interpretive", "editorial"}
 
 
 # --- Diagnostics -----------------------------------------------------------------------------
@@ -213,6 +215,7 @@ class Content:
     events: dict[str, dict[str, Any]] = field(default_factory=dict)
     issues: dict[str, dict[str, Any]] = field(default_factory=dict)
     persons: dict[str, dict[str, Any]] = field(default_factory=dict)
+    investigations: dict[str, dict[str, Any]] = field(default_factory=dict)
     cited: set[str] = field(default_factory=set)
 
 
@@ -517,6 +520,72 @@ def load_issues(report: Report, directory: Path, content: Content, corpus: Corpu
         }
 
 
+def load_investigations(report: Report, directory: Path, content: Content, corpus: Corpus) -> None:
+    spec: Spec = {
+        "id": (str, True), "title": (str, True), "status": (str, True), "ref": (str, True),
+        "summary": (str, True), "witnesses": (list, True), "editions": (list, False),
+        "differences": (list, True), "challenges": (list, False),
+    }
+    witness_spec: Spec = {
+        "siglum": (str, True), "name": (str, True), "reading": (str, True), "translation": (str, True),
+        "language": (str, True), "note": (str, False), "citations": (list, False),
+    }
+    edition_spec: Spec = {"code": (str, True), "follows": (str, True)}
+    difference_spec: Spec = {"kind": (str, True), "text": (str, True), "held_by": (str, False), "citations": (list, False)}
+    challenge_spec: Spec = {"text": (str, True), "citations": (list, False)}
+
+    def parts(where: str, items: list[Any], label: str, part_spec: Spec) -> list[tuple[str, dict[str, Any]]]:
+        out = []
+        for index, raw_part in enumerate(items):
+            here = f"{where} {label} {index + 1}"
+            part = check_table(report, here, raw_part, part_spec)
+            if part is not None:
+                out.append((here, part))
+        return out
+
+    for path, raw in entity_files(report, directory / "investigations"):
+        where = str(path)
+        inv = check_table(report, where, raw, spec)
+        if inv is None or not check_id(report, where, inv["id"]):
+            continue
+        check_status(report, where, inv["status"])
+        span = resolve_ref(report, where, inv["ref"], corpus)
+        for key in ("witnesses", "differences"):
+            if not inv[key]:
+                report.error(where, f"needs at least one [[{key}]] entry")
+        witnesses = []
+        for here, w in parts(where, inv["witnesses"], "witness", witness_spec):
+            if any(other["siglum"] == w["siglum"] for other in witnesses):
+                report.error(here, f"duplicate witness siglum '{w['siglum']}'")
+                continue
+            witnesses.append({**w, "note": w.get("note"), "citations": citations(report, here, w.get("citations"), content)})
+        sigla = {w["siglum"] for w in witnesses}
+        editions = []
+        for here, e in parts(where, inv.get("editions", []), "edition", edition_spec):
+            if e["follows"] not in sigla:
+                report.error(here, f"follows unknown witness '{e['follows']}'")
+            elif any(other["code"] == e["code"] for other in editions):
+                report.error(here, f"edition '{e['code']}' is listed twice")
+            else:
+                editions.append(e)
+        differences = []
+        for here, d in parts(where, inv["differences"], "difference", difference_spec):
+            check_enum(report, here, "kind", d["kind"], DIFFERENCE_KINDS)
+            differences.append({**d, "held_by": d.get("held_by"), "citations": citations(report, here, d.get("citations"), content)})
+        challenges = [
+            {**c, "citations": citations(report, here, c.get("citations"), content)}
+            for here, c in parts(where, inv.get("challenges", []), "challenge", challenge_spec)
+        ]
+        content.investigations[inv["id"]] = {
+            **inv,
+            "span": span,
+            "witnesses": witnesses,
+            "editions": editions,
+            "differences": differences,
+            "challenges": challenges,
+        }
+
+
 def load_persons(report: Report, directory: Path, content: Content, corpus: Corpus) -> None:
     spec: Spec = {
         "id": (str, True), "name": (str, True), "role": (str, True), "summary": (str, True),
@@ -603,6 +672,11 @@ def all_citations(content: Content):
         for view in issue["views"]:
             for c in view["citations"]:
                 yield where, c
+    for inv in content.investigations.values():
+        where = f"investigations/{inv['id']}.toml"
+        for part in inv["witnesses"] + inv["differences"] + inv["challenges"]:
+            for c in part["citations"]:
+                yield where, c
 
 
 def cross_check(report: Report, content: Content) -> None:
@@ -662,6 +736,8 @@ def fingerprint(content: Content) -> str:
         feed("issue", content.issues[issue_id])
     for person_id in sorted(content.persons):
         feed("person", content.persons[person_id])
+    for investigation_id in sorted(content.investigations):
+        feed("investigation", content.investigations[investigation_id])
     return digest.hexdigest()[:16]
 
 
@@ -794,6 +870,41 @@ def assemble(content: Content, corpus: Corpus) -> sqlite3.Connection:
     for i in content.issues.values():
         db.executemany("INSERT INTO issue_persons VALUES (?, ?)", [(i["id"], person_id) for person_id in i["persons"]])
 
+    for inv in content.investigations.values():
+        iid = inv["id"]
+        db.execute("INSERT INTO investigations VALUES (?, ?, ?, ?)", (iid, inv["title"], inv["summary"], inv["status"]))
+        db.execute("INSERT INTO investigation_verses VALUES (?, ?, ?)", (iid, *inv["span"]))
+
+        def cite_part(kind: str, part_id: str, items: list[dict[str, Any]]) -> None:
+            db.executemany(
+                """INSERT INTO investigation_citations (investigation_id, subject_kind, subject_id, source_id, locator, ordinal)
+                   VALUES (?, ?, ?, ?, ?, ?)""",
+                [(iid, kind, part_id, c["source"], c["locator"], i) for i, c in enumerate(items)],
+            )
+
+        for ordinal, w in enumerate(inv["witnesses"]):
+            witness_id = f"{iid}/witness-{ordinal + 1}"
+            db.execute(
+                "INSERT INTO investigation_witnesses VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                (witness_id, iid, ordinal, w["siglum"], w["name"], w["reading"], w["translation"], w["language"], w["note"]),
+            )
+            cite_part("witness", witness_id, w["citations"])
+        db.executemany(
+            "INSERT INTO investigation_editions VALUES (?, ?, ?, ?)",
+            [(iid, e["code"], e["follows"], ordinal) for ordinal, e in enumerate(inv["editions"])],
+        )
+        for ordinal, d in enumerate(inv["differences"]):
+            difference_id = f"{iid}/difference-{ordinal + 1}"
+            db.execute(
+                "INSERT INTO investigation_differences VALUES (?, ?, ?, ?, ?, ?)",
+                (difference_id, iid, ordinal, d["kind"], d["text"], d["held_by"]),
+            )
+            cite_part("difference", difference_id, d["citations"])
+        for ordinal, c in enumerate(inv["challenges"]):
+            challenge_id = f"{iid}/challenge-{ordinal + 1}"
+            db.execute("INSERT INTO investigation_challenges VALUES (?, ?, ?, ?)", (challenge_id, iid, ordinal, c["text"]))
+            cite_part("challenge", challenge_id, c["citations"])
+
     db.executemany(
         "INSERT INTO meta VALUES (?, ?)",
         [("build_id", fingerprint(content)), ("schema_version", SCHEMA_VERSION), ("corpus_build_id", corpus.build_id)],
@@ -836,6 +947,7 @@ def build(content_dir: Path, corpus_path: Path, out: Path) -> Report:
     load_events(report, content_dir, content, corpus)
     load_issues(report, content_dir, content, corpus)
     load_persons(report, content_dir, content, corpus)
+    load_investigations(report, content_dir, content, corpus)
     cross_check(report, content)
     if report.errors:
         return report

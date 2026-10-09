@@ -213,3 +213,70 @@ CREATE TABLE citations (
   ordinal      INTEGER NOT NULL
 );
 CREATE INDEX citations_subject_idx ON citations (subject_kind, subject_id);
+
+-- Investigations: one passage's witnesses (what is directly observable), the English editions
+-- that follow each, the explanations offered for the difference, and what argues against them.
+-- Own citation and verse tables, so a passage study never borrows an issue's subject kinds.
+CREATE TABLE investigations (
+  investigation_id TEXT PRIMARY KEY,
+  title            TEXT NOT NULL,
+  summary          TEXT NOT NULL,
+  status           TEXT NOT NULL CHECK (status IN ('draft','sources-located','claims-checked','expert-reviewed'))
+);
+
+CREATE TABLE investigation_verses (
+  investigation_id TEXT NOT NULL REFERENCES investigations,
+  start_verse_id   INTEGER NOT NULL,
+  end_verse_id     INTEGER NOT NULL,
+  CHECK (start_verse_id <= end_verse_id)
+);
+CREATE INDEX investigation_verses_range_idx ON investigation_verses (start_verse_id, end_verse_id);
+
+CREATE TABLE investigation_witnesses (
+  witness_id       TEXT PRIMARY KEY,        -- '<investigation id>/witness-<n>'
+  investigation_id TEXT NOT NULL REFERENCES investigations,
+  ordinal          INTEGER NOT NULL,
+  siglum           TEXT NOT NULL,
+  name             TEXT NOT NULL,
+  reading          TEXT NOT NULL,
+  translation      TEXT NOT NULL,
+  language         TEXT NOT NULL,
+  note             TEXT,
+  UNIQUE (investigation_id, siglum)
+);
+
+CREATE TABLE investigation_editions (
+  investigation_id TEXT NOT NULL REFERENCES investigations,
+  code             TEXT NOT NULL,
+  follows          TEXT NOT NULL,
+  ordinal          INTEGER NOT NULL,
+  PRIMARY KEY (investigation_id, code),
+  FOREIGN KEY (investigation_id, follows) REFERENCES investigation_witnesses (investigation_id, siglum)
+);
+
+CREATE TABLE investigation_differences (
+  difference_id    TEXT PRIMARY KEY,        -- '<investigation id>/difference-<n>'
+  investigation_id TEXT NOT NULL REFERENCES investigations,
+  ordinal          INTEGER NOT NULL,
+  kind             TEXT NOT NULL CHECK (kind IN ('textual','lexical','grammatical','stylistic','interpretive','editorial')),
+  text             TEXT NOT NULL,
+  held_by          TEXT
+);
+
+CREATE TABLE investigation_challenges (
+  challenge_id     TEXT PRIMARY KEY,        -- '<investigation id>/challenge-<n>'
+  investigation_id TEXT NOT NULL REFERENCES investigations,
+  ordinal          INTEGER NOT NULL,
+  text             TEXT NOT NULL
+);
+
+CREATE TABLE investigation_citations (
+  citation_id      INTEGER PRIMARY KEY,
+  investigation_id TEXT NOT NULL REFERENCES investigations,
+  subject_kind     TEXT NOT NULL CHECK (subject_kind IN ('witness','difference','challenge')),
+  subject_id       TEXT NOT NULL,
+  source_id        TEXT NOT NULL REFERENCES sources,
+  locator          TEXT,
+  ordinal          INTEGER NOT NULL
+);
+CREATE INDEX investigation_citations_subject_idx ON investigation_citations (subject_kind, subject_id);
