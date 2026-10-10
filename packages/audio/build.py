@@ -11,7 +11,7 @@ Chapters below the score floor are left out rather than shipped wrong: a player 
 verse two seconds late teaches the reader not to trust the highlight, and a missing chapter just
 shows "no audio here". The floor is per-edition in `sources.json` (`min_score`), default 0.4.
 
-Usage: python build.py --work work/ --out ../../data [--edition CODE] [--jobs 8]
+Usage: python build.py --work work/ --out ../../data [--edition CODE ...] [--jobs 8]
 """
 
 from __future__ import annotations
@@ -95,7 +95,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--work", required=True)
     ap.add_argument("--out", required=True, help="the data/ directory")
-    ap.add_argument("--edition")
+    ap.add_argument("--edition", action="append", help="repeatable; default every edition with alignment output")
     ap.add_argument("--jobs", type=int, default=8)
     ap.add_argument("--skip-encode", action="store_true", help="reuse files already in data/audio")
     args = ap.parse_args()
@@ -115,7 +115,7 @@ def main() -> None:
 
     digest = hashlib.sha256()
     for edition in sources["editions"]:
-        if args.edition and edition["code"] != args.edition:
+        if args.edition and edition["code"] not in args.edition:
             continue
         ed_dir = work / edition["code"]
         chapters = sorted(ed_dir.glob("*.json"))

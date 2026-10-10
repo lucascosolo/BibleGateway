@@ -23,7 +23,7 @@ import {
 import { getCorpusBuildId } from "@/lib/db/client";
 import {
   getOutsideBookIndex,
-  getChapterCount,
+  getAdjacentChapters,
   getChapterLastVerse,
   getChapterSummary,
   getExistingVerseIds,
@@ -40,8 +40,8 @@ import {
   type OriginalWord,
 } from "@/lib/db/originals";
 import { getInsightNotes, type InsightNote } from "@/lib/insights/notes";
-import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorkNotesForRange, getWorksForBook, type WorkNote } from "@/lib/db/timeline";
-import type { MarginNote } from "@/lib/timeline/notes";
+import { getTimelineBuildId, getTimelineNotesForRange, getWork, getWorkNotesForRange, getWorksForBook } from "@/lib/db/timeline";
+import { marginNoteKey, workRecordNotes, type MarginNote } from "@/lib/timeline/notes";
 import { getOutsideBook } from "@/lib/db/outside";
 import { CanonNotice } from "@/components/chitzonim/CanonNotice";
 import { OutsideWorld } from "@/components/chitzonim/OutsideWorld";
@@ -134,10 +134,10 @@ function defaultTranslationFor(bookId: number): string {
   return (isOutsideBook(bookId) && getOutsideBook(bookId)?.translations[0]) || "WEB";
 }
 
-/** Who holds the book canonical, from its work record when chunk 5's record exists. */
+/** Who holds the book canonical, across every work record that prints it. */
 function holdersFor(bookId: number): string[] {
-  const work = getWorksForBook(bookId)[0];
-  return work ? (getWork(work.id)?.heldCanonicalBy.map((h) => h.tradition) ?? []) : [];
+  const holders = getWorksForBook(bookId).flatMap((w) => getWork(w.id)?.heldCanonicalBy.map((h) => h.tradition) ?? []);
+  return [...new Set(holders)];
 }
 
 export default async function ReaderPage({ params, searchParams }: ReaderPageProps) {
@@ -353,10 +353,9 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
     );
   }
 
-  const chapterCount = getChapterCount(bookId);
-
-  const prevChapter = chapter > 1 ? `${book?.osisId}.${chapter - 1}` : null;
-  const nextChapter = chapter < chapterCount ? `${book?.osisId}.${chapter + 1}` : null;
+  const adjacent = getAdjacentChapters(bookId, chapter);
+  const prevChapter = adjacent.prev === null ? null : `${book?.osisId}.${adjacent.prev}`;
+  const nextChapter = adjacent.next === null ? null : `${book?.osisId}.${adjacent.next}`;
 
   /**
    * A reference that prints nothing in this translation — `/read/John.5.4?t=BSB` and the other
@@ -658,35 +657,20 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
   );
 }
 
-/** On an outside book's page, one note at the first verse on screen opening its work record. */
-function workRecordNote(range: VerseRange, renderedVerseIds: readonly VerseId[]): WorkNote[] {
-  const book = bookOf(range.start) as number;
-  const first = renderedVerseIds[0];
-  const work = isOutsideBook(book) ? getWorksForBook(book)[0] : undefined;
-  if (!work || first === undefined) return [];
-  return [{
-    id: `work-record:${work.id}@${first}`,
-    anchor: first,
-    start: first,
-    end: first,
-    linkType: "describes",
-    note: null,
-    subject: { kind: "work", id: work.id, title: work.title, status: work.status, role: "record" },
-  }];
-}
-
 /**
  * Timeline notes keyed by the rendered verse they sit under. A link's anchor is an address, and
  * the address space is sparse and a translation may not print every verse, so each note moves
  * to the first verse actually on screen at or after it (a sorted search over the rendered ids,
- * never a walk of the id space). Two links of one subject landing on the same verse stay one note.
+ * never a walk of the id space). Notes sharing a `marginNoteKey` on one verse stay one note.
  */
 function buildToledotNotes(range: VerseRange, renderedVerseIds: readonly VerseId[]) {
   const notes = new Map<VerseId, MarginNote[]>();
   const spans = new Map<string, string>();
   if (getTimelineBuildId() === null) return { notes, spans };
   const seen = new Set<string>();
-  for (const note of [...workRecordNote(range, renderedVerseIds), ...getTimelineNotesForRange(range), ...getWorkNotesForRange(range)]) {
+  const book = bookOf(range.start) as number;
+  const records = workRecordNotes(isOutsideBook(book) ? getWorksForBook(book) : [], renderedVerseIds[0]);
+  for (const note of [...records, ...getTimelineNotesForRange(range), ...getWorkNotesForRange(range)]) {
     let lo = 0;
     let hi = renderedVerseIds.length;
     while (lo < hi) {
@@ -696,8 +680,7 @@ function buildToledotNotes(range: VerseRange, renderedVerseIds: readonly VerseId
     }
     const anchor = renderedVerseIds[lo];
     if (anchor === undefined) continue;
-    const subjectKey = note.id.slice(0, note.id.lastIndexOf("@"));
-    const id = `${subjectKey}@${anchor}`;
+    const id = marginNoteKey(note, anchor);
     if (seen.has(id)) continue;
     seen.add(id);
     const placed = { ...note, id, anchor };

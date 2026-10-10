@@ -222,7 +222,7 @@ const LABELLED_CHAPTERS = new Set(["part-chapter", "page"]);
 
 function requireChapter(book: BookRecord, chapter: number, raw: string): void {
   const { chapterCount, name: bookName } = book;
-  const over = !LABELLED_CHAPTERS.has(book.numbering ?? "") && chapter > chapterCount;
+  const over = !LABELLED_CHAPTERS.has(book.numbering ?? "") && chapter > (book.lastChapter ?? chapterCount);
   if (chapter < 1 || over) {
     throw new InvalidReferenceError(
       `${bookName} has ${chapterCount} chapter${chapterCount === 1 ? "" : "s"}; got ${chapter} in "${raw}"`

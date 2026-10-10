@@ -221,3 +221,24 @@ describe("hasPrologue drives whole-book bounds", () => {
     expect(parseReference("Gen", withPrologue).start).toBe(1_001_001);
   });
 });
+
+describe("lastChapter bounds a chapter (sparse chapter numbering)", () => {
+  const addEsth = (extra: Partial<BookRecord>): BookRecord => ({
+    bookId: 69, osisId: "AddEsth", name: "Additions to Esther", abbreviation: "Add Esth",
+    testament: "DC", chapterCount: 7, canon: "deuterocanon", numbering: "chapter-verse", ...extra,
+  });
+  const withLast = new BookIndex([addEsth({ lastChapter: 16 })]);
+
+  it("resolves chapter 10 and rejects chapter 17 when lastChapter is 16", () => {
+    expect(parseReference("AddEsth.10", withLast).start).toBe(69_010_001);
+    expect(() => parseReference("AddEsth.17", withLast)).toThrow(InvalidReferenceError);
+  });
+
+  it("still rejects chapter 10 without lastChapter", () => {
+    expect(() => parseReference("AddEsth.10", new BookIndex([addEsth({})]))).toThrow(InvalidReferenceError);
+  });
+
+  it("isPlausible accepts 69_016_001 with lastChapter 16", () => {
+    expect(withLast.isPlausible(69_016_001)).toBe(true);
+  });
+});

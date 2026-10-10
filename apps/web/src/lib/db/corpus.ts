@@ -55,7 +55,9 @@ export interface Translation {
 
 const BOOK_COLUMNS = `book_id AS bookId, osis_id AS osisId, name, abbreviation, testament,
             chapter_count AS chapterCount, canon, numbering,
-            EXISTS (SELECT 1 FROM verses v WHERE v.verse_id = books.book_id * 1000000 + 1000) AS hasPrologue`;
+            EXISTS (SELECT 1 FROM verses v WHERE v.verse_id = books.book_id * 1000000 + 1000) AS hasPrologue,
+            (SELECT MAX(v.verse_id) FROM verses v WHERE v.verse_id < (books.book_id + 1) * 1000000
+               AND v.verse_id >= books.book_id * 1000000) / 1000 % 1000 AS lastChapter`;
 
 /** SQLite has no boolean; `hasPrologue` arrives as 0 or 1. */
 const toBookRecords = (rows: unknown[]): BookRecord[] =>
@@ -218,6 +220,19 @@ export function getChapterCount(bookId: number): number {
     | { n: number }
     | undefined;
   return row?.n ?? 0;
+}
+
+/**
+ * The nearest real chapters either side of `chapter`. Not `chapter ± 1` against `chapter_count`:
+ * outside books number their chapters sparsely or from past 1 (Additions to Esther is 10-16,
+ * the Infancy Gospel of Thomas runs to 215 across 45 chapters).
+ */
+export function getAdjacentChapters(bookId: number, chapter: number): { prev: number | null; next: number | null } {
+  const row = prepared(
+    `SELECT (SELECT MAX(chapter) FROM verses WHERE book_id = ? AND chapter < ?) AS prev,
+            (SELECT MIN(chapter) FROM verses WHERE book_id = ? AND chapter > ?) AS next`
+  ).get(bookId, chapter, bookId, chapter) as { prev: number | null; next: number | null };
+  return { prev: row.prev, next: row.next };
 }
 
 /** Last verse number in a chapter — the real end of a chapter range, not the 999 upper bound. */
