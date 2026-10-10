@@ -98,7 +98,12 @@ export function TimelineStrip({
       if (link && target) {
         const frame = node.getBoundingClientRect();
         const bar = link.getBoundingClientRect();
-        node.scrollLeft += bar.left + Math.min(bar.width, frame.width) / 2 - (frame.left + frame.width / 2);
+        // A bar wider than the strip would be centred with its start (and its start-year label) cut
+        // off at the left edge; start it a little in from the edge instead.
+        node.scrollLeft +=
+          bar.width > frame.width
+            ? bar.left - frame.left - 56
+            : bar.left + bar.width / 2 - (frame.left + frame.width / 2);
         if (returning) revealVertically(target);
       } else if (saved?.scrollLeft !== undefined) {
         node.scrollLeft = saved.scrollLeft;
@@ -205,7 +210,9 @@ export function TimelineStrip({
                     className="toledot-eras__era"
                     style={{ left: yearOffset(from, start, PX_PER_YEAR), width: spanYears(start, end) * PX_PER_YEAR }}
                   >
-                    <span>{era.name}</span> <span className="toledot-eras__range">{formatRange(era.start, era.end)}</span>
+                    <span className="toledot-eras__label">
+                      <span>{era.name}</span> <span className="toledot-eras__range">{formatRange(era.start, era.end)}</span>
+                    </span>
                   </li>
                 );
               })}

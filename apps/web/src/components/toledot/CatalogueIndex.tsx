@@ -115,7 +115,10 @@ export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: P
     const saved = readPlace(placeKey);
     const view = chooseCatalogueView(fragment && !read.section ? read.state : null, read.section !== null, saved);
     if (view) {
-      setState({ sort: view.sort === "date" || view.sort === "book" ? view.sort : "era", q: view.q, facets: view.facets });
+      const restored: State = { sort: view.sort === "date" || view.sort === "book" ? view.sort : "era", q: view.q, facets: view.facets };
+      setState(restored);
+      // Keep the address in step with what the list shows, so a copied link carries the view.
+      writeLocation(restored);
       setOpen(view.open);
       setRestore(saved);
     } else {

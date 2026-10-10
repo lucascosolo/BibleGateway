@@ -113,7 +113,9 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  overflow: hidden;
+  /* clip, not hidden: hidden would make the band its own scroll container and the sticky label
+     below would stick to the band instead of to the strip's visible edge. */
+  overflow: clip;
   padding-inline: var(--space-2);
   white-space: nowrap;
   background: var(--color-bg-sunken);
@@ -122,6 +124,16 @@
   font-size: var(--text-xs);
   font-style: italic;
   color: var(--color-ink-muted);
+}
+/* An era that starts before the visible part of the strip keeps its name on screen: the label
+   sticks to the strip's left edge and stays inside its own band. Entry pages open the strip
+   scrolled to the entry, so without this most eras showed as an unlabelled band. */
+.toledot-eras__label {
+  position: sticky;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
 }
 .toledot-eras__range { font-family: var(--font-sans); font-style: normal; color: var(--color-ink-faint); }
 
