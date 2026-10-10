@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { WORKSPACES, type Workspace } from "./workspaces";
 import { HeartIcon, WORKSPACE_ICONS } from "./icons";
 import { SUPPORT_URL } from "@/lib/support";
-import { GlossLabel } from "@/components/GlossLabel";
+import { GlossLabel, GlossTooltip } from "@/components/GlossLabel";
 import { Wordmark } from "@/components/Wordmark";
 import { ThemeToggle } from "./ThemeToggle";
 import { SelahToggle } from "./SelahToggle";
@@ -28,7 +28,7 @@ export function NavRail({ active }: { active: Workspace["key"] }) {
         {WORKSPACES.map((ws) => {
           const Icon = WORKSPACE_ICONS[ws.icon];
           const isActive = ws.key === active;
-          return (
+          const link = (
             <Link
               key={ws.key}
               href={ws.href}
@@ -55,12 +55,20 @@ export function NavRail({ active }: { active: Workspace["key"] }) {
                 // The gloss is not lost: it is the tooltip on hover and the accessible
                 // description always. The reachable-on-touch version of it is "Plain labels",
                 // which replaces the term outright and lives one tap away in the panel below.
-                <GlossLabel id={ws.lexiconId} className="items-center text-center" compact />
+                <GlossLabel id={ws.lexiconId} className="items-center text-center" compact withinControl />
               ) : (
                 <span>{ws.plainLabel}</span>
               )}
               {ws.status === "planned" && <span className="sr-only">{plannedSrText(ws.phase)}</span>}
             </Link>
+          );
+          // The tooltip belongs to the link, never to a span inside it: see `withinControl`.
+          return ws.lexiconId ? (
+            <GlossTooltip key={ws.key} id={ws.lexiconId}>
+              {link}
+            </GlossTooltip>
+          ) : (
+            link
           );
         })}
       </nav>

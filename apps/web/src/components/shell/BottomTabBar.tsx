@@ -5,7 +5,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { WORKSPACES, HOME_WORKSPACE, COLLAPSED_WORKSPACE_KEYS, type Workspace } from "./workspaces";
 import { MenuIcon, WORKSPACE_ICONS } from "./icons";
-import { GlossLabel } from "@/components/GlossLabel";
+import { GlossLabel, GlossTooltip } from "@/components/GlossLabel";
 import { LayerSheet } from "./LayerControls";
 import { MoreSheet } from "./MoreSheet";
 import { PlannedMarker, plannedSrText } from "./PlannedMarker";
@@ -57,7 +57,7 @@ export function BottomTabBar({ active }: { active: Workspace["key"] }) {
           if (ws.key === "home") return <HomeTab key={ws.key} ws={ws} isActive={isActive} />;
 
           const Icon = WORKSPACE_ICONS[ws.icon];
-          return (
+          const link = (
             <Link
               key={ws.key}
               data-tab-cell={ws.key}
@@ -80,12 +80,20 @@ export function BottomTabBar({ active }: { active: Workspace["key"] }) {
                 {ws.status === "planned" && <PlannedMarker />}
               </span>
               {ws.lexiconId ? (
-                <GlossLabel id={ws.lexiconId} compact className="w-full items-center text-center" />
+                <GlossLabel id={ws.lexiconId} compact withinControl className="w-full items-center text-center" />
               ) : (
                 <span className="w-full truncate text-center">{ws.plainLabel}</span>
               )}
               {ws.status === "planned" && <span className="sr-only">{plannedSrText(ws.phase)}</span>}
             </Link>
+          );
+          // The tooltip belongs to the link, never to a span inside it: see `withinControl`.
+          return ws.lexiconId ? (
+            <GlossTooltip key={ws.key} id={ws.lexiconId}>
+              {link}
+            </GlossTooltip>
+          ) : (
+            link
           );
         })}
         <MoreTab

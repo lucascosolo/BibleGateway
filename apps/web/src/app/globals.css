@@ -394,8 +394,19 @@
   --font-mono: var(--jot-font-mono);
 }
 
-* {
-  border-color: var(--color-border);
+/* In `@layer base`, never unlayered. An unlayered rule beats every rule inside a cascade layer
+   regardless of specificity, and Tailwind's utilities live in `@layer utilities`, so the bare
+   `* { border-color }` this used to be silently overrode `border-transparent`,
+   `border-[var(--color-brand)]` and every other border-colour utility in the app. Measured
+   2026-10-10 at 1024px: all six top tabs, the active one included, computed
+   `border-bottom-color: oklch(0.85 0.017 70)`, so the current-workspace indicator had never
+   rendered and every inactive tab carried a grey bar instead of none. */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border);
+  }
 }
 
 html {

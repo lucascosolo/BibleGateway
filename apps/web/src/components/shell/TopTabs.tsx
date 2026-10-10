@@ -4,7 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import { WORKSPACES, type Workspace } from "./workspaces";
 import { WORKSPACE_ICONS } from "./icons";
-import { GlossLabel } from "@/components/GlossLabel";
+import { GlossLabel, GlossTooltip } from "@/components/GlossLabel";
 import { Wordmark } from "@/components/Wordmark";
 import { ThemeToggle } from "./ThemeToggle";
 import { LayerControls } from "./LayerControls";
@@ -28,7 +28,7 @@ export function TopTabs({ active }: { active: Workspace["key"] }) {
         {WORKSPACES.map((ws) => {
           const Icon = WORKSPACE_ICONS[ws.icon];
           const isActive = ws.key === active;
-          return (
+          const link = (
             <Link
               key={ws.key}
               href={ws.href}
@@ -51,12 +51,20 @@ export function TopTabs({ active }: { active: Workspace["key"] }) {
                 {ws.status === "planned" && <PlannedMarker />}
               </span>
               {ws.lexiconId ? (
-                <GlossLabel id={ws.lexiconId} compact />
+                <GlossLabel id={ws.lexiconId} compact withinControl />
               ) : (
                 <span>{ws.plainLabel}</span>
               )}
               {ws.status === "planned" && <span className="sr-only">{plannedSrText(ws.phase)}</span>}
             </Link>
+          );
+          // The tooltip belongs to the link, never to a span inside it: see `withinControl`.
+          return ws.lexiconId ? (
+            <GlossTooltip key={ws.key} id={ws.lexiconId}>
+              {link}
+            </GlossTooltip>
+          ) : (
+            link
           );
         })}
       </nav>
