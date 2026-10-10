@@ -17,19 +17,23 @@ export function EntityTimeline({ entries, label, placeKey }: { entries: readonly
   const around = getTimelineWindow(range);
   if (!around.available) return null;
   const first = entries.reduce((a, b) => (b.earliest < a.earliest ? b : a));
+  const ids = new Set(entries.map((entry) => entry.id));
+  // A neighbour that starts before the window would be drawn with its title off the left edge,
+  // taking a row while showing nothing but a rule; only neighbours that begin inside it are context.
+  const shown = around.events.filter((event) => ids.has(event.id) || event.earliest >= range.from);
 
   return (
     <section className="toledot-entity__timeline" aria-label="Where this sits on the timeline">
       <TimelineStrip
         compact
         eras={around.eras}
-        events={around.events.map(withDisplay)}
+        events={shown.map(withDisplay)}
         from={range.from}
         to={range.to}
         maxRows={2}
         overflowHref="/toledot/events"
         placeKey={placeKey}
-        current={{ ids: entries.map((entry) => entry.id), label }}
+        current={{ ids: [...ids], label }}
       />
       <Link href={`/toledot?at=${encodeURIComponent(first.id)}`} className="toledot-entity__full">
         Back to the full timeline
