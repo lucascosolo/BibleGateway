@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { shareMetadata } from "@/app/og/data";
 import { Citations } from "@/components/toledot/Citations";
 import { EntitySection, EntityShell } from "@/components/toledot/EntityShell";
+import { EntityTimeline } from "@/components/toledot/EntityTimeline";
 import { EventList, ISSUE_KIND } from "@/components/toledot/Lists";
 import { ToledotStructuredData } from "@/components/toledot/ToledotStructuredData";
 import { VerseLinks } from "@/components/toledot/VerseLinks";
@@ -34,7 +35,12 @@ export default async function IssuePage({ params }: Props) {
   const events = getEventSummaries(issue.eventIds);
 
   return (
-    <EntityShell title={issue.title} status={issue.status} meta={<>{ISSUE_KIND[issue.kind]} question · {issue.views.length} views</>}>
+    <EntityShell
+      title={issue.title}
+      status={issue.status}
+      meta={<>{ISSUE_KIND[issue.kind]} question · {issue.views.length} views</>}
+      timeline={<EntityTimeline entries={events} label="in this question" placeKey={`/toledot/issues/${issue.id}`} />}
+    >
       <ToledotStructuredData kind="issue" issue={issue} />
       <p className="toledot-prose">{issue.summary}</p>
       <Citations citations={issue.citations} />

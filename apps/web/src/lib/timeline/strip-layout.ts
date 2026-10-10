@@ -23,7 +23,10 @@ export function yearOffset(from: number, year: number, pxPerYear: number): numbe
 /**
  * Bars for the events overlapping `[from, to]` (inclusive), packed greedy first-fit by earliest
  * year into rows per axis. `reserve` is the horizontal room a bar claims in its row beyond its
- * own width (its label), so a short bar's caption never runs under its neighbour.
+ * own width (its label), so a short bar's caption never runs under its neighbour. Ids in `first`
+ * are packed before the rest, so the entries a view is about take the top rows and a row cap
+ * never hides them. A row only accepts a bar starting past everything already in it, so packing
+ * out of date order costs space, never an overlap.
  */
 export function layoutBars(
   events: readonly {
@@ -39,11 +42,16 @@ export function layoutBars(
   pxPerYear: number,
   minWidth = 8,
   reserve = 0,
+  first: ReadonlySet<string> = new Set(),
 ): StripBar[] {
   const rowEnds = new Map<Axis, number[]>();
+  const rank = (id: string) => (first.has(id) ? 0 : 1);
   return events
     .filter((event) => overlaps(event.earliest, event.latest, from, to))
-    .sort((a, b) => a.earliest - b.earliest || a.latest - b.latest || a.id.localeCompare(b.id))
+    .sort(
+      (a, b) =>
+        rank(a.id) - rank(b.id) || a.earliest - b.earliest || a.latest - b.latest || a.id.localeCompare(b.id),
+    )
     .map((event) => {
       const left = yearOffset(from, event.earliest, pxPerYear);
       const width = Math.max(spanYears(event.earliest, event.latest) * pxPerYear, minWidth);
@@ -103,5 +111,22 @@ export function defaultWindow(events: readonly { earliest: number; latest: numbe
   return {
     from: nonZero(Math.floor(earliest / 50) * 50 - 50, 1),
     to: nonZero(Math.ceil(latest / 50) * 50 + 50, -1),
+  };
+}
+
+/**
+ * The window a compact strip shows around one entry's dated events: their envelope plus context on
+ * each side (at least a century, or half the envelope), widened to half-centuries. Null when there
+ * is nothing dated, so the caller draws no strip rather than an empty one.
+ */
+export function entryWindow(events: readonly { earliest: number; latest: number }[]): { from: number; to: number } | null {
+  if (events.length === 0) return null;
+  const nonZero = (year: number, fallback: number) => (year === 0 ? fallback : year);
+  const earliest = Math.min(...events.map((event) => event.earliest));
+  const latest = Math.max(...events.map((event) => event.latest));
+  const context = Math.max(100, Math.round(spanYears(earliest, latest) / 2));
+  return {
+    from: nonZero(Math.floor((earliest - context) / 50) * 50, -1),
+    to: nonZero(Math.ceil((latest + context) / 50) * 50, 1),
   };
 }

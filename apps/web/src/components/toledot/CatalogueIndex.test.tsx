@@ -6,6 +6,7 @@ import { CatalogueIndex, type CatalogueItem } from "./CatalogueIndex";
 afterEach(() => {
   cleanup();
   window.history.replaceState(null, "", "/");
+  window.sessionStorage.clear();
 });
 
 const eras = [
@@ -72,5 +73,59 @@ describe("CatalogueIndex", () => {
     fireEvent.click(screen.getByRole("radio", { name: "when written" }));
     expect(screen.getByText("1 of 3 events")).toBeTruthy();
     expect(screen.queryByText("Alpha rises")).toBeNull();
+  });
+
+  describe("place memory", () => {
+    const KEY = "jot:timeline-place:v1:/toledot/events";
+
+    it("keeps the filter and hand-closed sections, and restores them on the next visit", () => {
+      window.sessionStorage.clear();
+      const first = setup();
+      fireEvent.click(screen.getByRole("radio", { name: "what happened" }));
+      const late = first.container.querySelector<HTMLDetailsElement>("details#late")!;
+      late.open = false;
+      fireEvent(late, new Event("toggle"));
+      cleanup();
+
+      const { container } = setup();
+      expect(screen.getByRole("radio", { name: "what happened" }).getAttribute("aria-checked")).toBe("true");
+      expect(screen.getByText("2 of 3 events")).toBeTruthy();
+      expect(container.querySelector<HTMLDetailsElement>("details#late")!.open).toBe(false);
+    });
+
+    it("marks the row last opened when coming back", () => {
+      window.sessionStorage.clear();
+      setup();
+      const link = screen.getByRole("link", { name: "Gamma falls" });
+      link.addEventListener("click", (e) => e.preventDefault());
+      fireEvent.click(link);
+      expect(JSON.parse(window.sessionStorage.getItem(KEY)!).openedId).toBe("c");
+      cleanup();
+
+      const { container } = setup();
+      expect(container.querySelector('[data-entry-id="c"]')?.getAttribute("data-returned")).toBe("true");
+    });
+
+    it("lets a filter in the URL win over the saved view", () => {
+      window.sessionStorage.setItem(
+        KEY,
+        JSON.stringify({ savedAt: Date.now(), view: { sort: "era", q: "", facets: { axis: "composition" }, open: {} } }),
+      );
+      window.history.replaceState(null, "", "/toledot/events#axis=narrative");
+      setup();
+      expect(screen.getByRole("radio", { name: "what happened" }).getAttribute("aria-checked")).toBe("true");
+    });
+
+    it("works with storage unavailable", () => {
+      const original = Object.getOwnPropertyDescriptor(window, "sessionStorage")!;
+      Object.defineProperty(window, "sessionStorage", { configurable: true, get: () => { throw new Error("blocked"); } });
+      try {
+        setup();
+        fireEvent.click(screen.getByRole("radio", { name: "what happened" }));
+        expect(screen.getByText("2 of 3 events")).toBeTruthy();
+      } finally {
+        Object.defineProperty(window, "sessionStorage", original);
+      }
+    });
   });
 });

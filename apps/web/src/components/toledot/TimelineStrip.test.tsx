@@ -69,4 +69,51 @@ describe("TimelineStrip", () => {
       expect(container.querySelector(".toledot-overflow")).toBeNull();
     });
   });
+
+  describe("on an entry page", () => {
+    const four = [
+      ev("a", "Event a", "narrative", "firm", "900 BCE"),
+      ev("b", "Event b", "narrative", "firm", "900 BCE"),
+      ev("c", "Event c", "narrative", "firm", "900 BCE"),
+      ev("isaiah-scroll", "Isaiah composed", "composition", "firm", "740–700 BCE"),
+    ];
+
+    it("marks the current entry in words, not colour alone, and draws it even past the row cap", () => {
+      const { container } = render(
+        <TimelineStrip eras={eras} events={four} from={-1000} to={300} maxRows={1} compact current={{ ids: ["c"], label: "this event" }} />,
+      );
+      const link = screen.getByRole("link", { name: /Event c/ });
+      expect(link.getAttribute("aria-current")).toBe("true");
+      expect(link.getAttribute("aria-label")).toContain("this event");
+      expect(link.textContent).toContain("this event");
+      expect(container.querySelector('[data-entry-id="c"]')?.hasAttribute("data-current")).toBe(true);
+      expect(screen.queryByRole("link", { name: /Event a/ })).toBeNull();
+    });
+
+    it("leaves out lanes with nothing in them", () => {
+      render(<TimelineStrip eras={eras} events={four} from={-1000} to={300} compact current={{ ids: ["a"], label: "this event" }} />);
+      expect(screen.queryAllByLabelText(/^canon/i)).toHaveLength(0);
+      expect(screen.getAllByLabelText(/^narrative/i).length).toBeGreaterThan(0);
+    });
+
+    it("records the entry opened from it, and the keyboard, in the place store", () => {
+      window.sessionStorage.clear();
+      render(<TimelineStrip eras={eras} events={four} from={-1000} to={300} placeKey="/toledot/events/x" />);
+      screen.getByRole("link", { name: /Isaiah composed/ }).addEventListener("click", (e) => e.preventDefault());
+      screen.getByRole("link", { name: /Isaiah composed/ }).dispatchEvent(new MouseEvent("click", { bubbles: true, detail: 0 }));
+      const saved = JSON.parse(window.sessionStorage.getItem("jot:timeline-place:v1:/toledot/events/x")!);
+      expect(saved.openedId).toBe("isaiah-scroll");
+      expect(saved.viaKeyboard).toBe(true);
+    });
+
+    it("marks the entry it returns to", () => {
+      window.sessionStorage.setItem(
+        "jot:timeline-place:v1:/toledot",
+        JSON.stringify({ savedAt: Date.now(), openedId: "b", scrollLeft: 0 }),
+      );
+      const { container } = render(<TimelineStrip eras={eras} events={four} from={-1000} to={300} placeKey="/toledot" />);
+      expect(container.querySelector('[data-entry-id="b"]')?.getAttribute("data-returned")).toBe("true");
+      expect(container.querySelector('[data-entry-id="a"]')?.hasAttribute("data-returned")).toBe(false);
+    });
+  });
 });

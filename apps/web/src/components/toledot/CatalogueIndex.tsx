@@ -1,8 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type MouseEvent } from "react";
 
 import { CatalogueRow, type CatalogueRowProps } from "@/components/toledot/CatalogueRow";
+import {
+  arrivedByBack,
+  chooseCatalogueView,
+  findEntry,
+  listenForBack,
+  markReturned,
+  readPlace,
+  savePlace,
+  settle,
+  type Place,
+} from "@/lib/timeline/place";
 import { groupByBook, groupByEra, matchesQuery, sortByYear, type EraLike } from "@/lib/timeline/catalogue";
 import { formatRange } from "@/lib/timeline/years";
 
@@ -82,14 +93,35 @@ interface Props {
 }
 
 export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: Props) {
+  const placeKey = `/toledot/${kind}`;
+  const root = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<State>(INITIAL);
   const [wide, setWide] = useState(false);
   const [section, setSection] = useState<string | null>(null);
+  /** Sections the reader opened or closed by hand; the rest follow the default. */
+  const [open, setOpen] = useState<Record<string, boolean>>({});
+  const [restore, setRestore] = useState<Place | null>(null);
+  const pendingSave = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   useEffect(() => {
+    listenForBack();
     const read = readLocation(chips.map((chip) => chip.key));
-    setState(read.state);
-    setSection(read.section);
+    let fragment = false;
+    try {
+      fragment = window.location.hash.length > 1;
+    } catch {
+      // Treat the URL as carrying nothing.
+    }
+    const saved = readPlace(placeKey);
+    const view = chooseCatalogueView(fragment && !read.section ? read.state : null, read.section !== null, saved);
+    if (view) {
+      setState({ sort: view.sort === "date" || view.sort === "book" ? view.sort : "era", q: view.q, facets: view.facets });
+      setOpen(view.open);
+      setRestore(saved);
+    } else {
+      setState(read.state);
+      setSection(read.section);
+    }
     try {
       setWide(window.matchMedia("(min-width: 64rem)").matches);
     } catch {
@@ -103,11 +135,79 @@ export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: P
     if (section) document.getElementById(section)?.scrollIntoView();
   }, [section]);
 
+  // Back on the page with a saved view: the row last opened goes near the top of the viewport,
+  // or the saved scroll when that row is filtered out; re-applied while layout settles.
+  useEffect(() => {
+    const node = root.current;
+    if (!restore || !node) return;
+    const row = restore.openedId ? findEntry(node, restore.openedId) : null;
+    const apply = () => {
+      if (row) {
+        const top = row.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.2;
+        window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
+      } else if (restore.scrollY !== undefined) {
+        window.scrollTo({ top: restore.scrollY, behavior: "instant" });
+      }
+    };
+    const cancel = settle(apply, node);
+    if (row) {
+      markReturned(row);
+      if (restore.viaKeyboard && arrivedByBack()) row.querySelector("a")?.focus({ preventScroll: true });
+    }
+    return cancel;
+  }, [restore]);
+
+  // Once the reader scrolls the page themselves, where they scrolled to is the place.
+  useEffect(() => {
+    let moved = false;
+    const onInput = () => {
+      moved = true;
+    };
+    const onScroll = () => {
+      if (!moved) return;
+      clearTimeout(pendingSave.current);
+      pendingSave.current = setTimeout(() => savePlace(placeKey, { scrollY: window.scrollY, openedId: null }), 200);
+    };
+    const inputs = ["wheel", "touchstart", "keydown"] as const;
+    for (const type of inputs) window.addEventListener(type, onInput, { passive: true });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      clearTimeout(pendingSave.current);
+      for (const type of inputs) window.removeEventListener(type, onInput);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [placeKey]);
+
+  const keepView = (next: State, nextOpen: Record<string, boolean>) =>
+    savePlace(placeKey, { view: { ...next, open: nextOpen } });
+
   const update = (patch: Partial<State>) => {
     const next = { ...state, ...patch };
     setState(next);
     setSection(null);
+    setRestore(null);
     writeLocation(next);
+    keepView(next, open);
+  };
+
+  const toggled = (id: string, isOpen: boolean, byDefault: boolean) => {
+    if ((open[id] ?? byDefault) === isOpen) return;
+    const next = { ...open, [id]: isOpen };
+    setOpen(next);
+    keepView(state, next);
+  };
+
+  const opened = (click: MouseEvent<HTMLDivElement>) => {
+    const link = (click.target as Element).closest("a");
+    const id = link?.closest<HTMLElement>("[data-entry-id]")?.dataset.entryId;
+    if (!id) return;
+    clearTimeout(pendingSave.current);
+    savePlace(placeKey, {
+      view: { ...state, open },
+      openedId: id,
+      viaKeyboard: click.detail === 0,
+      scrollY: window.scrollY,
+    });
   };
 
   const bookNames = useMemo(() => new Map(books), [books]);
@@ -127,6 +227,7 @@ export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: P
       {list.map((item) => (
         <CatalogueRow
           key={item.id}
+          entryId={item.id}
           href={item.href}
           title={item.title}
           when={item.when}
@@ -156,7 +257,7 @@ export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: P
         : [];
 
   return (
-    <div className="toledot-catalogue__index" data-kind={kind}>
+    <div ref={root} className="toledot-catalogue__index" data-kind={kind} onClick={opened}>
       <div className="toledot-tools">
         <input
           type="search"
@@ -217,12 +318,15 @@ export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: P
       ) : state.sort === "date" ? (
         rows(sortByYear(shown, (item) => item.year))
       ) : (
-        sections.map((group, index) => (
+        sections.map((group, index) => {
+          const byDefault = active || wide || index === 0 || section === group.id;
+          return (
           <details
             key={`${state.sort}-${group.id}`}
             id={group.id}
             className="toledot-era"
-            open={active || wide || index === 0 || section === group.id}
+            open={open[group.id] ?? byDefault}
+            onToggle={(toggle) => toggled(group.id, toggle.currentTarget.open, byDefault)}
           >
             <summary className="toledot-era__summary">
               <span className="toledot-era__name">{group.name}</span>
@@ -233,7 +337,8 @@ export function CatalogueIndex({ kind, eras, books, items, chips, countNoun }: P
             </summary>
             {rows(group.items)}
           </details>
-        ))
+          );
+        })
       )}
     </div>
   );

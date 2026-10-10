@@ -15,12 +15,14 @@ export interface CatalogueRowProps {
   gist: string;
   marks: RowMark[];
   evidence?: { grade: EvidenceGrade; hasTension: boolean };
+  /** The entry's id, which the catalogue's place memory anchors to. */
+  entryId?: string;
 }
 
 /** One row of an index: title, date span, one-line gist and small marks. Shared by all three kinds. */
-export function CatalogueRow({ href, title, when, gist, marks, evidence }: CatalogueRowProps) {
+export function CatalogueRow({ href, title, when, gist, marks, evidence, entryId }: CatalogueRowProps) {
   return (
-    <li className="toledot-row">
+    <li className="toledot-row" data-entry-id={entryId}>
       <div className="toledot-row__head">
         <Link className="toledot-row__title toledot-link" href={href}>
           {title}

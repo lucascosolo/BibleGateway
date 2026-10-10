@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { shareMetadata } from "@/app/og/data";
 import { Citations } from "@/components/toledot/Citations";
 import { EntitySection, EntityShell, RangeTrack } from "@/components/toledot/EntityShell";
+import { EntityTimeline } from "@/components/toledot/EntityTimeline";
 import { IssueList } from "@/components/toledot/Lists";
 import { RelationGroup } from "@/components/toledot/RelationGroup";
 import { ToledotStructuredData } from "@/components/toledot/ToledotStructuredData";
@@ -91,6 +92,7 @@ export default async function EventPage({ params }: Props) {
     <EntityShell
       title={event.title}
       status={event.status}
+      timeline={<EntityTimeline entries={[event]} label="this event" placeKey={`/toledot/events/${event.id}`} />}
       meta={
         <>
           {AXIS_DATE_LABEL[event.axis]}: <strong>{formatRange(event.earliest, event.latest)}</strong>

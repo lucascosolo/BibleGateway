@@ -9,7 +9,20 @@ import { ReviewMarker } from "./ReviewMarker";
 
 
 /** The frame every Toledot entity page shares: the way back, the title, its facts line, its review grade. */
-export function EntityShell({ title, meta, status, children }: { title: string; meta: ReactNode; status?: ReviewStatus; children: ReactNode }) {
+export function EntityShell({
+  title,
+  meta,
+  status,
+  timeline,
+  children,
+}: {
+  title: string;
+  meta: ReactNode;
+  status?: ReviewStatus;
+  /** The compact strip around this entry, directly under the title so a phone reaches it at once. */
+  timeline?: ReactNode;
+  children: ReactNode;
+}) {
   return (
     <article className="toledot-entity">
       <nav aria-label="Breadcrumb" className="toledot-entity__crumb">
@@ -20,6 +33,7 @@ export function EntityShell({ title, meta, status, children }: { title: string; 
         <p className="toledot-entity__meta">{meta}</p>
         {status && <ReviewMarker status={status} />}
       </header>
+      {timeline}
       {children}
     </article>
   );

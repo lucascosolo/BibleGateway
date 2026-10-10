@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { shareMetadata } from "@/app/og/data";
 import { Citations } from "@/components/toledot/Citations";
 import { EntitySection, EntityShell } from "@/components/toledot/EntityShell";
+import { EntityTimeline } from "@/components/toledot/EntityTimeline";
 import { EvidenceBadge } from "@/components/toledot/EvidenceBadge";
 import { EVIDENCE_MEANING } from "@/lib/timeline/evidence";
 import { EventList, IssueList } from "@/components/toledot/Lists";
@@ -42,6 +43,7 @@ export default async function PersonPage({ params }: Props) {
     <EntityShell
       title={person.name}
       status={person.status}
+      timeline={<EntityTimeline entries={events} label="with this person" placeKey={`/toledot/people/${person.id}`} />}
       meta={
         <>
           {person.role}

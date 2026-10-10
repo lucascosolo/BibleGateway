@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import type { EventSummary } from "@/lib/db/timeline";
 import { spanYears } from "./years";
-import { layoutBars, limitRows, type StripBar } from "./strip-layout";
+import { entryWindow, layoutBars, limitRows, type StripBar } from "./strip-layout";
 
 function ev(id: string, earliest: number, latest: number, axis: EventSummary["axis"] = "narrative"): EventSummary {
   return { id, title: id, axis, category: "x", confidence: "firm", status: "draft", earliest, latest, traditional: null, bookIds: [], segment: null, gist: "", firstVerse: null };
@@ -90,5 +90,53 @@ describe("limitRows", () => {
     const { drawn, hidden } = limitRows(bars, 0);
     expect(drawn).toEqual([]);
     expect(hidden).toEqual(bars);
+  });
+});
+
+describe("layoutBars with entries packed first", () => {
+  it("gives the named entries the top row even when earlier neighbours would have taken it", () => {
+    const events = [ev("before", -1000, -950), ev("current", -980, -900), ev("after", -890, -880)];
+    expect(by(layoutBars(events, -1100, -800, 1), "current").lane).toBe(1);
+    const bars = layoutBars(events, -1100, -800, 1, 8, 0, new Set(["current"]));
+    expect(by(bars, "current").lane).toBe(0);
+    expect(by(bars, "before").lane).toBe(1);
+  });
+
+  it("never lets two bars in one row overlap when packed out of date order", () => {
+    const events = [ev("a", -1000, -900), ev("b", -950, -850), ev("c", -880, -800), ev("d", -990, -960)];
+    const bars = layoutBars(events, -1100, -700, 1, 8, 0, new Set(["c"]));
+    for (const x of bars) {
+      for (const y of bars) {
+        if (x === y || x.axis !== y.axis || x.lane !== y.lane) continue;
+        expect(x.left + x.width < y.left || y.left + y.width < x.left).toBe(true);
+      }
+    }
+  });
+});
+
+describe("entryWindow", () => {
+  it("is null when the entry has nothing dated", () => {
+    expect(entryWindow([])).toBeNull();
+  });
+
+  it("covers a short event with at least a century of context each side, on half-centuries", () => {
+    const window = entryWindow([{ earliest: -722, latest: -720 }])!;
+    expect(window).toEqual({ from: -850, to: -600 });
+    expect(Math.abs(window.from % 50)).toBe(0);
+    expect(Math.abs(window.to % 50)).toBe(0);
+  });
+
+  it("covers every linked event of a person, with context proportional to the envelope", () => {
+    const window = entryWindow([
+      { earliest: -1010, latest: -970 },
+      { earliest: -600, latest: -580 },
+    ])!;
+    expect(window.from).toBeLessThanOrEqual(-1010 - 215);
+    expect(window.to).toBeGreaterThanOrEqual(-580 + 215);
+  });
+
+  it("never lands on year zero", () => {
+    expect(entryWindow([{ earliest: -100, latest: -100 }])!.to).not.toBe(0);
+    expect(entryWindow([{ earliest: 100, latest: 100 }])!.from).not.toBe(0);
   });
 });

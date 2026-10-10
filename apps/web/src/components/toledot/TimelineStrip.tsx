@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 import type { Era, EventSummary } from "@/lib/db/timeline";
 import { AXES, type Axis } from "@/lib/timeline/axes";
+import { arrivedByBack, findEntry, listenForBack, markReturned, readPlace, revealVertically, savePlace, settle } from "@/lib/timeline/place";
 import { layoutBars, limitRows, tickStep, yearOffset, yearTicks } from "@/lib/timeline/strip-layout";
 import { formatRange, spanYears } from "@/lib/timeline/years";
 
@@ -58,6 +59,10 @@ export function TimelineStrip({
   to,
   maxRows = 4,
   overflowHref,
+  placeKey,
+  anchorId,
+  current,
+  compact = false,
 }: {
   eras: readonly Era[];
   events: readonly StripEvent[];
@@ -65,9 +70,85 @@ export function TimelineStrip({
   to: number;
   maxRows?: number;
   overflowHref?: string;
+  /** Where this view's place is kept; without one the strip remembers nothing. */
+  placeKey?: string;
+  /** An entry the URL asked for (`?at=`): centred and marked once, then dropped from the URL. */
+  anchorId?: string;
+  /** The entries the surrounding page is about: packed first, marked, and centred on arrival. */
+  current?: { ids: readonly string[]; label: string };
+  /** Entry pages: lanes with nothing in them are left out. */
+  compact?: boolean;
 }) {
   const viewport = useRef<HTMLDivElement>(null);
   const [atEnd, setAtEnd] = useState(false);
+  const pendingSave = useRef<ReturnType<typeof setTimeout>>(undefined);
+
+  // Restore: anchored to the entry last opened from this view (or the one the URL names, or the
+  // page's own entry), re-applied while layout settles; the saved offset when it is not drawn.
+  useEffect(() => {
+    const node = viewport.current;
+    if (!node || !placeKey) return;
+    listenForBack();
+    const saved = readPlace(placeKey);
+    const anchor = anchorId ?? saved?.openedId ?? current?.ids[0] ?? null;
+    const returning = anchor !== null && (anchor === anchorId || anchor === saved?.openedId);
+    const target = anchor ? findEntry(node, anchor) : null;
+    const link = target?.querySelector<HTMLElement>("a") ?? null;
+    const apply = () => {
+      if (link && target) {
+        const frame = node.getBoundingClientRect();
+        const bar = link.getBoundingClientRect();
+        node.scrollLeft += bar.left + Math.min(bar.width, frame.width) / 2 - (frame.left + frame.width / 2);
+        if (returning) revealVertically(target);
+      } else if (saved?.scrollLeft !== undefined) {
+        node.scrollLeft = saved.scrollLeft;
+      }
+    };
+    const cancel = settle(apply, node.firstElementChild);
+    if (target && returning) {
+      markReturned(target);
+      if (saved?.viaKeyboard && anchor === saved.openedId && arrivedByBack()) link?.focus({ preventScroll: true });
+    }
+    if (anchorId) {
+      savePlace(placeKey, { openedId: anchorId, viaKeyboard: false });
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.delete("at");
+        window.history.replaceState(null, "", url);
+      } catch {
+        // The anchor stays in the URL; a reload re-centres on it, which is harmless.
+      }
+    }
+
+    // Once the reader moves the strip themselves, where they scrolled to is the place.
+    let moved = false;
+    const onInput = () => {
+      moved = true;
+    };
+    const onScroll = () => {
+      if (!moved) return;
+      clearTimeout(pendingSave.current);
+      pendingSave.current = setTimeout(() => savePlace(placeKey, { scrollLeft: node.scrollLeft, openedId: null }), 150);
+    };
+    const inputs = ["pointerdown", "wheel", "touchstart", "keydown"] as const;
+    for (const type of inputs) node.addEventListener(type, onInput, { passive: true });
+    node.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      cancel();
+      clearTimeout(pendingSave.current);
+      for (const type of inputs) node.removeEventListener(type, onInput);
+      node.removeEventListener("scroll", onScroll);
+    };
+    // Restored once per view: each era and each entry page carries its own key.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [placeKey]);
+
+  const remember = (id: string, viaKeyboard: boolean) => {
+    if (!placeKey) return;
+    clearTimeout(pendingSave.current);
+    savePlace(placeKey, { openedId: id, viaKeyboard, scrollLeft: viewport.current?.scrollLeft ?? 0 });
+  };
+  const currentIds = new Set(current?.ids ?? []);
 
   useEffect(() => {
     const node = viewport.current;
@@ -85,14 +166,24 @@ export function TimelineStrip({
   const width = spanYears(from, to) * PX_PER_YEAR;
   const step = tickStep(from, to);
   const percentPerYear = 100 / spanYears(from, to);
-  const bars = layoutBars(events, from, to, PX_PER_YEAR, 8, LABEL_RESERVE);
+  const bars = layoutBars(
+    events,
+    from,
+    to,
+    PX_PER_YEAR,
+    8,
+    LABEL_RESERVE,
+    new Set(anchorId ? [anchorId, ...currentIds] : currentIds),
+  );
   let hiddenCount = 0;
   const byId = new Map(events.map((event) => [event.id, event]));
 
   return (
-    <figure className="toledot-strip">
+    <figure className="toledot-strip" data-compact={compact || undefined}>
       <figcaption className="toledot-strip__hint">
-        {formatRange(from, to)}. Scroll sideways along the years; Tab moves through the events in date order.
+        {compact
+          ? `${formatRange(from, to)}, with the events around it. Scroll sideways for more.`
+          : `${formatRange(from, to)}. Scroll sideways along the years; Tab moves through the events in date order.`}
       </figcaption>
       <div className="toledot-strip__frame" data-at-end={atEnd}>
       <div ref={viewport} className="toledot-strip__viewport" tabIndex={0} role="region" aria-label={`Timeline, ${formatRange(from, to)}`}>
@@ -126,6 +217,7 @@ export function TimelineStrip({
           {AXES.map((axis) => {
             const { drawn: laneBars, hidden } = limitRows(bars.filter((bar) => bar.axis === axis), maxRows);
             hiddenCount += hidden.length;
+            if (compact && laneBars.length === 0 && hidden.length === 0) return null;
             const rows = laneBars.length === 0 ? 0 : Math.max(...laneBars.map((bar) => bar.lane + 1));
             return (
               <section
@@ -148,10 +240,13 @@ export function TimelineStrip({
                     {laneBars.map((bar) => {
                       const event = byId.get(bar.id)!;
                       const lens = traditionalExtent(event, from, to, bar.left);
+                      const isCurrent = currentIds.has(event.id);
                       return (
                         <li
                           key={bar.id}
                           className="toledot-bar"
+                          data-entry-id={event.id}
+                          data-current={isCurrent || undefined}
                           data-confidence={event.confidence}
                           style={{ left: bar.left, top: bar.lane * ROW_HEIGHT, width: Math.max(bar.width, LABEL_RESERVE) }}
                         >
@@ -166,12 +261,15 @@ export function TimelineStrip({
                           <Link
                             href={`/toledot/events/${event.id}`}
                             className="toledot-bar__link"
-                            aria-label={`${event.title}, ${event.display}, ${CONFIDENCE_PHRASE[event.confidence]}`}
+                            aria-current={isCurrent ? "true" : undefined}
+                            aria-label={`${event.title}, ${event.display}, ${CONFIDENCE_PHRASE[event.confidence]}${isCurrent ? `, ${current!.label}` : ""}`}
+                            onClick={(click) => remember(event.id, click.detail === 0)}
                           >
                             <span className="toledot-bar__title">{event.title}</span>
                             <span className="toledot-bar__rule" style={{ width: bar.width }} aria-hidden="true" />
                             <span className="toledot-bar__meta">
                               {event.display} · <span className="toledot-bar__confidence">{event.confidence}</span>
+                              {isCurrent ? <> · <span className="toledot-bar__current">{current!.label}</span></> : null}
                             </span>
                           </Link>
                         </li>

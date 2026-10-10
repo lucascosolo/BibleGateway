@@ -46,8 +46,8 @@ export function generateMetadata() {
   return getTimelineBuildId() === null ? { ...metadata, robots: { index: false, follow: true } } : metadata;
 }
 
-export default async function ToledotPage({ searchParams }: { searchParams: Promise<{ era?: string }> }) {
-  const { era: eraParam } = await searchParams;
+export default async function ToledotPage({ searchParams }: { searchParams: Promise<{ era?: string; at?: string }> }) {
+  const { era: eraParam, at } = await searchParams;
   const all = getTimelineWindow(ALL_TIME);
   if (!all.available) return <Unavailable />;
 
@@ -80,6 +80,8 @@ export default async function ToledotPage({ searchParams }: { searchParams: Prom
         to={to}
         maxRows={4}
         overflowHref={`/toledot/events#${era?.id ?? ""}`}
+        placeKey={era ? `/toledot?era=${era.id}` : "/toledot"}
+        anchorId={window.events.some((event) => event.id === at) ? at : undefined}
       />
 
       {era ? (
