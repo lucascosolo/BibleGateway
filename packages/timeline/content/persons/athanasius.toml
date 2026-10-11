@@ -1,0 +1,18 @@
+id = "athanasius"
+name = "Athanasius of Alexandria"
+role = "Deacon at Nicaea, later bishop of Alexandria, the creed's chief defender"
+summary = """
+Athanasius came to Nicaea as deacon to his bishop Alexander, did not sign the creed and probably did not speak. He was later elected bishop of Alexandria, was deposed and exiled to the West in 335, and spent much of his life in and out of exile. Lyman says the picture of the fourth century as "Arians" against defenders of Nicaea was largely his creation, made during his exile in Rome around 340, and that he only began to defend the creed's own wording in the 350s, in On the Decrees of the Council of Nicaea, which preserves Eusebius of Caesarea's letter about the creed. His Easter letter of 367 is the first list of exactly the twenty-seven New Testament books."""
+status = "draft"
+events = ["council-of-nicaea", "canon-athanasius-festal-letter-39", "council-of-constantinople-381"]
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 2.1 (deacon at the council), section 2.2 (his later account), section 3 (exile 335; Rome 340; On the Decrees in the 350s)" },
+  { source = "npnf2-04-ccel", locator = "De Decretis (Defence of the Nicene Definition), with the appended Letter of Eusebius" },
+]
+
+[[attestations]]
+artifact = "athanasius-festal-letter-39"
+relation = "corroborates"
+note = """
+His own letter of 367 listing the books of scripture."""
+citations = [{ source = "npnf2-04-ccel", locator = "Festal Letter 39, sections 4-7" }]

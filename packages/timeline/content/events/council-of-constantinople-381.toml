@@ -1,0 +1,26 @@
+id = "council-of-constantinople-381"
+title = "The council of Constantinople reaffirms Nicaea and revises the creed"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+Nicaea did not end the argument. Arius was recalled from exile in 327 and died in 335; Athanasius, by then bishop of Alexandria, was exiled in 335; a run of councils between 341 and 360 tried creeds without the word homoousios, and in 360 Constantius had all talk of "substance" banned. Lyman describes the next two decades as the work that gave the Nicene faith its grammar: Athanasius's defence of the creed in the 350s, and Basil of Caesarea, Gregory of Nyssa and Gregory of Nazianzus arguing that Father, Son and Spirit share one simple divine nature and act as one. In 381 the emperor Theodosius called a council at Constantinople which reaffirmed Nicaea and issued the revised creed that churches recite today as "the Nicene Creed", with a fuller article on the Holy Spirit and the 325 anathemas dropped. Theodosius then outlawed those who taught against it, though non-Nicene Christianity lived on for centuries among the Goths and Vandals."""
+verses = [
+  { ref = "1Cor.15.24-1Cor.15.28", link = "background", note = "'That God may be all in all': Marcellus of Ancyra's text for the monad becoming triad and returning to unity, one of the theologies the later councils argued over." },
+  { ref = "Col.1.15", link = "background", note = "'Image of the invisible God': Marcellus and Asterius disputed whether 'image' could be said of the Word before the incarnation." },
+]
+
+[[positions]]
+id = "381"
+label = "381 CE"
+tradition = "critical"
+earliest = 381
+latest = 381
+held_by = "Rebecca Lyman (2024)"
+summary = """
+Lyman dates the council to 381 under Theodosius, and Tanner's edition records that it ended on 9 July 381. The creed of 381 was preserved at Chalcedon in 451."""
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 3, Toward a trinitarian theology in the fourth century" },
+  { source = "tanner-1990-nicaea", locator = "First Council of Constantinople, 381: introduction" },
+]

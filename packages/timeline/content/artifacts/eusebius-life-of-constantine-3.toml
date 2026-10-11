@@ -1,0 +1,15 @@
+id = "eusebius-life-of-constantine-3"
+name = "Eusebius, Life of Constantine, book 3: the council at Nicaea"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 337, latest = 340 }
+summary = """
+Eusebius's account of the council, written in praise of the emperor after Constantine's death in 337. He says Constantine summoned the bishops and paid their way, that more than two hundred and fifty came, from Spain to Persia, "as in the Acts of the Apostles" (Acts 2:5-11), that the emperor entered the hall of the palace in purple and gold, waited for the bishops' sign before sitting, and urged them in Latin to lay aside their quarrel, and that the bishops agreed on the faith and on one date for Easter and signed what was decided. He then prints Constantine's letter to the churches, which orders every church to keep Easter on one day and not by the Jewish reckoning, in language of open contempt for the Jews. Eusebius does not name Arius, does not quote the creed, and does not describe the debate, so the book is evidence for the setting and the emperor's role rather than for the theology."""
+citations = [
+  { source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6-3.20; Prolegomena: 'written after the death of Constantine (337), and therefore between 337 and 340, when Eusebius died'" },
+  { source = "lyman-2024-nicaea", locator = "section 2.1, on Eusebius as the main source and Constantine's role" },
+]
+verses = [
+  { ref = "Acts.2.5-Acts.2.11", link = "alludes", note = "Eusebius compares the bishops gathered from every province to the 'devout men from every nation under heaven' at Pentecost." },
+]

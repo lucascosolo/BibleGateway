@@ -1720,3 +1720,34 @@ kind = "museum"
 author = "Claremont Colleges Digital Library"
 title = "Nag Hammadi Archive (facsimile photographs)"
 url = "https://ccdl.claremont.edu/digital/collection/nha"
+
+[[source]]
+id = "lyman-2024-nicaea"
+kind = "article"
+author = "Rebecca Lyman"
+title = "The Theology of the Council of Nicaea, St Andrews Encyclopaedia of Theology (ed. Brendan N. Wolfe et al.), first published 25 April 2024, CC BY-NC"
+year = 2024
+url = "https://www.saet.ac.uk/Christianity/TheTheologyoftheCouncilofNicaea"
+
+[[source]]
+id = "tanner-1990-nicaea"
+kind = "edition"
+author = "Norman P. Tanner (ed.)"
+title = "First Council of Nicaea, 325: profession of faith, canons and letter to the Egyptians, in Decrees of the Ecumenical Councils, vol. 1 (1990), as reproduced in the compilation 'Concilia Oecumenica, Documenta Omnia' (St Michael's Depot) supplied by the user"
+year = 1990
+
+[[source]]
+id = "npnf2-14-ccel"
+kind = "edition"
+author = "Henry R. Percival (ed.)"
+title = "The Seven Ecumenical Councils, in Nicene and Post-Nicene Fathers, Series II, vol. 14 (1900), Christian Classics Ethereal Library"
+year = 1900
+url = "https://www.ccel.org/ccel/schaff/npnf214"
+
+[[source]]
+id = "npnf2-01-life-of-constantine"
+kind = "edition"
+author = "Eusebius of Caesarea, translated by Ernest Cushing Richardson"
+title = "The Life of Constantine, in Nicene and Post-Nicene Fathers, Series II, vol. 1 (1890), Christian Classics Ethereal Library"
+year = 1890
+url = "https://www.ccel.org/ccel/schaff/npnf201"

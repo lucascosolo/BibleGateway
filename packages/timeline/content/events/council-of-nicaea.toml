@@ -1,0 +1,72 @@
+id = "council-of-nicaea"
+title = "The council of Nicaea"
+axis = "narrative"
+category = "political"
+confidence = "firm"
+status = "draft"
+summary = """
+In 325 the emperor Constantine, sole ruler since defeating Licinius the year before, called bishops from across the empire to Nicaea in Bithynia, paid their travel, and sat with them to end a quarrel that had split the church of Alexandria: whether the Son of God had a beginning. The bishop Alexander had condemned his presbyter Arius for teaching that the Son was made by the Father's will "before he was begotten or created he did not exist". The council, after weeks of argument, signed a creed calling the Son "begotten, not made, of one substance (homoousios) with the Father" and anathematised the Arian phrases; only two Libyan bishops refused, and Arius was exiled. It also fixed one date for Easter, settled the Melitian schism in Egypt, and passed twenty canons on church order. No minutes survive; the accounts come from Eusebius of Caesarea, Athanasius and Eustathius of Antioch, writing with their own cases to make. The council did not decide which books belong in the Bible: none of its canons or letters touches the question. The year is not in doubt; the opening day is reported as 20 May or 19 June, and Eusebius ends the council with the emperor's twentieth-anniversary feast on 25 July."""
+verses = [
+  { ref = "John.1.1-John.1.3", link = "background", note = "Alexander's chief text: the Son cannot be a creature because 'all things were made through him'." },
+  { ref = "John.1.3", link = "alludes", note = "'Through whom all things came to be', quoted in the creed." },
+  { ref = "1Cor.8.6", link = "alludes", note = "'One God, the Father... and one Lord, Jesus Christ, through whom are all things': the creed's opening clauses follow this verse." },
+  { ref = "Prov.8.22", link = "background", note = "'The Lord created me at the beginning of his way': Wisdom's words, read of the Son by both sides. Lyman says begetting (Psalm 2:7) and creating (Proverbs 8:22) had been used interchangeably of the Son until this dispute forced a choice." },
+  { ref = "Ps.2.7", link = "background", note = "'You are my son; today I have begotten you', the standard text for the Son as begotten." },
+  { ref = "John.14.28", link = "background", note = "'The Father is greater than I': Alexander himself conceded the verse while denying it made the Son a creature." },
+  { ref = "John.10.30", link = "background", note = "'I and the Father are one', among the texts of equality Lyman lists on the Nicene side." },
+  { ref = "Heb.1.3", link = "background", note = "The Son as the exact image of the Father's being: Alexander's argument that only an eternal Son could reveal the Father." },
+  { ref = "Col.1.15", link = "background", note = "'Firstborn of all creation', the Arian side's text for the Son's place among things made; the council dropped 'firstborn' from the creed." },
+  { ref = "Matt.11.27", link = "background", note = "'No one knows the Father except the Son': Arius's Thalia made even the Son's knowledge of the Father a gift." },
+  { ref = "Deut.6.4", link = "background", note = "'The Lord is one': the monotheism both sides claimed to defend." },
+  { ref = "Gen.14.14", link = "background", note = "Abraham's 318 servants, the number tradition gave the bishops at Nicaea; Lyman calls it scriptural numerology and estimates 200 to 250." },
+  { ref = "Acts.2.5-Acts.2.11", link = "background", note = "Eusebius likened the gathering to Pentecost's 'devout men from every nation under heaven'." },
+]
+
+[[positions]]
+id = "325"
+label = "325 CE"
+tradition = "critical"
+earliest = 325
+latest = 325
+held_by = "Rebecca Lyman (2024)"
+summary = """
+Lyman places the council in 325, the year after Constantine's victory over Licinius, opening in late May or early June and ending with the emperor's Vicennalia feast on 25 July. Tanner's edition gives the opening as 19 June, and Percival's historical notes report 20 May as the traditional date; the sources disagree on the day and not the year. Nothing in the record puts it in any other year."""
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 1.2 (Constantine sole ruler from 324) and section 2.1 (opening late May or early June; feast 25 July)" },
+  { source = "tanner-1990-nicaea", locator = "Introduction: 'This council opened on 19 June in the presence of the emperor'" },
+  { source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6-3.15" },
+]
+
+  [[positions.arguments]]
+  stance = "for"
+  text = """
+  Eusebius, who was there, sets the council after Constantine's victory and ends it with the feast for his twentieth year of rule, which fell in 325."""
+  citations = [{ source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6, 3.15" }]
+
+[[attestations]]
+artifact = "nicene-creed-325"
+relation = "corroborates"
+note = """
+The creed the council signed, in Tanner's translation and in Percival's."""
+citations = [{ source = "tanner-1990-nicaea", locator = "The profession of faith of the 318 fathers" }]
+
+[[attestations]]
+artifact = "nicaea-canons-325"
+relation = "corroborates"
+note = """
+The twenty canons. Nothing in them concerns the canon of scripture."""
+citations = [{ source = "tanner-1990-nicaea", locator = "Canons 1-20" }]
+
+[[attestations]]
+artifact = "eusebius-letter-to-caesarea-325"
+relation = "corroborates"
+note = """
+Eusebius of Caesarea's report to his church, written at once: his own creed read out, the emperor's request for the word homoousios, and the formula the council drew up instead."""
+citations = [{ source = "npnf2-04-ccel", locator = "Letter of Eusebius of Caesarea to the people of his Diocese, sections 1-5" }]
+
+[[attestations]]
+artifact = "eusebius-life-of-constantine-3"
+relation = "partially-corroborates"
+note = """
+Eusebius's later narrative gives the summons, the number present, the emperor's entrance and speech, and the Easter decision, and prints Constantine's letter to the churches. It does not name Arius or quote the creed."""
+citations = [{ source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6-3.20" }]

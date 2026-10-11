@@ -1,0 +1,32 @@
+id = "eusebius-of-caesarea"
+name = "Eusebius of Caesarea"
+role = "Bishop of Caesarea, church historian, present at Nicaea and its main narrator"
+summary = """
+Eusebius wrote the first history of the church and, after 337, a life of Constantine. At Nicaea he had his own name to clear: a synod at Antioch months earlier had condemned him for siding with Arius. He read his church's baptismal creed to the council, saw it approved, and then signed the different creed the council drew up, explaining to his diocese in a letter how he could accept "from the substance of the Father" and "one in essence". His Life of Constantine gives the fullest account of the council's setting and of the emperor's part, and his Church History 3.25 is the fullest list of accepted and disputed Christian books before any council spoke. After Nicaea he stood with Eusebius of Nicomedia against Marcellus and the Alexandrians."""
+status = "draft"
+events = ["council-of-nicaea", "canon-eusebius-accepted-disputed"]
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 1.2 (condemned at Antioch 324/325), section 2.1 and 2.2 (his letter and creed), section 3 (alliance with Eusebius of Nicomedia)" },
+  { source = "npnf2-04-ccel", locator = "Letter of Eusebius of Caesarea to the people of his Diocese" },
+]
+
+[[attestations]]
+artifact = "eusebius-letter-to-caesarea-325"
+relation = "corroborates"
+note = """
+His own report to his church of what happened to the creed at the council."""
+citations = [{ source = "npnf2-04-ccel", locator = "Letter of Eusebius of Caesarea to the people of his Diocese, sections 1-5" }]
+
+[[attestations]]
+artifact = "eusebius-life-of-constantine-3"
+relation = "corroborates"
+note = """
+His account of the council in the biography of the emperor."""
+citations = [{ source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6-3.20" }]
+
+[[attestations]]
+artifact = "eusebius-church-history-3-25"
+relation = "corroborates"
+note = """
+His classification of the Christian writings, written before the council."""
+citations = [{ source = "npnf2-01-ccel", locator = "Church History 3.25.1-7" }]

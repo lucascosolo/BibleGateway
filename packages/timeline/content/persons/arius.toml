@@ -1,0 +1,24 @@
+id = "arius"
+name = "Arius"
+role = "Presbyter of Alexandria whose teaching on the Son the council of Nicaea condemned"
+summary = """
+Arius was a priest in Alexandria who taught that the Father alone is without beginning and that the Son, though begotten before all ages and unlike any other creature, came into being by the Father's will: "before he was begotten or created he did not exist". His bishop Alexander and a synod of Egyptian bishops condemned him; he wrote to Eusebius of Nicomedia for support and set out his teaching in a work called the Thalia, which survives only in quotations by his enemies. Nicaea anathematised his phrases and he was exiled. He was recalled in 327, could not return to Alexandria, and died in 335 just before being received back into communion. Lyman notes that his allies dropped most of his actual teaching after the council, so recent historians treat him as the spark of a wider argument rather than the founder of "Arianism", and say the origins of the dispute have never been fully explained."""
+status = "draft"
+verses = [
+  { ref = "Prov.8.22", link = "background", note = "'The Lord created me': Wisdom's words, which Arius's side read of the Son as made." },
+  { ref = "Isa.9.6", link = "background", note = "'Mighty God', quoted of the Son in the Thalia." },
+  { ref = "Matt.11.27", link = "background", note = "In the Thalia the Son knows the Father only as the Father grants it." },
+  { ref = "Mark.10.18", link = "background", note = "'No one is good but God alone', a text of the Son's subordination on his side." },
+]
+events = ["arian-controversy-begins", "council-of-nicaea"]
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 1.2, Conflict in Alexandria, and section 3 (recalled 327, died 335)" },
+  { source = "tanner-1990-nicaea", locator = "Letter of the synod in Nicaea to the Egyptians, section 3" },
+]
+
+[[attestations]]
+artifact = "nicene-creed-325"
+relation = "corroborates"
+note = """
+The anathemas at the end of the creed quote his phrases, 'there once was when he was not' and 'before he was begotten he was not', without naming him."""
+citations = [{ source = "tanner-1990-nicaea", locator = "The profession of faith of the 318 fathers, section 2" }]

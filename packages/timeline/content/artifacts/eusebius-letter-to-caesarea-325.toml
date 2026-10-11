@@ -1,0 +1,16 @@
+id = "eusebius-letter-to-caesarea-325"
+name = "Eusebius of Caesarea's letter to his church on the creed of Nicaea"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 325, latest = 325 }
+summary = """
+Written straight after the council, this is the nearest thing to an eyewitness account of how the creed was made. Eusebius says he read out the baptismal creed of his own church ("the Word of God, God from God, Light from Light, Life from Life, Son Only-begotten, first-born of every creature, before all the ages, begotten from the Father"), that the emperor approved it and asked only for the addition of the single word "One-in-essence" (homoousios), and that the bishops then drew up a different formula. He gives that formula in full, and explains, phrase by phrase, how he satisfied himself that "from the substance of the Father" and "one in essence" do not mean the Son is a part of the Father or that anything bodily is meant. Athanasius preserved the letter at the end of his Defence of the Nicene Definition, and historians read it as Eusebius clearing his name after his condemnation at Antioch a few months earlier."""
+citations = [
+  { source = "npnf2-04-ccel", locator = "Letter of Eusebius of Caesarea to the people of his Diocese, sections 1-5, appended to De Decretis" },
+  { source = "lyman-2024-nicaea", locator = "section 2.2, on Eusebius's letter and his presentation of the Caesarean creed" },
+]
+verses = [
+  { ref = "Matt.28.19", link = "alludes", note = "Eusebius's creed closes by quoting the command to baptise 'in the Name of the Father and of the Son, and of the Holy Ghost'." },
+  { ref = "Col.1.15", link = "alludes", note = "'First-born of every creature' stands in the Caesarean creed Eusebius read to the council." },
+]

@@ -1,0 +1,17 @@
+id = "alexander-of-alexandria"
+name = "Alexander of Alexandria"
+role = "Bishop of Alexandria who condemned Arius and led the Egyptian bishops at Nicaea"
+summary = """
+Alexander was the bishop whose dispute with his presbyter Arius brought the bishops to Nicaea. Constantine blamed him for raising the question of the Son's origin in public. In two surviving letters to other bishops he argues that the Son is the Father's eternal Wisdom and Word, that all things were made through him and so he is not a thing made, and that his likeness to the Father is what reveals the Father, while granting that only the Father is unbegotten and that the Son called the Father greater. Lyman notes that recent studies see innovation in his formulation of eternal generation. The council's letter to the Egyptians calls him "a leader as well as a participant" and names the clergy under him the legitimate clergy of Egypt. Some sources credit him, rather than the emperor, with putting the word homoousios into the creed. His deacon Athanasius came with him and succeeded him."""
+status = "draft"
+verses = [
+  { ref = "John.1.1-John.1.3", link = "background", note = "His central text: all things were made through the Word." },
+  { ref = "Exod.3.14", link = "background", note = "'I am who I am', his text for the gap between creator and creatures." },
+  { ref = "John.14.8-John.14.9", link = "background", note = "The Son's likeness to the Father reveals the Father." },
+  { ref = "John.14.28", link = "background", note = "'The Father is greater than I', which he conceded." },
+]
+events = ["arian-controversy-begins", "council-of-nicaea"]
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 1.2, Conflict in Alexandria (Urk 14; Hanson 1988: 140-145; Ayres 2004a: 43-52), and section 2.2 on homoousios" },
+  { source = "tanner-1990-nicaea", locator = "Letter of the synod in Nicaea to the Egyptians" },
+]

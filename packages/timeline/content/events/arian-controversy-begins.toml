@@ -1,0 +1,33 @@
+id = "arian-controversy-begins"
+title = "The dispute between Alexander and Arius begins in Alexandria"
+axis = "narrative"
+category = "political"
+confidence = "contested"
+status = "draft"
+summary = """
+The quarrel that Nicaea was called to settle began as a public argument in Alexandria between the bishop Alexander and a group of his clergy led by the presbyter Arius. Arius held that the Father alone is unbegotten and that the Son, though begotten before all ages and unlike any other creature, came into being by the Father's will: "before he was begotten or created he did not exist". Alexander answered that the Son is the Father's eternal Wisdom and Word, through whom all things were made, and so cannot be a thing made. A synod of Egyptian and Libyan bishops condemned Arius; he wrote for support to Eusebius of Nicomedia, Alexander sent encyclical letters against him, and the argument spread through the eastern churches. Constantine, in a letter Lyman calls one of the nearest contemporary sources, blamed Alexander for raising the question in public and all the clergy for letting it spread. The surviving evidence is fragmentary and mostly preserved by Arius's enemies, so historians say the real origin of the dispute has never been settled."""
+verses = [
+  { ref = "John.1.1-John.1.3", link = "background", note = "Alexander: all things were made through the Word, so the Word is not among the things made." },
+  { ref = "Exod.3.14", link = "background", note = "'I am who I am': Alexander's text for the gulf between the One who is and the things created." },
+  { ref = "John.14.8-John.14.9", link = "background", note = "'Whoever has seen me has seen the Father': for Alexander the Son's likeness to the Father is what reveals him." },
+  { ref = "Phil.2.8", link = "background", note = "Christ's obedience to death: Alexander accused his opponents of fixing on the texts of the Son's humility to separate him from the Father." },
+  { ref = "Ps.45.7", link = "background", note = "'God, your God, has anointed you': used, Alexander says, to argue that Christ's foreseen virtue earned his sonship." },
+  { ref = "Heb.1.9", link = "background", note = "The anointing 'beyond your companions', cited with Psalm 45:7 in the same argument." },
+  { ref = "Isa.9.6", link = "background", note = "'Mighty God': quoted in Arius's Thalia of the Son, who nonetheless 'in some degree worships the creator'." },
+  { ref = "Mark.10.18", link = "background", note = "'Why do you call me good? No one is good but God alone': a text of the Son's subordination on the Arian side." },
+  { ref = "Matt.11.27", link = "background", note = "For Arius, the Son knows the Father only as the Father grants it." },
+  { ref = "Rom.8.29", link = "background", note = "'The firstborn among many brothers': the Arian side's picture of the Son as the first of a family of adopted sons." },
+]
+
+[[positions]]
+id = "321-322"
+label = "About 321 to 322 CE"
+tradition = "critical"
+earliest = 318
+latest = 322
+held_by = "Sara Parvis (2006), reported by Lyman"
+summary = """
+Lyman reports that historians have ordered the surviving documents and "recently proposed the events began around 321/322", citing Parvis. The older convention, reflected in Hanson's title The Arian Controversy 318-381, starts the quarrel in 318; the range here runs from that date to Parvis's. Licinius's edict against meetings of bishops, which Lyman says the disorder in Alexandria may have prompted, falls before Constantine's victory in 324."""
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 1.2, Conflict in Alexandria (Parvis 2006: 78, 100-101; Hanson 1988 in the bibliography)" },
+]

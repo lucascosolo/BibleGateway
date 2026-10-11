@@ -1,0 +1,17 @@
+id = "nicaea-canons-325"
+name = "The twenty canons of Nicaea (325)"
+kind = "literary-text"
+status = "draft"
+language = "Greek"
+made = { earliest = 325, latest = 325 }
+summary = """
+Twenty rules on church order, passed beside the creed. They forbid self-castration, bar a recent convert from quick ordination (quoting 1 Timothy 3:6, "not a recent convert"), forbid clergy to keep a woman in the house who is not a close relative, require three bishops and the metropolitan's consent to make a bishop, order provincial synods twice a year, confirm the bishop of Alexandria's authority over Egypt, Libya and Pentapolis "since a similar custom exists with reference to the bishop of Rome" (canon 6), set terms of penance for those who lapsed under Licinius, forbid clergy to move from city to city or to lend at interest (canon 17, quoting Psalm 15:5, "who does not put out his money at interest"), rank deacons below presbyters, require the followers of Paul of Samosata to be rebaptised, and order Christians to pray standing on Sundays and in the season of Pentecost. None of the twenty concerns which books are scripture: the council that is often said to have fixed the Bible left no ruling on it."""
+citations = [
+  { source = "tanner-1990-nicaea", locator = "Canons 1-20" },
+  { source = "npnf2-14-ccel", locator = "The Canons of the 318 Holy Fathers Assembled in the City of Nice, in Bithynia" },
+  { source = "lyman-2024-nicaea", locator = "section 2.2.1, Canons" },
+]
+verses = [
+  { ref = "1Tim.3.6-1Tim.3.7", link = "alludes", note = "Canon 2 quotes 'Not a recent convert, or he may be puffed up and fall into the condemnation and the snare of the devil' against ordaining the newly baptised." },
+  { ref = "Ps.15.5", link = "alludes", note = "Canon 17 quotes 'who does not put out his money at interest' against clergy who lend at interest." },
+]

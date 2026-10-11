@@ -1,0 +1,27 @@
+id = "constantine"
+name = "Constantine"
+also_known_as = ["Constantine the Great", "Constantinus Augustus"]
+role = "Roman emperor (sole ruler from 324) who called the council of Nicaea"
+summary = """
+Constantine called the bishops to Nicaea in 325, the year after he defeated Licinius and became sole emperor, paid their journeys, opened the council in person and pressed them to agree. Eusebius, who admired him, has him take a low gold chair only after the bishops beckoned, speak in Latin for peace, and later write to every church ordering one date for Easter. Eusebius also says the emperor himself proposed adding the word homoousios to the creed. Lyman warns against the popular picture of an emperor dictating doctrine: he was "a forceful facilitator", enforced what the bishops decided, and could not hold them together once they divided again. He recalled Arius from exile in 327; Athanasius was exiled in 335. He died in 337, and Eusebius wrote his Life afterwards."""
+status = "draft"
+events = ["council-of-nicaea", "council-of-constantinople-381"]
+citations = [
+  { source = "lyman-2024-nicaea", locator = "section 1.2 (sole ruler after 324; 'forceful facilitator') and section 2.1" },
+  { source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6-3.20; Prolegomena on the Life: written after the death of Constantine (337)" },
+  { source = "npnf2-04-ccel", locator = "Letter of Eusebius of Caesarea to the people of his Diocese, section 4" },
+]
+
+[[attestations]]
+artifact = "eusebius-life-of-constantine-3"
+relation = "corroborates"
+note = """
+Eusebius's biography, written after the emperor's death, is the fullest account of what Constantine did at Nicaea, and a partisan one."""
+citations = [{ source = "npnf2-01-life-of-constantine", locator = "Life of Constantine 3.6-3.20" }]
+
+[[attestations]]
+artifact = "eusebius-letter-to-caesarea-325"
+relation = "corroborates"
+note = """
+Eusebius's letter, written during or just after the council, says the emperor approved the Caesarean creed and asked for homoousios to be added."""
+citations = [{ source = "npnf2-04-ccel", locator = "Letter of Eusebius of Caesarea to the people of his Diocese, section 4" }]

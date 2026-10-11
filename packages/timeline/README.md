@@ -136,3 +136,30 @@ changed. The editors added short glosses at a term's first appearance in a file 
 count, not an archaeological date"; "Seder Olam Rabbah, an early Jewish chronology"; what a
 coregency or an acclamation is). Those glosses are the editors' wording and are not separately
 cited; a reviewer should read them as explanation, not as sourced claims.
+
+## Review notes for the Nicaea batch (2026-10-10)
+
+Three events (`arian-controversy-begins`, `council-of-nicaea`, `council-of-constantinople-381`),
+four literary-text artifacts (the creed of 325, the twenty canons, Eusebius of Caesarea's letter to
+his church, Life of Constantine book 3), five persons (Constantine, Arius, Alexander of Alexandria,
+Athanasius, Eusebius of Caesarea) and one historical issue (`nicaea-and-the-canon`), all `draft`.
+Built from four PDFs the user supplied on 2026-10-10 and two public-domain editions fetched the
+same day; ledgers in `docs/sources/` (`lyman-2024-nicaea`, `tanner-1990-nicaea`,
+`npnf2-14-percival`, `npnf2-01-life-of-constantine`, `apeabu-2020`, `schaff-hcc1`). What a
+reviewer should know:
+
+- **Lyman 2024 is the only modern scholarship cited.** Every "historians say" is her survey; the
+  monographs she rests on (Hanson 1988, Parvis 2006, Gwynn 2007, the Cambridge Companion 2021) are
+  not filed and are named only inside her locators.
+- **The primary texts are quoted from Tanner's 1990 translation (in copyright, supplied in a
+  compilation of unverified status) and from Percival 1900 and Richardson 1890 (public domain).**
+  Quotations longer than a phrase come from the public-domain editions.
+- **Dates taken only from the sources:** 325 and the Vicennalia feast (Lyman, Eusebius), 19 June
+  (Tanner), 20 May (Percival), 321/322 for the dispute (Parvis via Lyman) with 318 as the older
+  convention (Hanson's title), Arius recalled 327 and dead 335, Athanasius exiled 335, Constantius's
+  ban 360, Constantinople ended 9 July 381 (Tanner). Constantine's death in 337 and the Life's
+  337–340 come from the NPNF prolegomena. No birth years anywhere: none of the sources gives one.
+- **Apeabu 2020 is filed but not cited**: it has Constantine baptised by Arius, who was dead.
+- **Verse links are the editor's reading of Lyman's lists of proof texts** (section 1.1 and 1.2),
+  plus the two phrases the creed quotes and the two the canons quote. They record which verses
+  were argued over, not a source tying the verse to the event as its subject.

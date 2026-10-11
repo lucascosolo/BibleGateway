@@ -1,0 +1,32 @@
+id = "nicaea-and-the-canon"
+kind = "historical"
+title = "Did the council of Nicaea decide which books are in the Bible?"
+summary = """
+A widespread story has Constantine's council choosing the books of the Bible. The council's own documents say nothing about it: the creed is about the Father and the Son, the twenty canons are about clergy, penance and church order, and the letter to the Egyptians reports the condemnation of Arius, the Melitian settlement and the Easter date. The lists that did fix the canon come later and from elsewhere: Athanasius's Easter letter of 367 for the twenty-seven New Testament books, Jerome's prefaces, and the councils of Hippo and Carthage in the 390s."""
+status = "draft"
+events = ["council-of-nicaea", "canon-eusebius-accepted-disputed", "canon-athanasius-festal-letter-39", "canon-jerome-prologus-galeatus"]
+persons = ["constantine", "athanasius", "eusebius-of-caesarea"]
+verses = [{ ref = "Rev.1.1", link = "background", note = "Revelation, the book Eusebius listed as both accepted and spurious before the council, and the one whose place stayed open longest afterwards." }]
+citations = [
+  { source = "tanner-1990-nicaea", locator = "First Council of Nicaea, 325: profession of faith, canons 1-20, letter to the Egyptians" },
+  { source = "lyman-2024-nicaea", locator = "section 2.2.1, Canons" },
+]
+
+[[views]]
+label = "Nothing in the council's acts"
+text = """
+The surviving decisions of Nicaea are the creed, the twenty canons and the synodal letter to Egypt. None of them names a book of scripture or rules on any. Lyman's survey of the canons finds clergy discipline, episcopal jurisdiction, penance for the lapsed and the posture of prayer, and Percival records that no Acts of the council were ever handed down."""
+citations = [
+  { source = "tanner-1990-nicaea", locator = "Canons 1-20; Letter of the synod in Nicaea to the Egyptians" },
+  { source = "lyman-2024-nicaea", locator = "section 2.2.1, Canons" },
+  { source = "npnf2-14-ccel", locator = "Historical Introduction to the First Ecumenical Council: 'No Acts of either of the first two Ecumenical Councils have been handed down'" },
+]
+
+[[views]]
+label = "The lists that did decide it came later"
+text = """
+Before the council, Eusebius could still sort the Christian writings into accepted, disputed and spurious, with Revelation in two classes. Forty-two years after it, Athanasius's Festal Letter 39 is the first to name exactly the twenty-seven books of the New Testament, and Metzger notes that not everyone followed it at once."""
+citations = [
+  { source = "npnf2-01-ccel", locator = "Church History 3.25.1-7" },
+  { source = "metzger-1987-canon", locator = "pp. 210-212" },
+]
