@@ -36,7 +36,7 @@ export function BookBrowser({ books }: { books: BookBrowseEntry[] }) {
                 <ul className="flex flex-wrap gap-1.5">
                   {genreGroup.books.map((book) => (
                     <li key={`${genreGroup.genre}-${book.bookId}`}>
-                      <Link
+                      <Link prefetch={false}
                         href={`/read/${book.osisId}`}
                         className="inline-flex min-h-[var(--touch-target)] items-center rounded-[var(--radius-full)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-3 font-sans text-[length:var(--text-sm)] text-[var(--color-ink)] transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)]"
                       >

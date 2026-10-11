@@ -605,3 +605,5 @@
   font-variant-numeric: tabular-nums lining-nums;
   color: var(--color-ink-faint);
 }
+
+.concordance__pager a { gap: var(--space-2); }

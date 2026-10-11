@@ -10,7 +10,7 @@ export function VerseLinks({ verses }: { verses: readonly { label: string; path:
     <ul className="toledot-verses" aria-label="Passages">
       {verses.map((verse) => (
         <li key={`${verse.start}-${verse.end}-${verse.note ?? ""}`}>
-          <Link href={verse.path} className="toledot-verses__link">
+          <Link prefetch={false} href={verse.path} className="toledot-verses__link">
             {verse.label}
           </Link>
           {verse.note ? <span className="toledot-verses__note"> — {verse.note}</span> : null}

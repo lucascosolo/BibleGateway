@@ -28,7 +28,7 @@ export function RelationGroup({ attestations, level = 3 }: { attestations: reado
             <ul className="toledot-relations__list">
               {items.map((item) => (
                 <li key={item.id} className="toledot-relations__item">
-                  <Link href={`/toledot/artifacts/${item.artifactId}`} className="toledot-link">
+                  <Link prefetch={false} href={`/toledot/artifacts/${item.artifactId}`} className="toledot-link">
                     {item.artifactName}
                   </Link>
                   <span className="toledot-relations__kind"> · {item.artifactKind}</span>

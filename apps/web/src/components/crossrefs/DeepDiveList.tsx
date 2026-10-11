@@ -66,7 +66,7 @@ export function DeepDiveList({ nodes, edges, seedId, translationCode, className 
           <ol className="deep-dive-list__rows">
             {byDepth.get(depth)!.map(({ node, bestVotes }) => (
               <li key={node.id} className="deep-dive-row">
-                <Link href={`/read/${node.slug}?t=${translationCode}`} className="deep-dive-row__link">
+                <Link prefetch={false} href={`/read/${node.slug}?t=${translationCode}`} className="deep-dive-row__link">
                   <span className="deep-dive-row__reference">{node.reference}</span>
                   <span className="deep-dive-row__meta">
                     {node.degree} connection{node.degree === 1 ? "" : "s"} in this graph

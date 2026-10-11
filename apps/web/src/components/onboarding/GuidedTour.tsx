@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
@@ -159,9 +160,10 @@ export function GuidedTour() {
             <Link
               href={step.href}
               onClick={dismiss}
-              className="w-fit font-sans text-[length:var(--text-sm)] font-medium text-[var(--color-brand)] underline underline-offset-4"
+              className="inline-flex w-fit items-center font-sans text-[length:var(--text-sm)] font-medium text-[var(--color-brand)] underline underline-offset-4"
             >
-              {step.hrefLabel ?? "See it"} →
+              {step.hrefLabel ?? "See it"}
+              <ArrowSquare size="sm" />
             </Link>
           )}
           {/* Inside `bodyId` on purpose: the settings are what this step *is*, so they belong to

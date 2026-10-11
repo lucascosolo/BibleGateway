@@ -22,7 +22,7 @@ export function CatalogueRow({ href, title, when, gist, marks, evidence }: Catal
   return (
     <li className="toledot-row">
       <div className="toledot-row__head">
-        <Link className="toledot-row__title toledot-link" href={href}>
+        <Link prefetch={false} className="toledot-row__title toledot-link" href={href}>
           {title}
         </Link>
         {when && <span className="toledot-row__when">{when}</span>}

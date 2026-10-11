@@ -137,7 +137,7 @@ export default async function LashonPage({ searchParams }: LashonPageProps) {
               <ul className="lashon__list">
                 {suggestions.map((s) => (
                   <li key={`${s.lemma}-${s.strongs ?? ""}-${s.language}`} className="lashon__item">
-                    <Link
+                    <Link prefetch={false}
                       className="lashon__item-link"
                       href={`/lashon/${encodeURIComponent(s.strongs ?? s.lemma)}`}
                     >
@@ -174,7 +174,7 @@ export default async function LashonPage({ searchParams }: LashonPageProps) {
           <ul className="lashon__list">
             {EXAMPLES.map((example) => (
               <li key={example.key} className="lashon__item">
-                <Link
+                <Link prefetch={false}
                   className="lashon__item-link lashon__item-link--example"
                   href={`/lashon/${encodeURIComponent(example.key)}`}
                 >

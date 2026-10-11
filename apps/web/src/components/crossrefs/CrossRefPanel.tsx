@@ -203,7 +203,7 @@ function GroupList({
       <ul className="xref-group__items">
         {group.items.map((item) => (
           <li key={`${item.range.start}-${item.range.end}`} className="xref-row">
-            <Link
+            <Link prefetch={false}
               href={`/read/${item.slug}?t=${translationCode}`}
               className="xref-row__link"
               title={`Go to ${item.reference}`}

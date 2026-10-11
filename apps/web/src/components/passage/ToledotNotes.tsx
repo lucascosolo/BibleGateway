@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 
 import { type MarginNote, toledotSentence } from "@/lib/timeline/notes";
 
@@ -40,7 +41,7 @@ export function ToledotNotes({ notes, spans }: ToledotNotesProps) {
               {s.draft && <span className="toledot-note__draft">unchecked</span>}
               {" "}
               <Link href={s.href} className="toledot-note__link" aria-label={`${s.lead}: ${s.body} — ${s.opens ?? "open on the timeline"}`}>
-                →
+                <ArrowSquare size="sm" />
               </Link>
             </span>
           </li>

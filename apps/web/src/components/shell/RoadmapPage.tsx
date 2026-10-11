@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowIcon } from "@/components/ArrowSquare";
 import { GlossLabel } from "@/components/GlossLabel";
 import type { LexiconId } from "@/lib/lexicon";
 
@@ -66,9 +67,10 @@ export function RoadmapPage({ lexiconId, phase, phaseTitle, dataSources, today }
           </p>
           <Link
             href={today.href}
-            className="inline-flex h-11 items-center rounded-[var(--radius-full)] bg-[var(--color-brand-strong)] px-5 font-sans text-[length:var(--text-sm)] font-semibold text-on-accent transition-opacity hover:opacity-90"
+            className="inline-flex h-11 items-center gap-2 rounded-[var(--radius-full)] bg-[var(--color-brand-strong)] px-5 font-sans text-[length:var(--text-sm)] font-semibold text-on-accent transition-opacity hover:opacity-90"
           >
-            {today.label} →
+            {today.label}
+            <ArrowIcon />
           </Link>
         </div>
       ) : (

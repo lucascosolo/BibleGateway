@@ -19,7 +19,7 @@ export function EraChips({ eras, selected }: { eras: readonly Era[]; selected: s
         </li>
         {eras.map((era) => (
           <li key={era.id}>
-            <Link
+            <Link prefetch={false}
               href={`/toledot?era=${era.id}`}
               className="toledot-chip"
               aria-current={selected === era.id ? "true" : undefined}

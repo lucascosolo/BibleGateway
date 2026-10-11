@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 
 import { shareMetadata } from "@/app/og/data";
 import { GlossLabel } from "@/components/GlossLabel";
@@ -98,7 +99,8 @@ function MoreLink({ hidden, href, noun }: { hidden: number; href: string; noun: 
   if (hidden <= 0) return null;
   return (
     <Link href={href} className="toledot-era-register__all">
-      {hidden} more {hidden === 1 ? noun : `${noun}s`} in the full list →
+      {hidden} more {hidden === 1 ? noun : `${noun}s`} in the full list
+      <ArrowSquare size="sm" />
     </Link>
   );
 }
@@ -153,7 +155,7 @@ function EraRegister({ era, events, persons, issues }: { era: Era; events: reado
               </div>
             );
           })}
-          <Link href={`/toledot/events#${era.id}`} className="toledot-era-register__all">All events, every era →</Link>
+          <Link href={`/toledot/events#${era.id}`} className="toledot-era-register__all">All events, every era<ArrowSquare size="sm" /></Link>
         </section>
 
         <section className="toledot-era-register__group" aria-labelledby="toledot-era-people">
@@ -176,7 +178,7 @@ function EraRegister({ era, events, persons, issues }: { era: Era; events: reado
             </ol>
           )}
           <MoreLink hidden={eraPersons.length - HUB_ROWS} href={`/toledot/people#${era.id}`} noun="person" />
-          <Link href={`/toledot/people#${era.id}`} className="toledot-era-register__all">All people →</Link>
+          <Link href={`/toledot/people#${era.id}`} className="toledot-era-register__all">All people<ArrowSquare size="sm" /></Link>
         </section>
 
         <section className="toledot-era-register__group" aria-labelledby="toledot-era-issues">
@@ -198,7 +200,7 @@ function EraRegister({ era, events, persons, issues }: { era: Era; events: reado
             </ol>
           )}
           <MoreLink hidden={eraIssues.length - HUB_ROWS} href={`/toledot/issues#${era.id}`} noun="question" />
-          <Link href={`/toledot/issues#${era.id}`} className="toledot-era-register__all">All open questions →</Link>
+          <Link href={`/toledot/issues#${era.id}`} className="toledot-era-register__all">All open questions<ArrowSquare size="sm" /></Link>
         </section>
       </div>
     </>

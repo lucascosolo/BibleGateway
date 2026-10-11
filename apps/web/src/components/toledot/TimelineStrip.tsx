@@ -163,7 +163,7 @@ export function TimelineStrip({
                               style={{ left: lens.left, width: lens.width }}
                             />
                           ) : null}
-                          <Link
+                          <Link prefetch={false}
                             href={`/toledot/events/${event.id}`}
                             className="toledot-bar__link"
                             aria-label={`${event.title}, ${event.display}, ${CONFIDENCE_PHRASE[event.confidence]}`}

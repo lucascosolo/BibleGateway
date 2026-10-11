@@ -19,7 +19,7 @@ export function ThresholdAreas({ areas }: { areas: ThresholdArea[] }) {
     <ol className="threshold-areas">
       {areas.map((area) => (
         <li key={area.key} className="threshold-areas__item">
-          <Link href={`/chitzonim/${area.key}`} className="threshold-areas__link">
+          <Link prefetch={false} href={`/chitzonim/${area.key}`} className="threshold-areas__link">
             <span className="threshold-areas__title">{area.title}</span>{" "}
             <span className="threshold-areas__count">{countText(area.count, area.unit)}</span>
           </Link>{" "}

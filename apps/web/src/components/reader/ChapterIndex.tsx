@@ -162,7 +162,7 @@ export function ChapterIndex({ chapters, translationCode, label }: ChapterIndexP
           <ul className="chapter-index__grid">
             {book.chapters.map((chapter) => (
               <li key={`${book.osisId}.${chapter.chapter}`}>
-                <Link
+                <Link prefetch={false}
                   className="chapter-index__chapter"
                   href={`/read/${book.osisId}.${chapter.chapter}?t=${translationCode}`}
                   // The verse count is the useful disambiguator between two chapter numbers,

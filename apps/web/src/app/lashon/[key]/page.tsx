@@ -1,5 +1,6 @@
 import { shareMetadata, wordSnapshot } from "@/app/og/data";
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 import { notFound } from "next/navigation";
 
 import { PassageRenderer } from "@/components/passage/PassageRenderer";
@@ -274,7 +275,8 @@ export default async function ConcordancePage({ params, searchParams }: Concorda
           <nav className="concordance__pager" aria-label="Occurrence pages">
             {page > 1 ? (
               <Link href={href({ p: page - 1 })} rel="prev">
-                ← Previous
+                <ArrowSquare direction="left" />
+                Previous
               </Link>
             ) : (
               <span />
@@ -284,7 +286,8 @@ export default async function ConcordancePage({ params, searchParams }: Concorda
             </span>
             {page < pageCount ? (
               <Link href={href({ p: page + 1 })} rel="next">
-                Next →
+                Next
+                <ArrowSquare />
               </Link>
             ) : (
               <span />

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 import { usePreferencesStore } from "@/lib/store/preferences";
 
 /**
@@ -19,7 +20,7 @@ export function ContinueReading() {
   return (
     <Link
       href={`/read/${lastRead.slug}?t=${lastRead.translationCode}`}
-      className="flex items-center justify-between gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-4 py-3 transition-colors hover:bg-[var(--color-surface-hover)]"
+      className="flex items-center justify-between gap-3 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] px-4 py-3 transition-colors hover:bg-[var(--color-surface-hover)] active:bg-[var(--color-surface-hover)]"
     >
       <span className="flex flex-col">
         <span className="font-sans text-[length:var(--text-xs)] font-medium uppercase tracking-wide text-[var(--color-ink-faint)]">
@@ -27,9 +28,7 @@ export function ContinueReading() {
         </span>
         <span className="font-serif text-[length:var(--text-md)] text-[var(--color-ink)]">{lastRead.label}</span>
       </span>
-      <span aria-hidden="true" className="font-sans text-[length:var(--text-lg)] text-[var(--color-brand)]">
-        →
-      </span>
+      <ArrowSquare />
     </Link>
   );
 }

@@ -59,7 +59,7 @@ export function CorpusDoorways({
         </h3>
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           {topVerses.map((v) => (
-            <Link
+            <Link prefetch={false}
               key={v.verseId}
               href={`/read/${v.osisRef}`}
               className="flex flex-col gap-1 rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-bg-raised)] p-3 transition-colors hover:border-[var(--color-border-strong)] hover:bg-[var(--color-surface-hover)]"
@@ -154,7 +154,7 @@ function OmissionList({
         const href = o.printedBy ? `/read/${o.osisRef}?t=${o.printedBy.code}` : `/read/${o.osisRef}`;
         return (
           <li key={o.verseId}>
-            <Link
+            <Link prefetch={false}
               href={href}
               title={
                 o.printedBy

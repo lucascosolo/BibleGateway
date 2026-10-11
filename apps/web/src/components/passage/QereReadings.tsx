@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 import clsx from "clsx";
 
 import type { OriginalVariant, OriginalWord } from "@/lib/db/originals";
@@ -175,7 +176,8 @@ export function QereReadings({ variants, words, className }: QereReadingsProps) 
                               href={`/lashon/${encodeURIComponent(concordanceKey)}`}
                               className="qere-readings__link"
                             >
-                              Every other place this word occurs →
+                              Every other place this word occurs
+                              <ArrowSquare size="sm" />
                             </Link>
                           </details>
                         </li>

@@ -74,7 +74,7 @@ export function Interlinear({ words, showSourceRefs = true, wordClips, className
           return (
             <li key={word.wordId} className="interlinear__word">
               {clip && <SpeakWordButton clip={clip} surface={word.surface.replace(/\//g, "")} />}
-              <Link
+              <Link prefetch={false}
                 href={`/lashon/${encodeURIComponent(concordanceKey)}`}
                 className="interlinear__link"
                 // The full parsing, for pointer and keyboard users alike. The visible line

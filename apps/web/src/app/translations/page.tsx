@@ -69,7 +69,7 @@ export default function TranslationsPage() {
         <h2 id="editions-title">The English editions</h2>
         <div className="translations__cards">
           {translations.map((p) => (
-            <Link key={p.code} href={`/translations/${p.code}`} className="translations-card">
+            <Link prefetch={false} key={p.code} href={`/translations/${p.code}`} className="translations-card">
               <span className="translations-card__head">
                 <span className="translations-card__code">{p.code}</span>
                 <span className="translations-card__name">{p.name}</span>
@@ -87,7 +87,7 @@ export default function TranslationsPage() {
         <h2 id="originals-title">The original-language texts</h2>
         <div className="translations__cards">
           {originals.map((p) => (
-            <Link key={p.code} href={`/translations/${p.code}`} className="translations-card">
+            <Link prefetch={false} key={p.code} href={`/translations/${p.code}`} className="translations-card">
               <span className="translations-card__head">
                 <span className="translations-card__code">{p.code}</span>
                 <span className="translations-card__name">{p.name}</span>

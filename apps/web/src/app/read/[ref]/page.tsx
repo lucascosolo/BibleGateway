@@ -5,6 +5,7 @@ import { passageSnapshot, quoteLine, shareMetadata } from "@/app/og/data";
 import { ReferenceLinks } from "@/app/_components/ReferenceLinks";
 import { CrossRefLayer } from "@/components/crossrefs/CrossRefLayer";
 import Link from "next/link";
+import { ArrowSquare } from "@/components/ArrowSquare";
 import { notFound, redirect } from "next/navigation";
 
 import { CrossRefAside } from "@/components/crossrefs/CrossRefAside";
@@ -597,14 +598,16 @@ export default async function ReaderPage({ params, searchParams }: ReaderPagePro
       <nav className="reader__pager" aria-label="Chapter navigation">
         {prevChapter ? (
           <Link href={`/read/${prevChapter}?t=${translation.code}`} rel="prev">
-            ← {book?.name} {chapter - 1}
+            <ArrowSquare direction="left" />
+            {book?.name} {chapter - 1}
           </Link>
         ) : (
           <span />
         )}
         {nextChapter && (
           <Link href={`/read/${nextChapter}?t=${translation.code}`} rel="next">
-            {book?.name} {chapter + 1} →
+            {book?.name} {chapter + 1}
+            <ArrowSquare />
           </Link>
         )}
       </nav>

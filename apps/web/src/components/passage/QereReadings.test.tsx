@@ -106,7 +106,7 @@ describe("QereReadings", () => {
     // as "Invalid Chai property" rather than as a failed expectation.
     expect(
       screen
-        .getByRole("link", { name: "Every other place this word occurs →", hidden: true })
+        .getByRole("link", { name: "Every other place this word occurs", hidden: true })
         .getAttribute("href"),
     ).toBe(`/lashon/${encodeURIComponent("H3318")}`);
   });

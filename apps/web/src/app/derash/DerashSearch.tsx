@@ -7,6 +7,7 @@ import { useEffect, useMemo, useState, type FormEvent } from "react";
 
 import { PassageRenderer } from "@/components/passage/PassageRenderer";
 import { TranslationSwitcherClient } from "@/components/reader/TranslationSwitcherClient";
+import { ArrowIcon } from "@/components/ArrowSquare";
 import type { Translation } from "@/lib/db/corpus";
 import { getLexiconEntry, glossFor } from "@/lib/lexicon";
 import { usePreferencesStore } from "@/lib/store/preferences";
@@ -308,14 +309,16 @@ export function DerashSearch({ books, translations }: DerashSearchProps) {
               disabled={offset === 0}
               onClick={() => updateParams({ offset: String(Math.max(0, offset - LIMIT)) })}
             >
-              ← Previous
+              <ArrowIcon direction="left" />
+              Previous
             </button>
             <button
               type="button"
               disabled={data.offset + data.returned >= data.total}
               onClick={() => updateParams({ offset: String(offset + LIMIT) })}
             >
-              Next →
+              Next
+              <ArrowIcon />
             </button>
           </nav>
         </>

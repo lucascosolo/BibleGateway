@@ -62,7 +62,7 @@ export function NotesIndex({ records }: { records: NoteRecord[] }) {
                 <span>{annotation.kind}</span>
                 <span>{translationCode}</span>
               </div>
-              <Link href={`/read/${slug}?t=${translationCode}`} className="notes-index__reference">
+              <Link prefetch={false} href={`/read/${slug}?t=${translationCode}`} className="notes-index__reference">
                 {reference}
               </Link>
               {annotation.quotedText && <blockquote>{annotation.quotedText}</blockquote>}

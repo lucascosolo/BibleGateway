@@ -2133,3 +2133,5 @@
 .greek-manuscript-apparatus__list ul { margin: .2rem 0 0; padding-left: 1.25rem; }
 .greek-manuscript-apparatus__witnesses { color: var(--color-ink); }
 .greek-manuscript-apparatus a { color: var(--color-brand-strong); text-decoration: underline; text-underline-offset: .15em; }
+
+.reader__pager a { gap: var(--space-2); }
